@@ -1,0 +1,41 @@
+\documentclass[]{Thesis}
+
+\usepackage[utf8]{inputenc}
+\usepackage[english,mongolian]{babel}
+\usepackage{wrapfig}
+\usepackage{ragged2e}
+\usepackage{mathptmx}
+\usepackage{lmodern}
+\usepackage{multirow}
+\usepackage{tempora}
+\usepackage{indentfirst}
+\usepackage{multicol}
+\usepackage{listings}
+\usepackage{tikz}
+\usetikzlibrary{positioning}
+\usetikzlibrary{arrows.meta}
+\begin{document}
+\captionsetup{labelfont=bf, textfont=it}
+    \pagenumbering{roman}
+\pagestyle{fancy}
+
+
+\include{Information}
+\input{Chapters/CoverPage}
+\input{Chapters/TitlePage}
+\input{Chapters/acrolist}
+%\input{Chapters/appendix}
+\input{Chapters/plan}
+\input{Chapters/Talarhal}
+
+
+%---------
+%	Ном зүй
+%---------
+
+
+\newpage
+\pagestyle{empty}
+\input{Chapters/Abstrct}
+
+\end{document}

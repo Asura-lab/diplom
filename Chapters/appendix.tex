@@ -1,0 +1,224 @@
+% \renewcommand{\thesubsection}{\Alph{section}}
+\newpage
+\titleformat{\chapter}[block]{\huge{}\bfseries\centering}{}{0.5em}{}
+
+\chapter{Хавсралт}
+
+
+\section{Системийн ерөнхий код}
+\begin{lstlisting}
+import face_recognition
+from PIL import Image, ImageDraw
+import numpy as np
+import os
+
+image_of_dasha = 
+face_recognition.load_image_file
+('./img/known/s19c125b.jpg')
+dasha_face_encoding = face_recognition.face_encodings
+(image_of_dasha,num_jitters=10,model='large')[0]
+
+image_of_duk = 
+face_recognition.load_image_file
+('./img/known/s19c043b.jpg')
+duk_face_encoding = face_recognition.face_encodings
+(image_of_duk,num_jitters=10,model='large')[0]
+
+image_of_uilsee = 
+face_recognition.load_image_file
+('./img/known/s19c011b.jpg')
+uilsee_face_encoding = face_recognition.face_encodings
+(image_of_uilsee,num_jitters=10,model='large')[0]
+
+image_of_masha = 
+face_recognition.load_image_file
+('./img/known/s19c023b.jpg')
+masha_face_encoding = face_recognition.face_encodings
+(image_of_masha,num_jitters=10,model='large')[0]
+
+image_of_anand = 
+face_recognition.load_image_file
+('./img/known/s19c060b.jpg')
+anand_face_encoding = face_recognition.face_encodings
+(image_of_anand,num_jitters=10,model='large')[0]
+
+image_of_pugna = 
+face_recognition.load_image_file
+('./img/known/s19c031b.jpg')   
+pugna_face_encoding = face_recognition.face_encodings
+(image_of_pugna,num_jitters=10,model='large')[0]
+
+image_of_saixna = 
+face_recognition.load_image_file
+('./img/known/s19c108b.jpg')
+saixna_face_encoding = face_recognition.face_encodings
+(image_of_saixna,num_jitters=10,model='large')[0]
+
+image_of_hangal = 
+face_recognition.load_image_file
+('./img/known/s19c130b.jpg')
+hangal_face_encoding = face_recognition.face_encodings
+(image_of_hangal,num_jitters=10,model='large')[0]
+
+image_of_tamiraa = 
+face_recognition.load_image_file
+('./img/known/s19c107b.jpg')
+tamiraa_face_encoding = face_recognition.face_encodings
+(image_of_tamiraa,num_jitters=10,model='large')[0]
+
+image_of_terii = 
+face_recognition.load_image_file
+('./img/known/s19c046b.jpg')
+terii_face_encoding = face_recognition.face_encodings
+(image_of_terii,num_jitters=10,model='large')[0]
+
+image_of_okono = 
+face_recognition.load_image_file
+('./img/known/s19c139b.jpg')
+okono_face_encoding = face_recognition.face_encodings
+(image_of_okono,num_jitters=10,model='large')[0]
+
+image_of_anar = 
+face_recognition.load_image_file
+('./img/known/s19c059b.jpg')
+anar_face_encoding = face_recognition.face_encodings
+(image_of_anar,num_jitters=10,model='large')[0]
+
+image_of_zok = 
+face_recognition.load_image_file
+('./img/known/s19c029b.jpg')
+zok_face_encoding = face_recognition.face_encodings
+(image_of_zok,num_jitters=10,model='large')[0]
+
+image_of_nanzaa = 
+face_recognition.load_image_file
+('./img/known/s19c083b.jpg')
+nanzaa_face_encoding = face_recognition.face_encodings
+(image_of_nanzaa,num_jitters=10,model='large')[0]
+
+image_of_tselmeg = 
+face_recognition.load_image_file
+('./img/known/s19c057b.jpg')
+tselmeg_face_encoding = face_recognition.face_encodings
+(image_of_tselmeg,num_jitters=10,model='large')[0]
+
+image_of_purve = 
+face_recognition.load_image_file
+('./img/known/s19c121b.jpg')
+purve_face_encoding = face_recognition.face_encodings
+(image_of_purve,num_jitters=10,model='large')[0]
+
+image_of_muji = 
+face_recognition.load_image_file
+('./img/known/s19c019b.jpg')
+muji_face_encoding = face_recognition.face_encodings
+(image_of_muji,num_jitters=10,model='large')[0]
+
+image_of_ubagsh = 
+face_recognition.load_image_file
+('./img/known/u-bagsh1.jpg')
+ubagsh_face_encoding = face_recognition.face_encodings
+(image_of_dasha,num_jitters=10,model='large')[0]
+
+#  Create arrays of encodings and names
+known_face_encodings = [
+  dasha_face_encoding,
+  duk_face_encoding,
+  uilsee_face_encoding,
+  masha_face_encoding,
+  anand_face_encoding,
+  pugna_face_encoding,
+  saixna_face_encoding,
+  tamiraa_face_encoding,
+  terii_face_encoding,
+  okono_face_encoding,
+  anar_face_encoding,
+  zok_face_encoding,
+  nanzaa_face_encoding,
+  tselmeg_face_encoding,
+  purve_face_encoding,
+  muji_face_encoding,
+  ubagsh_face_encoding
+]
+
+known_face_names = [
+  "Dasha",
+  "Duk",
+  "Uils",
+  "Bat",
+  "Anand",
+  "Pugna",
+  "Saixna",
+  "Tamiraa",
+  "Tergel",
+  "Okono",
+  "Anar",
+  "Zok",
+  "Nanzaa",
+  "Tselmeg",
+  "Purvee",
+  "Munhjin",
+  "ARDIN BAGSH"
+
+]
+
+# Load test image to find faces in
+
+image_folder = "./img/groups/facess/"
+
+for images in os.listdir(image_folder):
+  
+  test_image = face_recognition.load_image_file
+  ("./img/groups/facess/"+images)
+
+  # Find faces in test image
+  face_locations = 
+  face_recognition.face_locations(test_image)
+  face_encodings = 
+  face_recognition.face_encodings
+  (test_image, face_locations,num_jitters=30)
+
+  # Convert to PIL format
+  pil_image = Image.fromarray(test_image)
+
+  # Create a ImageDraw instance
+  draw = ImageDraw.Draw(pil_image)
+
+  # Loop through faces in test image
+
+  for(top, right, bottom, left), 
+  face_encoding in zip(face_locations, face_encodings):
+    matches = face_recognition.compare_faces
+    (known_face_encodings, face_encoding, tolerance=0.6)
+
+    name = "Unknown Person"
+
+    # If match
+    # if True in matches:
+    #   first_match_index = matches.index(True)
+    #   name = known_face_names[first_match_index]
+    face_distances = face_recognition.face_distance
+    (known_face_encodings, face_encoding)
+    best_match_index = np.argmin(face_distances)
+    if matches[best_match_index]:
+      name = known_face_names[best_match_index]
+    
+    # Draw box
+    draw.rectangle(((left, top), (right, bottom)), outline=(255,255,0))
+
+    # Draw label
+    # text_width, text_height = draw.textlength(name)
+    draw.rectangle(((left,bottom - 10 - 10),
+    (right, bottom)), fill=(255,255,0),
+    outline=(255,255,0))
+    draw.text((left + 6, bottom - 10 - 5),
+    name, fill=(0,0,0))
+
+  del draw
+
+  # Display image
+  pil_image.show()
+
+  # Save image
+  pil_image.save(images)
+\end{lstlisting}

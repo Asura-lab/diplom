@@ -1,0 +1,222 @@
+\renewcommand{\headrulewidth}{0pt}
+% \setlength{\topmargin}{-5mm}
+
+\chapter*{}
+\vspace{-20mm}
+\begin{center}
+{\fontsize{14pt}{16pt}\selectfont \textbf{IoT-д суурилсан угаарын хийн мэдрэгч ухаалаг төхөөрөмжийн туршилт}\\}
+\end{center}
+
+\begin{flushright}
+    \itshape
+    \textbf{Оюутан:} КУ-4 М.Мөнхдорж\\
+    \textbf{Удирдагч багш:} КУТ Б.Батчулуун
+\end{flushright}
+
+\textbf{Төслийн хураангуй:} Угаарын хий (CO) нь өнгөгүй, үнэргүй, хүний эрүүл мэндэд ноцтой аюул учруулдаг. Монгол Улсад, ялангуяа Улаанбаатар хотод өвлийн улиралд угаарын хийн хордлогоос үүдэлтэй осол, нас баралтын тоо нэмэгдэж байна. Энэхүү судалгааны зорилго нь IoT-д суурилсан ухаалаг угаарын хийн мэдрэгч төхөөрөмж хөгжүүлж, хэрэглэгчдэд бодит хугацаанд анхааруулга өгөх, алсаас хянах боломжтой систем бүтээхэд оршино. MQ-7 мэдрэгч болон ESP32-WROOM-32 микроконтроллерыг ашиглан угаарын хийн агууламжийг хэмжиж, MQTT протоколоор өгөгдлийг сервер рүү дамжуулан React-д суурилсан веб аппликейшнээр хэрэглэгчдэд харуулсан.
+
+\begin{multicols}{2}
+{
+\RaggedRight
+\textbf{I. Удиртгал}
+}
+\section*{1.1 Үндэслэл}
+Улаанбаатар хотын 1.7 сая хүн амын 60 гаруй хувь нь өвлийн улиралд түлш түлж амьдардаг [1][2]. Энэ нь угаарын хий (CO)-ийн хордлогын гол эх үүсвэр болдог. Угаарын хий нь хүчилтөрөгчийн дутагдалтай орчинд түлшний шаталтын явцад үүсдэг бөгөөд агааржуулалт муутай орчинд хуримтлагдан хүний амь нас, эрүүл мэндэд аюул учруулдаг [3][4]. Дэлхийн Эрүүл Мэндийн Байгууллагын тайланд тусгагдсанаар, 2019--2022 онд Монгол Улсад  1633 хүн угаарын хийн хордлогонд орж, 91 хүн нас баржээ (Зураг 1) [5].
+
+
+Одоогийн угаарын хийн мэдрэгчүүд нь ихэвчлэн энгийн дохиололтой бөгөөд алсаас хянах, бодит хугацааны өгөгдөл дамжуулах боломж хязгаарлагдмал байдаг. Иймд IoT-д суурилсан, хямд өртөгтэй, алсаас хянах боломжтой ухаалаг мэдрэгч хөгжүүлэх шаардлага бий.
+\end{multicols}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=\textwidth]{Pictures/CO-poisoning-graph.png}
+  \caption{Нүүрстөрөгчийн дутуу ислийн хордлогын тохиолдол (2017 оны 5-р сараас 2022 оны 4-р сар)}
+  \label{fig:image_label}
+\end{figure}
+
+\begin{multicols}{2}
+\section*{1.2 Зорилго, зорилт}
+Энэхүү судалгааны гол зорилго нь IoT-д суурилсан ухаалаг угаарын хийн мэдрэгч системийг хөгжүүлж, хэрэглэгчдэд бодит хугацаанд анхааруулга өгөх, алсаас хянах боломжтой шийдлийг бий болгох юм. Судалгааны зорилтууд:
+\begin{itemize}
+    \item MQ-7 мэдрэгч болон ESP32-WROOM-32 ашиглан угаарын хийн хэмжилтийг бодит хугацаанд хийх;
+    \item CO-ийн агууламж аюултай түвшинд (50 ppm-ээс дээш) хүрвэл дуут болон гэрлэн дохиолол өгөх;
+    \item MQTT протоколыг ашиглан хэмжилтийн өгөгдлийг серверт дамжуулах;
+    \item React-д суурилсан веб аппликейшнээр хэрэглэгчдэд хэмжилтийн мэдээллийг харах боломж олгох.
+\end{itemize}
+
+{
+\RaggedRight
+\textbf{II. Онолын хэсэг}
+}
+\section*{2.2 Ашигласан төхөөрөмжүүд ба тэдгээрийн үүрэг}
+\begin{itemize}
+    \item \textbf{MQ-7 мэдрэгч} – Угаарын хийг илрүүлэх аналог мэдрэгч [6].
+    \item \textbf{ESP32-WROOM-32} – Wi-Fi болон Bluetooth холболттой микроконтроллер [8].
+    \item \textbf{LED гэрэл ба Buzzer} – CO-ийн түвшин өндөр болсон үед дохиолол өгөх.
+    \item \textbf{Wi-Fi сүлжээ} – Өгөгдлийг алсын сервер рүү дамжуулах.
+\end{itemize}
+\section*{2.2 Системийн хөгжүүлэлт}
+Энэхүү систем нь дөрвөн гол бүрэлдэхүүн хэсгээс тогтоно:
+\begin{enumerate}
+    \item \textbf{Угаарын хийн хэмжилт}: MQ-7 мэдрэгч ашиглан угаарын хийн хэмжээг тодорхойлно.
+    \item \textbf{Дохиолол}: Угаарын хийн хэмжээ тогтоосон хязгаараас хэтэрвэл LED гэрэл болон Buzzer ашиглан хэрэглэгчийг сэрэмжлүүлнэ.
+    \item \textbf{Өгөгдөл дамжуулалт}: ESP32 микроконтроллер Wi-Fi сүлжээгээр дамжуулан HiveMQ Cloud руу MQTT протокол ашиглан мэдээлэл илгээнэ.
+    \item \textbf{Хэрэглэгчийн интерфэйс}: React веб аппликейшнээр хэрэглэгчид бодит хугацаанд мэдээлэл харах боломжтой.
+\end{enumerate}
+Системийн архитектур (Зураг 2) нь MQ-7 мэдрэгч, ESP32-WROOM-32, Wi-Fi/MQTT холболт, HiveMQ Cloud сервер, React веб аппликейшнээс бүрдэнэ. MQ-7 мэдрэгч нь угаарын хийг илрүүлж аналог дохио үүсгэдэг бөгөөд ESP32 энэ дохиог уншин, дижитал хэлбэрт хөрвүүлж сервер рүү дамжуулна [6].
+
+\end{multicols}
+\begin{figure}[h]
+\centering
+\begin{tikzpicture}[
+    box/.style={rectangle, draw, rounded corners, minimum height=1em, minimum width=3em, align=center},
+    arrow/.style={-Stealth, thick},
+    node distance=1cm
+]
+    \node[box] (sensor) {MQ-7\\Мэдрэгч};
+    \node[box, right=of sensor] (esp32) {ESP32-WROOM-32};
+    \node[box, right=of esp32] (wifi) {Wi-Fi/MQTT};
+    \node[box, right=of wifi] (cloud) {HiveMQ\\Cloud};
+    \node[box, right=of cloud] (webapp) {React\\Web App};
+    \node[box, below=0.5cm of esp32] (buzzer) {Buzzer};
+    \node[box, right=0.5cm of buzzer] (led) {LED};
+
+    \draw[arrow] (sensor) -- (esp32);
+    \draw[arrow] (esp32) -- (wifi);
+    \draw[arrow] (wifi) -- (cloud);
+    \draw[arrow] (cloud) -- (webapp);
+    \draw[arrow] (esp32) -- (buzzer);
+    \draw[arrow] (esp32) -- (led);
+\end{tikzpicture}
+\caption{Системийн архитектурын блок диаграм}
+\label{fig:system_architecture}
+\end{figure}
+\begin{multicols}{2}
+\subsection*{Мэдрэгчийн ажиллагаа}
+MQ-7 мэдрэгч нь угаарын хийн агууламжийг аналог дохиогоор (0--3.3 В) гаргадаг бөгөөд ESP32-ийн ADC оролтоор уншигдана [6]. Мэдрэгчийн халаагч нь 5 В тэжээлээр ажилладаг бөгөөд CO-ийн хэмжээ нэмэгдэхэд мэдрэгчийн эсэргүүцэл (Rs) буурч, гаралтын хүчдэл өсдөг.
+
+Угаарын хийн концентрацийг тооцоолохдоо дараах алхмуудыг гүйцэтгэнэ:
+\vspace{-10mm}
+\begin{enumerate}
+    \item \textbf{Аналог хүчдэлийн хэмжилт}: MQ-7 мэдрэгчийн гаралтын хүчдэлийг ESP32-ийн 12-битийн ADC (0--4095) ашиглан хэмжинэ. Хүчдэлийг дараах томъёогоор тооцоолно:
+    \[
+    V_{\text{sensor}} = \frac{\text{ADC утга} \times 3.3}{4095}
+    \]
+    \item \textbf{Мэдрэгчийн эсэргүүцэл (Rs) тооцоолох}: Мэдрэгч нь 10 кОм-ын ачааллын резистортой (RL) хамт хүчдэлийн хуваагч үүсгэдэг. Rs-ийг дараах томъёогоор тооцоолно:
+    \[
+    R_s = \frac{(3.3 - V_{\text{sensor}})}{V_{\text{sensor}}} \times R_L
+    \]
+    \item \textbf{Rs/R0 харьцаа}: R0 нь цэвэр агаарт (CO байхгүй үед) мэдрэгчийн эсэргүүцэл бөгөөд туршилтын өмнө калибровк хийж тодорхойлно. Rs/R0 харьцааг тооцоолно:
+    \[
+    \text{Харьцаа} = \frac{R_s}{R_0}
+    \]
+    \item \textbf{CO-ийн концентраци (ppm)}: Мэдрэгчийн мэдрэмжийн муруйгаас авсан хүчдэлийн хамаарлын дагуу CO-ийн концентрацийг дараах томъёогоор тооцоолно[6]:
+    \[
+    \text{ppm} = 1538.46 \times \left( \frac{R_s}{R_0} \right)^{-1.709}
+    \]
+\end{enumerate}
+
+Мөн R0-ийн калибровкийг хийхдээ мэдрэгчийг цэвэр агаарт 48 цагийн турш халааж, Rs-ийн утгыг хэмжин, R0-г дараах томъёогоор тооцно:
+\[
+R_0 = \frac{R_{s,\text{air}}}{4.5}
+\]
+энд Rs,air нь цэвэр агаарт хэмжигдсэн эсэргүүцэл, 4.5 нь мэдрэгчийн мэдрэмжийн муруй дээрх Rs/R0 харьцаа юм[6].
+
+Эндээс тооцоолсон ppm утга нь угаарын хийн концентрацийг илэрхийлж, 50 ppm-ээс дээш бол дохиолол өгнө.
+
+
+\subsection*{Өгөгдөл дамжуулах процесс}
+ESP32 нь Wi-Fi модулийн тусламжтайгаар HiveMQ Cloud MQTT брокерт холбогдож, мэдрэгчийн утгыг \texttt{co-sensor/data} topic руу илгээнэ [7]. MQTT протокол нь хурдан, найдвартай бөгөөд 5 секунд тутамд өгөгдлийг шинэчилдэг.
+
+{
+\RaggedRight
+\textbf{III. Туршилтын хэсэг}
+}
+\section*{3.1 Арга зүй}
+Туршилтыг гэртээ энгийн орчинд явуулсан (Зураг 3) (Зураг 4).
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.49\textwidth]{Pictures/circuit-diagramm.png}
+  \caption{Хэлхээний ерөнхий загвар}
+  \label{fig:image_label}
+\end{figure}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.49\textwidth]{Pictures/95c1d78d-cca1-4a46-8f2a-e1646fddd5c0.jpg}
+  \caption{Хэлхээ (Угсарсан байдал)}
+  \label{fig:image_label}
+\end{figure}
+Угаарын хийн эх үүсвэр болгон жижиг шатах материал ашиглав. Туршилтын алхмууд:
+\begin{itemize}
+    \item Вэб сайтан дээр өгөгдөл ирж буйг шалгах
+    \item MQ-7 мэдрэгчийг ESP32-д холбож, хэсэг хугацаанд тогтворжуулан халаав.
+    \item Шатах материал асааж, угаарын хийн хэмжээ ихэссэн үед дохиолол хэрхэн ажиллаж байгааг шалгав.
+\end{itemize}
+
+\section*{3.2 Туршилт}
+Туршилтыг дээр дурдсан алхмуудын дагуу явуулсан.
+
+\textbf{Алхам 1:} Вэб болон төхөөрөмжийн уяалдааг шалгав (Зураг 5).
+
+    \begin{figure}[H]
+  \centering
+  \includegraphics[width=0.49\textwidth]{Pictures/Device-and-web.png}
+  \caption{Хэлхээ болон вэб сайт}
+  \label{fig:image_label}
+\end{figure}
+\textbf{Алхам 2:} Мэдрэгчийг 20 минутын турш ажиллуулж, ажиллагааг тогтворжуулав (Зураг 6) (Зураг 7).
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.49\textwidth]{Pictures/Togtvorjuulj-bui-uy.png}
+  \caption{Мэдрэгчийг тогворжуулж буй үеийн график}
+  \label{fig:image_label}
+\end{figure}
+\textbf{Алхам 3:} Мэдрэгчний дэргэд цаас шатааж, угаарын хий ялгаруулж анхааруулга өгч буй эсэхийг шалгасан (Зураг 7).
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.49\textwidth]{Pictures/3f08aded-d477-4501-b1c4-d0880fbefb45.jpg}
+  \caption{Цаас шатаан туршиж буй нь}
+  \label{fig:image_label}
+\end{figure}
+
+\section*{3.3 Үр дүн}
+Туршилтын явцад MQ-7 мэдрэгч угаарын хийг илрүүлж, систем дохиолол өгсөн. Мөн өгөгдлийг сервер рүү зөв дамжуулж, веб аппликейшн дээр харагдаж байв.
+
+{
+\RaggedRight
+\textbf{IV. Дүгнэлт, цаашдын хийх ажил}
+}
+\section*{4.1 Дүгнэлт}
+Энэхүү судалгаагаар IoT-д суурилсан угаарын хийн мэдрэгч төхөөрөмжийг амжилттай хөгжүүлж, гэр ахуйн орчинд хордлогоос сэргийлэх боломжтойг харууллаа.
+
+\section*{4.2 Цаашдын хийх ажил}
+\begin{itemize}
+    \item Мэдрэгчийн халаалтын хугацааг багасгах
+    \item Эрчим хүчний хэрэглээг бууруулах
+    \item Нэмэлт үйлдлүүдээр сайжруулан хөгжүүлэх
+\end{itemize}
+
+\end{multicols}
+
+{
+\RaggedRight
+\textbf{Эх сурвалж}
+}
+\begin{enumerate}
+    \item Нийслэлийн Статистикийн Хороо, ХҮН АМЫН ТОО, бүс, аймаг/нийслэл, хот/хөдөөгөөр, 2025.\\
+    https://www2.1212.mn/tables.aspx?TBL\_ID=DT\_NSO\_0300\_004V1
+    \item Ulaanbaatar, Mongolia Metro Area Population 1950-2025, 2025.\\
+    https://www.macrotrends.net/global-metrics/cities/21882/ulaanbaatar/population
+    \item Global, regional, and national mortality due to unintentional carbon monoxide poisoning, 2000–2021, 2023.\\
+    https://www.thelancet.com/journals/lanpub/article/PIIS2468-2667(23)00185-8/fulltext
+    \item Mary E. Hanley, Pujan H. Patel, Carbon Monoxide Toxicity, 2023.\\
+    https://www.ncbi.nlm.nih.gov/books/NBK430740/
+    \item World Health Organization, Carbon Monoxide Poisoning Statistics, 2023.\\
+    https://doi.org/10.2471/BLT.22.289232
+    \item MQ-7 Carbon Monoxide Sensor Datasheet, Hanwei Electronics, 2020.\\
+    https://www.sparkfun.com/datasheets/Sensors/Biometric/MQ-7.pdf
+    \item MQTT Protocol Documentation, 2023.\\
+    https://mqtt.org
+    \item ESP32 Documentation, Espressif Systems, 2023.\\
+    https://docs.espressif.com/projects/esp-idf/en/latest/esp32/
+\end{enumerate}
