@@ -1,0 +1,107 @@
+\babel@toc {mongolian}{}\relax 
+\contentsline {chapter}{Ажлын төлөвлөгөө}{i}{dummy.1}%
+\contentsline {chapter}{Талархал}{ii}{dummy.4}%
+\contentsline {chapter}{Гарчиг}{iv}{dummy.6}%
+\contentsline {chapter}{Зураг болон Хүснэгтийн жагсаалт}{vi}{dummy.8}%
+\contentsline {chapter}{\numberline {1}УДИРТГАЛ}{1}{chapter.10}%
+\contentsline {section}{\numberline {1.1}Судалгааны үндэслэл, ач холбогдол}{1}{section.11}%
+\contentsline {section}{\numberline {1.2}Судалгааны зорилго, зорилт}{1}{section.16}%
+\contentsline {subsection}{\numberline {1.2.1}Зорилго}{1}{subsection.17}%
+\contentsline {subsection}{\numberline {1.2.2}Зорилтууд}{2}{subsection.18}%
+\contentsline {section}{\numberline {1.3}Судалгааны хамрах хүрээ}{2}{section.26}%
+\contentsline {section}{\numberline {1.4}Судалгааны шинэлэг тал}{2}{section.27}%
+\contentsline {section}{\numberline {1.5}Судалгааны бүтэц}{3}{section.33}%
+\contentsline {chapter}{\numberline {2}ОНОЛЫН СУДАЛГАА}{4}{chapter.34}%
+\contentsline {section}{\numberline {2.1}Машин сургалтын үндэс}{4}{section.35}%
+\contentsline {subsection}{\numberline {2.1.1}Машин сургалтын тодорхойлолт}{4}{subsection.36}%
+\contentsline {subsection}{\numberline {2.1.2}Машин сургалтын төрлүүд}{4}{subsection.37}%
+\contentsline {subsubsection}{\numberline {2.1.2.1}Хяналттай сургалт (Supervised Learning)}{4}{subsubsection.38}%
+\contentsline {subsubsection}{\numberline {2.1.2.2}Хяналтгүй сургалт (Unsupervised Learning)}{4}{subsubsection.41}%
+\contentsline {subsubsection}{\numberline {2.1.2.3}Бататгах сургалт (Reinforcement Learning)}{5}{subsubsection.42}%
+\contentsline {section}{\numberline {2.2}Гүн сургалт (Deep Learning)}{5}{section.43}%
+\contentsline {subsection}{\numberline {2.2.1}Мэдрэлийн сүлжээний үндэс}{5}{subsection.44}%
+\contentsline {subsection}{\numberline {2.2.2}Конволюшн мэдрэлийн сүлжээ (CNN)}{5}{subsection.46}%
+\contentsline {subsection}{\numberline {2.2.3}Рекуррент мэдрэлийн сүлжээ (RNN) ба LSTM}{5}{subsection.48}%
+\contentsline {subsection}{\numberline {2.2.4}Bidirectional LSTM (BiLSTM)}{6}{subsection.57}%
+\contentsline {subsection}{\numberline {2.2.5}Attention механизм}{6}{subsection.59}%
+\contentsline {section}{\numberline {2.3}Санхүүгийн зах зээлийн техникийн шинжилгээ}{7}{section.62}%
+\contentsline {subsection}{\numberline {2.3.1}Техникийн индикаторууд}{7}{subsection.63}%
+\contentsline {subsubsection}{\numberline {2.3.1.1}Хөдөлгөөнт дундаж (Moving Average)}{7}{subsubsection.64}%
+\contentsline {subsubsection}{\numberline {2.3.1.2}RSI (Relative Strength Index)}{7}{subsubsection.66}%
+\contentsline {subsubsection}{\numberline {2.3.1.3}MACD (Moving Average Convergence Divergence)}{7}{subsubsection.68}%
+\contentsline {subsubsection}{\numberline {2.3.1.4}Bollinger Bands}{7}{subsubsection.72}%
+\contentsline {subsubsection}{\numberline {2.3.1.5}ATR (Average True Range)}{8}{subsubsection.76}%
+\contentsline {section}{\numberline {2.4}Ижил төстэй судалгааны тойм}{8}{section.79}%
+\contentsline {subsection}{\numberline {2.4.1}Уламжлалт машин сургалтын аргууд}{8}{subsection.80}%
+\contentsline {subsection}{\numberline {2.4.2}Гүн сургалтын аргууд}{8}{subsection.81}%
+\contentsline {subsection}{\numberline {2.4.3}Гибрид аргууд}{8}{subsection.82}%
+\contentsline {subsection}{\numberline {2.4.4}Attention-д суурилсан аргууд}{8}{subsection.83}%
+\contentsline {subsection}{\numberline {2.4.5}Судалгааны цоорхой}{8}{subsection.84}%
+\contentsline {chapter}{\numberline {3}СУДАЛГААНЫ АРГА ЗҮЙ}{10}{chapter.90}%
+\contentsline {section}{\numberline {3.1}Өгөгдлийн тодорхойлолт}{10}{section.91}%
+\contentsline {subsection}{\numberline {3.1.1}Өгөгдлийн эх сурвалж}{10}{subsection.92}%
+\contentsline {subsection}{\numberline {3.1.2}Өгөгдлийн хугацааны хүрээ}{10}{subsection.93}%
+\contentsline {subsection}{\numberline {3.1.3}Өгөгдлийн чанарын хяналт}{10}{subsection.95}%
+\contentsline {section}{\numberline {3.2}Шинж чанар инженерчлэл}{10}{section.100}%
+\contentsline {subsection}{\numberline {3.2.1}Үнийн шинж чанарууд}{10}{subsection.101}%
+\contentsline {subsection}{\numberline {3.2.2}Техникийн индикаторууд}{11}{subsection.115}%
+\contentsline {subsection}{\numberline {3.2.3}Rolling статистик}{11}{subsection.117}%
+\contentsline {subsection}{\numberline {3.2.4}Цаг хугацааны шинж чанарууд}{12}{subsection.134}%
+\contentsline {subsection}{\numberline {3.2.5}Зорилтот хувьсагчууд}{12}{subsection.145}%
+\contentsline {section}{\numberline {3.3}Өгөгдлийн хуваалт}{13}{section.154}%
+\contentsline {subsection}{\numberline {3.3.1}Хугацаан дээр суурилсан хуваалт}{13}{subsection.155}%
+\contentsline {subsection}{\numberline {3.3.2}Scaling}{13}{subsection.157}%
+\contentsline {section}{\numberline {3.4}Моделийн архитектур}{13}{section.159}%
+\contentsline {subsection}{\numberline {3.4.1}Ерөнхий бүтэц}{13}{subsection.160}%
+\contentsline {subsection}{\numberline {3.4.2}Residual Convolutional Block}{14}{subsection.165}%
+\contentsline {subsection}{\numberline {3.4.3}Squeeze-and-Excitation Block}{15}{subsection.181}%
+\contentsline {subsection}{\numberline {3.4.4}Multi-Head Self Attention}{15}{subsection.183}%
+\contentsline {section}{\numberline {3.5}Сургалтын тохиргоо}{16}{section.202}%
+\contentsline {subsection}{\numberline {3.5.1}Loss функц}{16}{subsection.203}%
+\contentsline {subsubsection}{\numberline {3.5.1.1}Regression Loss}{16}{subsubsection.205}%
+\contentsline {subsubsection}{\numberline {3.5.1.2}Classification Loss}{16}{subsubsection.207}%
+\contentsline {subsection}{\numberline {3.5.2}Optimizer ба Scheduler}{16}{subsection.209}%
+\contentsline {subsection}{\numberline {3.5.3}Regularization техникүүд}{16}{subsection.210}%
+\contentsline {subsection}{\numberline {3.5.4}Data Augmentation}{17}{subsection.215}%
+\contentsline {subsection}{\numberline {3.5.5}Hyperparameter}{17}{subsection.216}%
+\contentsline {section}{\numberline {3.6}Мобайл аппликейшн}{17}{section.218}%
+\contentsline {subsection}{\numberline {3.6.1}React Native архитектур}{17}{subsection.219}%
+\contentsline {subsection}{\numberline {3.6.2}Backend API}{17}{subsection.220}%
+\contentsline {chapter}{\numberline {4}СУДАЛГААНЫ ҮР ДҮН}{18}{chapter.221}%
+\contentsline {section}{\numberline {4.1}Моделийн сургалтын үр дүн}{18}{section.222}%
+\contentsline {subsection}{\numberline {4.1.1}Сургалтын процесс}{18}{subsection.223}%
+\contentsline {subsection}{\numberline {4.1.2}Learning Rate Schedule}{18}{subsection.225}%
+\contentsline {section}{\numberline {4.2}Үнэлгээний хэмжүүрүүд}{18}{section.226}%
+\contentsline {subsection}{\numberline {4.2.1}Regression Metrics}{18}{subsection.227}%
+\contentsline {subsection}{\numberline {4.2.2}Direction Classification Metrics}{19}{subsection.229}%
+\contentsline {subsection}{\numberline {4.2.3}Big Move Classification Metrics}{19}{subsection.231}%
+\contentsline {section}{\numberline {4.3}Итгэлтэй таамаглалын шинжилгээ}{19}{section.233}%
+\contentsline {section}{\numberline {4.4}Калибрацийн шинжилгээ}{20}{section.235}%
+\contentsline {section}{\numberline {4.5}Confusion Matrix}{21}{section.237}%
+\contentsline {section}{\numberline {4.6}Backtesting үр дүн}{21}{section.239}%
+\contentsline {subsection}{\numberline {4.6.1}Арилжааны стратеги}{21}{subsection.240}%
+\contentsline {subsection}{\numberline {4.6.2}Стратегийн харьцуулалт}{21}{subsection.241}%
+\contentsline {subsection}{\numberline {4.6.3}Cumulative PnL}{22}{subsection.243}%
+\contentsline {section}{\numberline {4.7}Үнийн таамаглалын харьцуулалт}{23}{section.245}%
+\contentsline {section}{\numberline {4.8}Мобайл аппликейшн}{23}{section.247}%
+\contentsline {subsection}{\numberline {4.8.1}Аппликейшний интерфейс}{23}{subsection.248}%
+\contentsline {section}{\numberline {4.9}Үр дүнгийн хэлэлцүүлэг}{24}{section.253}%
+\contentsline {subsection}{\numberline {4.9.1}Давуу талууд}{24}{subsection.254}%
+\contentsline {subsection}{\numberline {4.9.2}Хязгаарлалтууд}{24}{subsection.259}%
+\contentsline {subsection}{\numberline {4.9.3}Сайжруулах боломжууд}{24}{subsection.264}%
+\contentsline {chapter}{\numberline {5}ДҮГНЭЛТ}{26}{chapter.269}%
+\contentsline {section}{\numberline {5.1}Судалгааны үр дүнгийн нэгтгэл}{26}{section.270}%
+\contentsline {subsection}{\numberline {5.1.1}Техникийн үр дүн}{26}{subsection.271}%
+\contentsline {subsection}{\numberline {5.1.2}Гүйцэтгэлийн үр дүн}{26}{subsection.275}%
+\contentsline {subsection}{\numberline {5.1.3}Системийн бүрэлдэхүүн}{27}{subsection.279}%
+\contentsline {section}{\numberline {5.2}Зорилтын биелэлт}{27}{section.284}%
+\contentsline {section}{\numberline {5.3}Шинэлэг хувь нэмэр}{27}{section.286}%
+\contentsline {section}{\numberline {5.4}Цаашдын судалгааны чиглэл}{28}{section.292}%
+\contentsline {subsection}{\numberline {5.4.1}Моделийн сайжруулалт}{28}{subsection.293}%
+\contentsline {subsection}{\numberline {5.4.2}Нэмэлт шинж чанар}{28}{subsection.297}%
+\contentsline {subsection}{\numberline {5.4.3}Reinforcement Learning}{28}{subsection.301}%
+\contentsline {subsection}{\numberline {5.4.4}Системийн өргөтгөл}{28}{subsection.305}%
+\contentsline {section}{\numberline {5.5}Практик хэрэглээ}{29}{section.309}%
+\contentsline {section}{\numberline {5.6}Төгсгөлийн үг}{29}{section.314}%
+\contentsline {chapter}{Ном зүй}{30}{chapter*.315}%
+\contentsline {chapter}{Хавсралт}{33}{chapter*.317}%

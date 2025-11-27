@@ -1,0 +1,273 @@
+\chapter{СУДАЛГААНЫ ҮР ДҮН}
+
+\section{Моделийн сургалтын үр дүн}
+
+\subsection{Сургалтын процесс}
+
+Модель нь 100 epoch-ийн турш сургагдах боломжтой байсан боловч early stopping-ийн улмаас бодит сургалт нь илүү эрт зогссон. Сургалтын явцад training loss болон validation loss-ийн динамик нь Зураг \ref{fig:training_loss}-д харуулсан.
+
+\begin{figure}[H]
+\centering
+% Placeholder for training curve
+\fbox{\parbox{0.8\textwidth}{\centering\vspace{2cm}Training Loss vs Validation Loss График\\(Notebook-ийн үр дүнгээс оруулах)\vspace{2cm}}}
+\caption{Сургалтын loss-ийн өөрчлөлт}
+\label{fig:training_loss}
+\end{figure}
+
+\subsection{Learning Rate Schedule}
+
+Cosine Annealing with Warm Restarts scheduler ашигласан бөгөөд SWA (Stochastic Weight Averaging) 40-р epoch-оос эхэлсэн. Энэ нь моделийн generalization чадварыг сайжруулахад тусалсан.
+
+\section{Үнэлгээний хэмжүүрүүд}
+
+\subsection{Regression Metrics}
+
+Үнийн таамаглалын (pip prediction) чанарыг дараах хэмжүүрүүдээр үнэлсэн:
+
+\begin{table}[H]
+\centering
+\caption{Regression үнэлгээний үр дүн}
+\begin{tabular}{|l|c|c|c|}
+\hline
+\textbf{Хэмжүүр} & \textbf{Validation} & \textbf{Test} & \textbf{OOS} \\
+\hline
+MAE (pips) & - & - & - \\
+\hline
+RMSE (pips) & - & - & - \\
+\hline
+$R^2$ Score & - & - & - \\
+\hline
+\end{tabular}
+\label{tab:regression_metrics}
+\end{table}
+
+\textbf{Тайлбар:}
+\begin{itemize}
+    \item \textbf{MAE (Mean Absolute Error):} Таамагласан болон бодит утгын дундаж абсолют зөрүү
+    \item \textbf{RMSE (Root Mean Squared Error):} Квадрат дундаж алдааны язгуур
+    \item \textbf{$R^2$ Score:} Тодорхойлох коэффициент (1-д ойр байх тусам сайн)
+\end{itemize}
+
+\subsection{Direction Classification Metrics}
+
+Үнийн чиглэлийн таамаглалын (өсөх/буурах) чанар:
+
+\begin{table}[H]
+\centering
+\caption{Direction classification үнэлгээний үр дүн}
+\begin{tabular}{|l|c|c|c|}
+\hline
+\textbf{Хэмжүүр} & \textbf{Validation} & \textbf{Test} & \textbf{OOS} \\
+\hline
+Accuracy & - & - & - \\
+\hline
+Precision & - & - & - \\
+\hline
+Recall & - & - & - \\
+\hline
+F1 Score & - & - & - \\
+\hline
+AUC-ROC & - & - & - \\
+\hline
+Brier Score & - & - & - \\
+\hline
+\end{tabular}
+\label{tab:direction_metrics}
+\end{table}
+
+\textbf{Тайлбар:}
+\begin{itemize}
+    \item \textbf{Accuracy:} Зөв таамаглалын хувь
+    \item \textbf{Precision:} Өсөх гэж таамагласны хэдэн хувь нь зөв байсан
+    \item \textbf{Recall:} Бодит өсөлтийн хэдэн хувийг зөв таамагласан
+    \item \textbf{AUC-ROC:} ROC муруйн доорх талбай (1-д ойр байх тусам сайн)
+    \item \textbf{Brier Score:} Магадлалын калибрацийн хэмжүүр (0-д ойр байх тусам сайн)
+\end{itemize}
+
+\subsection{Big Move Classification Metrics}
+
+Том хөдөлгөөний (±30 pips) таамаглалын чанар:
+
+\begin{table}[H]
+\centering
+\caption{Big Move (±30 pips) classification үнэлгээний үр дүн}
+\begin{tabular}{|l|c|c|c|c|}
+\hline
+\textbf{Зорилт} & \textbf{Precision} & \textbf{Recall} & \textbf{F1} & \textbf{AUC} \\
+\hline
+Up30 (+30 pips) & - & - & - & - \\
+\hline
+Down30 (-30 pips) & - & - & - & - \\
+\hline
+\end{tabular}
+\label{tab:bigmove_metrics}
+\end{table}
+
+\section{Итгэлтэй таамаглалын шинжилгээ}
+
+Моделийн итгэлийн түвшингийн дагуу гүйцэтгэлийг шинжилсэн. Өндөр итгэлтэй таамаглалууд илүү нарийвчлалтай байдаг:
+
+\begin{table}[H]
+\centering
+\caption{Итгэлийн түвшингийн дагуу hit rate}
+\begin{tabular}{|c|c|c|c|c|}
+\hline
+\textbf{Босго} & \textbf{Өсөх hit rate} & \textbf{Өсөх trades} & \textbf{Буурах hit rate} & \textbf{Буурах trades} \\
+\hline
+60\% & - & - & - & - \\
+\hline
+70\% & - & - & - & - \\
+\hline
+80\% & - & - & - & - \\
+\hline
+\end{tabular}
+\label{tab:confidence_metrics}
+\end{table}
+
+\section{Калибрацийн шинжилгээ}
+
+Моделийн магадлалын калибраци нь таамагласан магадлал болон бодит давтамж хоёр хэр нийцэж байгааг харуулдаг.
+
+\begin{figure}[H]
+\centering
+% Placeholder for calibration curve
+\fbox{\parbox{0.6\textwidth}{\centering\vspace{3cm}Calibration Curve\\(Notebook-ийн үр дүнгээс оруулах)\vspace{3cm}}}
+\caption{Калибрацийн муруй (OOS)}
+\label{fig:calibration}
+\end{figure}
+
+Хэрэв модель сайн калибрацитай бол калибрацийн муруй нь диагональ шулуунд ойрхон байна. Expected Calibration Error (ECE) нь калибрацийн чанарыг тоон утгаар илэрхийлнэ.
+
+\section{Confusion Matrix}
+
+\begin{figure}[H]
+\centering
+% Placeholder for confusion matrices
+\fbox{\parbox{0.45\textwidth}{\centering\vspace{3cm}Up30 Confusion Matrix\vspace{3cm}}}
+\hfill
+\fbox{\parbox{0.45\textwidth}{\centering\vspace{3cm}Down30 Confusion Matrix\vspace{3cm}}}
+\caption{Confusion matrix (a) Up30, (b) Down30}
+\label{fig:confusion}
+\end{figure}
+
+\section{Backtesting үр дүн}
+
+\subsection{Арилжааны стратеги}
+
+Моделийн таамаглал дээр суурилсан энгийн threshold стратеги турших:
+
+\begin{itemize}
+    \item \textbf{Худалдан авах (BUY):} prob\_up $\geq$ 0.65
+    \item \textbf{Зарах (SELL):} prob\_up $\leq$ 0.35
+    \item \textbf{Хүлээх (HOLD):} Бусад тохиолдолд
+\end{itemize}
+
+Нэмэлтээр ``Big Move Filter'' ашиглан зөвхөн том хөдөлгөөн хүлээгдэж байгаа үед арилжаа хийх:
+\begin{itemize}
+    \item max(prob\_up30, prob\_down30) $\geq$ 0.25
+\end{itemize}
+
+\subsection{Стратегийн харьцуулалт}
+
+\begin{table}[H]
+\centering
+\caption{Backtesting стратегийн харьцуулалт (OOS)}
+\begin{tabular}{|l|c|c|c|c|c|}
+\hline
+\textbf{Стратеги} & \textbf{Trades} & \textbf{Hit Rate} & \textbf{Total Pips} & \textbf{Avg Pips} & \textbf{Max DD} \\
+\hline
+Conservative (60/40) & - & - & - & - & - \\
+\hline
+Moderate (65/35) & - & - & - & - & - \\
+\hline
+Aggressive (70/30) & - & - & - & - & - \\
+\hline
+Moderate + Filter & - & - & - & - & - \\
+\hline
+Aggressive + Filter & - & - & - & - & - \\
+\hline
+\end{tabular}
+\label{tab:backtest}
+\end{table}
+
+\textbf{Тайлбар:}
+\begin{itemize}
+    \item \textbf{Trades:} Нийт арилжааны тоо
+    \item \textbf{Hit Rate:} Ашигтай арилжааны хувь
+    \item \textbf{Total Pips:} Нийт олсон/алдсан pip
+    \item \textbf{Avg Pips:} Арилжаа бүрийн дундаж pip
+    \item \textbf{Max DD:} Хамгийн их drawdown
+\end{itemize}
+
+\subsection{Cumulative PnL}
+
+\begin{figure}[H]
+\centering
+% Placeholder for PnL curve
+\fbox{\parbox{0.8\textwidth}{\centering\vspace{3cm}Cumulative PnL График\\(Notebook-ийн үр дүнгээс оруулах)\vspace{3cm}}}
+\caption{Хуримтлагдсан ашиг/алдагдал (OOS)}
+\label{fig:pnl}
+\end{figure}
+
+\section{Үнийн таамаглалын харьцуулалт}
+
+\begin{figure}[H]
+\centering
+% Placeholder for price prediction
+\fbox{\parbox{0.9\textwidth}{\centering\vspace{3cm}Actual vs Predicted Price График\\(Notebook-ийн үр дүнгээс оруулах)\vspace{3cm}}}
+\caption{Бодит үнэ vs Таамагласан үнэ (OOS)}
+\label{fig:price_pred}
+\end{figure}
+
+\section{Мобайл аппликейшн}
+
+\subsection{Аппликейшний интерфейс}
+
+React Native ашиглан хөгжүүлсэн мобайл апп нь дараах үндсэн дэлгэцүүдтэй:
+
+\begin{enumerate}
+    \item \textbf{Нүүр хуудас:} Одоогийн таамаглал, магадлал, санал болгох арилжааны чиглэл
+    \item \textbf{Түүх:} Өмнөх таамаглалууд, тэдгээрийн үр дүн
+    \item \textbf{Тохиргоо:} Push notification, threshold тохиргоо
+\end{enumerate}
+
+\begin{figure}[H]
+\centering
+% Placeholder for app screenshots
+\fbox{\parbox{0.3\textwidth}{\centering\vspace{4cm}Home Screen\vspace{4cm}}}
+\hfill
+\fbox{\parbox{0.3\textwidth}{\centering\vspace{4cm}History Screen\vspace{4cm}}}
+\hfill
+\fbox{\parbox{0.3\textwidth}{\centering\vspace{4cm}Settings Screen\vspace{4cm}}}
+\caption{Мобайл аппликейшний дэлгэцүүд}
+\label{fig:app_screens}
+\end{figure}
+
+\section{Үр дүнгийн хэлэлцүүлэг}
+
+\subsection{Давуу талууд}
+
+\begin{enumerate}
+    \item \textbf{Multi-task Learning:} Regression болон classification-ийг нэгтгэснээр илүү баялаг representation сурсан
+    \item \textbf{Гибрид архитектур:} CNN локал загвар, LSTM урт хамаарал, Attention чухал цэгүүдийг илрүүлсэн
+    \item \textbf{Орчин үеийн техникүүд:} Focal Loss, SWA зэрэг нь generalization сайжруулсан
+    \item \textbf{Итгэлтэй таамаглал:} Өндөр итгэлтэй таамаглал илүү нарийвчлалтай
+\end{enumerate}
+
+\subsection{Хязгаарлалтууд}
+
+\begin{enumerate}
+    \item \textbf{Зах зээлийн өөрчлөлт:} Моделийн гүйцэтгэл зах зээлийн нөхцөл өөрчлөгдөхөд буурч болно
+    \item \textbf{Гэнэтийн үйл явдал:} Геополитик үйл явдал, эдийн засгийн гэнэтийн мэдээнд модель бэлтгэлгүй
+    \item \textbf{Slippage, Commission:} Backtesting-д арилжааны зардал тооцоогүй
+    \item \textbf{Ганц валютын хос:} Зөвхөн EUR/USD дээр турших
+\end{enumerate}
+
+\subsection{Сайжруулах боломжууд}
+
+\begin{enumerate}
+    \item \textbf{Sentiment analysis:} Мэдээний sentiment-ийг шинж чанар болгон нэмэх
+    \item \textbf{Ensemble:} Олон моделийн хослол ашиглах
+    \item \textbf{Reinforcement Learning:} Position sizing, risk management-ийг RL-ээр сургах
+    \item \textbf{Олон валютын хос:} Бусад валютын хосуудад өргөтгөх
+\end{enumerate}

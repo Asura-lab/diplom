@@ -1,0 +1,240 @@
+\chapter{ОНОЛЫН СУДАЛГАА}
+
+\section{Машин сургалтын үндэс}
+
+\subsection{Машин сургалтын тодорхойлолт}
+
+Машин сургалт (Machine Learning) нь хиймэл оюун ухааны (Artificial Intelligence) дэд салбар бөгөөд компьютерийн системд тодорхой програмчлалгүйгээр өгөгдлөөс суралцах чадварыг олгодог арга зүй юм \cite{mitchell1997}. Tom Mitchell-ийн тодорхойлолтоор: ``Компьютерийн програм нь T даалгаврын хувьд P гүйцэтгэлийн хэмжүүрээр хэмжигдэх үед E туршлагаас суралцаж байна гэж хэлнэ, хэрэв E туршлага нэмэгдэхэд T даалгаврын P гүйцэтгэл сайжирвал.''
+
+\subsection{Машин сургалтын төрлүүд}
+
+Машин сургалтыг гурван үндсэн төрөлд хуваадаг:
+
+\subsubsection{Хяналттай сургалт (Supervised Learning)}
+
+Хяналттай сургалт нь хамгийн түгээмэл хэрэглэгддэг машин сургалтын арга бөгөөд оролт-гаралтын хос өгөгдөл дээр суралцдаг. Энэ аргад:
+
+\begin{itemize}
+    \item Сургалтын өгөгдөл нь $(x_i, y_i)$ хос хэлбэртэй байдаг
+    \item $x_i$ - оролтын өгөгдөл (features)
+    \item $y_i$ - зорилтот утга (label/target)
+    \item Модель нь $f: X \rightarrow Y$ функцийг суралцдаг
+\end{itemize}
+
+Хяналттай сургалт нь дараах хэрэглээнд өргөн хэрэглэгддэг:
+\begin{enumerate}
+    \item \textbf{Regression (Регресс):} Тасралтгүй утга таамаглах (жишээ нь: үнийн таамаглал)
+    \item \textbf{Classification (Ангилал):} Дискрет ангилалд хуваах (жишээ нь: өсөх/буурах таамаглал)
+\end{enumerate}
+
+\subsubsection{Хяналтгүй сургалт (Unsupervised Learning)}
+
+Хяналтгүй сургалт нь зөвхөн оролтын өгөгдөл дээр суралцдаг бөгөөд зорилтот утга байхгүй. Гол хэрэглээ нь:
+
+\begin{itemize}
+    \item Кластерчлал (Clustering)
+    \item Хэмжээс бууруулалт (Dimensionality Reduction)
+    \item Аномали илрүүлэлт (Anomaly Detection)
+\end{itemize}
+
+\subsubsection{Бататгах сургалт (Reinforcement Learning)}
+
+Бататгах сургалт нь агент орчинтой харилцан үйлдэл хийж, шагнал/шийтгэлийн дагуу оновчтой бодлого суралцдаг арга юм. Энэ арга нь арилжааны стратеги сургахад өргөн хэрэглэгддэг.
+
+\section{Гүн сургалт (Deep Learning)}
+
+\subsection{Мэдрэлийн сүлжээний үндэс}
+
+Хиймэл мэдрэлийн сүлжээ (Artificial Neural Network) нь хүний тархины мэдрэлийн эсүүдийн бүтцээс санаа авсан тооцоолох загвар юм. Нэг нейрон нь дараах томъёогоор илэрхийлэгдэнэ:
+
+\begin{equation}
+y = \sigma\left(\sum_{i=1}^{n} w_i x_i + b\right)
+\end{equation}
+
+Энд:
+\begin{itemize}
+    \item $x_i$ - оролтын утгууд
+    \item $w_i$ - жингүүд
+    \item $b$ - bias
+    \item $\sigma$ - идэвхжүүлэх функц (activation function)
+\end{itemize}
+
+\subsection{Конволюшн мэдрэлийн сүлжээ (CNN)}
+
+CNN нь дүрс боловсруулалтад өргөн хэрэглэгддэг боловч цуваа өгөгдөл дээр локал загвар илрүүлэхэд маш үр дүнтэй. 1D CNN нь санхүүгийн цуваа өгөгдөлд богино хугацааны загваруудыг илрүүлэхэд хэрэглэгддэг.
+
+Конволюшн үйлдэл:
+\begin{equation}
+(x * k)[n] = \sum_{m=-M}^{M} x[n-m] \cdot k[m]
+\end{equation}
+
+Энд $x$ нь оролтын цуваа, $k$ нь kernel буюу шүүлтүүр юм.
+
+\subsection{Рекуррент мэдрэлийн сүлжээ (RNN) ба LSTM}
+
+RNN нь цуваа өгөгдөл боловсруулахад зориулагдсан бөгөөд өмнөх алхмын мэдээллийг дараагийн алхамд дамжуулдаг:
+
+\begin{equation}
+h_t = \tanh(W_{hh} h_{t-1} + W_{xh} x_t + b_h)
+\end{equation}
+
+Гэвч энгийн RNN нь ``vanishing gradient'' асуудалтай учир урт хугацааны хамаарлыг сурахад хүндрэлтэй. LSTM (Long Short-Term Memory) нь энэ асуудлыг шийдвэрлэхээр зохиогдсон:
+
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}[
+    gate/.style={rectangle, draw, minimum width=1cm, minimum height=0.6cm, fill=blue!20},
+    op/.style={circle, draw, minimum size=0.5cm, fill=yellow!30},
+    arrow/.style={-Stealth, thick}
+]
+    % Gates
+    \node[gate] (forget) at (0,0) {$f_t$};
+    \node[gate] (input) at (2,0) {$i_t$};
+    \node[gate] (cell) at (4,0) {$\tilde{c}_t$};
+    \node[gate] (output) at (6,0) {$o_t$};
+    
+    % Labels
+    \node[below=0.3cm of forget] {\small Forget Gate};
+    \node[below=0.3cm of input] {\small Input Gate};
+    \node[below=0.3cm of cell] {\small Cell State};
+    \node[below=0.3cm of output] {\small Output Gate};
+    
+    % Connections
+    \draw[arrow] (-1.5,0) -- (forget);
+    \draw[arrow] (forget) -- (input);
+    \draw[arrow] (input) -- (cell);
+    \draw[arrow] (cell) -- (output);
+    \draw[arrow] (output) -- (7.5,0);
+\end{tikzpicture}
+\caption{LSTM нэгжийн бүтэц}
+\label{fig:lstm}
+\end{figure}
+
+LSTM-ийн томъёонууд:
+\begin{align}
+f_t &= \sigma(W_f \cdot [h_{t-1}, x_t] + b_f) \quad \text{(Forget gate)} \\
+i_t &= \sigma(W_i \cdot [h_{t-1}, x_t] + b_i) \quad \text{(Input gate)} \\
+\tilde{c}_t &= \tanh(W_c \cdot [h_{t-1}, x_t] + b_c) \quad \text{(Candidate)} \\
+c_t &= f_t \odot c_{t-1} + i_t \odot \tilde{c}_t \quad \text{(Cell state)} \\
+o_t &= \sigma(W_o \cdot [h_{t-1}, x_t] + b_o) \quad \text{(Output gate)} \\
+h_t &= o_t \odot \tanh(c_t) \quad \text{(Hidden state)}
+\end{align}
+
+\subsection{Bidirectional LSTM (BiLSTM)}
+
+BiLSTM нь хоёр чиглэлд (урагш, хойшоо) цуваа өгөгдлийг боловсруулдаг бөгөөд илүү баялаг контекст мэдээлэл олж авдаг:
+
+\begin{equation}
+h_t = [\overrightarrow{h_t}; \overleftarrow{h_t}]
+\end{equation}
+
+\subsection{Attention механизм}
+
+Attention механизм нь моделд оролтын цувааны аль хэсэгт илүү анхаарал хандуулахыг сурах боломж олгодог:
+
+\begin{equation}
+\text{Attention}(Q, K, V) = \text{softmax}\left(\frac{QK^T}{\sqrt{d_k}}\right)V
+\end{equation}
+
+Multi-Head Attention нь олон толгойг ашиглан өөр өөр representation subspace-ийн мэдээллийг авдаг:
+
+\begin{equation}
+\text{MultiHead}(Q, K, V) = \text{Concat}(\text{head}_1, ..., \text{head}_h)W^O
+\end{equation}
+
+\section{Санхүүгийн зах зээлийн техникийн шинжилгээ}
+
+\subsection{Техникийн индикаторууд}
+
+Техникийн шинжилгээ нь үнийн түүхэн өгөгдөл дээр суурилан ирээдүйн үнийн хөдөлгөөнийг таамаглах арга юм.
+
+\subsubsection{Хөдөлгөөнт дундаж (Moving Average)}
+
+Экспоненциал хөдөлгөөнт дундаж (EMA):
+\begin{equation}
+EMA_t = \alpha \cdot P_t + (1 - \alpha) \cdot EMA_{t-1}
+\end{equation}
+Энд $\alpha = \frac{2}{n+1}$, $n$ нь үе.
+
+\subsubsection{RSI (Relative Strength Index)}
+
+RSI нь momentum индикатор бөгөөд 0-100 хооронд хэлбэлздэг:
+\begin{equation}
+RSI = 100 - \frac{100}{1 + RS}
+\end{equation}
+Энд $RS = \frac{\text{Дундаж өсөлт}}{\text{Дундаж бууралт}}$
+
+\subsubsection{MACD (Moving Average Convergence Divergence)}
+
+\begin{align}
+MACD &= EMA_{12} - EMA_{26} \\
+Signal &= EMA_9(MACD) \\
+Histogram &= MACD - Signal
+\end{align}
+
+\subsubsection{Bollinger Bands}
+
+\begin{align}
+Middle &= SMA_{20} \\
+Upper &= Middle + 2\sigma \\
+Lower &= Middle - 2\sigma
+\end{align}
+
+\subsubsection{ATR (Average True Range)}
+
+Хэлбэлзлийн хэмжүүр:
+\begin{equation}
+TR = \max(H_t - L_t, |H_t - C_{t-1}|, |L_t - C_{t-1}|)
+\end{equation}
+\begin{equation}
+ATR = EMA_{14}(TR)
+\end{equation}
+
+\section{Ижил төстэй судалгааны тойм}
+
+\subsection{Уламжлалт машин сургалтын аргууд}
+
+Fischer \& Krauss (2018) \cite{fischer2018} нь LSTM сүлжээг S\&P 500 индексийн чиглэлийн таамаглалд хэрэглэж, уламжлалт аргуудаас давуу гүйцэтгэл үзүүлснийг харуулсан. Random Forest болон Gradient Boosting аргууд 54-56\% нарийвчлалтай байхад LSTM 58-60\% нарийвчлалтай байв.
+
+\subsection{Гүн сургалтын аргууд}
+
+Sezer et al. (2020) \cite{sezer2020} нь CNN ашиглан санхүүгийн цуваа өгөгдлийг 2D дүрс болгон хувиргаж, техникийн индикаторуудын загварыг илрүүлсэн. Энэ арга нь FOREX зах зээл дээр 55-57\% нарийвчлалтай байв.
+
+\subsection{Гибрид аргууд}
+
+Kim \& Won (2018) \cite{kim2018} нь CNN + LSTM гибрид архитектурыг санхүүгийн таамаглалд ашигласан. CNN нь локал загвар илрүүлж, LSTM нь цаг хугацааны хамаарлыг загварчилсан. Энэ хослол нь тус тусдаа ашиглахаас илүү үр дүнтэй байв.
+
+\subsection{Attention-д суурилсан аргууд}
+
+Ding et al. (2020) \cite{ding2020} нь Transformer архитектурыг хувьцааны үнийн таамаглалд ашиглаж, LSTM-ээс давуу гүйцэтгэл үзүүлснийг нотолсон. Self-attention механизм нь урт хугацааны хамаарлыг илүү сайн загварчилдаг.
+
+\subsection{Судалгааны цоорхой}
+
+Одоогийн судалгаануудад дараах цоорхой байна:
+\begin{enumerate}
+    \item Ихэнх судалгаа нь хувьцааны зах зээлд төвлөрсөн, FOREX зах зээлийн судалгаа харьцангуй цөөн
+    \item Multi-task learning буюу олон зорилтот сургалтын хэрэглээ хомс
+    \item Regression болон classification-ийг нэгтгэсэн судалгаа цөөн
+    \item Орчин үеийн техникүүд (Focal Loss, SWA) санхүүгийн таамаглалд бага хэрэглэгдсэн
+\end{enumerate}
+
+\begin{table}[H]
+\centering
+\caption{Холбогдох судалгаануудын харьцуулалт}
+\begin{tabular}{|l|c|c|c|c|}
+\hline
+\textbf{Судалгаа} & \textbf{Арга} & \textbf{Зах зээл} & \textbf{Нарийвчлал} & \textbf{Он} \\
+\hline
+Fischer \& Krauss & LSTM & S\&P 500 & 58-60\% & 2018 \\
+\hline
+Sezer et al. & CNN & FOREX & 55-57\% & 2020 \\
+\hline
+Kim \& Won & CNN+LSTM & KOSPI & 56-58\% & 2018 \\
+\hline
+Ding et al. & Transformer & China A-share & 57-59\% & 2020 \\
+\hline
+\textbf{Энэ судалгаа} & \textbf{CNN+BiLSTM+Attn} & \textbf{FOREX} & \textbf{TBD} & \textbf{2025} \\
+\hline
+\end{tabular}
+\label{tab:related_work}
+\end{table}

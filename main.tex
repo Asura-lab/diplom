@@ -1,5 +1,4 @@
 \documentclass[]{Thesis}
-
 \usepackage[utf8]{inputenc}
 \usepackage[english,mongolian]{babel}
 \usepackage{wrapfig}
@@ -12,30 +11,64 @@
 \usepackage{multicol}
 \usepackage{listings}
 \usepackage{tikz}
+\usepackage{xcolor}
+\usepackage{colortbl}
 \usetikzlibrary{positioning}
 \usetikzlibrary{arrows.meta}
+\usetikzlibrary{shapes.geometric}
+
+% Code listing тохиргоо
+\lstset{
+    basicstyle=\ttfamily\small,
+    breaklines=true,
+    frame=single,
+    numbers=left,
+    numberstyle=\tiny,
+    keywordstyle=\color{blue},
+    commentstyle=\color{green!60!black},
+    stringstyle=\color{red},
+    showstringspaces=false
+}
+
 \begin{document}
 \captionsetup{labelfont=bf, textfont=it}
-    \pagenumbering{roman}
+\pagenumbering{roman}
 \pagestyle{fancy}
-
 
 \include{Information}
 \input{Chapters/CoverPage}
 \input{Chapters/TitlePage}
 \input{Chapters/acrolist}
-%\input{Chapters/appendix}
 \input{Chapters/plan}
 \input{Chapters/Talarhal}
 
+\newpage
+\tableofcontents
+\newpage
+\listoffigandtable
+
+%---------
+%	Үндсэн хэсэг
+%---------
+\newpage
+\pagenumbering{arabic}
+\setcounter{page}{1}
+\justifying
+
+\input{Chapters/Chapter1_Introduction}
+\input{Chapters/Chapter2_Literature}
+\input{Chapters/Chapter3_Methodology}
+\input{Chapters/Chapter4_Results}
+\input{Chapters/Chapter5_Conclusion}
 
 %---------
 %	Ном зүй
 %---------
+\input{Chapters/Bibliography}
 
-
-\newpage
-\pagestyle{empty}
-\input{Chapters/Abstrct}
+%---------
+%	Хавсралт
+%---------
+\input{Chapters/appendix}
 
 \end{document}

@@ -2,223 +2,223 @@
 \newpage
 \titleformat{\chapter}[block]{\huge{}\bfseries\centering}{}{0.5em}{}
 
-\chapter{Хавсралт}
+\chapter*{ХАВСРАЛТ}
+\addcontentsline{toc}{chapter}{Хавсралт}
 
+\section*{Хавсралт А. Моделийн архитектурын код}
 
-\section{Системийн ерөнхий код}
-\begin{lstlisting}
-import face_recognition
-from PIL import Image, ImageDraw
-import numpy as np
-import os
+\begin{lstlisting}[language=Python, caption=ForexHybridNetV2 моделийн архитектур]
+class ForexHybridNetV2(nn.Module):
+    def __init__(
+        self,
+        num_features: int,
+        conv_channels: int = 192,
+        lstm_hidden: int = 384,
+        num_attention_heads: int = 8,
+        dropout: float = 0.25
+    ):
+        super().__init__()
+        
+        # Multi-scale CNN Feature Extractor
+        self.conv_blocks = nn.Sequential(
+            ResidualConvBlock(num_features, conv_channels, 7, dropout),
+            SEBlock(conv_channels),
+            ResidualConvBlock(conv_channels, conv_channels, 5, dropout),
+            SEBlock(conv_channels),
+            ResidualConvBlock(conv_channels, conv_channels, 3, dropout),
+        )
+        
+        # Bidirectional LSTM
+        self.lstm = nn.LSTM(
+            input_size=conv_channels,
+            hidden_size=lstm_hidden // 2,
+            num_layers=3,
+            batch_first=True,
+            dropout=dropout,
+            bidirectional=True
+        )
+        self.lstm_norm = nn.LayerNorm(lstm_hidden)
+        
+        # Multi-Head Self Attention
+        self.self_attn = MultiHeadAttention(
+            lstm_hidden, 
+            num_heads=num_attention_heads, 
+            dropout=dropout
+        )
+        
+        # Attention Pooling
+        self.attn_pool = AttentionPooling(lstm_hidden)
+        
+        # Task-specific heads
+        self.reg_head = nn.Sequential(
+            nn.Linear(lstm_hidden, 256),
+            nn.LayerNorm(256),
+            nn.GELU(),
+            nn.Dropout(dropout),
+            nn.Linear(256, 128),
+            nn.LayerNorm(128),
+            nn.GELU(),
+            nn.Linear(128, 1)
+        )
+        
+        self.dir_head = nn.Sequential(
+            nn.Linear(lstm_hidden, 128),
+            nn.LayerNorm(128),
+            nn.GELU(),
+            nn.Dropout(dropout),
+            nn.Linear(128, 64),
+            nn.GELU(),
+            nn.Linear(64, 1)
+        )
+        
+        self.big_move_head = nn.Sequential(
+            nn.Linear(lstm_hidden, 128),
+            nn.LayerNorm(128),
+            nn.GELU(),
+            nn.Dropout(dropout),
+            nn.Linear(128, 64),
+            nn.GELU(),
+            nn.Linear(64, 2)
+        )
+\end{lstlisting}
 
-image_of_dasha = 
-face_recognition.load_image_file
-('./img/known/s19c125b.jpg')
-dasha_face_encoding = face_recognition.face_encodings
-(image_of_dasha,num_jitters=10,model='large')[0]
+\section*{Хавсралт Б. Техникийн индикаторуудын код}
 
-image_of_duk = 
-face_recognition.load_image_file
-('./img/known/s19c043b.jpg')
-duk_face_encoding = face_recognition.face_encodings
-(image_of_duk,num_jitters=10,model='large')[0]
+\begin{lstlisting}[language=Python, caption=RSI индикатор]
+def rsi(series: pd.Series, period: int = 14) -> pd.Series:
+    delta = series.diff()
+    gain = delta.clip(lower=0)
+    loss = -delta.clip(upper=0)
+    avg_gain = gain.ewm(
+        alpha=1/period, 
+        adjust=False, 
+        min_periods=period
+    ).mean()
+    avg_loss = loss.ewm(
+        alpha=1/period, 
+        adjust=False, 
+        min_periods=period
+    ).mean()
+    rs = avg_gain / (avg_loss + 1e-9)
+    return 100 - (100 / (1 + rs))
+\end{lstlisting}
 
-image_of_uilsee = 
-face_recognition.load_image_file
-('./img/known/s19c011b.jpg')
-uilsee_face_encoding = face_recognition.face_encodings
-(image_of_uilsee,num_jitters=10,model='large')[0]
+\begin{lstlisting}[language=Python, caption=MACD индикатор]
+def macd(close: pd.Series, fast=12, slow=26, signal=9):
+    fast_ema = close.ewm(span=fast, adjust=False).mean()
+    slow_ema = close.ewm(span=slow, adjust=False).mean()
+    macd_line = fast_ema - slow_ema
+    signal_line = macd_line.ewm(span=signal, adjust=False).mean()
+    histogram = macd_line - signal_line
+    return macd_line, signal_line, histogram
+\end{lstlisting}
 
-image_of_masha = 
-face_recognition.load_image_file
-('./img/known/s19c023b.jpg')
-masha_face_encoding = face_recognition.face_encodings
-(image_of_masha,num_jitters=10,model='large')[0]
+\section*{Хавсралт В. Focal Loss хэрэгжүүлэлт}
 
-image_of_anand = 
-face_recognition.load_image_file
-('./img/known/s19c060b.jpg')
-anand_face_encoding = face_recognition.face_encodings
-(image_of_anand,num_jitters=10,model='large')[0]
-
-image_of_pugna = 
-face_recognition.load_image_file
-('./img/known/s19c031b.jpg')   
-pugna_face_encoding = face_recognition.face_encodings
-(image_of_pugna,num_jitters=10,model='large')[0]
-
-image_of_saixna = 
-face_recognition.load_image_file
-('./img/known/s19c108b.jpg')
-saixna_face_encoding = face_recognition.face_encodings
-(image_of_saixna,num_jitters=10,model='large')[0]
-
-image_of_hangal = 
-face_recognition.load_image_file
-('./img/known/s19c130b.jpg')
-hangal_face_encoding = face_recognition.face_encodings
-(image_of_hangal,num_jitters=10,model='large')[0]
-
-image_of_tamiraa = 
-face_recognition.load_image_file
-('./img/known/s19c107b.jpg')
-tamiraa_face_encoding = face_recognition.face_encodings
-(image_of_tamiraa,num_jitters=10,model='large')[0]
-
-image_of_terii = 
-face_recognition.load_image_file
-('./img/known/s19c046b.jpg')
-terii_face_encoding = face_recognition.face_encodings
-(image_of_terii,num_jitters=10,model='large')[0]
-
-image_of_okono = 
-face_recognition.load_image_file
-('./img/known/s19c139b.jpg')
-okono_face_encoding = face_recognition.face_encodings
-(image_of_okono,num_jitters=10,model='large')[0]
-
-image_of_anar = 
-face_recognition.load_image_file
-('./img/known/s19c059b.jpg')
-anar_face_encoding = face_recognition.face_encodings
-(image_of_anar,num_jitters=10,model='large')[0]
-
-image_of_zok = 
-face_recognition.load_image_file
-('./img/known/s19c029b.jpg')
-zok_face_encoding = face_recognition.face_encodings
-(image_of_zok,num_jitters=10,model='large')[0]
-
-image_of_nanzaa = 
-face_recognition.load_image_file
-('./img/known/s19c083b.jpg')
-nanzaa_face_encoding = face_recognition.face_encodings
-(image_of_nanzaa,num_jitters=10,model='large')[0]
-
-image_of_tselmeg = 
-face_recognition.load_image_file
-('./img/known/s19c057b.jpg')
-tselmeg_face_encoding = face_recognition.face_encodings
-(image_of_tselmeg,num_jitters=10,model='large')[0]
-
-image_of_purve = 
-face_recognition.load_image_file
-('./img/known/s19c121b.jpg')
-purve_face_encoding = face_recognition.face_encodings
-(image_of_purve,num_jitters=10,model='large')[0]
-
-image_of_muji = 
-face_recognition.load_image_file
-('./img/known/s19c019b.jpg')
-muji_face_encoding = face_recognition.face_encodings
-(image_of_muji,num_jitters=10,model='large')[0]
-
-image_of_ubagsh = 
-face_recognition.load_image_file
-('./img/known/u-bagsh1.jpg')
-ubagsh_face_encoding = face_recognition.face_encodings
-(image_of_dasha,num_jitters=10,model='large')[0]
-
-#  Create arrays of encodings and names
-known_face_encodings = [
-  dasha_face_encoding,
-  duk_face_encoding,
-  uilsee_face_encoding,
-  masha_face_encoding,
-  anand_face_encoding,
-  pugna_face_encoding,
-  saixna_face_encoding,
-  tamiraa_face_encoding,
-  terii_face_encoding,
-  okono_face_encoding,
-  anar_face_encoding,
-  zok_face_encoding,
-  nanzaa_face_encoding,
-  tselmeg_face_encoding,
-  purve_face_encoding,
-  muji_face_encoding,
-  ubagsh_face_encoding
-]
-
-known_face_names = [
-  "Dasha",
-  "Duk",
-  "Uils",
-  "Bat",
-  "Anand",
-  "Pugna",
-  "Saixna",
-  "Tamiraa",
-  "Tergel",
-  "Okono",
-  "Anar",
-  "Zok",
-  "Nanzaa",
-  "Tselmeg",
-  "Purvee",
-  "Munhjin",
-  "ARDIN BAGSH"
-
-]
-
-# Load test image to find faces in
-
-image_folder = "./img/groups/facess/"
-
-for images in os.listdir(image_folder):
-  
-  test_image = face_recognition.load_image_file
-  ("./img/groups/facess/"+images)
-
-  # Find faces in test image
-  face_locations = 
-  face_recognition.face_locations(test_image)
-  face_encodings = 
-  face_recognition.face_encodings
-  (test_image, face_locations,num_jitters=30)
-
-  # Convert to PIL format
-  pil_image = Image.fromarray(test_image)
-
-  # Create a ImageDraw instance
-  draw = ImageDraw.Draw(pil_image)
-
-  # Loop through faces in test image
-
-  for(top, right, bottom, left), 
-  face_encoding in zip(face_locations, face_encodings):
-    matches = face_recognition.compare_faces
-    (known_face_encodings, face_encoding, tolerance=0.6)
-
-    name = "Unknown Person"
-
-    # If match
-    # if True in matches:
-    #   first_match_index = matches.index(True)
-    #   name = known_face_names[first_match_index]
-    face_distances = face_recognition.face_distance
-    (known_face_encodings, face_encoding)
-    best_match_index = np.argmin(face_distances)
-    if matches[best_match_index]:
-      name = known_face_names[best_match_index]
+\begin{lstlisting}[language=Python, caption=Focal Loss]
+class FocalLoss(nn.Module):
+    def __init__(self, gamma=2.0, alpha=0.25, pos_weight=None):
+        super().__init__()
+        self.gamma = gamma
+        self.alpha = alpha
+        self.pos_weight = pos_weight
     
-    # Draw box
-    draw.rectangle(((left, top), (right, bottom)), outline=(255,255,0))
+    def forward(self, inputs, targets):
+        bce_loss = F.binary_cross_entropy_with_logits(
+            inputs, targets, 
+            pos_weight=self.pos_weight, 
+            reduction='none'
+        )
+        probs = torch.sigmoid(inputs)
+        pt = torch.where(targets == 1, probs, 1 - probs)
+        focal_weight = (1 - pt) ** self.gamma
+        focal_loss = self.alpha * focal_weight * bce_loss
+        return focal_loss.mean()
+\end{lstlisting}
 
-    # Draw label
-    # text_width, text_height = draw.textlength(name)
-    draw.rectangle(((left,bottom - 10 - 10),
-    (right, bottom)), fill=(255,255,0),
-    outline=(255,255,0))
-    draw.text((left + 6, bottom - 10 - 5),
-    name, fill=(0,0,0))
+\section*{Хавсралт Г. Hyperparameter тохиргоо}
 
-  del draw
+\begin{table}[H]
+\centering
+\begin{tabular}{|l|l|l|}
+\hline
+\textbf{Параметр} & \textbf{Утга} & \textbf{Тайлбар} \\
+\hline
+TARGET\_HORIZON\_MIN & 10 & Таамаглах хугацаа (минут) \\
+\hline
+SEQ\_LEN & 240 & Оролтын дарааллын урт \\
+\hline
+BATCH\_SIZE & 256 & Batch хэмжээ \\
+\hline
+EPOCHS & 100 & Хамгийн их epoch \\
+\hline
+LEARNING\_RATE & 3e-4 & Суралцах хурд \\
+\hline
+WEIGHT\_DECAY & 1e-3 & Weight decay \\
+\hline
+WARMUP\_EPOCHS & 5 & Warmup epoch \\
+\hline
+EARLY\_STOPPING\_PATIENCE & 12 & Early stopping patience \\
+\hline
+NOISE\_STD & 0.015 & Noise augmentation std \\
+\hline
+RARE\_EVENT\_WEIGHT & 30.0 & Ховор үйл явдлын жин \\
+\hline
+DIR\_LABEL\_SMOOTH & 0.08 & Direction label smoothing \\
+\hline
+BIGMOVE\_LABEL\_SMOOTH & 0.05 & Big move label smoothing \\
+\hline
+SWA\_START\_EPOCH & 40 & SWA эхлэх epoch \\
+\hline
+SWA\_LR & 1e-5 & SWA learning rate \\
+\hline
+FOCAL\_GAMMA & 2.0 & Focal loss gamma \\
+\hline
+FOCAL\_ALPHA & 0.25 & Focal loss alpha \\
+\hline
+CONV\_CHANNELS & 192 & CNN channel тоо \\
+\hline
+LSTM\_HIDDEN & 384 & LSTM hidden хэмжээс \\
+\hline
+NUM\_ATTENTION\_HEADS & 8 & Attention head тоо \\
+\hline
+DROPOUT\_RATE & 0.25 & Dropout хувь \\
+\hline
+\end{tabular}
+\caption{Hyperparameter тохиргоо}
+\end{table}
 
-  # Display image
-  pil_image.show()
+\section*{Хавсралт Д. Төслийн файлын бүтэц}
 
-  # Save image
-  pil_image.save(images)
+\begin{lstlisting}[basicstyle=\ttfamily\small]
+Forex-Signal-App/
++-- backend/
+|   +-- app.py
+|   +-- config/
+|   |   +-- settings.py
+|   +-- ml/
+|   |   +-- features/
+|   |   +-- models/
+|   |   +-- preprocessing/
+|   +-- utils/
+|       +-- mt5_handler.py
+|       +-- unirate_handler.py
++-- mobile_app/
+|   +-- App.js
+|   +-- src/
+|   |   +-- components/
+|   |   +-- screens/
+|   |   +-- services/
+|   +-- android/
++-- data/
+|   +-- EUR_USD_1min.csv
+|   +-- EUR_USD_test.csv
++-- artifacts/
+|   +-- eurusd_hybrid_model_v2.pt
++-- models/
+|   +-- rl_forex_ppo_lstm/
++-- docs/
+|   +-- ...
++-- forex_signal_30min.ipynb
++-- requirements.txt
 \end{lstlisting}

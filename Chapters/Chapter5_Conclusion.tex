@@ -1,0 +1,168 @@
+\chapter{ДҮГНЭЛТ}
+
+\section{Судалгааны үр дүнгийн нэгтгэл}
+
+Энэхүү дипломын ажлаар машин сургалтын гүн сургалтын аргуудыг ашиглан EUR/USD валютын хосын үнийн чиг хандлагыг таамаглах арилжааны бот системийг амжилттай хөгжүүлсэн. Судалгааны гол үр дүнгүүд:
+
+\subsection{Техникийн үр дүн}
+
+\begin{enumerate}
+    \item \textbf{Гибрид архитектур:} CNN + BiLSTM + Multi-Head Attention бүхий орчин үеийн гүн сургалтын архитектур хэрэгжүүлсэн. Энэ нь:
+    \begin{itemize}
+        \item 3 давхар Residual Convolutional Block (192 channel)
+        \item Squeeze-and-Excitation block-ууд
+        \item 3 давхар BiLSTM (384 hidden units)
+        \item 8 толгойт Multi-Head Self Attention
+        \item Gated Attention Pooling
+    \end{itemize}
+    
+    \item \textbf{Сургалтын техникүүд:} Орчин үеийн сургалтын техникүүдийг нэгтгэн хэрэгжүүлсэн:
+    \begin{itemize}
+        \item Focal Loss (class imbalance асуудал шийдвэрлэх)
+        \item Stochastic Weight Averaging (generalization сайжруулах)
+        \item Cosine Annealing with Warm Restarts
+        \item Mixup, Time/Feature Masking augmentation
+        \item Label Smoothing
+    \end{itemize}
+    
+    \item \textbf{Шинж чанар инженерчлэл:} 120+ шинж чанар тооцоолсон:
+    \begin{itemize}
+        \item Техникийн индикаторууд (EMA, RSI, MACD, Bollinger, ATR гэх мэт)
+        \item Rolling статистикууд (5 өөр цонхны хэмжээтэй)
+        \item Цаг хугацааны шинж чанарууд (сесс, цикл кодчилол)
+        \item Лааны шинж чанарууд
+    \end{itemize}
+\end{enumerate}
+
+\subsection{Гүйцэтгэлийн үр дүн}
+
+Моделийн гүйцэтгэлийг гурван зорилтын хүрээнд үнэлсэн:
+
+\begin{enumerate}
+    \item \textbf{Үнийн таамаглал (Regression):}
+    \begin{itemize}
+        \item 10 минутын дараах pip хөдөлгөөнийг таамаглах
+        \item MAE, RMSE, $R^2$ хэмжүүрүүдээр үнэлсэн
+    \end{itemize}
+    
+    \item \textbf{Чиглэлийн таамаглал (Classification):}
+    \begin{itemize}
+        \item Үнэ өсөх/буурах эсэхийг таамаглах
+        \item Accuracy, Precision, Recall, F1, AUC хэмжүүрүүдээр үнэлсэн
+    \end{itemize}
+    
+    \item \textbf{Том хөдөлгөөний таамаглал:}
+    \begin{itemize}
+        \item ±30 pip-ээс их хөдөлгөөн байх эсэхийг таамаглах
+        \item Ховор үйл явдал учир Focal Loss чухал
+    \end{itemize}
+\end{enumerate}
+
+\subsection{Системийн бүрэлдэхүүн}
+
+Бүрэн ажиллагаатай систем хөгжүүлсэн:
+
+\begin{enumerate}
+    \item \textbf{ML Pipeline:} Өгөгдөл боловсруулалт → Шинж чанар → Модель → Таамаглал
+    \item \textbf{Backend API:} FastAPI дээр суурилсан REST API
+    \item \textbf{Mobile App:} React Native мобайл аппликейшн
+    \item \textbf{MT5 Integration:} MetaTrader 5 платформтой холболт
+\end{enumerate}
+
+\section{Зорилтын биелэлт}
+
+Судалгааны эхэнд дэвшүүлсэн зорилтуудын биелэлтийг хүснэгт \ref{tab:objectives}-д харуулав.
+
+\begin{table}[H]
+\centering
+\caption{Зорилтын биелэлт}
+\begin{tabular}{|c|l|c|l|}
+\hline
+\textbf{№} & \textbf{Зорилт} & \textbf{Биелэлт} & \textbf{Тайлбар} \\
+\hline
+1 & Өгөгдөл цуглуулах & \checkmark & EUR/USD 1min өгөгдөл \\
+\hline
+2 & Шинж чанар инженерчлэл & \checkmark & 120+ шинж чанар \\
+\hline
+3 & ML модель хөгжүүлэх & \checkmark & CNN+BiLSTM+Attention \\
+\hline
+4 & Модель сургах, оновчлох & \checkmark & SWA, Focal Loss гэх мэт \\
+\hline
+5 & Үнэлгээ хийх & \checkmark & Олон хэмжүүрээр \\
+\hline
+6 & Мобайл апп хөгжүүлэх & \checkmark & React Native \\
+\hline
+7 & Арилжааны туршилт & $\sim$ & Backtesting хийсэн \\
+\hline
+\end{tabular}
+\label{tab:objectives}
+\end{table}
+
+\section{Шинэлэг хувь нэмэр}
+
+Энэхүү судалгаа нь дараах шинэлэг хувь нэмэртэй:
+
+\begin{enumerate}
+    \item \textbf{Гибрид архитектурын хэрэглээ:} CNN + BiLSTM + Multi-Head Attention архитектурыг FOREX таамаглалд хэрэглэсэн цөөн судалгааны нэг
+    
+    \item \textbf{Multi-task Learning:} Regression болон classification-ийг нэгтгэн сургаснаар илүү robust модель бүтээсэн
+    
+    \item \textbf{Орчин үеийн техникүүд:} Focal Loss, SWA зэрэг сүүлийн үеийн техникүүдийг санхүүгийн таамаглалд хэрэглэсэн
+    
+    \item \textbf{Бүрэн систем:} ML модель + Backend + Mobile App бүхий бүрэн систем хөгжүүлсэн
+    
+    \item \textbf{Монгол хэлээр:} Энэ чиглэлээр Монгол хэл дээрх дэлгэрэнгүй судалгааны нэг
+\end{enumerate}
+
+\section{Цаашдын судалгааны чиглэл}
+
+Энэхүү судалгааг цаашид дараах чиглэлүүдээр өргөтгөх боломжтой:
+
+\subsection{Моделийн сайжруулалт}
+
+\begin{enumerate}
+    \item \textbf{Transformer архитектур:} LSTM-ийн оронд бүрэн Transformer архитектур турших
+    \item \textbf{Ensemble:} Олон моделийн хослол (XGBoost + LSTM + Transformer)
+    \item \textbf{Online Learning:} Модель зах зээлийн өөрчлөлтөд автоматаар дасан зохицох
+\end{enumerate}
+
+\subsection{Нэмэлт шинж чанар}
+
+\begin{enumerate}
+    \item \textbf{Sentiment Analysis:} Санхүүгийн мэдээний sentiment
+    \item \textbf{Macro Economic:} Эдийн засгийн үзүүлэлтүүд (GDP, инфляци гэх мэт)
+    \item \textbf{Order Flow:} Арилжааны захиалгын урсгалын мэдээлэл
+\end{enumerate}
+
+\subsection{Reinforcement Learning}
+
+\begin{enumerate}
+    \item \textbf{Position Sizing:} Арилжааны хэмжээг RL-ээр оновчлох
+    \item \textbf{Risk Management:} Stop loss, take profit-ийг динамикаар тохируулах
+    \item \textbf{Portfolio Optimization:} Олон валютын хосын портфолио удирдах
+\end{enumerate}
+
+\subsection{Системийн өргөтгөл}
+
+\begin{enumerate}
+    \item \textbf{Олон валют:} GBP/USD, USD/JPY зэрэг бусад хосуудад өргөтгөх
+    \item \textbf{Live Trading:} Бодит арилжааны туршилт хийх
+    \item \textbf{Alert System:} Push notification, email, Telegram зэрэг мэдэгдэл
+\end{enumerate}
+
+\section{Практик хэрэглээ}
+
+Энэхүү судалгааны үр дүнг дараах байдлаар практикт хэрэглэж болно:
+
+\begin{enumerate}
+    \item \textbf{Арилжааны шийдвэр дэмжлэг:} Арилжаачдад нэмэлт мэдээлэл өгөх
+    \item \textbf{Хагас автомат арилжаа:} Хүний хяналттай автомат арилжаа
+    \item \textbf{Сургалтын хэрэгсэл:} Машин сургалтын санхүүгийн хэрэглээг судлах
+    \item \textbf{Үндэс суурь:} Цаашдын судалгааны үндэс суурь болох
+\end{enumerate}
+
+\section{Төгсгөлийн үг}
+
+Энэхүү дипломын ажлаар машин сургалтын орчин үеийн аргуудыг ашиглан FOREX зах зээлийн таамаглал хийх системийг амжилттай хөгжүүлсэн. Хэдийгээр санхүүгийн зах зээлийг төгс таамаглах боломжгүй боловч, машин сургалтын аргууд нь арилжааны шийдвэр гаргахад чухал нэмэлт хэрэгсэл болж чадна.
+
+Судалгаагаар олж авсан мэдлэг, туршлага нь цаашдын мэргэжлийн үйл ажиллагаанд чухал үндэс суурь болно гэдэгт итгэж байна. Машин сургалт, гүн сургалтын салбар хурдацтай хөгжиж байгаа энэ үед, энэхүү чиглэлээр мэдлэг олж авсан нь ирээдүйд олон салбарт хэрэглэгдэх боломжтой.

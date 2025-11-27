@@ -1,0 +1,15 @@
+\babel@toc {mongolian}{}\relax 
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {2.1}{\ignorespaces LSTM нэгжийн бүтэц}}{6}{figure.caption.50}%
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Өгөгдлийн хуваалт}}{13}{figure.caption.156}%
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Моделийн архитектур}}{14}{figure.caption.164}%
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Сургалтын loss-ийн өөрчлөлт}}{18}{figure.caption.224}%
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Калибрацийн муруй (OOS)}}{20}{figure.caption.236}%
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Confusion matrix (a) Up30, (b) Down30}}{21}{figure.caption.238}%
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Хуримтлагдсан ашиг/алдагдал (OOS)}}{22}{figure.caption.244}%
+\contentsline {figure}{\numberline {4.5}{\ignorespaces Бодит үнэ vs Таамагласан үнэ (OOS)}}{23}{figure.caption.246}%
+\contentsline {figure}{\numberline {4.6}{\ignorespaces Мобайл аппликейшний дэлгэцүүд}}{24}{figure.caption.252}%
+\addvspace {10\p@ }

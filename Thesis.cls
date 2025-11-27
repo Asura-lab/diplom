@@ -67,11 +67,11 @@
 
 
 \titlespacing{\chapter}{0pt}{-70pt}{1pt}
-\titleformat{\chapter}[block]{\bfseries\RaggedRight}{\textsc{\thechapter.}}{0.5em}{}
+\titleformat{\chapter}[block]{\bfseries}{\textsc{\thechapter.}}{0.5em}{}
 \titlespacing{\section}{0pt}{0pt}{1pt}
-\titleformat{\section}[block]{\bfseries\RaggedRight}{\thesection.}{0.5em}{}
+\titleformat{\section}[block]{\bfseries}{\thesection.}{0.5em}{}
 \titlespacing{\subsection}{0pt}{0pt}{1pt}
-\titleformat{\subsection}[block]{\bfseries\RaggedRight}{\thesubsection}{0.5em}{}
+\titleformat{\subsection}[block]{\bfseries}{\thesubsection}{0.5em}{}
 
 
 \addtocounter{secnumdepth}{1}
@@ -84,9 +84,9 @@
 
 \pagestyle{fancy}
 \fancyhf{}%
-\renewcommand{\headrulewidth}{2pt}
+\renewcommand{\headrulewidth}{0pt}
 \renewcommand{\footrulewidth}{0pt}
-\fancyhead[C]{\textsc{\leftmark}}
+\fancyhead[C]{}
 \fancyfoot[C]{\normalsize \thepage}%
 
 \renewcommand\tableofcontents{
