@@ -1,124 +1,125 @@
 \babel@toc {mongolian}{}\relax 
 \contentsline {chapter}{Товчилсон үгийн жагсаалт}{i}{chapter*.1}%
-\contentsline {chapter}{Ажлын төлөвлөгөө}{i}{dummy.2}%
-\contentsline {chapter}{Гарчиг}{iii}{dummy.5}%
-\contentsline {chapter}{Зураг болон Хүснэгтийн жагсаалт}{vi}{dummy.7}%
-\contentsline {chapter}{\numberline {1}УДИРТГАЛ}{1}{chapter.9}%
-\contentsline {section}{\numberline {1.1}Судалгааны үндэслэл, ач холбогдол}{1}{section.10}%
-\contentsline {section}{\numberline {1.2}Судалгааны зорилго, зорилт}{1}{section.15}%
-\contentsline {subsection}{\numberline {1.2.1}Зорилго}{1}{subsection.16}%
-\contentsline {subsection}{\numberline {1.2.2}Зорилтууд}{2}{subsection.17}%
-\contentsline {section}{\numberline {1.3}Судалгааны хамрах хүрээ}{2}{section.25}%
-\contentsline {section}{\numberline {1.4}Судалгааны шинэлэг тал}{2}{section.26}%
-\contentsline {chapter}{\numberline {2}ОНОЛЫН ҮНДЭСЛЭЛ}{4}{chapter.32}%
-\contentsline {section}{\numberline {2.1}Машин сургалтын онолын үндэс}{4}{section.33}%
-\contentsline {subsection}{\numberline {2.1.1}Хяналттай сургалт}{4}{subsection.34}%
-\contentsline {section}{\numberline {2.2}Ensemble сургалтын аргууд}{4}{section.35}%
-\contentsline {subsection}{\numberline {2.2.1}Random Forest}{4}{subsection.36}%
-\contentsline {subsection}{\numberline {2.2.2}Gradient Boosting}{4}{subsection.38}%
-\contentsline {subsubsection}{\numberline {2.2.2.1}XGBoost}{5}{subsubsection.40}%
-\contentsline {subsubsection}{\numberline {2.2.2.2}LightGBM}{5}{subsubsection.42}%
-\contentsline {subsection}{\numberline {2.2.3}Voting Ensemble}{5}{subsection.43}%
-\contentsline {section}{\numberline {2.3}Техникийн шинжилгээ}{5}{section.45}%
-\contentsline {subsection}{\numberline {2.3.1}Trend индикаторууд}{5}{subsection.46}%
-\contentsline {subsection}{\numberline {2.3.2}Momentum индикаторууд}{6}{subsection.49}%
-\contentsline {subsection}{\numberline {2.3.3}Volatility индикаторууд}{6}{subsection.51}%
-\contentsline {section}{\numberline {2.4}Холбогдох судалгааны тойм}{6}{section.54}%
-\contentsline {section}{\numberline {2.5}Бүлгийн дүгнэлт}{6}{section.55}%
-\contentsline {chapter}{\numberline {3}СУДАЛГААНЫ АРГА ЗҮЙ}{7}{chapter.56}%
-\contentsline {section}{\numberline {3.1}Системийн ерөнхий тойм}{7}{section.57}%
-\contentsline {subsection}{\numberline {3.1.1}Системийн Flow Diagram}{7}{subsection.58}%
-\contentsline {subsection}{\numberline {3.1.2}Хэрэглээний тохиолдлын диаграмм}{8}{subsection.60}%
-\contentsline {subsection}{\numberline {3.1.3}Activity Diagram - Дохио авах үйлдэл}{8}{subsection.62}%
-\contentsline {subsection}{\numberline {3.1.4}EUR/USD Үнийн динамик диаграмм}{9}{subsection.64}%
-\contentsline {subsection}{\numberline {3.1.5}Системийн архитектурын диаграмм}{10}{subsection.66}%
-\contentsline {subsection}{\numberline {3.1.6}Sequence Diagram - API дуудлага}{10}{subsection.68}%
-\contentsline {section}{\numberline {3.2}Өгөгдлийн тодорхойлолт}{10}{section.70}%
-\contentsline {subsection}{\numberline {3.2.1}Өгөгдлийн эх сурвалж}{10}{subsection.71}%
-\contentsline {subsection}{\numberline {3.2.2}Өгөгдлийн хугацааны хүрээ}{11}{subsection.72}%
-\contentsline {subsection}{\numberline {3.2.3}Өгөгдлийн чанарын хяналт}{11}{subsection.74}%
-\contentsline {section}{\numberline {3.3}Шинж чанар инженерчлэл}{11}{section.78}%
-\contentsline {subsection}{\numberline {3.3.1}Чиг хандлагын индикаторууд (Trend Indicators)}{11}{subsection.79}%
-\contentsline {subsubsection}{\numberline {3.3.1.1}Хөдөлгөөнт дундаж (Moving Averages)}{11}{subsubsection.80}%
-\contentsline {subsubsection}{\numberline {3.3.1.2}MA Crossover дохионууд}{12}{subsubsection.81}%
-\contentsline {subsubsection}{\numberline {3.3.1.3}Үнэ ба MA-ийн харьцаа}{12}{subsubsection.82}%
-\contentsline {subsection}{\numberline {3.3.2}Моментум индикаторууд (Momentum Indicators)}{12}{subsection.84}%
-\contentsline {subsubsection}{\numberline {3.3.2.1}RSI (Relative Strength Index)}{12}{subsubsection.85}%
-\contentsline {subsubsection}{\numberline {3.3.2.2}MACD (Moving Average Convergence Divergence)}{12}{subsubsection.87}%
-\contentsline {subsubsection}{\numberline {3.3.2.3}Stochastic Oscillator}{13}{subsubsection.91}%
-\contentsline {subsubsection}{\numberline {3.3.2.4}ROC (Rate of Change)}{13}{subsubsection.93}%
-\contentsline {subsection}{\numberline {3.3.3}Хэлбэлзлийн индикаторууд (Volatility Indicators)}{13}{subsection.95}%
-\contentsline {subsubsection}{\numberline {3.3.3.1}ATR (Average True Range)}{13}{subsubsection.96}%
-\contentsline {subsubsection}{\numberline {3.3.3.2}Bollinger Bands}{14}{subsubsection.100}%
-\contentsline {subsection}{\numberline {3.3.4}Лааны загварууд (Candle Patterns)}{14}{subsection.104}%
-\contentsline {subsection}{\numberline {3.3.5}Дэмжлэг/Эсэргүүцэл (Support/Resistance)}{14}{subsection.105}%
-\contentsline {subsection}{\numberline {3.3.6}Чиг хандлагын хүч (Trend Strength)}{14}{subsection.111}%
-\contentsline {subsection}{\numberline {3.3.7}BUY Score - Нэгдсэн дохионы үнэлгээ}{14}{subsection.112}%
-\contentsline {section}{\numberline {3.4}Зорилтот хувьсагч (Target Variable)}{15}{section.113}%
-\contentsline {subsection}{\numberline {3.4.1}BUY-Only Classification}{15}{subsection.114}%
-\contentsline {subsection}{\numberline {3.4.2}Параметрүүд}{15}{subsection.115}%
-\contentsline {section}{\numberline {3.5}Өгөгдлийн хуваалт ба Scaling}{15}{section.117}%
-\contentsline {subsection}{\numberline {3.5.1}Хуваалт}{15}{subsection.118}%
-\contentsline {subsection}{\numberline {3.5.2}StandardScaler}{15}{subsection.119}%
-\contentsline {section}{\numberline {3.6}Моделийн архитектур}{15}{section.121}%
-\contentsline {subsection}{\numberline {3.6.1}Ensemble арга}{15}{subsection.122}%
-\contentsline {subsection}{\numberline {3.6.2}XGBoost}{16}{subsection.127}%
-\contentsline {subsection}{\numberline {3.6.3}LightGBM}{16}{subsection.128}%
-\contentsline {subsection}{\numberline {3.6.4}Random Forest}{16}{subsection.129}%
-\contentsline {subsection}{\numberline {3.6.5}Ensemble Averaging}{16}{subsection.130}%
-\contentsline {subsection}{\numberline {3.6.6}Hyperparameter}{17}{subsection.132}%
-\contentsline {section}{\numberline {3.7}Confidence Threshold}{17}{section.134}%
-\contentsline {section}{\numberline {3.8}Динамик SL/TP тооцоолол}{17}{section.135}%
-\contentsline {section}{\numberline {3.9}Backend API}{17}{section.138}%
-\contentsline {subsection}{\numberline {3.9.1}Flask + Waitress}{17}{subsection.139}%
-\contentsline {subsection}{\numberline {3.9.2}Twelve Data API}{18}{subsection.140}%
-\contentsline {section}{\numberline {3.10}Мобайл аппликейшн}{18}{section.141}%
-\contentsline {subsection}{\numberline {3.10.1}React Native + Expo}{18}{subsection.142}%
-\contentsline {subsection}{\numberline {3.10.2}Үндсэн дэлгэцүүд}{18}{subsection.143}%
-\contentsline {subsection}{\numberline {3.10.3}API Integration}{18}{subsection.148}%
-\contentsline {section}{\numberline {3.11}MongoDB Database}{18}{section.149}%
-\contentsline {subsection}{\numberline {3.11.1}Collections}{18}{subsection.150}%
-\contentsline {subsection}{\numberline {3.11.2}Authentication}{18}{subsection.151}%
-\contentsline {chapter}{\numberline {4}СУДАЛГААНЫ ҮР ДҮН}{20}{chapter.152}%
-\contentsline {section}{\numberline {4.1}Өгөгдлийн тойм}{20}{section.153}%
-\contentsline {subsection}{\numberline {4.1.1}Сургалтын өгөгдөл}{20}{subsection.154}%
-\contentsline {subsection}{\numberline {4.1.2}Өгөгдлийн тархалтын диаграмм}{20}{subsection.156}%
-\contentsline {subsection}{\numberline {4.1.3}Онцлогуудын хураангуй}{20}{subsection.158}%
-\contentsline {section}{\numberline {4.2}Загваруудын гүйцэтгэл}{21}{section.160}%
-\contentsline {subsection}{\numberline {4.2.1}Загваруудын харьцуулсан диаграмм}{21}{subsection.161}%
-\contentsline {subsection}{\numberline {4.2.2}XGBoost загварын үр дүн}{22}{subsection.163}%
-\contentsline {subsection}{\numberline {4.2.3}LightGBM загварын үр дүн}{22}{subsection.165}%
-\contentsline {subsection}{\numberline {4.2.4}Random Forest загварын үр дүн}{23}{subsection.167}%
-\contentsline {subsection}{\numberline {4.2.5}Ensemble загварын нэгтгэсэн үр дүн}{23}{subsection.169}%
-\contentsline {section}{\numberline {4.3}Онцлогуудын чухлын дүн шинжилгээ}{23}{section.172}%
-\contentsline {subsection}{\numberline {4.3.1}Feature Importance}{23}{subsection.173}%
-\contentsline {subsection}{\numberline {4.3.2}Confusion Matrix}{24}{subsection.176}%
-\contentsline {subsection}{\numberline {4.3.3}ROC Curve}{25}{subsection.178}%
-\contentsline {subsection}{\numberline {4.3.4}Дүн шинжилгээ}{26}{subsection.180}%
-\contentsline {section}{\numberline {4.4}Итгэлцлийн түвшин ба шийдвэр гаргалт}{26}{section.181}%
-\contentsline {subsection}{\numberline {4.4.1}Confidence Score}{26}{subsection.182}%
-\contentsline {subsection}{\numberline {4.4.2}Шийдвэр гаргах босго}{26}{subsection.184}%
-\contentsline {section}{\numberline {4.5}Системийн ажиллагааны үр дүн}{27}{section.185}%
-\contentsline {subsection}{\numberline {4.5.1}API хариу үйлдлийн хурд}{27}{subsection.186}%
-\contentsline {subsection}{\numberline {4.5.2}Бодит цагийн туршилт}{27}{subsection.188}%
-\contentsline {section}{\numberline {4.6}Харьцуулалт ба дүгнэлт}{27}{section.189}%
-\contentsline {subsection}{\numberline {4.6.1}Загваруудын харьцуулалт}{27}{subsection.190}%
-\contentsline {subsection}{\numberline {4.6.2}Ensemble-ийн давуу тал}{27}{subsection.192}%
-\contentsline {section}{\numberline {4.7}Backtest үр дүн}{28}{section.197}%
-\contentsline {subsection}{\numberline {4.7.1}BUY-Only Strategy}{28}{subsection.198}%
-\contentsline {subsection}{\numberline {4.7.2}Dynamic SL/TP (ATR-based)}{28}{subsection.201}%
-\contentsline {subsection}{\numberline {4.7.3}Санал болгох тохиргоо}{29}{subsection.202}%
-\contentsline {subsection}{\numberline {4.7.4}Үр дүнгийн дүгнэлт}{29}{subsection.203}%
-\contentsline {chapter}{\numberline {5}ДҮГНЭЛТ}{30}{chapter.204}%
-\contentsline {section}{\numberline {5.1}Судалгааны үр дүнгийн нэгтгэл}{30}{section.205}%
-\contentsline {subsection}{\numberline {5.1.1}Техникийн үр дүн}{30}{subsection.206}%
-\contentsline {subsection}{\numberline {5.1.2}Backtest үр дүн}{30}{subsection.210}%
-\contentsline {subsection}{\numberline {5.1.3}Системийн бүрэлдэхүүн}{31}{subsection.212}%
-\contentsline {section}{\numberline {5.2}Зорилтын биелэлт}{31}{section.218}%
-\contentsline {section}{\numberline {5.3}Шинэлэг хувь нэмэр}{31}{section.220}%
-\contentsline {section}{\numberline {5.4}Хязгаарлалт}{31}{section.226}%
-\contentsline {section}{\numberline {5.5}Цаашдын судалгааны чиглэл}{32}{section.231}%
-\contentsline {section}{\numberline {5.6}Төгсгөлийн үг}{32}{section.237}%
-\contentsline {chapter}{Талархал}{32}{dummy.238}%
-\contentsline {chapter}{Ном зүй}{34}{chapter*.240}%
-\contentsline {chapter}{Хавсралт}{37}{chapter*.242}%
+\contentsline {chapter}{Гарчиг}{ii}{dummy.2}%
+\contentsline {chapter}{Зураг болон Хүснэгтийн жагсаалт}{v}{dummy.4}%
+\contentsline {chapter}{Хураангуй}{vi}{chapter*.5}%
+\contentsline {chapter}{Abstract}{viii}{table.caption.6}%
+\contentsline {chapter}{\numberline {1}УДИРТГАЛ}{1}{chapter.8}%
+\contentsline {section}{\numberline {1.1}Судалгааны үндэслэл, ач холбогдол}{1}{section.9}%
+\contentsline {section}{\numberline {1.2}Судалгааны зорилго, зорилт}{1}{section.14}%
+\contentsline {subsection}{\numberline {1.2.1}Зорилго}{1}{subsection.15}%
+\contentsline {subsection}{\numberline {1.2.2}Зорилтууд}{2}{subsection.16}%
+\contentsline {section}{\numberline {1.3}Судалгааны хамрах хүрээ}{2}{section.24}%
+\contentsline {section}{\numberline {1.4}Судалгааны шинэлэг тал}{2}{section.25}%
+\contentsline {chapter}{\numberline {2}ОНОЛЫН ҮНДЭСЛЭЛ}{4}{chapter.31}%
+\contentsline {section}{\numberline {2.1}Машин сургалтын онолын үндэс}{4}{section.32}%
+\contentsline {subsection}{\numberline {2.1.1}Хяналттай сургалт}{4}{subsection.33}%
+\contentsline {section}{\numberline {2.2}Ensemble сургалтын аргууд}{4}{section.34}%
+\contentsline {subsection}{\numberline {2.2.1}Random Forest}{4}{subsection.35}%
+\contentsline {subsection}{\numberline {2.2.2}Gradient Boosting}{4}{subsection.37}%
+\contentsline {subsubsection}{\numberline {2.2.2.1}XGBoost}{5}{subsubsection.39}%
+\contentsline {subsubsection}{\numberline {2.2.2.2}LightGBM}{5}{subsubsection.41}%
+\contentsline {subsection}{\numberline {2.2.3}Voting Ensemble}{5}{subsection.42}%
+\contentsline {section}{\numberline {2.3}Техникийн шинжилгээ}{5}{section.44}%
+\contentsline {subsection}{\numberline {2.3.1}Trend индикаторууд}{5}{subsection.45}%
+\contentsline {subsection}{\numberline {2.3.2}Momentum индикаторууд}{6}{subsection.48}%
+\contentsline {subsection}{\numberline {2.3.3}Volatility индикаторууд}{6}{subsection.50}%
+\contentsline {section}{\numberline {2.4}Холбогдох судалгааны тойм}{6}{section.53}%
+\contentsline {section}{\numberline {2.5}Бүлгийн дүгнэлт}{6}{section.54}%
+\contentsline {chapter}{\numberline {3}СУДАЛГААНЫ АРГА ЗҮЙ}{7}{chapter.55}%
+\contentsline {section}{\numberline {3.1}Системийн ерөнхий тойм}{7}{section.56}%
+\contentsline {subsection}{\numberline {3.1.1}Системийн Flow Diagram}{7}{subsection.57}%
+\contentsline {subsection}{\numberline {3.1.2}Хэрэглээний тохиолдлын диаграмм}{8}{subsection.59}%
+\contentsline {subsection}{\numberline {3.1.3}Activity Diagram - Дохио авах үйлдэл}{8}{subsection.61}%
+\contentsline {subsection}{\numberline {3.1.4}EUR/USD Үнийн динамик диаграмм}{9}{subsection.63}%
+\contentsline {subsection}{\numberline {3.1.5}Системийн архитектурын диаграмм}{10}{subsection.65}%
+\contentsline {subsection}{\numberline {3.1.6}Sequence Diagram - API дуудлага}{10}{subsection.67}%
+\contentsline {section}{\numberline {3.2}Өгөгдлийн тодорхойлолт}{10}{section.69}%
+\contentsline {subsection}{\numberline {3.2.1}Өгөгдлийн эх сурвалж}{10}{subsection.70}%
+\contentsline {subsection}{\numberline {3.2.2}Өгөгдлийн хугацааны хүрээ}{11}{subsection.71}%
+\contentsline {subsection}{\numberline {3.2.3}Өгөгдлийн чанарын хяналт}{11}{subsection.73}%
+\contentsline {section}{\numberline {3.3}Шинж чанар инженерчлэл}{11}{section.77}%
+\contentsline {subsection}{\numberline {3.3.1}Чиг хандлагын индикаторууд (Trend Indicators)}{11}{subsection.78}%
+\contentsline {subsubsection}{\numberline {3.3.1.1}Хөдөлгөөнт дундаж (Moving Averages)}{11}{subsubsection.79}%
+\contentsline {subsubsection}{\numberline {3.3.1.2}MA Crossover дохионууд}{12}{subsubsection.80}%
+\contentsline {subsubsection}{\numberline {3.3.1.3}Үнэ ба MA-ийн харьцаа}{12}{subsubsection.81}%
+\contentsline {subsection}{\numberline {3.3.2}Моментум индикаторууд (Momentum Indicators)}{12}{subsection.83}%
+\contentsline {subsubsection}{\numberline {3.3.2.1}RSI (Relative Strength Index)}{12}{subsubsection.84}%
+\contentsline {subsubsection}{\numberline {3.3.2.2}MACD (Moving Average Convergence Divergence)}{12}{subsubsection.86}%
+\contentsline {subsubsection}{\numberline {3.3.2.3}Stochastic Oscillator}{13}{subsubsection.90}%
+\contentsline {subsubsection}{\numberline {3.3.2.4}ROC (Rate of Change)}{13}{subsubsection.92}%
+\contentsline {subsection}{\numberline {3.3.3}Хэлбэлзлийн индикаторууд (Volatility Indicators)}{13}{subsection.94}%
+\contentsline {subsubsection}{\numberline {3.3.3.1}ATR (Average True Range)}{13}{subsubsection.95}%
+\contentsline {subsubsection}{\numberline {3.3.3.2}Bollinger Bands}{14}{subsubsection.99}%
+\contentsline {subsection}{\numberline {3.3.4}Лааны загварууд (Candle Patterns)}{14}{subsection.103}%
+\contentsline {subsection}{\numberline {3.3.5}Дэмжлэг/Эсэргүүцэл (Support/Resistance)}{14}{subsection.104}%
+\contentsline {subsection}{\numberline {3.3.6}Чиг хандлагын хүч (Trend Strength)}{14}{subsection.110}%
+\contentsline {subsection}{\numberline {3.3.7}BUY Score - Нэгдсэн дохионы үнэлгээ}{14}{subsection.111}%
+\contentsline {section}{\numberline {3.4}Зорилтот хувьсагч (Target Variable)}{15}{section.112}%
+\contentsline {subsection}{\numberline {3.4.1}BUY-Only Classification}{15}{subsection.113}%
+\contentsline {subsection}{\numberline {3.4.2}Параметрүүд}{15}{subsection.114}%
+\contentsline {section}{\numberline {3.5}Өгөгдлийн хуваалт ба Scaling}{15}{section.116}%
+\contentsline {subsection}{\numberline {3.5.1}Хуваалт}{15}{subsection.117}%
+\contentsline {subsection}{\numberline {3.5.2}StandardScaler}{15}{subsection.118}%
+\contentsline {section}{\numberline {3.6}Моделийн архитектур}{15}{section.120}%
+\contentsline {subsection}{\numberline {3.6.1}Ensemble арга}{15}{subsection.121}%
+\contentsline {subsection}{\numberline {3.6.2}XGBoost}{16}{subsection.126}%
+\contentsline {subsection}{\numberline {3.6.3}LightGBM}{16}{subsection.127}%
+\contentsline {subsection}{\numberline {3.6.4}Random Forest}{16}{subsection.128}%
+\contentsline {subsection}{\numberline {3.6.5}Ensemble Averaging}{16}{subsection.129}%
+\contentsline {subsection}{\numberline {3.6.6}Hyperparameter}{17}{subsection.131}%
+\contentsline {section}{\numberline {3.7}Confidence Threshold}{17}{section.133}%
+\contentsline {section}{\numberline {3.8}Динамик SL/TP тооцоолол}{17}{section.134}%
+\contentsline {section}{\numberline {3.9}Backend API}{17}{section.137}%
+\contentsline {subsection}{\numberline {3.9.1}Flask + Waitress}{17}{subsection.138}%
+\contentsline {subsection}{\numberline {3.9.2}Twelve Data API}{18}{subsection.139}%
+\contentsline {section}{\numberline {3.10}Мобайл аппликейшн}{18}{section.140}%
+\contentsline {subsection}{\numberline {3.10.1}React Native + Expo}{18}{subsection.141}%
+\contentsline {subsection}{\numberline {3.10.2}Үндсэн дэлгэцүүд}{18}{subsection.142}%
+\contentsline {subsection}{\numberline {3.10.3}API Integration}{18}{subsection.147}%
+\contentsline {section}{\numberline {3.11}MongoDB Database}{18}{section.148}%
+\contentsline {subsection}{\numberline {3.11.1}Collections}{18}{subsection.149}%
+\contentsline {subsection}{\numberline {3.11.2}Authentication}{18}{subsection.150}%
+\contentsline {chapter}{\numberline {4}СУДАЛГААНЫ ҮР ДҮН}{20}{chapter.151}%
+\contentsline {section}{\numberline {4.1}Өгөгдлийн тойм}{20}{section.152}%
+\contentsline {subsection}{\numberline {4.1.1}Сургалтын өгөгдөл}{20}{subsection.153}%
+\contentsline {subsection}{\numberline {4.1.2}Өгөгдлийн тархалтын диаграмм}{20}{subsection.155}%
+\contentsline {subsection}{\numberline {4.1.3}Онцлогуудын хураангуй}{20}{subsection.157}%
+\contentsline {section}{\numberline {4.2}Загваруудын гүйцэтгэл}{21}{section.159}%
+\contentsline {subsection}{\numberline {4.2.1}Загваруудын харьцуулсан диаграмм}{21}{subsection.160}%
+\contentsline {subsection}{\numberline {4.2.2}XGBoost загварын үр дүн}{22}{subsection.162}%
+\contentsline {subsection}{\numberline {4.2.3}LightGBM загварын үр дүн}{22}{subsection.164}%
+\contentsline {subsection}{\numberline {4.2.4}Random Forest загварын үр дүн}{23}{subsection.166}%
+\contentsline {subsection}{\numberline {4.2.5}Ensemble загварын нэгтгэсэн үр дүн}{23}{subsection.168}%
+\contentsline {section}{\numberline {4.3}Онцлогуудын чухлын дүн шинжилгээ}{23}{section.171}%
+\contentsline {subsection}{\numberline {4.3.1}Feature Importance}{23}{subsection.172}%
+\contentsline {subsection}{\numberline {4.3.2}Confusion Matrix}{24}{subsection.175}%
+\contentsline {subsection}{\numberline {4.3.3}ROC Curve}{25}{subsection.177}%
+\contentsline {subsection}{\numberline {4.3.4}Дүн шинжилгээ}{26}{subsection.179}%
+\contentsline {section}{\numberline {4.4}Итгэлцлийн түвшин ба шийдвэр гаргалт}{26}{section.180}%
+\contentsline {subsection}{\numberline {4.4.1}Confidence Score}{26}{subsection.181}%
+\contentsline {subsection}{\numberline {4.4.2}Шийдвэр гаргах босго}{26}{subsection.183}%
+\contentsline {section}{\numberline {4.5}Системийн ажиллагааны үр дүн}{27}{section.184}%
+\contentsline {subsection}{\numberline {4.5.1}API хариу үйлдлийн хурд}{27}{subsection.185}%
+\contentsline {subsection}{\numberline {4.5.2}Бодит цагийн туршилт}{27}{subsection.187}%
+\contentsline {section}{\numberline {4.6}Харьцуулалт ба дүгнэлт}{27}{section.188}%
+\contentsline {subsection}{\numberline {4.6.1}Загваруудын харьцуулалт}{27}{subsection.189}%
+\contentsline {subsection}{\numberline {4.6.2}Ensemble-ийн давуу тал}{27}{subsection.191}%
+\contentsline {section}{\numberline {4.7}Backtest үр дүн}{28}{section.196}%
+\contentsline {subsection}{\numberline {4.7.1}BUY-Only Strategy}{28}{subsection.197}%
+\contentsline {subsection}{\numberline {4.7.2}Dynamic SL/TP (ATR-based)}{28}{subsection.200}%
+\contentsline {subsection}{\numberline {4.7.3}Санал болгох тохиргоо}{29}{subsection.201}%
+\contentsline {subsection}{\numberline {4.7.4}Үр дүнгийн дүгнэлт}{29}{subsection.202}%
+\contentsline {chapter}{\numberline {5}ДҮГНЭЛТ}{30}{chapter.203}%
+\contentsline {section}{\numberline {5.1}Судалгааны үр дүнгийн нэгтгэл}{30}{section.204}%
+\contentsline {subsection}{\numberline {5.1.1}Техникийн үр дүн}{30}{subsection.205}%
+\contentsline {subsection}{\numberline {5.1.2}Backtest үр дүн}{30}{subsection.209}%
+\contentsline {subsection}{\numberline {5.1.3}Системийн бүрэлдэхүүн}{31}{subsection.211}%
+\contentsline {section}{\numberline {5.2}Зорилтын биелэлт}{31}{section.217}%
+\contentsline {section}{\numberline {5.3}Шинэлэг хувь нэмэр}{31}{section.219}%
+\contentsline {section}{\numberline {5.4}Хязгаарлалт}{31}{section.225}%
+\contentsline {section}{\numberline {5.5}Цаашдын судалгааны чиглэл}{32}{section.230}%
+\contentsline {section}{\numberline {5.6}Төгсгөлийн үг}{32}{section.236}%
+\contentsline {chapter}{Талархал}{32}{dummy.237}%
+\contentsline {chapter}{Ном зүй}{35}{chapter*.240}%
+\contentsline {chapter}{Хавсралт}{38}{chapter*.242}%

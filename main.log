@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.11.26)  1 DEC 2025 02:03
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.11.26)  1 DEC 2025 03:26
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -2219,12 +2219,12 @@ File: pgflibraryplotmarks.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 ))) (C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/libs\tikzlibrarypgfplots.fillbetween.code.tex (C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/pgfcontrib\tikzlibraryfillbetween.code.tex (C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tikz/libraries\tikzlibraryintersections.code.tex (C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries\pgflibraryintersections.code.tex
 \pgf@intersect@solutions=\count425
 )) (C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/pgfcontrib\tikzlibrarydecorations.softclip.code.tex (C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/pgfcontrib\pgflibraryfillbetween.code.tex))) (C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/libs\tikzlibrarypgfplots.decorations.softclip.code.tex)) (C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/libs\tikzlibrarypgfplots.fillbetween.code.tex)
-LaTeX Font Info:    Trying to load font information for T1+Tempora-TLF on input line 42.
+LaTeX Font Info:    Trying to load font information for T1+Tempora-TLF on input line 43.
  (C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/latex/tempora\t1tempora-tlf.fd
 File: T1Tempora-TLF.fd 2016/02/02 (autoinst) Font definitions for T1/Tempora-TLF.
 )
 LaTeX Font Info:    Font shape `T1/Tempora-TLF/m/n' will be
-(Font)              scaled to size 10.0pt on input line 42.
+(Font)              scaled to size 10.0pt on input line 43.
  (C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdftex.def
 File: l3backend-pdftex.def 2025-10-09 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count426
@@ -2240,54 +2240,54 @@ Package babel Info: 'mongolian' activates 'mongolian' shorthands.
 )
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 42.
-LaTeX Font Info:    ... okay on input line 42.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 42.
-LaTeX Font Info:    ... okay on input line 42.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 42.
-LaTeX Font Info:    ... okay on input line 42.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 42.
-LaTeX Font Info:    ... okay on input line 42.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 42.
-LaTeX Font Info:    ... okay on input line 42.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 42.
-LaTeX Font Info:    ... okay on input line 42.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 42.
-LaTeX Font Info:    ... okay on input line 42.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 42.
-LaTeX Font Info:    ... okay on input line 42.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 42.
-LaTeX Font Info:    ... okay on input line 42.
-LaTeX Font Info:    Checking defaults for T2A/cmr/m/n on input line 42.
-LaTeX Font Info:    Trying to load font information for T2A+cmr on input line 42.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 43.
+LaTeX Font Info:    ... okay on input line 43.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 43.
+LaTeX Font Info:    ... okay on input line 43.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 43.
+LaTeX Font Info:    ... okay on input line 43.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 43.
+LaTeX Font Info:    ... okay on input line 43.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 43.
+LaTeX Font Info:    ... okay on input line 43.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 43.
+LaTeX Font Info:    ... okay on input line 43.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 43.
+LaTeX Font Info:    ... okay on input line 43.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 43.
+LaTeX Font Info:    ... okay on input line 43.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 43.
+LaTeX Font Info:    ... okay on input line 43.
+LaTeX Font Info:    Checking defaults for T2A/cmr/m/n on input line 43.
+LaTeX Font Info:    Trying to load font information for T2A+cmr on input line 43.
  (C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/latex/cyrillic\t2acmr.fd
 File: t2acmr.fd 2001/08/11 v1.0a Computer Modern Cyrillic font definitions
 )
-LaTeX Font Info:    ... okay on input line 42.
-LaTeX Font Info:    Checking defaults for OT2/cmr/m/n on input line 42.
-LaTeX Font Info:    Trying to load font information for OT2+cmr on input line 42.
+LaTeX Font Info:    ... okay on input line 43.
+LaTeX Font Info:    Checking defaults for OT2/cmr/m/n on input line 43.
+LaTeX Font Info:    Trying to load font information for OT2+cmr on input line 43.
  (C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/latex/cyrillic\ot2cmr.fd
 File: ot2cmr.fd 2001/08/11 v3.2c Computer Modern Cyrillic font definitions
 )
-LaTeX Font Info:    ... okay on input line 42.
-LaTeX Font Info:    Checking defaults for T2C/cmr/m/n on input line 42.
-LaTeX Font Info:    Trying to load font information for T2C+cmr on input line 42.
+LaTeX Font Info:    ... okay on input line 43.
+LaTeX Font Info:    Checking defaults for T2C/cmr/m/n on input line 43.
+LaTeX Font Info:    Trying to load font information for T2C+cmr on input line 43.
  (C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/latex/cyrillic\t2ccmr.fd
 File: t2ccmr.fd 2001/08/11 v1.0a Computer Modern Cyrillic font definitions
 )
-LaTeX Font Info:    ... okay on input line 42.
-LaTeX Font Info:    Checking defaults for T2B/cmr/m/n on input line 42.
-LaTeX Font Info:    Trying to load font information for T2B+cmr on input line 42.
+LaTeX Font Info:    ... okay on input line 43.
+LaTeX Font Info:    Checking defaults for T2B/cmr/m/n on input line 43.
+LaTeX Font Info:    Trying to load font information for T2B+cmr on input line 43.
  (C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/latex/cyrillic\t2bcmr.fd
 File: t2bcmr.fd 2001/08/11 v1.0a Computer Modern Cyrillic font definitions
 )
-LaTeX Font Info:    ... okay on input line 42.
-LaTeX Font Info:    Checking defaults for LGR/cmr/m/n on input line 42.
-LaTeX Font Info:    Trying to load font information for LGR+cmr on input line 42.
+LaTeX Font Info:    ... okay on input line 43.
+LaTeX Font Info:    Checking defaults for LGR/cmr/m/n on input line 43.
+LaTeX Font Info:    Trying to load font information for LGR+cmr on input line 43.
  (C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/latex/cbfonts-fd\lgrcmr.fd
 File: lgrcmr.fd 2017/07/29 v1.2 Greek European Computer Regular
 )
-LaTeX Font Info:    ... okay on input line 42.
+LaTeX Font Info:    ... okay on input line 43.
  (C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count427
@@ -2313,12 +2313,12 @@ Package: ltcaption 2021/01/08 v1.4c longtable captions (AR)
 Package caption Info: threeparttable package is loaded.
 Package caption Info: wrapfig package is loaded.
 Package caption Info: End \AtBeginDocument code.
-Package translations Info: no dictionary file `translations-basic-dictionary-mongolian.trsl' found. on input line 42.
+Package translations Info: no dictionary file `translations-basic-dictionary-mongolian.trsl' found. on input line 43.
  (C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/latex/translations/dicts\translations-basic-dictionary-english.trsl
 File: translations-basic-dictionary-english.trsl (english translation file `translations-basic-dictionary')
 )
-Package translations Info: loading dictionary `translations-basic-dictionary' for `english'. on input line 42.
-Package hyperref Info: Link coloring ON on input line 42.
+Package translations Info: loading dictionary `translations-basic-dictionary' for `english'. on input line 43.
+Package hyperref Info: Link coloring ON on input line 43.
  (main.out) (main.out)
 \@outlinefile=\write4
 \openout4 = `main.out'.
@@ -2331,10 +2331,10 @@ Package pgfplots notification 'compat/show suggested version=true': document has
 \openout2 = `Information.aux'.
 
 (Information.tex) (Chapters/CoverPage.tex
-<Pictures/NCMT.png, id=522, 69.25874pt x 86.57344pt>
-File: Pictures/NCMT.png Graphic file (type png)
-<use Pictures/NCMT.png>
-Package pdftex.def Info: Pictures/NCMT.png  used on input line 10.
+<Pictures/NMCT.png, id=526, 69.25874pt x 86.57344pt>
+File: Pictures/NMCT.png Graphic file (type png)
+<use Pictures/NMCT.png>
+Package pdftex.def Info: Pictures/NMCT.png  used on input line 10.
 (pdftex.def)             Requested size: 72.6476pt x 90.80966pt.
 LaTeX Font Info:    Trying to load font information for OT1+ztmcm on input line 11.
  (C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ot1ztmcm.fd
@@ -2394,7 +2394,7 @@ LaTeX Font Info:    Font shape `T2A/Tempora-TLF/b/n' will be
 
 
 
-{C:/Users/Acer/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{C:/Users/Acer/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/tempora/t2a-tempora.enc} <./Pictures/NCMT.png>]) (Chapters/TitlePage.tex [1]) (Chapters/acrolist.tex
+{C:/Users/Acer/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{C:/Users/Acer/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/tempora/t2a-tempora.enc} <./Pictures/NMCT.png>]) (Chapters/TitlePage.tex [1]) (Chapters/acrolist.tex
 
 LaTeX Warning: Hyper reference `acro:AI' on page i undefined on input line 7.
 
@@ -2563,52 +2563,19 @@ LaTeX Warning: Hyper reference `acro:XGBoost' on page i undefined on input line 
 
 LaTeX Warning: Hyper reference `acro:XGBoost' on page i undefined on input line 34.
 
-) (Chapters/plan.tex [1
-
-]
-LaTeX Font Info:    Font shape `T2A/Tempora-TLF/m/n' will be
-(Font)              scaled to size 9.0pt on input line 9.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 10.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 10.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <5> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 10.
-LaTeX Font Info:    Font shape `T2A/Tempora-TLF/b/n' will be
-(Font)              scaled to size 9.0pt on input line 12.
-
-Underfull \hbox (badness 10000) in paragraph at lines 14--14
-[]|\T2A/Tempora-TLF/m/n/9 —˝‰˝‚, Û‰Ë-‰‡„˜ ·‡„¯
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 18--18
-[]|\T2A/Tempora-TLF/m/n/9 ’ÓÎ·Ó„‰Óı ÒÛ-‰‡Î-„‡‡-Ì˚
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 20--20
-[]|\T2A/Tempora-TLF/m/n/9 EUR/USD Ú≥≥-ı˝Ì ∞„∞„-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 24--24
-[]|\T2A/Tempora-TLF/m/n/9 “ÂıÌËÍËÈÌ ËÌ-‰Ë-Í‡-ÚÓ,
- []
-
-) [2
+) [1
 
 ]
 ------------------------------------------------------------------------------
  Table of Contents
 ------------------------------------------------------------------------------
-(main.toc [3
+(main.toc [2
 
-] [4])
+] [3])
 \tf@toc=\write5
 \openout5 = `main.toc'.
 
- [5]
+ [4]
 ------------------------------------------------------------------------------
  –ó—É—Ä–∞–≥ –±–æ–ª–æ–Ω –•“Ø—Å–Ω—ç–≥—Ç–∏–π–Ω –∂–∞–≥—Å–∞–∞–ª—Ç
 ------------------------------------------------------------------------------
@@ -2620,20 +2587,33 @@ Underfull \hbox (badness 10000) in paragraph at lines 24--24
 \tf@lot=\write7
 \openout7 = `main.lot'.
 
- [6
+ [5
 
 
-] (Chapters/Chapter1_Introduction.tex
-{\Mongolian \CYRB \cyry \cyrl \cyrerev \cyrg } 1.
-LaTeX Font Info:    Trying to load font information for TS1+Tempora-TLF on input line 10.
-(C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/latex/tempora\ts1tempora-tlf.fd
+] (Chapters/Abstrct.tex
+LaTeX Font Info:    Font shape `T2A/Tempora-TLF/m/n' will be
+(Font)              scaled to size 14.4pt on input line 4.
+LaTeX Font Info:    Font shape `T2A/Tempora-TLF/b/n' will be
+(Font)              scaled to size 14.4pt on input line 4.
+LaTeX Font Info:    Font shape `T2A/Tempora-TLF/m/n' will be
+(Font)              scaled to size 14.0pt on input line 11.
+LaTeX Font Info:    Font shape `T2A/Tempora-TLF/b/n' will be
+(Font)              scaled to size 14.0pt on input line 11.
+LaTeX Font Info:    Font shape `T2A/Tempora-TLF/m/it' will be
+(Font)              scaled to size 10.0pt on input line 15.
+LaTeX Font Info:    Font shape `T2A/Tempora-TLF/b/it' will be
+(Font)              scaled to size 10.0pt on input line 16.
+LaTeX Font Info:    Trying to load font information for TS1+Tempora-TLF on input line 29.
+ (C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/latex/tempora\ts1tempora-tlf.fd
 File: TS1Tempora-TLF.fd 2016/02/02 (autoinst) Font definitions for TS1/Tempora-TLF.
 )
 LaTeX Font Info:    Font shape `TS1/Tempora-TLF/m/n' will be
-(Font)              scaled to size 10.0pt on input line 10.
- [1
+(Font)              scaled to size 10.0pt on input line 29.
+ [6{C:/Users/Acer/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/tempora/tmp_ac5xuc.enc}] [7] [8]) [9] (Chapters/Chapter1_Introduction.tex
+{\Mongolian \CYRB \cyry \cyrl \cyrerev \cyrg } 1.
+[1
 
-{C:/Users/Acer/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/tempora/tmp_ac5xuc.enc}] [2]) (Chapters/Chapter2_Literature.tex [3]
+] [2]) (Chapters/Chapter2_Literature.tex [3]
 {\Mongolian \CYRB \cyry \cyrl \cyrerev \cyrg } 2.
 LaTeX Font Info:    Font shape `T2A/Tempora-TLF/m/n' will be
 (Font)              scaled to size 7.4pt on input line 31.
@@ -2644,14 +2624,22 @@ LaTeX Font Info:    Font shape `T2A/Tempora-TLF/m/n' will be
 {C:/Users/Acer/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc}] [5]) (Chapters/Chapter3_Methodology.tex [6]
 {\Mongolian \CYRB \cyry \cyrl \cyrerev \cyrg } 3.
 LaTeX Font Info:    Font shape `T2A/Tempora-TLF/m/n' will be
+(Font)              scaled to size 9.0pt on input line 23.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 30.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 30.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <5> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 30.
+LaTeX Font Info:    Font shape `T2A/Tempora-TLF/m/n' will be
 (Font)              scaled to size 7.0pt on input line 40.
-LaTeX Font Info:    Font shape `T2A/Tempora-TLF/m/it' will be
-(Font)              scaled to size 10.0pt on input line 53.
 [7
 
 ]
 LaTeX Font Info:    Font shape `T2A/Tempora-TLF/m/n' will be
 (Font)              scaled to size 12.0pt on input line 71.
+LaTeX Font Info:    Font shape `T2A/Tempora-TLF/b/n' will be
+(Font)              scaled to size 9.0pt on input line 135.
  [8
 
 ]
@@ -2688,24 +2676,19 @@ Package pgfplots info on input line 82: Using 'lua backend=false' for axis: x co
 Package pgfplots info on input line 128: Using 'lua backend=false' for axis: x coord trafo unsupported.
 LaTeX Font Info:    Font shape `T2A/Tempora-TLF/m/n' will be
 (Font)              scaled to size 5.0pt on input line 158.
- [21] [22] [23]
-LaTeX Font Info:    Font shape `T2A/Tempora-TLF/m/n' will be
-(Font)              scaled to size 14.4pt on input line 375.
-LaTeX Font Info:    Font shape `T2A/Tempora-TLF/b/n' will be
-(Font)              scaled to size 14.4pt on input line 375.
- [24] [25] [26] [27]
+ [21] [22] [23] [24] [25] [26] [27]
 Package pgfplots info on input line 595: Using 'lua backend=false' for axis: x coord trafo unsupported.
  [28]) (Chapters/Chapter5_Conclusion.tex [29]
 {\Mongolian \CYRB \cyry \cyrl \cyrerev \cyrg } 5.
 [30
 
-] [31]) (Chapters/Talarhal.tex [32]) (Chapters/Bibliography.tex [33
+] [31]) (Chapters/Talarhal.tex [32]) (Chapters/plan.tex [33
 
-] [34
+]) (Chapters/Bibliography.tex [34] [35
 
-] [35
+] [36
 
-]) (Chapters/appendix.tex [36]
+]) (Chapters/appendix.tex [37]
 LaTeX Font Info:    Font shape `T2A/Tempora-TLF/m/n' will be
 (Font)              scaled to size 20.74pt on input line 5.
 LaTeX Font Info:    Font shape `T2A/Tempora-TLF/b/n' will be
@@ -2721,9 +2704,9 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10.95> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 14.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <8> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 14.
-) [37
+) [38
 
-] [38] (main.aux (Information.aux))
+] [39] (main.aux (Information.aux))
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2025-11-06>
@@ -2736,20 +2719,20 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 LaTeX Warning: There were undefined references.
 
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 5B1A89B7C64100B7BAC10A965CAE1A54;28683.
+(rerunfilecheck)             Checksum: 82D1E3574F37AA2B1A9245DF22A0D222;28719.
  ) 
 Here is how much of TeX's memory you used:
- 50282 strings out of 467871
- 1140717 string characters out of 5418859
- 1627577 words of memory out of 5000000
- 77887 multiletter control sequences out of 15000+600000
- 714524 words of font info for 173 fonts, out of 8000000 for 9000
+ 50300 strings out of 467871
+ 1141117 string characters out of 5418859
+ 1627578 words of memory out of 5000000
+ 77897 multiletter control sequences out of 15000+600000
+ 720790 words of font info for 176 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 88i,19n,104p,879b,2322s stack positions out of 10000i,1000n,20000p,200000b,200000s
- <C:\Users\Acer\AppData\Local\MiKTeX\fonts/pk/ljfour/lh/lh-t2a/dpi600\larm1440.pk> <C:\Users\Acer\AppData\Local\MiKTeX\fonts/pk/ljfour/lh/lh-t2a/dpi600\larm1000.pk> <C:\Users\Acer\AppData\Local\MiKTeX\fonts/pk/ljfour/lh/lh-t2a/dpi600\larm0800.pk> <C:\Users\Acer\AppData\Local\MiKTeX\fonts/pk/ljfour/lh/lh-t2a/dpi600\larm0700.pk> <C:\Users\Acer\AppData\Local\MiKTeX\fonts/pk/ljfour/lh/lh-t2a/dpi600\larm0900.pk><C:/Users/Acer/AppData/Local/Programs/MiKTeX/fonts/type1/public/tempora/Tempora-Bold.pfb><C:/Users/Acer/AppData/Local/Programs/MiKTeX/fonts/type1/public/tempora/Tempora-Italic.pfb><C:/Users/Acer/AppData/Local/Programs/MiKTeX/fonts/type1/public/tempora/Tempora-Regular.pfb><C:/Users/Acer/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/Acer/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/Acer/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Acer/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msam10.pfb><C:/Users/Acer/AppData/Local/Programs/MiKTeX/fonts/type1/public/rsfs/rsfs10.pfb><C:/Users/Acer/AppData/Local/Programs/MiKTeX/fonts/type1/urw/symbol/usyr.pfb><C:/Users/Acer/AppData/Local/Programs/MiKTeX/fonts/type1/urw/symbol/usyr.pfb><C:/Users/Acer/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmr8a.pfb><C:/Users/Acer/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmri8a.pfb>
-Output written on main.pdf (46 pages, 515144 bytes).
+ 88i,19n,104p,1038b,2322s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ <C:\Users\Acer\AppData\Local\MiKTeX\fonts/pk/ljfour/lh/lh-t2a/dpi600\larm1440.pk> <C:\Users\Acer\AppData\Local\MiKTeX\fonts/pk/ljfour/lh/lh-t2a/dpi600\larm1000.pk> <C:\Users\Acer\AppData\Local\MiKTeX\fonts/pk/ljfour/lh/lh-t2a/dpi600\larm0800.pk> <C:\Users\Acer\AppData\Local\MiKTeX\fonts/pk/ljfour/lh/lh-t2a/dpi600\larm0700.pk> <C:\Users\Acer\AppData\Local\MiKTeX\fonts/pk/ljfour/lh/lh-t2a/dpi600\larm0900.pk><C:/Users/Acer/AppData/Local/Programs/MiKTeX/fonts/type1/public/tempora/Tempora-Bold.pfb><C:/Users/Acer/AppData/Local/Programs/MiKTeX/fonts/type1/public/tempora/Tempora-BoldItalic.pfb><C:/Users/Acer/AppData/Local/Programs/MiKTeX/fonts/type1/public/tempora/Tempora-Italic.pfb><C:/Users/Acer/AppData/Local/Programs/MiKTeX/fonts/type1/public/tempora/Tempora-Regular.pfb><C:/Users/Acer/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/Acer/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/Acer/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Acer/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msam10.pfb><C:/Users/Acer/AppData/Local/Programs/MiKTeX/fonts/type1/public/rsfs/rsfs10.pfb><C:/Users/Acer/AppData/Local/Programs/MiKTeX/fonts/type1/urw/symbol/usyr.pfb><C:/Users/Acer/AppData/Local/Programs/MiKTeX/fonts/type1/urw/symbol/usyr.pfb><C:/Users/Acer/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmr8a.pfb><C:/Users/Acer/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmri8a.pfb>
+Output written on main.pdf (50 pages, 553884 bytes).
 PDF statistics:
- 1405 PDF objects out of 1440 (max. 8388607)
- 348 named destinations out of 1000 (max. 500000)
- 1098 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1432 PDF objects out of 1440 (max. 8388607)
+ 352 named destinations out of 1000 (max. 500000)
+ 1106 words of extra memory for PDF output out of 10000 (max. 10000000)
 

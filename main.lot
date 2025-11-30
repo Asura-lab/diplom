@@ -2,20 +2,20 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {3.1}{\ignorespaces Өгөгдлийн хугацааны хүрээ}}{11}{table.caption.73}%
-\contentsline {table}{\numberline {3.2}{\ignorespaces Зорилтот хувьсагчийн параметрүүд}}{15}{table.caption.116}%
-\contentsline {table}{\numberline {3.3}{\ignorespaces Моделийн Hyperparameter тохиргоо}}{17}{table.caption.133}%
+\contentsline {table}{\numberline {3.1}{\ignorespaces Өгөгдлийн хугацааны хүрээ}}{11}{table.caption.72}%
+\contentsline {table}{\numberline {3.2}{\ignorespaces Зорилтот хувьсагчийн параметрүүд}}{15}{table.caption.115}%
+\contentsline {table}{\numberline {3.3}{\ignorespaces Моделийн Hyperparameter тохиргоо}}{17}{table.caption.132}%
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {4.1}{\ignorespaces Өгөгдлийн статистик}}{20}{table.caption.155}%
-\contentsline {table}{\numberline {4.2}{\ignorespaces XGBoost загварын үзүүлэлтүүд}}{22}{table.caption.164}%
-\contentsline {table}{\numberline {4.3}{\ignorespaces LightGBM загварын үзүүлэлтүүд}}{22}{table.caption.166}%
-\contentsline {table}{\numberline {4.4}{\ignorespaces Random Forest загварын үзүүлэлтүүд}}{23}{table.caption.168}%
-\contentsline {table}{\numberline {4.5}{\ignorespaces Ensemble загварын эцсийн үзүүлэлтүүд}}{23}{table.caption.171}%
-\contentsline {table}{\numberline {4.6}{\ignorespaces Топ 15 чухал онцлог}}{24}{table.caption.175}%
-\contentsline {table}{\numberline {4.7}{\ignorespaces Системийн гүйцэтгэлийн хэмжүүрүүд}}{27}{table.caption.187}%
-\contentsline {table}{\numberline {4.8}{\ignorespaces Загваруудын харьцуулсан үзүүлэлтүүд}}{27}{table.caption.191}%
-\contentsline {table}{\numberline {4.9}{\ignorespaces Итгэлцлийн түвшин бүрийн Backtest үр дүн}}{28}{table.caption.199}%
+\contentsline {table}{\numberline {4.1}{\ignorespaces Өгөгдлийн статистик}}{20}{table.caption.154}%
+\contentsline {table}{\numberline {4.2}{\ignorespaces XGBoost загварын үзүүлэлтүүд}}{22}{table.caption.163}%
+\contentsline {table}{\numberline {4.3}{\ignorespaces LightGBM загварын үзүүлэлтүүд}}{22}{table.caption.165}%
+\contentsline {table}{\numberline {4.4}{\ignorespaces Random Forest загварын үзүүлэлтүүд}}{23}{table.caption.167}%
+\contentsline {table}{\numberline {4.5}{\ignorespaces Ensemble загварын эцсийн үзүүлэлтүүд}}{23}{table.caption.170}%
+\contentsline {table}{\numberline {4.6}{\ignorespaces Топ 15 чухал онцлог}}{24}{table.caption.174}%
+\contentsline {table}{\numberline {4.7}{\ignorespaces Системийн гүйцэтгэлийн хэмжүүрүүд}}{27}{table.caption.186}%
+\contentsline {table}{\numberline {4.8}{\ignorespaces Загваруудын харьцуулсан үзүүлэлтүүд}}{27}{table.caption.190}%
+\contentsline {table}{\numberline {4.9}{\ignorespaces Итгэлцлийн түвшин бүрийн Backtest үр дүн}}{28}{table.caption.198}%
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {5.1}{\ignorespaces Итгэлцлийн түвшин бүрийн гүйцэтгэл}}{30}{table.caption.211}%
-\contentsline {table}{\numberline {5.2}{\ignorespaces Зорилтын биелэлт}}{31}{table.caption.219}%
-\contentsline {table}{\numberline {5.3}{\ignorespaces Hyperparameter тохиргоо}}{38}{table.caption.243}%
+\contentsline {table}{\numberline {5.1}{\ignorespaces Итгэлцлийн түвшин бүрийн гүйцэтгэл}}{30}{table.caption.210}%
+\contentsline {table}{\numberline {5.2}{\ignorespaces Зорилтын биелэлт}}{31}{table.caption.218}%
+\contentsline {table}{\numberline {5.3}{\ignorespaces Hyperparameter тохиргоо}}{39}{table.caption.243}%
