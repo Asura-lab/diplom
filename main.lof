@@ -1,15 +1,20 @@
 \babel@toc {mongolian}{}\relax 
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {2.1}{\ignorespaces LSTM нэгжийн бүтэц}}{6}{figure.caption.50}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces Өгөгдлийн хуваалт}}{13}{figure.caption.156}%
-\contentsline {figure}{\numberline {3.2}{\ignorespaces Моделийн архитектур}}{14}{figure.caption.164}%
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Дохио үүсгэх системийн Flow Diagram}}{7}{figure.caption.59}%
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Хэрэглээний тохиолдлын диаграмм}}{8}{figure.caption.61}%
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Дохио авах Activity Diagram}}{9}{figure.caption.63}%
+\contentsline {figure}{\numberline {3.4}{\ignorespaces EUR/USD 2025 оны 3-4-р сарын бодит үнийн хөдөлгөөн ба техникийн индикаторууд}}{9}{figure.caption.65}%
+\contentsline {figure}{\numberline {3.5}{\ignorespaces Системийн архитектурын диаграмм}}{10}{figure.caption.67}%
+\contentsline {figure}{\numberline {3.6}{\ignorespaces Sequence диаграм - Дохио хүлээн авах}}{10}{figure.caption.69}%
+\contentsline {figure}{\numberline {3.7}{\ignorespaces Ensemble моделийн архитектур}}{16}{figure.caption.126}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Сургалтын loss-ийн өөрчлөлт}}{18}{figure.caption.224}%
-\contentsline {figure}{\numberline {4.2}{\ignorespaces Калибрацийн муруй (OOS)}}{20}{figure.caption.236}%
-\contentsline {figure}{\numberline {4.3}{\ignorespaces Confusion matrix (a) Up30, (b) Down30}}{21}{figure.caption.238}%
-\contentsline {figure}{\numberline {4.4}{\ignorespaces Хуримтлагдсан ашиг/алдагдал (OOS)}}{22}{figure.caption.244}%
-\contentsline {figure}{\numberline {4.5}{\ignorespaces Бодит үнэ vs Таамагласан үнэ (OOS)}}{23}{figure.caption.246}%
-\contentsline {figure}{\numberline {4.6}{\ignorespaces Мобайл аппликейшний дэлгэцүүд}}{24}{figure.caption.252}%
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Өгөгдлийн тархалт (мянган мөрөөр)}}{20}{figure.caption.157}%
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Онцлогуудын категори бүрийн тоо}}{21}{figure.caption.159}%
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Загваруудын гүйцэтгэлийн харьцуулалт}}{21}{figure.caption.162}%
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Топ 15 чухал онцлогийн Feature Importance}}{24}{figure.caption.174}%
+\contentsline {figure}{\numberline {4.5}{\ignorespaces Ensemble загварын Confusion Matrix}}{25}{figure.caption.177}%
+\contentsline {figure}{\numberline {4.6}{\ignorespaces ROC Curve харьцуулалт}}{25}{figure.caption.179}%
+\contentsline {figure}{\numberline {4.7}{\ignorespaces Итгэлцлийн түвшин ба Win Rate хамаарал}}{28}{figure.caption.200}%
 \addvspace {10\p@ }

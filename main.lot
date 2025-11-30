@@ -1,17 +1,21 @@
 \babel@toc {mongolian}{}\relax 
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {2.1}{\ignorespaces Холбогдох судалгаануудын харьцуулалт}}{9}{table.caption.89}%
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {3.1}{\ignorespaces Өгөгдлийн хугацааны хүрээ}}{10}{table.caption.94}%
-\contentsline {table}{\numberline {3.2}{\ignorespaces Техникийн индикаторууд}}{11}{table.caption.116}%
-\contentsline {table}{\numberline {3.3}{\ignorespaces Hyperparameter тохиргоо}}{17}{table.caption.217}%
+\contentsline {table}{\numberline {3.1}{\ignorespaces Өгөгдлийн хугацааны хүрээ}}{11}{table.caption.73}%
+\contentsline {table}{\numberline {3.2}{\ignorespaces Зорилтот хувьсагчийн параметрүүд}}{15}{table.caption.116}%
+\contentsline {table}{\numberline {3.3}{\ignorespaces Моделийн Hyperparameter тохиргоо}}{17}{table.caption.133}%
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {4.1}{\ignorespaces Regression үнэлгээний үр дүн}}{18}{table.caption.228}%
-\contentsline {table}{\numberline {4.2}{\ignorespaces Direction classification үнэлгээний үр дүн}}{19}{table.caption.230}%
-\contentsline {table}{\numberline {4.3}{\ignorespaces Big Move (±30 pips) classification үнэлгээний үр дүн}}{19}{table.caption.232}%
-\contentsline {table}{\numberline {4.4}{\ignorespaces Итгэлийн түвшингийн дагуу hit rate}}{20}{table.caption.234}%
-\contentsline {table}{\numberline {4.5}{\ignorespaces Backtesting стратегийн харьцуулалт (OOS)}}{21}{table.caption.242}%
+\contentsline {table}{\numberline {4.1}{\ignorespaces Өгөгдлийн статистик}}{20}{table.caption.155}%
+\contentsline {table}{\numberline {4.2}{\ignorespaces XGBoost загварын үзүүлэлтүүд}}{22}{table.caption.164}%
+\contentsline {table}{\numberline {4.3}{\ignorespaces LightGBM загварын үзүүлэлтүүд}}{22}{table.caption.166}%
+\contentsline {table}{\numberline {4.4}{\ignorespaces Random Forest загварын үзүүлэлтүүд}}{23}{table.caption.168}%
+\contentsline {table}{\numberline {4.5}{\ignorespaces Ensemble загварын эцсийн үзүүлэлтүүд}}{23}{table.caption.171}%
+\contentsline {table}{\numberline {4.6}{\ignorespaces Топ 15 чухал онцлог}}{24}{table.caption.175}%
+\contentsline {table}{\numberline {4.7}{\ignorespaces Системийн гүйцэтгэлийн хэмжүүрүүд}}{27}{table.caption.187}%
+\contentsline {table}{\numberline {4.8}{\ignorespaces Загваруудын харьцуулсан үзүүлэлтүүд}}{27}{table.caption.191}%
+\contentsline {table}{\numberline {4.9}{\ignorespaces Итгэлцлийн түвшин бүрийн Backtest үр дүн}}{28}{table.caption.199}%
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {5.1}{\ignorespaces Зорилтын биелэлт}}{27}{table.caption.285}%
-\contentsline {table}{\numberline {5.2}{\ignorespaces Hyperparameter тохиргоо}}{36}{table.caption.435}%
+\contentsline {table}{\numberline {5.1}{\ignorespaces Итгэлцлийн түвшин бүрийн гүйцэтгэл}}{30}{table.caption.211}%
+\contentsline {table}{\numberline {5.2}{\ignorespaces Зорилтын биелэлт}}{31}{table.caption.219}%
+\contentsline {table}{\numberline {5.3}{\ignorespaces Hyperparameter тохиргоо}}{38}{table.caption.243}%

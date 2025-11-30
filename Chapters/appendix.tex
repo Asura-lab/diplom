@@ -5,138 +5,42 @@
 \chapter*{ХАВСРАЛТ}
 \addcontentsline{toc}{chapter}{Хавсралт}
 
-\section*{Хавсралт А. Моделийн архитектурын код}
+\section*{Хавсралт А. Эх кодын холбоос}
 
-\begin{lstlisting}[language=Python, caption=ForexHybridNetV2 моделийн архитектур]
-class ForexHybridNetV2(nn.Module):
-    def __init__(
-        self,
-        num_features: int,
-        conv_channels: int = 192,
-        lstm_hidden: int = 384,
-        num_attention_heads: int = 8,
-        dropout: float = 0.25
-    ):
-        super().__init__()
-        
-        # Multi-scale CNN Feature Extractor
-        self.conv_blocks = nn.Sequential(
-            ResidualConvBlock(num_features, conv_channels, 7, dropout),
-            SEBlock(conv_channels),
-            ResidualConvBlock(conv_channels, conv_channels, 5, dropout),
-            SEBlock(conv_channels),
-            ResidualConvBlock(conv_channels, conv_channels, 3, dropout),
-        )
-        
-        # Bidirectional LSTM
-        self.lstm = nn.LSTM(
-            input_size=conv_channels,
-            hidden_size=lstm_hidden // 2,
-            num_layers=3,
-            batch_first=True,
-            dropout=dropout,
-            bidirectional=True
-        )
-        self.lstm_norm = nn.LayerNorm(lstm_hidden)
-        
-        # Multi-Head Self Attention
-        self.self_attn = MultiHeadAttention(
-            lstm_hidden, 
-            num_heads=num_attention_heads, 
-            dropout=dropout
-        )
-        
-        # Attention Pooling
-        self.attn_pool = AttentionPooling(lstm_hidden)
-        
-        # Task-specific heads
-        self.reg_head = nn.Sequential(
-            nn.Linear(lstm_hidden, 256),
-            nn.LayerNorm(256),
-            nn.GELU(),
-            nn.Dropout(dropout),
-            nn.Linear(256, 128),
-            nn.LayerNorm(128),
-            nn.GELU(),
-            nn.Linear(128, 1)
-        )
-        
-        self.dir_head = nn.Sequential(
-            nn.Linear(lstm_hidden, 128),
-            nn.LayerNorm(128),
-            nn.GELU(),
-            nn.Dropout(dropout),
-            nn.Linear(128, 64),
-            nn.GELU(),
-            nn.Linear(64, 1)
-        )
-        
-        self.big_move_head = nn.Sequential(
-            nn.Linear(lstm_hidden, 128),
-            nn.LayerNorm(128),
-            nn.GELU(),
-            nn.Dropout(dropout),
-            nn.Linear(128, 64),
-            nn.GELU(),
-            nn.Linear(64, 2)
-        )
-\end{lstlisting}
+Төслийн бүх эх код, моделийн архитектур, техникийн индикаторууд болон бусад хэрэгжүүлэлтийг дараах GitHub repository-д байршуулсан:
 
-\section*{Хавсралт Б. Техникийн индикаторуудын код}
+\begin{center}
+\Large
+\textbf{\url{https://github.com/Asura-lab/Forex-Signal-App}}
+\end{center}
 
-\begin{lstlisting}[language=Python, caption=RSI индикатор]
-def rsi(series: pd.Series, period: int = 14) -> pd.Series:
-    delta = series.diff()
-    gain = delta.clip(lower=0)
-    loss = -delta.clip(upper=0)
-    avg_gain = gain.ewm(
-        alpha=1/period, 
-        adjust=False, 
-        min_periods=period
-    ).mean()
-    avg_loss = loss.ewm(
-        alpha=1/period, 
-        adjust=False, 
-        min_periods=period
-    ).mean()
-    rs = avg_gain / (avg_loss + 1e-9)
-    return 100 - (100 / (1 + rs))
-\end{lstlisting}
+\vspace{1cm}
 
-\begin{lstlisting}[language=Python, caption=MACD индикатор]
-def macd(close: pd.Series, fast=12, slow=26, signal=9):
-    fast_ema = close.ewm(span=fast, adjust=False).mean()
-    slow_ema = close.ewm(span=slow, adjust=False).mean()
-    macd_line = fast_ema - slow_ema
-    signal_line = macd_line.ewm(span=signal, adjust=False).mean()
-    histogram = macd_line - signal_line
-    return macd_line, signal_line, histogram
-\end{lstlisting}
+\noindent\textbf{Repository-д байгаа гол бүрэлдэхүүн хэсгүүд:}
 
-\section*{Хавсралт В. Focal Loss хэрэгжүүлэлт}
+\begin{itemize}
+    \item \textbf{backend/} - Flask REST API сервер, ML моделиуд, preprocessing код
+    \item \textbf{mobile\_app/} - React Native + Expo мобайл апп
+    \item \textbf{models/} - Сургагдсан моделиуд (XGBoost, LightGBM, Random Forest)
+    \item \textbf{data/} - EUR/USD түүхэн өгөгдөл
+    \item \textbf{docs/} - Техникийн баримт бичиг
+    \item \textbf{artifacts/} - Deep Learning моделийн weights
+\end{itemize}
 
-\begin{lstlisting}[language=Python, caption=Focal Loss]
-class FocalLoss(nn.Module):
-    def __init__(self, gamma=2.0, alpha=0.25, pos_weight=None):
-        super().__init__()
-        self.gamma = gamma
-        self.alpha = alpha
-        self.pos_weight = pos_weight
-    
-    def forward(self, inputs, targets):
-        bce_loss = F.binary_cross_entropy_with_logits(
-            inputs, targets, 
-            pos_weight=self.pos_weight, 
-            reduction='none'
-        )
-        probs = torch.sigmoid(inputs)
-        pt = torch.where(targets == 1, probs, 1 - probs)
-        focal_weight = (1 - pt) ** self.gamma
-        focal_loss = self.alpha * focal_weight * bce_loss
-        return focal_loss.mean()
-\end{lstlisting}
+\vspace{0.5cm}
 
-\section*{Хавсралт Г. Hyperparameter тохиргоо}
+\noindent\textbf{Техникийн хэрэгжүүлэлтүүд:}
+
+\begin{itemize}
+    \item ForexHybridNetV2 моделийн архитектур (CNN + BiLSTM + Attention)
+    \item RSI, MACD, Bollinger Bands техникийн индикаторууд
+    \item Focal Loss функц (class imbalance шийдвэрлэх)
+    \item Ensemble систем (XGBoost, LightGBM, Random Forest)
+    \item JWT authentication систем
+    \item MongoDB өгөгдлийн санд холбогдох
+\end{itemize}
+
+\section*{Хавсралт Б. Hyperparameter тохиргоо}
 
 \begin{table}[H]
 \centering
@@ -187,38 +91,3 @@ DROPOUT\_RATE & 0.25 & Dropout хувь \\
 \end{tabular}
 \caption{Hyperparameter тохиргоо}
 \end{table}
-
-\section*{Хавсралт Д. Төслийн файлын бүтэц}
-
-\begin{lstlisting}[basicstyle=\ttfamily\small]
-Forex-Signal-App/
-+-- backend/
-|   +-- app.py
-|   +-- config/
-|   |   +-- settings.py
-|   +-- ml/
-|   |   +-- features/
-|   |   +-- models/
-|   |   +-- preprocessing/
-|   +-- utils/
-|       +-- mt5_handler.py
-|       +-- unirate_handler.py
-+-- mobile_app/
-|   +-- App.js
-|   +-- src/
-|   |   +-- components/
-|   |   +-- screens/
-|   |   +-- services/
-|   +-- android/
-+-- data/
-|   +-- EUR_USD_1min.csv
-|   +-- EUR_USD_test.csv
-+-- artifacts/
-|   +-- eurusd_hybrid_model_v2.pt
-+-- models/
-|   +-- rl_forex_ppo_lstm/
-+-- docs/
-|   +-- ...
-+-- forex_signal_30min.ipynb
-+-- requirements.txt
-\end{lstlisting}

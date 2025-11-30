@@ -1,240 +1,106 @@
-\chapter{ОНОЛЫН СУДАЛГАА}
+\chapter{ОНОЛЫН ҮНДЭСЛЭЛ}
 
-\section{Машин сургалтын үндэс}
+\section{Машин сургалтын онолын үндэс}
 
-\subsection{Машин сургалтын тодорхойлолт}
+Машин сургалт (Machine Learning) нь өгөгдлөөс автоматаар суралцаж, туршлагаасаа сайжирдаг алгоритмуудыг судалдаг салбар юм. Том Митчелл (1997) машин сургалтыг дараах байдлаар тодорхойлсон \cite{mitchell1997}:
 
-Машин сургалт (Machine Learning) нь хиймэл оюун ухааны (Artificial Intelligence) дэд салбар бөгөөд компьютерийн системд тодорхой програмчлалгүйгээр өгөгдлөөс суралцах чадварыг олгодог арга зүй юм \cite{mitchell1997}. Tom Mitchell-ийн тодорхойлолтоор: ``Компьютерийн програм нь T даалгаврын хувьд P гүйцэтгэлийн хэмжүүрээр хэмжигдэх үед E туршлагаас суралцаж байна гэж хэлнэ, хэрэв E туршлага нэмэгдэхэд T даалгаврын P гүйцэтгэл сайжирвал.''
+\begin{quote}
+``Компьютерийн программ нь T даалгаврын хувьд P гүйцэтгэлийн үзүүлэлтээр хэмжигдэх E туршлагаас суралцсан гэж хэлнэ, хэрэв T даалгаврын P гүйцэтгэл E туршлагын дагуу сайжирсан бол.''
+\end{quote}
 
-\subsection{Машин сургалтын төрлүүд}
-
-Машин сургалтыг гурван үндсэн төрөлд хуваадаг:
-
-\subsubsection{Хяналттай сургалт (Supervised Learning)}
-
-Хяналттай сургалт нь хамгийн түгээмэл хэрэглэгддэг машин сургалтын арга бөгөөд оролт-гаралтын хос өгөгдөл дээр суралцдаг. Энэ аргад:
-
+Энэхүү судалгааны хүрээнд:
 \begin{itemize}
-    \item Сургалтын өгөгдөл нь $(x_i, y_i)$ хос хэлбэртэй байдаг
-    \item $x_i$ - оролтын өгөгдөл (features)
-    \item $y_i$ - зорилтот утга (label/target)
-    \item Модель нь $f: X \rightarrow Y$ функцийг суралцдаг
+    \item \textbf{T (Даалгавар)}: EUR/USD валютын үнийн чиг хандлагыг таамаглах
+    \item \textbf{E (Туршлага)}: Түүхэн үнийн өгөгдөл болон техникийн индикаторууд
+    \item \textbf{P (Гүйцэтгэл)}: Ангилалын нарийвчлал (accuracy), precision, recall
 \end{itemize}
 
-Хяналттай сургалт нь дараах хэрэглээнд өргөн хэрэглэгддэг:
-\begin{enumerate}
-    \item \textbf{Regression (Регресс):} Тасралтгүй утга таамаглах (жишээ нь: үнийн таамаглал)
-    \item \textbf{Classification (Ангилал):} Дискрет ангилалд хуваах (жишээ нь: өсөх/буурах таамаглал)
-\end{enumerate}
+\subsection{Хяналттай сургалт}
 
-\subsubsection{Хяналтгүй сургалт (Unsupervised Learning)}
+Хяналттай сургалт (Supervised Learning) нь шошготой өгөгдлөөс суралцдаг арга юм. Оролтын $X$ болон гаралтын $Y$ хоорондын хамаарлыг $f: X \rightarrow Y$ функцээр дүрсэлнэ. Энэ судалгаанд хоёртын ангилал (binary classification) ашигласан бөгөөд $Y \in \{0, 1\}$ буюу HOLD эсвэл BUY дохио юм.
 
-Хяналтгүй сургалт нь зөвхөн оролтын өгөгдөл дээр суралцдаг бөгөөд зорилтот утга байхгүй. Гол хэрэглээ нь:
+\section{Ensemble сургалтын аргууд}
 
-\begin{itemize}
-    \item Кластерчлал (Clustering)
-    \item Хэмжээс бууруулалт (Dimensionality Reduction)
-    \item Аномали илрүүлэлт (Anomaly Detection)
-\end{itemize}
+Ensemble арга нь олон моделийн таамаглалыг нэгтгэн илүү нарийвчлалтай үр дүнд хүрдэг. Dietterich (2000) ensemble аргын гурван үндсэн давуу талыг тодорхойлсон \cite{dietterich2000}: статистик, тооцооллын болон дүрслэлийн.
 
-\subsubsection{Бататгах сургалт (Reinforcement Learning)}
+\subsection{Random Forest}
 
-Бататгах сургалт нь агент орчинтой харилцан үйлдэл хийж, шагнал/шийтгэлийн дагуу оновчтой бодлого суралцдаг арга юм. Энэ арга нь арилжааны стратеги сургахад өргөн хэрэглэгддэг.
-
-\section{Гүн сургалт (Deep Learning)}
-
-\subsection{Мэдрэлийн сүлжээний үндэс}
-
-Хиймэл мэдрэлийн сүлжээ (Artificial Neural Network) нь хүний тархины мэдрэлийн эсүүдийн бүтцээс санаа авсан тооцоолох загвар юм. Нэг нейрон нь дараах томъёогоор илэрхийлэгдэнэ:
+Breiman (2001) санал болгосон Random Forest нь bootstrap aggregating (bagging) дээр суурилсан алгоритм юм \cite{breiman2001}. Алгоритм нь $B$ ширхэг шийдвэрийн модыг бүтээж, тэдгээрийн олонхийн саналаар эцсийн таамаглал гаргана:
 
 \begin{equation}
-y = \sigma\left(\sum_{i=1}^{n} w_i x_i + b\right)
+\hat{y} = \text{mode}\{h_1(x), h_2(x), ..., h_B(x)\}
 \end{equation}
 
-Энд:
-\begin{itemize}
-    \item $x_i$ - оролтын утгууд
-    \item $w_i$ - жингүүд
-    \item $b$ - bias
-    \item $\sigma$ - идэвхжүүлэх функц (activation function)
-\end{itemize}
+Энд $h_b(x)$ нь $b$-р модны таамаглал юм.
 
-\subsection{Конволюшн мэдрэлийн сүлжээ (CNN)}
+\subsection{Gradient Boosting}
 
-CNN нь дүрс боловсруулалтад өргөн хэрэглэгддэг боловч цуваа өгөгдөл дээр локал загвар илрүүлэхэд маш үр дүнтэй. 1D CNN нь санхүүгийн цуваа өгөгдөлд богино хугацааны загваруудыг илрүүлэхэд хэрэглэгддэг.
-
-Конволюшн үйлдэл:
-\begin{equation}
-(x * k)[n] = \sum_{m=-M}^{M} x[n-m] \cdot k[m]
-\end{equation}
-
-Энд $x$ нь оролтын цуваа, $k$ нь kernel буюу шүүлтүүр юм.
-
-\subsection{Рекуррент мэдрэлийн сүлжээ (RNN) ба LSTM}
-
-RNN нь цуваа өгөгдөл боловсруулахад зориулагдсан бөгөөд өмнөх алхмын мэдээллийг дараагийн алхамд дамжуулдаг:
+Gradient Boosting нь алдааг дараалан засах зарчмаар ажилладаг. $m$-р алхам дахь модель нь өмнөх моделийн алдааг (residual) таамаглахад суралцана:
 
 \begin{equation}
-h_t = \tanh(W_{hh} h_{t-1} + W_{xh} x_t + b_h)
+F_m(x) = F_{m-1}(x) + \gamma_m h_m(x)
 \end{equation}
 
-Гэвч энгийн RNN нь ``vanishing gradient'' асуудалтай учир урт хугацааны хамаарлыг сурахад хүндрэлтэй. LSTM (Long Short-Term Memory) нь энэ асуудлыг шийдвэрлэхээр зохиогдсон:
+\subsubsection{XGBoost}
 
-\begin{figure}[H]
-\centering
-\begin{tikzpicture}[
-    gate/.style={rectangle, draw, minimum width=1cm, minimum height=0.6cm, fill=blue!20},
-    op/.style={circle, draw, minimum size=0.5cm, fill=yellow!30},
-    arrow/.style={-Stealth, thick}
-]
-    % Gates
-    \node[gate] (forget) at (0,0) {$f_t$};
-    \node[gate] (input) at (2,0) {$i_t$};
-    \node[gate] (cell) at (4,0) {$\tilde{c}_t$};
-    \node[gate] (output) at (6,0) {$o_t$};
-    
-    % Labels
-    \node[below=0.3cm of forget] {\small Forget Gate};
-    \node[below=0.3cm of input] {\small Input Gate};
-    \node[below=0.3cm of cell] {\small Cell State};
-    \node[below=0.3cm of output] {\small Output Gate};
-    
-    % Connections
-    \draw[arrow] (-1.5,0) -- (forget);
-    \draw[arrow] (forget) -- (input);
-    \draw[arrow] (input) -- (cell);
-    \draw[arrow] (cell) -- (output);
-    \draw[arrow] (output) -- (7.5,0);
-\end{tikzpicture}
-\caption{LSTM нэгжийн бүтэц}
-\label{fig:lstm}
-\end{figure}
+Chen ба Guestrin (2016) XGBoost (eXtreme Gradient Boosting) алгоритмыг санал болгосон \cite{chen2016}. XGBoost нь L1, L2 regularization ашиглан overfitting-аас сэргийлж, параллел тооцоолол хийх боломжтой.
 
-LSTM-ийн томъёонууд:
+Зорилгын функц:
+\begin{equation}
+\mathcal{L} = \sum_{i=1}^{n} l(y_i, \hat{y}_i) + \sum_{k=1}^{K} \Omega(f_k)
+\end{equation}
+
+Энд $\Omega(f) = \gamma T + \frac{1}{2}\lambda||w||^2$ нь regularization term юм.
+
+\subsubsection{LightGBM}
+
+Ke нар (2017) LightGBM алгоритмыг хөгжүүлсэн \cite{ke2017}. LightGBM нь leaf-wise tree growth стратеги ашигладаг бөгөөд энэ нь level-wise стратегиас илүү хурдан бөгөөд нарийвчлалтай.
+
+\subsection{Voting Ensemble}
+
+Энэ судалгаанд hard voting ensemble ашигласан бөгөөд гурван моделийн олонхийн саналаар эцсийн таамаглал гаргана:
+
+\begin{equation}
+\hat{y} = \text{mode}(f_{RF}(x), f_{XGB}(x), f_{LGBM}(x))
+\end{equation}
+
+\section{Техникийн шинжилгээ}
+
+Техникийн шинжилгээ нь түүхэн үнэ, хэмжээний өгөгдлөөс ирээдүйн үнийн хөдөлгөөнийг таамаглахад ашиглагддаг. Murphy (1999) техникийн шинжилгээний гурван үндсэн зарчмыг тодорхойлсон \cite{murphy1999}: зах зээл бүх мэдээллийг агуулдаг, үнэ чиг хандлагаар хөдөлдөг, түүх давтагддаг.
+
+\subsection{Trend индикаторууд}
+
+\textbf{Moving Average (MA):} Тодорхой хугацааны дундаж үнийг тооцоолно.
+\begin{equation}
+SMA_n = \frac{1}{n} \sum_{i=0}^{n-1} P_{t-i}
+\end{equation}
+
+\textbf{MACD:} Хоёр EMA-ийн зөрүүгээр momentum-ийг хэмждэг.
+\begin{equation}
+MACD = EMA_{12} - EMA_{26}
+\end{equation}
+
+\subsection{Momentum индикаторууд}
+
+\textbf{RSI (Relative Strength Index):} Wilder (1978) санал болгосон RSI нь 0-100 хооронд хэмжигддэг \cite{wilder1978}.
+\begin{equation}
+RSI = 100 - \frac{100}{1 + RS}, \quad RS = \frac{\text{Avg Gain}}{\text{Avg Loss}}
+\end{equation}
+
+\subsection{Volatility индикаторууд}
+
+\textbf{Bollinger Bands:} Bollinger (2002) хөгжүүлсэн энэ индикатор нь үнийн хэлбэлзлийг хэмждэг \cite{bollinger2002}.
 \begin{align}
-f_t &= \sigma(W_f \cdot [h_{t-1}, x_t] + b_f) \quad \text{(Forget gate)} \\
-i_t &= \sigma(W_i \cdot [h_{t-1}, x_t] + b_i) \quad \text{(Input gate)} \\
-\tilde{c}_t &= \tanh(W_c \cdot [h_{t-1}, x_t] + b_c) \quad \text{(Candidate)} \\
-c_t &= f_t \odot c_{t-1} + i_t \odot \tilde{c}_t \quad \text{(Cell state)} \\
-o_t &= \sigma(W_o \cdot [h_{t-1}, x_t] + b_o) \quad \text{(Output gate)} \\
-h_t &= o_t \odot \tanh(c_t) \quad \text{(Hidden state)}
+\text{Upper Band} &= SMA_{20} + 2\sigma \\
+\text{Lower Band} &= SMA_{20} - 2\sigma
 \end{align}
 
-\subsection{Bidirectional LSTM (BiLSTM)}
+\section{Холбогдох судалгааны тойм}
 
-BiLSTM нь хоёр чиглэлд (урагш, хойшоо) цуваа өгөгдлийг боловсруулдаг бөгөөд илүү баялаг контекст мэдээлэл олж авдаг:
+Forex таамаглалд машин сургалт ашигласан судалгаанууд сүүлийн жилүүдэд нэмэгдэж байна. Krollner нар (2010) 2010 оноос өмнөх 25 жилийн судалгааг нэгтгэн дүгнэхдээ машин сургалтын аргууд нь уламжлалт статистик аргуудаас илүү үр дүнтэй болохыг тогтоосон \cite{krollner2010}.
 
-\begin{equation}
-h_t = [\overrightarrow{h_t}; \overleftarrow{h_t}]
-\end{equation}
+Fischer ба Krauss (2018) LSTM сүлжээг S\&P 500 индексийн таамаглалд ашиглаж, уламжлалт аргуудаас давсан үр дүн гаргасан \cite{fischer2018}. Гэсэн хэдий ч энэ судалгаанд ensemble аргыг сонгосон нь тайлбарлах чадвар (interpretability) болон тооцооллын хурдын давуу талтай.
 
-\subsection{Attention механизм}
+\section{Бүлгийн дүгнэлт}
 
-Attention механизм нь моделд оролтын цувааны аль хэсэгт илүү анхаарал хандуулахыг сурах боломж олгодог:
-
-\begin{equation}
-\text{Attention}(Q, K, V) = \text{softmax}\left(\frac{QK^T}{\sqrt{d_k}}\right)V
-\end{equation}
-
-Multi-Head Attention нь олон толгойг ашиглан өөр өөр representation subspace-ийн мэдээллийг авдаг:
-
-\begin{equation}
-\text{MultiHead}(Q, K, V) = \text{Concat}(\text{head}_1, ..., \text{head}_h)W^O
-\end{equation}
-
-\section{Санхүүгийн зах зээлийн техникийн шинжилгээ}
-
-\subsection{Техникийн индикаторууд}
-
-Техникийн шинжилгээ нь үнийн түүхэн өгөгдөл дээр суурилан ирээдүйн үнийн хөдөлгөөнийг таамаглах арга юм.
-
-\subsubsection{Хөдөлгөөнт дундаж (Moving Average)}
-
-Экспоненциал хөдөлгөөнт дундаж (EMA):
-\begin{equation}
-EMA_t = \alpha \cdot P_t + (1 - \alpha) \cdot EMA_{t-1}
-\end{equation}
-Энд $\alpha = \frac{2}{n+1}$, $n$ нь үе.
-
-\subsubsection{RSI (Relative Strength Index)}
-
-RSI нь momentum индикатор бөгөөд 0-100 хооронд хэлбэлздэг:
-\begin{equation}
-RSI = 100 - \frac{100}{1 + RS}
-\end{equation}
-Энд $RS = \frac{\text{Дундаж өсөлт}}{\text{Дундаж бууралт}}$
-
-\subsubsection{MACD (Moving Average Convergence Divergence)}
-
-\begin{align}
-MACD &= EMA_{12} - EMA_{26} \\
-Signal &= EMA_9(MACD) \\
-Histogram &= MACD - Signal
-\end{align}
-
-\subsubsection{Bollinger Bands}
-
-\begin{align}
-Middle &= SMA_{20} \\
-Upper &= Middle + 2\sigma \\
-Lower &= Middle - 2\sigma
-\end{align}
-
-\subsubsection{ATR (Average True Range)}
-
-Хэлбэлзлийн хэмжүүр:
-\begin{equation}
-TR = \max(H_t - L_t, |H_t - C_{t-1}|, |L_t - C_{t-1}|)
-\end{equation}
-\begin{equation}
-ATR = EMA_{14}(TR)
-\end{equation}
-
-\section{Ижил төстэй судалгааны тойм}
-
-\subsection{Уламжлалт машин сургалтын аргууд}
-
-Fischer \& Krauss (2018) \cite{fischer2018} нь LSTM сүлжээг S\&P 500 индексийн чиглэлийн таамаглалд хэрэглэж, уламжлалт аргуудаас давуу гүйцэтгэл үзүүлснийг харуулсан. Random Forest болон Gradient Boosting аргууд 54-56\% нарийвчлалтай байхад LSTM 58-60\% нарийвчлалтай байв.
-
-\subsection{Гүн сургалтын аргууд}
-
-Sezer et al. (2020) \cite{sezer2020} нь CNN ашиглан санхүүгийн цуваа өгөгдлийг 2D дүрс болгон хувиргаж, техникийн индикаторуудын загварыг илрүүлсэн. Энэ арга нь FOREX зах зээл дээр 55-57\% нарийвчлалтай байв.
-
-\subsection{Гибрид аргууд}
-
-Kim \& Won (2018) \cite{kim2018} нь CNN + LSTM гибрид архитектурыг санхүүгийн таамаглалд ашигласан. CNN нь локал загвар илрүүлж, LSTM нь цаг хугацааны хамаарлыг загварчилсан. Энэ хослол нь тус тусдаа ашиглахаас илүү үр дүнтэй байв.
-
-\subsection{Attention-д суурилсан аргууд}
-
-Ding et al. (2020) \cite{ding2020} нь Transformer архитектурыг хувьцааны үнийн таамаглалд ашиглаж, LSTM-ээс давуу гүйцэтгэл үзүүлснийг нотолсон. Self-attention механизм нь урт хугацааны хамаарлыг илүү сайн загварчилдаг.
-
-\subsection{Судалгааны цоорхой}
-
-Одоогийн судалгаануудад дараах цоорхой байна:
-\begin{enumerate}
-    \item Ихэнх судалгаа нь хувьцааны зах зээлд төвлөрсөн, FOREX зах зээлийн судалгаа харьцангуй цөөн
-    \item Multi-task learning буюу олон зорилтот сургалтын хэрэглээ хомс
-    \item Regression болон classification-ийг нэгтгэсэн судалгаа цөөн
-    \item Орчин үеийн техникүүд (Focal Loss, SWA) санхүүгийн таамаглалд бага хэрэглэгдсэн
-\end{enumerate}
-
-\begin{table}[H]
-\centering
-\caption{Холбогдох судалгаануудын харьцуулалт}
-\begin{tabular}{|l|c|c|c|c|}
-\hline
-\textbf{Судалгаа} & \textbf{Арга} & \textbf{Зах зээл} & \textbf{Нарийвчлал} & \textbf{Он} \\
-\hline
-Fischer \& Krauss & LSTM & S\&P 500 & 58-60\% & 2018 \\
-\hline
-Sezer et al. & CNN & FOREX & 55-57\% & 2020 \\
-\hline
-Kim \& Won & CNN+LSTM & KOSPI & 56-58\% & 2018 \\
-\hline
-Ding et al. & Transformer & China A-share & 57-59\% & 2020 \\
-\hline
-\textbf{Энэ судалгаа} & \textbf{CNN+BiLSTM+Attn} & \textbf{FOREX} & \textbf{TBD} & \textbf{2025} \\
-\hline
-\end{tabular}
-\label{tab:related_work}
-\end{table}
+Энэ бүлэгт судалгааны онолын үндэс болох машин сургалт, ensemble аргууд, техникийн индикаторуудыг авч үзлээ. Дараагийн бүлэгт эдгээр аргуудыг хэрхэн хэрэгжүүлсэн талаар дэлгэрэнгүй тайлбарлана.

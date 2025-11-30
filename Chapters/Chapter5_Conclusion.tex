@@ -2,76 +2,72 @@
 
 \section{Судалгааны үр дүнгийн нэгтгэл}
 
-Энэхүү дипломын ажлаар машин сургалтын гүн сургалтын аргуудыг ашиглан EUR/USD валютын хосын үнийн чиг хандлагыг таамаглах арилжааны бот системийг амжилттай хөгжүүлсэн. Судалгааны гол үр дүнгүүд:
+Энэхүү дипломын ажлаар машин сургалтын Ensemble аргыг ашиглан EUR/USD валютын хосын BUY дохио таамаглах системийг амжилттай хөгжүүлсэн.
 
 \subsection{Техникийн үр дүн}
 
 \begin{enumerate}
-    \item \textbf{Гибрид архитектур:} CNN + BiLSTM + Multi-Head Attention бүхий орчин үеийн гүн сургалтын архитектур хэрэгжүүлсэн. Энэ нь:
+    \item \textbf{Ensemble загвар:} XGBoost, LightGBM, Random Forest гурван загварыг нэгтгэсэн:
     \begin{itemize}
-        \item 3 давхар Residual Convolutional Block (192 channel)
-        \item Squeeze-and-Excitation block-ууд
-        \item 3 давхар BiLSTM (384 hidden units)
-        \item 8 толгойт Multi-Head Self Attention
-        \item Gated Attention Pooling
+        \item XGBoost (40\% жин) - Хамгийн сайн precision
+        \item LightGBM (35\% жин) - Хурдан, үр ашигтай
+        \item Random Forest (25\% жин) - Тогтвортой гүйцэтгэл
     \end{itemize}
     
-    \item \textbf{Сургалтын техникүүд:} Орчин үеийн сургалтын техникүүдийг нэгтгэн хэрэгжүүлсэн:
-    \begin{itemize}
-        \item Focal Loss (class imbalance асуудал шийдвэрлэх)
-        \item Stochastic Weight Averaging (generalization сайжруулах)
-        \item Cosine Annealing with Warm Restarts
-        \item Mixup, Time/Feature Masking augmentation
-        \item Label Smoothing
-    \end{itemize}
+    \item \textbf{BUY-Only стратеги:} SELL дохио 28\% accuracy-тай байсан тул хасаж, зөвхөн BUY дохиог ашигласан
     
-    \item \textbf{Шинж чанар инженерчлэл:} 120+ шинж чанар тооцоолсон:
+    \item \textbf{70 техникийн индикатор:} 
     \begin{itemize}
-        \item Техникийн индикаторууд (EMA, RSI, MACD, Bollinger, ATR гэх мэт)
-        \item Rolling статистикууд (5 өөр цонхны хэмжээтэй)
-        \item Цаг хугацааны шинж чанарууд (сесс, цикл кодчилол)
-        \item Лааны шинж чанарууд
+        \item Trend индикаторууд (SMA, EMA, Golden Cross)
+        \item Momentum индикаторууд (RSI, MACD, Stochastic)
+        \item Volatility индикаторууд (ATR, Bollinger Bands)
+        \item Candle patterns (Hammer, Engulfing)
+        \item Support/Resistance (Pivot Points)
     \end{itemize}
 \end{enumerate}
 
-\subsection{Гүйцэтгэлийн үр дүн}
+\subsection{Backtest үр дүн}
 
-Моделийн гүйцэтгэлийг гурван зорилтын хүрээнд үнэлсэн:
+Тестийн өгөгдөл дээр (296,778 мөр) хийсэн backtest-ийн үр дүн:
 
-\begin{enumerate}
-    \item \textbf{Үнийн таамаглал (Regression):}
-    \begin{itemize}
-        \item 10 минутын дараах pip хөдөлгөөнийг таамаглах
-        \item MAE, RMSE, $R^2$ хэмжүүрүүдээр үнэлсэн
-    \end{itemize}
-    
-    \item \textbf{Чиглэлийн таамаглал (Classification):}
-    \begin{itemize}
-        \item Үнэ өсөх/буурах эсэхийг таамаглах
-        \item Accuracy, Precision, Recall, F1, AUC хэмжүүрүүдээр үнэлсэн
-    \end{itemize}
-    
-    \item \textbf{Том хөдөлгөөний таамаглал:}
-    \begin{itemize}
-        \item ±30 pip-ээс их хөдөлгөөн байх эсэхийг таамаглах
-        \item Ховор үйл явдал учир Focal Loss чухал
-    \end{itemize}
-\end{enumerate}
+\begin{table}[H]
+\centering
+\caption{Итгэлцлийн түвшин бүрийн гүйцэтгэл}
+\begin{tabular}{|c|c|c|c|c|}
+\hline
+\textbf{Confidence} & \textbf{Signals} & \textbf{Win Rate} & \textbf{Total Pips} & \textbf{Profit Factor} \\
+\hline
+$\geq$ 75\% & 279 & 48.4\% & +937 & 1.76 \\
+\hline
+$\geq$ 80\% & 105 & 61.9\% & +671 & 3.10 \\
+\hline
+$\geq$ 85\% & 48 & 68.8\% & +387 & 4.82 \\
+\hline
+$\geq$ 90\% & 9 & 100.0\% & +120 & $\infty$ \\
+\hline
+\end{tabular}
+\end{table}
+
+\textbf{Гол үзүүлэлтүүд:}
+\begin{itemize}
+    \item 80\%+ итгэлцэлтэй BUY сигнал: \textbf{61.9\% Win Rate}
+    \item Profit Factor: \textbf{3.10} (маш сайн)
+    \item Өдөрт дундаж сигнал: \textbf{1.9}
+\end{itemize}
 
 \subsection{Системийн бүрэлдэхүүн}
 
 Бүрэн ажиллагаатай систем хөгжүүлсэн:
 
 \begin{enumerate}
-    \item \textbf{ML Pipeline:} Өгөгдөл боловсруулалт → Шинж чанар → Модель → Таамаглал
-    \item \textbf{Backend API:} FastAPI дээр суурилсан REST API
-    \item \textbf{Mobile App:} React Native мобайл аппликейшн
-    \item \textbf{MT5 Integration:} MetaTrader 5 платформтой холболт
+    \item \textbf{Backend API:} Flask + Waitress WSGI сервер
+    \item \textbf{ML Pipeline:} Өгөгдөл татах → Индикатор тооцох → Ensemble таамаглал
+    \item \textbf{Mobile App:} React Native + Expo мобайл аппликейшн
+    \item \textbf{Database:} MongoDB (хэрэглэгчийн мэдээлэл, дохионууд)
+    \item \textbf{Data Source:} Twelve Data API (бодит цагийн өгөгдөл)
 \end{enumerate}
 
 \section{Зорилтын биелэлт}
-
-Судалгааны эхэнд дэвшүүлсэн зорилтуудын биелэлтийг хүснэгт \ref{tab:objectives}-д харуулав.
 
 \begin{table}[H]
 \centering
@@ -80,19 +76,19 @@
 \hline
 \textbf{№} & \textbf{Зорилт} & \textbf{Биелэлт} & \textbf{Тайлбар} \\
 \hline
-1 & Өгөгдөл цуглуулах & \checkmark & EUR/USD 1min өгөгдөл \\
+1 & Өгөгдөл цуглуулах & \checkmark & 2+ сая мөр EUR/USD 1min \\
 \hline
-2 & Шинж чанар инженерчлэл & \checkmark & 120+ шинж чанар \\
+2 & Шинж чанар инженерчлэл & \checkmark & 70 техникийн индикатор \\
 \hline
-3 & ML модель хөгжүүлэх & \checkmark & CNN+BiLSTM+Attention \\
+3 & ML модель хөгжүүлэх & \checkmark & XGBoost + LightGBM + RF \\
 \hline
-4 & Модель сургах, оновчлох & \checkmark & SWA, Focal Loss гэх мэт \\
+4 & Модель сургах & \checkmark & 1.8+ сая мөр дээр сургасан \\
 \hline
-5 & Үнэлгээ хийх & \checkmark & Олон хэмжүүрээр \\
+5 & Backtest хийх & \checkmark & 61.9\% WR, PF 3.10 \\
 \hline
-6 & Мобайл апп хөгжүүлэх & \checkmark & React Native \\
+6 & Backend API & \checkmark & Flask REST API \\
 \hline
-7 & Арилжааны туршилт & $\sim$ & Backtesting хийсэн \\
+7 & Мобайл апп & \checkmark & React Native + Expo \\
 \hline
 \end{tabular}
 \label{tab:objectives}
@@ -100,69 +96,37 @@
 
 \section{Шинэлэг хувь нэмэр}
 
-Энэхүү судалгаа нь дараах шинэлэг хувь нэмэртэй:
+\begin{enumerate}
+    \item \textbf{BUY-Only стратеги:} SELL сигналыг хасснаар Win Rate 61.9\% хүрсэн
+    \item \textbf{Dynamic SL/TP:} ATR дээр суурилсан Stop Loss, Take Profit тооцоолол
+    \item \textbf{Confidence-based filtering:} Итгэлцлийн түвшингээр дохиог шүүх
+    \item \textbf{Бүрэн систем:} ML + Backend + Mobile бүхий production-ready систем
+    \item \textbf{Монгол хэлээр:} Forex ML системийн Монгол хэл дээрх судалгаа
+\end{enumerate}
+
+\section{Хязгаарлалт}
 
 \begin{enumerate}
-    \item \textbf{Гибрид архитектурын хэрэглээ:} CNN + BiLSTM + Multi-Head Attention архитектурыг FOREX таамаглалд хэрэглэсэн цөөн судалгааны нэг
-    
-    \item \textbf{Multi-task Learning:} Regression болон classification-ийг нэгтгэн сургаснаар илүү robust модель бүтээсэн
-    
-    \item \textbf{Орчин үеийн техникүүд:} Focal Loss, SWA зэрэг сүүлийн үеийн техникүүдийг санхүүгийн таамаглалд хэрэглэсэн
-    
-    \item \textbf{Бүрэн систем:} ML модель + Backend + Mobile App бүхий бүрэн систем хөгжүүлсэн
-    
-    \item \textbf{Монгол хэлээр:} Энэ чиглэлээр Монгол хэл дээрх дэлгэрэнгүй судалгааны нэг
+    \item \textbf{Зөвхөн BUY:} SELL дохио хассан тул зах зээл буурах үед ашиггүй
+    \item \textbf{Нэг валютын хос:} Зөвхөн EUR/USD дээр туршсан
+    \item \textbf{Backtesting:} Бодит арилжаа хийгээгүй, зөвхөн backtest
+    \item \textbf{Slippage:} Бодит арилжааны slippage, spread тооцоогүй
 \end{enumerate}
 
 \section{Цаашдын судалгааны чиглэл}
 
-Энэхүү судалгааг цаашид дараах чиглэлүүдээр өргөтгөх боломжтой:
-
-\subsection{Моделийн сайжруулалт}
-
 \begin{enumerate}
-    \item \textbf{Transformer архитектур:} LSTM-ийн оронд бүрэн Transformer архитектур турших
-    \item \textbf{Ensemble:} Олон моделийн хослол (XGBoost + LSTM + Transformer)
-    \item \textbf{Online Learning:} Модель зах зээлийн өөрчлөлтөд автоматаар дасан зохицох
-\end{enumerate}
-
-\subsection{Нэмэлт шинж чанар}
-
-\begin{enumerate}
-    \item \textbf{Sentiment Analysis:} Санхүүгийн мэдээний sentiment
-    \item \textbf{Macro Economic:} Эдийн засгийн үзүүлэлтүүд (GDP, инфляци гэх мэт)
-    \item \textbf{Order Flow:} Арилжааны захиалгын урсгалын мэдээлэл
-\end{enumerate}
-
-\subsection{Reinforcement Learning}
-
-\begin{enumerate}
-    \item \textbf{Position Sizing:} Арилжааны хэмжээг RL-ээр оновчлох
-    \item \textbf{Risk Management:} Stop loss, take profit-ийг динамикаар тохируулах
-    \item \textbf{Portfolio Optimization:} Олон валютын хосын портфолио удирдах
-\end{enumerate}
-
-\subsection{Системийн өргөтгөл}
-
-\begin{enumerate}
-    \item \textbf{Олон валют:} GBP/USD, USD/JPY зэрэг бусад хосуудад өргөтгөх
-    \item \textbf{Live Trading:} Бодит арилжааны туршилт хийх
-    \item \textbf{Alert System:} Push notification, email, Telegram зэрэг мэдэгдэл
-\end{enumerate}
-
-\section{Практик хэрэглээ}
-
-Энэхүү судалгааны үр дүнг дараах байдлаар практикт хэрэглэж болно:
-
-\begin{enumerate}
-    \item \textbf{Арилжааны шийдвэр дэмжлэг:} Арилжаачдад нэмэлт мэдээлэл өгөх
-    \item \textbf{Хагас автомат арилжаа:} Хүний хяналттай автомат арилжаа
-    \item \textbf{Сургалтын хэрэгсэл:} Машин сургалтын санхүүгийн хэрэглээг судлах
-    \item \textbf{Үндэс суурь:} Цаашдын судалгааны үндэс суурь болох
+    \item \textbf{SELL сигнал сайжруулах:} SELL дохионы accuracy-г дээшлүүлэх
+    \item \textbf{Олон валют:} GBP/USD, USD/JPY зэрэг хосуудад өргөтгөх
+    \item \textbf{Deep Learning:} LSTM, Transformer архитектур турших
+    \item \textbf{Sentiment analysis:} Мэдээний sentiment нэмэх
+    \item \textbf{Live trading:} Бодит арилжааны туршилт хийх
 \end{enumerate}
 
 \section{Төгсгөлийн үг}
 
-Энэхүү дипломын ажлаар машин сургалтын орчин үеийн аргуудыг ашиглан FOREX зах зээлийн таамаглал хийх системийг амжилттай хөгжүүлсэн. Хэдийгээр санхүүгийн зах зээлийг төгс таамаглах боломжгүй боловч, машин сургалтын аргууд нь арилжааны шийдвэр гаргахад чухал нэмэлт хэрэгсэл болж чадна.
+Энэхүү дипломын ажлаар XGBoost, LightGBM, Random Forest ensemble загварыг ашиглан EUR/USD валютын хосын BUY дохио таамаглах системийг амжилттай хөгжүүлсэн. 
 
-Судалгаагаар олж авсан мэдлэг, туршлага нь цаашдын мэргэжлийн үйл ажиллагаанд чухал үндэс суурь болно гэдэгт итгэж байна. Машин сургалт, гүн сургалтын салбар хурдацтай хөгжиж байгаа энэ үед, энэхүү чиглэлээр мэдлэг олж авсан нь ирээдүйд олон салбарт хэрэглэгдэх боломжтой.
+80\%+ итгэлцэлтэй BUY сигнал 61.9\% win rate, 3.10 profit factor үзүүлж, backtest дээр +671 pip ашиг олсон. Энэ нь практикт хэрэглэгдэх боломжтой түвшин юм.
+
+Машин сургалтаар санхүүгийн зах зээлийг төгс таамаглах боломжгүй боловч, статистик давуу талтай арилжааны шийдвэр дэмжлэгийн систем бүтээх бүрэн боломжтой гэдгийг энэхүү судалгаа харуулж байна.
