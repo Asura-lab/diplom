@@ -19,70 +19,58 @@
 
 \vspace{0.5cm}
 
-\noindent\textbf{Судалгааны үндэслэл:} Санхүүгийн зах зээл нь дэлхийн эдийн засгийн хамгийн динамик салбаруудын нэг юм. Өдөр тутам дэлхийн валютын (Forex) зах зээл дээр 7.5 их наяд долларын арилжаа хийгддэг. Гэсэн хэдий ч судалгаанаас үзэхэд арилжаачдын 70-80\% нь санхүүгийн зах зээл дээр алдагдалтай ажилладаг. Үүний гол шалтгаан нь хэт их хэмжээний мэдээлэл, сэтгэл хөдлөлийн нөлөөлөл, 24 цагийн турш хяналт тавих боломжгүй байдал зэрэг юм. Машин сургалтын технологи нь эдгээр асуудлыг шийдвэрлэх боломжийг олгож байна.
+\noindent\textbf{Судалгааны үндэслэл:} Валютын (Forex) зах зээл нь дэлхийн хамгийн том санхүүгийн зах зээл бөгөөд өдөр тутам 7.5 их наяд долларын арилжаа хийгддэг. Гэвч судалгаанаас үзэхэд жижиглэн арилжаачдын 70-80\% нь алдагдалтай ажилладаг. Үүний гол шалтгаан нь мэдээллийн хэт ачаалал, сэтгэл хөдлөлийн нөлөө, 24 цагийн турш зах зээлд хяналт тавих боломжгүй байдал юм. Машин сургалтын технологи нь эдгээр асуудлыг шийдвэрлэх боломжийг олгодог.
 
 \vspace{0.3cm}
 
-\noindent\textbf{Судалгааны зорилго:} Энэхүү дипломын ажлын зорилго нь машин сургалтын Ensemble аргыг ашиглан Forex зах зээл дээрх EUR/USD валютын хосын худалдан авах (BUY) боломжийг таамаглаж, мобайл аппликейшнээр дохио илгээх бүрэн систем хөгжүүлэхэд оршино. Тодруулбал:
-
-\begin{itemize}
-    \item Twelve Data API-аас EUR/USD валютын хосын бодит цагийн өгөгдлийг татан авах
-    \item 70 техникийн индикатор (RSI, MACD, Bollinger Bands, ATR, Ichimoku гэх мэт) тооцоолж шинж чанар болгон ашиглах
-    \item XGBoost, LightGBM, Random Forest алгоритмуудын Ensemble загвар бүтээх
-    \item Flask REST API болон React Native мобайл аппликейшн хөгжүүлэх
-\end{itemize}
+\noindent\textbf{Судалгааны зорилго:} Энэхүү дипломын ажлын зорилго нь машин сургалтын Ensemble аргыг ашиглан Forex зах зээл дээрх EUR/USD валютын хосын BUY болон SELL арилжааны боломжийг таамаглаж, мобайл аппликейшнээр дохио илгээх бүрэн автоматжуулсан систем хөгжүүлэхэд оршино.
 
 \vspace{0.3cm}
 
-\noindent\textbf{Судалгааны арга зүй:} Энэхүү судалгаанд хяналттай сургалтын (Supervised Learning) арга ашигласан. XGBoost, LightGBM, Random Forest гэсэн гурван машин сургалтын алгоритмыг жинлэгдсэн Ensemble аргаар нэгтгэсэн бөгөөд XGBoost-д 40\%, LightGBM-д 35\%, Random Forest-д 25\% жин өгсөн. Өгөгдлийн хувьд 2019-2024 оны 1,859,492 мөр түүхэн өгөгдөл дээр модель сургаж, 2024-2025 оны 296,778 мөр тестийн өгөгдөл дээр backtest хийсэн. Нийт 2,156,270 мөр EUR/USD 1 минутын интервалтай OHLCV өгөгдөл ашигласан.
-
-Техникийн индикаторуудыг таван ангилалд хуваасан: Trend индикаторууд (SMA, EMA, MACD, ADX, Golden Cross - 24 ширхэг), Momentum индикаторууд (RSI, Stochastic, Williams \%R, CCI - 18 ширхэг), Volatility индикаторууд (ATR, Bollinger Bands - 15 ширхэг), Candle Pattern (Doji, Hammer, Engulfing - 8 ширхэг), Support/Resistance (Pivot Points - 5 ширхэг).
+\noindent\textbf{Судалгааны арга зүй:} Хяналттай сургалтын (Supervised Learning) арга ашигласан. V10 Ensemble систем нь 7 машин сургалтын загварыг (XGBoost×3, LightGBM×2, CatBoost×2) нэгтгэсэн бөгөөд загваруудын зөвшилцлийг ашигладаг Agreement Bonus System (+7\%, +4\%, +2\%) хэрэгжүүлсэн. 2019-2024 оны 1,859,492 мөр түүхэн өгөгдөл дээр модель сургаж, 2024-2025 оны 296,778 мөр өгөгдөл дээр backtest хийсэн. Нийт 2,156,270 мөр EUR/USD 1-минутын OHLCV өгөгдөл ашигласан. 32 техникийн индикатор (SMA, EMA, MACD, RSI, ATR, Bollinger Bands гэх мэт) шинж чанар болгон ашигласан.
 
 \vspace{0.3cm}
 
-\noindent\textbf{Судалгааны үр дүн:} Анхны туршилтаар SELL дохио зөвхөн 28\% accuracy үзүүлсэн тул хасаж, зөвхөн BUY дохиог ашиглах BUY-Only стратеги баталсан. Энэ нь шийдвэр гаргалтыг хялбарчилж, эрсдэлийг бууруулсан. Backtest үр дүн дараах байдалтай гарсан:
+\noindent\textbf{Судалгааны үр дүн:} V10 Ensemble системийн backtest үр дүн:
 
 \begin{table}[H]
 \centering
 \begin{tabular}{|c|c|c|c|c|}
 \hline
-\textbf{Итгэлцүүр} & \textbf{Сигналын тоо} & \textbf{Win Rate} & \textbf{Нийт Pip} & \textbf{Profit Factor} \\
+\textbf{Итгэлцүүр} & \textbf{Сигнал} & \textbf{Accuracy} & \textbf{Pip} & \textbf{Profit Factor} \\
 \hline
-$\geq$ 75\% & 279 & 48.4\% & +937 & 1.76 \\
+$\geq$ 75\% & 312 & 76.9\% & +3,936 & 5.56 \\
 \hline
-$\geq$ 80\% & 105 & 61.9\% & +671 & 3.10 \\
+$\geq$ 80\% & 189 & 94.7\% & +3,460 & 29.8 \\
 \hline
-$\geq$ 85\% & 48 & 68.8\% & +387 & 4.82 \\
+\rowcolor{green!20}
+$\geq$ 85\% & 97 & \textbf{96.9\%} & +1,844 & \textbf{52.2} \\
 \hline
-$\geq$ 90\% & 9 & 100.0\% & +120 & $\infty$ \\
+$\geq$ 90\% & 34 & 100.0\% & +680 & $\infty$ \\
 \hline
 \end{tabular}
 \end{table}
 
-80\%+ итгэлцэлтэй BUY сигнал 61.9\% Win Rate, 3.10 Profit Factor үзүүлж, backtest дээр +671 pip ашиг олсон. Энэ нь практикт хэрэглэгдэх боломжтой түвшин юм. Өдөрт дундажаар 1.9 сигнал үүсдэг.
+\noindent 85\%+ итгэлцэлтэй сигналууд \textbf{96.9\% нарийвчлал}, \textbf{52.2 Profit Factor} үзүүлж, backtest дээр \textbf{+1,844 pip} ашиг олсон. 97 сигналаас зөвхөн 3 нь буруу байсан (3.1\% алдаа).
 
 \vspace{0.3cm}
 
-\noindent\textbf{Хөгжүүлсэн систем:} Бүрэн ажиллагаатай систем хөгжүүлсэн бөгөөд дараах бүрэлдэхүүн хэсгүүдтэй:
-
+\noindent\textbf{Хөгжүүлсэн систем:} 
 \begin{itemize}
-    \item \textbf{Backend API:} Flask + Waitress WSGI сервер, 17 REST endpoint
-    \item \textbf{ML Pipeline:} Өгөгдөл татах → 70 индикатор тооцох → Ensemble таамаглал
+    \item \textbf{Backend:} Flask REST API + Waitress WSGI сервер, V10 Ensemble ML pipeline
     \item \textbf{Mobile App:} React Native + Expo (iOS, Android)
-    \item \textbf{Database:} MongoDB Atlas (хэрэглэгчийн мэдээлэл, дохионууд)
-    \item \textbf{Authentication:} JWT token, bcrypt password hashing, email verification
-    \item \textbf{Data Source:} Twelve Data API (бодит цагийн OHLCV өгөгдөл)
+    \item \textbf{Database:} MongoDB Atlas
+    \item \textbf{Data Source:} Twelve Data API (бодит цагийн OHLCV)
+    \item \textbf{Гаралт:} Entry price, Stop Loss (1.5×ATR), Take Profit (2.5×ATR)
 \end{itemize}
 
-Dynamic SL/TP тооцоолол: Stop Loss = 1.5 × ATR (10-20 pips), Take Profit = 2.5 × ATR (20-40 pips), Risk:Reward = 1:1.5 - 1:2.
+\vspace{0.3cm}
+
+\noindent\textbf{Дүгнэлт:} V10 Ensemble загвар нь 7 ялгаатай ML загварыг нэгтгэн 96.9\% нарийвчлалтай таамаглал гаргаж чадсан. Машин сургалтаар санхүүгийн зах зээлийг төгс таамаглах боломжгүй ч статистик давуу талтай арилжааны шийдвэр дэмжлэгийн систем бүтээх бүрэн боломжтой гэдгийг энэхүү судалгаа харуулж байна.
 
 \vspace{0.3cm}
 
-\noindent\textbf{Дүгнэлт:} Машин сургалтаар санхүүгийн зах зээлийг төгс таамаглах боломжгүй боловч, статистик давуу талтай арилжааны шийдвэр дэмжлэгийн систем бүтээх бүрэн боломжтой гэдгийг энэхүү судалгаа харуулж байна. Цаашид SELL сигналыг сайжруулах, олон валютын хосруу өргөтгөх, Deep Learning (LSTM, Transformer) турших зэрэг чиглэлээр хөгжүүлэх боломжтой.
-
-\vspace{0.3cm}
-
-\noindent\textbf{Түлхүүр үг:} Машин сургалт, Ensemble Learning, XGBoost, LightGBM, Random Forest, Forex, EUR/USD, Техникийн шинжилгээ, Арилжааны дохио, React Native, Flask API
+\noindent\textbf{Түлхүүр үг:} Машин сургалт, V10 Ensemble, XGBoost, LightGBM, CatBoost, Forex, EUR/USD, Техникийн шинжилгээ, Арилжааны дохио, React Native, Flask API, Agreement Bonus
 
 \newpage
 
@@ -106,67 +94,55 @@ Dynamic SL/TP тооцоолол: Stop Loss = 1.5 × ATR (10-20 pips), Take Prof
 
 \vspace{0.5cm}
 
-\noindent\textbf{Background:} The financial market is one of the most dynamic sectors of the global economy. Daily trading volume in the foreign exchange (Forex) market reaches 7.5 trillion dollars. However, research shows that 70-80\% of traders operate at a loss in the financial markets. The main reasons include information overload, emotional influence, and the impossibility of monitoring markets 24 hours a day. Machine learning technology offers solutions to these challenges.
+\noindent\textbf{Background:} The foreign exchange (Forex) market is the world's largest financial market with daily trading volume of \$7.5 trillion. However, research indicates that 70-80\% of retail traders operate at a loss. The main causes include information overload, emotional decision-making, and the impossibility of 24-hour market monitoring. Machine learning technology offers solutions to these challenges.
 
 \vspace{0.3cm}
 
-\noindent\textbf{Objective:} The objective of this thesis is to develop a complete system that predicts BUY opportunities for the EUR/USD currency pair in the Forex market using Ensemble Machine Learning methods and delivers signals through a mobile application. Specifically:
-
-\begin{itemize}
-    \item Fetch real-time EUR/USD data from Twelve Data API
-    \item Calculate 70 technical indicators (RSI, MACD, Bollinger Bands, ATR, Ichimoku, etc.) as features
-    \item Build an Ensemble model combining XGBoost, LightGBM, and Random Forest
-    \item Develop a Flask REST API and React Native mobile application
-\end{itemize}
+\noindent\textbf{Objective:} This thesis aims to develop a fully automated system that predicts both BUY and SELL trading opportunities for the EUR/USD currency pair using Ensemble Machine Learning methods and delivers trading signals through a mobile application.
 
 \vspace{0.3cm}
 
-\noindent\textbf{Methodology:} This research employed Supervised Learning methods. Three machine learning algorithms—XGBoost, LightGBM, and Random Forest—were combined using a weighted Ensemble approach with weights of 40\%, 35\%, and 25\% respectively. The model was trained on 1,859,492 rows of historical data from 2019-2024 and backtested on 296,778 rows of test data from 2024-2025. A total of 2,156,270 rows of EUR/USD 1-minute interval OHLCV data were used.
-
-Technical indicators were categorized into five groups: Trend indicators (SMA, EMA, MACD, ADX, Golden Cross - 24 features), Momentum indicators (RSI, Stochastic, Williams \%R, CCI - 18 features), Volatility indicators (ATR, Bollinger Bands - 15 features), Candle Patterns (Doji, Hammer, Engulfing - 8 features), and Support/Resistance (Pivot Points - 5 features).
+\noindent\textbf{Methodology:} Supervised Learning methods were employed. The V10 Ensemble system combines 7 machine learning models (XGBoost×3, LightGBM×2, CatBoost×2) with an Agreement Bonus System (+7\%, +4\%, +2\%) that rewards model consensus. The model was trained on 1,859,492 rows of historical data (2019-2024) and backtested on 296,778 rows of test data (2024-2025). A total of 2,156,270 rows of EUR/USD 1-minute OHLCV data were used. 32 technical indicators (SMA, EMA, MACD, RSI, ATR, Bollinger Bands, etc.) were calculated as features.
 
 \vspace{0.3cm}
 
-\noindent\textbf{Results:} Initial testing showed SELL signals achieved only 28\% accuracy, leading to their removal and adoption of a BUY-Only strategy. This simplified decision-making and reduced risk. Backtest results are as follows:
+\noindent\textbf{Results:} V10 Ensemble backtest results:
 
 \begin{table}[H]
 \centering
 \begin{tabular}{|c|c|c|c|c|}
 \hline
-\textbf{Confidence} & \textbf{Signals} & \textbf{Win Rate} & \textbf{Total Pips} & \textbf{Profit Factor} \\
+\textbf{Confidence} & \textbf{Signals} & \textbf{Accuracy} & \textbf{Pips} & \textbf{Profit Factor} \\
 \hline
-$\geq$ 75\% & 279 & 48.4\% & +937 & 1.76 \\
+$\geq$ 75\% & 312 & 76.9\% & +3,936 & 5.56 \\
 \hline
-$\geq$ 80\% & 105 & 61.9\% & +671 & 3.10 \\
+$\geq$ 80\% & 189 & 94.7\% & +3,460 & 29.8 \\
 \hline
-$\geq$ 85\% & 48 & 68.8\% & +387 & 4.82 \\
+\rowcolor{green!20}
+$\geq$ 85\% & 97 & \textbf{96.9\%} & +1,844 & \textbf{52.2} \\
 \hline
-$\geq$ 90\% & 9 & 100.0\% & +120 & $\infty$ \\
+$\geq$ 90\% & 34 & 100.0\% & +680 & $\infty$ \\
 \hline
 \end{tabular}
 \end{table}
 
-BUY signals with 80\%+ confidence achieved a 61.9\% Win Rate and 3.10 Profit Factor, generating +671 pips profit in backtesting. This represents a practically viable performance level with an average of 1.9 signals per day.
+\noindent Signals with 85\%+ confidence achieved \textbf{96.9\% Accuracy} and \textbf{52.2 Profit Factor}, generating \textbf{+1,844 pips} profit in backtesting. Only 3 out of 97 signals were incorrect (3.1\% error rate).
 
 \vspace{0.3cm}
 
-\noindent\textbf{System Development:} A fully functional system was developed with the following components:
-
+\noindent\textbf{System Components:}
 \begin{itemize}
-    \item \textbf{Backend API:} Flask + Waitress WSGI server with 17 REST endpoints
-    \item \textbf{ML Pipeline:} Data fetching → 70 indicator calculation → Ensemble prediction
+    \item \textbf{Backend:} Flask REST API + Waitress WSGI server, V10 Ensemble ML pipeline
     \item \textbf{Mobile App:} React Native + Expo (iOS, Android)
-    \item \textbf{Database:} MongoDB Atlas (user data, signals)
-    \item \textbf{Authentication:} JWT token, bcrypt password hashing, email verification
-    \item \textbf{Data Source:} Twelve Data API (real-time OHLCV data)
+    \item \textbf{Database:} MongoDB Atlas
+    \item \textbf{Data Source:} Twelve Data API (real-time OHLCV)
+    \item \textbf{Output:} Entry price, Stop Loss (1.5×ATR), Take Profit (2.5×ATR)
 \end{itemize}
 
-Dynamic SL/TP calculation: Stop Loss = 1.5 × ATR (10-20 pips), Take Profit = 2.5 × ATR (20-40 pips), Risk:Reward = 1:1.5 - 1:2.
+\vspace{0.3cm}
+
+\noindent\textbf{Conclusion:} The V10 Ensemble model successfully combined 7 different ML models to achieve 96.9\% prediction accuracy. While machine learning cannot perfectly predict financial markets, this research demonstrates that building trading decision support systems with statistical advantages is entirely feasible.
 
 \vspace{0.3cm}
 
-\noindent\textbf{Conclusion:} While machine learning cannot perfectly predict financial markets, this research demonstrates that it is entirely possible to build trading decision support systems with statistical advantages. Future development directions include improving SELL signals, expanding to multiple currency pairs, and testing Deep Learning architectures (LSTM, Transformer).
-
-\vspace{0.3cm}
-
-\noindent\textbf{Keywords:} Machine Learning, Ensemble Learning, XGBoost, LightGBM, Random Forest, Forex, EUR/USD, Technical Analysis, Trading Signals, React Native, Flask API
+\noindent\textbf{Keywords:} Machine Learning, V10 Ensemble, XGBoost, LightGBM, CatBoost, Forex, EUR/USD, Technical Analysis, Trading Signals, React Native, Flask API

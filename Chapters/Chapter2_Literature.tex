@@ -56,13 +56,19 @@ Chen ба Guestrin (2016) XGBoost (eXtreme Gradient Boosting) алгоритмы
 
 Ke нар (2017) LightGBM алгоритмыг хөгжүүлсэн \cite{ke2017}. LightGBM нь leaf-wise tree growth стратеги ашигладаг бөгөөд энэ нь level-wise стратегиас илүү хурдан бөгөөд нарийвчлалтай.
 
-\subsection{Voting Ensemble}
+\subsubsection{CatBoost}
 
-Энэ судалгаанд hard voting ensemble ашигласан бөгөөд гурван моделийн олонхийн саналаар эцсийн таамаглал гаргана:
+Yandex-ийн хөгжүүлсэн CatBoost нь categorical feature-тэй сайн ажилладаг gradient boosting алгоритм юм. Ordered boosting арга ашиглан target leakage-аас сэргийлдэг бөгөөд hyperparameter тохируулга бага шаарддаг.
+
+\subsection{V10 Ensemble арга}
+
+Энэ судалгаанд V10 гэж нэрлэгдсэн 7 загварын Ensemble арга ашигласан. 3 XGBoost, 2 LightGBM, 2 CatBoost загварыг нэгтгэж, Agreement Bonus системээр итгэлцүүрийг нэмэгдүүлсэн:
 
 \begin{equation}
-\hat{y} = \text{mode}(f_{RF}(x), f_{XGB}(x), f_{LGBM}(x))
+P_{final} = \sum_{i=1}^{7} w_i \cdot P_i(BUY) + \text{Agreement Bonus}
 \end{equation}
+
+Agreement Bonus нь загваруудын зөвшилцлөөс хамааран +7\% (7/7), +4\% (6/7), +2\% (5/7) нэмдэг.
 
 \section{Техникийн шинжилгээ}
 
@@ -100,7 +106,3 @@ RSI = 100 - \frac{100}{1 + RS}, \quad RS = \frac{\text{Avg Gain}}{\text{Avg Loss
 Forex таамаглалд машин сургалт ашигласан судалгаанууд сүүлийн жилүүдэд нэмэгдэж байна. Krollner нар (2010) 2010 оноос өмнөх 25 жилийн судалгааг нэгтгэн дүгнэхдээ машин сургалтын аргууд нь уламжлалт статистик аргуудаас илүү үр дүнтэй болохыг тогтоосон \cite{krollner2010}.
 
 Fischer ба Krauss (2018) LSTM сүлжээг S\&P 500 индексийн таамаглалд ашиглаж, уламжлалт аргуудаас давсан үр дүн гаргасан \cite{fischer2018}. Гэсэн хэдий ч энэ судалгаанд ensemble аргыг сонгосон нь тайлбарлах чадвар (interpretability) болон тооцооллын хурдын давуу талтай.
-
-\section{Бүлгийн дүгнэлт}
-
-Энэ бүлэгт судалгааны онолын үндэс болох машин сургалт, ensemble аргууд, техникийн индикаторуудыг авч үзлээ. Дараагийн бүлэгт эдгээр аргуудыг хэрхэн хэрэгжүүлсэн талаар дэлгэрэнгүй тайлбарлана.

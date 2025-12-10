@@ -2,19 +2,17 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces Дохио үүсгэх системийн Flow Diagram}}{7}{figure.caption.58}%
-\contentsline {figure}{\numberline {3.2}{\ignorespaces Хэрэглээний тохиолдлын диаграмм}}{8}{figure.caption.60}%
-\contentsline {figure}{\numberline {3.3}{\ignorespaces Дохио авах Activity Diagram}}{9}{figure.caption.62}%
-\contentsline {figure}{\numberline {3.4}{\ignorespaces EUR/USD 2025 оны 3-4-р сарын бодит үнийн хөдөлгөөн ба техникийн индикаторууд}}{9}{figure.caption.64}%
-\contentsline {figure}{\numberline {3.5}{\ignorespaces Системийн архитектурын диаграмм}}{10}{figure.caption.66}%
-\contentsline {figure}{\numberline {3.6}{\ignorespaces Sequence диаграм - Дохио хүлээн авах}}{10}{figure.caption.68}%
-\contentsline {figure}{\numberline {3.7}{\ignorespaces Ensemble моделийн архитектур}}{16}{figure.caption.125}%
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Дохио үүсгэх системийн Flow Diagram}}{7}{figure.caption.62}%
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Хэрэглээний тохиолдлын диаграмм}}{8}{figure.caption.64}%
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Дохио авах Activity Diagram}}{9}{figure.caption.66}%
+\contentsline {figure}{\numberline {3.4}{\ignorespaces EUR/USD 2025 оны 3-4-р сарын бодит үнийн хөдөлгөөн ба техникийн индикаторууд}}{9}{figure.caption.68}%
+\contentsline {figure}{\numberline {3.5}{\ignorespaces Системийн архитектурын диаграмм}}{10}{figure.caption.70}%
+\contentsline {figure}{\numberline {3.6}{\ignorespaces Sequence диаграм - Дохио хүлээн авах}}{10}{figure.caption.72}%
+\contentsline {figure}{\numberline {3.7}{\ignorespaces V10 Ensemble моделийн архитектур (7 загвар)}}{16}{figure.caption.129}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Өгөгдлийн тархалт (мянган мөрөөр)}}{20}{figure.caption.156}%
-\contentsline {figure}{\numberline {4.2}{\ignorespaces Онцлогуудын категори бүрийн тоо}}{21}{figure.caption.158}%
-\contentsline {figure}{\numberline {4.3}{\ignorespaces Загваруудын гүйцэтгэлийн харьцуулалт}}{21}{figure.caption.161}%
-\contentsline {figure}{\numberline {4.4}{\ignorespaces Топ 15 чухал онцлогийн Feature Importance}}{24}{figure.caption.173}%
-\contentsline {figure}{\numberline {4.5}{\ignorespaces Ensemble загварын Confusion Matrix}}{25}{figure.caption.176}%
-\contentsline {figure}{\numberline {4.6}{\ignorespaces ROC Curve харьцуулалт}}{25}{figure.caption.178}%
-\contentsline {figure}{\numberline {4.7}{\ignorespaces Итгэлцлийн түвшин ба Win Rate хамаарал}}{28}{figure.caption.199}%
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Өгөгдлийн тархалт (мянган мөрөөр)}}{20}{figure.caption.163}%
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Онцлогуудын категори бүрийн тоо}}{21}{figure.caption.167}%
+\contentsline {figure}{\numberline {4.3}{\ignorespaces V10 Итгэлцлийн түвшин ба Accuracy хамаарал}}{23}{figure.caption.178}%
+\contentsline {figure}{\numberline {4.4}{\ignorespaces V10 Итгэлцлийн түвшин ба Profit Factor}}{25}{figure.caption.185}%
+\contentsline {figure}{\numberline {4.5}{\ignorespaces V10 Судалгааны үр дүнгийн хураангуй}}{27}{figure.caption.201}%
 \addvspace {10\p@ }

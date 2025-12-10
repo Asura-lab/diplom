@@ -2,20 +2,21 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {3.1}{\ignorespaces Өгөгдлийн хугацааны хүрээ}}{11}{table.caption.72}%
-\contentsline {table}{\numberline {3.2}{\ignorespaces Зорилтот хувьсагчийн параметрүүд}}{15}{table.caption.115}%
-\contentsline {table}{\numberline {3.3}{\ignorespaces Моделийн Hyperparameter тохиргоо}}{17}{table.caption.132}%
+\contentsline {table}{\numberline {3.1}{\ignorespaces Өгөгдлийн хугацааны хүрээ}}{11}{table.caption.76}%
+\contentsline {table}{\numberline {3.2}{\ignorespaces Зорилтот хувьсагчийн параметрүүд}}{15}{table.caption.119}%
+\contentsline {table}{\numberline {3.3}{\ignorespaces Agreement Bonus System}}{17}{table.caption.134}%
+\contentsline {table}{\numberline {3.4}{\ignorespaces V10 Моделийн Hyperparameter тохиргоо}}{17}{table.caption.139}%
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {4.1}{\ignorespaces Өгөгдлийн статистик}}{20}{table.caption.154}%
-\contentsline {table}{\numberline {4.2}{\ignorespaces XGBoost загварын үзүүлэлтүүд}}{22}{table.caption.163}%
-\contentsline {table}{\numberline {4.3}{\ignorespaces LightGBM загварын үзүүлэлтүүд}}{22}{table.caption.165}%
-\contentsline {table}{\numberline {4.4}{\ignorespaces Random Forest загварын үзүүлэлтүүд}}{23}{table.caption.167}%
-\contentsline {table}{\numberline {4.5}{\ignorespaces Ensemble загварын эцсийн үзүүлэлтүүд}}{23}{table.caption.170}%
-\contentsline {table}{\numberline {4.6}{\ignorespaces Топ 15 чухал онцлог}}{24}{table.caption.174}%
-\contentsline {table}{\numberline {4.7}{\ignorespaces Системийн гүйцэтгэлийн хэмжүүрүүд}}{27}{table.caption.186}%
-\contentsline {table}{\numberline {4.8}{\ignorespaces Загваруудын харьцуулсан үзүүлэлтүүд}}{27}{table.caption.190}%
-\contentsline {table}{\numberline {4.9}{\ignorespaces Итгэлцлийн түвшин бүрийн Backtest үр дүн}}{28}{table.caption.198}%
+\contentsline {table}{\numberline {4.1}{\ignorespaces Өгөгдлийн статистик}}{20}{table.caption.161}%
+\contentsline {table}{\numberline {4.2}{\ignorespaces Сургалтын өгөгдлийн статистик}}{21}{table.caption.165}%
+\contentsline {table}{\numberline {4.3}{\ignorespaces V10 Ensemble загваруудын бүрэлдэхүүн}}{22}{table.caption.170}%
+\contentsline {table}{\numberline {4.4}{\ignorespaces V10 Итгэлцлийн түвшин бүрийн BUY сигналын гүйцэтгэл}}{23}{table.caption.177}%
+\contentsline {table}{\numberline {4.5}{\ignorespaces Dynamic SL/TP тохиргоо}}{24}{table.caption.182}%
+\contentsline {table}{\numberline {4.6}{\ignorespaces V10 85\%+ confidence backtest статистик}}{24}{table.caption.184}%
+\contentsline {table}{\numberline {4.7}{\ignorespaces V10 Санал болгох тохиргоо}}{25}{table.caption.187}%
+\contentsline {table}{\numberline {4.8}{\ignorespaces Системийн гүйцэтгэлийн хэмжүүрүүд}}{25}{table.caption.190}%
+\contentsline {table}{\numberline {4.9}{\ignorespaces V10 vs V2 харьцуулалт}}{26}{table.caption.199}%
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {5.1}{\ignorespaces Итгэлцлийн түвшин бүрийн гүйцэтгэл}}{30}{table.caption.210}%
-\contentsline {table}{\numberline {5.2}{\ignorespaces Зорилтын биелэлт}}{31}{table.caption.218}%
-\contentsline {table}{\numberline {5.3}{\ignorespaces Hyperparameter тохиргоо}}{39}{table.caption.243}%
+\contentsline {table}{\numberline {5.1}{\ignorespaces V10 85\%+ confidence BUY сигналын гүйцэтгэл}}{29}{table.caption.213}%
+\contentsline {table}{\numberline {5.2}{\ignorespaces Зорилтын биелэлт}}{29}{table.caption.221}%
+\contentsline {table}{\numberline {5.3}{\ignorespaces Hyperparameter тохиргоо}}{35}{table.caption.244}%

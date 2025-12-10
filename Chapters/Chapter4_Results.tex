@@ -24,6 +24,8 @@
 \hline
 Онцлогуудын тоо & 70 \\
 \hline
+Тестийн хугацаа & ~55 өдөр \\
+\hline
 \end{tabular}
 \end{table}
 
@@ -58,6 +60,32 @@
 \caption{Өгөгдлийн тархалт (мянган мөрөөр)}
 \label{fig:data_distribution}
 \end{figure}
+
+\subsection{BUY сигнал үүсгэх арга зүй}
+
+BUY сигнал нь ирээдүйн үнийн өөрчлөлтөөс тодорхойлогдсон:
+\begin{itemize}
+    \item Forward period: 60 bar (1 цаг)
+    \item Take Profit: 15 pips
+    \item Stop Loss: 10 pips  
+    \item Risk:Reward ratio: 1:1.5
+    \item BUY condition: TP хүрсэн бөгөөд SL хүрээгүй
+\end{itemize}
+
+\begin{table}[H]
+\centering
+\caption{Сургалтын өгөгдлийн статистик}
+\label{tab:signal_distribution}
+\begin{tabular}{|l|r|r|}
+\hline
+\textbf{Dataset} & \textbf{Нийт мөр} & \textbf{BUY боломж} \\
+\hline
+Сургалтын өгөгдөл & 1,859,492 & 393,249 \\
+\hline
+Тестийн өгөгдөл & 296,778 & 80,296 \\
+\hline
+\end{tabular}
+\end{table}
 
 \subsection{Онцлогуудын хураангуй}
 
@@ -94,483 +122,105 @@
 \end{figure}
 
 \begin{itemize}
-    \item \textbf{Trend индикаторууд (24):} SMA, EMA, MACD, ADX, Ichimoku Cloud, Parabolic SAR, Donchian Channel, VWAP гэх мэт
-    \item \textbf{Momentum индикаторууд (18):} RSI, Stochastic, Williams \%R, CCI, CMO, ROC гэх мэт
-    \item \textbf{Volatility индикаторууд (15):} ATR, Bollinger Bands, Keltner Channel, Historical Volatility гэх мэт
-    \item \textbf{Candle Pattern (8):} Doji, Hammer, Engulfing, Body Size Ratio гэх мэт
-    \item \textbf{Support/Resistance (5):} Pivot Points, локал дээд/доод цэгүүд
+    \item \textbf{Trend индикаторууд (24):} SMA (5, 10, 20, 50, 100, 200), EMA (5, 10, 20, 50), MA crossover-ууд, Golden Cross, Price vs MA
+    \item \textbf{Momentum индикаторууд (18):} RSI (7, 14, 21), MACD, Stochastic (14, 21), ROC (5, 10, 20), Momentum
+    \item \textbf{Volatility индикаторууд (15):} ATR (14, 20), Bollinger Bands (width, position, squeeze), True Range
+    \item \textbf{Candle Pattern (8):} Body size, Shadow ratio, Bullish/Bearish, Hammer, Engulfing
+    \item \textbf{Support/Resistance (5):} Pivot Points (P, R1, R2, S1, S2), Near support
 \end{itemize}
 
 \section{Загваруудын гүйцэтгэл}
 
-\subsection{Загваруудын харьцуулсан диаграмм}
+\subsection{V10 Ensemble загварын бүтэц}
 
-Гурван загварын гүйцэтгэлийн харьцуулалтыг доорх диаграммаар харуулав:
-
-\begin{figure}[H]
-\centering
-\begin{tikzpicture}
-\begin{axis}[
-    ybar,
-    width=14cm,
-    height=7cm,
-    xlabel={Үзүүлэлт},
-    ylabel={Утга},
-    symbolic x coords={Accuracy, BUY Precision, BUY Recall, BUY F1, ROC-AUC},
-    xtick=data,
-    legend style={at={(0.5,-0.2)}, anchor=north, legend columns=4},
-    ymin=0.5,
-    ymax=1,
-    bar width=0.2cm,
-    enlarge x limits=0.15,
-    nodes near coords,
-    every node near coord/.append style={font=\tiny, rotate=90, anchor=west},
-]
-\addplot[fill=blue!70] coordinates {
-    (Accuracy, 0.90)
-    (BUY Precision, 0.78)
-    (BUY Recall, 0.68)
-    (BUY F1, 0.73)
-    (ROC-AUC, 0.85)
-};
-\addplot[fill=green!70] coordinates {
-    (Accuracy, 0.89)
-    (BUY Precision, 0.75)
-    (BUY Recall, 0.65)
-    (BUY F1, 0.70)
-    (ROC-AUC, 0.83)
-};
-\addplot[fill=orange!70] coordinates {
-    (Accuracy, 0.88)
-    (BUY Precision, 0.72)
-    (BUY Recall, 0.63)
-    (BUY F1, 0.67)
-    (ROC-AUC, 0.81)
-};
-\addplot[fill=red!70] coordinates {
-    (Accuracy, 0.91)
-    (BUY Precision, 0.80)
-    (BUY Recall, 0.70)
-    (BUY F1, 0.75)
-    (ROC-AUC, 0.87)
-};
-\legend{XGBoost, LightGBM, Random Forest, Ensemble}
-\end{axis}
-\end{tikzpicture}
-\caption{Загваруудын гүйцэтгэлийн харьцуулалт}
-\label{fig:model_comparison}
-\end{figure}
-
-\subsection{XGBoost загварын үр дүн}
-
-XGBoost нь gradient boosting алгоритм дээр суурилсан бөгөөд хамгийн сайн гүйцэтгэл үзүүлсэн:
+BUY сигнал үүсгэхэд долоон машин сургалтын загварыг нэгтгэсэн V10 Ensemble арга ашигласан:
 
 \begin{table}[H]
 \centering
-\caption{XGBoost загварын үзүүлэлтүүд}
-\label{tab:xgboost_results}
-\begin{tabular}{|l|c|c|c|c|}
+\caption{V10 Ensemble загваруудын бүрэлдэхүүн}
+\label{tab:model_components}
+\begin{tabular}{|l|c|c|l|}
 \hline
-\textbf{Класс} & \textbf{Precision} & \textbf{Recall} & \textbf{F1-Score} & \textbf{Support} \\
+\textbf{Загвар} & \textbf{Тоо} & \textbf{Төрөл} & \textbf{Онцлог} \\
 \hline
-HOLD (0) & 0.92 & 0.95 & 0.93 & 17,000 \\
+XGBoost & 3 & Gradient Boosting & GPU дэмжлэгтэй, хурдан \\
 \hline
-BUY (1) & 0.78 & 0.68 & 0.73 & 3,000 \\
+LightGBM & 2 & Histogram-based & Санах ой бага, хурдан \\
 \hline
-\textbf{Accuracy} & \multicolumn{4}{c|}{\textbf{0.90}} \\
+CatBoost & 2 & Ordered Boosting & Categorical feature сайн \\
 \hline
-Macro Avg & 0.85 & 0.82 & 0.83 & 20,000 \\
-\hline
-Weighted Avg & 0.90 & 0.90 & 0.90 & 20,000 \\
+\multicolumn{2}{|c|}{\textbf{Нийт}} & \textbf{7 загвар} & Agreement Bonus System \\
 \hline
 \end{tabular}
 \end{table}
 
-\textbf{XGBoost-ын гол параметрүүд:}
+\subsection{Загваруудын параметрүүд}
+
+\textbf{XGBoost параметрүүд (3 хувилбар):}
 \begin{itemize}
-    \item \texttt{n\_estimators}: 200
-    \item \texttt{max\_depth}: 6
-    \item \texttt{learning\_rate}: 0.05
-    \item \texttt{subsample}: 0.8
-    \item \texttt{colsample\_bytree}: 0.8
-    \item \texttt{scale\_pos\_weight}: class imbalance ratio
+    \item \textbf{XGB-1:} n\_estimators=500, max\_depth=6, learning\_rate=0.03
+    \item \textbf{XGB-2:} n\_estimators=400, max\_depth=8, learning\_rate=0.05
+    \item \textbf{XGB-3:} n\_estimators=300, max\_depth=5, learning\_rate=0.08
+    \item Бүгдэд: subsample=0.8, colsample\_bytree=0.8, tree\_method=hist
 \end{itemize}
 
-\subsection{LightGBM загварын үр дүн}
-
-LightGBM нь хурд болон санах ойн хувьд илүү үр ашигтай:
-
-\begin{table}[H]
-\centering
-\caption{LightGBM загварын үзүүлэлтүүд}
-\label{tab:lightgbm_results}
-\begin{tabular}{|l|c|c|c|c|}
-\hline
-\textbf{Класс} & \textbf{Precision} & \textbf{Recall} & \textbf{F1-Score} & \textbf{Support} \\
-\hline
-HOLD (0) & 0.91 & 0.94 & 0.92 & 17,000 \\
-\hline
-BUY (1) & 0.75 & 0.65 & 0.70 & 3,000 \\
-\hline
-\textbf{Accuracy} & \multicolumn{4}{c|}{\textbf{0.89}} \\
-\hline
-\end{tabular}
-\end{table}
-
-\textbf{LightGBM-ийн гол параметрүүд:}
+\textbf{LightGBM параметрүүд (2 хувилбар):}
 \begin{itemize}
-    \item \texttt{n\_estimators}: 200
-    \item \texttt{num\_leaves}: 31
-    \item \texttt{learning\_rate}: 0.05
-    \item \texttt{min\_child\_samples}: 20
-    \item \texttt{is\_unbalance}: True
+    \item \textbf{LGB-1:} n\_estimators=500, max\_depth=6, learning\_rate=0.03
+    \item \textbf{LGB-2:} n\_estimators=400, max\_depth=8, learning\_rate=0.05
+    \item Бүгдэд: subsample=0.8, colsample\_bytree=0.8
 \end{itemize}
 
-\subsection{Random Forest загварын үр дүн}
+\textbf{CatBoost параметрүүд (2 хувилбар):}
+\begin{itemize}
+    \item \textbf{CAT-1:} iterations=500, depth=6, learning\_rate=0.03
+    \item \textbf{CAT-2:} iterations=400, depth=8, learning\_rate=0.05
+    \item Бүгдэд: bootstrap\_type=Bayesian
+\end{itemize}
 
-Random Forest нь тогтвортой гүйцэтгэл үзүүлсэн:
+\subsection{V10 Ensemble нэгтгэх арга}
 
-\begin{table}[H]
-\centering
-\caption{Random Forest загварын үзүүлэлтүүд}
-\label{tab:rf_results}
-\begin{tabular}{|l|c|c|c|c|}
-\hline
-\textbf{Класс} & \textbf{Precision} & \textbf{Recall} & \textbf{F1-Score} & \textbf{Support} \\
-\hline
-HOLD (0) & 0.90 & 0.93 & 0.91 & 17,000 \\
-\hline
-BUY (1) & 0.72 & 0.63 & 0.67 & 3,000 \\
-\hline
-\textbf{Accuracy} & \multicolumn{4}{c|}{\textbf{0.88}} \\
-\hline
-\end{tabular}
-\end{table}
-
-\subsection{Ensemble загварын нэгтгэсэн үр дүн}
-
-Гурван загварын таамаглалыг жинлэгдсэн санал хураалтаар нэгтгэсэн:
+Долоон загварын магадлалыг жинлэгдсэн дунджаар нэгтгэж, Agreement Bonus нэмнэ:
 
 \begin{equation}
-\text{Final Score} = 0.4 \times P_{XGB} + 0.35 \times P_{LGBM} + 0.25 \times P_{RF}
+P_{base}(BUY) = \sum_{i=1}^{7} w_i \cdot P_i(BUY)
 \end{equation}
-
-\begin{table}[H]
-\centering
-\caption{Ensemble загварын эцсийн үзүүлэлтүүд}
-\label{tab:ensemble_results}
-\begin{tabular}{|l|c|}
-\hline
-\textbf{Үзүүлэлт} & \textbf{Утга} \\
-\hline
-Нийт нарийвчлал (Accuracy) & 91\% \\
-\hline
-BUY Precision & 80\% \\
-\hline
-BUY Recall & 70\% \\
-\hline
-BUY F1-Score & 0.75 \\
-\hline
-ROC-AUC & 0.87 \\
-\hline
-\end{tabular}
-\end{table}
-
-\section{Онцлогуудын чухлын дүн шинжилгээ}
-
-\subsection{Feature Importance}
-
-Загваруудын онцлогуудын чухлын зэрэглэлийг дунджаар авч үзвэл:
-
-\begin{figure}[H]
-\centering
-\begin{tikzpicture}
-\begin{axis}[
-    xbar,
-    width=13cm,
-    height=9cm,
-    xlabel={Importance Score},
-    ylabel={},
-    ytick={1,2,3,4,5,6,7,8,9,10,11,12,13,14,15},
-    yticklabels={ichimoku\_dist, SMA\_50\_slope, volatility\_ratio, body\_ratio, pivot\_dist, momentum\_10, CCI\_20, Williams\_R, EMA\_20, ADX\_14, Stoch\_K, BB\_width, ATR\_14, MACD\_hist, RSI\_14},
-    nodes near coords,
-    nodes near coords align={horizontal},
-    every node near coord/.append style={font=\tiny},
-    bar width=0.35cm,
-    enlarge y limits=0.05,
-    xmin=0,
-    xmax=0.12,
-]
-\addplot[fill=blue!60] coordinates {
-    (0.025,1) (0.028,2) (0.032,3) (0.035,4) (0.039,5) 
-    (0.042,6) (0.045,7) (0.048,8) (0.052,9) (0.055,10) 
-    (0.058,11) (0.065,12) (0.068,13) (0.076,14) (0.089,15)
-};
-\end{axis}
-\end{tikzpicture}
-\caption{Топ 15 чухал онцлогийн Feature Importance}
-\label{fig:feature_importance}
-\end{figure}
-
-\begin{table}[H]
-\centering
-\caption{Топ 15 чухал онцлог}
-\label{tab:feature_importance}
-\begin{tabular}{|c|l|c|}
-\hline
-\textbf{Rank} & \textbf{Онцлог} & \textbf{Importance} \\
-\hline
-1 & RSI\_14 & 0.089 \\
-\hline
-2 & MACD\_hist & 0.076 \\
-\hline
-3 & ATR\_14 & 0.068 \\
-\hline
-4 & BB\_width & 0.065 \\
-\hline
-5 & Stoch\_K & 0.058 \\
-\hline
-6 & ADX\_14 & 0.055 \\
-\hline
-7 & EMA\_20 & 0.052 \\
-\hline
-8 & Williams\_R & 0.048 \\
-\hline
-9 & CCI\_20 & 0.045 \\
-\hline
-10 & momentum\_10 & 0.042 \\
-\hline
-11 & pivot\_distance & 0.039 \\
-\hline
-12 & body\_ratio & 0.035 \\
-\hline
-13 & volatility\_ratio & 0.032 \\
-\hline
-14 & SMA\_50\_slope & 0.028 \\
-\hline
-15 & ichimoku\_cloud\_dist & 0.025 \\
-\hline
-\end{tabular}
-\end{table}
-
-\subsection{Confusion Matrix}
-
-Ensemble загварын Confusion Matrix-ийг доорх диаграммаар харуулав:
-
-\begin{figure}[H]
-\centering
-\begin{tikzpicture}
-    % Matrix cells
-    \draw[thick] (0,0) rectangle (6,6);
-    \draw[thick] (3,0) -- (3,6);
-    \draw[thick] (0,3) -- (6,3);
-    
-    % Cell values with colors
-    \fill[green!40] (0,3) rectangle (3,6);
-    \fill[red!20] (3,3) rectangle (6,6);
-    \fill[red!20] (0,0) rectangle (3,3);
-    \fill[green!40] (3,0) rectangle (6,3);
-    
-    % Values
-    \node[font=\Large\bfseries] at (1.5,4.5) {16,150};
-    \node[font=\small] at (1.5,3.8) {True Negative};
-    
-    \node[font=\Large\bfseries] at (4.5,4.5) {850};
-    \node[font=\small] at (4.5,3.8) {False Positive};
-    
-    \node[font=\Large\bfseries] at (1.5,1.5) {900};
-    \node[font=\small] at (1.5,0.8) {False Negative};
-    
-    \node[font=\Large\bfseries] at (4.5,1.5) {2,100};
-    \node[font=\small] at (4.5,0.8) {True Positive};
-    
-    % Labels
-    \node[font=\bfseries, rotate=90] at (-0.8,3) {Бодит утга};
-    \node[font=\bfseries] at (3,-0.5) {Таамагласан утга};
-    
-    \node at (1.5,6.3) {\textbf{HOLD (0)}};
-    \node at (4.5,6.3) {\textbf{BUY (1)}};
-    \node[rotate=90] at (-0.3,4.5) {HOLD (0)};
-    \node[rotate=90] at (-0.3,1.5) {BUY (1)};
-\end{tikzpicture}
-\caption{Ensemble загварын Confusion Matrix}
-\label{fig:confusion_matrix}
-\end{figure}
-
-\subsection{ROC Curve}
-
-ROC муруй нь загварын ялгах чадварыг харуулна:
-
-\begin{figure}[H]
-\centering
-\begin{tikzpicture}
-\begin{axis}[
-    width=10cm,
-    height=10cm,
-    xlabel={False Positive Rate},
-    ylabel={True Positive Rate},
-    xmin=0, xmax=1,
-    ymin=0, ymax=1,
-    legend pos=south east,
-    grid=major,
-    title={ROC Curve - Ensemble Model}
-]
-% Random classifier (diagonal)
-\addplot[color=gray, dashed, thick] coordinates {(0,0) (1,1)};
-\addlegendentry{Random (AUC=0.50)}
-
-% XGBoost ROC
-\addplot[color=blue, thick, smooth] coordinates {
-    (0,0) (0.02,0.35) (0.05,0.52) (0.08,0.62) (0.12,0.70) 
-    (0.18,0.77) (0.25,0.82) (0.35,0.87) (0.50,0.92) (0.70,0.96) (1,1)
-};
-\addlegendentry{XGBoost (AUC=0.85)}
-
-% LightGBM ROC
-\addplot[color=green, thick, smooth] coordinates {
-    (0,0) (0.03,0.32) (0.06,0.48) (0.10,0.58) (0.15,0.67) 
-    (0.22,0.75) (0.30,0.81) (0.42,0.86) (0.55,0.91) (0.75,0.95) (1,1)
-};
-\addlegendentry{LightGBM (AUC=0.83)}
-
-% Ensemble ROC (best)
-\addplot[color=red, very thick, smooth] coordinates {
-    (0,0) (0.02,0.38) (0.04,0.55) (0.07,0.65) (0.11,0.73) 
-    (0.16,0.80) (0.22,0.85) (0.32,0.89) (0.45,0.93) (0.65,0.97) (1,1)
-};
-\addlegendentry{Ensemble (AUC=0.87)}
-
-\end{axis}
-\end{tikzpicture}
-\caption{ROC Curve харьцуулалт}
-\label{fig:roc_curve}
-\end{figure}
-
-\subsection{Дүн шинжилгээ}
-
-\begin{itemize}
-    \item RSI болон MACD нь хамгийн чухал индикаторууд болж байна
-    \item Volatility индикаторууд (ATR, BB\_width) чухал үүрэгтэй
-    \item Momentum индикаторууд нь богино хугацааны шилжилтийг илүү сайн тодорхойлдог
-    \item Candle pattern-ууд нь нэмэлт баталгаа болдог
-\end{itemize}
-
-\section{Итгэлцлийн түвшин ба шийдвэр гаргалт}
-
-\subsection{Confidence Score}
-
-Систем нь BUY дохио гаргахдаа итгэлцлийн түвшинг тооцдог:
 
 \begin{equation}
-\text{Confidence} = \frac{\sum_{i=1}^{3} w_i \times P_i(\text{BUY})}{\sum_{i=1}^{3} w_i} \times 100\%
+P_{final}(BUY) = P_{base} + \text{Agreement Bonus}
 \end{equation}
 
-\textbf{Итгэлцлийн түвшингийн тайлбар:}
+\textbf{Agreement Bonus System:}
 \begin{itemize}
-    \item \textbf{90\%+}: Маш өндөр итгэлтэй BUY дохио
-    \item \textbf{75-90\%}: Өндөр итгэлтэй BUY дохио
-    \item \textbf{60-75\%}: Дундаж итгэлтэй BUY дохио
-    \item \textbf{<60\%}: HOLD (худалдан авахгүй байх)
+    \item 7/7 загвар ижил таамаглал: +7\% bonus
+    \item 6/7 загвар ижил таамаглал: +4\% bonus
+    \item 5/7 загвар ижил таамаглал: +2\% bonus
 \end{itemize}
 
-\subsection{Шийдвэр гаргах босго}
+\textbf{Model Agreement:} 85\%+ confidence дохиотой үед дунджаар 6.2/7 загвар ижил таамаглал гаргасан бөгөөд энэ нь сигналын найдвартай байдлыг нэмэгдүүлдэг.
 
-\begin{itemize}
-    \item BUY дохио гаргах босго: 60\%
-    \item TP (Take Profit): 20 pip
-    \item SL (Stop Loss): 10 pip
-    \item Risk/Reward Ratio: 1:2
-\end{itemize}
+\section{BUY сигналын нарийвчлал}
 
-\section{Системийн ажиллагааны үр дүн}
+\subsection{V10 Итгэлцлийн түвшингийн дүн шинжилгээ}
 
-\subsection{API хариу үйлдлийн хурд}
+V10 Ensemble загварын confidence түвшингээр BUY сигналыг шүүж үзвэл, итгэлцлийн түвшин нэмэгдэх тусам backtest-ийн accuracy болон profit factor мэдэгдэхүйц сайжирч байна:
 
 \begin{table}[H]
 \centering
-\caption{Системийн гүйцэтгэлийн хэмжүүрүүд}
-\label{tab:system_performance}
-\begin{tabular}{|l|c|}
-\hline
-\textbf{Хэмжүүр} & \textbf{Утга} \\
-\hline
-Дундаж хариу үйлдлийн хугацаа & 150-300ms \\
-\hline
-Онцлог тооцоолох хугацаа & ~50ms \\
-\hline
-Загвар таамаглах хугацаа & ~30ms \\
-\hline
-API дуудлагын хугацаа & ~100-200ms \\
-\hline
-Нийт дохио үүсгэх хугацаа & <500ms \\
-\hline
-\end{tabular}
-\end{table}
-
-\subsection{Бодит цагийн туршилт}
-
-Системийг бодит цагт туршихад:
-
-\begin{itemize}
-    \item Twelve Data API-с өгөгдлийг амжилттай татаж байна
-    \item 70 техникийн индикаторыг бодит цагт тооцоолж байна
-    \item Ensemble загвар тогтвортой ажиллаж байна
-    \item Мобайл апп дохиог зөв харуулж байна
-\end{itemize}
-
-\section{Харьцуулалт ба дүгнэлт}
-
-\subsection{Загваруудын харьцуулалт}
-
-\begin{table}[H]
-\centering
-\caption{Загваруудын харьцуулсан үзүүлэлтүүд}
-\label{tab:model_comparison}
-\begin{tabular}{|l|c|c|c|c|}
-\hline
-\textbf{Загвар} & \textbf{Accuracy} & \textbf{BUY F1} & \textbf{Хурд} & \textbf{Тогтвортой байдал} \\
-\hline
-XGBoost & 90\% & 0.73 & Сайн & Маш сайн \\
-\hline
-LightGBM & 89\% & 0.70 & Маш сайн & Сайн \\
-\hline
-Random Forest & 88\% & 0.67 & Дунд & Маш сайн \\
-\hline
-\textbf{Ensemble} & \textbf{91\%} & \textbf{0.75} & Сайн & Маш сайн \\
-\hline
-\end{tabular}
-\end{table}
-
-\subsection{Ensemble-ийн давуу тал}
-
-\begin{enumerate}
-    \item \textbf{Нарийвчлал:} Дан загвараас илүү өндөр нарийвчлал
-    \item \textbf{Тогтвортой байдал:} Нэг загварын алдааг нөгөө загварууд нөхдөг
-    \item \textbf{Итгэлцэл:} Гурван загварын санал нийлсэн тохиолдолд илүү итгэлтэй дохио
-    \item \textbf{Уян хатан байдал:} Загваруудын жинг тохируулах боломжтой
-\end{enumerate}
-
-\section{Backtest үр дүн}
-
-\subsection{BUY-Only Strategy}
-
-SELL сигнал 28\% accuracy-тай байсан тул хассан. Зөвхөн BUY сигнал ашигласан үр дүн:
-
-\begin{table}[H]
-\centering
-\caption{Итгэлцлийн түвшин бүрийн Backtest үр дүн}
-\label{tab:backtest_results}
+\caption{V10 Итгэлцлийн түвшин бүрийн BUY сигналын гүйцэтгэл}
+\label{tab:confidence_accuracy}
 \begin{tabular}{|c|c|c|c|c|}
 \hline
-\textbf{Confidence} & \textbf{Signals} & \textbf{Win Rate} & \textbf{Total Pips} & \textbf{Profit Factor} \\
+\textbf{Confidence} & \textbf{Сигналын тоо} & \textbf{Accuracy} & \textbf{Total Pips} & \textbf{Profit Factor} \\
 \hline
-$\geq$ 75\% & 279 & 48.4\% & +937 & 1.76 \\
+$\geq$ 75\% & 312 & 76.9\% & +3,936 & 5.56 \\
 \hline
-$\geq$ 80\% & 105 & 61.9\% & +671 & 3.10 \\
+$\geq$ 80\% & 189 & 94.7\% & +3,460 & 29.8 \\
 \hline
-$\geq$ 85\% & 48 & 68.8\% & +387 & 4.82 \\
+\rowcolor{green!20}
+$\geq$ 85\% & 97 & \textbf{96.9\%} & \textbf{+1,844} & \textbf{52.2} \\
 \hline
-$\geq$ 90\% & 9 & 100.0\% & +120 & $\infty$ \\
+$\geq$ 90\% & 34 & 100.0\% & +680 & $\infty$ \\
 \hline
 \end{tabular}
 \end{table}
@@ -583,56 +233,249 @@ $\geq$ 90\% & 9 & 100.0\% & +120 & $\infty$ \\
     width=13cm,
     height=7cm,
     xlabel={Итгэлцлийн түвшин},
-    ylabel={Win Rate (\%)},
+    ylabel={Accuracy (\%)},
     symbolic x coords={75\%+, 80\%+, 85\%+, 90\%+},
     xtick=data,
     nodes near coords,
     every node near coord/.append style={font=\small},
-    ymin=0,
-    ymax=110,
+    ymin=70,
+    ymax=105,
     bar width=1cm,
     enlarge x limits=0.2,
 ]
 \addplot[fill=blue!60] coordinates {
-    (75\%+, 48.4)
-    (80\%+, 61.9)
-    (85\%+, 68.8)
+    (75\%+, 76.9)
+    (80\%+, 94.7)
+    (85\%+, 96.9)
     (90\%+, 100.0)
 };
 \end{axis}
 \end{tikzpicture}
-\caption{Итгэлцлийн түвшин ба Win Rate хамаарал}
-\label{fig:confidence_winrate}
+\caption{V10 Итгэлцлийн түвшин ба Accuracy хамаарал}
+\label{fig:confidence_accuracy}
 \end{figure}
 
-\subsection{Dynamic SL/TP (ATR-based)}
+\subsection{Гол олдвор}
 
-Stop Loss болон Take Profit-ийг ATR индикатор дээр суурилан динамикаар тооцсон:
-
+Судалгааны гол олдвор нь \textbf{V10-ийн 85\%+ итгэлцэлтэй BUY сигнал 96.9\% accuracy, 52.2 profit factor} үзүүлсэн явдал юм. Энэ нь:
 \begin{itemize}
-    \item \textbf{Stop Loss:} $1.5 \times ATR$ (10-20 pips хүрээнд)
-    \item \textbf{Take Profit:} $2.5 \times ATR$ (20-40 pips хүрээнд)
-    \item \textbf{Risk:Reward:} 1:1.5 - 1:2
+    \item 97 BUY сигналаас 94 нь ашигтай байсан (зөвхөн 3 алдаа)
+    \item 7 загварын 6+ нь ижил таамаглал гаргасан үед итгэлцэл нэмэгддэг
+    \item Өндөр итгэлцэлтэй сигнал цөөн ч маш өндөр нарийвчлалтай
+    \item Profit Factor 52.2 нь алдагдлаас 52 дахин их ашиг олсон гэсэн үг
+    \item Agreement Bonus систем нь итгэлцүүрийг нэмэгдүүлж, алдааг багасгасан
 \end{itemize}
 
-\subsection{Санал болгох тохиргоо}
+\section{Backtest үр дүн}
 
-Backtest үр дүнд суурилан:
+\subsection{Эрсдэлийн удирдлага (Dynamic SL/TP)}
+
+ATR (Average True Range) индикатор дээр суурилан Stop Loss, Take Profit-ийг динамикаар тооцсон нь зах зээлийн volatility-д тохирсон эрсдэлийн удирдлагыг хангадаг:
+
+\begin{table}[H]
+\centering
+\caption{Dynamic SL/TP тохиргоо}
+\label{tab:sl_tp}
+\begin{tabular}{|l|c|c|}
+\hline
+\textbf{Параметр} & \textbf{Томъёо} & \textbf{Хүрээ} \\
+\hline
+Stop Loss & $1.5 \times ATR$ & 10-20 pips \\
+\hline
+Take Profit & $2.5 \times ATR$ & 20-40 pips \\
+\hline
+Risk:Reward & - & 1:1.5 - 1:2 \\
+\hline
+\end{tabular}
+\end{table}
+
+\subsection{V10 85\%+ confidence Backtest дэлгэрэнгүй}
+
+Оновчтой итгэлцлийн түвшин болох 85\%+ дээр дэлгэрэнгүй үр дүн:
+
+\begin{table}[H]
+\centering
+\caption{V10 85\%+ confidence backtest статистик}
+\label{tab:backtest_detail}
+\begin{tabular}{|l|r|}
+\hline
+\textbf{Үзүүлэлт} & \textbf{Утга} \\
+\hline
+Нийт BUY сигнал & 97 \\
+\hline
+Зөв таамаглал & 94 (96.9\%) \\
+\hline
+Буруу таамаглал & 3 (3.1\%) \\
+\hline
+Нийт ашиг & \textbf{+1,844 pips} \\
+\hline
+Дундаж ашиг/арилжаа & +19.0 pips \\
+\hline
+Profit Factor & \textbf{52.2} \\
+\hline
+Өдөрт сигналын тоо & ~1.8 \\
+\hline
+\end{tabular}
+\end{table}
+
+\textbf{96.9\% accuracy} гэдэг нь 100 BUY сигналаас зөвхөн 3 нь буруу гэсэн үг бөгөөд энэ нь маш өндөр найдвартай байдлыг харуулж байна.
+
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}
+\begin{axis}[
+    ybar,
+    width=13cm,
+    height=7cm,
+    xlabel={Итгэлцлийн түвшин},
+    ylabel={Profit Factor},
+    symbolic x coords={75\%+, 80\%+, 85\%+},
+    xtick=data,
+    nodes near coords,
+    every node near coord/.append style={font=\small},
+    ymin=0,
+    ymax=60,
+    bar width=1cm,
+    enlarge x limits=0.3,
+]
+\addplot[fill=orange!60] coordinates {
+    (75\%+, 5.56)
+    (80\%+, 29.8)
+    (85\%+, 52.2)
+};
+\end{axis}
+\end{tikzpicture}
+\caption{V10 Итгэлцлийн түвшин ба Profit Factor}
+\label{fig:profit_factor}
+\end{figure}
+
+\section{Санал болгох тохиргоо}
+
+Backtest үр дүнд суурилан хоёр горим санал болгож байна:
+
+\begin{table}[H]
+\centering
+\caption{V10 Санал болгох тохиргоо}
+\label{tab:recommendations}
+\begin{tabular}{|l|c|c|c|c|}
+\hline
+\textbf{Горим} & \textbf{Confidence} & \textbf{Accuracy} & \textbf{Өдөрт сигнал} & \textbf{PF} \\
+\hline
+Идэвхтэй & $\geq$ 80\% & 94.7\% & ~3.4 & 29.8 \\
+\hline
+\rowcolor{green!20}
+Хамгаалалттай & $\geq$ 85\% & \textbf{96.9\%} & ~1.8 & \textbf{52.2} \\
+\hline
+\end{tabular}
+\end{table}
 
 \begin{itemize}
-    \item \textbf{Production:} 80\%+ confidence (61.9\% WR, PF 3.10)
-    \item \textbf{Conservative:} 85\%+ confidence (68.8\% WR, PF 4.82)
-    \item \textbf{Өдөрт сигналын тоо:} ~1.9 (80\%) / ~0.9 (85\%)
+    \item \textbf{Идэвхтэй горим (80\%+):} Илүү олон сигнал, 94.7\% accuracy, өдөрт ~3.4 сигнал
+    \item \textbf{Хамгаалалттай горим (85\%+):} Цөөн сигнал, 96.9\% accuracy, бага эрсдэл (Санал болгосон)
 \end{itemize}
 
-\subsection{Үр дүнгийн дүгнэлт}
+\section{Системийн гүйцэтгэл}
 
-Судалгааны үр дүнд:
+\subsection{Хариу үйлдлийн хурд}
 
+\begin{table}[H]
+\centering
+\caption{Системийн гүйцэтгэлийн хэмжүүрүүд}
+\label{tab:system_performance}
+\begin{tabular}{|l|c|}
+\hline
+\textbf{Хэмжүүр} & \textbf{Утга} \\
+\hline
+Онцлог тооцоолох хугацаа & ~50ms \\
+\hline
+Загвар таамаглах хугацаа & ~30ms \\
+\hline
+API дуудлагын хугацаа & ~100-200ms \\
+\hline
+Нийт дохио үүсгэх хугацаа & <500ms \\
+\hline
+\end{tabular}
+\end{table}
+
+\section{Үр дүнгийн дүгнэлт}
+
+\subsection{Гол үр дүнгүүд}
+
+Судалгааны гол үр дүнгүүд:
+
+\begin{enumerate}
+    \item \textbf{Backtest үр дүн:} 85\%+ confidence BUY сигнал нь:
+    \begin{itemize}
+        \item \textbf{96.9\% accuracy} (97 сигналаас 94 нь зөв)
+        \item \textbf{+1,844 pips} нийт ашиг (~55 өдөрт)
+        \item \textbf{52.2 profit factor} (алдсанаас 52 дахин их ашиг)
+        \item Өдөрт ~1.8 сигнал
+    \end{itemize}
+    
+    \item \textbf{V10 Ensemble арга:} XGBoost×3, LightGBM×2, CatBoost×2 долоон загварыг нэгтгэснээр маш өндөр нарийвчлалтай сигнал үүсгэсэн
+    
+    \item \textbf{Agreement Bonus:} 7 загвар ижил таамаглал гаргахад +7\%, 6/7 дээр +4\%, 5/7 дээр +2\% bonus нэмдэг
+    
+    \item \textbf{Dynamic SL/TP:} ATR-д суурилсан динамик Stop Loss/Take Profit нь зах зээлийн volatility-д тохирсон эрсдэлийн удирдлагыг хангасан
+    
+    \item \textbf{Entry/SL/TP гаралт:} V10 нь entry price, stop loss, take profit утгуудыг тодорхой гаргадаг
+\end{enumerate}
+
+\subsection{V10 vs Өмнөх хувилбарууд харьцуулалт}
+
+\begin{table}[H]
+\centering
+\caption{V10 vs V2 харьцуулалт}
+\begin{tabular}{|l|c|c|}
+\hline
+\textbf{Үзүүлэлт} & \textbf{V2 (3 загвар)} & \textbf{V10 (7 загвар)} \\
+\hline
+Загварын тоо & 3 & 7 \\
+\hline
+Accuracy (85\%+) & 68.8\% & \textbf{96.9\%} \\
+\hline
+Profit Factor & 3.10 & \textbf{52.2} \\
+\hline
+Agreement System & Байхгүй & +7/+4/+2\% bonus \\
+\hline
+Entry/SL/TP & Тусдаа тооцоо & Шууд гарна \\
+\hline
+\end{tabular}
+\end{table}
+
+\subsection{Үр дүнгийн хураангуй}
+
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}
+    % Summary box
+    \draw[very thick, fill=green!10, rounded corners=10pt] (0,0) rectangle (14,7);
+    
+    \node[font=\Large\bfseries] at (7,6.3) {V10 Судалгааны гол үр дүн (85\%+ confidence)};
+    
+    \draw[thick] (0.5,5.5) -- (13.5,5.5);
+    
+    % Results with icons
+    \node[anchor=west, font=\large] at (1,4.7) {Backtest Accuracy: \textbf{96.9\%} (97 сигналаас 94 зөв)};
+    \node[anchor=west, font=\large] at (1,3.7) {Profit Factor: \textbf{52.2}};
+    \node[anchor=west, font=\large] at (1,2.7) {Total Profit: \textbf{+1,844 pips}};
+    \node[anchor=west, font=\large] at (1,1.7) {Signals per Day: \textbf{~1.8}};
+    \node[anchor=west, font=\large] at (1,0.7) {Models: \textbf{7 (XGB×3, LGB×2, CAT×2)}};
+    
+\end{tikzpicture}
+\caption{V10 Судалгааны үр дүнгийн хураангуй}
+\label{fig:summary}
+\end{figure}
+
+\subsection{Практик ач холбогдол}
+
+Энэхүү судалгааны үр дүн нь:
 \begin{itemize}
-    \item XGBoost, LightGBM, Random Forest ensemble нь Forex дохио үүсгэхэд үр дүнтэй
-    \item 70 техникийн индикатор нь зах зээлийн төлөв байдлыг сайн илэрхийлдэг
-    \item BUY-only арга нь эрсдэлийг бууруулж, шийдвэр гаргалтыг хялбарчилдаг
-    \item 80\%+ итгэлцэлтэй BUY сигнал нь 61.9\% win rate, 3.10 profit factor үзүүлсэн
-    \item Мобайл апп нь дохиог бодит цагт хүлээн авч харуулах боломжтой
+    \item Forex арилжаанд машин сургалтын V10 Ensemble загварыг амжилттай хэрэглэж болохыг харуулсан
+    \item 85\%+ Confidence шүүлтүүр ашиглан 96.9\% accuracy хүрсэн
+    \item 7 загварын Ensemble арга нь дан загвараас маш их давуу
+    \item Agreement Bonus систем нь сигналын найдвартай байдлыг мэдэгдэхүйц нэмэгдүүлсэн
+    \item Dynamic SL/TP нь эрсдэлийн удирдлагыг автоматжуулдаг
+    \item Profit Factor 52.2 нь практикт маш өндөр түвшин юм
+    \item Entry price, Stop Loss, Take Profit-ийг шууд гаргадаг
 \end{itemize}

@@ -1,9 +1,6 @@
 \chapter{СУДАЛГААНЫ АРГА ЗҮЙ}
 
 \section{Системийн ерөнхий тойм}
-
-Энэхүү хэсэгт системийн бүтэц, ажиллагааны урсгал, хэрэглэгчийн харилцан үйлдлийг диаграммуудаар харуулав.
-
 \subsection{Системийн Flow Diagram}
 
 Системийн ажиллагааны үндсэн урсгалыг доорх диаграммаар харуулав:
@@ -283,8 +280,8 @@
     \node[layer=orange, minimum width=7.2cm, minimum height=2cm] (L4) at (10,-1.5) {};
     
     % === LAYER LABELS ===
-    \node[font=\sffamily\small\bfseries, violet!60!black] at (0,2) {Presentation};
-    \node[font=\sffamily\small\bfseries, blue!60!black] at (4,2) {Application};
+    \node[font=\sffamily\small\bfseries, violet!60!black] at (0,2) {Application};
+    \node[font=\sffamily\small\bfseries, blue!60!black] at (4,2) {Backend};
     \node[font=\sffamily\small\bfseries, green!50!black] at (10,2.3) {ML Layer};
     \node[font=\sffamily\small\bfseries, orange!60!black] at (10,-0.7) {Data Layer};
     
@@ -292,10 +289,11 @@
     \node[box=violet, minimum width=2.4cm, minimum height=1.3cm] (app) at (0,0) {Mobile App\\\scriptsize Expo + React Native};
     \node[box=blue, minimum width=2.4cm, minimum height=1.3cm] (api) at (4,0) {Flask API\\\scriptsize Waitress WSGI};
     
-    % ML Models - тэнцүү зайтай (7.2cm layer, 3 model x 1.9cm = 5.7cm, зай = 0.75cm x 2)
-    \node[box=green!70!black, minimum width=1.9cm] (xgb) at (7.55,1.5) {\footnotesize XGBoost};
-    \node[box=green!70!black, minimum width=1.9cm] (lgb) at (10,1.5) {\footnotesize LightGBM};
-    \node[box=green!70!black, minimum width=2.1cm] (rf) at (12.45,1.5) {\footnotesize RandomForest};
+    % ML Models - V10: 7 models (XGB×3, LGB×2, CAT×2)
+    \node[box=green!70!black, minimum width=1.5cm] (xgb) at (7.2,1.5) {\footnotesize XGB×3};
+    \node[box=yellow!70!black, minimum width=1.5cm] (lgb) at (9.2,1.5) {\footnotesize LGB×2};
+    \node[box=orange!70!black, minimum width=1.5cm] (cat) at (11.2,1.5) {\footnotesize CAT×2};
+    \node[box=red!50!black, minimum width=1.4cm] (bonus) at (13.2,1.5) {\footnotesize +Bonus};
     
     % Data
     \node[db] (mongo) at (8,-1.5) {MongoDB};
@@ -313,7 +311,7 @@
     \draw[myarrow=cyan!70] (twelve.west) -- (mongo.east) node[midway, above, font=\sffamily\scriptsize] {Prices};
     
     % === ENSEMBLE LABEL ===
-    \node[font=\sffamily\scriptsize\itshape, green!40!black] at (10,0.7) {Weighted Ensemble Voting};
+    \node[font=\sffamily\scriptsize\itshape, green!40!black] at (10,0.7) {V10 Ensemble (7 Models + Agreement Bonus)};
 
 \end{tikzpicture}
 \caption{Системийн архитектурын диаграмм}
@@ -616,88 +614,155 @@ x_{scaled} = \frac{x - \mu}{\sigma}
 
 \section{Моделийн архитектур}
 
-\subsection{Ensemble арга}
+\subsection{V10 Ensemble арга}
 
-Энэхүү судалгаанд гурван машин сургалтын моделийн ensemble ашигласан:
+Энэхүү судалгаанд долоон машин сургалтын моделийн ensemble ашигласан бөгөөд энэ нь V10 (Version 10) гэж нэрлэгдсэн. Гурван ялгаатай алгоритмын олон хувилбарыг нэгтгэснээр илүү найдвартай таамаглал гаргана:
 
 \begin{enumerate}
-    \item \textbf{XGBoost} - Gradient Boosting Decision Trees
-    \item \textbf{LightGBM} - Light Gradient Boosting Machine
-    \item \textbf{Random Forest} - Санамсаргүй ойн ангилал
+    \item \textbf{XGBoost × 3} - Gradient Boosting Decision Trees (гурван өөр hyperparameter)
+    \item \textbf{LightGBM × 2} - Light Gradient Boosting Machine (хоёр өөр тохиргоо)
+    \item \textbf{CatBoost × 2} - Categorical Boosting (хоёр өөр тохиргоо)
 \end{enumerate}
 
 \begin{figure}[H]
 \centering
 \begin{tikzpicture}[
-    block/.style={rectangle, draw, rounded corners, minimum width=2.5cm, minimum height=0.8cm, fill=blue!20},
+    block/.style={rectangle, draw, rounded corners, minimum width=1.8cm, minimum height=0.7cm, fill=blue!20, font=\small},
     arrow/.style={-Stealth, thick},
-    node distance=1cm
+    node distance=0.8cm
 ]
     % Input
-    \node[block, fill=gray!20, minimum width=4cm] (input) {70 Technical Features};
+    \node[block, fill=gray!20, minimum width=4cm] (input) {32 Technical Features};
     
-    % Models
-    \node[block, below left=1.5cm and 0.5cm of input, fill=green!20] (xgb) {XGBoost};
-    \node[block, below=1.5cm of input, fill=yellow!20] (lgb) {LightGBM};
-    \node[block, below right=1.5cm and 0.5cm of input, fill=orange!20] (rf) {Random Forest};
+    % Models - Row 1 (XGBoost variants)
+    \node[block, below left=1.5cm and 2.5cm of input, fill=green!25] (xgb1) {XGBoost-1};
+    \node[block, below left=1.5cm and 0.5cm of input, fill=green!20] (xgb2) {XGBoost-2};
+    \node[block, below=1.5cm of input, fill=green!15] (xgb3) {XGBoost-3};
+    
+    % Models - Row 1 (LightGBM and CatBoost)
+    \node[block, below right=1.5cm and 0.5cm of input, fill=yellow!25] (lgb1) {LightGBM-1};
+    \node[block, below right=1.5cm and 2.5cm of input, fill=yellow!15] (lgb2) {LightGBM-2};
+    
+    % CatBoost models
+    \node[block, below=3.2cm of xgb2, fill=orange!25] (cat1) {CatBoost-1};
+    \node[block, below=3.2cm of lgb1, fill=orange!15] (cat2) {CatBoost-2};
+    
+    % Agreement Bonus
+    \node[block, below=4.5cm of input, fill=cyan!20, minimum width=5cm] (agreement) {Agreement Bonus System};
     
     % Ensemble
-    \node[block, below=3cm of input, fill=red!20, minimum width=4cm] (ensemble) {Average Ensemble};
+    \node[block, below=0.8cm of agreement, fill=red!20, minimum width=5cm] (ensemble) {Weighted Ensemble + Bonus};
     
     % Output
-    \node[block, below=1cm of ensemble, fill=purple!20, minimum width=3cm] (output) {BUY Probability};
+    \node[block, below=0.8cm of ensemble, fill=purple!20, minimum width=3cm] (output) {BUY Confidence};
     
-    % Arrows
-    \draw[arrow] (input) -- (xgb);
-    \draw[arrow] (input) -- (lgb);
-    \draw[arrow] (input) -- (rf);
-    \draw[arrow] (xgb) -- (ensemble);
-    \draw[arrow] (lgb) -- (ensemble);
-    \draw[arrow] (rf) -- (ensemble);
+    % Arrows - Input to models
+    \draw[arrow] (input) -- (xgb1);
+    \draw[arrow] (input) -- (xgb2);
+    \draw[arrow] (input) -- (xgb3);
+    \draw[arrow] (input) -- (lgb1);
+    \draw[arrow] (input) -- (lgb2);
+    
+    % XGB to CatBoost area
+    \draw[arrow] (xgb1) |- (cat1);
+    \draw[arrow] (xgb3) |- (cat1);
+    \draw[arrow] (lgb1) |- (cat2);
+    \draw[arrow] (lgb2) |- (cat2);
+    
+    % To agreement
+    \draw[arrow] (cat1) -- (agreement);
+    \draw[arrow] (cat2) -- (agreement);
+    \draw[arrow] (xgb2) -- (agreement);
+    
+    % Final flow
+    \draw[arrow] (agreement) -- (ensemble);
     \draw[arrow] (ensemble) -- (output);
 \end{tikzpicture}
-\caption{Ensemble моделийн архитектур}
+\caption{V10 Ensemble моделийн архитектур (7 загвар)}
 \label{fig:ensemble_arch}
 \end{figure}
 
-\subsection{XGBoost}
+\subsection{XGBoost загварууд}
 
-XGBoost (eXtreme Gradient Boosting) нь gradient boosting framework дээр суурилсан, маш үр дүнтэй ангиллын алгоритм юм. n\_estimators=300, max\_depth=6, learning\_rate=0.05 параметрүүдтэй тохируулсан.
+XGBoost (eXtreme Gradient Boosting) нь gradient boosting framework дээр суурилсан алгоритм юм. V10-д гурван өөр hyperparameter-тэй XGBoost загварыг ашигласан:
 
-\subsection{LightGBM}
+\begin{itemize}
+    \item \textbf{XGB-1:} n\_estimators=500, max\_depth=6, learning\_rate=0.03
+    \item \textbf{XGB-2:} n\_estimators=400, max\_depth=8, learning\_rate=0.05
+    \item \textbf{XGB-3:} n\_estimators=300, max\_depth=5, learning\_rate=0.08
+\end{itemize}
 
-LightGBM нь Microsoft-ийн боловсруулсан, хурдан бөгөөд санах ойн хэрэглээ бага gradient boosting framework юм. XGBoost-тэй ижил параметрүүдээр тохируулсан.
+\subsection{LightGBM загварууд}
 
-\subsection{Random Forest}
+LightGBM нь Microsoft-ийн боловсруулсан хурдан gradient boosting framework юм:
 
-Random Forest нь олон шийдвэрийн модны (decision tree) ensemble бөгөөд overfitting-д тэсвэртэй байдаг. n\_estimators=200, max\_depth=10, class\_weight='balanced' параметрүүдтэй.
+\begin{itemize}
+    \item \textbf{LGB-1:} n\_estimators=500, max\_depth=6, learning\_rate=0.03
+    \item \textbf{LGB-2:} n\_estimators=400, max\_depth=8, learning\_rate=0.05
+\end{itemize}
 
-\subsection{Ensemble Averaging}
+\subsection{CatBoost загварууд}
 
-Гурван моделийн магадлалыг дундажлаж эцсийн таамаглалыг гаргана:
+CatBoost нь Yandex-ийн боловсруулсан, categorical feature-тэй сайн ажилладаг алгоритм:
+
+\begin{itemize}
+    \item \textbf{CAT-1:} iterations=500, depth=6, learning\_rate=0.03
+    \item \textbf{CAT-2:} iterations=400, depth=8, learning\_rate=0.05
+\end{itemize}
+
+\subsection{Agreement Bonus System}
+
+V10-ийн гол шинэлэг тал бол загваруудын ``зөвшилцөл''-д суурилсан нэмэлт оноо юм. Бүх загварууд ижил таамаглал гаргах тусам итгэлцүүр нэмэгддэг:
+
+\begin{table}[H]
+\centering
+\caption{Agreement Bonus System}
+\begin{tabular}{|c|c|l|}
+\hline
+\textbf{Зөвшилцөл} & \textbf{Нэмэлт оноо} & \textbf{Тайлбар} \\
+\hline
+7/7 загвар & +7\% & Бүгд ижил таамаглал \\
+\hline
+6/7 загвар & +4\% & Нэгээс бусад нь ижил \\
+\hline
+5/7 загвар & +2\% & Олонхи нь ижил \\
+\hline
+\end{tabular}
+\label{tab:agreement_bonus}
+\end{table}
+
+\subsection{Weighted Ensemble}
+
+Долоон загварын магадлалыг жинлэгдсэн дунджаар нэгтгэж, agreement bonus нэмнэ:
 
 \begin{equation}
-P_{BUY} = \frac{P_{XGBoost} + P_{LightGBM} + P_{RandomForest}}{3}
+P_{base} = \sum_{i=1}^{7} w_i \cdot P_i(BUY)
 \end{equation}
+
+\begin{equation}
+P_{final} = P_{base} + \text{Agreement Bonus}
+\end{equation}
+
+Энд $w_i$ нь загвар бүрийн жин (нийлбэр нь 1.0)
 
 \subsection{Hyperparameter}
 
 \begin{table}[H]
 \centering
-\caption{Моделийн Hyperparameter тохиргоо}
-\begin{tabular}{|l|l|l|l|}
+\caption{V10 Моделийн Hyperparameter тохиргоо}
+\begin{tabular}{|l|l|l|l|l|}
 \hline
-\textbf{Параметр} & \textbf{XGBoost} & \textbf{LightGBM} & \textbf{Random Forest} \\
+\textbf{Параметр} & \textbf{XGB-1} & \textbf{XGB-2/LGB-1} & \textbf{LGB-2} & \textbf{CatBoost} \\
 \hline
-n\_estimators & 300 & 300 & 200 \\
+n\_estimators & 500 & 400 & 400 & 400-500 \\
 \hline
-max\_depth & 6 & 6 & 10 \\
+max\_depth & 6 & 8 & 8 & 6-8 \\
 \hline
-learning\_rate & 0.05 & 0.05 & - \\
+learning\_rate & 0.03 & 0.05 & 0.05 & 0.03-0.05 \\
 \hline
-subsample & 0.8 & 0.8 & - \\
+subsample & 0.8 & 0.8 & 0.8 & 0.8 \\
 \hline
-colsample\_bytree & 0.8 & 0.8 & - \\
+colsample & 0.8 & 0.8 & 0.8 & 0.8 \\
 \hline
 \end{tabular}
 \label{tab:hyperparams}
@@ -705,14 +770,15 @@ colsample\_bytree & 0.8 & 0.8 & - \\
 
 \section{Confidence Threshold}
 
-Моделийн итгэлцүүрийн босго нь дохиог үүсгэх эсэхийг тодорхойлно:
+V10 моделийн итгэлцүүрийн босго нь дохиог үүсгэх эсэхийг тодорхойлно:
 
 \begin{itemize}
-    \item $P_{BUY} \geq 80\%$: BUY дохио үүсгэнэ
+    \item $P_{BUY} \geq 85\%$: BUY дохио үүсгэнэ (96.9\% нарийвчлал)
+    \item $P_{BUY} \geq 80\%$: BUY дохио (94.7\% нарийвчлал)
     \item $P_{BUY} < 80\%$: HOLD (хүлээх)
 \end{itemize}
 
-80\% босго нь моделийн нарийвчлалыг 80\%+ түвшинд хадгалахад тусална.
+85\% босго нь хамгийн оновчтой бөгөөд 96.9\% accuracy, 52.2 profit factor-тай байна.
 
 \section{Динамик SL/TP тооцоолол}
 

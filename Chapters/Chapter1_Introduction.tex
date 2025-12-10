@@ -37,17 +37,21 @@
 \begin{enumerate}
     \item \textbf{Өгөгдөл цуглуулах:} EUR/USD валютын хосын бодит цагийн үнийн өгөгдлийг API-ээр татаж авах
     
-    \item \textbf{Шинж чанар инженерчлэл:} 70 техникийн индикатор (RSI, MACD, Bollinger Bands, ATR, Ichimoku гэх мэт) тооцоолох
+    \item \textbf{Шинж чанар инженерчлэл:} 32 техникийн индикатор (RSI, MACD, Bollinger Bands, ATR, ADX гэх мэт) тооцоолох
     
-    \item \textbf{Машин сургалтын модель хөгжүүлэх:} XGBoost, LightGBM, Random Forest гэсэн гурван загварын ensemble систем бүтээх
+    \item \textbf{Машин сургалтын модель хөгжүүлэх:} V10 Ensemble систем - XGBoost×3, LightGBM×2, CatBoost×2 гэсэн долоон загварын нэгдэл бүтээх
+    
+    \item \textbf{Agreement Bonus System:} Загваруудын зөвшилцөлд суурилсан нэмэлт оноо систем хэрэгжүүлэх
     
     \item \textbf{Моделийг сургах, оновчлох:} Hyperparameter тохируулга, cross-validation, class imbalance шийдвэрлэх
     
-    \item \textbf{Үнэлгээ хийх:} Precision, Recall, F1-Score, ROC-AUC зэрэг metrics ашиглан моделийн гүйцэтгэлийг үнэлэх
+    \item \textbf{Үнэлгээ хийх:} Accuracy, Profit Factor, Total Pips зэрэг metrics ашиглан моделийн гүйцэтгэлийг үнэлэх
     
     \item \textbf{Backend API хөгжүүлэх:} Flask + Waitress WSGI серверээр бодит цагийн дохио үүсгэх API үүсгэх
     
     \item \textbf{Мобайл аппликейшн хөгжүүлэх:} React Native + Expo ашиглан арилжааны дохиог хүлээн авах мобайл апп бүтээх
+    
+    \item \textbf{Entry/SL/TP гаралт:} ATR-д суурилсан entry price, stop loss, take profit тооцоолох
 \end{enumerate}
 
 \section{Судалгааны хамрах хүрээ}
@@ -58,7 +62,7 @@
     \item \textbf{Валютын хос:} Зөвхөн EUR/USD (Евро/АНУ-ын доллар) валютын хосыг судална
     \item \textbf{Цаг хугацааны хүрээ:} 1 минутын интервалтай өгөгдөл, 500 bar-ын түүхэн өгөгдөл
     \item \textbf{Машин сургалтын арга:} Supervised learning буюу хяналттай сургалтын арга (BUY-only classification)
-    \item \textbf{Моделийн архитектур:} XGBoost + LightGBM + Random Forest Ensemble
+    \item \textbf{Моделийн архитектур:} V10 Ensemble - XGBoost×3 + LightGBM×2 + CatBoost×2
     \item \textbf{Платформ:} Python, Flask, React Native, Expo
     \item \textbf{Өгөгдлийн эх үүсвэр:} Twelve Data API
 \end{itemize}
@@ -68,11 +72,15 @@
 Энэхүү судалгааны ажил нь дараах шинэлэг талуудтай:
 
 \begin{enumerate}
-    \item \textbf{Ensemble арга:} XGBoost, LightGBM, Random Forest гурван алгоритмын жинлэгдсэн нэгтгэл нь дан загвараас илүү тогтвортой үр дүн өгдөг
+    \item \textbf{V10 Ensemble арга:} 7 ялгаатай алгоритмын (XGBoost×3, LightGBM×2, CatBoost×2) нэгтгэл нь дан загвараас маш их давуу 96.9\% accuracy өгдөг
     
-    \item \textbf{Олон талт техникийн шинжилгээ:} 70 техникийн индикаторыг 5 ангилалд хуваан (Trend, Momentum, Volatility, Candle Pattern, Support/Resistance) цогц шинжилгээ хийсэн
+    \item \textbf{Agreement Bonus System:} Загваруудын зөвшилцөлд суурилсан шинэлэг оноо систем (+7\%, +4\%, +2\%) хэрэгжүүлсэн
+    
+    \item \textbf{32 техникийн индикатор:} Trend, Momentum, Volatility, Time features-ийг цогц ашигласан
     
     \item \textbf{BUY-only стратеги:} Зөвхөн худалдан авах боломжийг тодорхойлох нь шийдвэр гаргалтыг хялбарчилж, эрсдэлийг бууруулдаг
+    
+    \item \textbf{Entry/SL/TP гаралт:} ATR-д суурилсан тодорхой entry price, stop loss, take profit утгууд гаргадаг
     
     \item \textbf{Бүрэн систем:} Backend API + Машин сургалтын модел + Мобайл аппликейшн бүхий бүрэн систем
     

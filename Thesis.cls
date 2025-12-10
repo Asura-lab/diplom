@@ -71,11 +71,13 @@
 \titlespacing{\section}{0pt}{0pt}{1pt}
 \titleformat{\section}[block]{\bfseries}{\thesection.}{0.5em}{}
 \titlespacing{\subsection}{0pt}{0pt}{1pt}
-\titleformat{\subsection}[block]{\bfseries}{\thesubsection}{0.5em}{}
+\titleformat{\subsection}[block]{\bfseries}{}{0em}{}
+\titlespacing{\subsubsection}{0pt}{0pt}{1pt}
+\titleformat{\subsubsection}[block]{\bfseries}{}{0em}{}
 
 
 \addtocounter{secnumdepth}{1}
-\setcounter{tocdepth}{6}
+\setcounter{tocdepth}{1}
 \newcounter{dummy}
 \newcommand\addtotoc[1]{
 \refstepcounter{dummy}
