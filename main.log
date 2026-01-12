@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.11.26)  9 DEC 2025 20:51
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.11.26)  12 JAN 2026 12:54
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -461,28 +461,7 @@ Package: blindtext 2012/01/06 V2.0 blindtext-Package
 Package: titlepic 2017/03/14 1.2 Package to display a picture on the title page
 
 )
-(C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/latex/natbib\natbib.sty
-Package: natbib 2010/09/13 8.31b (PWD, AO)
-\bibhang=\skip80
-\bibsep=\skip81
-LaTeX Info: Redefining \cite on input line 694.
-\c@NAT@ctr=\count356
-)
-(C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/latex/acronym\acronym.sty
-Package: acronym 2025/01/17 v1.50 Support for acronyms (Tobias Oetiker)
-
-(C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/latex/bigfoot\suffix.sty
-Package: suffix 2006/07/15 1.5a Variant command support
-)
-(C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/latex/xstring\xstring.sty
-(C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/generic/xstring\xstring.tex
-\xs_counta=\count357
-\xs_countb=\count358
-)
-Package: xstring 2023/08/22 v1.86 String manipulations (CT)
-)
-\AC@clearlist=\toks39
-) (C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/latex/lm\lmodern.sty
+(C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/latex/lm\lmodern.sty
 Package: lmodern 2015/05/01 v1.6.1 Latin Modern Fonts
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
 (Font)                  OT1/cmr/m/n --> OT1/lmr/m/n on input line 22.
@@ -519,62 +498,62 @@ LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
 )
 (C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/latex/tools\longtable.sty
 Package: longtable 2025-10-13 v4.24 Multi-page Table package (DPC)
-\LTleft=\skip82
-\LTright=\skip83
-\LTpre=\skip84
-\LTpost=\skip85
-\LTchunksize=\count359
+\LTleft=\skip80
+\LTright=\skip81
+\LTpre=\skip82
+\LTpost=\skip83
+\LTchunksize=\count356
 \LTcapwidth=\dimen261
 \LT@head=\box72
 \LT@firsthead=\box73
 \LT@foot=\box74
 \LT@lastfoot=\box75
 \LT@gbox=\box76
-\LT@cols=\count360
-\LT@rows=\count361
-\c@LT@tables=\count362
-\c@LT@chunks=\count363
-\LT@p@ftn=\toks40
+\LT@cols=\count357
+\LT@rows=\count358
+\c@LT@tables=\count359
+\c@LT@chunks=\count360
+\LT@p@ftn=\toks39
 )
 (C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/latex/tocloft\tocloft.sty
 Package: tocloft 2017/08/31 v2.3i parameterised ToC, etc., typesetting
 Package tocloft Info: The document has chapter divisions on input line 51.
-\cftparskip=\skip86
-\cftbeforetoctitleskip=\skip87
-\cftaftertoctitleskip=\skip88
-\cftbeforepartskip=\skip89
-\cftpartnumwidth=\skip90
-\cftpartindent=\skip91
-\cftbeforechapskip=\skip92
-\cftchapindent=\skip93
-\cftchapnumwidth=\skip94
-\cftbeforesecskip=\skip95
-\cftsecindent=\skip96
-\cftsecnumwidth=\skip97
-\cftbeforesubsecskip=\skip98
-\cftsubsecindent=\skip99
-\cftsubsecnumwidth=\skip100
-\cftbeforesubsubsecskip=\skip101
-\cftsubsubsecindent=\skip102
-\cftsubsubsecnumwidth=\skip103
-\cftbeforeparaskip=\skip104
-\cftparaindent=\skip105
-\cftparanumwidth=\skip106
-\cftbeforesubparaskip=\skip107
-\cftsubparaindent=\skip108
-\cftsubparanumwidth=\skip109
-\cftbeforeloftitleskip=\skip110
-\cftafterloftitleskip=\skip111
-\cftbeforefigskip=\skip112
-\cftfigindent=\skip113
-\cftfignumwidth=\skip114
-\c@lofdepth=\count364
-\c@lotdepth=\count365
-\cftbeforelottitleskip=\skip115
-\cftafterlottitleskip=\skip116
-\cftbeforetabskip=\skip117
-\cfttabindent=\skip118
-\cfttabnumwidth=\skip119
+\cftparskip=\skip84
+\cftbeforetoctitleskip=\skip85
+\cftaftertoctitleskip=\skip86
+\cftbeforepartskip=\skip87
+\cftpartnumwidth=\skip88
+\cftpartindent=\skip89
+\cftbeforechapskip=\skip90
+\cftchapindent=\skip91
+\cftchapnumwidth=\skip92
+\cftbeforesecskip=\skip93
+\cftsecindent=\skip94
+\cftsecnumwidth=\skip95
+\cftbeforesubsecskip=\skip96
+\cftsubsecindent=\skip97
+\cftsubsecnumwidth=\skip98
+\cftbeforesubsubsecskip=\skip99
+\cftsubsubsecindent=\skip100
+\cftsubsubsecnumwidth=\skip101
+\cftbeforeparaskip=\skip102
+\cftparaindent=\skip103
+\cftparanumwidth=\skip104
+\cftbeforesubparaskip=\skip105
+\cftsubparaindent=\skip106
+\cftsubparanumwidth=\skip107
+\cftbeforeloftitleskip=\skip108
+\cftafterloftitleskip=\skip109
+\cftbeforefigskip=\skip110
+\cftfigindent=\skip111
+\cftfignumwidth=\skip112
+\c@lofdepth=\count361
+\c@lotdepth=\count362
+\cftbeforelottitleskip=\skip113
+\cftafterlottitleskip=\skip114
+\cftbeforetabskip=\skip115
+\cfttabindent=\skip116
+\cfttabnumwidth=\skip117
 )
 (C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/latex/graphics\lscape.sty
 Package: lscape 2020/05/28 v3.02 Landscape Pages (DPC)
@@ -587,10 +566,10 @@ Package: xkeyval 2022/06/16 v2.9 package option processing (HA)
 
 (C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/generic/xkeyval\xkeyval.tex
 (C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/generic/xkeyval\xkvutils.tex
-\XKV@toks=\toks41
-\XKV@tempa@toks=\toks42
+\XKV@toks=\toks40
+\XKV@tempa@toks=\toks41
 )
-\XKV@depth=\count366
+\XKV@depth=\count363
 File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
 )) (C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/latex/adjustbox\adjcalc.sty
 Package: adjcalc 2012/05/16 v1.1 Provides advanced setlength with multiple back
@@ -623,11 +602,11 @@ File: tc-pdftex.def 2025/02/26 v2.3 Clipping driver for pdftex
 
 (C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/latex/ifoddpage\ifoddpage.sty
 Package: ifoddpage 2022/10/18 v1.2 Conditionals for odd/even page detection
-\c@checkoddpage=\count367
+\c@checkoddpage=\count364
 ) (C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/latex/varwidth\varwidth.sty
 Package: varwidth 2009/03/30 ver 0.92;  Variable-width minipages
 \@vwid@box=\box78
-\sift@deathcycles=\count368
+\sift@deathcycles=\count365
 \@vwid@loff=\dimen274
 \@vwid@roff=\dimen275
 )
@@ -651,7 +630,7 @@ Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 estring.sty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
-\c@section@level=\count369
+\c@section@level=\count366
 )
 (C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/generic/stringenc\stringenc.st
 y
@@ -659,8 +638,8 @@ Package: stringenc 2019/11/29 v1.12 Convert strings between diff. encodings (HO
 )
 )
 \@linkdim=\dimen276
-\Hy@linkcounter=\count370
-\Hy@pagecounter=\count371
+\Hy@linkcounter=\count367
+\Hy@pagecounter=\count368
  (C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\pd1enc.def
 File: pd1enc.def 2025-07-12 v7.01o Hyperref: PDFDocEncoding definition (HO)
 Now handling font encoding PD1 ...
@@ -669,7 +648,7 @@ Now handling font encoding PD1 ...
 (C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/generic/intcalc\intcalc.sty
 Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
 )
-\Hy@SavedSpaceFactor=\count372
+\Hy@SavedSpaceFactor=\count369
 
 (C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\puenc.def
 File: puenc.def 2025-07-12 v7.01o Hyperref: PDF Unicode definition (HO)
@@ -691,7 +670,7 @@ Package hyperref Info: Plain pages OFF on input line 4210.
 Package hyperref Info: Backreferencing OFF on input line 4215.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
 Package hyperref Info: Bookmarks ON on input line 4462.
-\c@Hy@tempcnt=\count373
+\c@Hy@tempcnt=\count370
 
 (C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/latex/url\url.sty
 \Urlmuskip=\muskip18
@@ -708,7 +687,7 @@ sty
 Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO
 )
 ))
-\Fld@menulength=\count374
+\Fld@menulength=\count371
 \Field@Width=\dimen278
 \Fld@charsize=\dimen279
 Package hyperref Info: Hyper figures OFF on input line 6078.
@@ -718,16 +697,16 @@ Package hyperref Info: backreferencing OFF on input line 6093.
 Package hyperref Info: Link coloring ON on input line 6096.
 Package hyperref Info: Link coloring with OCG OFF on input line 6103.
 Package hyperref Info: PDF/A mode OFF on input line 6108.
-\Hy@abspage=\count375
-\c@Item=\count376
-\c@Hfootnote=\count377
+\Hy@abspage=\count372
+\c@Item=\count373
+\c@Hfootnote=\count374
 )
 Package hyperref Info: Driver (autodetected): hpdftex.
 
 (C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\hpdftex.def
 File: hpdftex.def 2025-07-12 v7.01o Hyperref driver for pdfTeX
-\Fld@listcount=\count378
-\c@bookmark@seq@number=\count379
+\Fld@listcount=\count375
+\c@bookmark@seq@number=\count376
 
 (C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/latex/rerunfilecheck\rerunfile
 check.sty
@@ -740,17 +719,31 @@ Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
 Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 84.
 )
-\Hy@SectionHShift=\skip120
+\Hy@SectionHShift=\skip118
 )
-(C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/latex/vmargin\vmargin.sty
+(C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/latex/acronym\acronym.sty
+Package: acronym 2025/01/17 v1.50 Support for acronyms (Tobias Oetiker)
+
+(C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/latex/bigfoot\suffix.sty
+Package: suffix 2006/07/15 1.5a Variant command support
+)
+(C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/latex/xstring\xstring.sty
+(C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/generic/xstring\xstring.tex
+\xs_counta=\count377
+\xs_countb=\count378
+)
+Package: xstring 2023/08/22 v1.86 String manipulations (CT)
+)
+\AC@clearlist=\toks42
+) (C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/latex/vmargin\vmargin.sty
 Package: vmargin 2004/07/15 V2.5 set document margins (VK)
 
 Package: vmargin 2004/07/15 V2.5 set document margins (VK)
 \PaperWidth=\dimen280
 \PaperHeight=\dimen281
 )
-Package hyperref Info: Option `colorlinks' set `true' on input line 66.
-\c@dummy=\count380
+Package hyperref Info: Option `colorlinks' set `true' on input line 68.
+\c@dummy=\count379
    defining Unicode char U+2460 (decimal 9312)
    defining Unicode char U+2461 (decimal 9313)
    defining Unicode char U+2462 (decimal 9314)
@@ -763,7 +756,7 @@ Package: inputenc 2024/02/08 v1.3d Input encoding file
 (C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/generic/babel\babel.sty
 Package: babel 2025/11/09 v25.15 The multilingual framework for LuaLaTeX, pdfLa
 TeX and XeLaTeX
-\babel@savecnt=\count381
+\babel@savecnt=\count380
 LaTeX Encoding Info:    Redeclaring text command \ij (encoding OT1) on input li
 ne 2050.
 LaTeX Encoding Info:    Redeclaring text command \IJ (encoding OT1) on input li
@@ -783,7 +776,7 @@ on input line 2083.
 
 (C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/generic/babel\txtbabel.def)
 \bbl@readstream=\read2
-\bbl@dirlevel=\count382
+\bbl@dirlevel=\count381
 Package babel Info: Configuration files are deprecated, as
 (babel)             they can break document portability.
 (babel)             Reported on input line 4175.
@@ -1030,27 +1023,27 @@ Package babel Info: Making " an active character on input line 175.
 (C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/latex/wrapfig\wrapfig.sty
 \wrapoverhang=\dimen283
 \WF@size=\dimen284
-\c@WF@wrappedlines=\count383
+\c@WF@wrappedlines=\count382
 \WF@box=\box79
 \WF@everypar=\toks45
 Package: wrapfig 2003/01/31  v 3.6
 )
 (C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/latex/ragged2e\ragged2e.sty
 Package: ragged2e 2023/06/22 v3.6 ragged2e Package
-\CenteringLeftskip=\skip121
-\RaggedLeftLeftskip=\skip122
-\RaggedRightLeftskip=\skip123
-\CenteringRightskip=\skip124
-\RaggedLeftRightskip=\skip125
-\RaggedRightRightskip=\skip126
-\CenteringParfillskip=\skip127
-\RaggedLeftParfillskip=\skip128
-\RaggedRightParfillskip=\skip129
-\JustifyingParfillskip=\skip130
-\CenteringParindent=\skip131
-\RaggedLeftParindent=\skip132
-\RaggedRightParindent=\skip133
-\JustifyingParindent=\skip134
+\CenteringLeftskip=\skip119
+\RaggedLeftLeftskip=\skip120
+\RaggedRightLeftskip=\skip121
+\CenteringRightskip=\skip122
+\RaggedLeftRightskip=\skip123
+\RaggedRightRightskip=\skip124
+\CenteringParfillskip=\skip125
+\RaggedLeftParfillskip=\skip126
+\RaggedRightParfillskip=\skip127
+\JustifyingParfillskip=\skip128
+\CenteringParindent=\skip129
+\RaggedLeftParindent=\skip130
+\RaggedRightParindent=\skip131
+\JustifyingParindent=\skip132
 )
 (C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\mathptmx.sty
 Package: mathptmx 2020/03/25 PSNFSS-v9.3 Times w/ Math, improved (SPQR, WaS) 
@@ -1090,9 +1083,9 @@ LaTeX Info: Redefining \hbar on input line 50.
 )
 (C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/latex/multirow\multirow.sty
 Package: multirow 2024/11/12 v2.9 Span multiple rows of a table
-\multirow@colwidth=\skip135
-\multirow@cntb=\count384
-\multirow@dima=\skip136
+\multirow@colwidth=\skip133
+\multirow@cntb=\count383
+\multirow@dima=\skip134
 \bigstrutjot=\dimen285
 )
 (C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/latex/tempora\tempora.sty
@@ -2033,20 +2026,20 @@ Package: indentfirst 2023/07/02 v1.03 Indent first paragraph (DPC)
 )
 (C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/latex/tools\multicol.sty
 Package: multicol 2025/10/21 v2.0b multicolumn formatting (FMi)
-\c@tracingmulticols=\count385
+\c@tracingmulticols=\count384
 \mult@box=\box80
 \multicol@leftmargin=\dimen286
-\c@unbalance=\count386
-\c@collectmore=\count387
-\doublecol@number=\count388
-\multicoltolerance=\count389
-\multicolpretolerance=\count390
+\c@unbalance=\count385
+\c@collectmore=\count386
+\doublecol@number=\count387
+\multicoltolerance=\count388
+\multicolpretolerance=\count389
 \full@width=\dimen287
 \page@free=\dimen288
 \premulticols=\dimen289
 \postmulticols=\dimen290
-\multicolsep=\skip137
-\multicolbaselineskip=\skip138
+\multicolsep=\skip135
+\multicolbaselineskip=\skip136
 \partial@page=\box81
 \last@line=\box82
 \mc@boxedresult=\box83
@@ -2091,16 +2084,16 @@ Package: multicol 2025/10/21 v2.0b multicolumn formatting (FMi)
 \@tempa=\box121
 \@tempa=\box122
 \@tempa=\box123
-\c@minrows=\count391
-\c@columnbadness=\count392
-\c@finalcolumnbadness=\count393
+\c@minrows=\count390
+\c@columnbadness=\count391
+\c@finalcolumnbadness=\count392
 \last@try=\dimen292
 \multicolovershoot=\dimen293
 \multicolundershoot=\dimen294
 \mult@nat@firstbox=\box124
 \colbreak@box=\box125
-\mc@col@check@num=\count394
-\g__mc_curr_col_int=\count395
+\mc@col@check@num=\count393
+\g__mc_curr_col_int=\count394
 )
 (C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/latex/pgf/frontendlayer\tikz.s
 ty
@@ -2153,14 +2146,14 @@ ibraryfiltered.code.tex
 \pgf@yd=\dimen306
 \w@pgf@writea=\write3
 \r@pgf@reada=\read3
-\c@pgf@counta=\count396
-\c@pgf@countb=\count397
-\c@pgf@countc=\count398
-\c@pgf@countd=\count399
+\c@pgf@counta=\count395
+\c@pgf@countb=\count396
+\c@pgf@countc=\count397
+\c@pgf@countd=\count398
 \t@pgf@toka=\toks50
 \t@pgf@tokb=\toks51
 \t@pgf@tokc=\toks52
-\pgf@sys@id@count=\count400
+\pgf@sys@id@count=\count399
 
 (C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgf.cf
 g
@@ -2179,8 +2172,8 @@ File: pgfsys-common-pdf.def 2025-08-29 v3.1.11a (3.1.11a)
 (C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgfsys
 softpath.code.tex
 File: pgfsyssoftpath.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgfsyssoftpath@smallbuffer@items=\count401
-\pgfsyssoftpath@bigbuffer@items=\count402
+\pgfsyssoftpath@smallbuffer@items=\count400
+\pgfsyssoftpath@bigbuffer@items=\count401
 )
 (C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgfsys
 protocol.code.tex
@@ -2216,7 +2209,7 @@ ode.tex)
 (C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathparser
 .code.tex
 \pgfmath@dimen=\dimen307
-\pgfmath@count=\count403
+\pgfmath@count=\count402
 \pgfmath@box=\box127
 \pgfmath@toks=\toks53
 \pgfmath@stack@operand=\toks54
@@ -2244,7 +2237,7 @@ ons.integerarithmetics.code.tex)
 ode.tex)
 (C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfloat.
 code.tex
-\c@pgfmathroundto@lastzeros=\count404
+\c@pgfmathroundto@lastzeros=\count403
 ))
 (C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfint.code.t
 ex)
@@ -2284,7 +2277,7 @@ File: pgfcorescopes.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 \pgfpic=\box128
 \pgf@hbox=\box129
 \pgf@layerbox@main=\box130
-\pgf@picture@serial@count=\count405
+\pgf@picture@serial@count=\count404
 )
 (C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcore
 graphicstate.code.tex
@@ -2319,8 +2312,8 @@ File: pgfcorearrows.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 shade.code.tex
 File: pgfcoreshade.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 \pgf@max=\dimen331
-\pgf@sys@shading@range@num=\count406
-\pgf@shadingcount=\count407
+\pgf@sys@shading@range@num=\count405
+\pgf@shadingcount=\count406
 )
 (C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcore
 image.code.tex
@@ -2390,7 +2383,7 @@ Package: tikz 2025-08-29 v3.1.11a (3.1.11a)
 (C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries\pgflibra
 ryplothandlers.code.tex
 File: pgflibraryplothandlers.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgf@plot@mark@count=\count408
+\pgf@plot@mark@count=\count407
 \pgfplotmarksize=\dimen336
 )
 \tikz@lastx=\dimen337
@@ -2405,19 +2398,19 @@ File: pgflibraryplothandlers.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 \tikz@figbox@bg=\box134
 \tikz@tempbox=\box135
 \tikz@tempbox@bg=\box136
-\tikztreelevel=\count409
-\tikznumberofchildren=\count410
-\tikznumberofcurrentchild=\count411
-\tikz@fig@count=\count412
+\tikztreelevel=\count408
+\tikznumberofchildren=\count409
+\tikznumberofcurrentchild=\count410
+\tikz@fig@count=\count411
 
 (C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/generic/pgf/modules\pgfmodulem
 atrix.code.tex
 File: pgfmodulematrix.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgfmatrixcurrentrow=\count413
-\pgfmatrixcurrentcolumn=\count414
-\pgf@matrix@numberofcolumns=\count415
+\pgfmatrixcurrentrow=\count412
+\pgfmatrixcurrentcolumn=\count413
+\pgf@matrix@numberofcolumns=\count414
 )
-\tikz@expandcount=\count416
+\tikz@expandcount=\count415
 
 (C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tikz
 /libraries\tikzlibrarytopaths.code.tex
@@ -2426,8 +2419,8 @@ File: tikzlibrarytopaths.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 (C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/latex/colortbl\colortbl.sty
 Package: colortbl 2024/10/29 v1.0k Color table columns (DPC)
 \everycr=\toks58
-\minrowclearance=\skip139
-\rownum=\count417
+\minrowclearance=\skip137
+\rownum=\count416
 )
 (C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tikz
 /libraries\tikzlibrarypositioning.code.tex
@@ -2474,7 +2467,7 @@ ecorations.code.tex
 \pgfdecoratedinputsegmentcompleteddistance=\dimen351
 \pgfdecoratedinputsegmentremainingdistance=\dimen352
 \pgf@decorate@distancetomove=\dimen353
-\pgf@decorate@repeatstate=\count418
+\pgf@decorate@repeatstate=\count417
 \pgfdecorationsegmentamplitude=\dimen354
 \pgfdecorationsegmentlength=\dimen355
 )
@@ -2507,8 +2500,8 @@ code.tex
 \t@pgfplots@tokb=\toks60
 \t@pgfplots@tokc=\toks61
 \pgfplots@tmpa=\dimen356
-\c@pgfplots@coordindex=\count419
-\c@pgfplots@scanlineindex=\count420
+\c@pgfplots@coordindex=\count418
+\c@pgfplots@scanlineindex=\count419
 
 (C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/sys\pgfplotss
 ysgeneric.code.tex))
@@ -2533,13 +2526,13 @@ util.code.tex
 \pgfplotsliststructureext.code.tex)
 (C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/liststructure
 \pgfplotsarray.code.tex
-\c@pgfplotsarray@tmp=\count421
+\c@pgfplotsarray@tmp=\count420
 )
 (C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/liststructure
 \pgfplotsmatrix.code.tex)
 (C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/numtable\pgfp
 lotstableshared.code.tex
-\c@pgfplotstable@counta=\count422
+\c@pgfplotstable@counta=\count421
 \t@pgfplotstable@a=\toks65
 )
 (C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/liststructure
@@ -2552,7 +2545,7 @@ binary.data.code.tex))
 util.verb.code.tex)
 (C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/libs\pgflibra
 rypgfplots.surfshading.code.tex
-\c@pgfplotslibrarysurf@no=\count423
+\c@pgfplotslibrarysurf@no=\count422
 
 (C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/sys\pgflibrar
 ypgfplots.surfshading.pgfsys-pdftex.def)))
@@ -2586,7 +2579,7 @@ s.code.tex)
 ons\pgflibrarydecorations.pathmorphing.code.tex))
 (C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/libs\tikzlibr
 arypgfplots.contourlua.code.tex)
-\pgfplots@numplots=\count424
+\pgfplots@numplots=\count423
 \pgfplots@xmin@reg=\dimen357
 \pgfplots@xmax@reg=\dimen358
 \pgfplots@ymin@reg=\dimen359
@@ -2610,7 +2603,7 @@ kzlibraryfillbetween.code.tex
 /libraries\tikzlibraryintersections.code.tex
 (C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries\pgflibra
 ryintersections.code.tex
-\pgf@intersect@solutions=\count425
+\pgf@intersect@solutions=\count424
 ))
 (C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/pgfcontrib\ti
 kzlibrarydecorations.softclip.code.tex
@@ -2633,7 +2626,7 @@ LaTeX Font Info:    Font shape `T1/Tempora-TLF/m/n' will be
 (C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdft
 ex.def
 File: l3backend-pdftex.def 2025-10-09 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count426
+\l__color_backend_stack_int=\count425
 ) (main.aux (Information.aux)
 LaTeX Font Info:    Trying to load font information for T2A+Tempora-TLF on inpu
 t line 11.
@@ -2710,19 +2703,19 @@ LaTeX Font Info:    ... okay on input line 43.
 (C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mki
 i
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count427
+\scratchcounter=\count426
 \scratchdimen=\dimen363
 \scratchbox=\box140
-\nofMPsegments=\count428
-\nofMParguments=\count429
+\nofMPsegments=\count427
+\nofMParguments=\count428
 \everyMPshowfont=\toks66
-\MPscratchCnt=\count430
+\MPscratchCnt=\count429
 \MPscratchDim=\dimen364
-\MPnumerator=\count431
-\makeMPintoPDFobject=\count432
+\MPnumerator=\count430
+\makeMPintoPDFobject=\count431
 \everyMPtoPDFconversion=\toks67
 )
-\c@lstlisting=\count433
+\c@lstlisting=\count432
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: float package is loaded.
 Package caption Info: hyperref package is loaded.
@@ -2748,8 +2741,8 @@ Package hyperref Info: Link coloring ON on input line 43.
 \@outlinefile=\write4
 \openout4 = `main.out'.
 
-\c@mv@tabular=\count434
-\c@mv@boldtabular=\count435
+\c@mv@tabular=\count433
+\c@mv@boldtabular=\count434
 
 Package pgfplots notification 'compat/show suggested version=true': document ha
 s been generated with the most recent feature set (\pgfplotsset{compat=1.18}).
@@ -2757,7 +2750,7 @@ s been generated with the most recent feature set (\pgfplotsset{compat=1.18}).
 \openout2 = `Information.aux'.
 
 (Information.tex) (Chapters/CoverPage.tex
-<Pictures/NMCT.png, id=205, 69.25874pt x 86.57344pt>
+<Pictures/NMCT.png, id=206, 69.25874pt x 86.57344pt>
 File: Pictures/NMCT.png Graphic file (type png)
 <use Pictures/NMCT.png>
 Package pdftex.def Info: Pictures/NMCT.png  used on input line 10.
@@ -2836,216 +2829,246 @@ LaTeX Font Info:    Font shape `T2A/Tempora-TLF/b/n' will be
 AppData/Local/Programs/MiKTeX/fonts/enc/dvips/tempora/t2a-tempora.enc} <./Pictu
 res/NMCT.png>]) (Chapters/TitlePage.tex [1]) (Chapters/acrolist.tex
 
-LaTeX Warning: Hyper reference `acro:AI' on page i undefined on input line 7.
+LaTeX Warning: Hyper reference `acro:ADX' on page i undefined on input line 7.
 
 
-LaTeX Warning: Hyper reference `acro:AI' on page i undefined on input line 7.
+LaTeX Warning: Hyper reference `acro:ADX' on page i undefined on input line 7.
 
 
-LaTeX Warning: Hyper reference `acro:API' on page i undefined on input line 8.
+LaTeX Warning: Hyper reference `acro:AI' on page i undefined on input line 8.
 
 
-LaTeX Warning: Hyper reference `acro:API' on page i undefined on input line 8.
+LaTeX Warning: Hyper reference `acro:AI' on page i undefined on input line 8.
 
 
-LaTeX Warning: Hyper reference `acro:ATR' on page i undefined on input line 9.
+LaTeX Warning: Hyper reference `acro:API' on page i undefined on input line 9.
 
 
-LaTeX Warning: Hyper reference `acro:ATR' on page i undefined on input line 9.
+LaTeX Warning: Hyper reference `acro:API' on page i undefined on input line 9.
 
 
-LaTeX Warning: Hyper reference `acro:AUC' on page i undefined on input line 10.
-
-
-
-LaTeX Warning: Hyper reference `acro:AUC' on page i undefined on input line 10.
+LaTeX Warning: Hyper reference `acro:ATR' on page i undefined on input line 10.
 
 
 
-LaTeX Warning: Hyper reference `acro:BB' on page i undefined on input line 11.
-
-
-LaTeX Warning: Hyper reference `acro:BB' on page i undefined on input line 11.
-
-
-LaTeX Warning: Hyper reference `acro:EMA' on page i undefined on input line 12.
+LaTeX Warning: Hyper reference `acro:ATR' on page i undefined on input line 10.
 
 
 
-LaTeX Warning: Hyper reference `acro:EMA' on page i undefined on input line 12.
+LaTeX Warning: Hyper reference `acro:AUC' on page i undefined on input line 11.
+
+
+
+LaTeX Warning: Hyper reference `acro:AUC' on page i undefined on input line 11.
+
+
+
+LaTeX Warning: Hyper reference `acro:BB' on page i undefined on input line 12.
+
+
+LaTeX Warning: Hyper reference `acro:BB' on page i undefined on input line 12.
+
+
+LaTeX Warning: Hyper reference `acro:CatBoost' on page i undefined on input lin
+e 13.
+
+
+LaTeX Warning: Hyper reference `acro:CatBoost' on page i undefined on input lin
+e 13.
+
+
+LaTeX Warning: Hyper reference `acro:CNN' on page i undefined on input line 14.
+
+
+
+LaTeX Warning: Hyper reference `acro:CNN' on page i undefined on input line 14.
+
+
+
+LaTeX Warning: Hyper reference `acro:EMA' on page i undefined on input line 15.
+
+
+
+LaTeX Warning: Hyper reference `acro:EMA' on page i undefined on input line 15.
 
 
 
 LaTeX Warning: Hyper reference `acro:EUR/USD' on page i undefined on input line
- 13.
+ 16.
 
 
 LaTeX Warning: Hyper reference `acro:EUR/USD' on page i undefined on input line
- 13.
-
-
-LaTeX Warning: Hyper reference `acro:F1' on page i undefined on input line 14.
-
-
-LaTeX Warning: Hyper reference `acro:F1' on page i undefined on input line 14.
+ 16.
 
 
 LaTeX Warning: Hyper reference `acro:FOREX' on page i undefined on input line 1
-5.
+7.
 
 
 LaTeX Warning: Hyper reference `acro:FOREX' on page i undefined on input line 1
-5.
+7.
 
 
 LaTeX Warning: Hyper reference `acro:HTTPS' on page i undefined on input line 1
-6.
+8.
 
 
 LaTeX Warning: Hyper reference `acro:HTTPS' on page i undefined on input line 1
-6.
+8.
 
 
-LaTeX Warning: Hyper reference `acro:JSON' on page i undefined on input line 17
+LaTeX Warning: Hyper reference `acro:JSON' on page i undefined on input line 19
 .
 
 
-LaTeX Warning: Hyper reference `acro:JSON' on page i undefined on input line 17
+LaTeX Warning: Hyper reference `acro:JSON' on page i undefined on input line 19
 .
 
 
-LaTeX Warning: Hyper reference `acro:JWT' on page i undefined on input line 18.
+LaTeX Warning: Hyper reference `acro:JWT' on page i undefined on input line 20.
 
 
 
-LaTeX Warning: Hyper reference `acro:JWT' on page i undefined on input line 18.
+LaTeX Warning: Hyper reference `acro:JWT' on page i undefined on input line 20.
 
 
 
 LaTeX Warning: Hyper reference `acro:LightGBM' on page i undefined on input lin
-e 19.
+e 21.
 
 
 LaTeX Warning: Hyper reference `acro:LightGBM' on page i undefined on input lin
-e 19.
+e 21.
 
 
-LaTeX Warning: Hyper reference `acro:MACD' on page i undefined on input line 20
+LaTeX Warning: Hyper reference `acro:LSTM' on page i undefined on input line 22
 .
 
 
-LaTeX Warning: Hyper reference `acro:MACD' on page i undefined on input line 20
+LaTeX Warning: Hyper reference `acro:LSTM' on page i undefined on input line 22
 .
 
 
-LaTeX Warning: Hyper reference `acro:MAE' on page i undefined on input line 21.
+LaTeX Warning: Hyper reference `acro:MACD' on page i undefined on input line 23
+.
+
+
+LaTeX Warning: Hyper reference `acro:MACD' on page i undefined on input line 23
+.
+
+
+LaTeX Warning: Hyper reference `acro:MAE' on page i undefined on input line 24.
 
 
 
-LaTeX Warning: Hyper reference `acro:MAE' on page i undefined on input line 21.
+LaTeX Warning: Hyper reference `acro:MAE' on page i undefined on input line 24.
 
 
 
-LaTeX Warning: Hyper reference `acro:ML' on page i undefined on input line 22.
+LaTeX Warning: Hyper reference `acro:ML' on page i undefined on input line 25.
 
 
-LaTeX Warning: Hyper reference `acro:ML' on page i undefined on input line 22.
+LaTeX Warning: Hyper reference `acro:ML' on page i undefined on input line 25.
 
 
 LaTeX Warning: Hyper reference `acro:MongoDB' on page i undefined on input line
- 23.
+ 26.
 
 
 LaTeX Warning: Hyper reference `acro:MongoDB' on page i undefined on input line
- 23.
+ 26.
 
 
 LaTeX Warning: Hyper reference `acro:OHLCV' on page i undefined on input line 2
-4.
+7.
 
 
 LaTeX Warning: Hyper reference `acro:OHLCV' on page i undefined on input line 2
-4.
+7.
 
 
-LaTeX Warning: Hyper reference `acro:pip' on page i undefined on input line 25.
-
-
-
-LaTeX Warning: Hyper reference `acro:pip' on page i undefined on input line 25.
+LaTeX Warning: Hyper reference `acro:pip' on page i undefined on input line 28.
 
 
 
-LaTeX Warning: Hyper reference `acro:REST' on page i undefined on input line 26
+LaTeX Warning: Hyper reference `acro:pip' on page i undefined on input line 28.
+
+
+
+LaTeX Warning: Hyper reference `acro:REST' on page i undefined on input line 29
 .
 
 
-LaTeX Warning: Hyper reference `acro:REST' on page i undefined on input line 26
+LaTeX Warning: Hyper reference `acro:REST' on page i undefined on input line 29
 .
 
 
-LaTeX Warning: Hyper reference `acro:RMSE' on page i undefined on input line 27
+LaTeX Warning: Hyper reference `acro:RMSE' on page i undefined on input line 30
 .
 
 
-LaTeX Warning: Hyper reference `acro:RMSE' on page i undefined on input line 27
+LaTeX Warning: Hyper reference `acro:RMSE' on page i undefined on input line 30
 .
 
 
-LaTeX Warning: Hyper reference `acro:ROC' on page i undefined on input line 28.
+LaTeX Warning: Hyper reference `acro:ROC' on page i undefined on input line 31.
 
 
 
-LaTeX Warning: Hyper reference `acro:ROC' on page i undefined on input line 28.
+LaTeX Warning: Hyper reference `acro:ROC' on page i undefined on input line 31.
 
 
 
-LaTeX Warning: Hyper reference `acro:RSI' on page i undefined on input line 29.
+LaTeX Warning: Hyper reference `acro:RNN' on page i undefined on input line 32.
 
 
 
-LaTeX Warning: Hyper reference `acro:RSI' on page i undefined on input line 29.
+LaTeX Warning: Hyper reference `acro:RNN' on page i undefined on input line 32.
 
 
 
-LaTeX Warning: Hyper reference `acro:SMA' on page i undefined on input line 30.
+LaTeX Warning: Hyper reference `acro:RSI' on page i undefined on input line 33.
 
 
 
-LaTeX Warning: Hyper reference `acro:SMA' on page i undefined on input line 30.
+LaTeX Warning: Hyper reference `acro:RSI' on page i undefined on input line 33.
 
 
 
-LaTeX Warning: Hyper reference `acro:SWA' on page i undefined on input line 31.
+LaTeX Warning: Hyper reference `acro:SL' on page i undefined on input line 34.
+
+
+LaTeX Warning: Hyper reference `acro:SL' on page i undefined on input line 34.
+
+
+LaTeX Warning: Hyper reference `acro:SMA' on page i undefined on input line 35.
 
 
 
-LaTeX Warning: Hyper reference `acro:SWA' on page i undefined on input line 31.
+LaTeX Warning: Hyper reference `acro:SMA' on page i undefined on input line 35.
 
 
 
-LaTeX Warning: Hyper reference `acro:TTL' on page i undefined on input line 32.
+LaTeX Warning: Hyper reference `acro:TP' on page i undefined on input line 36.
 
 
-
-LaTeX Warning: Hyper reference `acro:TTL' on page i undefined on input line 32.
-
+LaTeX Warning: Hyper reference `acro:TP' on page i undefined on input line 36.
 
 
-LaTeX Warning: Hyper reference `acro:WSGI' on page i undefined on input line 33
+LaTeX Warning: Hyper reference `acro:WSGI' on page i undefined on input line 37
 .
 
 
-LaTeX Warning: Hyper reference `acro:WSGI' on page i undefined on input line 33
+LaTeX Warning: Hyper reference `acro:WSGI' on page i undefined on input line 37
 .
 
 
 LaTeX Warning: Hyper reference `acro:XGBoost' on page i undefined on input line
- 34.
+ 38.
 
 
 LaTeX Warning: Hyper reference `acro:XGBoost' on page i undefined on input line
- 34.
+ 38.
 
 ) [1
 
@@ -3074,7 +3097,7 @@ LaTeX Warning: Hyper reference `acro:XGBoost' on page i undefined on input line
  [3
 
 
-] (Chapters/Abstrct.tex
+] (Chapters/Abstract.tex
 LaTeX Font Info:    Font shape `T2A/Tempora-TLF/m/n' will be
 (Font)              scaled to size 14.4pt on input line 4.
 LaTeX Font Info:    Font shape `T2A/Tempora-TLF/b/n' will be
@@ -3104,102 +3127,100 @@ xuc.enc}] [5] [6]) [7] (Chapters/Chapter1_Introduction.tex
 
 ] [2]) (Chapters/Chapter2_Literature.tex [3]
 {\Mongolian \CYRB \cyry \cyrl \cyrerev \cyrg } 2.
-LaTeX Font Info:    Font shape `T2A/Tempora-TLF/m/n' will be
-(Font)              scaled to size 7.4pt on input line 31.
-LaTeX Font Info:    Font shape `T2A/Tempora-TLF/m/n' will be
-(Font)              scaled to size 6.0pt on input line 31.
 [4
 
 {C:/Users/Acer/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc}]
+LaTeX Font Info:    Font shape `T2A/Tempora-TLF/m/n' will be
+(Font)              scaled to size 7.4pt on input line 58.
+LaTeX Font Info:    Font shape `T2A/Tempora-TLF/m/n' will be
+(Font)              scaled to size 6.0pt on input line 58.
+
 [5]) (Chapters/Chapter3_Methodology.tex [6]
 {\Mongolian \CYRB \cyry \cyrl \cyrerev \cyrg } 3.
 LaTeX Font Info:    Font shape `T2A/Tempora-TLF/m/n' will be
-(Font)              scaled to size 9.0pt on input line 20.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 27.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 27.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <5> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 27.
+(Font)              scaled to size 12.0pt on input line 17.
 LaTeX Font Info:    Font shape `T2A/Tempora-TLF/m/n' will be
-(Font)              scaled to size 7.0pt on input line 37.
+(Font)              scaled to size 9.0pt on input line 25.
 [7
 
 ]
-LaTeX Font Info:    Font shape `T2A/Tempora-TLF/m/n' will be
-(Font)              scaled to size 12.0pt on input line 68.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 100.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 100.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <5> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 100.
 LaTeX Font Info:    Font shape `T2A/Tempora-TLF/b/n' will be
-(Font)              scaled to size 9.0pt on input line 132.
+(Font)              scaled to size 9.0pt on input line 163.
+LaTeX Font Info:    Font shape `T2A/Tempora-TLF/m/n' will be
+(Font)              scaled to size 7.0pt on input line 197.
  [8
 
 ]
 LaTeX Font Info:    Trying to load font information for T2A+lmss on input line 
-283.
-LaTeX Font Info:    No file T2Almss.fd. on input line 283.
+261.
+LaTeX Font Info:    No file T2Almss.fd. on input line 261.
 
 
 LaTeX Font Warning: Font shape `T2A/lmss/m/n' undefined
-(Font)              using `T2A/cmr/m/n' instead on input line 283.
-
-
-LaTeX Font Warning: Font shape `T2A/lmss/bx/n' undefined
-(Font)              using `T2A/lmss/m/n' instead on input line 283.
+(Font)              using `T2A/cmr/m/n' instead on input line 261.
 
 LaTeX Font Info:    Trying to load font information for TS1+lmss on input line 
-293.
+265.
 (C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/latex/lm\ts1lmss.fd
 File: ts1lmss.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 
 LaTeX Font Warning: Font shape `T2A/lmss/m/it' undefined
-(Font)              using `T2A/lmss/m/n' instead on input line 314.
+(Font)              using `T2A/lmss/m/n' instead on input line 288.
 
-[9] [10{C:/Users/Acer/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ts1.e
-nc}] [11] [12] [13] [14]
+
+LaTeX Font Warning: Font shape `T2A/lmss/bx/n' undefined
+(Font)              using `T2A/lmss/m/n' instead on input line 308.
+
+[9{C:/Users/Acer/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ts1.enc}]
+[10]
+Package pgfplots info on input line 431: Using 'lua backend=false' for axis: x 
+coord trafo unsupported.
+ [11] [12] [13] [14] [15]
 LaTeX Font Info:    Font shape `TS1/Tempora-TLF/b/n' will be
-(Font)              scaled to size 10.0pt on input line 622.
-
-
-Package pgf Warning: Returning node center instead of a point on node border. D
-id you specify a point identical to the center of node ``cat2''? on input line 
-669.
-
-[15{C:/Users/Acer/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/tempora/tmp_arn
-bc6.enc}] [16] [17]
+(Font)              scaled to size 10.0pt on input line 649.
+ [16{C:/Users/Acer/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/tempora/tmp_ar
+nbc6.enc}] [17] [18]
 LaTeX Font Info:    Trying to load font information for T2A+lmtt on input line 
-809.
-LaTeX Font Info:    No file T2Almtt.fd. on input line 809.
+856.
+LaTeX Font Info:    No file T2Almtt.fd. on input line 856.
 
 
 LaTeX Font Warning: Font shape `T2A/lmtt/m/n' undefined
-(Font)              using `T2A/cmr/m/n' instead on input line 809.
+(Font)              using `T2A/cmr/m/n' instead on input line 856.
 
-[18]) (Chapters/Chapter4_Results.tex [19]
+[19] [20] [21]) (Chapters/Chapter4_Results.tex [22]
 {\Mongolian \CYRB \cyry \cyrl \cyrerev \cyrg } 4.
 Package pgfplots info on input line 53: Using 'lua backend=false' for axis: x c
 oord trafo unsupported.
-[20
+[23
+
+] [24]
+Package pgfplots info on input line 222: Using 'lua backend=false' for axis: x 
+coord trafo unsupported.
+ [25] [26]
+Package pgfplots info on input line 316: Using 'lua backend=false' for axis: x 
+coord trafo unsupported.
+ [27]) (Chapters/Chapter5_Conclusion.tex [28]
+{\Mongolian \CYRB \cyry \cyrl \cyrerev \cyrg } 5.
+[29
+
+] [30] [31]) (Chapters/Bibliography.tex [32] [33
+
 
 ]
-Package pgfplots info on input line 110: Using 'lua backend=false' for axis: x 
-coord trafo unsupported.
- [21] [22]
-Package pgfplots info on input line 245: Using 'lua backend=false' for axis: x 
-coord trafo unsupported.
- [23] [24]
-Package pgfplots info on input line 340: Using 'lua backend=false' for axis: x 
-coord trafo unsupported.
- [25]
-LaTeX Font Info:    Font shape `TS1/Tempora-TLF/b/n' will be
-(Font)              scaled to size 12.0pt on input line 463.
- [26]) (Chapters/Chapter5_Conclusion.tex [27]
-{\Mongolian \CYRB \cyry \cyrl \cyrerev \cyrg } 5.
-[28
+Underfull \hbox (badness 10000) in paragraph at lines 77--78
+[]\T2A/Tempora-TLF/m/n/10 MetaQuotes Software Corp. (2024). MetaTrader 5 Tradin
+g Platform. [Online]. Available:
+ []
 
-] [29] [30]) (Chapters/Bibliography.tex [31] [32
-
-]) (Chapters/appendix.tex
-[33]
+) (Chapters/appendix.tex [34]
 LaTeX Font Info:    Font shape `T2A/Tempora-TLF/m/n' will be
 (Font)              scaled to size 20.74pt on input line 5.
 LaTeX Font Info:    Font shape `T2A/Tempora-TLF/b/n' will be
@@ -3215,9 +3236,9 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10.95> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 14.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <8> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 14.
-) [34
+[35
 
-] [35] (main.aux (Information.aux))
+] [36]) [37] (main.aux (Information.aux))
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2025-11-06>
@@ -3230,16 +3251,16 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 LaTeX Warning: There were undefined references.
 
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: B0396CDDF26EDDD00A09ACE93EC88953;9541.
+(rerunfilecheck)             Checksum: CA5A5A378E384387FF62DBE95919EB6E;8796.
  ) 
 Here is how much of TeX's memory you used:
- 50244 strings out of 467871
- 1139901 string characters out of 5418859
- 1626917 words of memory out of 5000000
- 77853 multiletter control sequences out of 15000+600000
- 716345 words of font info for 172 fonts, out of 8000000 for 9000
+ 49870 strings out of 467871
+ 1134953 string characters out of 5418859
+ 1611073 words of memory out of 5000000
+ 77470 multiletter control sequences out of 15000+600000
+ 715685 words of font info for 170 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 88i,19n,104p,976b,2314s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 88i,19n,104p,1015b,2333s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <C:\Users\Acer\AppData\Local\MiKTeX\fonts/pk/ljfour/lh/lh-t2a/dpi600\larm144
 0.pk> <C:\Users\Acer\AppData\Local\MiKTeX\fonts/pk/ljfour/lh/lh-t2a/dpi600\larm
 1000.pk> <C:\Users\Acer\AppData\Local\MiKTeX\fonts/pk/ljfour/lh/lh-t2a/dpi600\l
@@ -3261,9 +3282,9 @@ nts/symbols/msam10.pfb><C:/Users/Acer/AppData/Local/Programs/MiKTeX/fonts/type1
 urw/symbol/usyr.pfb><C:/Users/Acer/AppData/Local/Programs/MiKTeX/fonts/type1/ur
 w/times/utmr8a.pfb><C:/Users/Acer/AppData/Local/Programs/MiKTeX/fonts/type1/urw
 /times/utmri8a.pfb>
-Output written on main.pdf (44 pages, 498988 bytes).
+Output written on main.pdf (46 pages, 501356 bytes).
 PDF statistics:
- 1094 PDF objects out of 1200 (max. 8388607)
- 347 named destinations out of 1000 (max. 500000)
+ 1108 PDF objects out of 1200 (max. 8388607)
+ 361 named destinations out of 1000 (max. 500000)
  466 words of extra memory for PDF output out of 10000 (max. 10000000)
 

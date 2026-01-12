@@ -1,58 +1,7 @@
 \chapter{СУДАЛГААНЫ АРГА ЗҮЙ}
 
 \section{Системийн ерөнхий тойм}
-\subsection{Системийн Flow Diagram}
-
-Системийн ажиллагааны үндсэн урсгалыг доорх диаграммаар харуулав:
-
-\begin{figure}[H]
-\centering
-\begin{tikzpicture}[
-    scale=0.95, transform shape,
-    node distance=1cm,
-    startstop/.style={rectangle, rounded corners, minimum width=2.5cm, minimum height=0.7cm, draw=black, fill=red!20, align=center, font=\small},
-    process/.style={rectangle, minimum width=2.5cm, minimum height=0.7cm, draw=black, fill=blue!20, align=center, font=\small},
-    decision/.style={diamond, minimum width=2cm, minimum height=0.9cm, draw=black, fill=yellow!20, align=center, aspect=2, font=\small},
-    io/.style={trapezium, trapezium left angle=70, trapezium right angle=110, minimum width=2.2cm, minimum height=0.6cm, draw=black, fill=green!20, align=center, font=\small},
-    arrow/.style={thick,->,>=stealth}
-]
-    % Nodes
-    \node (start) [startstop] {Эхлэх};
-    \node (fetch) [io, below=of start] {Twelve Data API-\\аас өгөгдөл татах};
-    \node (validate) [decision, below=of fetch] {Өгөгдөл\\хүчинтэй?};
-    \node (cache) [process, right=1.5cm of validate] {Cache-аас\\авах};
-    \node (features) [process, below=of validate] {70 техникийн\\индикатор тооцоох};
-    \node (scale) [process, below=of features] {StandardScaler\\хэрэглэх};
-    \node (predict) [process, below=of scale] {Ensemble загвар\\таамаглал хийх};
-    \node (conf) [decision, below=of predict] {Итгэлцүүр$\geq$\\Confidence threshold?};
-    \node (buy) [io, below left=0.8cm and 1.2cm of conf] {BUY дохио\\үүсгэх};
-    \node (hold) [io, below right=0.8cm and 1.2cm of conf] {HOLD\\буцаах};
-    \node (sltp) [process, below=of buy] {SL/TP\\тооцоох};
-    \node (send) [io, below=1.2cm of conf] {API хариу\\илгээх};
-    \node (end) [startstop, below=of send] {Дуусах};
-    
-    % Arrows
-    \draw [arrow] (start) -- (fetch);
-    \draw [arrow] (fetch) -- (validate);
-    \draw [arrow] (validate) -- node[anchor=south, font=\scriptsize] {Үгүй} (cache);
-    \draw [arrow] (cache) |- (features);
-    \draw [arrow] (validate) -- node[anchor=east, font=\scriptsize] {Тийм} (features);
-    \draw [arrow] (features) -- (scale);
-    \draw [arrow] (scale) -- (predict);
-    \draw [arrow] (predict) -- (conf);
-    \draw [arrow] (conf) -- node[anchor=south east, font=\scriptsize] {Тийм} (buy);
-    \draw [arrow] (conf) -- node[anchor=south west, font=\scriptsize] {Үгүй} (hold);
-    \draw [arrow] (buy) -- (sltp);
-    \draw [arrow] (sltp) |- (send);
-    \draw [arrow] (hold) |- (send);
-    \draw [arrow] (send) -- (end);
-\end{tikzpicture}
-\caption{Дохио үүсгэх системийн Flow Diagram}
-\label{fig:flow_diagram}
-\end{figure}
-
-\clearpage
-\subsection{Хэрэглээний тохиолдлын диаграмм}
+\subsection{Use Case Diagram}
 
 Системийн хэрэглэгчийн харилцан үйлдлийг Use Case диаграммаар харуулав:
 
@@ -102,13 +51,95 @@
     \draw[arrow] (-1,-8.5) -- (uc5.west);
     \draw[arrow] (-1,-8.7) -- (uc6.west);
 \end{tikzpicture}
-\caption{Хэрэглээний тохиолдлын диаграмм}
+\caption{Use Case Diagram}
 \label{fig:usecase_diagram}
 \end{figure}
 
-\subsection{Activity Diagram - Дохио авах үйлдэл}
+\clearpage
+\subsection{System Flow Diagram}
 
-Хэрэглэгч дохио авах үйлдлийн Activity диаграмм:
+Системийн ажиллагааны үндсэн урсгалыг доорх диаграммаар харуулав:
+
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}[
+    node distance=0.8cm and 1cm,
+    auto,
+    >=Stealth,
+    font=\small,
+    % Define styles with shadows and rounded corners
+    base/.style={
+        draw, thick, rounded corners, align=center,
+        drop shadow, minimum height=1.0cm, minimum width=3cm
+    },
+    startstop/.style={
+        base, rectangle, rounded corners=15pt,
+        draw=red!80!black, fill=red!10
+    },
+    process/.style={
+        base, rectangle,
+        draw=blue!80!black, fill=blue!10
+    },
+    decision/.style={
+        base, diamond, aspect=2.5,
+        draw=orange!80!black, fill=orange!10, inner sep=0pt, font=\small\linespread{0.9}\selectfont
+    },
+    io/.style={
+        base, trapezium, trapezium left angle=70, trapezium right angle=110,
+        draw=green!80!black, fill=green!10
+    },
+    line/.style={draw, thick, ->, rounded corners=5pt}
+]
+    % Nodes
+    \node (start) [startstop] {Эхлэх};
+    \node (fetch) [io, below=of start] {Twelve Data API-аас\\бодит өгөгдөл татах};
+    \node (validate) [decision, below=of fetch] {Өгөгдөл\\хүчинтэй?};
+    \node (cache) [process, right=2.0cm of validate] {Cache-аас\\өгөгдөл авах};
+    \node (features) [process, below=of validate] {Technical Indicators\\(Time, Trend, Volatility)};
+    \node (predict) [process, below=of features] {Ensemble Model\\(XGBoost, LightGBM, CatBoost)};
+    \node (conf) [decision, below=of predict] {Confidence $\geq$ Босго};
+    
+    % Branches
+    \node (buy) [io, below left=0.5cm and 1cm of conf] {BUY дохио\\үүсгэх};
+    \node (hold) [io, below right=0.5cm and 1cm of conf] {HOLD төлөв\\буцаах};
+    
+    \node (sltp) [process, below=of buy] {Динамик SL/TP\\(ATR-д суурилсан)};
+    \node (db) [process, below=of sltp] {MongoDB-д\\хадгалах};
+    
+    % Convergence point for response
+    \node (send) [io] at (conf |- db) [yshift=-1.5cm] {API хариу\\илгээх};
+    \node (end) [startstop, below=of send] {Дуусах};
+    
+    % Paths
+    \path [line] (start) -- (fetch);
+    \path [line] (fetch) -- (validate);
+    \path [line] (validate) -- node [pos=0.4] {Үгүй} (cache);
+    \path [line] (cache) |- (features);
+    \path [line] (validate) -- node [pos=0.4] {Тийм} (features);
+    \path [line] (features) -- (predict);
+    \path [line] (predict) -- (conf);
+    
+    % Decision paths
+    \path [line] (conf) -| node [near start, above] {Тийм} (buy);
+    \path [line] (conf) -| node [near start, above] {Үгүй} (hold);
+    
+    \path [line] (buy) -- (sltp);
+    \path [line] (sltp) -- (db);
+    
+    % Connect to send
+    \draw [line] (db) |- (send);
+    \draw [line] (hold) |- (send);
+    
+    \path [line] (send) -- (end);
+
+\end{tikzpicture}
+\caption{Дохио үүсгэх системийн Flow Diagram}
+\label{fig:flow_diagram}
+\end{figure}
+
+\subsection{Үйл ажиллагааны (Activity) диаграмм - Дохио авах үйлдэл}
+
+Хэрэглэгч дохио авах үйлдлийн Үйл ажиллагааны (Activity) диаграмм:
 
 \begin{figure}[H]
 \centering
@@ -130,27 +161,27 @@
     
     % Swimlane labels - moved higher
     \node[font=\small\bfseries] at (0,6.8) {Mobile App};
-    \node[font=\small\bfseries] at (5.5,6.8) {Backend API};
+    \node[font=\small\bfseries] at (5.5,6.8) {Backend Server};
     \node[font=\small\bfseries] at (11,6.8) {ML Model};
     
     % Mobile App actions
     \node[initial] (start) at (0,5.3) {};
     \node[action, fill=blue!15] (open) at (0,4.2) {Апп нээх};
-    \node[action, fill=blue!15] (request) at (0,2.5) {Дохио хүсэх};
-    \node[action, fill=blue!15] (display) at (0,-4.5) {Дохио\\харуулах};
+    \node[action, fill=blue!15] (request) at (0,2.5) {Request Signal};
+    \node[action, fill=blue!15] (display) at (0,-4.5) {Display\\Signal};
     \node[final] (end) at (0,-5.8) {};
     
     % Backend actions
-    \node[action, fill=green!15] (fetch) at (4,2.5) {Өгөгдөл\\татах};
+    \node[action, fill=green!15] (fetch) at (4,2.5) {Fetch\\Data};
     \node[decision] (check) at (4,0.5) {Cache?};
-    \node[action, fill=green!15] (api) at (7.2,0.5) {API дуудах};
+    \node[action, fill=green!15] (api) at (7.2,0.5) {API Call};
     \node[mergepoint] (merge) at (5.5,-1.2) {};
-    \node[action, fill=green!15] (process) at (5.5,-2.5) {Өгөгдөл\\боловсруулах};
-    \node[action, fill=green!15] (response) at (5.5,-4.5) {Хариу\\илгээх};
+    \node[action, fill=green!15] (process) at (5.5,-2.5) {Data\\Processing};
+    \node[action, fill=green!15] (response) at (5.5,-4.5) {Send\\Response};
     
     % ML actions
-    \node[action, fill=orange!15] (features) at (11,-2.5) {Онцлог\\тооцоох};
-    \node[action, fill=orange!15] (predict) at (11,-4.5) {Таамаглал\\хийх};
+    \node[action, fill=orange!15] (features) at (11,-2.5) {Feature\\Calculation};
+    \node[action, fill=orange!15] (predict) at (11,-4.5) {Model\\Prediction};
     
     % Arrows - Mobile App
     \draw[arrow] (start) -- (open);
@@ -163,7 +194,7 @@
     \draw[arrow] (fetch) -- (check);
     
     % Arrow - Cache? No -> API (with visible label)
-    \draw[arrow] (check.east) -- node[above=2pt, font=\scriptsize, fill=white, inner sep=1pt] {Үгүй} (api.west);
+    \draw[arrow] (check.east) -- node[above, font=\scriptsize] {Үгүй} (api.west);
     
     % Arrow - API -> merge point (down then left - no arrow head)
     \draw[line] (api.south) -- (7.2,-1.2) -- (merge);
@@ -189,136 +220,79 @@
     % Arrow - display to end
     \draw[arrow] (display) -- (end);
 \end{tikzpicture}
-\caption{Дохио авах Activity Diagram}
+\caption{Activity Diagram - Signal Fetching}
 \label{fig:activity_diagram}
 \end{figure}
 
-\subsection{EUR/USD Үнийн динамик диаграмм}
 
-2025 оны 3-4-р сарын EUR/USD валютын хосын бодит үнийн хөдөлгөөн ба техникийн индикаторуудыг харуулав. Энэ хугацаанд BUY дохионууд дундажаар 1.9\% ашиг өгсөн:
 
-\begin{figure}[H]
-\centering
-\begin{tikzpicture}
-\begin{axis}[
-    width=14cm,
-    height=7cm,
-    xlabel={Өдөр (2025.03.02 - 2025.04.30)},
-    ylabel={Үнэ (EUR/USD)},
-    xmin=0, xmax=53,
-    ymin=1.02, ymax=1.16,
-    legend pos=north west,
-    ymajorgrids=true,
-    grid style=dashed,
-    title={EUR/USD 2025 оны 3-4-р сарын бодит үнийн хөдөлгөөн}
-]
-
-% Close Price - Real data from EUR_USD_test.csv (March-April 2025)
-\addplot[color=black, thick, mark=none, smooth] coordinates {
-    (1,1.04119) (2,1.04851) (3,1.06230) (4,1.07941) (5,1.07871) (6,1.08292) (7,1.08600) (8,1.08390) (9,1.09136)
-    (10,1.08852) (11,1.08548) (12,1.08765) (13,1.08792) (14,1.09180) (15,1.09385) (16,1.09115) (17,1.08532) (18,1.08121) (19,1.08358) (20,1.08022) (21,1.07888) (22,1.07409) (23,1.08006) (24,1.08237) (25,1.08234) (26,1.08173) (27,1.07940) (28,1.09041) (29,1.10450) (30,1.09573) (31,1.09832) (32,1.09146) (33,1.09773) (34,1.09507) (35,1.12576) (36,1.13554) (37,1.13420) (38,1.13360) (39,1.12932) (40,1.13953) (41,1.13715) (42,1.13901) (43,1.14488) (44,1.15137) (45,1.13504) (46,1.13292) (47,1.13725) (48,1.13628) (49,1.13448) (50,1.14075) (51,1.13902) (52,1.13219)
-};
-\addlegendentry{Close Price}
-
-% SMA 7
-\addplot[color=blue, thick, dashed, mark=none, smooth] coordinates {
-    (1,1.04119) (2,1.04485) (3,1.05067) (4,1.05785) (5,1.06202) (6,1.06551) (7,1.06843) (8,1.07454) (9,1.08066)
-    (10,1.08440) (11,1.08527) (12,1.08655) (13,1.08726) (14,1.08809) (15,1.08951) (16,1.08948) (17,1.08902) (18,1.08841) (19,1.08783) (20,1.08673) (21,1.08489) (22,1.08206) (23,1.08048) (24,1.08006) (25,1.08022) (26,1.07996) (27,1.07984) (28,1.08149) (29,1.08583) (30,1.08807) (31,1.09035) (32,1.09165) (33,1.09394) (34,1.09617) (35,1.10122) (36,1.10566) (37,1.11115) (38,1.11619) (39,1.12160) (40,1.12757) (41,1.13359) (42,1.13548) (43,1.13681) (44,1.13927) (45,1.13947) (46,1.13999) (47,1.13966) (48,1.13954) (49,1.13889) (50,1.13830) (51,1.13653) (52,1.13613)
-};
-\addlegendentry{SMA 7}
-
-% SMA 14
-\addplot[color=red, thick, dotted, mark=none, smooth] coordinates {
-    (1,1.04119) (2,1.04485) (3,1.05067) (4,1.05785) (5,1.06202) (6,1.06551) (7,1.06843) (8,1.07037) (9,1.07270)
-    (10,1.07428) (11,1.07530) (12,1.07633) (13,1.07722) (14,1.07826) (15,1.08202) (16,1.08507) (17,1.08671) (18,1.08684) (19,1.08719) (20,1.08700) (21,1.08649) (22,1.08579) (23,1.08498) (24,1.08454) (25,1.08432) (26,1.08389) (27,1.08329) (28,1.08319) (29,1.08395) (30,1.08427) (31,1.08520) (32,1.08594) (33,1.08695) (34,1.08801) (35,1.09136) (36,1.09574) (37,1.09961) (38,1.10327) (39,1.10663) (40,1.11075) (41,1.11488) (42,1.11835) (43,1.12124) (44,1.12521) (45,1.12783) (46,1.13079) (47,1.13362) (48,1.13656) (49,1.13718) (50,1.13756) (51,1.13790) (52,1.13780)
-};
-\addlegendentry{SMA 14}
-
-% BUY signal markers - High quality signals
-\addplot[only marks, mark=triangle*, mark size=4pt, color=green!70!black] coordinates {
-    (2,1.04851) (24,1.08237) (28,1.09041) (33,1.09773) (35,1.12576) (50,1.14075)
-};
-\addlegendentry{BUY Signal}
-
-% Bollinger Band upper
-\addplot[color=gray, thin, mark=none, smooth] coordinates {
-    (1,1.04719) (2,1.05520) (3,1.07210) (4,1.09151) (5,1.09663) (6,1.10085) (7,1.10422) (8,1.10232) (9,1.09893)
-    (10,1.09363) (11,1.09338) (12,1.09231) (13,1.09209) (14,1.09382) (15,1.09533) (16,1.09525) (17,1.09560) (18,1.09701) (19,1.09719) (20,1.09771) (21,1.09623) (22,1.09281) (23,1.08765) (24,1.08617) (25,1.08653) (26,1.08575) (27,1.08564) (28,1.09123) (29,1.10381) (30,1.10659) (31,1.10951) (32,1.10947) (33,1.10982) (34,1.10560) (35,1.12427) (36,1.14055) (37,1.15057) (38,1.15695) (39,1.15670) (40,1.15757) (41,1.14295) (42,1.14254) (43,1.14684) (44,1.15373) (45,1.15359) (46,1.15256) (47,1.15241) (48,1.15241) (49,1.15233) (50,1.15085) (51,1.14195) (52,1.14243)
-};
-\addlegendentry{BB Upper}
-
-% Bollinger Band lower
-\addplot[color=gray, thin, mark=none, smooth] coordinates {
-    (1,1.03519) (2,1.03450) (3,1.02923) (4,1.02420) (5,1.02742) (6,1.03016) (7,1.03265) (8,1.04676) (9,1.06238)
-    (10,1.07518) (11,1.07716) (12,1.08078) (13,1.08243) (14,1.08236) (15,1.08370) (16,1.08371) (17,1.08245) (18,1.07982) (19,1.07848) (20,1.07576) (21,1.07355) (22,1.07132) (23,1.07331) (24,1.07394) (25,1.07391) (26,1.07416) (27,1.07404) (28,1.07175) (29,1.06785) (30,1.06954) (31,1.07118) (32,1.07383) (33,1.07806) (34,1.08675) (35,1.07818) (36,1.07077) (37,1.07174) (38,1.07544) (39,1.08651) (40,1.09758) (41,1.12422) (42,1.12842) (43,1.12679) (44,1.12481) (45,1.12535) (46,1.12741) (47,1.12691) (48,1.12666) (49,1.12545) (50,1.12575) (51,1.13112) (52,1.12983)
-};
-\addlegendentry{BB Lower}
-
-\end{axis}
-\end{tikzpicture}
-\caption{EUR/USD 2025 оны 3-4-р сарын бодит үнийн хөдөлгөөн ба техникийн индикаторууд}
-\label{fig:price_chart}
-\end{figure}
-
-\subsection{Системийн архитектурын диаграмм}
+\subsection{System Architecture Diagram}
 
 Системийн бүрэлдэхүүн хэсгүүдийн харилцан холболтыг давхаргат архитектураар харуулав:
 
 \begin{figure}[H]
 \centering
 \begin{tikzpicture}[scale=0.9, transform shape,
-    box/.style={rectangle, draw=#1!70, line width=1pt, fill=#1!12, rounded corners=3pt, minimum height=1cm, align=center, font=\sffamily\small, drop shadow={shadow xshift=1pt, shadow yshift=-1pt, opacity=0.2}},
-    layer/.style={rectangle, draw=#1!40, fill=#1!6, rounded corners=5pt, line width=0.8pt},
-    db/.style={cylinder, draw=orange!70, fill=orange!12, shape border rotate=90, aspect=0.3, minimum height=0.9cm, minimum width=1.4cm, font=\sffamily\footnotesize, drop shadow={shadow xshift=1pt, shadow yshift=-1pt, opacity=0.2}},
-    myarrow/.style={-{Stealth[length=2.5mm]}, line width=1pt, #1},
-    mydarrow/.style={{Stealth[length=2.5mm]}-{Stealth[length=2.5mm]}, line width=1pt, #1}
+    box/.style={rectangle, draw=#1!70, line width=1pt, fill=#1!12, rounded corners=3pt, minimum height=1cm, align=center, font=\sffamily\small, drop shadow={shadow xshift=1pt, shadow yshift=-1pt, opacity=0.3}},
+    layer/.style={rectangle, draw=#1!40, fill=#1!4, rounded corners=5pt, line width=0.8pt},
+    db/.style={cylinder, draw=orange!70, fill=orange!12, shape border rotate=90, aspect=0.3, minimum height=0.9cm, minimum width=1.4cm, font=\sffamily\footnotesize, drop shadow={shadow xshift=1pt, shadow yshift=-1pt, opacity=0.3}},
+    myarrow/.style={-{Stealth[length=3mm, width=2mm]}, line width=1pt, #1},
+    mydarrow/.style={{Stealth[length=3mm, width=2mm]}-{Stealth[length=3mm, width=2mm]}, line width=1pt, #1},
+    layerlabel/.style={font=\small\bfseries, align=center, anchor=north, yshift=-3pt}
 ]
     % === LAYERS ===
-    \node[layer=violet, minimum width=3cm, minimum height=4.5cm] (L1) at (0,0) {};
-    \node[layer=blue, minimum width=3cm, minimum height=4.5cm] (L2) at (4,0) {};
-    \node[layer=green!70!black, minimum width=7.2cm, minimum height=2cm] (L3) at (10,1.5) {};
-    \node[layer=orange, minimum width=7.2cm, minimum height=2cm] (L4) at (10,-1.5) {};
+    % Layer 1: Application - Left
+    \node[layer=violet, minimum width=3.2cm, minimum height=4.5cm] (L1) at (0,0) {};
+    \node[layerlabel, text=violet!60!black] at (L1.north) {Client\\Side};
     
-    % === LAYER LABELS ===
-    \node[font=\sffamily\small\bfseries, violet!60!black] at (0,2) {Application};
-    \node[font=\sffamily\small\bfseries, blue!60!black] at (4,2) {Backend};
-    \node[font=\sffamily\small\bfseries, green!50!black] at (10,2.3) {ML Layer};
-    \node[font=\sffamily\small\bfseries, orange!60!black] at (10,-0.7) {Data Layer};
+    % Layer 2: Backend - Middle Left
+    \node[layer=blue, minimum width=3.2cm, minimum height=4.5cm] (L2) at (4.5,0) {};
+    \node[layerlabel, text=blue!60!black] at (L2.north) {Server\\Side};
+    
+    % Layer 3: ML - Top Right
+    \node[layer=green!60!black, minimum width=8.5cm, minimum height=2.8cm] (L3) at (13.0,1.6) {};
+    \node[layerlabel, text=green!50!black] at (L3.north) {Machine Learning Models};
+    
+    % Layer 4: Data - Bottom Right
+    \node[layer=orange, minimum width=8.5cm, minimum height=2.8cm] (L4) at (13.0,-1.8) {};
+    \node[layerlabel, text=orange!60!black] at (L4.north) {Data Layer};
     
     % === COMPONENTS ===
-    \node[box=violet, minimum width=2.4cm, minimum height=1.3cm] (app) at (0,0) {Mobile App\\\scriptsize Expo + React Native};
-    \node[box=blue, minimum width=2.4cm, minimum height=1.3cm] (api) at (4,0) {Flask API\\\scriptsize Waitress WSGI};
+    \node[box=violet, minimum width=2.6cm, minimum height=1.3cm] (app) at (0,-0.2) {Mobile App\\\scriptsize Expo + React Native};
+    \node[box=blue, minimum width=2.6cm, minimum height=1.3cm] (api) at (4.5,-0.2) {Flask API\\\scriptsize Waitress WSGI};
     
-    % ML Models - V10: 7 models (XGB×3, LGB×2, CAT×2)
-    \node[box=green!70!black, minimum width=1.5cm] (xgb) at (7.2,1.5) {\footnotesize XGB×3};
-    \node[box=yellow!70!black, minimum width=1.5cm] (lgb) at (9.2,1.5) {\footnotesize LGB×2};
-    \node[box=orange!70!black, minimum width=1.5cm] (cat) at (11.2,1.5) {\footnotesize CAT×2};
-    \node[box=red!50!black, minimum width=1.4cm] (bonus) at (13.2,1.5) {\footnotesize +Bonus};
+    % ML Models
+    \node[box=green!70!black, minimum width=1.8cm] (xgb) at (10.5,1.5) {\footnotesize XGB×3};
+    \node[box=yellow!70!black, minimum width=1.8cm] (lgb) at (13.0,1.5) {\footnotesize LGB×2};
+    \node[box=orange!70!black, minimum width=1.8cm] (cat) at (15.5,1.5) {\footnotesize CAT×2};
     
-    % Data
-    \node[db] (mongo) at (8,-1.5) {MongoDB};
-    \node[box=cyan, minimum width=2cm] (twelve) at (12,-1.5) {\footnotesize Twelve Data};
+    % Data Components
+    \node[db] (mongo) at (10.5,-2.1) {MongoDB};
+    \node[box=cyan, minimum width=2.2cm] (twelve) at (15.0,-2.1) {\footnotesize Twelve Data};
     
     % === ARROWS ===
+    % App <-> API
     \draw[mydarrow=violet!70] (app.east) -- (api.west);
-    \node[font=\sffamily\scriptsize, fill=white, inner sep=1pt, text=violet!70] at (2,0.15) {REST};
-    \node[font=\sffamily\scriptsize, fill=white, inner sep=1pt, text=violet!70] at (2,-0.15) {API};
+    \node[font=\sffamily\scriptsize, fill=white, inner sep=1pt, text=violet!70, align=center] at (2.25,-0.2) {REST\\API};
     
-    \draw[myarrow=blue!70] (api.east) -- ++(0.8,0) |- (L3.west) node[pos=0.25, above, font=\sffamily\scriptsize, fill=white, inner sep=1pt] {Predict};
+    % API -> ML
+    \draw[myarrow=blue!70] (api.east) -- ++(1.8,0) |- (L3.west) node[pos=0.2, above, font=\sffamily\scriptsize, fill=white, inner sep=1pt, align=center] {Request\\Prediction};
     
-    \draw[mydarrow=orange!70] (api.east) -- ++(0.8,0) |- (mongo.west) node[pos=0.25, below, font=\sffamily\scriptsize, fill=white, inner sep=1pt] {Users/Signals};
+    % API <-> Data
+    \draw[mydarrow=orange!70] (api.east) -- ++(1.8,0) |- (L4.west) node[pos=0.2, below, font=\sffamily\scriptsize, fill=white, inner sep=1pt] {Signal};
     
-    \draw[myarrow=cyan!70] (twelve.west) -- (mongo.east) node[midway, above, font=\sffamily\scriptsize] {Prices};
+    % Data Flow
+    \draw[myarrow=cyan!70] (twelve.west) -- (mongo.east) node[midway, above, font=\sffamily\scriptsize, text=cyan!80!black] {Real-time Price};
     
-    % === ENSEMBLE LABEL ===
-    \node[font=\sffamily\scriptsize\itshape, green!40!black] at (10,0.7) {V10 Ensemble (7 Models + Agreement Bonus)};
+    % ML Ensemble Label
+    \node[font=\sffamily\scriptsize\itshape, green!40!black] at (13.0,0.5) {Hybrid Ensemble (7 models)};
 
 \end{tikzpicture}
-\caption{Системийн архитектурын диаграмм}
+\caption{System Architecture Diagram}
 \label{fig:system_architecture}
 \end{figure}
 
-\subsection{Sequence Diagram - API дуудлага}
+\subsection{Sequence Diagram - API Call}
 
 API дуудлагын дарааллын диаграмм:
 
@@ -332,8 +306,8 @@ API дуудлагын дарааллын диаграмм:
 ]
     % === ACTORS ===
     \node[actor] (user) at (0,0) {Хэрэглэгч};
-    \node[actor] (app) at (3.5,0) {Аппликейшн};
-    \node[actor] (api) at (7,0) {Backend API};
+    \node[actor] (app) at (3.5,0) {Mobile App};
+    \node[actor] (api) at (7,0) {Backend Server};
     \node[actor] (ml) at (10.5,0) {ML Model};
     \node[actor] (data) at (14,0) {Twelve Data};
     
@@ -357,64 +331,64 @@ API дуудлагын дарааллын диаграмм:
     
     % 2. Дохио хүсэх
     \draw[msg] (3.65,-2.5) -- (6.85,-2.5);
-    \node[lbl] at (5.25,-2.2) {2. Дохио хүсэх};
+    \node[lbl] at (5.25,-2.2) {2. Request Signal};
     
     % 3. Өгөгдөл татах
     \draw[msg] (7.15,-3.5) -- (13.85,-3.5);
-    \node[lbl] at (10.5,-3.2) {3. Өгөгдөл татах};
+    \node[lbl] at (10.5,-3.2) {3. Fetch Data};
     
     % 4. OHLCV өгөгдөл
     \draw[ret] (7.15,-4.3) -- (13.85,-4.3);
-    \node[lbl] at (10.5,-4) {4. OHLCV өгөгдөл};
+    \node[lbl] at (10.5,-4) {4. OHLCV Data};
     
     % 5. Таамаглал хүсэх
     \draw[msg] (7.15,-5.5) -- (10.35,-5.5);
-    \node[lbl] at (8.75,-5.2) {5. Таамаглал хүсэх};
+    \node[lbl] at (8.75,-5.2) {5. Request Prediction};
     
     % 6. Таамаглал
     \draw[ret] (7.15,-6.3) -- (10.35,-6.3);
-    \node[lbl] at (8.75,-6) {6. Таамаглал};
+    \node[lbl] at (8.75,-6) {6. Prediction};
     
     % 7. Дохио илгээх
     \draw[ret] (3.65,-7.3) -- (6.85,-7.3);
-    \node[lbl] at (5.25,-7) {7. Дохио илгээх};
+    \node[lbl] at (5.25,-7) {7. Send Signal};
     
-    % 8. Push notification
+    % 8. Таамаглал хүлээн авах
     \draw[ret] (0,-8.3) -- (3.35,-8.3);
-    \node[lbl] at (1.75,-8) {8. Push notification};
+    \node[lbl] at (1.75,-8) {8. Receive Prediction};
 
 \end{tikzpicture}
-\caption{Sequence диаграм - Дохио хүлээн авах}
+\caption{Sequence Diagram - API Call}
 \label{fig:sequence_diagram}
 \end{figure}
 
-\section{Өгөгдлийн тодорхойлолт}
+\section{Data Description}
 
-\subsection{Өгөгдлийн эх сурвалж}
+\subsection{Data Source}
 
 Энэхүү судалгаанд EUR/USD валютын хосын 1 минутын интервалтай түүхэн өгөгдлийг ашигласан. Өгөгдлийг Twelve Data API үйлчилгээнээс татан авсан бөгөөд дараах талбаруудыг агуулна:
 
 \begin{itemize}
-    \item \textbf{timestamp} - Цаг хугацааны тэмдэг (UTC)
-    \item \textbf{open} - Нээлтийн үнэ
-    \item \textbf{high} - Хамгийн өндөр үнэ
-    \item \textbf{low} - Хамгийн бага үнэ
-    \item \textbf{close} - Хаалтын үнэ
-    \item \textbf{volume} - Арилжааны хэмжээ
+    \item \textbf{timestamp} - Timestamp (UTC)
+    \item \textbf{open} - Open Price
+    \item \textbf{high} - High Price
+    \item \textbf{low} - Low Price
+    \item \textbf{close} - Close Price
+    \item \textbf{volume} - Volume
 \end{itemize}
 
-\subsection{Өгөгдлийн хугацааны хүрээ}
+\subsection{Data Time Range}
 
 \begin{table}[H]
 \centering
-\caption{Өгөгдлийн хугацааны хүрээ}
+\caption{Data Time Range}
 \begin{tabular}{|l|l|l|r|}
 \hline
-\textbf{Төрөл} & \textbf{Эхлэх огноо} & \textbf{Дуусах огноо} & \textbf{Мөрийн тоо} \\
+\textbf{Dataset} & \textbf{Start Date} & \textbf{End Date} & \textbf{Rows} \\
 \hline
-Сургалтын өгөгдөл & 2019-12-31 & 2024-12-30 & 1,859,492 \\
+Train Set & 2019-12-31 & 2024-12-30 & 1,859,492 \\
 \hline
-Тестийн өгөгдөл & 2024-12-31 & 2025-10-17 & 296,778 \\
+Test Set & 2024-12-31 & 2025-10-17 & 296,778 \\
 \hline
 \end{tabular}
 \label{tab:data_range}
@@ -432,32 +406,85 @@ API дуудлагын дарааллын диаграмм:
 
 \section{Шинж чанар инженерчлэл}
 
-Энэхүү судалгаанд нийт 70 техникийн индикаторыг шинж чанар болгон ашигласан. Эдгээр индикаторуудыг дараах ангиллаар бүлэглэж болно:
+Энэхүү судалгаанд суурь үзүүлэлтүүд дээр шинээр хосолсон шинж чанаруудыг (Hybrid Features) нэмж ашигласан.
 
-\subsection{Чиг хандлагын индикаторууд (Trend Indicators)}
+\subsection{Features Summary}
 
-\subsubsection{Хөдөлгөөнт дундаж (Moving Averages)}
+Нийт 32 Technical Indicator-ийг дараах категориудаар бүлэглэв:
+
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}
+\begin{axis}[
+    ybar,
+    width=12cm,
+    height=6cm,
+    xlabel={Category},
+    ylabel={Number of Features},
+    symbolic x coords={Trend, Momentum, Volatility, Candle, S/R},
+    xtick=data,
+    nodes near coords,
+    bar width=1cm,
+    ymin=0,
+    ymax=15,
+    enlarge x limits=0.15,
+]
+\addplot[fill=blue!60] coordinates {
+    (Trend, 11)
+    (Momentum, 8)
+    (Volatility, 7)
+    (Candle, 4)
+    (S/R, 2)
+};
+\end{axis}
+\end{tikzpicture}
+\caption{Number of Selected Features per Category}
+\label{fig:feature_bar}
+\end{figure}
+
+\begin{itemize}
+    \item \textbf{Trend Indicators (11):} SMA (5, 10, 20, 50), EMA (5, 20), ADX, Trend Score, Price vs MA
+    \item \textbf{Momentum Indicators (8):} RSI (14), MACD, CCI, Williams \%R, Momentum Score, RSI Zone
+    \item \textbf{Volatility Indicators (7):} ATR (14), Bollinger Bands (width, position), Volatility State, Breakout
+    \item \textbf{Candle Patterns (4):} Body size, Wick ratio, Bullish/Bearish, Candle Streak
+    \item \textbf{Support/Resistance (2):} Dist to High/Low (20 period)
+\end{itemize}
+
+\subsection{Core Features}
+
+\subsubsection{Moving Averages}
 
 Энгийн хөдөлгөөнт дундаж (SMA) ба экспоненциал хөдөлгөөнт дундаж (EMA)-ийг 6 өөр хугацаанд (5, 10, 20, 50, 100, 200) тооцоолсон.
 
-\subsubsection{MA Crossover дохионууд}
+\subsubsection{MA Crossover Signals}
 
 Хөдөлгөөнт дундажийн огтлолцлыг BUY дохионы шинж чанар болгон ашигласан:
 
 \begin{itemize}
-    \item \textbf{sma\_5\_20\_cross} - SMA(5) > SMA(20) бол 1
-    \item \textbf{sma\_20\_50\_cross} - SMA(20) > SMA(50) бол 1
-    \item \textbf{ema\_10\_50\_cross} - EMA(10) > EMA(50) бол 1
-    \item \textbf{golden\_cross} - SMA(50) > SMA(200) бол 1 (Golden Cross)
+    \item \textbf{sma\_5\_20\_cross} - if SMA(5) > SMA(20) then 1
+    \item \textbf{sma\_20\_50\_cross} - if SMA(20) > SMA(50) then 1
+    \item \textbf{ema\_10\_50\_cross} - if EMA(10) > EMA(50) then 1
+    \item \textbf{golden\_cross} - if SMA(50) > SMA(200) then 1 (Golden Cross)
 \end{itemize}
 
-\subsubsection{Үнэ ба MA-ийн харьцаа}
+\subsection{Hybrid New Features}
 
-\begin{equation}
-\text{price\_vs\_sma20} = \frac{C - SMA_{20}}{SMA_{20}} \times 100
-\end{equation}
+Hybrid Ensemble загварын нарийвчлалыг нэмэгдүүлэхийн тулд дараах 10 шинэ бүлэг шинж чанарыг нэмсэн:
 
-\subsection{Моментум индикаторууд (Momentum Indicators)}
+\begin{enumerate}
+    \item \textbf{Trend Strength Score (0-5):} EMA огтлолцлууд болон ADX дээр суурилсан чиг хандлагын хүч.
+    \item \textbf{Momentum Alignment:} RSI, MACD, CCI, Williams \%R зэрэг моментум индикаторуудын давхцал.
+    \item \textbf{Volatility State:} Volatility SMA-тай харьцуулсан зах зээлийн тогтворгүй байдлын төлөв (High, Low, Normal).
+    \item \textbf{Price Action Patterns:} Лааны биеийн харьцаа, wick-ийн урт зэрэг price action мэдээлэл.
+    \item \textbf{Bullish Patterns:} Өсөлтийн лааны дараалал (bullish streak).
+    \item \textbf{Support/Resistance Proximity:} 20-period High/Low цэгүүдтэй үнийн ойролцоо байдал.
+    \item \textbf{Multi-timeframe Momentum:} RSI-ийн богино болон урт хугацааны дунджийн зөрүү.
+    \item \textbf{Breakout Detection:} Bollinger Bands-ийн дээд/доод хязгаарыг давсан эсэх.
+    \item \textbf{Price Momentum:} 5, 10, 20 минутын өмнөх үнэтэй харьцуулсан өөрчлөлт (ATR-аар жинлэсэн).
+    \item \textbf{Session Quality:} London/NY session overlap үеийг онцолсон feature.
+\end{enumerate}
+
+\subsection{Momentum Indicators}
 
 \subsubsection{RSI (Relative Strength Index)}
 
@@ -469,10 +496,10 @@ RSI = 100 - \frac{100}{1 + RS}
 
 Энд $RS = \frac{\text{Average Gain}}{\text{Average Loss}}$
 
-RSI-ийн бүсчлэл:
+RSI Zones:
 \begin{itemize}
-    \item \textbf{rsi\_oversold} - RSI(14) < 30 бол 1 (хэт зарагдсан)
-    \item \textbf{rsi\_bullish} - 50 < RSI(14) < 70 бол 1 (өсөлтийн бүс)
+    \item \textbf{rsi\_oversold} - if RSI(14) < 30 then 1 (Oversold)
+    \item \textbf{rsi\_bullish} - if 50 < RSI(14) < 70 then 1 (Bullish Zone)
 \end{itemize}
 
 \subsubsection{MACD (Moving Average Convergence Divergence)}
@@ -483,10 +510,10 @@ Signal &= EMA_9(MACD) \\
 Histogram &= MACD - Signal
 \end{align}
 
-MACD дохионууд:
+MACD Signals:
 \begin{itemize}
-    \item \textbf{macd\_cross} - MACD > Signal бол 1
-    \item \textbf{macd\_bullish} - MACD > Signal болон Histogram > 0 бол 1
+    \item \textbf{macd\_cross} - if MACD > Signal then 1
+    \item \textbf{macd\_bullish} - if MACD > Signal and Histogram > 0 then 1
 \end{itemize}
 
 \subsubsection{Stochastic Oscillator}
@@ -503,11 +530,11 @@ MACD дохионууд:
 ROC_n = \frac{C_t - C_{t-n}}{C_{t-n}} \times 100
 \end{equation}
 
-\subsection{Хэлбэлзлийн индикаторууд (Volatility Indicators)}
+\subsection{Volatility Indicators}
 
 \subsubsection{ATR (Average True Range)}
 
-ATR нь Stop Loss, Take Profit тооцоолоход чухал үүрэгтэй:
+ATR is crucial for calculating Stop Loss and Take Profit:
 
 \begin{equation}
 TR = max(H - L, |H - C_{prev}|, |L - C_{prev}|)
@@ -517,7 +544,7 @@ TR = max(H - L, |H - C_{prev}|, |L - C_{prev}|)
 ATR_{14} = SMA_{14}(TR)
 \end{equation}
 
-ATR-ийг pip болгон хөрвүүлэх:
+Converting ATR to pips:
 \begin{equation}
 ATR_{pips} = ATR_{14} \times 10000
 \end{equation}
@@ -530,18 +557,18 @@ BB_{upper} &= BB_{middle} + 2 \times \sigma_{20} \\
 BB_{lower} &= BB_{middle} - 2 \times \sigma_{20}
 \end{align}
 
-Bollinger Bands шинж чанарууд:
+Bollinger Bands Features:
 \begin{itemize}
-    \item \textbf{bb\_width} - Зурвасын өргөн (хувиар)
-    \item \textbf{bb\_position} - Үнэ зурвасын хаана байгаа (0-1)
-    \item \textbf{bb\_squeeze} - Зурваснаас нягтралт үүсч байвал 1
+    \item \textbf{bb\_width} - Band Width (\%)
+    \item \textbf{bb\_position} - Price Position (0-1)
+    \item \textbf{bb\_squeeze} - Squeeze Detected (1)
 \end{itemize}
 
-\subsection{Лааны загварууд (Candle Patterns)}
+\subsection{Candle Patterns}
 
 Лааны биеийн хэмжээ, сүүдрийн урт зэргийг тооцоолж, bullish engulfing, hammer зэрэг загваруудыг илрүүлсэн.
 
-\subsection{Дэмжлэг/Эсэргүүцэл (Support/Resistance)}
+\subsection{Support/Resistance}
 
 Pivot Point системийг ашигласан:
 
@@ -553,138 +580,158 @@ R2 &= Pivot + (H_{prev} - L_{prev}) \\
 S2 &= Pivot - (H_{prev} - L_{prev})
 \end{align}
 
-\subsection{Чиг хандлагын хүч (Trend Strength)}
+\subsection{Trend Strength}
 
 Гурван хугацааны (богино, дунд, урт) чиг хандлагыг нэгтгэн trend\_alignment үзүүлэлтийг тооцоолсон. Бүх гурван хугацаа өсөлтийн чиглэлтэй бол strong\_uptrend = 1 гэж тодорхойлсон.
 
-\subsection{BUY Score - Нэгдсэн дохионы үнэлгээ}
+\subsection{BUY Score}
 
 BUY дохионы хүчийг MACD, RSI, MA crossover, Golden Cross, чиг хандлага зэрэг индикаторуудын нийлбэр оноогоор тодорхойлсон.
 
-\section{Зорилтот хувьсагч (Target Variable)}
+\section{Target Variable}
 
-\subsection{BUY-Only Classification}
+\subsection{BUY-only Classification}
 
 Энэхүү судалгаанд BUY дохиог таамаглахад анхаарал хандуулсан. Зорилтот хувьсагчийг дараах байдлаар тодорхойлсон:
 
 \begin{itemize}
-    \item \textbf{BUY (1):} Take Profit (TP) нь Stop Loss (SL)-ээс өмнө хүрсэн
-    \item \textbf{NOT\_BUY (0):} SL эхлээд хүрсэн эсвэл аль нь ч хүрээгүй
+    \item \textbf{BUY (1):} Take Profit (TP) hit before Stop Loss (SL)
+    \item \textbf{NOT\_BUY (0):} SL hit first or neither reached
 \end{itemize}
 
-\subsection{Параметрүүд}
+\subsection{Parameters}
 
 \begin{table}[H]
 \centering
-\caption{Зорилтот хувьсагчийн параметрүүд}
+\caption{Target Variable Parameters}
 \begin{tabular}{|l|l|l|}
 \hline
-\textbf{Параметр} & \textbf{Утга} & \textbf{Тайлбар} \\
+\textbf{Parameter} & \textbf{Value} & \textbf{Description} \\
 \hline
-Forward periods & 60 bars & 1 цагийн дотор \\
+Forward periods & 60 bars & Within 1 hour \\
 \hline
-Take Profit & 20 pips & Ашгийн зорилт \\
+Take Profit & 20 pips & Profit Target \\
 \hline
-Stop Loss & 10 pips & Алдагдлын хязгаар \\
+Stop Loss & 10 pips & Loss Limit \\
 \hline
-Risk:Reward & 1:2 & Эрсдэл/Ашгийн харьцаа \\
+Risk:Reward & 1:2 & Risk/Reward Ratio \\
 \hline
 \end{tabular}
 \label{tab:target_params}
 \end{table}
 
-\section{Өгөгдлийн хуваалт ба Scaling}
+\section{Data Split and Scaling}
 
-\subsection{Хуваалт}
+\subsection{Splitting}
 
 Санхүүгийн өгөгдөлд хугацааны дарааллыг хадгалах шаардлагатай тул temporal split ашигласан:
 
 \begin{itemize}
-    \item \textbf{Train set:} 2019-12-31 - 2024-12-30 (1,859,492 мөр)
-    \item \textbf{Test set:} 2024-12-31 - 2025-10-17 (296,778 мөр)
+    \item \textbf{Train Set:} 2019-12-31 - 2024-12-30 (1,859,492 rows)
+    \item \textbf{Test Set:} 2024-12-31 - 2025-10-17 (296,778 rows)
 \end{itemize}
 
 \subsection{StandardScaler}
 
-Бүх шинж чанаруудыг StandardScaler ашиглан масштабчилсан:
+Бүх шинж чанаруудыг StandardScaler ашиглан scaled:
 
 \begin{equation}
 x_{scaled} = \frac{x - \mu}{\sigma}
 \end{equation}
 
-\section{Моделийн архитектур}
+\section{Model Architecture}
 
-\subsection{V10 Ensemble арга}
+\subsection{Proposed Hybrid Ensemble Method}
 
-Энэхүү судалгаанд долоон машин сургалтын моделийн ensemble ашигласан бөгөөд энэ нь V10 (Version 10) гэж нэрлэгдсэн. Гурван ялгаатай алгоритмын олон хувилбарыг нэгтгэснээр илүү найдвартай таамаглал гаргана:
+Энэхүү судалгаанд долоон машин сургалтын моделийн нэгдэл буюу ensemble аргыг ашигласан бөгөөд үүнийг ``Hybrid Ensemble System'' гэж нэрлэв. Гурван ялгаатай алгоритмын олон хувилбарыг нэгтгэснээр илүү найдвартай таамаглал гаргана:
 
 \begin{enumerate}
-    \item \textbf{XGBoost × 3} - Gradient Boosting Decision Trees (гурван өөр hyperparameter)
-    \item \textbf{LightGBM × 2} - Light Gradient Boosting Machine (хоёр өөр тохиргоо)
-    \item \textbf{CatBoost × 2} - Categorical Boosting (хоёр өөр тохиргоо)
+    \item \textbf{XGBoost × 3} - Gradient Boosting Decision Trees (3 different hyperparameters)
+    \item \textbf{LightGBM × 2} - Light Gradient Boosting Machine (2 different configs)
+    \item \textbf{CatBoost × 2} - Categorical Boosting (2 different configs)
 \end{enumerate}
 
 \begin{figure}[H]
 \centering
 \begin{tikzpicture}[
-    block/.style={rectangle, draw, rounded corners, minimum width=1.8cm, minimum height=0.7cm, fill=blue!20, font=\small},
-    arrow/.style={-Stealth, thick},
-    node distance=0.8cm
+    scale=0.9, transform shape,
+    % Basic block styles
+    block/.style={rectangle, draw=gray!80, line width=0.8pt, rounded corners=4pt, minimum width=2.2cm, minimum height=1cm, font=\sffamily\small, align=center, fill=white},
+    % Input/System/Output styles
+    feature/.style={block, fill=blue!10, minimum width=6cm, minimum height=1.2cm},
+    system/.style={block, fill=cyan!15, minimum width=12cm, minimum height=1.2cm, rounded corners=6pt},
+    ensemble/.style={block, fill=red!15, minimum width=8cm},
+    output/.style={block, fill=purple!15, minimum width=4cm, font=\bfseries},
+    % Group container style
+    group_box/.style={rectangle, draw, line width=1pt, rounded corners=6pt, inner sep=10pt, align=center, fill opacity=0.1},
+    % Inner model label style (simple textual boxes)
+    inner_model/.style={rectangle, draw=gray!60, line width=0.5pt, rounded corners=2pt, minimum width=2.5cm, minimum height=0.7cm, font=\sffamily\footnotesize, align=center},
+    % Connectors
+    arrow/.style={-{Stealth[scale=1.0]}, thick, color=gray!70!black}
 ]
-    % Input
-    \node[block, fill=gray!20, minimum width=4cm] (input) {32 Technical Features};
+
+    % === LEVEL 1: INPUT ===
+    \node[feature] (input) at (0,0) {Hybrid Features};
+
+    % === LEVEL 2: GROUPS (Horizontal Layout of Groups) ===
     
-    % Models - Row 1 (XGBoost variants)
-    \node[block, below left=1.5cm and 2.5cm of input, fill=green!25] (xgb1) {XGBoost-1};
-    \node[block, below left=1.5cm and 0.5cm of input, fill=green!20] (xgb2) {XGBoost-2};
-    \node[block, below=1.5cm of input, fill=green!15] (xgb3) {XGBoost-3};
+    % --- LightGBM Group (Left) ---
+    % 2 Models
+    \node[group_box, draw=yellow!60!black, fill=yellow!50, minimum width=4cm, minimum height=4cm] (lgb_group) at (-5, -4) {};
+    % Inside
+    \node[inner_model, fill=yellow!15] at (-5, -3.2) {LightGBM-1};
+    \node[inner_model, fill=yellow!15] at (-5, -4.5) {LightGBM-2};
+
+    % --- XGBoost Group (Center) ---
+    % 3 Models
+    \node[group_box, draw=green!60!black, fill=green!50, minimum width=4cm, minimum height=5cm] (xgb_group) at (0, -4.5) {};
+    % Inside
+    \node[inner_model, fill=green!15] at (0, -3.2) {XGBoost-1};
+    \node[inner_model, fill=green!15] at (0, -4.5) {XGBoost-2};
+    \node[inner_model, fill=green!15] at (0, -5.8) {XGBoost-3};
+
+    % --- CatBoost Group (Right) ---
+    % 2 Models
+    \node[group_box, draw=orange!60!black, fill=orange!50, minimum width=4cm, minimum height=4cm] (cat_group) at (5, -4) {};
+    % Inside
+    \node[inner_model, fill=orange!15] at (5, -3.2) {CatBoost-1};
+    \node[inner_model, fill=orange!15] at (5, -4.5) {CatBoost-2};
+
+    % === LEVEL 3: AGGREGATION ===
+    % Position relative to the lowest group (XGBoost ends at -7 or so)
+    \node[system] (agreement) at (0,-8.5) {Agreement Bonus System};
+
+    % === LEVEL 4: ENSEMBLE ===
+    \node[ensemble] (weighted) at (0,-10.0) {Weighted Ensemble + Bonus};
+
+    % === LEVEL 5: OUTPUT ===
+    \node[output] (final) at (0,-11.5) {BUY Confidence};
+
+    % === CONNECTIONS ===
     
-    % Models - Row 1 (LightGBM and CatBoost)
-    \node[block, below right=1.5cm and 0.5cm of input, fill=yellow!25] (lgb1) {LightGBM-1};
-    \node[block, below right=1.5cm and 2.5cm of input, fill=yellow!15] (lgb2) {LightGBM-2};
-    
-    % CatBoost models
-    \node[block, below=3.2cm of xgb2, fill=orange!25] (cat1) {CatBoost-1};
-    \node[block, below=3.2cm of lgb1, fill=orange!15] (cat2) {CatBoost-2};
-    
-    % Agreement Bonus
-    \node[block, below=4.5cm of input, fill=cyan!20, minimum width=5cm] (agreement) {Agreement Bonus System};
-    
-    % Ensemble
-    \node[block, below=0.8cm of agreement, fill=red!20, minimum width=5cm] (ensemble) {Weighted Ensemble + Bonus};
-    
-    % Output
-    \node[block, below=0.8cm of ensemble, fill=purple!20, minimum width=3cm] (output) {BUY Confidence};
-    
-    % Arrows - Input to models
-    \draw[arrow] (input) -- (xgb1);
-    \draw[arrow] (input) -- (xgb2);
-    \draw[arrow] (input) -- (xgb3);
-    \draw[arrow] (input) -- (lgb1);
-    \draw[arrow] (input) -- (lgb2);
-    
-    % XGB to CatBoost area
-    \draw[arrow] (xgb1) |- (cat1);
-    \draw[arrow] (xgb3) |- (cat1);
-    \draw[arrow] (lgb1) |- (cat2);
-    \draw[arrow] (lgb2) |- (cat2);
-    
-    % To agreement
-    \draw[arrow] (cat1) -- (agreement);
-    \draw[arrow] (cat2) -- (agreement);
-    \draw[arrow] (xgb2) -- (agreement);
-    
-    % Final flow
-    \draw[arrow] (agreement) -- (ensemble);
-    \draw[arrow] (ensemble) -- (output);
+    % Input -> Groups (Top of containers)
+    \draw[arrow] (input.south) -- +(0,-0.6) -| (lgb_group.north);
+    \draw[arrow] (input.south) -- (xgb_group.north);
+    \draw[arrow] (input.south) -- +(0,-0.6) -| (cat_group.north);
+
+    % Groups (Bottom of containers) -> Agreement
+    % Draw straight vertical lines from each group to the Agreement box directly below it
+    \draw[arrow] (lgb_group.south) -- (lgb_group.south |- agreement.north);
+    \draw[arrow] (xgb_group.south) -- (xgb_group.south |- agreement.north);
+    \draw[arrow] (cat_group.south) -- (cat_group.south |- agreement.north);
+
+    % Agreement flow
+    \draw[arrow] (agreement.south) -- (weighted.north);
+    \draw[arrow] (weighted.south) -- (final.north);
+
 \end{tikzpicture}
-\caption{V10 Ensemble моделийн архитектур (7 загвар)}
+\caption{Hybrid Ensemble Model Architecture (7 models)}
 \label{fig:ensemble_arch}
 \end{figure}
 
-\subsection{XGBoost загварууд}
+\subsection{XGBoost Models}
 
-XGBoost (eXtreme Gradient Boosting) нь gradient boosting framework дээр суурилсан алгоритм юм. V10-д гурван өөр hyperparameter-тэй XGBoost загварыг ашигласан:
+XGBoost (eXtreme Gradient Boosting) нь gradient boosting framework дээр суурилсан алгоритм юм. Энэхүү системд гурван өөр hyperparameter-тэй XGBoost загварыг ашигласан:
 
 \begin{itemize}
     \item \textbf{XGB-1:} n\_estimators=500, max\_depth=6, learning\_rate=0.03
@@ -692,7 +739,7 @@ XGBoost (eXtreme Gradient Boosting) нь gradient boosting framework дээр с
     \item \textbf{XGB-3:} n\_estimators=300, max\_depth=5, learning\_rate=0.08
 \end{itemize}
 
-\subsection{LightGBM загварууд}
+\subsection{LightGBM Models}
 
 LightGBM нь Microsoft-ийн боловсруулсан хурдан gradient boosting framework юм:
 
@@ -701,7 +748,7 @@ LightGBM нь Microsoft-ийн боловсруулсан хурдан gradient 
     \item \textbf{LGB-2:} n\_estimators=400, max\_depth=8, learning\_rate=0.05
 \end{itemize}
 
-\subsection{CatBoost загварууд}
+\subsection{CatBoost Models}
 
 CatBoost нь Yandex-ийн боловсруулсан, categorical feature-тэй сайн ажилладаг алгоритм:
 
@@ -712,20 +759,20 @@ CatBoost нь Yandex-ийн боловсруулсан, categorical feature-тэ
 
 \subsection{Agreement Bonus System}
 
-V10-ийн гол шинэлэг тал бол загваруудын ``зөвшилцөл''-д суурилсан нэмэлт оноо юм. Бүх загварууд ижил таамаглал гаргах тусам итгэлцүүр нэмэгддэг:
+Agreement Bonus системийн гол шинэлэг тал бол загваруудын ``зөвшилцөл''-д суурилсан нэмэлт оноо юм. Бүх загварууд ижил таамаглал гаргах тусам итгэлцүүр нэмэгддэг:
 
 \begin{table}[H]
 \centering
 \caption{Agreement Bonus System}
 \begin{tabular}{|c|c|l|}
 \hline
-\textbf{Зөвшилцөл} & \textbf{Нэмэлт оноо} & \textbf{Тайлбар} \\
+\textbf{Agreement} & \textbf{Bonus Score} & \textbf{Description} \\
 \hline
-7/7 загвар & +7\% & Бүгд ижил таамаглал \\
+7/7 models & +7\% & All same prediction \\
 \hline
-6/7 загвар & +4\% & Нэгээс бусад нь ижил \\
+6/7 models & +4\% & All but one same \\
 \hline
-5/7 загвар & +2\% & Олонхи нь ижил \\
+5/7 models & +2\% & Majority same \\
 \hline
 \end{tabular}
 \label{tab:agreement_bonus}
@@ -745,14 +792,14 @@ P_{final} = P_{base} + \text{Agreement Bonus}
 
 Энд $w_i$ нь загвар бүрийн жин (нийлбэр нь 1.0)
 
-\subsection{Hyperparameter}
+\subsection{Hyperparameters}
 
 \begin{table}[H]
 \centering
-\caption{V10 Моделийн Hyperparameter тохиргоо}
+\caption{Ensemble Model Hyperparameters}
 \begin{tabular}{|l|l|l|l|l|}
 \hline
-\textbf{Параметр} & \textbf{XGB-1} & \textbf{XGB-2/LGB-1} & \textbf{LGB-2} & \textbf{CatBoost} \\
+\textbf{Parameter} & \textbf{XGB-1} & \textbf{XGB-2/LGB-1} & \textbf{LGB-2} & \textbf{CatBoost} \\
 \hline
 n\_estimators & 500 & 400 & 400 & 400-500 \\
 \hline
@@ -770,17 +817,17 @@ colsample & 0.8 & 0.8 & 0.8 & 0.8 \\
 
 \section{Confidence Threshold}
 
-V10 моделийн итгэлцүүрийн босго нь дохиог үүсгэх эсэхийг тодорхойлно:
+Системийн итгэлцүүрийн босго нь дохиог үүсгэх эсэхийг тодорхойлно:
 
 \begin{itemize}
-    \item $P_{BUY} \geq 85\%$: BUY дохио үүсгэнэ (96.9\% нарийвчлал)
-    \item $P_{BUY} \geq 80\%$: BUY дохио (94.7\% нарийвчлал)
-    \item $P_{BUY} < 80\%$: HOLD (хүлээх)
+    \item $P_{BUY} \geq 85\%$: Generate BUY signal (96.9\% accuracy)
+    \item $P_{BUY} \geq 80\%$: BUY signal (71.8\% accuracy)
+    \item $P_{BUY} < 80\%$: HOLD (wait)
 \end{itemize}
 
-85\% босго нь хамгийн оновчтой бөгөөд 96.9\% accuracy, 52.2 profit factor-тай байна.
+85\% босго нь хамгийн оновчтой бөгөөд 96.9\% нарийвчлал (accuracy), өндөр ашигт ажиллагаатай байна.
 
-\section{Динамик SL/TP тооцоолол}
+\section{Dynamic SL/TP Calculation}
 
 Stop Loss ба Take Profit-ийг ATR дээр суурилан динамикаар тооцоолно:
 
@@ -799,7 +846,7 @@ TP_{pips} &= ATR_{pips} \times 2.5
 
 \subsection{Flask + Waitress}
 
-Backend нь Flask framework ба Waitress WSGI server ашиглан хөгжүүлэгдсэн. /signal/v2 endpoint нь Twelve Data API-аас өгөгдөл авч, ML загваруудаар таамаглал хийж, JSON хэлбэрээр дохио буцаана.
+Backend хэсэг нь Flask фреймворк ба Waitress WSGI сервер ашиглан хөгжүүлэгдсэн. /signal endpoint нь Twelve Data API-аас өгөгдөл авч, ML загваруудаар таамаглал хийж, JSON хэлбэрээр дохио буцаана.
 
 \subsection{Twelve Data API}
 
@@ -808,28 +855,77 @@ Backend нь Flask framework ба Waitress WSGI server ашиглан хөгжү
 \begin{itemize}
     \item \textbf{Live rate:} \texttt{/price} endpoint
     \item \textbf{Historical data:} \texttt{/time\_series} endpoint
-    \item \textbf{Cache TTL:} Live - 2 минут, Historical - 5 минут
+    \item \textbf{Cache TTL:} Live - 2 minutes, Historical - 5 minutes
     \item \textbf{Rate limit:} 1 request/minute (free tier)
 \end{itemize}
 
-\section{Мобайл аппликейшн}
+\section{Mobile App Development}
 
-\subsection{React Native + Expo}
+\subsection{Technology Stack}
 
-Мобайл аппликейшнийг React Native framework ба Expo toolchain ашиглан хөгжүүлсэн.
+Системийн хэрэглэгчийн талыг React Native фреймворк ашиглан ``Cross-platform'' хэлбэрээр хөгжүүлсэн. Энэ нь нэг кодын баазаас Android болон iOS үйлдлийн системүүд дээр ажиллах боломжийг олгоно.
 
-\subsection{Үндсэн дэлгэцүүд}
+\begin{itemize}
+    \item \textbf{Framework:} React Native (Expo SDK 51)
+    \item \textbf{Language:} JavaScript (ES6+)
+    \item \textbf{Navigation:} React Navigation (Stack \& Bottom Tabs)
+    \item \textbf{State Management:} React Context API
+    \item \textbf{Storage:} AsyncStorage (Local data \& Tokens)
+    \item \textbf{Networking:} Axios (REST API client)
+\end{itemize}
+
+\subsection{Architecture and Structure}
+
+Аппликейшн нь бүрэлдэхүүн хэсгүүдэд (Component-based architecture) суурилсан бүтэцтэй:
+
+\begin{itemize}
+    \item \textbf{Screens:} Үндсэн дэлгэцүүд (Home, Signal, Profile, Auth)
+    \item \textbf{Components:} Дахин ашиглагдах UI хэсгүүд (Cards, Inputs, Buttons)
+    \item \textbf{Context:} Глобал төлөв (Theme, Authentication)
+    \item \textbf{Services:} API дуудлага ба логик
+\end{itemize}
+
+\subsection{Main App Features}
+
+\subsubsection{1. Real-time Signal Dashboard}
+SignalScreen нь Ensemble моделийн гаргасан таамаглалыг хэрэглэгчдэд ойлгомжтой байдлаар харуулна:
+\begin{itemize}
+    \item \textbf{Gauge Chart:} Итгэлцлийн хувийг (Confidence Score) графикаар харуулах
+    \item \textbf{Signal Card:} BUY/SELL/HOLD дохио, Entry Price, Stop Loss, Take Profit утгууд
+    \item \textbf{Market Info:} Валютын хосын spread, зах зээлийн төлөв (Closed/Open)
+    \item \textbf{Pull-to-Refresh:} Дэлгэцийг доош татах үед шинэ сигнал татах
+\end{itemize}
+
+\subsubsection{2. AI Market Analysis}
+Хэрэглэгч зөвхөн тоон утга харахаас гадна хиймэл оюун ухааны дүгнэлтийг унших боломжтой:
+\begin{itemize}
+    \item Техникийн индикаторуудын нэгдсэн дүгнэлт
+    \item Эрсдэлийн түвшний зөвлөмж
+    \item Зах зээлийн хандлагын тайлбар
+\end{itemize}
+
+\subsubsection{3. User Settings}
+\begin{itemize}
+    \item \textbf{Dark/Light Mode:} Системийн тохиргоо эсвэл хэрэглэгчийн сонголтоор солих
+    \item \textbf{Confidence Threshold:} Хэрэглэгч өөрийн эрсдэлийн түвшинд тааруулан босго оноог (75\%, 80\%, 85\%) өөрчлөх боломж
+\end{itemize}
+
+\subsection{Security}
 
 \begin{enumerate}
-    \item \textbf{HomeScreen} - Валютын хосуудын жагсаалт, бодит цагийн ханш
-    \item \textbf{SignalScreen} - AI дохио, итгэлцүүр, Entry/SL/TP
-    \item \textbf{ProfileScreen} - Хэрэглэгчийн мэдээлэл
-    \item \textbf{SettingsScreen} - Тохиргоо (theme, notification)
+    \item \textbf{Token Storage:} Нэвтрэх token-ийг төхөөрөмж дээр шифрлэгдсэн хэлбэрээр хадгалах
+    \item \textbf{Auto Logout:} Token хүчингүй болох үед автоматаар гаргах
+    \item \textbf{Validation:} Бүртгүүлэх үед имэйл баталгаажуулалт, нууц үгийн нарийн шаардлага
 \end{enumerate}
 
 \subsection{API Integration}
 
-Мобайл апп axios сан ашиглан Backend API-тай холбогдож дохио авдаг.
+Backend API-тай харилцахдаа RESTful зарчмыг баримтална:
+\begin{itemize}
+    \item \texttt{GET /signals/best} - Хамгийн сайн Ensemble загварын таамаглалыг авах
+    \item \texttt{POST /auth/login} - Нэвтрэх, JWT token авах
+    \item \texttt{POST /auth/register} - Шинэ хэрэглэгч бүртгэх
+\end{itemize}
 
 \section{MongoDB Database}
 
@@ -846,8 +942,8 @@ Backend нь Flask framework ба Waitress WSGI server ашиглан хөгжү
 JWT (JSON Web Token) ашиглан хэрэглэгчийг баталгаажуулна:
 
 \begin{itemize}
-    \item \textbf{Token хугацаа}: 7 хоног
+    \item \textbf{Token Validity}: 7 days
     \item \textbf{Algorithm}: HS256
     \item \textbf{Payload}: user\_id, email, exp (expiration)
-    \item \textbf{Нууцлал}: SECRET\_KEY ашиглан encode хийнэ
+    \item \textbf{Encryption}: SECRET\_KEY ашиглан encode хийнэ
 \end{itemize}

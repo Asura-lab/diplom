@@ -31,7 +31,7 @@
 \noindent\textbf{Техникийн хэрэгжүүлэлтүүд:}
 
 \begin{itemize}
-    \item ForexHybridNetV2 моделийн архитектур (CNN + BiLSTM + Attention)
+    \item ForexHybridNet моделийн архитектур (CNN + BiLSTM + Attention)
     \item RSI, MACD, Bollinger Bands техникийн индикаторууд
     \item Focal Loss функц (class imbalance шийдвэрлэх)
     \item Ensemble систем (XGBoost, LightGBM, Random Forest)
@@ -41,52 +41,81 @@
 
 \section*{Хавсралт Б. Hyperparameter тохиргоо}
 
+Энэхүү судалгаанд ашигласан V10 Ensemble систем нь XGBoost, LightGBM, CatBoost алгоритмуудын 7 өөр хувилбараас бүрдэнэ.
+
+\subsection*{1. Өгөгдөл бэлтгэх ба Labeling тохиргоо}
 \begin{table}[H]
 \centering
-\begin{tabular}{|l|l|l|}
+\begin{tabular}{|l|c|l|}
 \hline
 \textbf{Параметр} & \textbf{Утга} & \textbf{Тайлбар} \\
 \hline
-TARGET\_HORIZON\_MIN & 10 & Таамаглах хугацаа (минут) \\
-\hline
-SEQ\_LEN & 240 & Оролтын дарааллын урт \\
-\hline
-BATCH\_SIZE & 256 & Batch хэмжээ \\
-\hline
-EPOCHS & 100 & Хамгийн их epoch \\
-\hline
-LEARNING\_RATE & 3e-4 & Суралцах хурд \\
-\hline
-WEIGHT\_DECAY & 1e-3 & Weight decay \\
-\hline
-WARMUP\_EPOCHS & 5 & Warmup epoch \\
-\hline
-EARLY\_STOPPING\_PATIENCE & 12 & Early stopping patience \\
-\hline
-NOISE\_STD & 0.015 & Noise augmentation std \\
-\hline
-RARE\_EVENT\_WEIGHT & 30.0 & Ховор үйл явдлын жин \\
-\hline
-DIR\_LABEL\_SMOOTH & 0.08 & Direction label smoothing \\
-\hline
-BIGMOVE\_LABEL\_SMOOTH & 0.05 & Big move label smoothing \\
-\hline
-SWA\_START\_EPOCH & 40 & SWA эхлэх epoch \\
-\hline
-SWA\_LR & 1e-5 & SWA learning rate \\
-\hline
-FOCAL\_GAMMA & 2.0 & Focal loss gamma \\
-\hline
-FOCAL\_ALPHA & 0.25 & Focal loss alpha \\
-\hline
-CONV\_CHANNELS & 192 & CNN channel тоо \\
-\hline
-LSTM\_HIDDEN & 384 & LSTM hidden хэмжээс \\
-\hline
-NUM\_ATTENTION\_HEADS & 8 & Attention head тоо \\
-\hline
-DROPOUT\_RATE & 0.25 & Dropout хувь \\
+Timeframe & 1 min & Ашигласан цагийн хуваарь \\
+Forward Window & 60 & Таамаглах ирээдүйн хугацаа (бар) \\
+Min Pips & 15 & Шаардлагатай хамгийн бага үнийн өөрчлөлт \\
+Risk/Reward Ratio & 1.5 & Ашиг ба алдагдлын харьцаа (TP/SL) \\
+Ensemble Threshold & 85\% & Итгэлцлийн босго утга \\
 \hline
 \end{tabular}
-\caption{Hyperparameter тохиргоо}
+\caption{Labeling Parameters}
+\end{table}
+
+\subsection*{2. XGBoost Models Configuration}
+\begin{table}[H]
+\centering
+\begin{tabular}{|l|c|c|c|}
+\hline
+\textbf{Parameter} & \textbf{XGB1 (Pri)} & \textbf{XGB2 (Deep)} & \textbf{XGB3 (Cons)} \\
+\hline
+n\_estimators & 600 & 400 & 800 \\
+max\_depth & 6 & 8 & 4 \\
+learning\_rate & 0.03 & 0.05 & 0.02 \\
+subsample & 0.8 & 0.7 & 0.85 \\
+colsample\_bytree & 0.8 & 0.7 & 0.85 \\
+reg\_alpha & 0.1 & 0.05 & 0.2 \\
+reg\_lambda & 1.0 & 0.5 & 2.0 \\
+min\_child\_weight & 3 & - & 5 \\
+gamma & - & 0.1 & - \\
+\hline
+\end{tabular}
+\caption{XGBoost Hyperparameters}
+\end{table}
+
+\subsection*{3. LightGBM Models Configuration}
+\begin{table}[H]
+\centering
+\begin{tabular}{|l|c|c|}
+\hline
+\textbf{Parameter} & \textbf{LGB1 (Primary)} & \textbf{LGB2 (Leaves)} \\
+\hline
+n\_estimators & 600 & 500 \\
+max\_depth & 6 & 8 \\
+learning\_rate & 0.03 & 0.04 \\
+num\_leaves & 31 & 63 \\
+min\_child\_samples & 30 & 20 \\
+subsample & 0.8 & 0.75 \\
+colsample\_bytree & 0.8 & 0.75 \\
+reg\_alpha & 0.1 & 0.05 \\
+reg\_lambda & 1.0 & 0.5 \\
+\hline
+\end{tabular}
+\caption{LightGBM Hyperparameters}
+\end{table}
+
+\subsection*{4. CatBoost Models Configuration}
+\begin{table}[H]
+\centering
+\begin{tabular}{|l|c|c|}
+\hline
+\textbf{Parameter} & \textbf{CAT1 (Primary)} & \textbf{CAT2 (Deeper)} \\
+\hline
+iterations & 600 & 500 \\
+depth & 6 & 8 \\
+learning\_rate & 0.03 & 0.04 \\
+l2\_leaf\_reg & 3.0 & 2.0 \\
+random\_strength & 0.5 & 0.3 \\
+bagging\_temperature & 0.5 & 0.3 \\
+\hline
+\end{tabular}
+\caption{CatBoost Hyperparameters}
 \end{table}

@@ -2,17 +2,16 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces Дохио үүсгэх системийн Flow Diagram}}{7}{figure.caption.62}%
-\contentsline {figure}{\numberline {3.2}{\ignorespaces Хэрэглээний тохиолдлын диаграмм}}{8}{figure.caption.64}%
-\contentsline {figure}{\numberline {3.3}{\ignorespaces Дохио авах Activity Diagram}}{9}{figure.caption.66}%
-\contentsline {figure}{\numberline {3.4}{\ignorespaces EUR/USD 2025 оны 3-4-р сарын бодит үнийн хөдөлгөөн ба техникийн индикаторууд}}{9}{figure.caption.68}%
-\contentsline {figure}{\numberline {3.5}{\ignorespaces Системийн архитектурын диаграмм}}{10}{figure.caption.70}%
-\contentsline {figure}{\numberline {3.6}{\ignorespaces Sequence диаграм - Дохио хүлээн авах}}{10}{figure.caption.72}%
-\contentsline {figure}{\numberline {3.7}{\ignorespaces V10 Ensemble моделийн архитектур (7 загвар)}}{16}{figure.caption.129}%
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Use Case Diagram}}{7}{figure.caption.60}%
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Дохио үүсгэх системийн Flow Diagram}}{8}{figure.caption.62}%
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Activity Diagram - Signal Fetching}}{9}{figure.caption.64}%
+\contentsline {figure}{\numberline {3.4}{\ignorespaces System Architecture Diagram}}{9}{figure.caption.66}%
+\contentsline {figure}{\numberline {3.5}{\ignorespaces Sequence Diagram - API Call}}{10}{figure.caption.68}%
+\contentsline {figure}{\numberline {3.6}{\ignorespaces Number of Selected Features per Category}}{11}{figure.caption.79}%
+\contentsline {figure}{\numberline {3.7}{\ignorespaces Hybrid Ensemble Model Architecture (7 models)}}{17}{figure.caption.136}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Өгөгдлийн тархалт (мянган мөрөөр)}}{20}{figure.caption.163}%
-\contentsline {figure}{\numberline {4.2}{\ignorespaces Онцлогуудын категори бүрийн тоо}}{21}{figure.caption.167}%
-\contentsline {figure}{\numberline {4.3}{\ignorespaces V10 Итгэлцлийн түвшин ба Accuracy хамаарал}}{23}{figure.caption.178}%
-\contentsline {figure}{\numberline {4.4}{\ignorespaces V10 Итгэлцлийн түвшин ба Profit Factor}}{25}{figure.caption.185}%
-\contentsline {figure}{\numberline {4.5}{\ignorespaces V10 Судалгааны үр дүнгийн хураангуй}}{27}{figure.caption.201}%
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Өгөгдлийн тархалт (мянган мөрөөр)}}{23}{figure.caption.174}%
+\contentsline {figure}{\numberline {4.2}{\ignorespaces EUR/USD 2025 оны 3-4-р сарын бодит үнийн хөдөлгөөн ба техникийн индикаторууд}}{24}{figure.caption.176}%
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Confidence ба Accuracy хамаарал}}{25}{figure.caption.184}%
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Confidence Level vs Profit Factor}}{27}{figure.caption.191}%
 \addvspace {10\p@ }

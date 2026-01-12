@@ -1,8 +1,8 @@
 \relax 
-\AC@reset@newl@bel
 \providecommand\hyper@newdestlabel[2]{}
 \providecommand\HyField@AuxAddToFields[1]{}
 \providecommand\HyField@AuxAddToCoFields[2]{}
+\AC@reset@newl@bel
 \providecommand \babel@aux [2]{\global \let \babel@toc \@gobbletwo }
 \@nameuse{bbl@beforestart}
 \catcode `"\active 
@@ -10,19 +10,22 @@
 \providecommand \oddpage@label [2]{}
 \babel@aux{mongolian}{}
 \@writefile{toc}{\contentsline {chapter}{Товчилсон үгийн жагсаалт}{i}{chapter*.1}\protected@file@percent }
+\newacro{ADX}[\AC@hyperlink{ADX}{ADX}]{Average Directional Index -- Дундаж чиглэлийн индекс}
 \newacro{AI}[\AC@hyperlink{AI}{AI}]{Artificial Intelligence -- Хиймэл оюун ухаан}
 \newacro{API}[\AC@hyperlink{API}{API}]{Application Programming Interface -- Програмын интерфейс}
 \newacro{ATR}[\AC@hyperlink{ATR}{ATR}]{Average True Range -- Дундаж жинхэнэ хүрээ}
 \newacro{AUC}[\AC@hyperlink{AUC}{AUC}]{Area Under Curve -- Муруйн доорх талбай}
 \newacro{BB}[\AC@hyperlink{BB}{BB}]{Bollinger Bands -- Боллинжерийн зурвас}
+\newacro{CatBoost}[\AC@hyperlink{CatBoost}{CatBoost}]{Categorical Boosting -- Категорийн бустинг}
+\newacro{CNN}[\AC@hyperlink{CNN}{CNN}]{Convolutional Neural Network -- Хуйларсан мэдрэлийн сүлжээ}
 \newacro{EMA}[\AC@hyperlink{EMA}{EMA}]{Exponential Moving Average -- Экспоненциал хөдөлгөөнт дундаж}
 \newacro{EUR/USD}[\AC@hyperlink{EUR/USD}{EUR/USD}]{Euro/US Dollar -- Евро/АНУ-ын доллар валютын хос}
-\newacro{F1}[\AC@hyperlink{F1}{F1}]{F1 Score -- F1 оноо}
 \newacro{FOREX}[\AC@hyperlink{FOREX}{FOREX}]{Foreign Exchange -- Гадаад валютын арилжаа}
 \newacro{HTTPS}[\AC@hyperlink{HTTPS}{HTTPS}]{Hypertext Transfer Protocol Secure -- Аюулгүй гипертекст дамжуулах протокол}
 \newacro{JSON}[\AC@hyperlink{JSON}{JSON}]{JavaScript Object Notation -- JavaScript объектын тэмдэглэгээ}
 \newacro{JWT}[\AC@hyperlink{JWT}{JWT}]{JSON Web Token -- JSON вэб токен}
 \newacro{LightGBM}[\AC@hyperlink{LightGBM}{LightGBM}]{Light Gradient Boosting Machine -- Хөнгөн градиент бустинг машин}
+\newacro{LSTM}[\AC@hyperlink{LSTM}{LSTM}]{Long Short-Term Memory -- Урт богино хугацааны санах ой}
 \newacro{MACD}[\AC@hyperlink{MACD}{MACD}]{Moving Average Convergence Divergence -- Хөдөлгөөнт дундажийн нийлэлт-салалт}
 \newacro{MAE}[\AC@hyperlink{MAE}{MAE}]{Mean Absolute Error -- Дундаж абсолют алдаа}
 \newacro{ML}[\AC@hyperlink{ML}{ML}]{Machine Learning -- Машин сургалт}
@@ -32,10 +35,11 @@
 \newacro{REST}[\AC@hyperlink{REST}{REST}]{Representational State Transfer -- Төлөвийн шилжүүлэгч төлөөлөл}
 \newacro{RMSE}[\AC@hyperlink{RMSE}{RMSE}]{Root Mean Squared Error -- Квадрат дундаж алдааны язгуур}
 \newacro{ROC}[\AC@hyperlink{ROC}{ROC}]{Receiver Operating Characteristic -- Хүлээн авагчийн үйлдлийн шинж чанар}
+\newacro{RNN}[\AC@hyperlink{RNN}{RNN}]{Recurrent Neural Network -- Рекуррент мэдрэлийн сүлжээ}
 \newacro{RSI}[\AC@hyperlink{RSI}{RSI}]{Relative Strength Index -- Харьцангуй хүчний индекс}
+\newacro{SL}[\AC@hyperlink{SL}{SL}]{Stop Loss -- Алдагдлыг хязгаарлах}
 \newacro{SMA}[\AC@hyperlink{SMA}{SMA}]{Simple Moving Average -- Энгийн хөдөлгөөнт дундаж}
-\newacro{SWA}[\AC@hyperlink{SWA}{SWA}]{Stochastic Weight Averaging -- Стохастик жингийн дундажлал}
-\newacro{TTL}[\AC@hyperlink{TTL}{TTL}]{Time To Live -- Амьдрах хугацаа}
+\newacro{TP}[\AC@hyperlink{TP}{TP}]{Take Profit -- Ашгийг авах}
 \newacro{WSGI}[\AC@hyperlink{WSGI}{WSGI}]{Web Server Gateway Interface -- Вэб серверийн гарц интерфейс}
 \newacro{XGBoost}[\AC@hyperlink{XGBoost}{XGBoost}]{Extreme Gradient Boosting -- Экстрим градиент бустинг}
 \@writefile{toc}{\contentsline {chapter}{Гарчиг}{ii}{dummy.2}\protected@file@percent }
@@ -55,211 +59,208 @@
 \@writefile{toc}{\contentsline {section}{\numberline {1.4}Судалгааны шинэлэг тал}{2}{section.27}\protected@file@percent }
 \citation{mitchell1997}
 \citation{dietterich2000}
-\citation{breiman2001}
 \citation{chen2016}
+\citation{ke2017}
 \@writefile{toc}{\contentsline {chapter}{\numberline {2}ОНОЛЫН ҮНДЭСЛЭЛ}{4}{chapter.35}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
 \@writefile{toc}{\contentsline {section}{\numberline {2.1}Машин сургалтын онолын үндэс}{4}{section.36}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.1.1}Хяналттай сургалт}{4}{subsection.37}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {2.2}Ensemble сургалтын аргууд}{4}{section.38}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.2.1}Random Forest}{4}{subsection.39}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.2.2}Gradient Boosting}{4}{subsection.41}\protected@file@percent }
-\citation{ke2017}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.1.1}Supervised Learning}{4}{subsection.37}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {2.2}Ensemble Learning}{4}{section.38}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.2.1}Gradient Boosting}{4}{subsection.39}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.2.1.1}XGBoost}{4}{subsubsection.41}\protected@file@percent }
 \citation{murphy1999}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.2.2.1}XGBoost}{5}{subsubsection.43}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.2.2.2}LightGBM}{5}{subsubsection.45}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.2.2.3}CatBoost}{5}{subsubsection.46}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.2.3}V10 Ensemble арга}{5}{subsection.47}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {2.3}Техникийн шинжилгээ}{5}{section.49}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.3.1}Trend индикаторууд}{5}{subsection.50}\protected@file@percent }
 \citation{wilder1978}
 \citation{bollinger2002}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.2.1.2}LightGBM}{5}{subsubsection.43}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.2.1.3}CatBoost}{5}{subsubsection.44}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.2.2}Hybrid Ensemble арга}{5}{subsection.45}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {2.3}Technical Analysis}{5}{section.47}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.3.1}Trend Indicators}{5}{subsection.48}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.3.2}Momentum Indicators}{5}{subsection.51}\protected@file@percent }
 \citation{krollner2010}
 \citation{fischer2018}
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.3.2}Momentum индикаторууд}{6}{subsection.53}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.3.3}Volatility индикаторууд}{6}{subsection.55}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {2.4}Холбогдох судалгааны тойм}{6}{section.58}\protected@file@percent }
-\@writefile{toc}{\contentsline {chapter}{\numberline {3}СУДАЛГААНЫ АРГА ЗҮЙ}{7}{chapter.59}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.3.3}Volatility Indicators}{6}{subsection.53}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {2.4}Холбогдох судалгааны тойм}{6}{section.56}\protected@file@percent }
+\@writefile{toc}{\contentsline {chapter}{\numberline {3}СУДАЛГААНЫ АРГА ЗҮЙ}{7}{chapter.57}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\@writefile{toc}{\contentsline {section}{\numberline {3.1}Системийн ерөнхий тойм}{7}{section.60}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.1.1}Системийн Flow Diagram}{7}{subsection.61}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {3.1}{\ignorespaces Дохио үүсгэх системийн Flow Diagram}}{7}{figure.caption.62}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {3.1}Системийн ерөнхий тойм}{7}{section.58}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.1.1}Use Case Diagram}{7}{subsection.59}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {3.1}{\ignorespaces Use Case Diagram}}{7}{figure.caption.60}\protected@file@percent }
 \providecommand*\caption@xref[2]{\@setref\relax\@undefined{#1}}
-\newlabel{fig:flow_diagram}{{3.1}{7}{Дохио үүсгэх системийн Flow Diagram}{figure.caption.62}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.1.2}Хэрэглээний тохиолдлын диаграмм}{8}{subsection.63}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {3.2}{\ignorespaces Хэрэглээний тохиолдлын диаграмм}}{8}{figure.caption.64}\protected@file@percent }
-\newlabel{fig:usecase_diagram}{{3.2}{8}{Хэрэглээний тохиолдлын диаграмм}{figure.caption.64}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.1.3}Activity Diagram - Дохио авах үйлдэл}{8}{subsection.65}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {3.3}{\ignorespaces Дохио авах Activity Diagram}}{9}{figure.caption.66}\protected@file@percent }
-\newlabel{fig:activity_diagram}{{3.3}{9}{Дохио авах Activity Diagram}{figure.caption.66}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.1.4}EUR/USD Үнийн динамик диаграмм}{9}{subsection.67}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {3.4}{\ignorespaces EUR/USD 2025 оны 3-4-р сарын бодит үнийн хөдөлгөөн ба техникийн индикаторууд}}{9}{figure.caption.68}\protected@file@percent }
-\newlabel{fig:price_chart}{{3.4}{9}{EUR/USD 2025 оны 3-4-р сарын бодит үнийн хөдөлгөөн ба техникийн индикаторууд}{figure.caption.68}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.1.5}Системийн архитектурын диаграмм}{10}{subsection.69}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {3.5}{\ignorespaces Системийн архитектурын диаграмм}}{10}{figure.caption.70}\protected@file@percent }
-\newlabel{fig:system_architecture}{{3.5}{10}{Системийн архитектурын диаграмм}{figure.caption.70}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.1.6}Sequence Diagram - API дуудлага}{10}{subsection.71}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {3.6}{\ignorespaces Sequence диаграм - Дохио хүлээн авах}}{10}{figure.caption.72}\protected@file@percent }
-\newlabel{fig:sequence_diagram}{{3.6}{10}{Sequence диаграм - Дохио хүлээн авах}{figure.caption.72}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {3.2}Өгөгдлийн тодорхойлолт}{10}{section.73}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.2.1}Өгөгдлийн эх сурвалж}{10}{subsection.74}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.2.2}Өгөгдлийн хугацааны хүрээ}{11}{subsection.75}\protected@file@percent }
-\@writefile{lot}{\contentsline {table}{\numberline {3.1}{\ignorespaces Өгөгдлийн хугацааны хүрээ}}{11}{table.caption.76}\protected@file@percent }
-\newlabel{tab:data_range}{{3.1}{11}{Өгөгдлийн хугацааны хүрээ}{table.caption.76}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.2.3}Өгөгдлийн чанарын хяналт}{11}{subsection.77}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {3.3}Шинж чанар инженерчлэл}{11}{section.81}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.3.1}Чиг хандлагын индикаторууд (Trend Indicators)}{11}{subsection.82}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.3.1.1}Хөдөлгөөнт дундаж (Moving Averages)}{11}{subsubsection.83}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.3.1.2}MA Crossover дохионууд}{12}{subsubsection.84}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.3.1.3}Үнэ ба MA-ийн харьцаа}{12}{subsubsection.85}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.3.2}Моментум индикаторууд (Momentum Indicators)}{12}{subsection.87}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.3.2.1}RSI (Relative Strength Index)}{12}{subsubsection.88}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.3.2.2}MACD (Moving Average Convergence Divergence)}{12}{subsubsection.90}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.3.2.3}Stochastic Oscillator}{13}{subsubsection.94}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.3.2.4}ROC (Rate of Change)}{13}{subsubsection.96}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.3.3}Хэлбэлзлийн индикаторууд (Volatility Indicators)}{13}{subsection.98}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.3.3.1}ATR (Average True Range)}{13}{subsubsection.99}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.3.3.2}Bollinger Bands}{13}{subsubsection.103}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.3.4}Лааны загварууд (Candle Patterns)}{14}{subsection.107}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.3.5}Дэмжлэг/Эсэргүүцэл (Support/Resistance)}{14}{subsection.108}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.3.6}Чиг хандлагын хүч (Trend Strength)}{14}{subsection.114}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.3.7}BUY Score - Нэгдсэн дохионы үнэлгээ}{14}{subsection.115}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {3.4}Зорилтот хувьсагч (Target Variable)}{14}{section.116}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.4.1}BUY-Only Classification}{14}{subsection.117}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.4.2}Параметрүүд}{15}{subsection.118}\protected@file@percent }
-\@writefile{lot}{\contentsline {table}{\numberline {3.2}{\ignorespaces Зорилтот хувьсагчийн параметрүүд}}{15}{table.caption.119}\protected@file@percent }
-\newlabel{tab:target_params}{{3.2}{15}{Зорилтот хувьсагчийн параметрүүд}{table.caption.119}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {3.5}Өгөгдлийн хуваалт ба Scaling}{15}{section.120}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.5.1}Хуваалт}{15}{subsection.121}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.5.2}StandardScaler}{15}{subsection.122}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {3.6}Моделийн архитектур}{15}{section.124}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.6.1}V10 Ensemble арга}{15}{subsection.125}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {3.7}{\ignorespaces V10 Ensemble моделийн архитектур (7 загвар)}}{16}{figure.caption.129}\protected@file@percent }
-\newlabel{fig:ensemble_arch}{{3.7}{16}{V10 Ensemble моделийн архитектур (7 загвар)}{figure.caption.129}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.6.2}XGBoost загварууд}{16}{subsection.130}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.6.3}LightGBM загварууд}{16}{subsection.131}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.6.4}CatBoost загварууд}{16}{subsection.132}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.6.5}Agreement Bonus System}{17}{subsection.133}\protected@file@percent }
-\@writefile{lot}{\contentsline {table}{\numberline {3.3}{\ignorespaces Agreement Bonus System}}{17}{table.caption.134}\protected@file@percent }
-\newlabel{tab:agreement_bonus}{{3.3}{17}{Agreement Bonus System}{table.caption.134}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.6.6}Weighted Ensemble}{17}{subsection.135}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.6.7}Hyperparameter}{17}{subsection.138}\protected@file@percent }
-\@writefile{lot}{\contentsline {table}{\numberline {3.4}{\ignorespaces V10 Моделийн Hyperparameter тохиргоо}}{17}{table.caption.139}\protected@file@percent }
-\newlabel{tab:hyperparams}{{3.4}{17}{V10 Моделийн Hyperparameter тохиргоо}{table.caption.139}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {3.7}Confidence Threshold}{17}{section.140}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {3.8}Динамик SL/TP тооцоолол}{18}{section.141}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {3.9}Backend API}{18}{section.144}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.9.1}Flask + Waitress}{18}{subsection.145}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.9.2}Twelve Data API}{18}{subsection.146}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {3.10}Мобайл аппликейшн}{18}{section.147}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.10.1}React Native + Expo}{18}{subsection.148}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.10.2}Үндсэн дэлгэцүүд}{19}{subsection.149}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.10.3}API Integration}{19}{subsection.154}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {3.11}MongoDB Database}{19}{section.155}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.11.1}Collections}{19}{subsection.156}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.11.2}Authentication}{19}{subsection.157}\protected@file@percent }
-\@writefile{toc}{\contentsline {chapter}{\numberline {4}СУДАЛГААНЫ ҮР ДҮН}{20}{chapter.158}\protected@file@percent }
+\newlabel{fig:usecase_diagram}{{3.1}{7}{Use Case Diagram}{figure.caption.60}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.1.2}System Flow Diagram}{8}{subsection.61}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {3.2}{\ignorespaces Дохио үүсгэх системийн Flow Diagram}}{8}{figure.caption.62}\protected@file@percent }
+\newlabel{fig:flow_diagram}{{3.2}{8}{Дохио үүсгэх системийн Flow Diagram}{figure.caption.62}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.1.3}Үйл ажиллагааны (Activity) диаграмм - Дохио авах үйлдэл}{9}{subsection.63}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {3.3}{\ignorespaces Activity Diagram - Signal Fetching}}{9}{figure.caption.64}\protected@file@percent }
+\newlabel{fig:activity_diagram}{{3.3}{9}{Activity Diagram - Signal Fetching}{figure.caption.64}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.1.4}System Architecture Diagram}{9}{subsection.65}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {3.4}{\ignorespaces System Architecture Diagram}}{9}{figure.caption.66}\protected@file@percent }
+\newlabel{fig:system_architecture}{{3.4}{9}{System Architecture Diagram}{figure.caption.66}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.1.5}Sequence Diagram - API Call}{10}{subsection.67}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {3.5}{\ignorespaces Sequence Diagram - API Call}}{10}{figure.caption.68}\protected@file@percent }
+\newlabel{fig:sequence_diagram}{{3.5}{10}{Sequence Diagram - API Call}{figure.caption.68}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {3.2}Data Description}{10}{section.69}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.2.1}Data Source}{10}{subsection.70}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.2.2}Data Time Range}{11}{subsection.71}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {3.1}{\ignorespaces Data Time Range}}{11}{table.caption.72}\protected@file@percent }
+\newlabel{tab:data_range}{{3.1}{11}{Data Time Range}{table.caption.72}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.2.3}Өгөгдлийн чанарын хяналт}{11}{subsection.73}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {3.3}Шинж чанар инженерчлэл}{11}{section.77}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.3.1}Features Summary}{11}{subsection.78}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {3.6}{\ignorespaces Number of Selected Features per Category}}{11}{figure.caption.79}\protected@file@percent }
+\newlabel{fig:feature_bar}{{3.6}{11}{Number of Selected Features per Category}{figure.caption.79}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.3.2}Core Features}{12}{subsection.80}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.3.2.1}Moving Averages}{12}{subsubsection.81}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.3.2.2}MA Crossover Signals}{12}{subsubsection.82}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.3.3}Hybrid New Features}{12}{subsection.83}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.3.4}Momentum Indicators}{13}{subsection.94}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.3.4.1}RSI (Relative Strength Index)}{13}{subsubsection.95}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.3.4.2}MACD (Moving Average Convergence Divergence)}{13}{subsubsection.97}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.3.4.3}Stochastic Oscillator}{13}{subsubsection.101}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.3.4.4}ROC (Rate of Change)}{13}{subsubsection.103}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.3.5}Volatility Indicators}{14}{subsection.105}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.3.5.1}ATR (Average True Range)}{14}{subsubsection.106}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.3.5.2}Bollinger Bands}{14}{subsubsection.110}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.3.6}Candle Patterns}{14}{subsection.114}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.3.7}Support/Resistance}{14}{subsection.115}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.3.8}Trend Strength}{15}{subsection.121}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.3.9}BUY Score}{15}{subsection.122}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {3.4}Target Variable}{15}{section.123}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.4.1}BUY-only Classification}{15}{subsection.124}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.4.2}Parameters}{15}{subsection.125}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {3.2}{\ignorespaces Target Variable Parameters}}{15}{table.caption.126}\protected@file@percent }
+\newlabel{tab:target_params}{{3.2}{15}{Target Variable Parameters}{table.caption.126}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {3.5}Data Split and Scaling}{16}{section.127}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.5.1}Splitting}{16}{subsection.128}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.5.2}StandardScaler}{16}{subsection.129}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {3.6}Model Architecture}{16}{section.131}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.6.1}Proposed Hybrid Ensemble Method}{16}{subsection.132}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {3.7}{\ignorespaces Hybrid Ensemble Model Architecture (7 models)}}{17}{figure.caption.136}\protected@file@percent }
+\newlabel{fig:ensemble_arch}{{3.7}{17}{Hybrid Ensemble Model Architecture (7 models)}{figure.caption.136}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.6.2}XGBoost Models}{17}{subsection.137}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.6.3}LightGBM Models}{17}{subsection.138}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.6.4}CatBoost Models}{18}{subsection.139}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.6.5}Agreement Bonus System}{18}{subsection.140}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {3.3}{\ignorespaces Agreement Bonus System}}{18}{table.caption.141}\protected@file@percent }
+\newlabel{tab:agreement_bonus}{{3.3}{18}{Agreement Bonus System}{table.caption.141}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.6.6}Weighted Ensemble}{18}{subsection.142}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.6.7}Hyperparameters}{18}{subsection.145}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {3.4}{\ignorespaces Ensemble Model Hyperparameters}}{18}{table.caption.146}\protected@file@percent }
+\newlabel{tab:hyperparams}{{3.4}{18}{Ensemble Model Hyperparameters}{table.caption.146}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {3.7}Confidence Threshold}{19}{section.147}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {3.8}Dynamic SL/TP Calculation}{19}{section.148}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {3.9}Backend API}{19}{section.151}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.9.1}Flask + Waitress}{19}{subsection.152}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.9.2}Twelve Data API}{19}{subsection.153}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {3.10}Mobile App Development}{20}{section.154}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.10.1}Technology Stack}{20}{subsection.155}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.10.2}Architecture and Structure}{20}{subsection.156}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.10.3}Main App Features}{20}{subsection.157}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.10.3.1}1. Real-time Signal Dashboard}{20}{subsubsection.158}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.10.3.2}2. AI Market Analysis}{21}{subsubsection.159}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.10.3.3}3. User Settings}{21}{subsubsection.160}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.10.4}Security}{21}{subsection.161}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.10.5}API Integration}{21}{subsection.165}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {3.11}MongoDB Database}{21}{section.166}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.11.1}Collections}{21}{subsection.167}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.11.2}Authentication}{22}{subsection.168}\protected@file@percent }
+\@writefile{toc}{\contentsline {chapter}{\numberline {4}СУДАЛГААНЫ ҮР ДҮН}{23}{chapter.169}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\@writefile{toc}{\contentsline {section}{\numberline {4.1}Өгөгдлийн тойм}{20}{section.159}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.1.1}Сургалтын өгөгдөл}{20}{subsection.160}\protected@file@percent }
-\@writefile{lot}{\contentsline {table}{\numberline {4.1}{\ignorespaces Өгөгдлийн статистик}}{20}{table.caption.161}\protected@file@percent }
-\newlabel{tab:data_stats}{{4.1}{20}{Өгөгдлийн статистик}{table.caption.161}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.1.2}Өгөгдлийн тархалтын диаграмм}{20}{subsection.162}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {4.1}{\ignorespaces Өгөгдлийн тархалт (мянган мөрөөр)}}{20}{figure.caption.163}\protected@file@percent }
-\newlabel{fig:data_distribution}{{4.1}{20}{Өгөгдлийн тархалт (мянган мөрөөр)}{figure.caption.163}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.1.3}BUY сигнал үүсгэх арга зүй}{20}{subsection.164}\protected@file@percent }
-\@writefile{lot}{\contentsline {table}{\numberline {4.2}{\ignorespaces Сургалтын өгөгдлийн статистик}}{21}{table.caption.165}\protected@file@percent }
-\newlabel{tab:signal_distribution}{{4.2}{21}{Сургалтын өгөгдлийн статистик}{table.caption.165}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.1.4}Онцлогуудын хураангуй}{21}{subsection.166}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {4.2}{\ignorespaces Онцлогуудын категори бүрийн тоо}}{21}{figure.caption.167}\protected@file@percent }
-\newlabel{fig:feature_bar}{{4.2}{21}{Онцлогуудын категори бүрийн тоо}{figure.caption.167}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {4.2}Загваруудын гүйцэтгэл}{21}{section.168}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.2.1}V10 Ensemble загварын бүтэц}{21}{subsection.169}\protected@file@percent }
-\@writefile{lot}{\contentsline {table}{\numberline {4.3}{\ignorespaces V10 Ensemble загваруудын бүрэлдэхүүн}}{22}{table.caption.170}\protected@file@percent }
-\newlabel{tab:model_components}{{4.3}{22}{V10 Ensemble загваруудын бүрэлдэхүүн}{table.caption.170}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.2.2}Загваруудын параметрүүд}{22}{subsection.171}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.2.3}V10 Ensemble нэгтгэх арга}{22}{subsection.172}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {4.3}BUY сигналын нарийвчлал}{23}{section.175}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.3.1}V10 Итгэлцлийн түвшингийн дүн шинжилгээ}{23}{subsection.176}\protected@file@percent }
-\@writefile{lot}{\contentsline {table}{\numberline {4.4}{\ignorespaces V10 Итгэлцлийн түвшин бүрийн BUY сигналын гүйцэтгэл}}{23}{table.caption.177}\protected@file@percent }
-\newlabel{tab:confidence_accuracy}{{4.4}{23}{V10 Итгэлцлийн түвшин бүрийн BUY сигналын гүйцэтгэл}{table.caption.177}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4.3}{\ignorespaces V10 Итгэлцлийн түвшин ба Accuracy хамаарал}}{23}{figure.caption.178}\protected@file@percent }
-\newlabel{fig:confidence_accuracy}{{4.3}{23}{V10 Итгэлцлийн түвшин ба Accuracy хамаарал}{figure.caption.178}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.3.2}Гол олдвор}{24}{subsection.179}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {4.4}Backtest үр дүн}{24}{section.180}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.4.1}Эрсдэлийн удирдлага (Dynamic SL/TP)}{24}{subsection.181}\protected@file@percent }
-\@writefile{lot}{\contentsline {table}{\numberline {4.5}{\ignorespaces Dynamic SL/TP тохиргоо}}{24}{table.caption.182}\protected@file@percent }
-\newlabel{tab:sl_tp}{{4.5}{24}{Dynamic SL/TP тохиргоо}{table.caption.182}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.4.2}V10 85\%+ confidence Backtest дэлгэрэнгүй}{24}{subsection.183}\protected@file@percent }
-\@writefile{lot}{\contentsline {table}{\numberline {4.6}{\ignorespaces V10 85\%+ confidence backtest статистик}}{24}{table.caption.184}\protected@file@percent }
-\newlabel{tab:backtest_detail}{{4.6}{24}{V10 85\%+ confidence backtest статистик}{table.caption.184}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4.4}{\ignorespaces V10 Итгэлцлийн түвшин ба Profit Factor}}{25}{figure.caption.185}\protected@file@percent }
-\newlabel{fig:profit_factor}{{4.4}{25}{V10 Итгэлцлийн түвшин ба Profit Factor}{figure.caption.185}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {4.5}Санал болгох тохиргоо}{25}{section.186}\protected@file@percent }
-\@writefile{lot}{\contentsline {table}{\numberline {4.7}{\ignorespaces V10 Санал болгох тохиргоо}}{25}{table.caption.187}\protected@file@percent }
-\newlabel{tab:recommendations}{{4.7}{25}{V10 Санал болгох тохиргоо}{table.caption.187}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {4.6}Системийн гүйцэтгэл}{25}{section.188}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.6.1}Хариу үйлдлийн хурд}{25}{subsection.189}\protected@file@percent }
-\@writefile{lot}{\contentsline {table}{\numberline {4.8}{\ignorespaces Системийн гүйцэтгэлийн хэмжүүрүүд}}{25}{table.caption.190}\protected@file@percent }
-\newlabel{tab:system_performance}{{4.8}{25}{Системийн гүйцэтгэлийн хэмжүүрүүд}{table.caption.190}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {4.7}Үр дүнгийн дүгнэлт}{26}{section.191}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.7.1}Гол үр дүнгүүд}{26}{subsection.192}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.7.2}V10 vs Өмнөх хувилбарууд харьцуулалт}{26}{subsection.198}\protected@file@percent }
-\@writefile{lot}{\contentsline {table}{\numberline {4.9}{\ignorespaces V10 vs V2 харьцуулалт}}{26}{table.caption.199}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.7.3}Үр дүнгийн хураангуй}{27}{subsection.200}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {4.5}{\ignorespaces V10 Судалгааны үр дүнгийн хураангуй}}{27}{figure.caption.201}\protected@file@percent }
-\newlabel{fig:summary}{{4.5}{27}{V10 Судалгааны үр дүнгийн хураангуй}{figure.caption.201}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.7.4}Практик ач холбогдол}{27}{subsection.202}\protected@file@percent }
-\@writefile{toc}{\contentsline {chapter}{\numberline {5}ДҮГНЭЛТ}{28}{chapter.203}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {4.1}Өгөгдлийн тойм}{23}{section.170}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.1.1}Сургалтын өгөгдөл}{23}{subsection.171}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {4.1}{\ignorespaces Өгөгдлийн статистик}}{23}{table.caption.172}\protected@file@percent }
+\newlabel{tab:data_stats}{{4.1}{23}{Өгөгдлийн статистик}{table.caption.172}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.1.2}Өгөгдлийн тархалтын диаграмм}{23}{subsection.173}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {4.1}{\ignorespaces Өгөгдлийн тархалт (мянган мөрөөр)}}{23}{figure.caption.174}\protected@file@percent }
+\newlabel{fig:data_distribution}{{4.1}{23}{Өгөгдлийн тархалт (мянган мөрөөр)}{figure.caption.174}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.1.3}EUR/USD Үнийн динамик диаграмм}{24}{subsection.175}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {4.2}{\ignorespaces EUR/USD 2025 оны 3-4-р сарын бодит үнийн хөдөлгөөн ба техникийн индикаторууд}}{24}{figure.caption.176}\protected@file@percent }
+\newlabel{fig:price_chart}{{4.2}{24}{EUR/USD 2025 оны 3-4-р сарын бодит үнийн хөдөлгөөн ба техникийн индикаторууд}{figure.caption.176}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.1.4}BUY дохио үүсгэх арга зүй}{24}{subsection.177}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {4.2}{\ignorespaces Сургалтын өгөгдлийн статистик}}{24}{table.caption.178}\protected@file@percent }
+\newlabel{tab:signal_distribution}{{4.2}{24}{Сургалтын өгөгдлийн статистик}{table.caption.178}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {4.2}Загваруудын гүйцэтгэл}{24}{section.179}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.2.1}Загваруудын зөвшилцлийн шинжилгээ}{24}{subsection.180}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {4.3}BUY дохионы нарийвчлал}{25}{section.181}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.3.1}Confidence түвшингийн дүн шинжилгээ}{25}{subsection.182}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {4.3}{\ignorespaces Confidence түвшин бүрийн BUY дохионы дэлгэрэнгүй гүйцэтгэл}}{25}{table.caption.183}\protected@file@percent }
+\newlabel{tab:confidence_accuracy}{{4.3}{25}{Confidence түвшин бүрийн BUY дохионы дэлгэрэнгүй гүйцэтгэл}{table.caption.183}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.3}{\ignorespaces Confidence ба Accuracy хамаарал}}{25}{figure.caption.184}\protected@file@percent }
+\newlabel{fig:confidence_accuracy}{{4.3}{25}{Confidence ба Accuracy хамаарал}{figure.caption.184}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.3.2}Судалгааны үндсэн үр дүн}{26}{subsection.185}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {4.4}Backtest үр дүн}{26}{section.186}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.4.1}Dynamic SL/TP}{26}{subsection.187}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {4.4}{\ignorespaces Динамик SL/TP тохиргоо}}{26}{table.caption.188}\protected@file@percent }
+\newlabel{tab:sl_tp}{{4.4}{26}{Динамик SL/TP тохиргоо}{table.caption.188}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.4.2}Итгэлцлийн өндөр босго дээрх туршилтын шинжилгээ (High Confidence Backtest Analysis)}{26}{subsection.189}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {4.5}{\ignorespaces 85\%+ Confidence Level Backtest Statistics}}{26}{table.caption.190}\protected@file@percent }
+\newlabel{tab:backtest_detail}{{4.5}{26}{85\%+ Confidence Level Backtest Statistics}{table.caption.190}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.4}{\ignorespaces Confidence Level vs Profit Factor}}{27}{figure.caption.191}\protected@file@percent }
+\newlabel{fig:profit_factor}{{4.4}{27}{Confidence Level vs Profit Factor}{figure.caption.191}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {4.5}Configuration Comparison}{27}{section.192}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {4.6}{\ignorespaces Configuration Comparison}}{27}{table.caption.193}\protected@file@percent }
+\newlabel{tab:recommendations}{{4.6}{27}{Configuration Comparison}{table.caption.193}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {4.6}System Performance}{27}{section.194}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.6.1}Response Time}{27}{subsection.195}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {4.7}{\ignorespaces System Performance Metrics}}{27}{table.caption.196}\protected@file@percent }
+\newlabel{tab:system_performance}{{4.7}{27}{System Performance Metrics}{table.caption.196}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {4.7}Conclusion of Results}{28}{section.197}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.7.1}Key Results}{28}{subsection.198}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.7.2}Proposed Method vs Baseline Comparison}{28}{subsection.204}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {4.8}{\ignorespaces Proposed Method vs Baseline Comparison}}{28}{table.caption.205}\protected@file@percent }
+\@writefile{toc}{\contentsline {chapter}{\numberline {5}ДҮГНЭЛТ}{29}{chapter.206}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\@writefile{toc}{\contentsline {section}{\numberline {5.1}Судалгааны үр дүнгийн нэгтгэл}{28}{section.204}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.1.1}Техникийн шийдэл}{28}{subsection.205}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.1.2}Backtest үр дүн}{28}{subsection.212}\protected@file@percent }
-\@writefile{lot}{\contentsline {table}{\numberline {5.1}{\ignorespaces V10 85\%+ confidence BUY сигналын гүйцэтгэл}}{29}{table.caption.213}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.1.3}Системийн бүрэлдэхүүн}{29}{subsection.214}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {5.2}Зорилтын биелэлт}{29}{section.220}\protected@file@percent }
-\@writefile{lot}{\contentsline {table}{\numberline {5.2}{\ignorespaces Зорилтын биелэлт}}{29}{table.caption.221}\protected@file@percent }
-\newlabel{tab:objectives}{{5.2}{29}{Зорилтын биелэлт}{table.caption.221}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {5.3}Шинэлэг хувь нэмэр}{30}{section.222}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {5.4}Хязгаарлалт}{30}{section.229}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {5.5}Цаашдын судалгааны чиглэл}{30}{section.234}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {5.6}Төгсгөлийн үг}{30}{section.241}\protected@file@percent }
-\@writefile{toc}{\contentsline {chapter}{Ном зүй}{31}{section.241}\protected@file@percent }
-\bibcite{bis2022}{{1}{}{{}}{{}}}
-\bibcite{barber2014}{{2}{}{{}}{{}}}
-\bibcite{mitchell1997}{{3}{}{{}}{{}}}
-\bibcite{dietterich2000}{{4}{}{{}}{{}}}
-\bibcite{breiman2001}{{5}{}{{}}{{}}}
-\bibcite{chen2016}{{6}{}{{}}{{}}}
-\bibcite{ke2017}{{7}{}{{}}{{}}}
-\bibcite{murphy1999}{{8}{}{{}}{{}}}
-\bibcite{krollner2010}{{9}{}{{}}{{}}}
-\bibcite{fischer2018}{{10}{}{{}}{{}}}
-\bibcite{sezer2020}{{11}{}{{}}{{}}}
-\bibcite{kim2018}{{12}{}{{}}{{}}}
-\bibcite{ding2020}{{13}{}{{}}{{}}}
-\bibcite{hochreiter1997}{{14}{}{{}}{{}}}
-\bibcite{vaswani2017}{{15}{}{{}}{{}}}
-\bibcite{he2016}{{16}{}{{}}{{}}}
-\bibcite{lin2017}{{17}{}{{}}{{}}}
-\bibcite{izmailov2018}{{18}{}{{}}{{}}}
-\bibcite{zhang2017}{{19}{}{{}}{{}}}
-\bibcite{wilder1978}{{20}{}{{}}{{}}}
-\bibcite{bollinger2002}{{21}{}{{}}{{}}}
-\bibcite{pytorch}{{22}{}{{}}{{}}}
-\bibcite{reactnative}{{23}{}{{}}{{}}}
-\bibcite{metatrader}{{24}{}{{}}{{}}}
-\bibcite{scikit}{{25}{}{{}}{{}}}
-\bibcite{kingma2014}{{26}{}{{}}{{}}}
-\bibcite{loshchilov2017}{{27}{}{{}}{{}}}
-\bibcite{srivastava2014}{{28}{}{{}}{{}}}
-\bibcite{hu2018}{{29}{}{{}}{{}}}
-\bibcite{graves2005}{{30}{}{{}}{{}}}
-\@writefile{toc}{\contentsline {chapter}{Хавсралт}{34}{chapter*.243}\protected@file@percent }
-\providecommand\NAT@force@numbers{}\NAT@force@numbers
-\@writefile{lot}{\contentsline {table}{\numberline {5.3}{\ignorespaces Hyperparameter тохиргоо}}{35}{table.caption.244}\protected@file@percent }
-\gdef \@abspage@last{44}
+\@writefile{toc}{\contentsline {section}{\numberline {5.1}Судалгааны үр дүнгийн нэгтгэл}{29}{section.207}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.1.1}Техникийн шийдэл}{29}{subsection.208}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.1.2}Backtest Results}{29}{subsection.215}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {5.1}{\ignorespaces Developed Method (85\%+ confidence) BUY дохионы гүйцэтгэл}}{30}{table.caption.216}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.1.3}System Components}{30}{subsection.217}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {5.2}Зорилтын биелэлт}{30}{section.223}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {5.2}{\ignorespaces Зорилтын биелэлт}}{30}{table.caption.224}\protected@file@percent }
+\newlabel{tab:objectives}{{5.2}{30}{Зорилтын биелэлт}{table.caption.224}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {5.3}Шинэлэг хувь нэмэр}{31}{section.225}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {5.4}Хязгаарлалт}{31}{section.233}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {5.5}Цаашдын судалгааны чиглэл}{31}{section.238}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {5.6}Төгсгөлийн үг}{32}{section.245}\protected@file@percent }
+\bibcite{bis2022}{1}
+\bibcite{barber2014}{2}
+\bibcite{mitchell1997}{3}
+\bibcite{dietterich2000}{4}
+\bibcite{breiman2001}{5}
+\bibcite{chen2016}{6}
+\bibcite{ke2017}{7}
+\bibcite{murphy1999}{8}
+\bibcite{krollner2010}{9}
+\bibcite{fischer2018}{10}
+\bibcite{sezer2020}{11}
+\bibcite{kim2018}{12}
+\bibcite{ding2020}{13}
+\bibcite{hochreiter1997}{14}
+\bibcite{vaswani2017}{15}
+\bibcite{he2016}{16}
+\bibcite{lin2017}{17}
+\bibcite{izmailov2018}{18}
+\@writefile{toc}{\contentsline {chapter}{Ном зүй}{33}{section*.246}\protected@file@percent }
+\bibcite{zhang2017}{19}
+\bibcite{wilder1978}{20}
+\bibcite{bollinger2002}{21}
+\bibcite{pytorch}{22}
+\bibcite{reactnative}{23}
+\bibcite{metatrader}{24}
+\bibcite{scikit}{25}
+\bibcite{kingma2014}{26}
+\bibcite{loshchilov2017}{27}
+\bibcite{srivastava2014}{28}
+\bibcite{hu2018}{29}
+\bibcite{graves2005}{30}
+\@writefile{toc}{\contentsline {chapter}{Хавсралт}{35}{chapter*.248}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {5.3}{\ignorespaces Labeling Parameters}}{36}{table.caption.249}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {5.4}{\ignorespaces XGBoost Hyperparameters}}{36}{table.caption.250}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {5.5}{\ignorespaces LightGBM Hyperparameters}}{37}{table.caption.251}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {5.6}{\ignorespaces CatBoost Hyperparameters}}{37}{table.caption.252}\protected@file@percent }
+\gdef \@abspage@last{46}

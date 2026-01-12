@@ -32,8 +32,8 @@
 \usepackage{mathrsfs}
 \usepackage{blindtext}
 \usepackage{titlepic}
-\usepackage[square,numbers,sort&compress]{natbib}
-\usepackage{acronym} 
+%\usepackage[square,numbers,sort&compress]{natbib}
+%\usepackage{acronym} 
 \usepackage{lmodern}
 \usepackage{longtable}
 \usepackage[titles]{tocloft}
@@ -46,6 +46,8 @@
    bookmarksopenlevel=0,bookmarksnumbered=true,hypertexnames=false,
    colorlinks,linkcolor={black},citecolor={black},urlcolor={black},
    pdfstartview={FitV},unicode,breaklinks=true]{hyperref}
+
+\usepackage{acronym}
 
 %\onehalfspacing
 \setlength{\parindent}{15pt}

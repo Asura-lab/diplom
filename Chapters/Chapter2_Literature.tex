@@ -2,7 +2,7 @@
 
 \section{Машин сургалтын онолын үндэс}
 
-Машин сургалт (Machine Learning) нь өгөгдлөөс автоматаар суралцаж, туршлагаасаа сайжирдаг алгоритмуудыг судалдаг салбар юм. Том Митчелл (1997) машин сургалтыг дараах байдлаар тодорхойлсон \cite{mitchell1997}:
+Machine Learning нь өгөгдлөөс автоматаар суралцаж, туршлагаасаа сайжирдаг алгоритмуудыг судалдаг салбар юм. Том Митчелл (1997) машин сургалтыг дараах байдлаар тодорхойлсон \cite{mitchell1997}:
 
 \begin{quote}
 ``Компьютерийн программ нь T даалгаврын хувьд P гүйцэтгэлийн үзүүлэлтээр хэмжигдэх E туршлагаас суралцсан гэж хэлнэ, хэрэв T даалгаврын P гүйцэтгэл E туршлагын дагуу сайжирсан бол.''
@@ -11,31 +11,21 @@
 Энэхүү судалгааны хүрээнд:
 \begin{itemize}
     \item \textbf{T (Даалгавар)}: EUR/USD валютын үнийн чиг хандлагыг таамаглах
-    \item \textbf{E (Туршлага)}: Түүхэн үнийн өгөгдөл болон техникийн индикаторууд
-    \item \textbf{P (Гүйцэтгэл)}: Ангилалын нарийвчлал (accuracy), precision, recall
+    \item \textbf{E (Туршлага)}: Түүхэн үнийн өгөгдөл болон Technical Indicators
+    \item \textbf{P (Гүйцэтгэл)}: Ангилалын accuracy, recall, precision
 \end{itemize}
 
-\subsection{Хяналттай сургалт}
+\subsection{Supervised Learning}
 
-Хяналттай сургалт (Supervised Learning) нь шошготой өгөгдлөөс суралцдаг арга юм. Оролтын $X$ болон гаралтын $Y$ хоорондын хамаарлыг $f: X \rightarrow Y$ функцээр дүрсэлнэ. Энэ судалгаанд хоёртын ангилал (binary classification) ашигласан бөгөөд $Y \in \{0, 1\}$ буюу HOLD эсвэл BUY дохио юм.
+Supervised Learning нь шошготой өгөгдлөөс суралцдаг арга юм. Оролтын $X$ болон гаралтын $Y$ хоорондын хамаарлыг $f: X \rightarrow Y$ функцээр дүрсэлнэ. Энэ судалгаанд binary classification ашигласан бөгөөд $Y \in \{0, 1\}$ буюу HOLD эсвэл BUY дохио юм.
 
-\section{Ensemble сургалтын аргууд}
+\section{Ensemble Learning}
 
-Ensemble арга нь олон моделийн таамаглалыг нэгтгэн илүү нарийвчлалтай үр дүнд хүрдэг. Dietterich (2000) ensemble аргын гурван үндсэн давуу талыг тодорхойлсон \cite{dietterich2000}: статистик, тооцооллын болон дүрслэлийн.
-
-\subsection{Random Forest}
-
-Breiman (2001) санал болгосон Random Forest нь bootstrap aggregating (bagging) дээр суурилсан алгоритм юм \cite{breiman2001}. Алгоритм нь $B$ ширхэг шийдвэрийн модыг бүтээж, тэдгээрийн олонхийн саналаар эцсийн таамаглал гаргана:
-
-\begin{equation}
-\hat{y} = \text{mode}\{h_1(x), h_2(x), ..., h_B(x)\}
-\end{equation}
-
-Энд $h_b(x)$ нь $b$-р модны таамаглал юм.
+Ensemble Learning арга нь олон загварын таамаглалыг нэгтгэн илүү нарийвчлалтай үр дүнд хүрдэг. Dietterich (2000) ensemble аргын гурван үндсэн давуу талыг тодорхойлсон \cite{dietterich2000}: статистик, тооцооллын болон дүрслэлийн.
 
 \subsection{Gradient Boosting}
 
-Gradient Boosting нь алдааг дараалан засах зарчмаар ажилладаг. $m$-р алхам дахь модель нь өмнөх моделийн алдааг (residual) таамаглахад суралцана:
+Gradient Boosting нь алдааг дараалан засах зарчмаар ажилладаг. $m$-р алхам дахь загвар нь өмнөх загварын алдааг (residual) таамаглахад суралцана:
 
 \begin{equation}
 F_m(x) = F_{m-1}(x) + \gamma_m h_m(x)
@@ -54,27 +44,27 @@ Chen ба Guestrin (2016) XGBoost (eXtreme Gradient Boosting) алгоритмы
 
 \subsubsection{LightGBM}
 
-Ke нар (2017) LightGBM алгоритмыг хөгжүүлсэн \cite{ke2017}. LightGBM нь leaf-wise tree growth стратеги ашигладаг бөгөөд энэ нь level-wise стратегиас илүү хурдан бөгөөд нарийвчлалтай.
+Ke, Meng нар (2017) LightGBM алгоритмыг хөгжүүлсэн \cite{ke2017}. LightGBM нь leaf-wise tree growth стратеги ашигладаг бөгөөд энэ нь level-wise стратегиас илүү хурдан бөгөөд нарийвчлалтай.
 
 \subsubsection{CatBoost}
 
-Yandex-ийн хөгжүүлсэн CatBoost нь categorical feature-тэй сайн ажилладаг gradient boosting алгоритм юм. Ordered boosting арга ашиглан target leakage-аас сэргийлдэг бөгөөд hyperparameter тохируулга бага шаарддаг.
+Yandex-ийн хөгжүүлсэн CatBoost нь categorical feature-тэй сайн ажилладаг Gradient Boosting алгоритм юм. Ordered boosting арга ашиглан target leakage-аас сэргийлдэг бөгөөд hyperparameter тохируулга бага шаарддаг.
 
-\subsection{V10 Ensemble арга}
+\subsection{Hybrid Ensemble арга}
 
-Энэ судалгаанд V10 гэж нэрлэгдсэн 7 загварын Ensemble арга ашигласан. 3 XGBoost, 2 LightGBM, 2 CatBoost загварыг нэгтгэж, Agreement Bonus системээр итгэлцүүрийг нэмэгдүүлсэн:
+Энэ судалгаанд Hybrid Ensemble гэж нэрлэгдсэн 7 загварыг нэгтгэх арга ашигласан. 3 XGBoost, 2 LightGBM, 2 CatBoost загварыг нэгтгэж, Agreement Bonus System-ээр итгэлцүүрийг нэмэгдүүлсэн:
 
 \begin{equation}
 P_{final} = \sum_{i=1}^{7} w_i \cdot P_i(BUY) + \text{Agreement Bonus}
 \end{equation}
 
-Agreement Bonus нь загваруудын зөвшилцлөөс хамааран +7\% (7/7), +4\% (6/7), +2\% (5/7) нэмдэг.
+Agreement Bonus System нь загваруудын зөвшилцлөөс хамааран +7\% (7/7), +4\% (6/7), +2\% (5/7) нэмдэг.
 
-\section{Техникийн шинжилгээ}
+\section{Technical Analysis}
 
-Техникийн шинжилгээ нь түүхэн үнэ, хэмжээний өгөгдлөөс ирээдүйн үнийн хөдөлгөөнийг таамаглахад ашиглагддаг. Murphy (1999) техникийн шинжилгээний гурван үндсэн зарчмыг тодорхойлсон \cite{murphy1999}: зах зээл бүх мэдээллийг агуулдаг, үнэ чиг хандлагаар хөдөлдөг, түүх давтагддаг.
+Technical Analysis нь түүхэн үнэ, хэмжээний өгөгдлөөс ирээдүйн үнийн хөдөлгөөнийг таамаглахад ашиглагддаг. Murphy (1999) Technical Analysis-ийн гурван үндсэн зарчмыг тодорхойлсон \cite{murphy1999}: зах зээл бүх мэдээллийг агуулдаг, үнэ чиг хандлагаар хөдөлдөг, түүх давтагддаг.
 
-\subsection{Trend индикаторууд}
+\subsection{Trend Indicators}
 
 \textbf{Moving Average (MA):} Тодорхой хугацааны дундаж үнийг тооцоолно.
 \begin{equation}
@@ -86,14 +76,14 @@ SMA_n = \frac{1}{n} \sum_{i=0}^{n-1} P_{t-i}
 MACD = EMA_{12} - EMA_{26}
 \end{equation}
 
-\subsection{Momentum индикаторууд}
+\subsection{Momentum Indicators}
 
 \textbf{RSI (Relative Strength Index):} Wilder (1978) санал болгосон RSI нь 0-100 хооронд хэмжигддэг \cite{wilder1978}.
 \begin{equation}
-RSI = 100 - \frac{100}{1 + RS}, \quad RS = \frac{\text{Avg Gain}}{\text{Avg Loss}}
+RSI = 100 - \frac{100}{1 + RS}, \quad RS = \frac{\text{Average Gain}}{\text{Average Loss}}
 \end{equation}
 
-\subsection{Volatility индикаторууд}
+\subsection{Volatility Indicators}
 
 \textbf{Bollinger Bands:} Bollinger (2002) хөгжүүлсэн энэ индикатор нь үнийн хэлбэлзлийг хэмждэг \cite{bollinger2002}.
 \begin{align}
@@ -103,6 +93,6 @@ RSI = 100 - \frac{100}{1 + RS}, \quad RS = \frac{\text{Avg Gain}}{\text{Avg Loss
 
 \section{Холбогдох судалгааны тойм}
 
-Forex таамаглалд машин сургалт ашигласан судалгаанууд сүүлийн жилүүдэд нэмэгдэж байна. Krollner нар (2010) 2010 оноос өмнөх 25 жилийн судалгааг нэгтгэн дүгнэхдээ машин сургалтын аргууд нь уламжлалт статистик аргуудаас илүү үр дүнтэй болохыг тогтоосон \cite{krollner2010}.
+Forex таамаглалд машин сургалт ашигласан судалгаанууд сүүлийн жилүүдэд нэмэгдэж байна. Krollner, Vanstone нар (2010) 2010 оноос өмнөх 25 жилийн судалгааг нэгтгэн дүгнэхдээ машин сургалтын аргууд нь уламжлалт статистик аргуудаас илүү үр дүнтэй болохыг тогтоосон \cite{krollner2010}.
 
-Fischer ба Krauss (2018) LSTM сүлжээг S\&P 500 индексийн таамаглалд ашиглаж, уламжлалт аргуудаас давсан үр дүн гаргасан \cite{fischer2018}. Гэсэн хэдий ч энэ судалгаанд ensemble аргыг сонгосон нь тайлбарлах чадвар (interpretability) болон тооцооллын хурдын давуу талтай.
+Fischer ба Krauss (2018) LSTM сүлжээг S\&P 500 индексийн таамаглалд ашиглаж, уламжлалт аргуудаас давсан үр дүн гаргасан \cite{fischer2018}.

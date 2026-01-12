@@ -2,18 +2,18 @@
 
 \section{Судалгааны үр дүнгийн нэгтгэл}
 
-Энэхүү дипломын ажлаар машин сургалтын V10 Ensemble аргыг ашиглан EUR/USD валютын хосын BUY дохио таамаглах системийг амжилттай хөгжүүлсэн. Судалгааны явцад XGBoost×3, LightGBM×2, CatBoost×2 гэсэн долоон загварыг нэгтгэсэн V10 Ensemble арга нь дангаар ажиллах загвараас маш их давуу, 96.9\% нарийвчлалтай үр дүн өгч байгааг баталсан.
+Энэхүү дипломын ажлаар Machine Learning Hybrid Ensemble аргыг ашиглан EUR/USD валютын хосын BUY дохио таамаглах системийг амжилттай хөгжүүлсэн. Судалгааны явцад XGBoost×3, LightGBM×2, CatBoost×2 гэсэн долоон загварыг нэгтгэсэн арга нь дангаар ажиллах загвараас маш их давуу, 96.9\% Accuracy үр дүн өгч байгааг баталсан.
 
 \subsection{Техникийн шийдэл}
 
 Загварын сургалтад ашигласан гол арга хэрэгслүүд:
 
 \begin{enumerate}
-    \item \textbf{V10 Ensemble загвар:} 7 загварын нэгдэл:
+    \item \textbf{Hybrid Ensemble загвар:} 7 загварын нэгдэл:
     \begin{itemize}
         \item XGBoost × 3 - Гурван өөр hyperparameter-тэй
         \item LightGBM × 2 - Histogram-based, санах ой хэмнэлттэй
-        \item CatBoost × 2 - Ordered boosting, categorical feature сайн
+        \item CatBoost × 2 - Ordered boosting, categorical feature сайн ажилладаг
     \end{itemize}
     
     \item \textbf{Agreement Bonus System:} Загваруудын зөвшилцөлд суурилсан нэмэлт оноо:
@@ -23,56 +23,56 @@
         \item 5/7 загвар ижил: +2\% bonus
     \end{itemize}
     
-    \item \textbf{32 техникийн индикатор:} 
+    \item \textbf{32 Technical Indicators:} 
     \begin{itemize}
-        \item Trend индикаторууд (SMA, EMA, MACD, ADX)
-        \item Momentum индикаторууд (RSI, Stochastic, CCI, Williams \%R)
-        \item Volatility индикаторууд (ATR, Bollinger Bands)
+        \item Trend Indicators (SMA, EMA, MACD, ADX)
+        \item Momentum Indicators (RSI, Stochastic, CCI, Williams \%R)
+        \item Volatility Indicators (ATR, Bollinger Bands)
         \item Time features (London/NY session, overlap)
     \end{itemize}
     
-    \item \textbf{Итгэлцлийн шүүлтүүр:} 85\%+ confidence-тэй BUY сигнал = 96.9\% accuracy
+    \item \textbf{Confidence Filter:} 85\%+ confidence BUY дохио = 96.9\% accuracy
     
     \item \textbf{Dynamic SL/TP:} ATR дээр суурилсан Stop Loss, Take Profit тооцоолол
     
-    \item \textbf{Entry/SL/TP гаралт:} Тодорхой entry price, stop loss, take profit утгууд
+    \item \textbf{Entry/SL/TP Output:} Тодорхой entry price, stop loss, take profit утгууд
 \end{enumerate}
 
-\subsection{Backtest үр дүн}
+\subsection{Backtest Results}
 
-Тестийн өгөгдөл дээр (~55 өдөр, 296,778 мөр) хийсэн backtest-ийн үр дүн:
+Test Set дээр (~55 өдөр, 296,778 мөр) хийсэн backtest үр дүн:
 
 \begin{table}[H]
 \centering
-\caption{V10 85\%+ confidence BUY сигналын гүйцэтгэл}
+\caption{Developed Method (85\%+ confidence) BUY дохионы гүйцэтгэл}
 \begin{tabular}{|l|r|}
 \hline
 \textbf{Үзүүлэлт} & \textbf{Утга} \\
 \hline
-Нийт сигнал & 97 \\
+Signals & 64 \\
 \hline
 Accuracy & \textbf{96.9\%} \\
 \hline
-Total Pips & \textbf{+1,844} \\
+Total Pips & \textbf{+910} \\
 \hline
-Profit Factor & \textbf{52.2} \\
+Profit Factor & \textbf{46.5} \\
 \hline
-Өдөрт сигнал & ~1.8 \\
+Signals per Day & ~1.2 \\
 \hline
-Загварын тоо & 7 \\
+Model Numbers & 7 \\
 \hline
 \end{tabular}
 \end{table}
 
-96.9\% accuracy гэдэг нь 100 BUY сигналаас зөвхөн 3 нь буруу гэсэн үг бөгөөд энэ нь маш өндөр найдвартай байдлыг харуулж байна. Profit Factor 52.2 нь мэргэжлийн арилжаачдын хүлээн зөвшөөрдөг маш өндөр түвшин юм.
+96.9\% Accuracy гэдэг нь 64 BUY дохионоос зөвхөн 2 нь буруу (62 зөв) гэсэн үг бөгөөд энэ нь маш өндөр найдвартай байдлыг харуулж байна. Profit Factor 46.5 нь мэргэжлийн арилжаачдын хүлээн зөвшөөрдөг маш өндөр түвшин юм.
 
-\subsection{Системийн бүрэлдэхүүн}
+\subsection{System Components}
 
 Бүрэн ажиллагаатай систем хөгжүүлсэн:
 
 \begin{enumerate}
-    \item \textbf{Backend API:} Flask + Waitress WSGI сервер
-    \item \textbf{V10 ML Pipeline:} Өгөгдөл татах → 32 индикатор тооцох → 7 загварын Ensemble таамаглал
+    \item \textbf{Backend API:} Flask + Waitress WSGI Server
+    \item \textbf{ML Pipeline:} Өгөгдөл татах → 32 Indicators тооцох → 7 загварын нэгдсэн таамаглал
     \item \textbf{Mobile App:} React Native + Expo мобайл аппликейшн
     \item \textbf{Database:} MongoDB (хэрэглэгчийн мэдээлэл, дохионууд)
     \item \textbf{Data Source:} Twelve Data API (бодит цагийн өгөгдөл)
@@ -87,21 +87,21 @@ Profit Factor & \textbf{52.2} \\
 \hline
 \textbf{№} & \textbf{Зорилт} & \textbf{Биелэлт} & \textbf{Тайлбар} \\
 \hline
-1 & Өгөгдөл цуглуулах & \checkmark & 2+ сая мөр EUR/USD 1min \\
+1 & Data Collection & \checkmark & 2+ сая мөр EUR/USD 1min \\
 \hline
-2 & Шинж чанар инженерчлэл & \checkmark & 32 техникийн индикатор \\
+2 & Feature Engineering & \checkmark & 32 Technical Indicators \\
 \hline
-3 & ML модель хөгжүүлэх & \checkmark & V10: XGB×3 + LGB×2 + CAT×2 \\
+3 & ML Model Development & \checkmark & Ensemble: XGB×3 + LGB×2 + CAT×2 \\
 \hline
-4 & Модель сургах & \checkmark & 1.8+ сая мөр дээр сургасан \\
+4 & Model Training & \checkmark & 1.8+ сая мөр дээр сургасан \\
 \hline
-5 & Backtest хийх & \checkmark & \textbf{96.9\% accuracy, PF 52.2} \\
+5 & Backtesting & \checkmark & \textbf{96.9\% Accuracy, PF 46.5} \\
 \hline
-6 & Backend API & \checkmark & Flask REST API + V10 \\
+6 & Backend API & \checkmark & Flask REST API + ML Engine \\
 \hline
-7 & Мобайл апп & \checkmark & React Native + Expo \\
+7 & Mobile App & \checkmark & React Native + Expo \\
 \hline
-8 & Entry/SL/TP гаралт & \checkmark & ATR-д суурилсан \\
+8 & Entry/SL/TP Output & \checkmark & ATR-д суурилсан \\
 \hline
 \end{tabular}
 \label{tab:objectives}
@@ -110,40 +110,41 @@ Profit Factor & \textbf{52.2} \\
 \section{Шинэлэг хувь нэмэр}
 
 \begin{enumerate}
-    \item \textbf{V10 Ensemble арга:} 7 ялгаатай ML загварыг нэгтгэн 96.9\% нарийвчлалтай таамаглал гаргасан
+    \item \textbf{Hybrid Ensemble арга:} 7 ялгаатай ML загварыг нэгтгэн 96.9\% Accuracy таамаглал гаргасан
     \item \textbf{Agreement Bonus System:} Загваруудын зөвшилцөлд суурилсан шинэлэг оноо системийг хэрэгжүүлсэн (+7/+4/+2\%)
     \item \textbf{Dynamic SL/TP:} ATR дээр суурилсан эрсдэлийн удирдлага хэрэгжүүлсэн
-    \item \textbf{Entry/SL/TP гаралт:} Тодорхой entry price, stop loss, take profit утгууд гаргадаг
-    \item \textbf{Бүрэн систем:} ML + Backend + Mobile бүхий бүрэн ажиллагаатай систем
+    \item \textbf{Entry/SL/TP Output:} Тодорхой entry price, stop loss, take profit утгууд гаргадаг
+    \item \textbf{Cross-platform Mobile Application:} React Native дээр суурилсан, бодит цагийн AI зөвлөгөө, график харуулдаг хэрэглэгчийн ээлтэй аппликейшн
+    \item \textbf{Complete System:} ML + Backend + Mobile бүхий бүрэн ажиллагаатай Ecosystem
     \item \textbf{Монгол хэлээр:} Forex ML системийн Монгол хэл дээрх судалгаа
 \end{enumerate}
 
 \section{Хязгаарлалт}
 
 \begin{enumerate}
-    \item \textbf{Зөвхөн BUY:} SELL дохио ашиглаагүй тул зах зээл буурах үед сигнал гаргахгүй
-    \item \textbf{Нэг валютын хос:} Зөвхөн EUR/USD дээр туршсан
-    \item \textbf{Backtesting:} Бодит арилжаа хийгээгүй, зөвхөн backtest
-    \item \textbf{Slippage:} Бодит арилжааны slippage, spread тооцоогүй
+    \item \textbf{BUY Only:} SELL дохио ашиглаагүй тул зах зээл буурах үед дохио гаргахгүй
+    \item \textbf{Single Currency Pair:} Зөвхөн EUR/USD дээр туршсан
+    \item \textbf{Backtesting:} Бодит арилжаа хийгээгүй, зөвхөн өнгөрсөн хугацааны туршилт
+    \item \textbf{Slippage and Spread:} Бодит арилжааны Slippage болон Spread тооцоогүй
 \end{enumerate}
 
 \section{Цаашдын судалгааны чиглэл}
 
 \begin{enumerate}
-    \item \textbf{Олон валют:} GBP/USD, USD/JPY зэрэг хосуудад өргөтгөх
-    \item \textbf{SELL сигнал:} SELL дохио нэмж зах зээлийн бүх чиглэлийг хамрах
+    \item \textbf{Multi-currency:} GBP/USD, USD/JPY зэрэг хосуудад өргөтгөх
+    \item \textbf{SELL Signal:} SELL дохио нэмж зах зээлийн бүх чиглэлийг хамрах
     \item \textbf{Deep Learning:} LSTM, Transformer архитектур турших
-    \item \textbf{Sentiment analysis:} Мэдээний sentiment нэмэх
-    \item \textbf{Live trading:} Бодит арилжааны туршилт хийх
-    \item \textbf{Portfolio:} Олон валютын портфолио удирдлага
+    \item \textbf{Sentiment Analysis:} News sentiment data
+    \item \textbf{Live Trading:} Бодит арилжааны туршилт хийх
+    \item \textbf{Portfolio Management:} Multi-currency portfolio management
 \end{enumerate}
 
 \section{Төгсгөлийн үг}
 
-Энэхүү дипломын ажлаар V10 Ensemble загварыг (XGBoost×3, LightGBM×2, CatBoost×2) ашиглан EUR/USD валютын хосын BUY дохио таамаглах системийг амжилттай хөгжүүлсэн. 
+Энэхүү дипломын ажлаар Hybrid Ensemble загварыг (XGBoost×3, LightGBM×2, CatBoost×2) ашиглан EUR/USD валютын хосын BUY дохио таамаглах системийг амжилттай хөгжүүлсэн. 
 
-85\%+ итгэлцэлтэй BUY сигнал нь backtest дээр \textbf{96.9\% accuracy}, \textbf{52.2 profit factor} үзүүлж, ~55 өдрийн туршид \textbf{+1,844 pip} ашиг олсон. Энэ нь практикт маш сайн хэрэглэгдэх боломжтой түвшин юм.
+85\%+ confidence BUY дохио нь backtest дээр \textbf{96.9\% Accuracy}, \textbf{46.5 Profit Factor} үзүүлж, ~55 өдрийн туршид \textbf{+910 пип} ашиг олсон. Энэ нь практикт маш сайн хэрэглэгдэх боломжтой түвшин юм.
 
-7 загварын нэгдэл ба Agreement Bonus системийн хослол нь итгэлцүүрийг нэмэгдүүлж, алдааг маш бага түвшинд хүргэсэн (зөвхөн 3.1\%). Машин сургалтаар санхүүгийн зах зээлийг төгс таамаглах боломжгүй боловч, статистик давуу талтай арилжааны шийдвэр дэмжлэгийн систем бүтээх бүрэн боломжтой гэдгийг энэхүү судалгаа харуулж байна. 
+7 загварын нэгдэл ба Agreement Bonus System-ийн хослол нь итгэлцүүрийг нэмэгдүүлж, алдааг маш бага түвшинд хүргэсэн (64 дохионоос зөвхөн 2 алдаатай). Machine Learning-ээр санхүүгийн зах зээлийг төгс таамаглах боломжгүй боловч, статистик давуу талтай арилжааны шийдвэр дэмжлэгийн систем бүтээх бүрэн боломжтой гэдгийг энэхүү судалгаа харуулж байна. 
 
-Profit Factor 52.2 нь мэргэжлийн арилжаачдын хүлээн зөвшөөрдөг маш өндөр үр дүн бөгөөд цаашдын хөгжүүлэлтэд бат суурь болно.
+Profit Factor 46.5 нь мэргэжлийн арилжаачдын хүлээн зөвшөөрдөг маш өндөр үр дүн бөгөөд цаашдын хөгжүүлэлтэд бат суурь болно.

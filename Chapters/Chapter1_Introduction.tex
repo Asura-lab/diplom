@@ -13,7 +13,7 @@
     \item \textbf{Зах зээлийн таних чадварын хязгаарлалт:} Том хэмжээний түүхэн өгөгдлөөс зах зээлийн хөдөлгөөнийг зөв таамаглах хэцүү 
 \end{itemize}
 
-Сүүлийн жилүүдэд машин сургалт (Machine Learning) нь санхүүгийн салбарт өргөнөөр нэвтэрч байна. Эдгээр технологиуд нь дээрх асуудлуудыг шийдвэрлэх боломжийг олгож байна:
+Сүүлийн жилүүдэд Machine Learning нь санхүүгийн салбарт өргөнөөр нэвтэрч байна. Эдгээр технологиуд нь дээрх асуудлуудыг шийдвэрлэх боломжийг олгож байна:
 
 \begin{enumerate}
     \item Том хэмжээний өгөгдлийг хурдан боловсруулах
@@ -22,36 +22,36 @@
     \item Нүдэнд харагдахгүй хөдөлгөөнийг илрүүлэх
 \end{enumerate}
 
-Монгол Улсад санхүүгийн технологийн (FinTech) салбар хурдацтай хөгжиж байгаа боловч валютын арилжааны автоматжуулалтын чиглэлээр судалгаа, хөгжүүлэлт хомс байна. Энэхүү судалгааны ажил нь уг цоорхойг нөхөхөд чиглэгдсэн бөгөөд машин сургалтын орчин үеийн аргуудыг ашиглан EUR/USD валютын хослолын ханшийн чиг хандлагыг таамаглах арилжааны дохио үүсгэх систем хөгжүүлэхэд оршино.
+Монгол улсад FinTech салбар хурдацтай хөгжиж байгаа боловч валютын арилжааны автоматжуулалтын чиглэлээр судалгаа, хөгжүүлэлт хомс байна. Энэхүү судалгааны ажил нь Machine Learning-ийн орчин үеийн аргуудыг ашиглан EUR/USD валютын хослолын ханшийн чиг хандлагыг таамаглах арилжааны дохио үүсгэх систем хөгжүүлэхэд оршино.
 
 \section{Судалгааны зорилго, зорилт}
 
 \subsection{Зорилго}
 
-Энэхүү судалгааны ажлын гол зорилго нь машин сургалтын ensemble аргуудыг ашиглан Forex зах зээл дээрх EUR/USD валютын хосын худалдан авах боломжийг таамаглаж, мобайл аппликейшнээр дохио илгээх систем хөгжүүлэхэд оршино.
+Энэхүү судалгааны ажлын гол зорилго нь Machine Learning аргуудыг нэгтгэн ашиглан Forex зах зээл дээрх EUR/USD валютын хослолын худалдан авах боломжийг таамаглаж, mobile application-аар дохио илгээх систем хөгжүүлэхэд оршино.
 
 \subsection{Зорилтууд}
 
 Дээрх зорилгод хүрэхийн тулд дараах зорилтуудыг дэвшүүлж байна:
 
 \begin{enumerate}
-    \item \textbf{Өгөгдөл цуглуулах:} EUR/USD валютын хосын бодит цагийн үнийн өгөгдлийг API-ээр татаж авах
+    \item \textbf{Data Collection:} EUR/USD валютын хосын бодит цагийн үнийн өгөгдлийг татаж авах
     
-    \item \textbf{Шинж чанар инженерчлэл:} 32 техникийн индикатор (RSI, MACD, Bollinger Bands, ATR, ADX гэх мэт) тооцоолох
+    \item \textbf{Feature Engineering:} 32 Technical Indicator (RSI, MACD, Bollinger Bands, ATR, ADX гэх мэт) тооцоолох
     
-    \item \textbf{Машин сургалтын модель хөгжүүлэх:} V10 Ensemble систем - XGBoost×3, LightGBM×2, CatBoost×2 гэсэн долоон загварын нэгдэл бүтээх
+    \item \textbf{ML Model Development:} Hybrid Ensemble систем - XGBoost×3, LightGBM×2, CatBoost×2 гэсэн долоон загварын нэгдэл бүтээх
     
     \item \textbf{Agreement Bonus System:} Загваруудын зөвшилцөлд суурилсан нэмэлт оноо систем хэрэгжүүлэх
     
-    \item \textbf{Моделийг сургах, оновчлох:} Hyperparameter тохируулга, cross-validation, class imbalance шийдвэрлэх
+    \item \textbf{Model Training \& Optimization:} Hyperparameter тохируулга, Cross-Validation, Class Imbalance шийдвэрлэх
     
-    \item \textbf{Үнэлгээ хийх:} Accuracy, Profit Factor, Total Pips зэрэг metrics ашиглан моделийн гүйцэтгэлийг үнэлэх
+    \item \textbf{Evaluation:} Accuracy, Profit Factor, Total Pips зэрэг хэмжүүрүүд ашиглан загварын гүйцэтгэлийг үнэлэх
     
-    \item \textbf{Backend API хөгжүүлэх:} Flask + Waitress WSGI серверээр бодит цагийн дохио үүсгэх API үүсгэх
+    \item \textbf{Backend Development:} Flask + Waitress WSGI server-ээр бодит цагийн дохио үүсгэх API үүсгэх
     
-    \item \textbf{Мобайл аппликейшн хөгжүүлэх:} React Native + Expo ашиглан арилжааны дохиог хүлээн авах мобайл апп бүтээх
+    \item \textbf{Гар утасны аппликейшн хөгжүүлэх:} React Native + Expo ашиглан арилжааны дохиог хүлээн авах гар утасны апп бүтээх
     
-    \item \textbf{Entry/SL/TP гаралт:} ATR-д суурилсан entry price, stop loss, take profit тооцоолох
+    \item \textbf{Entry/SL/TP гаралт:} ATR-д суурилан Entry Price, Stop Loss, Take Profit байршуулах ханшуудыг тооцоолох
 \end{enumerate}
 
 \section{Судалгааны хамрах хүрээ}
@@ -59,10 +59,10 @@
 Энэхүү судалгааны ажил нь дараах хүрээнд хязгаарлагдана:
 
 \begin{itemize}
-    \item \textbf{Валютын хос:} Зөвхөн EUR/USD (Евро/АНУ-ын доллар) валютын хосыг судална
+    \item \textbf{Валютын хос:} Зөвхөн EUR/USD (Евро/АНУ-ын доллар) валютын хослолыг судална
     \item \textbf{Цаг хугацааны хүрээ:} 1 минутын интервалтай өгөгдөл, 500 bar-ын түүхэн өгөгдөл
-    \item \textbf{Машин сургалтын арга:} Supervised learning буюу хяналттай сургалтын арга (BUY-only classification)
-    \item \textbf{Моделийн архитектур:} V10 Ensemble - XGBoost×3 + LightGBM×2 + CatBoost×2
+    \item \textbf{Машин сургалтын арга:} Supervised Learning буюу BUY-only Classification
+    \item \textbf{Загварын архитектур:} Hybrid Ensemble - XGBoost×3 + LightGBM×2 + CatBoost×2
     \item \textbf{Платформ:} Python, Flask, React Native, Expo
     \item \textbf{Өгөгдлийн эх үүсвэр:} Twelve Data API
 \end{itemize}
@@ -72,17 +72,17 @@
 Энэхүү судалгааны ажил нь дараах шинэлэг талуудтай:
 
 \begin{enumerate}
-    \item \textbf{V10 Ensemble арга:} 7 ялгаатай алгоритмын (XGBoost×3, LightGBM×2, CatBoost×2) нэгтгэл нь дан загвараас маш их давуу 96.9\% accuracy өгдөг
+    \item \textbf{Hybrid Ensemble арга:} 7 ялгаатай алгоритмын (XGBoost×3, LightGBM×2, CatBoost×2) нэгтгэлийг ашиглан дан загварын сул талыг нөхөж, таамаглалын найдвартай байдлыг нэмэгдүүлсэн
     
     \item \textbf{Agreement Bonus System:} Загваруудын зөвшилцөлд суурилсан шинэлэг оноо систем (+7\%, +4\%, +2\%) хэрэгжүүлсэн
     
-    \item \textbf{32 техникийн индикатор:} Trend, Momentum, Volatility, Time features-ийг цогц ашигласан
+    \item \textbf{32 Technical Indicator:} Trend, Momentum, Volatility, Time Features-ийг цогц ашигласан
     
     \item \textbf{BUY-only стратеги:} Зөвхөн худалдан авах боломжийг тодорхойлох нь шийдвэр гаргалтыг хялбарчилж, эрсдэлийг бууруулдаг
     
-    \item \textbf{Entry/SL/TP гаралт:} ATR-д суурилсан тодорхой entry price, stop loss, take profit утгууд гаргадаг
+    \item \textbf{Entry/SL/TP гаралт:} ATR-д суурилсан тодорхой Entry Price, Stop Loss, Take Profit утгууд гаргадаг
     
-    \item \textbf{Бүрэн систем:} Backend API + Машин сургалтын модел + Мобайл аппликейшн бүхий бүрэн систем
+    \item \textbf{Цогц систем:} Backend API + машин сургалтын загвар + гар утасны аппликейшн бүхий цогц систем
     
     \item \textbf{Бодит цагийн интеграц:} Бодит цагийн өгөгдлөөр сигнал үүсгэдэг
     
