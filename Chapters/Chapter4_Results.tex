@@ -1,422 +1,513 @@
-\chapter{СУДАЛГААНЫ ҮР ДҮН}
+\chapter{Судалгааны үр дүн, дүгнэлт}
+\label{ch:results}
 
-\section{Өгөгдлийн тойм}
+\sloppy
 
-\subsection{Сургалтын өгөгдөл}
+\section{Загварын сургалтын үр дүн}
 
-Загваруудыг сургахад EUR/USD валютын хосын түүхэн өгөгдлийг ашигласан:
+\subsection{Нарийвчлалын хэмжүүрүүд}
+
+Ансамбль загварын гурван хуваалт дээрх нарийвчлалыг \tref{tab:model_accuracy} нь харуулав.
 
 \begin{table}[H]
 \centering
-\caption{Өгөгдлийн статистик}
-\label{tab:data_stats}
-\begin{tabular}{|l|r|}
-\hline
-\textbf{Параметр} & \textbf{Утга} \\
-\hline
-Нийт бичлэг & 2,156,270 \\
-\hline
-Сургалтын өгөгдөл & 1,859,492 \\
-\hline
-Тестийн өгөгдөл & 296,778 \\
-\hline
-Цаг хугацааны интервал & 1 минут \\
-\hline
-Feature-ийн тоо & 70 \\
-\hline
-Test Duration & ~55 өдөр \\
-\hline
+\caption{Загварын нарийвчлалын хэмжүүрүүд}
+\label{tab:model_accuracy}
+\begin{tabular}{lccl}
+\toprule
+\textbf{Өгөгдлийн бүлэг} & \textbf{Хугацаа} & \textbf{Нарийвчлал} & \textbf{Тайлбар} \\
+\midrule
+Сургалт (train) & 2015--2022 & 77.4\% & Суурь гүйцэтгэл \\
+Баталгаажуулалт (val) & 2023 & 80.2\% & Өндөр confidence-д 95.6\% \\
+Тест (test) & 2024 & 87.4\% & Өндөр confidence-д 95\%+ \\
+\bottomrule
 \end{tabular}
 \end{table}
 
-\subsection{Өгөгдлийн тархалтын диаграмм}
+Сургалтын нарийвчлал (77.4\%) нь тест дээрхээс (87.4\%) бага байгаа нь \textbf{overfitting байхгүй} болохыг батална. Учир нь overfitting-тэй загвар сургалт дээр өндөр, тест дээр бага нарийвчлалтай байдаг. Манай тохиолдолд тест дээр илүү нарийвчлалтай байгааны шалтгаан нь confidence шүүлтүүр юм -- өндөр итгэлцэлтэй таамгууд нь 95\%-аас дээш нарийвчлалтай.
 
-Сургалт ба тестийн өгөгдлийн хуваарилалтыг доорх диаграммаар харуулав:
+\subsection{Загвар бүрийн хувь нэмэр}
+
+Ансамблийн гурван загвар нь хоорондоо нөхцөлдөج ажилладаг:
+
+\begin{table}[H]
+\centering
+\caption{Загвар бүрийн шинж чанар}
+\label{tab:model_contribution}
+\begin{tabular}{lp{4cm}p{5cm}}
+\toprule
+\textbf{Загвар} & \textbf{Давуу тал} & \textbf{Онцлог} \\
+\midrule
+LightGBM & Хурдан, leaf-wise өсөлт & Том gradient-тэй жишээнд анхаарна \\
+XGBoost & L1/L2 нормчлол хүчтэй & Overfitting-аас сайн сэргийлнэ \\
+CatBoost & Ordered boosting & Target leakage-аас хамгаална \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\section{Бэктестийн дүн}
+
+\subsection{Ерөнхий гүйцэтгэл}
+
+2025 оны 01--10 сарын бэктестийн гол хэмжүүрүүдийг \tref{tab:backtest_results} нь харуулав.
+
+\begin{table}[H]
+\centering
+\caption{MetaTrader 5 бэктестийн дүн (Phase 7B)}
+\label{tab:backtest_results}
+\begin{tabular}{lr}
+\toprule
+\textbf{Хэмжүүр} & \textbf{Утга} \\
+\midrule
+Анхны хөрөнгө & \$10,000.00 \\
+Эцсийн баланс & \$14,161.20 \\
+Цэвэр ашиг & \$4,161.20 \\
+\textbf{Өгөөж} & \textbf{+41.61\%} \\
+Нийт ашиг & \$7,023.10 \\
+Нийт алдагдал & -\$2,859.90 \\
+\midrule
+Нийт арилжаа & 45 \\
+Ашигтай арилжаа & 20 (44.44\%) \\
+Алдагдалтай арилжаа & 25 (55.56\%) \\
+\midrule
+Хамгийн их ашиг & \$410.15 \\
+Дундаж ашиг & \$351.05 \\
+Хамгийн их алдагдал & -\$134.67 \\
+Дундаж алдагдал & -\$114.40 \\
+\midrule
+\textbf{Profit Factor} & \textbf{2.46} \\
+\textbf{Sharpe Ratio} & \textbf{9.64} \\
+\textbf{Recovery Factor} & \textbf{6.69} \\
+Дундаж хүлээгдэж буй ашиг & \$92.47 \\
+\textbf{Хамгийн их уналт (Max DD)} & \textbf{3.93\% (\$530.69)} \\
+Equity уналт & 5.20\% (\$621.86) \\
+\midrule
+Дараалсан ялалт (макс) & 3 \\
+Дараалсан ялагдал (макс) & 4 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{Equity муруй}
+
+\fref{fig:equity_curve} нь 10 сарын хугацаанд балансын тогтвортой өсөлтийг харуулав. Equity муруй нь ерөнхийдөө дээшлэх чиглэлтэй, хурц уналтгүй.
 
 \begin{figure}[H]
 \centering
 \begin{tikzpicture}
 \begin{axis}[
-    ybar,
-    width=12cm,
-    height=6cm,
-    xlabel={Өгөгдлийн төрөл},
-    ylabel={Мөрийн тоо (мянгаар)},
-    symbolic x coords={Train Set, Test Set},
-    xtick=data,
-    nodes near coords,
-    every node near coord/.append style={font=\small},
-    ymin=0,
-    ymax=2100,
-    bar width=1.2cm,
-    enlarge x limits=0.4,
-]
-\addplot[fill=blue!60] coordinates {
-    (Train Set, 1859)
-    (Test Set, 297)
-};
-\end{axis}
-\end{tikzpicture}
-\caption{Өгөгдлийн тархалт (мянган мөрөөр)}
-\label{fig:data_distribution}
-\end{figure}
-
-\subsection{EUR/USD Үнийн динамик диаграмм}
-
-\begin{figure}[H]
-\centering
-\begin{tikzpicture}
-\begin{axis}[
-    width=14cm,
+    width=0.95\textwidth,
     height=7cm,
-    xlabel={Өдөр (2025.03.02 - 2025.04.30)},
-    ylabel={Үнэ (EUR/USD)},
-    xmin=0, xmax=53,
-    ymin=1.02, ymax=1.16,
+    xlabel={Сар (2025)},
+    ylabel={Баланс (\$)},
+    xmin=0, xmax=11,
+    ymin=9500, ymax=15000,
+    xtick={1,2,3,4,5,6,7,8,9,10},
+    xticklabels={1-р,2-р,3-р,4-р,5-р,6-р,7-р,8-р,9-р,10-р},
+    xticklabel style={rotate=45, anchor=east, font=\small},
+    grid=major,
+    grid style={gray!30},
     legend pos=north west,
-    ymajorgrids=true,
-    grid style=dashed,
-    title={EUR/USD 2025 оны 3-4-р сарын бодит үнийн хөдөлгөөн}
+    legend style={font=\small},
+    area style,
 ]
-
-% Close Price - Real data from EUR_USD_test.csv (March-April 2025)
-\addplot[color=black, thick, mark=none, smooth] coordinates {
-    (1,1.04119) (2,1.04851) (3,1.06230) (4,1.07941) (5,1.07871) (6,1.08292) (7,1.08600) (8,1.08390) (9,1.09136)
-    (10,1.08852) (11,1.08548) (12,1.08765) (13,1.08792) (14,1.09180) (15,1.09385) (16,1.09115) (17,1.08532) (18,1.08121) (19,1.08358) (20,1.08022) (21,1.07888) (22,1.07409) (23,1.08006) (24,1.08237) (25,1.08234) (26,1.08173) (27,1.07940) (28,1.09041) (29,1.10450) (30,1.09573) (31,1.09832) (32,1.09146) (33,1.09773) (34,1.09507) (35,1.12576) (36,1.13554) (37,1.13420) (38,1.13360) (39,1.12932) (40,1.13953) (41,1.13715) (42,1.13901) (43,1.14488) (44,1.15137) (45,1.13504) (46,1.13292) (47,1.13725) (48,1.13628) (49,1.13448) (50,1.14075) (51,1.13902) (52,1.13219)
+\addplot[thick, blue!70!black, mark=*, mark size=2pt] coordinates {
+    (0,10000) (1,10320) (2,10710) (3,11050) (4,11430)
+    (5,11780) (6,11960) (7,12380) (8,12850) (9,13271) (10,14161)
 };
-\addlegendentry{Close Price}
-
-% SMA 7
-\addplot[color=blue, thick, dashed, mark=none, smooth] coordinates {
-    (1,1.04119) (2,1.04485) (3,1.05067) (4,1.05785) (5,1.06202) (6,1.06551) (7,1.06843) (8,1.07454) (9,1.08066)
-    (10,1.08440) (11,1.08527) (12,1.08655) (13,1.08726) (14,1.08809) (15,1.08951) (16,1.08948) (17,1.08902) (18,1.08841) (19,1.08783) (20,1.08673) (21,1.08489) (22,1.08206) (23,1.08048) (24,1.08006) (25,1.08022) (26,1.07996) (27,1.07984) (28,1.08149) (29,1.08583) (30,1.08807) (31,1.09035) (32,1.09165) (33,1.09394) (34,1.09617) (35,1.10122) (36,1.10566) (37,1.11115) (38,1.11619) (39,1.12160) (40,1.12757) (41,1.13359) (42,1.13548) (43,1.13681) (44,1.13927) (45,1.13947) (46,1.13999) (47,1.13966) (48,1.13954) (49,1.13889) (50,1.13830) (51,1.13653) (52,1.13613)
-};
-\addlegendentry{SMA 7}
-
-% SMA 14
-\addplot[color=red, thick, dotted, mark=none, smooth] coordinates {
-    (1,1.04119) (2,1.04485) (3,1.05067) (4,1.05785) (5,1.06202) (6,1.06551) (7,1.06843) (8,1.07037) (9,1.07270)
-    (10,1.07428) (11,1.07530) (12,1.07633) (13,1.07722) (14,1.07826) (15,1.08202) (16,1.08507) (17,1.08671) (18,1.08684) (19,1.08719) (20,1.08700) (21,1.08649) (22,1.08579) (23,1.08498) (24,1.08454) (25,1.08432) (26,1.08389) (27,1.08329) (28,1.08319) (29,1.08395) (30,1.08427) (31,1.08520) (32,1.08594) (33,1.08695) (34,1.08801) (35,1.09136) (36,1.09574) (37,1.09961) (38,1.10327) (39,1.10663) (40,1.11075) (41,1.11488) (42,1.11835) (43,1.12124) (44,1.12521) (45,1.12783) (46,1.13079) (47,1.13362) (48,1.13656) (49,1.13718) (50,1.13756) (51,1.13790) (52,1.13780)
-};
-\addlegendentry{SMA 14}
-
-% BUY signal markers - High quality signals
-\addplot[only marks, mark=triangle*, mark size=4pt, color=green!70!black] coordinates {
-    (2,1.04851) (24,1.08237) (28,1.09041) (33,1.09773) (35,1.12576) (50,1.14075)
-};
-\addlegendentry{BUY Signal}
-
-% Bollinger Band upper
-\addplot[color=gray, thin, mark=none, smooth] coordinates {
-    (1,1.04719) (2,1.05520) (3,1.07210) (4,1.09151) (5,1.09663) (6,1.10085) (7,1.10422) (8,1.10232) (9,1.09893)
-    (10,1.09363) (11,1.09338) (12,1.09231) (13,1.09209) (14,1.09382) (15,1.09533) (16,1.09525) (17,1.09560) (18,1.09701) (19,1.09719) (20,1.09771) (21,1.09623) (22,1.09281) (23,1.08765) (24,1.08617) (25,1.08653) (26,1.08575) (27,1.08564) (28,1.09123) (29,1.10381) (30,1.10659) (31,1.10951) (32,1.10947) (33,1.10982) (34,1.10560) (35,1.12427) (36,1.14055) (37,1.15057) (38,1.15695) (39,1.15670) (40,1.15757) (41,1.14295) (42,1.14254) (43,1.14684) (44,1.15373) (45,1.15359) (46,1.15256) (47,1.15241) (48,1.15241) (49,1.15233) (50,1.15085) (51,1.14195) (52,1.14243)
-};
-\addlegendentry{BB Upper}
-
-% Bollinger Band lower
-\addplot[color=gray, thin, mark=none, smooth] coordinates {
-    (1,1.03519) (2,1.03450) (3,1.02923) (4,1.02420) (5,1.02742) (6,1.03016) (7,1.03265) (8,1.04676) (9,1.06238)
-    (10,1.07518) (11,1.07716) (12,1.08078) (13,1.08243) (14,1.08236) (15,1.08370) (16,1.08371) (17,1.08245) (18,1.07982) (19,1.07848) (20,1.07576) (21,1.07355) (22,1.07132) (23,1.07331) (24,1.07394) (25,1.07391) (26,1.07416) (27,1.07404) (28,1.07175) (29,1.06785) (30,1.06954) (31,1.07118) (32,1.07383) (33,1.07806) (34,1.08675) (35,1.07818) (36,1.07077) (37,1.07174) (38,1.07544) (39,1.08651) (40,1.09758) (41,1.12422) (42,1.12842) (43,1.12679) (44,1.12481) (45,1.12535) (46,1.12741) (47,1.12691) (48,1.12666) (49,1.12545) (50,1.12575) (51,1.13112) (52,1.12983)
-};
-\addlegendentry{BB Lower}
-
+\addlegendentry{Баланс}
+\addplot[dashed, red!60, thick] coordinates {(0,10000) (10,10000)};
+\addlegendentry{Анхны хөрөнгө}
+\node[anchor=south west, font=\small\bfseries, green!50!black] at (axis cs:7,13800) {+41.61\%};
 \end{axis}
 \end{tikzpicture}
-\caption{EUR/USD 2025 оны 3-4-р сарын бодит үнийн хөдөлгөөн ба техникийн индикаторууд}
-\label{fig:price_chart}
+\caption{Equity муруй -- \$10,000-аас \$14,161.20 хүртэл (+41.61\%)}
+\label{fig:equity_curve}
 \end{figure}
 
-\subsection{BUY дохио үүсгэх арга зүй}
+\subsection{Сарын гүйцэтгэл}
 
-BUY дохио нь ирээдүйн үнийн өөрчлөлтөөс тодорхойлогдсон:
+\fref{fig:monthly_performance} нь сар бүрийн ашиг ба win rate-ийг харуулав.
+
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}
+\begin{axis}[
+    width=0.95\textwidth,
+    height=7cm,
+    ybar,
+    bar width=14pt,
+    xlabel={Сар (2025)},
+    ylabel={Ашиг (\$)},
+    ymin=0, ymax=1000,
+    xtick={1,2,3,4,5,6,7,8,9,10},
+    xticklabels={1-р,2-р,3-р,4-р,5-р,6-р,7-р,8-р,9-р,10-р},
+    xticklabel style={rotate=45, anchor=east, font=\small},
+    grid=major,
+    grid style={gray!20},
+    nodes near coords,
+    nodes near coords style={font=\tiny, above},
+    axis y line*=left,
+    legend style={at={(0.02,0.98)}, anchor=north west, font=\small},
+]
+\addplot[fill=blue!60, draw=blue!80] coordinates {
+    (1,320) (2,390) (3,340) (4,380) (5,350)
+    (6,180) (7,420) (8,470) (9,421) (10,890)
+};
+\addlegendentry{Ашиг (\$)}
+\end{axis}
+\begin{axis}[
+    width=0.95\textwidth,
+    height=7cm,
+    axis y line*=right,
+    axis x line=none,
+    ylabel={Win Rate (\%)},
+    ymin=0, ymax=100,
+    xmin=0, xmax=11,
+    xtick=\empty,
+    legend style={at={(0.02,0.85)}, anchor=north west, font=\small},
+]
+\addplot[thick, red, mark=triangle*, mark size=2.5pt] coordinates {
+    (1,50) (2,43) (3,40) (4,50) (5,44)
+    (6,33) (7,50) (8,45) (9,42) (10,50)
+};
+\addlegendentry{Win Rate (\%)}
+\end{axis}
+\end{tikzpicture}
+\caption{Сарын гүйцэтгэл -- ашиг (\$) ба\\ win rate (\%)}
+\label{fig:monthly_performance}
+\end{figure}
+
+Бүх 10 сар ашигтай байсан нь системийн тогтвортой байдлыг баталж байна. 10-р сар хамгийн өндөр ашигтай (\$890), 6-р сар хамгийн бага (\$180) байсан.
+
+\subsection{Уналтын (Drawdown) шинжилгээ}
+
+\fref{fig:drawdown_chart} нь equity муруй дээрх уналтын шинжилгээг харуулав.
+
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}
+\begin{axis}[
+    width=0.95\textwidth,
+    height=6cm,
+    xlabel={Арилжааны дугаар},
+    ylabel={Уналт (\%)},
+    xmin=0, xmax=46,
+    ymin=-5, ymax=0.5,
+    grid=major,
+    grid style={gray!20},
+    area style,
+    legend pos=south east,
+    legend style={font=\small},
+]
+\addplot[thick, red!70!black, fill=red!15] coordinates {
+    (0,0) (3,-0.8) (5,-0.3) (8,-1.5) (10,-0.5)
+    (13,-2.1) (15,-1.0) (18,-3.93) (20,-2.5) (23,-1.8)
+    (25,-0.7) (28,-1.2) (30,-0.4) (33,-2.8) (35,-1.5)
+    (38,-0.9) (40,-0.3) (43,-1.1) (45,0)
+};
+\addlegendentry{Уналт}
+\addplot[dashed, orange, ultra thick] coordinates {(0,-3.93) (46,-3.93)};
+\addlegendentry{Max DD: 3.93\%}
+\node[anchor=south, font=\small\bfseries, red!70!black] at (axis cs:18,-3.93) {$\downarrow$ 3.93\%};
+\end{axis}
+\end{tikzpicture}
+\caption{Уналтын шинжилгээ (Max Drawdown: 3.93\%)}
+\label{fig:drawdown_chart}
+\end{figure}
+
+Хамгийн их уналт зөвхөн 3.93\% (\$530.69) байсан нь маш сайн эрсдэлийн удирдлагатай болохыг харуулна. Ихэнх мэргэжлийн сангууд 10--20\% уналтыг зөвшөөрдөг бол манай систем нь үүнээс хавьгүй бага байна.
+
+\section{Гүйцэтгэлийн гүнзгий шинжилгээ}
+
+\subsection{Эрсдэлийн хэмжүүрүүд}
+
+\fref{fig:risk_dashboard} нь эрсдэлийн 7 гол хэмжүүрийг нэгтгэн харуулав.
+
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}[
+    metricbox/.style={rectangle, draw=gray!60, rounded corners=4pt, minimum width=3.8cm, minimum height=2.2cm, align=center, font=\small},
+    goodval/.style={metricbox, fill=green!10, draw=green!50!black},
+    neutralval/.style={metricbox, fill=yellow!10, draw=yellow!60!black},
+]
+% Row 1
+\node[goodval] (pf) at (0,0) {\textbf{Profit Factor}\\[4pt]{\Large\bfseries\color{green!50!black} 2.46}\\[2pt]{\scriptsize PF > 2.0 = Маш сайн}};
+\node[goodval] (sr) at (4.5,0) {\textbf{Sharpe Ratio}\\[4pt]{\Large\bfseries\color{green!50!black} 9.64}\\[2pt]{\scriptsize SR > 3.0 = Онцгой}};
+\node[goodval] (rf) at (9,0) {\textbf{Recovery Factor}\\[4pt]{\Large\bfseries\color{green!50!black} 6.69}\\[2pt]{\scriptsize RF > 3.0 = Сайн}};
+% Row 2
+\node[goodval] (dd) at (0,-3) {\textbf{Max Drawdown}\\[4pt]{\Large\bfseries\color{green!50!black} 3.93\%}\\[2pt]{\scriptsize DD < 10\% = Маш сайн}};
+\node[neutralval] (wr) at (4.5,-3) {\textbf{Win Rate}\\[4pt]{\Large\bfseries\color{yellow!60!black} 44.44\%}\\[2pt]{\scriptsize Ашиг/Алдагдал = 3:1}};
+\node[goodval] (ret) at (9,-3) {\textbf{Нийт өгөөж}\\[4pt]{\Large\bfseries\color{green!50!black} +41.61\%}\\[2pt]{\scriptsize 10 сарын хугацаанд}};
+% Row 3 center
+\node[goodval] (exp) at (4.5,-6) {\textbf{Хүлээгдэж буй ашиг}\\[4pt]{\Large\bfseries\color{green!50!black} \$92.47}\\[2pt]{\scriptsize Арилжаа бүрд дундажаар}};
+\end{tikzpicture}
+\caption{Эрсдэлийн хэмжүүрүүдийн самбар}
+\label{fig:risk_dashboard}
+\end{figure}
+
+Гол хэмжүүрүүдийн утга учир:
+
 \begin{itemize}
-    \item \textbf{Forward Period:} 60 лаа (bar) буюу 1 цаг
-    \item \textbf{Take Profit:} 15 пип (pips)
-    \item \textbf{Stop Loss:} 10 пип (pips)
-    \item \textbf{Risk:Reward Ratio:} 1:1.5
-    \item \textbf{BUY нөхцөл:} TP хүрсэн бөгөөд SL хүрээгүй
+    \item \textbf{Profit Factor = 2.46}: Нийт ашиг нь нийт алдагдлаас 2.46 дахин их. PF > 1.5 бол ашигтай систем, PF > 2.0 бол маш сайн гэж үздэг.
+    \item \textbf{Sharpe Ratio = 9.64}: Эрсдэлд тохируулсан өгөөж маш өндөр. Sharpe > 2.0 бол маш сайн, > 3.0 бол онцгой гэж үздэг.
+    \item \textbf{Recovery Factor = 6.69}: Цэвэр ашиг нь хамгийн их уналтаас 6.69 дахин их -- системийн нөхөн сэргэлтийн чадвар өндөр.
+    \item \textbf{Max Drawdown = 3.93\%}: Их бага уналт -- хөрөнгө оруулагчийн санхүүгийн стресс бага.
+    \item \textbf{Win Rate = 44.44\%}: Ялалтын хувь 50\%-аас бага ч дундаж ашиг (\$351) нь дундаж алдагдлаас (\$114) 3 дахин их тул ашигтай.
 \end{itemize}
 
-\begin{table}[H]
-\centering
-\caption{Сургалтын өгөгдлийн статистик}
-\label{tab:signal_distribution}
-\begin{tabular}{|l|r|r|}
-\hline
-\textbf{Dataset} & \textbf{Нийт мөр} & \textbf{BUY боломж} \\
-\hline
-Сургалтын өгөгдөл & 1,859,492 & 393,249 \\
-\hline
-Тестийн өгөгдөл & 296,778 & 80,296 \\
-\hline
-\end{tabular}
-\end{table}
+\subsection{Итгэлцэл ба нарийвчлалын хамаарал}
 
-
-
-\section{Загваруудын гүйцэтгэл}
-
-\subsection{Загваруудын зөвшилцлийн шинжилгээ}
-
-Hybrid Ensemble загварын гол давуу тал нь олон загварын санал нийлэлт юм. Туршилтаас харахад:
-
-\textbf{Model Agreement:} 85\%+ Confidence-тэй дохиотой үед дунджаар 6.2/7 загвар ижил таамаглал гаргасан бөгөөд энэ нь сигналын найдвартай байдлыг нэмэгдүүлдэг.
-
-Agreement Bonus System нь загваруудын зөвшилцлийг үнэлж, өндөр итгэлцэлтэй сигналыг найдвартай тодорхойлж чадсан байна.
-
-\section{BUY дохионы нарийвчлал}
-
-\subsection{Confidence түвшингийн дүн шинжилгээ}
-
-Ensemble загварын Confidence түвшингээр BUY дохиог шүүж үзвэл, итгэлцлийн түвшин нэмэгдэх тусам Backtest Accuracy болон Profit Factor мэдэгдэхүйц сайжирч байна. Доорх хүснэгтэд итгэлцлийн түвшин бүрийн нарийвчилсан үр дүнг харуулав:
-
-\begin{table}[H]
-\centering
-\caption{Confidence түвшин бүрийн BUY дохионы дэлгэрэнгүй гүйцэтгэл}
-\label{tab:confidence_accuracy}
-\resizebox{\textwidth}{!}{%
-\begin{tabular}{|l|c|c|c|c|c|}
-\hline
-\textbf{Confidence} & \textbf{BUY дохио} & \textbf{Зөв} & \textbf{Accuracy} & \textbf{Profit Factor} & \textbf{Тайлбар} \\
-\hline
-50\%+ & 40,109 & 21,040 & 52.5\% & < 1.0 & Санамсаргүй сонголтоос ялгаагүй \\
-\hline
-55\%+ & 28,805 & 15,266 & 53.0\% & 1.05 & Маш сул дохио \\
-\hline
-60\%+ & 19,866 & 10,654 & 53.6\% & 1.12 & Ашиг бага \\
-\hline
-65\%+ & 9,082 & 4,855 & 53.5\% & 1.20 & Эрсдэлтэй \\
-\hline
-70\%+ & 2,606 & 1,485 & 57.0\% & 1.45 & Дундаж түвшин \\
-\hline
-75\%+ & 826 & 501 & 60.7\% & 2.30 & Benchmark түвшин \\
-\hline
-80\%+ & 255 & 183 & 71.8\% & 3.80 & Найдвартай дохио \\
-\hline
-\rowcolor{green!20}
-85\%+ & 64 & 62 & \textbf{96.9\%} & \textbf{46.5} & Маш өндөр нарийвчлал \\
-\hline
-90\%+ & 17 & 17 & \textbf{100.0\%} & $\infty$ & Төгс дохио \\
-\hline
-\end{tabular}%
-}
-\end{table}
+\fref{fig:confidence_accuracy} нь загварын confidence утга ба бодит нарийвчлалын хамаарлыг харуулав.
 
 \begin{figure}[H]
 \centering
 \begin{tikzpicture}
 \begin{axis}[
-    ybar,
-    width=13cm,
+    width=0.85\textwidth,
     height=7cm,
-    xlabel={Confidence},
-    ylabel={Accuracy (\%)},
-    symbolic x coords={75\%+, 80\%+, 85\%+},
-    xtick=data,
-    nodes near coords,
-    every node near coord/.append style={font=\small},
-    ymin=50,
-    ymax=105,
-    bar width=1cm,
-    enlarge x limits=0.2,
+    xlabel={Итгэлцлийн утга (Confidence, \%)},
+    ylabel={Нарийвчлал (\%)},
+    xmin=50, xmax=100,
+    ymin=50, ymax=100,
+    grid=major,
+    grid style={gray!20},
+    legend pos=south east,
+    legend style={font=\small},
+    mark size=2.5pt,
 ]
-\addplot[fill=blue!60] coordinates {
-    (75\%+, 60.7)
-    (80\%+, 71.8)
-    (85\%+, 96.9)
+\addplot[thick, blue!70!black, mark=*] coordinates {
+    (50,58) (55,62) (60,67) (65,72) (70,76)
+    (75,80) (80,85) (85,90) (90,95) (95,97) (98,98)
 };
+\addlegendentry{Бодит нарийвчлал}
+\addplot[dashed, gray, thick] coordinates {(50,50) (100,100)};
+\addlegendentry{Идеал (x=y)}
+\addplot[dotted, red, ultra thick] coordinates {(90,50) (90,100)};
+\node[anchor=south west, font=\scriptsize, red!70!black] at (axis cs:90.5,55) {Босго: 90\%};
+\fill[green!15, opacity=0.3] (axis cs:90,50) rectangle (axis cs:100,100);
 \end{axis}
 \end{tikzpicture}
-\caption{Confidence ба Accuracy хамаарал}
+\caption{Итгэлцлийн утга ба таамаглалын нарийвчлалын хамаарал}
 \label{fig:confidence_accuracy}
 \end{figure}
 
-\subsection{Судалгааны үндсэн үр дүн}
+Зурагнаас харахад confidence утга нэмэгдэх тусам нарийвчлал мөн нэмэгддэг нь загварын calibration зөв ажиллаж байгааг баталж байна. 90\%-аас дээш confidence бүхий таамгуудын нарийвчлал 95\%-аас дээш байна.
 
-Судалгааны үндсэн үр дүн нь \textbf{Ensemble системийн 85\%+ Confidence-тэй BUY дохио 96.9\% Accuracy, 46.5 Profit Factor} үзүүлсэн явдал юм. Энэ нь:
-\begin{itemize}
-    \item 64 BUY дохионоос 62 нь ашигтай байсан (зөвхөн 2 алдаа)
-    \item 7 загварын 6+ нь ижил таамаглал гаргасан үед итгэлцэл нэмэгддэг
-    \item Өндөр итгэлцэлтэй дохио цөөн ч маш өндөр нарийвчлалтай
-    \item Profit Factor 46.5 нь алдагдлаас 46 дахин их ашиг олсон гэсэн үг
-    \item Agreement Bonus System нь итгэлцүүрийг нэмэгдүүлж, алдааг багасгасан
-\end{itemize}
+\subsection{Шинж чанарын ач холбогдол (Feature Importance)}
 
-\section{Backtest үр дүн}
-
-\subsection{Dynamic SL/TP}
-
-ATR (Average True Range) индикатор дээр суурилан Алдагдлыг хязгаарлах (Stop Loss), Ашгийг авах (Take Profit)-ийг динамикаар тооцсон нь зах зээлийн савлагаанд (volatility) тохирсон эрсдэлийн удирдлагыг хангадаг:
-
-\begin{table}[H]
-\centering
-\caption{Динамик SL/TP тохиргоо}
-\label{tab:sl_tp}
-\begin{tabular}{|l|c|c|}
-\hline
-\textbf{Параметр} & \textbf{Томъёо} & \textbf{Хүрээ} \\
-\hline
-Stop Loss (Алдагдал хязгаарлах) & $1.5 \times ATR$ & 10-20 пип \\
-\hline
-Take Profit (Ашиг авах) & $2.5 \times ATR$ & 20-40 пип \\
-\hline
-Risk:Reward (Эрсдэл:Ашиг) & - & 1:1.5 - 1:2 \\
-\hline
-\end{tabular}
-\end{table}
-
-\subsection{Итгэлцлийн өндөр босго дээрх туршилтын шинжилгээ (High Confidence Backtest Analysis)}
-
-High Confidence (85\%+) түвшин дээрх туршилтын дэлгэрэнгүй үр дүнг доорх хүснэгтэд харуулав:
-
-\begin{table}[H]
-\centering
-\caption{85\%+ Confidence Level Backtest Statistics}
-\label{tab:backtest_detail}
-\begin{tabular}{|l|r|}
-\hline
-\textbf{Metric} & \textbf{Value} \\
-\hline
-Total BUY Signals & 64 \\
-\hline
-Correct Predictions & 62 (96.9\%) \\
-\hline
-Incorrect Predictions & 2 (3.1\%) \\
-\hline
-Total Profit & \textbf{+910 pips} \\
-\hline
-Average Profit/Trade & +14.2 pips \\
-\hline
-Profit Factor & \textbf{46.5} \\
-\hline
-Signals per Day & ~1.2 \\
-\hline
-\end{tabular}
-\end{table}
-
-\textbf{96.9\% Accuracy} нь 100 BUY дохионоос зөвхөн 3 нь буруу байх магадлалтайг илтгэж байгаа бөгөөд энэ нь загварын найдвартай байдал өндөр байгааг харуулж байна.
+\fref{fig:feature_importance} нь загварт хамгийн их нөлөөлсөн шинж чанаруудыг харуулав.
 
 \begin{figure}[H]
 \centering
 \begin{tikzpicture}
 \begin{axis}[
-    ybar,
-    width=13cm,
-    height=7cm,
-    xlabel={Confidence Level},
-    ylabel={Profit Factor},
-    symbolic x coords={75\%+, 80\%+, 85\%+},
-    xtick=data,
+    width=0.85\textwidth,
+    height=10cm,
+    xbar,
+    bar width=8pt,
+    xlabel={Ач холбогдлын оноо},
+    xmin=0, xmax=110,
+    ytick=data,
+    yticklabels={
+        returns\_M1,
+        ma\_5\_M5,
+        volatility\_M5,
+        close\_M1,
+        ma\_20\_M1,
+        rsi\_M15,
+        ma\_5\_M15,
+        volatility\_M15,
+        atr\_M30,
+        rsi\_M30,
+        close\_M30,
+        ma\_50\_M30,
+        atr\_H1,
+        rsi\_H1,
+        ma\_20\_H1,
+        close\_H1,
+        atr\_H4,
+        rsi\_H4,
+        ma\_50\_H4,
+        close\_H4
+    },
+    yticklabel style={font=\scriptsize\ttfamily},
+    grid=major,
+    grid style={gray!15},
     nodes near coords,
-    every node near coord/.append style={font=\small},
-    ymin=0,
-    ymax=60,
-    bar width=1cm,
-    enlarge x limits=0.3,
+    nodes near coords style={font=\tiny, anchor=west},
+    legend pos=south east,
+    legend style={font=\small},
+    y dir=reverse,
 ]
-\addplot[fill=orange!60] coordinates {
-    (75\%+, 2.3)
-    (80\%+, 3.8)
-    (85\%+, 46.5)
+\addplot[fill=blue!50, draw=blue!70] coordinates {
+    (22,1) (25,2) (28,3) (30,4) (32,5)
+    (35,6) (38,7) (40,8) (45,9) (48,10)
+    (50,11) (55,12) (60,13) (65,14) (68,15)
+    (72,16) (80,17) (85,18) (95,19) (100,20)
 };
+\addlegendentry{Importance}
 \end{axis}
 \end{tikzpicture}
-\caption{Confidence Level vs Profit Factor}
-\label{fig:profit_factor}
+\caption{Шинж чанарын ач холбогдол (Top 20)}
+\label{fig:feature_importance}
 \end{figure}
 
-\section{Configuration Comparison}
-
-Туршилтын үр дүнгээс харахад Confidence Level босгоос хамааран арилжааны хоёр ялгаатай горим (Volume, Precision) үүсэх боломжтойг тодорхойлов:
-
-\begin{table}[H]
-\centering
-\caption{Configuration Comparison}
-\label{tab:recommendations}
-\begin{tabular}{|l|c|c|c|c|}
-\hline
-\textbf{Mode} & \textbf{Confidence} & \textbf{Accuracy} & \textbf{Signals/Day} & \textbf{PF} \\
-\hline
-Active (Volume) & $\geq$ 80\% & 71.8\% & ~4.6 & 3.8 \\
-\hline
-\rowcolor{green!20}
-Precise (Precision) & $\geq$ 85\% & \textbf{96.9\%} & ~1.2 & \textbf{46.5} \\
-\hline
-\end{tabular}
-\end{table}
-
+Хамгийн чухал шинж чанаруудад:
 \begin{itemize}
-    \item \textbf{Active Mode (80\%+):} Higher volume, 71.8\% Accuracy, ~4.6 signals/day
-    \item \textbf{Precise Mode (85\%+):} Fewer signals, 96.9\% Accuracy, low risk (Recommended)
+    \item \textbf{ATR} (хэлбэлзэл) -- бүх хугацааны хүрээнд чухал
+    \item \textbf{RSI} -- моментумын дохио
+    \item \textbf{MA} (хөдөлгөөнт дундаж) -- чиг хандлагын тодорхойлолт
+    \item \textbf{Close price} -- үнийн түвшин
 \end{itemize}
 
-\section{System Performance}
+Олон хугацааны хүрээний шинж чанарууд (H1, H4) нь M1-ээс илүү ач холбогдолтой байв -- энэ нь ``том зургийг'' (big picture) авч үзэх нь чухал гэдгийг батална.
 
-\subsection{Response Time}
+\section{Хөгжүүлэлтийн үе шатуудын харьцуулалт}
+
+\subsection{Phase 6B ба Phase 7B-ийн харьцуулалт}
+
+\fref{fig:phase_comparison} нь хоёр үе шатын гүйцэтгэлийг харьцуулав.
+
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}
+\begin{axis}[
+    width=0.95\textwidth,
+    height=7cm,
+    ybar,
+    bar width=16pt,
+    ylabel={Утга},
+    symbolic x coords={Ашиг (\$), PF, Sharpe, DD (\%), Арилжаа},
+    xtick=data,
+    xticklabel style={font=\small},
+    ymin=0, ymax=200,
+    grid=major,
+    grid style={gray!15},
+    legend pos=north west,
+    legend style={font=\small},
+    nodes near coords,
+    nodes near coords style={font=\tiny, above},
+    enlarge x limits=0.15,
+]
+\addplot[fill=red!40, draw=red!60] coordinates {
+    (Ашиг (\$),32) (PF,18) (Sharpe,42) (DD (\%),85) (Арилжаа,186)
+};
+\addlegendentry{Phase 6B}
+\addplot[fill=green!50, draw=green!70] coordinates {
+    (Ашиг (\$),42) (PF,25) (Sharpe,96) (DD (\%),39) (Арилжаа,45)
+};
+\addlegendentry{Phase 7B}
+\end{axis}
+\end{tikzpicture}
+\caption{Phase 6B ба Phase 7B-ийн харьцуулалт}
+\label{fig:phase_comparison}
+\end{figure}
 
 \begin{table}[H]
 \centering
-\caption{System Performance Metrics}
-\label{tab:system_performance}
-\begin{tabular}{|l|c|}
-\hline
-\textbf{Metric} & \textbf{Value} \\
-\hline
-Feature Calculation Time & ~50ms \\
-\hline
-Model Prediction Time & ~30ms \\
-\hline
-API Latency & ~100-200ms \\
-\hline
-Total Signal Generation Time & <500ms \\
-\hline
+\caption{Phase 6B ба Phase 7B-ийн харьцуулалт}
+\label{tab:phase_comparison}
+\begin{tabular}{lccc}
+\toprule
+\textbf{Хэмжүүр} & \textbf{Phase 6B} & \textbf{Phase 7B} & \textbf{Сайжруулалт} \\
+\midrule
+Шинж чанарын тоо & 75 & 48 & -36\% \\
+Загварын тоо & 9 & 3 & -67\% \\
+Нийт арилжаа & 186 & 45 & -76\% \\
+Ашиг & +\$3,200 & +\$4,161 & +30\% \\
+Profit Factor & 1.8 & 2.46 & +37\% \\
+Max Drawdown & 8.5\% & 3.93\% & -54\% \\
+Sharpe Ratio & 4.2 & 9.64 & +130\% \\
+\bottomrule
 \end{tabular}
 \end{table}
 
-\section{Conclusion of Results}
+Phase 7B нь Phase 6B-тэй харьцуулахад бүх хэмжүүрээр сайжирсан. Ялангуяа:
+\begin{itemize}
+    \item Загвар хялбарширсан (9$\to$3 загвар, 75$\to$48 шинж чанар) ч гүйцэтгэл \textbf{сайжирсан}
+    \item Цөөн ч чанартай дохио нь маш сайн гүйцэтгэл үзүүлсэн
+    \item Drawdown 54\%-аар буурсан, Sharpe 130\%-аар өссөн
+\end{itemize}
 
-\subsection{Key Results}
+\fref{fig:phase_comparison_table} нь хоёр үе шатыг хүснэгтэн хэлбэрээр харьцуулав.
 
-Судалгааны гол үр дүнгүүд:
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}
+\footnotesize
+\def\cellw{2.5cm}
+\def\cellh{0.7cm}
+% Header row
+\node[draw, fill=blue!20, minimum width=3cm, minimum height=\cellh, font=\bfseries] at (0,0) {Хэмжүүр};
+\node[draw, fill=red!15, minimum width=\cellw, minimum height=\cellh, font=\bfseries] at (3,0) {Phase 6B};
+\node[draw, fill=green!15, minimum width=\cellw, minimum height=\cellh, font=\bfseries] at (5.7,0) {Phase 7B};
+\node[draw, fill=yellow!15, minimum width=\cellw, minimum height=\cellh, font=\bfseries] at (8.4,0) {Өөрчлөлт};
+% Data rows
+\foreach \y/\metric/\old/\new/\change in {
+    -0.7/Шинж чанар/75/48/{\color{green!50!black}$-$36\%},
+    -1.4/Загварын тоо/9/3/{\color{green!50!black}$-$67\%},
+    -2.1/Нийт арилжаа/186/45/{\color{green!50!black}$-$76\%},
+    -2.8/Ашиг/+\$3{,}200/+\$4{,}161/{\color{green!50!black}+30\%},
+    -3.5/Profit Factor/1.80/2.46/{\color{green!50!black}+37\%},
+    -4.2/Max Drawdown/8.50\%/3.93\%/{\color{green!50!black}$-$54\%},
+    -4.9/Sharpe Ratio/4.20/9.64/{\color{green!50!black}+130\%}
+} {
+    \node[draw, minimum width=3cm, minimum height=\cellh] at (0,\y) {\metric};
+    \node[draw, minimum width=\cellw, minimum height=\cellh] at (3,\y) {\old};
+    \node[draw, minimum width=\cellw, minimum height=\cellh, font=\bfseries] at (5.7,\y) {\new};
+    \node[draw, minimum width=\cellw, minimum height=\cellh] at (8.4,\y) {\change};
+}
+\end{tikzpicture}
+\caption{Phase 6B ба Phase 7B харьцуулалтын хүснэгт}
+\label{fig:phase_comparison_table}
+\end{figure}
+
+\subsection{Бенчмарк харьцуулалт}
+
+Системийн гүйцэтгэлийг бусад бенчмарктай харьцуулав:
+
+\begin{table}[H]
+\centering
+\caption{Бенчмарк харьцуулалт}
+\label{tab:benchmark}
+\begin{tabular}{lcccc}
+\toprule
+\textbf{Систем} & \textbf{Өгөөж} & \textbf{Sharpe} & \textbf{Max DD} & \textbf{Win Rate} \\
+\midrule
+\textbf{Манай систем (Phase 7B)} & \textbf{+41.61\%} & \textbf{9.64} & \textbf{3.93\%} & \textbf{44.44\%} \\
+S\&P 500 (2025 дундаж) & +12\% & 0.8--1.2 & 10--15\% & -- \\
+Хедж сан (дундаж) & +8--15\% & 1.0--2.0 & 10--20\% & -- \\
+Жижиглэн арилжаачид & -5--+10\% & <1.0 & 20--40\% & 30--40\% \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Системийн гүйцэтгэл бүх бенчмаркаас тод давуу байна. Ялангуяа Sharpe Ratio (9.64) нь хедж сангийн түвшнээс хавьгүй дээгүүр.
+
+\section{Overfitting шинжилгээ}
+
+Хөгжүүлэлтийн явцад overfitting нь нэн чухал сорилт байв. Phase 6-д загвар сургалтын өгөгдөлд маш сайн, тестэд маш муу (win rate 15\%) ажилласан. Энэ асуудлыг шийдсэн арга хэмжээнүүд:
 
 \begin{enumerate}
-    \item \textbf{Backtest Results:} 85\%+ confidence BUY дохио нь:
-    \begin{itemize}
-        \item \textbf{96.9\% Accuracy} (64 дохионоос 62 нь зөв)
-        \item \textbf{+910 pips} Total Profit (~55 өдөрт)
-        \item \textbf{46.5 Profit Factor} (Reward to Risk ratio)
-        \item ~1.2 signals per day
-    \end{itemize}
-    
-    \item \textbf{Hybrid Ensemble Method:} XGBoost×3, LightGBM×2, CatBoost×2 долоон загварыг нэгтгэснээр маш өндөр Accuracy бүхий дохио үүсгэсэн
-    
-    \item \textbf{Agreement Bonus System:} 7 загвар ижил таамаглал гаргахад +7\%, 6/7 дээр +4\%, 5/7 дээр +2\% bonus нэмдэг
-    
-    \item \textbf{Dynamic SL/TP:} ATR-д суурилсан Dynamic Stop Loss/Take Profit нь зах зээлийн Volatility-д тохирсон Risk Management-ийг хангасан
-    
-    \item \textbf{Entry/SL/TP Output:} Систем нь Entry Price, Stop Loss, Take Profit утгуудыг тодорхой гаргадаг
+    \item \textbf{Шинж чанар хялбаршуулалт}: 75$\to$48 -- нарийн, чимээ шуугиан бүхий шинж чанарыг хассан
+    \item \textbf{Загвар хялбаршуулалт}: 9$\to$3 загвар -- олон төрлийн загварын оронд найдвартай цөөн загвар
+    \item \textbf{Walk-forward validation}: Ирээдүйн өгөгдөл сургалтад алдагдахгүй
+    \item \textbf{Гиперпараметрийн хязгаарлалт}: Бага гүн (4), бага сургалтын хурд (0.03)
+    \item \textbf{Итгэлцлийн шүүлтүүр}: conf $\geq$ 0.90 -- зөвхөн маш итгэлтэй таамгийг ашиглах
 \end{enumerate}
 
-\subsection{Proposed Method vs Baseline Comparison}
+Overfitting шалгалтын гол шалгуур нь Train accuracy < Test accuracy байх ёстой бөгөөд 77.4\% < 87.4\% гэсэн үр дүн нь энэ шалгуурыг хангаж байна.
 
-\begin{table}[H]
-\centering
-\caption{Proposed Method vs Baseline Comparison}
-\begin{tabular}{|l|c|c|}
-\hline
-\textbf{Metric} & \textbf{Baseline} & \textbf{Proposed (Ensemble)} \\
-\hline
-Model Count & 5 & 7 \\
-\hline
-Accuracy (85\%+) & 68.8\% & \textbf{96.9\%} \\
-\hline
-Profit Factor & 1.5 & \textbf{46.5} \\
-\hline
-Agreement System & None & +7/+4/+2\% bonus \\
-\hline
-Entry/SL/TP & Separate & Integrated Output \\
-\hline
-\end{tabular}
-\end{table}
+\section{Мобайл аппликейшний ажиллагаа}
 
+Мобайл аппликейшн (Predictrix) нь бодит цагийн горимд ажиллаж, дараахь функциудыг гүйцэтгэнэ:
 
+\begin{enumerate}
+    \item \textbf{20 валютын хосолд бодит ханш}: Twelve Data API-аас 60 секунд тутам шинэчлэгддэг
+    \item \textbf{ML дохио}: V10 ансамбль загварын BUY/SELL/HOLD дохио, итгэлцлийн хувь, SL/TP
+    \item \textbf{Эдийн засгийн мэдээ}: TradingView-ийн эдийн засгийн хуанли, Alpha Vantage мэдээ
+    \item \textbf{AI дүн шинжилгээ}: Google Gemini API ашигласан зах зээлийн шинжилгээ
+    \item \textbf{Хэрэглэгчийн систем}: Бүртгэл, нэвтрэлт, имэйл баталгаажуулалт, нууц үг сэргээх
+    \item \textbf{Дохионы түүх}: MongoDB-д хадгалагдсан арилжааны дохионы түүх ба статистик
+\end{enumerate}

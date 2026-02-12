@@ -1,121 +1,149 @@
-% \renewcommand{\thesubsection}{\Alph{section}}
-\newpage
-\titleformat{\chapter}[block]{\huge{}\bfseries\centering}{}{0.5em}{}
+\addtotoc{Хавсралт}
 
-\chapter*{ХАВСРАЛТ}
-\addcontentsline{toc}{chapter}{Хавсралт}
+\chapter*{Хавсралт}
 
-\section*{Хавсралт А. Эх кодын холбоос}
+\section*{A. Загварын код (Python)}
 
-Төслийн бүх эх код, моделийн архитектур, техникийн индикаторууд болон бусад хэрэгжүүлэлтийг дараах GitHub repository-д байршуулсан:
+\subsection*{A.1 Шинж чанар тооцоолох функц}
 
-\begin{center}
-\Large
-\textbf{\url{https://github.com/Asura-lab/Forex-Signal-App}}
-\end{center}
+\begin{lstlisting}[language=Python, caption={Олон хугацааны хүрээний шинж чанар тооцоолол}, label={lst:features}]
+def compute_features(df, suffix):
+    close = df["close"]
+    feats = pd.DataFrame(index=df.index)
+    feats[f"close_{suffix}"] = close
+    feats[f"rsi_{suffix}"] = rsi(close, 14)
+    feats[f"atr_{suffix}"] = atr(df, 14)
+    feats[f"ma_5_{suffix}"] = close.rolling(5).mean()
+    feats[f"ma_20_{suffix}"] = close.rolling(20).mean()
+    feats[f"ma_50_{suffix}"] = close.rolling(50).mean()
+    feats[f"volatility_{suffix}"] = close.rolling(20).std()
+    feats[f"returns_{suffix}"] = close.pct_change()
+    return feats
+\end{lstlisting}
 
-\vspace{1cm}
+\subsection*{A.2 Ансамбль загварын сургалт}
 
-\noindent\textbf{Repository-д байгаа гол бүрэлдэхүүн хэсгүүд:}
+\begin{lstlisting}[language=Python, caption={Walk-Forward Validation сургалт}, label={lst:training}]
+# Walk-Forward Validation: 2015-2022 train, 2023 val, 2024 test
+train_end = "2023-01-01"
+val_end = "2024-01-01"
+train_df = df[df["time"] < train_end]
+val_df = df[(df["time"] >= train_end) & (df["time"] < val_end)]
+test_df = df[(df["time"] >= val_end) & (df["time"] < TEST_START_DATE)]
 
-\begin{itemize}
-    \item \textbf{backend/} - Flask REST API сервер, ML моделиуд, preprocessing код
-    \item \textbf{mobile\_app/} - React Native + Expo мобайл апп
-    \item \textbf{models/} - Сургагдсан моделиуд (XGBoost, LightGBM, Random Forest)
-    \item \textbf{data/} - EUR/USD түүхэн өгөгдөл
-    \item \textbf{docs/} - Техникийн баримт бичиг
-\end{itemize}
+# Train GBDT models
+for seed in [42]:
+    models = fit_models(X_fit, y_fit, seed, pos_weight, X_val, y_val)
 
-\vspace{0.5cm}
+# Calibration with Logistic Regression
+cal = LogisticRegression(max_iter=1000)
+cal.fit(predict_proba(models_flat, X_cal).reshape(-1, 1), y_cal)
+\end{lstlisting}
 
-\noindent\textbf{Техникийн хэрэгжүүлэлтүүд:}
+\subsection*{A.3 Дохио шүүлтүүрлэх}
 
-\begin{itemize}
-    \item ForexHybridNet моделийн архитектур (CNN + BiLSTM + Attention)
-    \item RSI, MACD, Bollinger Bands техникийн индикаторууд
-    \item Focal Loss функц (class imbalance шийдвэрлэх)
-    \item Ensemble систем (XGBoost, LightGBM, Random Forest)
-    \item JWT authentication систем
-    \item MongoDB өгөгдлийн санд холбогдох
-\end{itemize}
+\begin{lstlisting}[language=Python, caption={Дохионы шүүлтүүрийн тохиргоо}, label={lst:signal_filter}]
+CONF_THRESHOLD = 0.90    # Confidence >= 90%
+MIN_ATR_PIPS = 4.0       # ATR >= 4.0 pips
+SL_MULT = 5.0            # SL = ATR * 5
+TP_MULT = 15.0           # TP = ATR * 15 (SL * 3)
+MIN_SL_PIPS = 15.0       # Minimum SL: 15 pips
+MIN_TP_PIPS = 45.0       # Minimum TP: 45 pips
+\end{lstlisting}
 
-\section*{Хавсралт Б. Hyperparameter тохиргоо}
+\section*{B. Backend API код}
 
-Энэхүү судалгаанд ашигласан V10 Ensemble систем нь XGBoost, LightGBM, CatBoost алгоритмуудын 7 өөр хувилбараас бүрдэнэ.
+\subsection*{B.1 Дохио үүсгэх endpoint}
 
-\subsection*{1. Өгөгдөл бэлтгэх ба Labeling тохиргоо}
+\begin{lstlisting}[language=Python, caption={Flask API -- V10 дохио үүсгэх}, label={lst:api_signal}]
+@app.route('/signal/v2', methods=['GET'])
+def get_signal_v2():
+    min_confidence = float(
+        request.args.get('min_confidence', 85))
+    pair = request.args.get('pair', 'EUR/USD')
+    
+    # Historical data (500 bars, 1min)
+    df = get_twelvedata_dataframe(
+        interval="1min", outputsize=500, symbol=pair)
+    
+    if df is None or len(df) < 200:
+        return jsonify({'error': 'rate_limited'}), 429
+    
+    # Generate signal with V10 ensemble
+    signal = signal_generator.generate_signal(
+        df, min_confidence)
+    
+    return jsonify({'success': True, **signal})
+\end{lstlisting}
+
+\section*{C. MetaTrader 5 Expert Advisor}
+
+\subsection*{C.1 Эрсдэлд суурилсан лотын тооцоолол}
+
+\begin{lstlisting}[language=C, caption={MQL5 -- Лотын тооцоолол}, label={lst:mql5_risk}]
+double CalcLotByRisk(const string sym, double sl_pips)
+{
+   if(sl_pips <= 0.0) 
+       return SymbolInfoDouble(sym, SYMBOL_VOLUME_MIN);
+
+   double bal  = AccountInfoDouble(ACCOUNT_BALANCE);
+   double risk = bal * (RiskPerTrade / 100.0);
+   double pip  = PipSizeForSymbol(sym);
+   double tick_val = SymbolInfoDouble(sym, 
+                         SYMBOL_TRADE_TICK_VALUE);
+   double tick_sz  = SymbolInfoDouble(sym, 
+                         SYMBOL_TRADE_TICK_SIZE);
+   double pip_val = tick_val * (pip / tick_sz);
+   double vol = risk / (sl_pips * pip_val);
+   return ClampVolumeForSymbol(sym, vol);
+}
+\end{lstlisting}
+
+\section*{D. Мобайл аппликейшн код}
+
+\subsection*{D.1 React Native -- Ханшийн дэлгэц}
+
+\begin{lstlisting}[language=Java, caption={React Native -- Бодит цагийн ханш}, label={lst:mobile_rates}]
+const { data: liveRates, isLoading, refetch } = useQuery({
+    queryKey: ["liveRates"],
+    queryFn: async () => {
+        const result = await getLiveRates();
+        if (result.success) {
+            const ratesMap = {};
+            const rates = result.data.rates || {};
+            Object.keys(rates).forEach((key) => {
+                const pairName = key.replace("_", "/");
+                ratesMap[pairName] = rates[key];
+            });
+            return ratesMap;
+        }
+        return {};
+    },
+    refetchInterval: 60000, // 60 sec
+});
+\end{lstlisting}
+
+\section*{E. 2025 оны дохионы жишээ}
+
+Дохионы CSV файлын формат болон зарим жишээ:
+
 \begin{table}[H]
 \centering
-\begin{tabular}{|l|c|l|}
-\hline
-\textbf{Параметр} & \textbf{Утга} & \textbf{Тайлбар} \\
-\hline
-Timeframe & 1 min & Ашигласан цагийн хуваарь \\
-Forward Window & 60 & Таамаглах ирээдүйн хугацаа (бар) \\
-Min Pips & 15 & Шаардлагатай хамгийн бага үнийн өөрчлөлт \\
-Risk/Reward Ratio & 1.5 & Ашиг ба алдагдлын харьцаа (TP/SL) \\
-Ensemble Threshold & 85\% & Итгэлцлийн босго утга \\
-\hline
+\caption{2025 оны дохионы жишээ}
+\label{tab:signals_sample}
+\small
+\begin{tabular}{lllcccc}
+\toprule
+\textbf{Цаг} & \textbf{Sym} & \textbf{Чиглэл} & \textbf{Conf} & \textbf{SL} & \textbf{TP} \\
+\midrule
+2025-01-14 13:30 & EURUSD & BUY & 0.930 & 21 & 64 \\
+2025-01-14 13:32 & EURUSD & BUY & 0.934 & 28 & 85 \\
+2025-01-23 14:00 & EURUSD & BUY & 0.921 & 25 & 75 \\
+2025-02-03 16:00 & EURUSD & SELL & 0.920 & 33 & 100 \\
+2025-03-07 15:30 & EURUSD & BUY & 0.912 & 20 & 60 \\
+2025-05-14 13:00 & EURUSD & BUY & 0.945 & 30 & 90 \\
+\bottomrule
 \end{tabular}
-\caption{Labeling Parameters}
 \end{table}
 
-\subsection*{2. XGBoost Models Configuration}
-\begin{table}[H]
-\centering
-\begin{tabular}{|l|c|c|c|}
-\hline
-\textbf{Parameter} & \textbf{XGB1 (Pri)} & \textbf{XGB2 (Deep)} & \textbf{XGB3 (Cons)} \\
-\hline
-n\_estimators & 600 & 400 & 800 \\
-max\_depth & 6 & 8 & 4 \\
-learning\_rate & 0.03 & 0.05 & 0.02 \\
-subsample & 0.8 & 0.7 & 0.85 \\
-colsample\_bytree & 0.8 & 0.7 & 0.85 \\
-reg\_alpha & 0.1 & 0.05 & 0.2 \\
-reg\_lambda & 1.0 & 0.5 & 2.0 \\
-min\_child\_weight & 3 & - & 5 \\
-gamma & - & 0.1 & - \\
-\hline
-\end{tabular}
-\caption{XGBoost Hyperparameters}
-\end{table}
-
-\subsection*{3. LightGBM Models Configuration}
-\begin{table}[H]
-\centering
-\begin{tabular}{|l|c|c|}
-\hline
-\textbf{Parameter} & \textbf{LGB1 (Primary)} & \textbf{LGB2 (Leaves)} \\
-\hline
-n\_estimators & 600 & 500 \\
-max\_depth & 6 & 8 \\
-learning\_rate & 0.03 & 0.04 \\
-num\_leaves & 31 & 63 \\
-min\_child\_samples & 30 & 20 \\
-subsample & 0.8 & 0.75 \\
-colsample\_bytree & 0.8 & 0.75 \\
-reg\_alpha & 0.1 & 0.05 \\
-reg\_lambda & 1.0 & 0.5 \\
-\hline
-\end{tabular}
-\caption{LightGBM Hyperparameters}
-\end{table}
-
-\subsection*{4. CatBoost Models Configuration}
-\begin{table}[H]
-\centering
-\begin{tabular}{|l|c|c|}
-\hline
-\textbf{Parameter} & \textbf{CAT1 (Primary)} & \textbf{CAT2 (Deeper)} \\
-\hline
-iterations & 600 & 500 \\
-depth & 6 & 8 \\
-learning\_rate & 0.03 & 0.04 \\
-l2\_leaf\_reg & 3.0 & 2.0 \\
-random\_strength & 0.5 & 0.3 \\
-bagging\_temperature & 0.5 & 0.3 \\
-\hline
-\end{tabular}
-\caption{CatBoost Hyperparameters}
-\end{table}
+Нийт 1,065 дохио, 90\%+ confidence, ATR $\geq$ 4.0 пипс шүүлтүүртэй.

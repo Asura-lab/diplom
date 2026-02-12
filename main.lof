@@ -1,17 +1,15 @@
-\babel@toc {mongolian}{}\relax 
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces Use Case Diagram}}{7}{figure.caption.60}%
-\contentsline {figure}{\numberline {3.2}{\ignorespaces Дохио үүсгэх системийн Flow Diagram}}{8}{figure.caption.62}%
-\contentsline {figure}{\numberline {3.3}{\ignorespaces Activity Diagram - Signal Fetching}}{9}{figure.caption.64}%
-\contentsline {figure}{\numberline {3.4}{\ignorespaces System Architecture Diagram}}{9}{figure.caption.66}%
-\contentsline {figure}{\numberline {3.5}{\ignorespaces Sequence Diagram - API Call}}{10}{figure.caption.68}%
-\contentsline {figure}{\numberline {3.6}{\ignorespaces Number of Selected Features per Category}}{11}{figure.caption.79}%
-\contentsline {figure}{\numberline {3.7}{\ignorespaces Hybrid Ensemble Model Architecture (7 models)}}{17}{figure.caption.136}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Өгөгдлийн тархалт (мянган мөрөөр)}}{23}{figure.caption.174}%
-\contentsline {figure}{\numberline {4.2}{\ignorespaces EUR/USD 2025 оны 3-4-р сарын бодит үнийн хөдөлгөөн ба техникийн индикаторууд}}{24}{figure.caption.176}%
-\contentsline {figure}{\numberline {4.3}{\ignorespaces Confidence ба Accuracy хамаарал}}{25}{figure.caption.184}%
-\contentsline {figure}{\numberline {4.4}{\ignorespaces Confidence Level vs Profit Factor}}{27}{figure.caption.191}%
+\contentsline {figure}{\numberline {4.1}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces Системийн ерөнхий архитектур}}{9}{figure.caption.59}%
+\contentsline {figure}{\numberline {4.2}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces Ансамбль загварын архитектур}}{11}{figure.caption.72}%
 \addvspace {10\p@ }
+\contentsline {figure}{\numberline {5.1}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces Equity муруй -- \$10,000-аас \$14,161.20 хүртэл (+41.61\%)}}{17}{figure.caption.124}%
+\contentsline {figure}{\numberline {5.2}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces Сарын гүйцэтгэл -- ашиг (\$) ба win rate (\%)}}{18}{figure.caption.126}%
+\contentsline {figure}{\numberline {5.3}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces Уналтын шинжилгээ (Max Drawdown: 3.93\%)}}{18}{figure.caption.128}%
+\contentsline {figure}{\numberline {5.4}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces Эрсдэлийн хэмжүүрүүдийн самбар}}{19}{figure.caption.131}%
+\contentsline {figure}{\numberline {5.5}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces Итгэлцлийн утга ба таамаглалын нарийвчлалын хамаарал}}{20}{figure.caption.133}%
+\contentsline {figure}{\numberline {5.6}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces Шинж чанарын ач холбогдол (Top 20)}}{20}{figure.caption.135}%
+\contentsline {figure}{\numberline {5.7}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces Phase 6B ба Phase 7B-ийн харьцуулалт}}{21}{figure.caption.138}%
+\contentsline {figure}{\numberline {5.8}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces Phase 6B ба Phase 7B харьцуулалтын хүснэгт}}{22}{figure.caption.140}%

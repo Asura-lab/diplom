@@ -1,7 +1,8 @@
 \NeedsTeXFormat{LaTeX2e}[2017/04/15]
 \ProvidesClass{Thesis}[2022/04/12 v0.1 testclass]
-\LoadClass{report}
+\DeclareOption*{\PassOptionsToClass{\CurrentOption}{report}}
 \ProcessOptions
+\LoadClass{report}
 
 \newcommand\bhrule{\typeout{------------------------------------------------------------------------------}}
 
@@ -16,7 +17,7 @@
 \usepackage{titlesec}
 \usepackage{graphicx}
 \usepackage{tabularx}
-\usepackage{epstopdf}
+%\usepackage{epstopdf}
 \usepackage{booktabs}
 \usepackage{rotating}
 \usepackage{listings}
@@ -32,7 +33,7 @@
 \usepackage{mathrsfs}
 \usepackage{blindtext}
 \usepackage{titlepic}
-%\usepackage[square,numbers,sort&compress]{natbib}
+\usepackage[round]{natbib}
 %\usepackage{acronym} 
 \usepackage{lmodern}
 \usepackage{longtable}
@@ -47,21 +48,21 @@
    colorlinks,linkcolor={black},citecolor={black},urlcolor={black},
    pdfstartview={FitV},unicode,breaklinks=true]{hyperref}
 
-\usepackage{acronym}
+\usepackage[nohyperlinks]{acronym}
 
 %\onehalfspacing
-\setlength{\parindent}{15pt}
-\setlength{\parskip}{2.0ex plus0.5ex minus0.2ex}
+\setlength{\parindent}{1.25cm}
+\setlength{\parskip}{6pt plus1pt minus1pt}
 \usepackage{vmargin}
 \setmarginsrb               { 25mm}  % left margin
                             { 20mm}  % top margin
-                            { 15mm}  % right margin
+                            { 20mm}  % right margin
                             { 20mm}  % bottom margin
                             {  20pt}  % head height
                             {0.25in}  % head sep
                             {   9pt}  % foot height
                             { 0.3in}  % foot sep
-\setstretch{1.5}
+\setstretch{1.0}
 
 
    
@@ -128,6 +129,32 @@
 }\end{spacing}
 }
 
+% Зургийн жагсаалт тусдаа
+\newcommand\listoffig{
+\btypeout{Зургийн жагсаалт}
+\addtotoc{Зургийн жагсаалт}
+\begin{spacing}{1}{
+    \setlength{\parskip}{1pt}
+    \chapter*{Зургийн жагсаалт
+      \@mkboth{\MakeUppercase{Зургийн жагсаалт}}
+              {\MakeUppercase{Зургийн жагсаалт}}}
+    \@starttoc{lof}
+}\end{spacing}
+}
+
+% Хүснэгтийн жагсаалт тусдаа
+\newcommand\listoftab{
+\btypeout{Хүснэгтийн жагсаалт}
+\addtotoc{Хүснэгтийн жагсаалт}
+\begin{spacing}{1}{
+    \setlength{\parskip}{1pt}
+    \chapter*{Хүснэгтийн жагсаалт
+      \@mkboth{\MakeUppercase{Хүснэгтийн жагсаалт}}
+              {\MakeUppercase{Хүснэгтийн жагсаалт}}}
+    \@starttoc{lot}
+}\end{spacing}
+}
+
 \renewcommand{\cftdotsep}{2} 
 \renewcommand{\cftfigindent}{0em}  
 \renewcommand{\cftfignumwidth}{5.5em}  
@@ -143,11 +170,6 @@
 \newcommand\listsymbolname{Товчилсон үгсийн жагсаалт}
 \newcommand{\fref}[1]{Зураг~\ref{#1}}
 \newcommand{\tref}[1]{Хүснэгт~\ref{#1}}
-
-\DeclareUnicodeCharacter{2460}{}
-\DeclareUnicodeCharacter{2461}{}
-\DeclareUnicodeCharacter{2462}{}
-\DeclareUnicodeCharacter{FF1A}{}
 
 \DeclareRobustCommand\cs[1]{\texttt{\char`\\#1}}
 \DeclareRobustCommand\file{\nolinkurl}

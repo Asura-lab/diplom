@@ -1,27 +1,28 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.11.26)  12 JAN 2026 12:54
+This is XeTeX, Version 3.141592653-2.6-0.999997 (MiKTeX 25.4) (preloaded format=xelatex 2025.12.1)  13 FEB 2026 00:21
 entering extended mode
  restricted \write18 enabled.
+ file:line:error style messages enabled.
  %&-line parsing enabled.
-**./main.tex
-(main.tex
+**c:/Users/Acer/Desktop/Forex-Signal-App/diplom/main.tex
+(c:/Users/Acer/Desktop/Forex-Signal-App/diplom/main.tex
 LaTeX2e <2025-11-01>
 L3 programming layer <2025-11-06>
 (Thesis.cls
 Document Class: Thesis 2022/04/12 v0.1 testclass
 (C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/latex/base\report.cls
 Document Class: report 2025/01/22 v1.4n Standard LaTeX document class
-(C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/latex/base\size10.clo
-File: size10.clo 2025/01/22 v1.4n Standard LaTeX file (size option)
+(C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/latex/base\size11.clo
+File: size11.clo 2025/01/22 v1.4n Standard LaTeX file (size option)
 )
-\c@part=\count275
-\c@chapter=\count276
-\c@section=\count277
-\c@subsection=\count278
-\c@subsubsection=\count279
-\c@paragraph=\count280
-\c@subparagraph=\count281
-\c@figure=\count282
-\c@table=\count283
+\c@part=\count271
+\c@chapter=\count272
+\c@section=\count273
+\c@subsection=\count274
+\c@subsubsection=\count275
+\c@paragraph=\count276
+\c@subparagraph=\count277
+\c@figure=\count278
+\c@table=\count279
 \abovecaptionskip=\skip49
 \belowcaptionskip=\skip50
 \bibindent=\dimen148
@@ -77,10 +78,10 @@ Package: trig 2023/12/02 v1.11 sin cos tan (DPC)
 g
 File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
-Package graphics Info: Driver file: pdftex.def on input line 106.
+Package graphics Info: Driver file: xetex.def on input line 106.
 
-(C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/latex/graphics-def\pdftex.def
-File: pdftex.def 2025/09/29 v1.2d Graphics/color driver for pdftex
+(C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/latex/graphics-def\xetex.def
+File: xetex.def 2025/11/01 v5.0p Graphics/color driver for xetex
 ))
 \Gin@req@height=\dimen154
 \Gin@req@width=\dimen155
@@ -102,57 +103,9 @@ Package: array 2025/09/25 v2.6n Tabular extension package (FMi)
 \TX@old@col=\dimen160
 \TX@target=\dimen161
 \TX@delta=\dimen162
-\TX@cols=\count284
+\TX@cols=\count280
 \TX@ftn=\toks21
 )
-(C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf.st
-y
-Package: epstopdf 2020-01-24 v2.11 Conversion with epstopdf on the fly (HO)
-
-(C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/generic/infwarerr\infwarerr.st
-y
-Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
-) (C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/latex/grfext\grfext.sty
-Package: grfext 2019/12/03 v1.3 Manage graphics extensions (HO)
-
-(C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/generic/kvdefinekeys\kvdefinek
-eys.sty
-Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
-))
-(C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/latex/kvoptions\kvoptions.sty
-Package: kvoptions 2022-06-15 v3.15 Key value format for package options (HO)
-
-(C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/generic/ltxcmds\ltxcmds.sty
-Package: ltxcmds 2023-12-04 v1.26 LaTeX kernel commands for general use (HO)
-)
-(C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/latex/kvsetkeys\kvsetkeys.sty
-Package: kvsetkeys 2022-10-05 v1.19 Key value parser (HO)
-))
-(C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/generic/pdftexcmds\pdftexcmds.
-sty
-Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO
-)
- (C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/generic/iftex\iftex.sty
-Package: iftex 2024/12/12 v1.0g TeX engine tests
-)
-Package pdftexcmds Info: \pdf@primitive is available.
-Package pdftexcmds Info: \pdf@ifprimitive is available.
-Package pdftexcmds Info: \pdfdraftmode found.
-)
-(C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-ba
-se.sty
-Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
-Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
-85.
-Package grfext Info: Graphics extension search list:
-(grfext)             [.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPE
-G,.JBIG2,.JB2,.eps]
-(grfext)             \AppendGraphicsExtensions on input line 504.
-
-(C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/latex/00miktex\epstopdf-sys.cf
-g
-File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
-)))
 (C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/latex/booktabs\booktabs.sty
 Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
 \heavyrulewidth=\dimen163
@@ -165,12 +118,12 @@ Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
 \cmidrulesep=\dimen170
 \cmidrulekern=\dimen171
 \defaultaddspace=\dimen172
-\@cmidla=\count285
-\@cmidlb=\count286
+\@cmidla=\count281
+\@cmidlb=\count282
 \@aboverulesep=\dimen173
 \@belowrulesep=\dimen174
-\@thisruleclass=\count287
-\@lastruleclass=\count288
+\@thisruleclass=\count283
+\@lastruleclass=\count284
 \@thisrulewidth=\dimen175
 )
 (C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/latex/graphics\rotating.sty
@@ -179,24 +132,24 @@ Package: rotating 2025/01/14 v2.16e rotated objects in LaTeX
 (C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/latex/base\ifthen.sty
 Package: ifthen 2024/03/16 v1.1e Standard LaTeX ifthen package (DPC)
 )
-\c@r@tfl@t=\count289
+\c@r@tfl@t=\count285
 \rotFPtop=\skip69
 \rotFPbot=\skip70
 \rot@float@box=\box56
 \rot@mess@toks=\toks22
 )
 (C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/latex/listings\listings.sty
-\lst@mode=\count290
+\lst@mode=\count286
 \lst@gtempboxa=\box57
 \lst@token=\toks23
-\lst@length=\count291
+\lst@length=\count287
 \lst@currlwidth=\dimen176
-\lst@column=\count292
-\lst@pos=\count293
+\lst@column=\count288
+\lst@pos=\count289
 \lst@lostspace=\dimen177
 \lst@width=\dimen178
-\lst@newlines=\count294
-\lst@lineno=\count295
+\lst@newlines=\count290
+\lst@lineno=\count291
 \lst@maxwidth=\dimen179
 
 (C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstpatch.sty
@@ -204,8 +157,8 @@ File: lstpatch.sty 2025/11/14 1.11b (Carsten Heinz)
 )
 (C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstmisc.sty
 File: lstmisc.sty 2025/11/14 1.11b (Carsten Heinz)
-\c@lstnumber=\count296
-\lst@skipnumbers=\count297
+\c@lstnumber=\count292
+\lst@skipnumbers=\count293
 \lst@framebox=\box58
 )
 (C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/latex/listings\listings.cfg
@@ -234,17 +187,17 @@ Package: caption3 2023/07/31 v2.4d caption3 kernel (AR)
 \caption@hangindent=\dimen187
 Package caption Info: Standard document class detected.
 )
-\c@caption@flags=\count298
-\c@continuedfloat=\count299
+\c@caption@flags=\count294
+\c@continuedfloat=\count295
 Package caption Info: listings package is loaded.
 Package caption Info: rotating package is loaded.
 )
 (C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/latex/caption\subcaption.sty
 Package: subcaption 2023/07/28 v1.6b Sub-captions (AR)
 Package caption Info: New subtype `subfigure' on input line 238.
-\c@subfigure=\count300
+\c@subfigure=\count296
 Package caption Info: New subtype `subtable' on input line 238.
-\c@subtable=\count301
+\c@subtable=\count297
 )
 (C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/latex/threeparttable\threepart
 table.sty
@@ -252,18 +205,19 @@ Package: threeparttable 2003/06/13  v 3.0
 \@tempboxb=\box59
 )
 (C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/latex/algorithms\algorithm.sty
+Invalid UTF-8 byte or sequence at line 11 replaced by U+FFFD.
 Package: algorithm 2009/08/24 v0.1 Document Style `algorithm' - floating enviro
 nment
 (C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/latex/float\float.sty
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
-\c@float@type=\count302
+\c@float@type=\count298
 \float@exts=\toks24
 \float@box=\box60
 \@float@everytoks=\toks25
 \@floatcapt=\box61
 )
 \@float@every@algorithm=\toks26
-\c@algorithm=\count303
+\c@algorithm=\count299
 )
 (C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/latex/algorithmicx\algpseudoco
 de.sty
@@ -274,15 +228,15 @@ x.sty
 Package: algorithmicx 2005/04/27 v1.2 Algorithmicx
 
 Document Style algorithmicx 1.2 - a greatly improved `algorithmic' style
-\c@ALG@line=\count304
-\c@ALG@rem=\count305
-\c@ALG@nested=\count306
+\c@ALG@line=\count300
+\c@ALG@rem=\count301
+\c@ALG@nested=\count302
 \ALG@tlm=\skip71
 \ALG@thistlm=\skip72
-\c@ALG@Lnr=\count307
-\c@ALG@blocknr=\count308
-\c@ALG@storecount=\count309
-\c@ALG@tmpcounter=\count310
+\c@ALG@Lnr=\count303
+\c@ALG@blocknr=\count304
+\c@ALG@storecount=\count305
+\c@ALG@tmpcounter=\count306
 \ALG@tmplength=\skip73
 )
 Document Style - pseudocode environments for use with the `algorithmicx' style
@@ -313,14 +267,14 @@ Package: amsbsy 1999/11/29 v1.2d Bold Symbols
 (C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsopn.sty
 Package: amsopn 2022/04/08 v2.04 operator names
 )
-\inf@bad=\count311
+\inf@bad=\count307
 LaTeX Info: Redefining \frac on input line 233.
-\uproot@=\count312
-\leftroot@=\count313
+\uproot@=\count308
+\leftroot@=\count309
 LaTeX Info: Redefining \overline on input line 398.
 LaTeX Info: Redefining \colon on input line 409.
-\classnum@=\count314
-\DOTSCASE@=\count315
+\classnum@=\count310
+\DOTSCASE@=\count311
 LaTeX Info: Redefining \ldots on input line 495.
 LaTeX Info: Redefining \dots on input line 498.
 LaTeX Info: Redefining \cdots on input line 619.
@@ -333,20 +287,20 @@ LaTeX Info: Redefining \Bigg on input line 724.
 \big@size=\dimen190
 LaTeX Font Info:    Redeclaring font encoding OML on input line 742.
 LaTeX Font Info:    Redeclaring font encoding OMS on input line 743.
-\macc@depth=\count316
+\macc@depth=\count312
 LaTeX Info: Redefining \bmod on input line 904.
 LaTeX Info: Redefining \pmod on input line 909.
 LaTeX Info: Redefining \smash on input line 939.
 LaTeX Info: Redefining \relbar on input line 969.
 LaTeX Info: Redefining \Relbar on input line 970.
-\c@MaxMatrixCols=\count317
+\c@MaxMatrixCols=\count313
 \dotsspace@=\muskip17
-\c@parentequation=\count318
-\dspbrk@lvl=\count319
+\c@parentequation=\count314
+\dspbrk@lvl=\count315
 \tag@help=\toks28
-\row@=\count320
-\column@=\count321
-\maxfields@=\count322
+\row@=\count316
+\column@=\count317
+\maxfields@=\count318
 \andhelp@=\toks29
 \eqnshift@=\dimen191
 \alignsep@=\dimen192
@@ -396,20 +350,20 @@ Package: xspace 2014/10/28 v1.13 Space after command names (DPC,MH)
 )
 (C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/latex/siunitx\siunitx.sty
 Package: siunitx 2025-07-09 v3.4.14 A comprehensive (SI) units package
-\l__siunitx_number_uncert_offset_int=\count323
-\l__siunitx_number_exponent_fixed_int=\count324
-\l__siunitx_number_min_decimal_int=\count325
-\l__siunitx_number_min_integer_int=\count326
-\l__siunitx_number_round_precision_int=\count327
-\l__siunitx_number_lower_threshold_int=\count328
-\l__siunitx_number_upper_threshold_int=\count329
-\l__siunitx_number_group_first_int=\count330
-\l__siunitx_number_group_size_int=\count331
-\l__siunitx_number_group_minimum_int=\count332
+\l__siunitx_number_uncert_offset_int=\count319
+\l__siunitx_number_exponent_fixed_int=\count320
+\l__siunitx_number_min_decimal_int=\count321
+\l__siunitx_number_min_integer_int=\count322
+\l__siunitx_number_round_precision_int=\count323
+\l__siunitx_number_lower_threshold_int=\count324
+\l__siunitx_number_upper_threshold_int=\count325
+\l__siunitx_number_group_first_int=\count326
+\l__siunitx_number_group_size_int=\count327
+\l__siunitx_number_group_minimum_int=\count328
 \l__siunitx_angle_tmp_dim=\dimen256
 \l__siunitx_angle_marker_box=\box64
 \l__siunitx_angle_unit_box=\box65
-\l__siunitx_compound_count_int=\count333
+\l__siunitx_compound_count_int=\count329
 
 (C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/latex/translations\translation
 s.sty
@@ -418,7 +372,25 @@ Package: translations 2022/02/05 v1.12 internationalization of LaTeX2e packages
 
 (C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/latex/etoolbox\etoolbox.sty
 Package: etoolbox 2025/10/02 v2.5m e-TeX tools for LaTeX (JAW)
-\etb@tempcnta=\count334
+\etb@tempcnta=\count330
+)
+(C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/generic/pdftexcmds\pdftexcmds.
+sty
+Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO
+)
+
+(C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/generic/infwarerr\infwarerr.st
+y
+Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
+) (C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/generic/iftex\iftex.sty
+Package: iftex 2024/12/12 v1.0g TeX engine tests
+)
+(C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/generic/ltxcmds\ltxcmds.sty
+Package: ltxcmds 2023-12-04 v1.26 LaTeX kernel commands for general use (HO)
+)
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode not found.
 ))
 \l__siunitx_table_tmp_box=\box66
 \l__siunitx_table_tmp_dim=\dimen257
@@ -430,36 +402,42 @@ Package: etoolbox 2025/10/02 v2.5m e-TeX tools for LaTeX (JAW)
 \l__siunitx_table_after_box=\box71
 \l__siunitx_table_before_dim=\dimen259
 \l__siunitx_table_carry_dim=\dimen260
-\l__siunitx_unit_tmp_int=\count335
-\l__siunitx_unit_position_int=\count336
-\l__siunitx_unit_total_int=\count337
+\l__siunitx_unit_tmp_int=\count331
+\l__siunitx_unit_position_int=\count332
+\l__siunitx_unit_total_int=\count333
 ) (C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/latex/jknappen\mathrsfs.sty
 Package: mathrsfs 1996/01/01 Math RSFS package v1.0 (jk)
 \symrsfs=\mathgroup6
-)
-(C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/latex/blindtext\blindtext.sty
+) (C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/latex/blindtext\blindtext.st
+y
 Package: blindtext 2012/01/06 V2.0 blindtext-Package
-\c@blindtext=\count338
-\c@Blindtext=\count339
-\c@blind@countparstart=\count340
-\blind@countxx=\count341
-\blindtext@numBlindtext=\count342
-\blind@countyy=\count343
-\c@blindlist=\count344
-\c@blindlistlevel=\count345
-\c@blindlist@level=\count346
-\blind@listitem=\count347
-\c@blind@listcount=\count348
-\c@blind@levelcount=\count349
-\blind@mathformula=\count350
-\blind@Mathformula=\count351
-\c@blind@randomcount=\count352
-\c@blind@randommax=\count353
-\c@blind@pangramcount=\count354
-\c@blind@pangrammax=\count355
+\c@blindtext=\count334
+\c@Blindtext=\count335
+\c@blind@countparstart=\count336
+\blind@countxx=\count337
+\blindtext@numBlindtext=\count338
+\blind@countyy=\count339
+\c@blindlist=\count340
+\c@blindlistlevel=\count341
+\c@blindlist@level=\count342
+\blind@listitem=\count343
+\c@blind@listcount=\count344
+\c@blind@levelcount=\count345
+\blind@mathformula=\count346
+\blind@Mathformula=\count347
+\c@blind@randomcount=\count348
+\c@blind@randommax=\count349
+\c@blind@pangramcount=\count350
+\c@blind@pangrammax=\count351
 ) (C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/latex/titlepic\titlepic.sty
 Package: titlepic 2017/03/14 1.2 Package to display a picture on the title page
 
+) (C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/latex/natbib\natbib.sty
+Package: natbib 2010/09/13 8.31b (PWD, AO)
+\bibhang=\skip80
+\bibsep=\skip81
+LaTeX Info: Redefining \cite on input line 694.
+\c@NAT@ctr=\count352
 )
 (C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/latex/lm\lmodern.sty
 Package: lmodern 2015/05/01 v1.6.1 Latin Modern Fonts
@@ -498,62 +476,62 @@ LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
 )
 (C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/latex/tools\longtable.sty
 Package: longtable 2025-10-13 v4.24 Multi-page Table package (DPC)
-\LTleft=\skip80
-\LTright=\skip81
-\LTpre=\skip82
-\LTpost=\skip83
-\LTchunksize=\count356
+\LTleft=\skip82
+\LTright=\skip83
+\LTpre=\skip84
+\LTpost=\skip85
+\LTchunksize=\count353
 \LTcapwidth=\dimen261
 \LT@head=\box72
 \LT@firsthead=\box73
 \LT@foot=\box74
 \LT@lastfoot=\box75
 \LT@gbox=\box76
-\LT@cols=\count357
-\LT@rows=\count358
-\c@LT@tables=\count359
-\c@LT@chunks=\count360
+\LT@cols=\count354
+\LT@rows=\count355
+\c@LT@tables=\count356
+\c@LT@chunks=\count357
 \LT@p@ftn=\toks39
 )
 (C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/latex/tocloft\tocloft.sty
 Package: tocloft 2017/08/31 v2.3i parameterised ToC, etc., typesetting
 Package tocloft Info: The document has chapter divisions on input line 51.
-\cftparskip=\skip84
-\cftbeforetoctitleskip=\skip85
-\cftaftertoctitleskip=\skip86
-\cftbeforepartskip=\skip87
-\cftpartnumwidth=\skip88
-\cftpartindent=\skip89
-\cftbeforechapskip=\skip90
-\cftchapindent=\skip91
-\cftchapnumwidth=\skip92
-\cftbeforesecskip=\skip93
-\cftsecindent=\skip94
-\cftsecnumwidth=\skip95
-\cftbeforesubsecskip=\skip96
-\cftsubsecindent=\skip97
-\cftsubsecnumwidth=\skip98
-\cftbeforesubsubsecskip=\skip99
-\cftsubsubsecindent=\skip100
-\cftsubsubsecnumwidth=\skip101
-\cftbeforeparaskip=\skip102
-\cftparaindent=\skip103
-\cftparanumwidth=\skip104
-\cftbeforesubparaskip=\skip105
-\cftsubparaindent=\skip106
-\cftsubparanumwidth=\skip107
-\cftbeforeloftitleskip=\skip108
-\cftafterloftitleskip=\skip109
-\cftbeforefigskip=\skip110
-\cftfigindent=\skip111
-\cftfignumwidth=\skip112
-\c@lofdepth=\count361
-\c@lotdepth=\count362
-\cftbeforelottitleskip=\skip113
-\cftafterlottitleskip=\skip114
-\cftbeforetabskip=\skip115
-\cfttabindent=\skip116
-\cfttabnumwidth=\skip117
+\cftparskip=\skip86
+\cftbeforetoctitleskip=\skip87
+\cftaftertoctitleskip=\skip88
+\cftbeforepartskip=\skip89
+\cftpartnumwidth=\skip90
+\cftpartindent=\skip91
+\cftbeforechapskip=\skip92
+\cftchapindent=\skip93
+\cftchapnumwidth=\skip94
+\cftbeforesecskip=\skip95
+\cftsecindent=\skip96
+\cftsecnumwidth=\skip97
+\cftbeforesubsecskip=\skip98
+\cftsubsecindent=\skip99
+\cftsubsecnumwidth=\skip100
+\cftbeforesubsubsecskip=\skip101
+\cftsubsubsecindent=\skip102
+\cftsubsubsecnumwidth=\skip103
+\cftbeforeparaskip=\skip104
+\cftparaindent=\skip105
+\cftparanumwidth=\skip106
+\cftbeforesubparaskip=\skip107
+\cftsubparaindent=\skip108
+\cftsubparanumwidth=\skip109
+\cftbeforeloftitleskip=\skip110
+\cftafterloftitleskip=\skip111
+\cftbeforefigskip=\skip112
+\cftfigindent=\skip113
+\cftfignumwidth=\skip114
+\c@lofdepth=\count358
+\c@lotdepth=\count359
+\cftbeforelottitleskip=\skip115
+\cftafterlottitleskip=\skip116
+\cftbeforetabskip=\skip117
+\cfttabindent=\skip118
+\cfttabnumwidth=\skip119
 )
 (C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/latex/graphics\lscape.sty
 Package: lscape 2020/05/28 v3.02 Landscape Pages (DPC)
@@ -569,7 +547,7 @@ Package: xkeyval 2022/06/16 v2.9 package option processing (HA)
 \XKV@toks=\toks40
 \XKV@tempa@toks=\toks41
 )
-\XKV@depth=\count363
+\XKV@depth=\count360
 File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
 )) (C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/latex/adjustbox\adjcalc.sty
 Package: adjcalc 2012/05/16 v1.1 Provides advanced setlength with multiple back
@@ -586,10 +564,10 @@ Package: collectbox 2022/10/17 v0.4c Collect macro arguments as boxes
 \tc@lly=\dimen263
 \tc@urx=\dimen264
 \tc@ury=\dimen265
-Package trimclip Info: Using driver 'tc-pdftex.def'.
+Package trimclip Info: Using driver 'tc-xetex.def'.
 
-(C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/latex/adjustbox\tc-pdftex.def
-File: tc-pdftex.def 2025/02/26 v2.3 Clipping driver for pdftex
+(C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/latex/adjustbox\tc-xetex.def
+File: tc-xetex.def 2019/01/04 v2.2 Clipping driver for xetex
 ))
 \adjbox@Width=\dimen266
 \adjbox@Height=\dimen267
@@ -599,14 +577,13 @@ File: tc-pdftex.def 2025/02/26 v2.3 Clipping driver for pdftex
 \adjbox@pheight=\dimen271
 \adjbox@pdepth=\dimen272
 \adjbox@ptotalheight=\dimen273
-
 (C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/latex/ifoddpage\ifoddpage.sty
 Package: ifoddpage 2022/10/18 v1.2 Conditionals for odd/even page detection
-\c@checkoddpage=\count364
+\c@checkoddpage=\count361
 ) (C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/latex/varwidth\varwidth.sty
 Package: varwidth 2009/03/30 ver 0.92;  Variable-width minipages
 \@vwid@box=\box78
-\sift@deathcycles=\count365
+\sift@deathcycles=\count362
 \@vwid@loff=\dimen274
 \@vwid@roff=\dimen275
 )
@@ -614,6 +591,13 @@ Package: varwidth 2009/03/30 ver 0.92;  Variable-width minipages
 ) (C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\hyperref.sty
 Package: hyperref 2025-07-12 v7.01o Hypertext links for LaTeX
 
+(C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/latex/kvsetkeys\kvsetkeys.sty
+Package: kvsetkeys 2022-10-05 v1.19 Key value parser (HO)
+)
+(C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/generic/kvdefinekeys\kvdefinek
+eys.sty
+Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
+)
 (C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/generic/pdfescape\pdfescape.st
 y
 Package: pdfescape 2019/12/09 v1.15 Implements pdfTeX's escape features (HO)
@@ -629,8 +613,11 @@ Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 (C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/generic/gettitlestring\gettitl
 estring.sty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
-)
-\c@section@level=\count366
+
+(C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/latex/kvoptions\kvoptions.sty
+Package: kvoptions 2022-06-15 v3.15 Key value format for package options (HO)
+))
+\c@section@level=\count363
 )
 (C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/generic/stringenc\stringenc.st
 y
@@ -638,22 +625,18 @@ Package: stringenc 2019/11/29 v1.12 Convert strings between diff. encodings (HO
 )
 )
 \@linkdim=\dimen276
-\Hy@linkcounter=\count367
-\Hy@pagecounter=\count368
+\Hy@linkcounter=\count364
+\Hy@pagecounter=\count365
  (C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\pd1enc.def
 File: pd1enc.def 2025-07-12 v7.01o Hyperref: PDFDocEncoding definition (HO)
-Now handling font encoding PD1 ...
-... no UTF-8 mapping file for font encoding PD1
 )
 (C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/generic/intcalc\intcalc.sty
 Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
 )
-\Hy@SavedSpaceFactor=\count369
+\Hy@SavedSpaceFactor=\count366
 
 (C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\puenc.def
 File: puenc.def 2025-07-12 v7.01o Hyperref: PDF Unicode definition (HO)
-Now handling font encoding PU ...
-... no UTF-8 mapping file for font encoding PU
 )
 Package hyperref Info: Option `bookmarks' set `true' on input line 4066.
 Package hyperref Info: Option `bookmarksopen' set `true' on input line 4066.
@@ -670,7 +653,7 @@ Package hyperref Info: Plain pages OFF on input line 4210.
 Package hyperref Info: Backreferencing OFF on input line 4215.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
 Package hyperref Info: Bookmarks ON on input line 4462.
-\c@Hy@tempcnt=\count370
+\c@Hy@tempcnt=\count367
 
 (C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/latex/url\url.sty
 \Urlmuskip=\muskip18
@@ -687,7 +670,7 @@ sty
 Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO
 )
 ))
-\Fld@menulength=\count371
+\Fld@menulength=\count368
 \Field@Width=\dimen278
 \Fld@charsize=\dimen279
 Package hyperref Info: Hyper figures OFF on input line 6078.
@@ -697,16 +680,19 @@ Package hyperref Info: backreferencing OFF on input line 6093.
 Package hyperref Info: Link coloring ON on input line 6096.
 Package hyperref Info: Link coloring with OCG OFF on input line 6103.
 Package hyperref Info: PDF/A mode OFF on input line 6108.
-\Hy@abspage=\count372
-\c@Item=\count373
-\c@Hfootnote=\count374
+\Hy@abspage=\count369
+\c@Item=\count370
+\c@Hfootnote=\count371
 )
-Package hyperref Info: Driver (autodetected): hpdftex.
+Package hyperref Info: Driver (autodetected): hxetex.
 
-(C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\hpdftex.def
-File: hpdftex.def 2025-07-12 v7.01o Hyperref driver for pdfTeX
-\Fld@listcount=\count375
-\c@bookmark@seq@number=\count376
+(C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\hxetex.def
+File: hxetex.def 2025-07-12 v7.01o Hyperref driver for XeTeX
+\pdfm@box=\box79
+\c@Hy@AnnotLevel=\count372
+\HyField@AnnotCount=\count373
+\Fld@listcount=\count374
+\c@bookmark@seq@number=\count375
 
 (C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/latex/rerunfilecheck\rerunfile
 check.sty
@@ -719,7 +705,7 @@ Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
 Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 84.
 )
-\Hy@SectionHShift=\skip118
+\Hy@SectionHShift=\skip120
 )
 (C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/latex/acronym\acronym.sty
 Package: acronym 2025/01/17 v1.50 Support for acronyms (Tobias Oetiker)
@@ -729,8 +715,8 @@ Package: suffix 2006/07/15 1.5a Variant command support
 )
 (C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/latex/xstring\xstring.sty
 (C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/generic/xstring\xstring.tex
-\xs_counta=\count377
-\xs_countb=\count378
+\xs_counta=\count376
+\xs_countb=\count377
 )
 Package: xstring 2023/08/22 v1.86 String manipulations (CT)
 )
@@ -742,1313 +728,244 @@ Package: vmargin 2004/07/15 V2.5 set document margins (VK)
 \PaperWidth=\dimen280
 \PaperHeight=\dimen281
 )
-Package hyperref Info: Option `colorlinks' set `true' on input line 68.
-\c@dummy=\count379
-   defining Unicode char U+2460 (decimal 9312)
-   defining Unicode char U+2461 (decimal 9313)
-   defining Unicode char U+2462 (decimal 9314)
-   defining Unicode char U+FF1A (decimal 65306)
-) (C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/latex/base\inputenc.sty
-Package: inputenc 2024/02/08 v1.3d Input encoding file
-\inpenc@prehook=\toks43
-\inpenc@posthook=\toks44
-)
-(C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/generic/babel\babel.sty
-Package: babel 2025/11/09 v25.15 The multilingual framework for LuaLaTeX, pdfLa
-TeX and XeLaTeX
-\babel@savecnt=\count380
-LaTeX Encoding Info:    Redeclaring text command \ij (encoding OT1) on input li
-ne 2050.
-LaTeX Encoding Info:    Redeclaring text command \IJ (encoding OT1) on input li
-ne 2052.
-LaTeX Encoding Info:    Redeclaring text command \ij (encoding T1) on input lin
-e 2054.
-LaTeX Encoding Info:    Redeclaring text command \IJ (encoding T1) on input lin
-e 2055.
-LaTeX Encoding Info:    Ignoring declaration for text command \ij (encoding ?) 
-on input line 2056.
-LaTeX Encoding Info:    Ignoring declaration for text command \IJ (encoding ?) 
-on input line 2058.
-LaTeX Encoding Info:    Ignoring declaration for text command \SS (encoding ?) 
-on input line 2083.
-\U@D=\dimen282
-\l@unhyphenated=\language79
+Package hyperref Info: Option `colorlinks' set `true' on input line 69.
+\c@dummy=\count378
+) (C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/latex/fontspec\fontspec.sty
+(C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/latex/l3packages/xparse\xparse
+.sty (C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/latex/l3kernel\expl3.sty
+Package: expl3 2025-11-06 L3 programming layer (loader) 
 
-(C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/generic/babel\txtbabel.def)
-\bbl@readstream=\read2
-\bbl@dirlevel=\count381
-Package babel Info: Configuration files are deprecated, as
-(babel)             they can break document portability.
-(babel)             Reported on input line 4175.
-
-*************************************
-* Local config file bblopts.cfg used
-*
-(C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/latex/arabi\bblopts.cfg
-File: bblopts.cfg 2005/09/08 v0.1 add Arabic and Farsi to "declared" options of
- babel
-)
-(C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/generic/babel/locale/en\babel-
-english.tex)
-(C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/generic/babel/locale/mn\babel-
-mongolian.tex)
-Package babel Info: Importing font and identification data for english
-(babel)             from babel-en.ini. Reported on input line 4298.
-
-(C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/latex/babel-english\english.ld
-f
-Language: english 2017/06/06 v3.3r English support from the babel system
-Package babel Info: Hyphen rules for 'canadian' set to \l@english
-(babel)             (\language0). Reported on input line 102.
-Package babel Info: Hyphen rules for 'australian' set to \l@ukenglish
-(babel)             (\language73). Reported on input line 105.
-Package babel Info: Hyphen rules for 'newzealand' set to \l@ukenglish
-(babel)             (\language73). Reported on input line 108.
-)
-Package babel Info: Importing font and identification data for mongolian
-(babel)             from babel-mn.ini. Reported on input line 4298.
-
-(C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/latex/mongolian-babel\mongolia
-n.ldf
-Language: mongolian 2008/03/30 v1.2 Mongolian support from the babel system
-
-(C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/latex/cyrillic\t2aenc.def
-File: t2aenc.def 2023/11/07 v1.0k Cyrillic encoding definition file
-Now handling font encoding T2A ...
-... processing UTF-8 mapping file for font encoding T2A
-
-(C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/latex/base\t2aenc.dfu
-File: t2aenc.dfu 2022/06/07 v1.3c UTF-8 support
-   defining Unicode char U+00A4 (decimal 164)
-   defining Unicode char U+00A7 (decimal 167)
-   defining Unicode char U+00AB (decimal 171)
-   defining Unicode char U+00BB (decimal 187)
-   defining Unicode char U+0131 (decimal 305)
-   defining Unicode char U+0237 (decimal 567)
-   defining Unicode char U+0400 (decimal 1024)
-   defining Unicode char U+0401 (decimal 1025)
-   defining Unicode char U+0402 (decimal 1026)
-   defining Unicode char U+0403 (decimal 1027)
-   defining Unicode char U+0404 (decimal 1028)
-   defining Unicode char U+0405 (decimal 1029)
-   defining Unicode char U+0406 (decimal 1030)
-   defining Unicode char U+0407 (decimal 1031)
-   defining Unicode char U+0408 (decimal 1032)
-   defining Unicode char U+0409 (decimal 1033)
-   defining Unicode char U+040A (decimal 1034)
-   defining Unicode char U+040B (decimal 1035)
-   defining Unicode char U+040C (decimal 1036)
-   defining Unicode char U+040D (decimal 1037)
-   defining Unicode char U+040E (decimal 1038)
-   defining Unicode char U+040F (decimal 1039)
-   defining Unicode char U+0410 (decimal 1040)
-   defining Unicode char U+0411 (decimal 1041)
-   defining Unicode char U+0412 (decimal 1042)
-   defining Unicode char U+0413 (decimal 1043)
-   defining Unicode char U+0414 (decimal 1044)
-   defining Unicode char U+0415 (decimal 1045)
-   defining Unicode char U+0416 (decimal 1046)
-   defining Unicode char U+0417 (decimal 1047)
-   defining Unicode char U+0418 (decimal 1048)
-   defining Unicode char U+0419 (decimal 1049)
-   defining Unicode char U+041A (decimal 1050)
-   defining Unicode char U+041B (decimal 1051)
-   defining Unicode char U+041C (decimal 1052)
-   defining Unicode char U+041D (decimal 1053)
-   defining Unicode char U+041E (decimal 1054)
-   defining Unicode char U+041F (decimal 1055)
-   defining Unicode char U+0420 (decimal 1056)
-   defining Unicode char U+0421 (decimal 1057)
-   defining Unicode char U+0422 (decimal 1058)
-   defining Unicode char U+0423 (decimal 1059)
-   defining Unicode char U+0424 (decimal 1060)
-   defining Unicode char U+0425 (decimal 1061)
-   defining Unicode char U+0426 (decimal 1062)
-   defining Unicode char U+0427 (decimal 1063)
-   defining Unicode char U+0428 (decimal 1064)
-   defining Unicode char U+0429 (decimal 1065)
-   defining Unicode char U+042A (decimal 1066)
-   defining Unicode char U+042B (decimal 1067)
-   defining Unicode char U+042C (decimal 1068)
-   defining Unicode char U+042D (decimal 1069)
-   defining Unicode char U+042E (decimal 1070)
-   defining Unicode char U+042F (decimal 1071)
-   defining Unicode char U+0430 (decimal 1072)
-   defining Unicode char U+0431 (decimal 1073)
-   defining Unicode char U+0432 (decimal 1074)
-   defining Unicode char U+0433 (decimal 1075)
-   defining Unicode char U+0434 (decimal 1076)
-   defining Unicode char U+0435 (decimal 1077)
-   defining Unicode char U+0436 (decimal 1078)
-   defining Unicode char U+0437 (decimal 1079)
-   defining Unicode char U+0438 (decimal 1080)
-   defining Unicode char U+0439 (decimal 1081)
-   defining Unicode char U+043A (decimal 1082)
-   defining Unicode char U+043B (decimal 1083)
-   defining Unicode char U+043C (decimal 1084)
-   defining Unicode char U+043D (decimal 1085)
-   defining Unicode char U+043E (decimal 1086)
-   defining Unicode char U+043F (decimal 1087)
-   defining Unicode char U+0440 (decimal 1088)
-   defining Unicode char U+0441 (decimal 1089)
-   defining Unicode char U+0442 (decimal 1090)
-   defining Unicode char U+0443 (decimal 1091)
-   defining Unicode char U+0444 (decimal 1092)
-   defining Unicode char U+0445 (decimal 1093)
-   defining Unicode char U+0446 (decimal 1094)
-   defining Unicode char U+0447 (decimal 1095)
-   defining Unicode char U+0448 (decimal 1096)
-   defining Unicode char U+0449 (decimal 1097)
-   defining Unicode char U+044A (decimal 1098)
-   defining Unicode char U+044B (decimal 1099)
-   defining Unicode char U+044C (decimal 1100)
-   defining Unicode char U+044D (decimal 1101)
-   defining Unicode char U+044E (decimal 1102)
-   defining Unicode char U+044F (decimal 1103)
-   defining Unicode char U+0450 (decimal 1104)
-   defining Unicode char U+0451 (decimal 1105)
-   defining Unicode char U+0452 (decimal 1106)
-   defining Unicode char U+0453 (decimal 1107)
-   defining Unicode char U+0454 (decimal 1108)
-   defining Unicode char U+0455 (decimal 1109)
-   defining Unicode char U+0456 (decimal 1110)
-   defining Unicode char U+0457 (decimal 1111)
-   defining Unicode char U+0458 (decimal 1112)
-   defining Unicode char U+0459 (decimal 1113)
-   defining Unicode char U+045A (decimal 1114)
-   defining Unicode char U+045B (decimal 1115)
-   defining Unicode char U+045C (decimal 1116)
-   defining Unicode char U+045D (decimal 1117)
-   defining Unicode char U+045E (decimal 1118)
-   defining Unicode char U+045F (decimal 1119)
-   defining Unicode char U+0490 (decimal 1168)
-   defining Unicode char U+0491 (decimal 1169)
-   defining Unicode char U+0492 (decimal 1170)
-   defining Unicode char U+0493 (decimal 1171)
-   defining Unicode char U+0496 (decimal 1174)
-   defining Unicode char U+0497 (decimal 1175)
-   defining Unicode char U+0498 (decimal 1176)
-   defining Unicode char U+0499 (decimal 1177)
-   defining Unicode char U+049A (decimal 1178)
-   defining Unicode char U+049B (decimal 1179)
-   defining Unicode char U+049C (decimal 1180)
-   defining Unicode char U+049D (decimal 1181)
-   defining Unicode char U+04A0 (decimal 1184)
-   defining Unicode char U+04A1 (decimal 1185)
-   defining Unicode char U+04A2 (decimal 1186)
-   defining Unicode char U+04A3 (decimal 1187)
-   defining Unicode char U+04A4 (decimal 1188)
-   defining Unicode char U+04A5 (decimal 1189)
-   defining Unicode char U+04AA (decimal 1194)
-   defining Unicode char U+04AB (decimal 1195)
-   defining Unicode char U+04AE (decimal 1198)
-   defining Unicode char U+04AF (decimal 1199)
-   defining Unicode char U+04B0 (decimal 1200)
-   defining Unicode char U+04B1 (decimal 1201)
-   defining Unicode char U+04B2 (decimal 1202)
-   defining Unicode char U+04B3 (decimal 1203)
-   defining Unicode char U+04B6 (decimal 1206)
-   defining Unicode char U+04B7 (decimal 1207)
-   defining Unicode char U+04B8 (decimal 1208)
-   defining Unicode char U+04B9 (decimal 1209)
-   defining Unicode char U+04BA (decimal 1210)
-   defining Unicode char U+04BB (decimal 1211)
-   defining Unicode char U+04C0 (decimal 1216)
-   defining Unicode char U+04C1 (decimal 1217)
-   defining Unicode char U+04C2 (decimal 1218)
-   defining Unicode char U+04D0 (decimal 1232)
-   defining Unicode char U+04D1 (decimal 1233)
-   defining Unicode char U+04D2 (decimal 1234)
-   defining Unicode char U+04D3 (decimal 1235)
-   defining Unicode char U+04D4 (decimal 1236)
-   defining Unicode char U+04D5 (decimal 1237)
-   defining Unicode char U+04D6 (decimal 1238)
-   defining Unicode char U+04D7 (decimal 1239)
-   defining Unicode char U+04D8 (decimal 1240)
-   defining Unicode char U+04D9 (decimal 1241)
-   defining Unicode char U+04DA (decimal 1242)
-   defining Unicode char U+04DB (decimal 1243)
-   defining Unicode char U+04DC (decimal 1244)
-   defining Unicode char U+04DD (decimal 1245)
-   defining Unicode char U+04DE (decimal 1246)
-   defining Unicode char U+04DF (decimal 1247)
-   defining Unicode char U+04E2 (decimal 1250)
-   defining Unicode char U+04E3 (decimal 1251)
-   defining Unicode char U+04E4 (decimal 1252)
-   defining Unicode char U+04E5 (decimal 1253)
-   defining Unicode char U+04E6 (decimal 1254)
-   defining Unicode char U+04E7 (decimal 1255)
-   defining Unicode char U+04E8 (decimal 1256)
-   defining Unicode char U+04E9 (decimal 1257)
-   defining Unicode char U+04EC (decimal 1260)
-   defining Unicode char U+04ED (decimal 1261)
-   defining Unicode char U+04EE (decimal 1262)
-   defining Unicode char U+04EF (decimal 1263)
-   defining Unicode char U+04F0 (decimal 1264)
-   defining Unicode char U+04F1 (decimal 1265)
-   defining Unicode char U+04F2 (decimal 1266)
-   defining Unicode char U+04F3 (decimal 1267)
-   defining Unicode char U+04F4 (decimal 1268)
-   defining Unicode char U+04F5 (decimal 1269)
-   defining Unicode char U+04F8 (decimal 1272)
-   defining Unicode char U+04F9 (decimal 1273)
-   defining Unicode char U+200C (decimal 8204)
-   defining Unicode char U+2013 (decimal 8211)
-   defining Unicode char U+2014 (decimal 8212)
-   defining Unicode char U+2018 (decimal 8216)
-   defining Unicode char U+2019 (decimal 8217)
-   defining Unicode char U+201C (decimal 8220)
-   defining Unicode char U+201D (decimal 8221)
-   defining Unicode char U+201E (decimal 8222)
-   defining Unicode char U+2030 (decimal 8240)
-   defining Unicode char U+2031 (decimal 8241)
-   defining Unicode char U+2116 (decimal 8470)
-   defining Unicode char U+2329 (decimal 9001)
-   defining Unicode char U+3008 (decimal 12296)
-   defining Unicode char U+232A (decimal 9002)
-   defining Unicode char U+3009 (decimal 12297)
-   defining Unicode char U+2423 (decimal 9251)
-   defining Unicode char U+27E8 (decimal 10216)
-   defining Unicode char U+27E9 (decimal 10217)
-   defining Unicode char U+FB00 (decimal 64256)
-   defining Unicode char U+FB01 (decimal 64257)
-   defining Unicode char U+FB02 (decimal 64258)
-   defining Unicode char U+FB03 (decimal 64259)
-   defining Unicode char U+FB04 (decimal 64260)
-   defining Unicode char U+FB05 (decimal 64261)
-   defining Unicode char U+FB06 (decimal 64262)
+(C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-xete
+x.def
+File: l3backend-xetex.def 2025-10-09 L3 backend support: XeTeX
+\g__graphics_track_int=\count379
+\g__pdfannot_backend_int=\count380
+\g__pdfannot_backend_link_int=\count381
 ))
-Package babel Info: Making " an active character on input line 175.
+Package: xparse 2025-10-09 L3 Experimental document command parser
+)
+Package: fontspec 2025/09/29 v2.9g Font selection for XeLaTeX and LuaLaTeX
+
+(C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/latex/fontspec\fontspec-xetex.
+sty
+Package: fontspec-xetex 2025/09/29 v2.9g Font selection for XeLaTeX and LuaLaTe
+X
+\l__fontspec_script_int=\count382
+\l__fontspec_language_int=\count383
+\l__fontspec_strnum_int=\count384
+\l__fontspec_tmp_int=\count385
+\l__fontspec_tmpa_int=\count386
+\l__fontspec_tmpb_int=\count387
+\l__fontspec_tmpc_int=\count388
+\l__fontspec_em_int=\count389
+\l__fontspec_emdef_int=\count390
+\l__fontspec_strong_int=\count391
+\l__fontspec_strongdef_int=\count392
+\l__fontspec_tmpa_dim=\dimen282
+\l__fontspec_tmpb_dim=\dimen283
+\l__fontspec_tmpc_dim=\dimen284
+ (C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/latex/base\fontenc.sty
+Package: fontenc 2025/07/18 v2.1d Standard LaTeX package
+)
+(C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/latex/fontspec\fontspec.cfg)))
+
+Package fontspec Info: 
+(fontspec)             Font family 'TimesNewRoman(0)' created for font 'Times
+(fontspec)             New Roman' with options [Ligatures=TeX].
+(fontspec)              
+(fontspec)              This font family consists of the following NFSS
+(fontspec)             series/shapes:
+(fontspec)              
+(fontspec)             - 'normal' (m/n) with NFSS spec.: <->"Times New
+(fontspec)             Roman/OT:script=latn;language=dflt;mapping=tex-text;"
+(fontspec)             - 'small caps'  (m/sc) with NFSS spec.: <->"Times New
+(fontspec)             Roman/OT:script=latn;language=dflt;+smcp;mapping=tex-tex
+t;"
+(fontspec)             - 'bold' (b/n) with NFSS spec.: <->"Times New
+(fontspec)             Roman/B/OT:script=latn;language=dflt;mapping=tex-text;"
+(fontspec)             - 'bold small caps'  (b/sc) with NFSS spec.: <->"Times
+(fontspec)             New
+(fontspec)             Roman/B/OT:script=latn;language=dflt;+smcp;mapping=tex-t
+ext;"
+(fontspec)             - 'italic' (m/it) with NFSS spec.: <->"Times New
+(fontspec)             Roman/I/OT:script=latn;language=dflt;mapping=tex-text;"
+(fontspec)             - 'italic small caps'  (m/scit) with NFSS spec.:
+(fontspec)             <->"Times New
+(fontspec)             Roman/I/OT:script=latn;language=dflt;+smcp;mapping=tex-t
+ext;"
+(fontspec)             - 'bold italic' (b/it) with NFSS spec.: <->"Times New
+(fontspec)             Roman/BI/OT:script=latn;language=dflt;mapping=tex-text;"
+
+(fontspec)             - 'bold italic small caps'  (b/scit) with NFSS spec.:
+(fontspec)             <->"Times New
+(fontspec)             Roman/BI/OT:script=latn;language=dflt;+smcp;mapping=tex-
+text;"
+
+
+Package fontspec Info: 
+(fontspec)             Font family 'Arial(0)' created for font 'Arial' with
+(fontspec)             options [Ligatures=TeX].
+(fontspec)              
+(fontspec)              This font family consists of the following NFSS
+(fontspec)             series/shapes:
+(fontspec)              
+(fontspec)             - 'normal' (m/n) with NFSS spec.:
+(fontspec)             <->"Arial/OT:script=latn;language=dflt;mapping=tex-text;
+"
+(fontspec)             - 'small caps'  (m/sc) with NFSS spec.:
+(fontspec)             <->"Arial/OT:script=latn;language=dflt;+smcp;mapping=tex
+-text;"
+(fontspec)             - 'bold' (b/n) with NFSS spec.:
+(fontspec)             <->"Arial/B/OT:script=latn;language=dflt;mapping=tex-tex
+t;"
+(fontspec)             - 'bold small caps'  (b/sc) with NFSS spec.:
+(fontspec)             <->"Arial/B/OT:script=latn;language=dflt;+smcp;mapping=t
+ex-text;"
+(fontspec)             - 'italic' (m/it) with NFSS spec.:
+(fontspec)             <->"Arial/I/OT:script=latn;language=dflt;mapping=tex-tex
+t;"
+(fontspec)             - 'italic small caps'  (m/scit) with NFSS spec.:
+(fontspec)             <->"Arial/I/OT:script=latn;language=dflt;+smcp;mapping=t
+ex-text;"
+(fontspec)             - 'bold italic' (b/it) with NFSS spec.:
+(fontspec)             <->"Arial/BI/OT:script=latn;language=dflt;mapping=tex-te
+xt;"
+(fontspec)             - 'bold italic small caps'  (b/scit) with NFSS spec.:
+(fontspec)             <->"Arial/BI/OT:script=latn;language=dflt;+smcp;mapping=
+tex-text;"
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas/B scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas/I scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas/BI scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Font family 'Consolas(0)' created for font 'Consolas'
+(fontspec)             with options
+(fontspec)             [WordSpace={1,0,0},HyphenChar=None,PunctuationSpace=Word
+Space,Scale=0.9].
+(fontspec)              
+(fontspec)              This font family consists of the following NFSS
+(fontspec)             series/shapes:
+(fontspec)              
+(fontspec)             - 'normal' (m/n) with NFSS spec.:
+(fontspec)             <->s*[0.9]"Consolas/OT:script=latn;language=dflt;"
+(fontspec)             - 'bold' (b/n) with NFSS spec.:
+(fontspec)             <->s*[0.9]"Consolas/B/OT:script=latn;language=dflt;"
+(fontspec)             - 'italic' (m/it) with NFSS spec.:
+(fontspec)             <->s*[0.9]"Consolas/I/OT:script=latn;language=dflt;"
+(fontspec)             - 'bold italic' (b/it) with NFSS spec.:
+(fontspec)             <->s*[0.9]"Consolas/BI/OT:script=latn;language=dflt;"
+
+
+(C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/latex/polyglossia\polyglossia.
+sty
+Package: polyglossia 2025/12/01 v2.9 Modern multilingual typesetting with XeLaT
+eX and LuaLaTeX
+\l_xpg_alias_keyvals_int=\count393
+
+(C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/latex/polyglossia\gloss-latex.
+ldf
+File: gloss-latex.ldf polyglossia: module for default language
 ))
+(C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/latex/polyglossia\gloss-mongol
+ian.ldf
+File: gloss-mongolian.ldf polyglossia: module for Mongolian
+
+(C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/latex/polyglossia\xpg-cyrillic
+numbers.sty
+Package: xpg-cyrillicnumbers 2019/11/15 v0.2 Formatting of Cyrillic alphabetic 
+numbers
+)
+(C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/latex/polyglossia\babelsh.def
+File: babelsh.def 2022/06/21 Babel common definitions for shorthands
+ Taken verbatim from babel files (2022/06/06 v3.76)
+)
+Package babel Info: Making " an active character on input line 72.
+)
+
+Package polyglossia Info: Default language is mongolian
+
+
+(C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/latex/polyglossia\gloss-englis
+h.ldf
+File: gloss-english.ldf polyglossia: module for English
+)
 (C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/latex/wrapfig\wrapfig.sty
-\wrapoverhang=\dimen283
-\WF@size=\dimen284
-\c@WF@wrappedlines=\count382
-\WF@box=\box79
-\WF@everypar=\toks45
+\wrapoverhang=\dimen285
+\WF@size=\dimen286
+\c@WF@wrappedlines=\count394
+\WF@box=\box80
+\WF@everypar=\toks43
 Package: wrapfig 2003/01/31  v 3.6
 )
 (C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/latex/ragged2e\ragged2e.sty
 Package: ragged2e 2023/06/22 v3.6 ragged2e Package
-\CenteringLeftskip=\skip119
-\RaggedLeftLeftskip=\skip120
-\RaggedRightLeftskip=\skip121
-\CenteringRightskip=\skip122
-\RaggedLeftRightskip=\skip123
-\RaggedRightRightskip=\skip124
-\CenteringParfillskip=\skip125
-\RaggedLeftParfillskip=\skip126
-\RaggedRightParfillskip=\skip127
-\JustifyingParfillskip=\skip128
-\CenteringParindent=\skip129
-\RaggedLeftParindent=\skip130
-\RaggedRightParindent=\skip131
-\JustifyingParindent=\skip132
-)
-(C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\mathptmx.sty
-Package: mathptmx 2020/03/25 PSNFSS-v9.3 Times w/ Math, improved (SPQR, WaS) 
-LaTeX Font Info:    Redeclaring symbol font `operators' on input line 28.
-LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  OT1/lmr/m/n --> OT1/ztmcm/m/n on input line 28.
-LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  OT1/lmr/bx/n --> OT1/ztmcm/m/n on input line 28.
-LaTeX Font Info:    Redeclaring symbol font `letters' on input line 29.
-LaTeX Font Info:    Overwriting symbol font `letters' in version `normal'
-(Font)                  OML/lmm/m/it --> OML/ztmcm/m/it on input line 29.
-LaTeX Font Info:    Overwriting symbol font `letters' in version `bold'
-(Font)                  OML/lmm/b/it --> OML/ztmcm/m/it on input line 29.
-LaTeX Font Info:    Redeclaring symbol font `symbols' on input line 30.
-LaTeX Font Info:    Overwriting symbol font `symbols' in version `normal'
-(Font)                  OMS/lmsy/m/n --> OMS/ztmcm/m/n on input line 30.
-LaTeX Font Info:    Overwriting symbol font `symbols' in version `bold'
-(Font)                  OMS/lmsy/b/n --> OMS/ztmcm/m/n on input line 30.
-LaTeX Font Info:    Redeclaring symbol font `largesymbols' on input line 31.
-LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `normal'
-(Font)                  OMX/lmex/m/n --> OMX/ztmcm/m/n on input line 31.
-LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `bold'
-(Font)                  OMX/lmex/m/n --> OMX/ztmcm/m/n on input line 31.
-\symbold=\mathgroup7
-\symitalic=\mathgroup8
-LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 34.
-LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
-(Font)                  OT1/lmr/bx/n --> OT1/ptm/bx/n on input line 34.
-LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
-(Font)                  OT1/lmr/bx/n --> OT1/ptm/bx/n on input line 34.
-LaTeX Font Info:    Redeclaring math alphabet \mathit on input line 35.
-LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
-(Font)                  OT1/lmr/m/it --> OT1/ptm/m/it on input line 35.
-LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  OT1/lmr/bx/it --> OT1/ptm/m/it on input line 35.
-LaTeX Info: Redefining \hbar on input line 50.
+\CenteringLeftskip=\skip121
+\RaggedLeftLeftskip=\skip122
+\RaggedRightLeftskip=\skip123
+\CenteringRightskip=\skip124
+\RaggedLeftRightskip=\skip125
+\RaggedRightRightskip=\skip126
+\CenteringParfillskip=\skip127
+\RaggedLeftParfillskip=\skip128
+\RaggedRightParfillskip=\skip129
+\JustifyingParfillskip=\skip130
+\CenteringParindent=\skip131
+\RaggedLeftParindent=\skip132
+\RaggedRightParindent=\skip133
+\JustifyingParindent=\skip134
 )
 (C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/latex/multirow\multirow.sty
 Package: multirow 2024/11/12 v2.9 Span multiple rows of a table
-\multirow@colwidth=\skip133
-\multirow@cntb=\count383
-\multirow@dima=\skip134
-\bigstrutjot=\dimen285
+\multirow@colwidth=\skip135
+\multirow@cntb=\count395
+\multirow@dima=\skip136
+\bigstrutjot=\dimen287
 )
-(C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/latex/tempora\tempora.sty
-Package: tempora 2016/02/02 (msharpe) Style file for Tempora.
-
-(C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/latex/base\fontenc.sty
-Package: fontenc 2025/07/18 v2.1d Standard LaTeX package
-
-(C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/latex/cyrillic\ot2enc.def
-File: ot2enc.def 2022/06/11 v3.3b Cyrillic encoding definition file
-Now handling font encoding OT2 ...
-... processing UTF-8 mapping file for font encoding OT2
-
-(C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/latex/base\ot2enc.dfu
-File: ot2enc.dfu 2022/06/07 v1.3c UTF-8 support
-   defining Unicode char U+00AB (decimal 171)
-   defining Unicode char U+00BB (decimal 187)
-   defining Unicode char U+0131 (decimal 305)
-   defining Unicode char U+0237 (decimal 567)
-   defining Unicode char U+0400 (decimal 1024)
-   defining Unicode char U+0401 (decimal 1025)
-   defining Unicode char U+0402 (decimal 1026)
-   defining Unicode char U+0403 (decimal 1027)
-   defining Unicode char U+0404 (decimal 1028)
-   defining Unicode char U+0405 (decimal 1029)
-   defining Unicode char U+0406 (decimal 1030)
-   defining Unicode char U+0408 (decimal 1032)
-   defining Unicode char U+0409 (decimal 1033)
-   defining Unicode char U+040A (decimal 1034)
-   defining Unicode char U+040B (decimal 1035)
-   defining Unicode char U+040C (decimal 1036)
-   defining Unicode char U+040D (decimal 1037)
-   defining Unicode char U+040F (decimal 1039)
-   defining Unicode char U+0410 (decimal 1040)
-   defining Unicode char U+0411 (decimal 1041)
-   defining Unicode char U+0412 (decimal 1042)
-   defining Unicode char U+0413 (decimal 1043)
-   defining Unicode char U+0414 (decimal 1044)
-   defining Unicode char U+0415 (decimal 1045)
-   defining Unicode char U+0416 (decimal 1046)
-   defining Unicode char U+0417 (decimal 1047)
-   defining Unicode char U+0418 (decimal 1048)
-   defining Unicode char U+0419 (decimal 1049)
-   defining Unicode char U+041A (decimal 1050)
-   defining Unicode char U+041B (decimal 1051)
-   defining Unicode char U+041C (decimal 1052)
-   defining Unicode char U+041D (decimal 1053)
-   defining Unicode char U+041E (decimal 1054)
-   defining Unicode char U+041F (decimal 1055)
-   defining Unicode char U+0420 (decimal 1056)
-   defining Unicode char U+0421 (decimal 1057)
-   defining Unicode char U+0422 (decimal 1058)
-   defining Unicode char U+0423 (decimal 1059)
-   defining Unicode char U+0424 (decimal 1060)
-   defining Unicode char U+0425 (decimal 1061)
-   defining Unicode char U+0426 (decimal 1062)
-   defining Unicode char U+0427 (decimal 1063)
-   defining Unicode char U+0428 (decimal 1064)
-   defining Unicode char U+0429 (decimal 1065)
-   defining Unicode char U+042A (decimal 1066)
-   defining Unicode char U+042B (decimal 1067)
-   defining Unicode char U+042C (decimal 1068)
-   defining Unicode char U+042D (decimal 1069)
-   defining Unicode char U+042E (decimal 1070)
-   defining Unicode char U+042F (decimal 1071)
-   defining Unicode char U+0430 (decimal 1072)
-   defining Unicode char U+0431 (decimal 1073)
-   defining Unicode char U+0432 (decimal 1074)
-   defining Unicode char U+0433 (decimal 1075)
-   defining Unicode char U+0434 (decimal 1076)
-   defining Unicode char U+0435 (decimal 1077)
-   defining Unicode char U+0436 (decimal 1078)
-   defining Unicode char U+0437 (decimal 1079)
-   defining Unicode char U+0438 (decimal 1080)
-   defining Unicode char U+0439 (decimal 1081)
-   defining Unicode char U+043A (decimal 1082)
-   defining Unicode char U+043B (decimal 1083)
-   defining Unicode char U+043C (decimal 1084)
-   defining Unicode char U+043D (decimal 1085)
-   defining Unicode char U+043E (decimal 1086)
-   defining Unicode char U+043F (decimal 1087)
-   defining Unicode char U+0440 (decimal 1088)
-   defining Unicode char U+0441 (decimal 1089)
-   defining Unicode char U+0442 (decimal 1090)
-   defining Unicode char U+0443 (decimal 1091)
-   defining Unicode char U+0444 (decimal 1092)
-   defining Unicode char U+0445 (decimal 1093)
-   defining Unicode char U+0446 (decimal 1094)
-   defining Unicode char U+0447 (decimal 1095)
-   defining Unicode char U+0448 (decimal 1096)
-   defining Unicode char U+0449 (decimal 1097)
-   defining Unicode char U+044A (decimal 1098)
-   defining Unicode char U+044B (decimal 1099)
-   defining Unicode char U+044C (decimal 1100)
-   defining Unicode char U+044D (decimal 1101)
-   defining Unicode char U+044E (decimal 1102)
-   defining Unicode char U+044F (decimal 1103)
-   defining Unicode char U+0450 (decimal 1104)
-   defining Unicode char U+0451 (decimal 1105)
-   defining Unicode char U+0452 (decimal 1106)
-   defining Unicode char U+0453 (decimal 1107)
-   defining Unicode char U+0454 (decimal 1108)
-   defining Unicode char U+0455 (decimal 1109)
-   defining Unicode char U+0456 (decimal 1110)
-   defining Unicode char U+0458 (decimal 1112)
-   defining Unicode char U+0459 (decimal 1113)
-   defining Unicode char U+045A (decimal 1114)
-   defining Unicode char U+045B (decimal 1115)
-   defining Unicode char U+045C (decimal 1116)
-   defining Unicode char U+045D (decimal 1117)
-   defining Unicode char U+045F (decimal 1119)
-   defining Unicode char U+0462 (decimal 1122)
-   defining Unicode char U+0463 (decimal 1123)
-   defining Unicode char U+0472 (decimal 1138)
-   defining Unicode char U+0473 (decimal 1139)
-   defining Unicode char U+0474 (decimal 1140)
-   defining Unicode char U+0475 (decimal 1141)
-   defining Unicode char U+04C1 (decimal 1217)
-   defining Unicode char U+04C2 (decimal 1218)
-   defining Unicode char U+04D0 (decimal 1232)
-   defining Unicode char U+04D1 (decimal 1233)
-   defining Unicode char U+04D2 (decimal 1234)
-   defining Unicode char U+04D3 (decimal 1235)
-   defining Unicode char U+04D6 (decimal 1238)
-   defining Unicode char U+04D7 (decimal 1239)
-   defining Unicode char U+04DC (decimal 1244)
-   defining Unicode char U+04DD (decimal 1245)
-   defining Unicode char U+04DE (decimal 1246)
-   defining Unicode char U+04DF (decimal 1247)
-   defining Unicode char U+04E2 (decimal 1250)
-   defining Unicode char U+04E3 (decimal 1251)
-   defining Unicode char U+04E4 (decimal 1252)
-   defining Unicode char U+04E5 (decimal 1253)
-   defining Unicode char U+04E6 (decimal 1254)
-   defining Unicode char U+04E7 (decimal 1255)
-   defining Unicode char U+04EC (decimal 1260)
-   defining Unicode char U+04ED (decimal 1261)
-   defining Unicode char U+04EE (decimal 1262)
-   defining Unicode char U+04EF (decimal 1263)
-   defining Unicode char U+04F0 (decimal 1264)
-   defining Unicode char U+04F1 (decimal 1265)
-   defining Unicode char U+04F2 (decimal 1266)
-   defining Unicode char U+04F3 (decimal 1267)
-   defining Unicode char U+04F4 (decimal 1268)
-   defining Unicode char U+04F5 (decimal 1269)
-   defining Unicode char U+04F8 (decimal 1272)
-   defining Unicode char U+04F9 (decimal 1273)
-   defining Unicode char U+2013 (decimal 8211)
-   defining Unicode char U+2014 (decimal 8212)
-   defining Unicode char U+2018 (decimal 8216)
-   defining Unicode char U+2019 (decimal 8217)
-   defining Unicode char U+201C (decimal 8220)
-   defining Unicode char U+201D (decimal 8221)
-   defining Unicode char U+2116 (decimal 8470)
-))
-(C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/latex/cyrillic\t2cenc.def
-File: t2cenc.def 2023/11/07 v1.0k Cyrillic encoding definition file
-Now handling font encoding T2C ...
-... processing UTF-8 mapping file for font encoding T2C
-
-(C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/latex/base\t2cenc.dfu
-File: t2cenc.dfu 2022/06/07 v1.3c UTF-8 support
-   defining Unicode char U+00A4 (decimal 164)
-   defining Unicode char U+00A7 (decimal 167)
-   defining Unicode char U+00AB (decimal 171)
-   defining Unicode char U+00BB (decimal 187)
-   defining Unicode char U+0131 (decimal 305)
-   defining Unicode char U+0237 (decimal 567)
-   defining Unicode char U+0400 (decimal 1024)
-   defining Unicode char U+0401 (decimal 1025)
-   defining Unicode char U+0403 (decimal 1027)
-   defining Unicode char U+0405 (decimal 1029)
-   defining Unicode char U+0406 (decimal 1030)
-   defining Unicode char U+0408 (decimal 1032)
-   defining Unicode char U+040C (decimal 1036)
-   defining Unicode char U+040D (decimal 1037)
-   defining Unicode char U+040F (decimal 1039)
-   defining Unicode char U+0410 (decimal 1040)
-   defining Unicode char U+0411 (decimal 1041)
-   defining Unicode char U+0412 (decimal 1042)
-   defining Unicode char U+0413 (decimal 1043)
-   defining Unicode char U+0414 (decimal 1044)
-   defining Unicode char U+0415 (decimal 1045)
-   defining Unicode char U+0416 (decimal 1046)
-   defining Unicode char U+0417 (decimal 1047)
-   defining Unicode char U+0418 (decimal 1048)
-   defining Unicode char U+0419 (decimal 1049)
-   defining Unicode char U+041A (decimal 1050)
-   defining Unicode char U+041B (decimal 1051)
-   defining Unicode char U+041C (decimal 1052)
-   defining Unicode char U+041D (decimal 1053)
-   defining Unicode char U+041E (decimal 1054)
-   defining Unicode char U+041F (decimal 1055)
-   defining Unicode char U+0420 (decimal 1056)
-   defining Unicode char U+0421 (decimal 1057)
-   defining Unicode char U+0422 (decimal 1058)
-   defining Unicode char U+0423 (decimal 1059)
-   defining Unicode char U+0424 (decimal 1060)
-   defining Unicode char U+0425 (decimal 1061)
-   defining Unicode char U+0426 (decimal 1062)
-   defining Unicode char U+0427 (decimal 1063)
-   defining Unicode char U+0428 (decimal 1064)
-   defining Unicode char U+0429 (decimal 1065)
-   defining Unicode char U+042A (decimal 1066)
-   defining Unicode char U+042B (decimal 1067)
-   defining Unicode char U+042C (decimal 1068)
-   defining Unicode char U+042D (decimal 1069)
-   defining Unicode char U+042E (decimal 1070)
-   defining Unicode char U+042F (decimal 1071)
-   defining Unicode char U+0430 (decimal 1072)
-   defining Unicode char U+0431 (decimal 1073)
-   defining Unicode char U+0432 (decimal 1074)
-   defining Unicode char U+0433 (decimal 1075)
-   defining Unicode char U+0434 (decimal 1076)
-   defining Unicode char U+0435 (decimal 1077)
-   defining Unicode char U+0436 (decimal 1078)
-   defining Unicode char U+0437 (decimal 1079)
-   defining Unicode char U+0438 (decimal 1080)
-   defining Unicode char U+0439 (decimal 1081)
-   defining Unicode char U+043A (decimal 1082)
-   defining Unicode char U+043B (decimal 1083)
-   defining Unicode char U+043C (decimal 1084)
-   defining Unicode char U+043D (decimal 1085)
-   defining Unicode char U+043E (decimal 1086)
-   defining Unicode char U+043F (decimal 1087)
-   defining Unicode char U+0440 (decimal 1088)
-   defining Unicode char U+0441 (decimal 1089)
-   defining Unicode char U+0442 (decimal 1090)
-   defining Unicode char U+0443 (decimal 1091)
-   defining Unicode char U+0444 (decimal 1092)
-   defining Unicode char U+0445 (decimal 1093)
-   defining Unicode char U+0446 (decimal 1094)
-   defining Unicode char U+0447 (decimal 1095)
-   defining Unicode char U+0448 (decimal 1096)
-   defining Unicode char U+0449 (decimal 1097)
-   defining Unicode char U+044A (decimal 1098)
-   defining Unicode char U+044B (decimal 1099)
-   defining Unicode char U+044C (decimal 1100)
-   defining Unicode char U+044D (decimal 1101)
-   defining Unicode char U+044E (decimal 1102)
-   defining Unicode char U+044F (decimal 1103)
-   defining Unicode char U+0450 (decimal 1104)
-   defining Unicode char U+0451 (decimal 1105)
-   defining Unicode char U+0453 (decimal 1107)
-   defining Unicode char U+0455 (decimal 1109)
-   defining Unicode char U+0456 (decimal 1110)
-   defining Unicode char U+0458 (decimal 1112)
-   defining Unicode char U+045C (decimal 1116)
-   defining Unicode char U+045D (decimal 1117)
-   defining Unicode char U+045F (decimal 1119)
-   defining Unicode char U+048C (decimal 1164)
-   defining Unicode char U+048D (decimal 1165)
-   defining Unicode char U+048E (decimal 1166)
-   defining Unicode char U+048F (decimal 1167)
-   defining Unicode char U+0494 (decimal 1172)
-   defining Unicode char U+0495 (decimal 1173)
-   defining Unicode char U+049A (decimal 1178)
-   defining Unicode char U+049B (decimal 1179)
-   defining Unicode char U+049E (decimal 1182)
-   defining Unicode char U+049F (decimal 1183)
-   defining Unicode char U+04A2 (decimal 1186)
-   defining Unicode char U+04A3 (decimal 1187)
-   defining Unicode char U+04A6 (decimal 1190)
-   defining Unicode char U+04A7 (decimal 1191)
-   defining Unicode char U+04A8 (decimal 1192)
-   defining Unicode char U+04A9 (decimal 1193)
-   defining Unicode char U+04AC (decimal 1196)
-   defining Unicode char U+04AD (decimal 1197)
-   defining Unicode char U+04B2 (decimal 1202)
-   defining Unicode char U+04B3 (decimal 1203)
-   defining Unicode char U+04B4 (decimal 1204)
-   defining Unicode char U+04B5 (decimal 1205)
-   defining Unicode char U+04B6 (decimal 1206)
-   defining Unicode char U+04B7 (decimal 1207)
-   defining Unicode char U+04BA (decimal 1210)
-   defining Unicode char U+04BB (decimal 1211)
-   defining Unicode char U+04BC (decimal 1212)
-   defining Unicode char U+04BD (decimal 1213)
-   defining Unicode char U+04BE (decimal 1214)
-   defining Unicode char U+04BF (decimal 1215)
-   defining Unicode char U+04C0 (decimal 1216)
-   defining Unicode char U+04C1 (decimal 1217)
-   defining Unicode char U+04C2 (decimal 1218)
-   defining Unicode char U+04C5 (decimal 1221)
-   defining Unicode char U+04C6 (decimal 1222)
-   defining Unicode char U+04C7 (decimal 1223)
-   defining Unicode char U+04C8 (decimal 1224)
-   defining Unicode char U+04CD (decimal 1229)
-   defining Unicode char U+04CE (decimal 1230)
-   defining Unicode char U+04D0 (decimal 1232)
-   defining Unicode char U+04D1 (decimal 1233)
-   defining Unicode char U+04D2 (decimal 1234)
-   defining Unicode char U+04D3 (decimal 1235)
-   defining Unicode char U+04D6 (decimal 1238)
-   defining Unicode char U+04D7 (decimal 1239)
-   defining Unicode char U+04D8 (decimal 1240)
-   defining Unicode char U+04D9 (decimal 1241)
-   defining Unicode char U+04DA (decimal 1242)
-   defining Unicode char U+04DB (decimal 1243)
-   defining Unicode char U+04DC (decimal 1244)
-   defining Unicode char U+04DD (decimal 1245)
-   defining Unicode char U+04DE (decimal 1246)
-   defining Unicode char U+04DF (decimal 1247)
-   defining Unicode char U+04E0 (decimal 1248)
-   defining Unicode char U+04E1 (decimal 1249)
-   defining Unicode char U+04E2 (decimal 1250)
-   defining Unicode char U+04E3 (decimal 1251)
-   defining Unicode char U+04E4 (decimal 1252)
-   defining Unicode char U+04E5 (decimal 1253)
-   defining Unicode char U+04E6 (decimal 1254)
-   defining Unicode char U+04E7 (decimal 1255)
-   defining Unicode char U+04E8 (decimal 1256)
-   defining Unicode char U+04E9 (decimal 1257)
-   defining Unicode char U+04EC (decimal 1260)
-   defining Unicode char U+04ED (decimal 1261)
-   defining Unicode char U+04EE (decimal 1262)
-   defining Unicode char U+04EF (decimal 1263)
-   defining Unicode char U+04F0 (decimal 1264)
-   defining Unicode char U+04F1 (decimal 1265)
-   defining Unicode char U+04F2 (decimal 1266)
-   defining Unicode char U+04F3 (decimal 1267)
-   defining Unicode char U+04F4 (decimal 1268)
-   defining Unicode char U+04F5 (decimal 1269)
-   defining Unicode char U+04F8 (decimal 1272)
-   defining Unicode char U+04F9 (decimal 1273)
-   defining Unicode char U+200C (decimal 8204)
-   defining Unicode char U+2013 (decimal 8211)
-   defining Unicode char U+2014 (decimal 8212)
-   defining Unicode char U+2018 (decimal 8216)
-   defining Unicode char U+2019 (decimal 8217)
-   defining Unicode char U+201C (decimal 8220)
-   defining Unicode char U+201D (decimal 8221)
-   defining Unicode char U+201E (decimal 8222)
-   defining Unicode char U+2030 (decimal 8240)
-   defining Unicode char U+2031 (decimal 8241)
-   defining Unicode char U+2116 (decimal 8470)
-   defining Unicode char U+2329 (decimal 9001)
-   defining Unicode char U+3008 (decimal 12296)
-   defining Unicode char U+232A (decimal 9002)
-   defining Unicode char U+3009 (decimal 12297)
-   defining Unicode char U+2423 (decimal 9251)
-   defining Unicode char U+27E8 (decimal 10216)
-   defining Unicode char U+27E9 (decimal 10217)
-   defining Unicode char U+FB00 (decimal 64256)
-   defining Unicode char U+FB01 (decimal 64257)
-   defining Unicode char U+FB02 (decimal 64258)
-   defining Unicode char U+FB03 (decimal 64259)
-   defining Unicode char U+FB04 (decimal 64260)
-   defining Unicode char U+FB05 (decimal 64261)
-   defining Unicode char U+FB06 (decimal 64262)
-))
-(C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/latex/cyrillic\t2benc.def
-File: t2benc.def 2023/11/07 v1.0k Cyrillic encoding definition file
-Now handling font encoding T2B ...
-... processing UTF-8 mapping file for font encoding T2B
-
-(C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/latex/base\t2benc.dfu
-File: t2benc.dfu 2022/06/07 v1.3c UTF-8 support
-   defining Unicode char U+00A4 (decimal 164)
-   defining Unicode char U+00A7 (decimal 167)
-   defining Unicode char U+00AB (decimal 171)
-   defining Unicode char U+00BB (decimal 187)
-   defining Unicode char U+0131 (decimal 305)
-   defining Unicode char U+0237 (decimal 567)
-   defining Unicode char U+0400 (decimal 1024)
-   defining Unicode char U+0401 (decimal 1025)
-   defining Unicode char U+0403 (decimal 1027)
-   defining Unicode char U+0405 (decimal 1029)
-   defining Unicode char U+0406 (decimal 1030)
-   defining Unicode char U+0408 (decimal 1032)
-   defining Unicode char U+0409 (decimal 1033)
-   defining Unicode char U+040A (decimal 1034)
-   defining Unicode char U+040C (decimal 1036)
-   defining Unicode char U+040D (decimal 1037)
-   defining Unicode char U+040E (decimal 1038)
-   defining Unicode char U+0410 (decimal 1040)
-   defining Unicode char U+0411 (decimal 1041)
-   defining Unicode char U+0412 (decimal 1042)
-   defining Unicode char U+0413 (decimal 1043)
-   defining Unicode char U+0414 (decimal 1044)
-   defining Unicode char U+0415 (decimal 1045)
-   defining Unicode char U+0416 (decimal 1046)
-   defining Unicode char U+0417 (decimal 1047)
-   defining Unicode char U+0418 (decimal 1048)
-   defining Unicode char U+0419 (decimal 1049)
-   defining Unicode char U+041A (decimal 1050)
-   defining Unicode char U+041B (decimal 1051)
-   defining Unicode char U+041C (decimal 1052)
-   defining Unicode char U+041D (decimal 1053)
-   defining Unicode char U+041E (decimal 1054)
-   defining Unicode char U+041F (decimal 1055)
-   defining Unicode char U+0420 (decimal 1056)
-   defining Unicode char U+0421 (decimal 1057)
-   defining Unicode char U+0422 (decimal 1058)
-   defining Unicode char U+0423 (decimal 1059)
-   defining Unicode char U+0424 (decimal 1060)
-   defining Unicode char U+0425 (decimal 1061)
-   defining Unicode char U+0426 (decimal 1062)
-   defining Unicode char U+0427 (decimal 1063)
-   defining Unicode char U+0428 (decimal 1064)
-   defining Unicode char U+0429 (decimal 1065)
-   defining Unicode char U+042A (decimal 1066)
-   defining Unicode char U+042B (decimal 1067)
-   defining Unicode char U+042C (decimal 1068)
-   defining Unicode char U+042D (decimal 1069)
-   defining Unicode char U+042E (decimal 1070)
-   defining Unicode char U+042F (decimal 1071)
-   defining Unicode char U+0430 (decimal 1072)
-   defining Unicode char U+0431 (decimal 1073)
-   defining Unicode char U+0432 (decimal 1074)
-   defining Unicode char U+0433 (decimal 1075)
-   defining Unicode char U+0434 (decimal 1076)
-   defining Unicode char U+0435 (decimal 1077)
-   defining Unicode char U+0436 (decimal 1078)
-   defining Unicode char U+0437 (decimal 1079)
-   defining Unicode char U+0438 (decimal 1080)
-   defining Unicode char U+0439 (decimal 1081)
-   defining Unicode char U+043A (decimal 1082)
-   defining Unicode char U+043B (decimal 1083)
-   defining Unicode char U+043C (decimal 1084)
-   defining Unicode char U+043D (decimal 1085)
-   defining Unicode char U+043E (decimal 1086)
-   defining Unicode char U+043F (decimal 1087)
-   defining Unicode char U+0440 (decimal 1088)
-   defining Unicode char U+0441 (decimal 1089)
-   defining Unicode char U+0442 (decimal 1090)
-   defining Unicode char U+0443 (decimal 1091)
-   defining Unicode char U+0444 (decimal 1092)
-   defining Unicode char U+0445 (decimal 1093)
-   defining Unicode char U+0446 (decimal 1094)
-   defining Unicode char U+0447 (decimal 1095)
-   defining Unicode char U+0448 (decimal 1096)
-   defining Unicode char U+0449 (decimal 1097)
-   defining Unicode char U+044A (decimal 1098)
-   defining Unicode char U+044B (decimal 1099)
-   defining Unicode char U+044C (decimal 1100)
-   defining Unicode char U+044D (decimal 1101)
-   defining Unicode char U+044E (decimal 1102)
-   defining Unicode char U+044F (decimal 1103)
-   defining Unicode char U+0450 (decimal 1104)
-   defining Unicode char U+0451 (decimal 1105)
-   defining Unicode char U+0453 (decimal 1107)
-   defining Unicode char U+0455 (decimal 1109)
-   defining Unicode char U+0456 (decimal 1110)
-   defining Unicode char U+0458 (decimal 1112)
-   defining Unicode char U+0459 (decimal 1113)
-   defining Unicode char U+045A (decimal 1114)
-   defining Unicode char U+045C (decimal 1116)
-   defining Unicode char U+045D (decimal 1117)
-   defining Unicode char U+045E (decimal 1118)
-   defining Unicode char U+0492 (decimal 1170)
-   defining Unicode char U+0493 (decimal 1171)
-   defining Unicode char U+0494 (decimal 1172)
-   defining Unicode char U+0495 (decimal 1173)
-   defining Unicode char U+0496 (decimal 1174)
-   defining Unicode char U+0497 (decimal 1175)
-   defining Unicode char U+049A (decimal 1178)
-   defining Unicode char U+049B (decimal 1179)
-   defining Unicode char U+04A2 (decimal 1186)
-   defining Unicode char U+04A3 (decimal 1187)
-   defining Unicode char U+04A4 (decimal 1188)
-   defining Unicode char U+04A5 (decimal 1189)
-   defining Unicode char U+04AE (decimal 1198)
-   defining Unicode char U+04AF (decimal 1199)
-   defining Unicode char U+04B2 (decimal 1202)
-   defining Unicode char U+04B3 (decimal 1203)
-   defining Unicode char U+04B6 (decimal 1206)
-   defining Unicode char U+04B7 (decimal 1207)
-   defining Unicode char U+04BA (decimal 1210)
-   defining Unicode char U+04BB (decimal 1211)
-   defining Unicode char U+04C0 (decimal 1216)
-   defining Unicode char U+04C1 (decimal 1217)
-   defining Unicode char U+04C2 (decimal 1218)
-   defining Unicode char U+04C3 (decimal 1219)
-   defining Unicode char U+04C4 (decimal 1220)
-   defining Unicode char U+04C5 (decimal 1221)
-   defining Unicode char U+04C6 (decimal 1222)
-   defining Unicode char U+04C7 (decimal 1223)
-   defining Unicode char U+04C8 (decimal 1224)
-   defining Unicode char U+04CB (decimal 1227)
-   defining Unicode char U+04CC (decimal 1228)
-   defining Unicode char U+04D0 (decimal 1232)
-   defining Unicode char U+04D1 (decimal 1233)
-   defining Unicode char U+04D2 (decimal 1234)
-   defining Unicode char U+04D3 (decimal 1235)
-   defining Unicode char U+04D6 (decimal 1238)
-   defining Unicode char U+04D7 (decimal 1239)
-   defining Unicode char U+04D8 (decimal 1240)
-   defining Unicode char U+04D9 (decimal 1241)
-   defining Unicode char U+04DA (decimal 1242)
-   defining Unicode char U+04DB (decimal 1243)
-   defining Unicode char U+04DC (decimal 1244)
-   defining Unicode char U+04DD (decimal 1245)
-   defining Unicode char U+04DE (decimal 1246)
-   defining Unicode char U+04DF (decimal 1247)
-   defining Unicode char U+04E0 (decimal 1248)
-   defining Unicode char U+04E1 (decimal 1249)
-   defining Unicode char U+04E2 (decimal 1250)
-   defining Unicode char U+04E3 (decimal 1251)
-   defining Unicode char U+04E4 (decimal 1252)
-   defining Unicode char U+04E5 (decimal 1253)
-   defining Unicode char U+04E6 (decimal 1254)
-   defining Unicode char U+04E7 (decimal 1255)
-   defining Unicode char U+04E8 (decimal 1256)
-   defining Unicode char U+04E9 (decimal 1257)
-   defining Unicode char U+04EC (decimal 1260)
-   defining Unicode char U+04ED (decimal 1261)
-   defining Unicode char U+04EE (decimal 1262)
-   defining Unicode char U+04EF (decimal 1263)
-   defining Unicode char U+04F0 (decimal 1264)
-   defining Unicode char U+04F1 (decimal 1265)
-   defining Unicode char U+04F2 (decimal 1266)
-   defining Unicode char U+04F3 (decimal 1267)
-   defining Unicode char U+04F4 (decimal 1268)
-   defining Unicode char U+04F5 (decimal 1269)
-   defining Unicode char U+04F6 (decimal 1270)
-   defining Unicode char U+04F7 (decimal 1271)
-   defining Unicode char U+04F8 (decimal 1272)
-   defining Unicode char U+04F9 (decimal 1273)
-   defining Unicode char U+04FA (decimal 1274)
-   defining Unicode char U+04FB (decimal 1275)
-   defining Unicode char U+04FC (decimal 1276)
-   defining Unicode char U+04FD (decimal 1277)
-   defining Unicode char U+04FE (decimal 1278)
-   defining Unicode char U+04FF (decimal 1279)
-   defining Unicode char U+200C (decimal 8204)
-   defining Unicode char U+2013 (decimal 8211)
-   defining Unicode char U+2014 (decimal 8212)
-   defining Unicode char U+2018 (decimal 8216)
-   defining Unicode char U+2019 (decimal 8217)
-   defining Unicode char U+201C (decimal 8220)
-   defining Unicode char U+201D (decimal 8221)
-   defining Unicode char U+201E (decimal 8222)
-   defining Unicode char U+2030 (decimal 8240)
-   defining Unicode char U+2031 (decimal 8241)
-   defining Unicode char U+2116 (decimal 8470)
-   defining Unicode char U+2329 (decimal 9001)
-   defining Unicode char U+3008 (decimal 12296)
-   defining Unicode char U+232A (decimal 9002)
-   defining Unicode char U+3009 (decimal 12297)
-   defining Unicode char U+2423 (decimal 9251)
-   defining Unicode char U+27E8 (decimal 10216)
-   defining Unicode char U+27E9 (decimal 10217)
-   defining Unicode char U+FB00 (decimal 64256)
-   defining Unicode char U+FB01 (decimal 64257)
-   defining Unicode char U+FB02 (decimal 64258)
-   defining Unicode char U+FB03 (decimal 64259)
-   defining Unicode char U+FB04 (decimal 64260)
-   defining Unicode char U+FB05 (decimal 64261)
-   defining Unicode char U+FB06 (decimal 64262)
-))
-(C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/latex/greek-fontenc\lgrenc.def
-File: lgrenc.def 2023-09-12 2.5 LGR Greek font encoding definitions
-Now handling font encoding LGR ...
-... processing UTF-8 mapping file for font encoding LGR
-
-(C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/latex/greek-inputenc\lgrenc.df
-u
-File: lgrenc.dfu 2023-03-21 1.9 UTF-8 support for Greek
-   defining Unicode char U+00A8 (decimal 168)
-   defining Unicode char U+00AB (decimal 171)
-   defining Unicode char U+00AF (decimal 175)
-   defining Unicode char U+00B4 (decimal 180)
-   defining Unicode char U+00B7 (decimal 183)
-   defining Unicode char U+00BB (decimal 187)
-   defining Unicode char U+0259 (decimal 601)
-   defining Unicode char U+02D8 (decimal 728)
-   defining Unicode char U+0374 (decimal 884)
-   defining Unicode char U+0375 (decimal 885)
-   defining Unicode char U+037A (decimal 890)
-   defining Unicode char U+037E (decimal 894)
-   defining Unicode char U+0384 (decimal 900)
-   defining Unicode char U+0385 (decimal 901)
-   defining Unicode char U+0386 (decimal 902)
-   defining Unicode char U+0387 (decimal 903)
-   defining Unicode char U+0388 (decimal 904)
-   defining Unicode char U+0389 (decimal 905)
-   defining Unicode char U+038A (decimal 906)
-   defining Unicode char U+038C (decimal 908)
-   defining Unicode char U+038E (decimal 910)
-   defining Unicode char U+038F (decimal 911)
-   defining Unicode char U+0390 (decimal 912)
-   defining Unicode char U+0391 (decimal 913)
-   defining Unicode char U+0392 (decimal 914)
-   defining Unicode char U+0393 (decimal 915)
-   defining Unicode char U+0394 (decimal 916)
-   defining Unicode char U+0395 (decimal 917)
-   defining Unicode char U+0396 (decimal 918)
-   defining Unicode char U+0397 (decimal 919)
-   defining Unicode char U+0398 (decimal 920)
-   defining Unicode char U+0399 (decimal 921)
-   defining Unicode char U+039A (decimal 922)
-   defining Unicode char U+039B (decimal 923)
-   defining Unicode char U+039C (decimal 924)
-   defining Unicode char U+039D (decimal 925)
-   defining Unicode char U+039E (decimal 926)
-   defining Unicode char U+039F (decimal 927)
-   defining Unicode char U+03A0 (decimal 928)
-   defining Unicode char U+03A1 (decimal 929)
-   defining Unicode char U+03A3 (decimal 931)
-   defining Unicode char U+03A4 (decimal 932)
-   defining Unicode char U+03A5 (decimal 933)
-   defining Unicode char U+03A6 (decimal 934)
-   defining Unicode char U+03A7 (decimal 935)
-   defining Unicode char U+03A8 (decimal 936)
-   defining Unicode char U+03A9 (decimal 937)
-   defining Unicode char U+03AA (decimal 938)
-   defining Unicode char U+03AB (decimal 939)
-   defining Unicode char U+03AC (decimal 940)
-   defining Unicode char U+03AD (decimal 941)
-   defining Unicode char U+03AE (decimal 942)
-   defining Unicode char U+03AF (decimal 943)
-   defining Unicode char U+03B0 (decimal 944)
-   defining Unicode char U+03B1 (decimal 945)
-   defining Unicode char U+03B2 (decimal 946)
-   defining Unicode char U+03B3 (decimal 947)
-   defining Unicode char U+03B4 (decimal 948)
-   defining Unicode char U+03B5 (decimal 949)
-   defining Unicode char U+03B6 (decimal 950)
-   defining Unicode char U+03B7 (decimal 951)
-   defining Unicode char U+03B8 (decimal 952)
-   defining Unicode char U+03B9 (decimal 953)
-   defining Unicode char U+03BA (decimal 954)
-   defining Unicode char U+03BB (decimal 955)
-   defining Unicode char U+03BC (decimal 956)
-   defining Unicode char U+03BD (decimal 957)
-   defining Unicode char U+03BE (decimal 958)
-   defining Unicode char U+03BF (decimal 959)
-   defining Unicode char U+03C0 (decimal 960)
-   defining Unicode char U+03C1 (decimal 961)
-   defining Unicode char U+03C2 (decimal 962)
-   defining Unicode char U+03C3 (decimal 963)
-   defining Unicode char U+03C4 (decimal 964)
-   defining Unicode char U+03C5 (decimal 965)
-   defining Unicode char U+03C6 (decimal 966)
-   defining Unicode char U+03C7 (decimal 967)
-   defining Unicode char U+03C8 (decimal 968)
-   defining Unicode char U+03C9 (decimal 969)
-   defining Unicode char U+03CA (decimal 970)
-   defining Unicode char U+03CB (decimal 971)
-   defining Unicode char U+03CC (decimal 972)
-   defining Unicode char U+03CD (decimal 973)
-   defining Unicode char U+03CE (decimal 974)
-   defining Unicode char U+03D0 (decimal 976)
-   defining Unicode char U+03D1 (decimal 977)
-   defining Unicode char U+03D5 (decimal 981)
-   defining Unicode char U+03D6 (decimal 982)
-   defining Unicode char U+03D8 (decimal 984)
-   defining Unicode char U+03D9 (decimal 985)
-   defining Unicode char U+03DA (decimal 986)
-   defining Unicode char U+03DB (decimal 987)
-   defining Unicode char U+03DC (decimal 988)
-   defining Unicode char U+03DD (decimal 989)
-   defining Unicode char U+03DE (decimal 990)
-   defining Unicode char U+03DF (decimal 991)
-   defining Unicode char U+03E0 (decimal 992)
-   defining Unicode char U+03E1 (decimal 993)
-   defining Unicode char U+03F0 (decimal 1008)
-   defining Unicode char U+03F1 (decimal 1009)
-   defining Unicode char U+03F4 (decimal 1012)
-   defining Unicode char U+03F5 (decimal 1013)
-   defining Unicode char U+1F00 (decimal 7936)
-   defining Unicode char U+1F01 (decimal 7937)
-   defining Unicode char U+1F02 (decimal 7938)
-   defining Unicode char U+1F03 (decimal 7939)
-   defining Unicode char U+1F04 (decimal 7940)
-   defining Unicode char U+1F05 (decimal 7941)
-   defining Unicode char U+1F06 (decimal 7942)
-   defining Unicode char U+1F07 (decimal 7943)
-   defining Unicode char U+1F08 (decimal 7944)
-   defining Unicode char U+1F09 (decimal 7945)
-   defining Unicode char U+1F0A (decimal 7946)
-   defining Unicode char U+1F0B (decimal 7947)
-   defining Unicode char U+1F0C (decimal 7948)
-   defining Unicode char U+1F0D (decimal 7949)
-   defining Unicode char U+1F0E (decimal 7950)
-   defining Unicode char U+1F0F (decimal 7951)
-   defining Unicode char U+1F10 (decimal 7952)
-   defining Unicode char U+1F11 (decimal 7953)
-   defining Unicode char U+1F12 (decimal 7954)
-   defining Unicode char U+1F13 (decimal 7955)
-   defining Unicode char U+1F14 (decimal 7956)
-   defining Unicode char U+1F15 (decimal 7957)
-   defining Unicode char U+1F18 (decimal 7960)
-   defining Unicode char U+1F19 (decimal 7961)
-   defining Unicode char U+1F1A (decimal 7962)
-   defining Unicode char U+1F1B (decimal 7963)
-   defining Unicode char U+1F1C (decimal 7964)
-   defining Unicode char U+1F1D (decimal 7965)
-   defining Unicode char U+1F20 (decimal 7968)
-   defining Unicode char U+1F21 (decimal 7969)
-   defining Unicode char U+1F22 (decimal 7970)
-   defining Unicode char U+1F23 (decimal 7971)
-   defining Unicode char U+1F24 (decimal 7972)
-   defining Unicode char U+1F25 (decimal 7973)
-   defining Unicode char U+1F26 (decimal 7974)
-   defining Unicode char U+1F27 (decimal 7975)
-   defining Unicode char U+1F28 (decimal 7976)
-   defining Unicode char U+1F29 (decimal 7977)
-   defining Unicode char U+1F2A (decimal 7978)
-   defining Unicode char U+1F2B (decimal 7979)
-   defining Unicode char U+1F2C (decimal 7980)
-   defining Unicode char U+1F2D (decimal 7981)
-   defining Unicode char U+1F2E (decimal 7982)
-   defining Unicode char U+1F2F (decimal 7983)
-   defining Unicode char U+1F30 (decimal 7984)
-   defining Unicode char U+1F31 (decimal 7985)
-   defining Unicode char U+1F32 (decimal 7986)
-   defining Unicode char U+1F33 (decimal 7987)
-   defining Unicode char U+1F34 (decimal 7988)
-   defining Unicode char U+1F35 (decimal 7989)
-   defining Unicode char U+1F36 (decimal 7990)
-   defining Unicode char U+1F37 (decimal 7991)
-   defining Unicode char U+1F38 (decimal 7992)
-   defining Unicode char U+1F39 (decimal 7993)
-   defining Unicode char U+1F3A (decimal 7994)
-   defining Unicode char U+1F3B (decimal 7995)
-   defining Unicode char U+1F3C (decimal 7996)
-   defining Unicode char U+1F3D (decimal 7997)
-   defining Unicode char U+1F3E (decimal 7998)
-   defining Unicode char U+1F3F (decimal 7999)
-   defining Unicode char U+1F40 (decimal 8000)
-   defining Unicode char U+1F41 (decimal 8001)
-   defining Unicode char U+1F42 (decimal 8002)
-   defining Unicode char U+1F43 (decimal 8003)
-   defining Unicode char U+1F44 (decimal 8004)
-   defining Unicode char U+1F45 (decimal 8005)
-   defining Unicode char U+1F48 (decimal 8008)
-   defining Unicode char U+1F49 (decimal 8009)
-   defining Unicode char U+1F4A (decimal 8010)
-   defining Unicode char U+1F4B (decimal 8011)
-   defining Unicode char U+1F4C (decimal 8012)
-   defining Unicode char U+1F4D (decimal 8013)
-   defining Unicode char U+1F50 (decimal 8016)
-   defining Unicode char U+1F51 (decimal 8017)
-   defining Unicode char U+1F52 (decimal 8018)
-   defining Unicode char U+1F53 (decimal 8019)
-   defining Unicode char U+1F54 (decimal 8020)
-   defining Unicode char U+1F55 (decimal 8021)
-   defining Unicode char U+1F56 (decimal 8022)
-   defining Unicode char U+1F57 (decimal 8023)
-   defining Unicode char U+1F59 (decimal 8025)
-   defining Unicode char U+1F5B (decimal 8027)
-   defining Unicode char U+1F5D (decimal 8029)
-   defining Unicode char U+1F5F (decimal 8031)
-   defining Unicode char U+1F60 (decimal 8032)
-   defining Unicode char U+1F61 (decimal 8033)
-   defining Unicode char U+1F62 (decimal 8034)
-   defining Unicode char U+1F63 (decimal 8035)
-   defining Unicode char U+1F64 (decimal 8036)
-   defining Unicode char U+1F65 (decimal 8037)
-   defining Unicode char U+1F66 (decimal 8038)
-   defining Unicode char U+1F67 (decimal 8039)
-   defining Unicode char U+1F68 (decimal 8040)
-   defining Unicode char U+1F69 (decimal 8041)
-   defining Unicode char U+1F6A (decimal 8042)
-   defining Unicode char U+1F6B (decimal 8043)
-   defining Unicode char U+1F6C (decimal 8044)
-   defining Unicode char U+1F6D (decimal 8045)
-   defining Unicode char U+1F6E (decimal 8046)
-   defining Unicode char U+1F6F (decimal 8047)
-   defining Unicode char U+1F70 (decimal 8048)
-   defining Unicode char U+1F71 (decimal 8049)
-   defining Unicode char U+1F72 (decimal 8050)
-   defining Unicode char U+1F73 (decimal 8051)
-   defining Unicode char U+1F74 (decimal 8052)
-   defining Unicode char U+1F75 (decimal 8053)
-   defining Unicode char U+1F76 (decimal 8054)
-   defining Unicode char U+1F77 (decimal 8055)
-   defining Unicode char U+1F78 (decimal 8056)
-   defining Unicode char U+1F79 (decimal 8057)
-   defining Unicode char U+1F7A (decimal 8058)
-   defining Unicode char U+1F7B (decimal 8059)
-   defining Unicode char U+1F7C (decimal 8060)
-   defining Unicode char U+1F7D (decimal 8061)
-   defining Unicode char U+1F80 (decimal 8064)
-   defining Unicode char U+1F81 (decimal 8065)
-   defining Unicode char U+1F82 (decimal 8066)
-   defining Unicode char U+1F83 (decimal 8067)
-   defining Unicode char U+1F84 (decimal 8068)
-   defining Unicode char U+1F85 (decimal 8069)
-   defining Unicode char U+1F86 (decimal 8070)
-   defining Unicode char U+1F87 (decimal 8071)
-   defining Unicode char U+1F88 (decimal 8072)
-   defining Unicode char U+1F89 (decimal 8073)
-   defining Unicode char U+1F8A (decimal 8074)
-   defining Unicode char U+1F8B (decimal 8075)
-   defining Unicode char U+1F8C (decimal 8076)
-   defining Unicode char U+1F8D (decimal 8077)
-   defining Unicode char U+1F8E (decimal 8078)
-   defining Unicode char U+1F8F (decimal 8079)
-   defining Unicode char U+1F90 (decimal 8080)
-   defining Unicode char U+1F91 (decimal 8081)
-   defining Unicode char U+1F92 (decimal 8082)
-   defining Unicode char U+1F93 (decimal 8083)
-   defining Unicode char U+1F94 (decimal 8084)
-   defining Unicode char U+1F95 (decimal 8085)
-   defining Unicode char U+1F96 (decimal 8086)
-   defining Unicode char U+1F97 (decimal 8087)
-   defining Unicode char U+1F98 (decimal 8088)
-   defining Unicode char U+1F99 (decimal 8089)
-   defining Unicode char U+1F9A (decimal 8090)
-   defining Unicode char U+1F9B (decimal 8091)
-   defining Unicode char U+1F9C (decimal 8092)
-   defining Unicode char U+1F9D (decimal 8093)
-   defining Unicode char U+1F9E (decimal 8094)
-   defining Unicode char U+1F9F (decimal 8095)
-   defining Unicode char U+1FA0 (decimal 8096)
-   defining Unicode char U+1FA1 (decimal 8097)
-   defining Unicode char U+1FA2 (decimal 8098)
-   defining Unicode char U+1FA3 (decimal 8099)
-   defining Unicode char U+1FA4 (decimal 8100)
-   defining Unicode char U+1FA5 (decimal 8101)
-   defining Unicode char U+1FA6 (decimal 8102)
-   defining Unicode char U+1FA7 (decimal 8103)
-   defining Unicode char U+1FA8 (decimal 8104)
-   defining Unicode char U+1FA9 (decimal 8105)
-   defining Unicode char U+1FAA (decimal 8106)
-   defining Unicode char U+1FAB (decimal 8107)
-   defining Unicode char U+1FAC (decimal 8108)
-   defining Unicode char U+1FAD (decimal 8109)
-   defining Unicode char U+1FAE (decimal 8110)
-   defining Unicode char U+1FAF (decimal 8111)
-   defining Unicode char U+1FB0 (decimal 8112)
-   defining Unicode char U+1FB1 (decimal 8113)
-   defining Unicode char U+1FB2 (decimal 8114)
-   defining Unicode char U+1FB3 (decimal 8115)
-   defining Unicode char U+1FB4 (decimal 8116)
-   defining Unicode char U+1FB6 (decimal 8118)
-   defining Unicode char U+1FB7 (decimal 8119)
-   defining Unicode char U+1FB8 (decimal 8120)
-   defining Unicode char U+1FB9 (decimal 8121)
-   defining Unicode char U+1FBA (decimal 8122)
-   defining Unicode char U+1FBB (decimal 8123)
-   defining Unicode char U+1FBC (decimal 8124)
-   defining Unicode char U+1FBD (decimal 8125)
-   defining Unicode char U+1FBE (decimal 8126)
-   defining Unicode char U+1FBF (decimal 8127)
-   defining Unicode char U+1FC0 (decimal 8128)
-   defining Unicode char U+1FC1 (decimal 8129)
-   defining Unicode char U+1FC2 (decimal 8130)
-   defining Unicode char U+1FC3 (decimal 8131)
-   defining Unicode char U+1FC4 (decimal 8132)
-   defining Unicode char U+1FC6 (decimal 8134)
-   defining Unicode char U+1FC7 (decimal 8135)
-   defining Unicode char U+1FC8 (decimal 8136)
-   defining Unicode char U+1FC9 (decimal 8137)
-   defining Unicode char U+1FCA (decimal 8138)
-   defining Unicode char U+1FCB (decimal 8139)
-   defining Unicode char U+1FCC (decimal 8140)
-   defining Unicode char U+1FCD (decimal 8141)
-   defining Unicode char U+1FCE (decimal 8142)
-   defining Unicode char U+1FCF (decimal 8143)
-   defining Unicode char U+1FD0 (decimal 8144)
-   defining Unicode char U+1FD1 (decimal 8145)
-   defining Unicode char U+1FD2 (decimal 8146)
-   defining Unicode char U+1FD3 (decimal 8147)
-   defining Unicode char U+1FD6 (decimal 8150)
-   defining Unicode char U+1FD7 (decimal 8151)
-   defining Unicode char U+1FD8 (decimal 8152)
-   defining Unicode char U+1FD9 (decimal 8153)
-   defining Unicode char U+1FDA (decimal 8154)
-   defining Unicode char U+1FDB (decimal 8155)
-   defining Unicode char U+1FDD (decimal 8157)
-   defining Unicode char U+1FDE (decimal 8158)
-   defining Unicode char U+1FDF (decimal 8159)
-   defining Unicode char U+1FE0 (decimal 8160)
-   defining Unicode char U+1FE1 (decimal 8161)
-   defining Unicode char U+1FE2 (decimal 8162)
-   defining Unicode char U+1FE3 (decimal 8163)
-   defining Unicode char U+1FE4 (decimal 8164)
-   defining Unicode char U+1FE5 (decimal 8165)
-   defining Unicode char U+1FE6 (decimal 8166)
-   defining Unicode char U+1FE7 (decimal 8167)
-   defining Unicode char U+1FE8 (decimal 8168)
-   defining Unicode char U+1FE9 (decimal 8169)
-   defining Unicode char U+1FEA (decimal 8170)
-   defining Unicode char U+1FEB (decimal 8171)
-   defining Unicode char U+1FEC (decimal 8172)
-   defining Unicode char U+1FED (decimal 8173)
-   defining Unicode char U+1FEE (decimal 8174)
-   defining Unicode char U+1FEF (decimal 8175)
-   defining Unicode char U+1FF2 (decimal 8178)
-   defining Unicode char U+1FF3 (decimal 8179)
-   defining Unicode char U+1FF4 (decimal 8180)
-   defining Unicode char U+1FF6 (decimal 8182)
-   defining Unicode char U+1FF7 (decimal 8183)
-   defining Unicode char U+1FF8 (decimal 8184)
-   defining Unicode char U+1FF9 (decimal 8185)
-   defining Unicode char U+1FFA (decimal 8186)
-   defining Unicode char U+1FFB (decimal 8187)
-   defining Unicode char U+1FFC (decimal 8188)
-   defining Unicode char U+1FFD (decimal 8189)
-   defining Unicode char U+1FFE (decimal 8190)
-   defining Unicode char U+2013 (decimal 8211)
-   defining Unicode char U+2014 (decimal 8212)
-   defining Unicode char U+2018 (decimal 8216)
-   defining Unicode char U+2019 (decimal 8217)
-   defining Unicode char U+201A (decimal 8218)
-   defining Unicode char U+2030 (decimal 8240)
-   defining Unicode char U+2039 (decimal 8249)
-   defining Unicode char U+203A (decimal 8250)
-   defining Unicode char U+20AC (decimal 8364)
-   defining Unicode char U+2126 (decimal 8486)
-   defining Unicode char U+10144 (decimal 65860)
-   defining Unicode char U+10145 (decimal 65861)
-   defining Unicode char U+10146 (decimal 65862)
-   defining Unicode char U+10147 (decimal 65863)
-)
-(C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/latex/greek-fontenc\greek-font
-enc.def
-File: greek-fontenc.def 2023-09-12 2.5 Common Greek font encoding definitions
-LaTeX Encoding Info:    Ignoring declaration for text command \accACUTE (encodi
-ng LGR) on input line 251.
-LaTeX Encoding Info:    Ignoring declaration for text command \accGRAVE (encodi
-ng LGR) on input line 259.
-LaTeX Encoding Info:    Ignoring declaration for text command \accTILDE (encodi
-ng LGR) on input line 267.
-))
-LaTeX Font Info:    Trying to load font information for T1+ptm on input line 11
-6.
-
-(C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\t1ptm.fd
-File: t1ptm.fd 2001/06/04 font definitions for T1/ptm.
-))
-(C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/latex/base\textcomp.sty
-Package: textcomp 2024/04/24 v2.1b Standard LaTeX package
-)
-(C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/latex/fontaxes\fontaxes.sty
-Package: fontaxes 2025-05-24 v2.0.1 Font selection axes (deprecated)
-
-(C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/latex/figureversions\figurever
-sions.sty
-Package: figureversions 2025-04-29 v1.0.1 Figure versions
-)))
 (C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/latex/tools\indentfirst.sty
 Package: indentfirst 2023/07/02 v1.03 Indent first paragraph (DPC)
 )
 (C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/latex/tools\multicol.sty
 Package: multicol 2025/10/21 v2.0b multicolumn formatting (FMi)
-\c@tracingmulticols=\count384
-\mult@box=\box80
-\multicol@leftmargin=\dimen286
-\c@unbalance=\count385
-\c@collectmore=\count386
-\doublecol@number=\count387
-\multicoltolerance=\count388
-\multicolpretolerance=\count389
-\full@width=\dimen287
-\page@free=\dimen288
-\premulticols=\dimen289
-\postmulticols=\dimen290
-\multicolsep=\skip135
-\multicolbaselineskip=\skip136
-\partial@page=\box81
-\last@line=\box82
-\mc@boxedresult=\box83
-\maxbalancingoverflow=\dimen291
-\mult@rightbox=\box84
-\mult@grightbox=\box85
-\mult@firstbox=\box86
-\mult@gfirstbox=\box87
-\@tempa=\box88
+\c@tracingmulticols=\count396
+\mult@box=\box81
+\multicol@leftmargin=\dimen288
+\c@unbalance=\count397
+\c@collectmore=\count398
+\doublecol@number=\count399
+\multicoltolerance=\count400
+\multicolpretolerance=\count401
+\full@width=\dimen289
+\page@free=\dimen290
+\premulticols=\dimen291
+\postmulticols=\dimen292
+\multicolsep=\skip137
+\multicolbaselineskip=\skip138
+\partial@page=\box82
+\last@line=\box83
+\mc@boxedresult=\box84
+\maxbalancingoverflow=\dimen293
+\mult@rightbox=\box85
+\mult@grightbox=\box86
+\mult@firstbox=\box87
+\mult@gfirstbox=\box88
 \@tempa=\box89
 \@tempa=\box90
 \@tempa=\box91
@@ -2084,16 +1001,17 @@ Package: multicol 2025/10/21 v2.0b multicolumn formatting (FMi)
 \@tempa=\box121
 \@tempa=\box122
 \@tempa=\box123
-\c@minrows=\count390
-\c@columnbadness=\count391
-\c@finalcolumnbadness=\count392
-\last@try=\dimen292
-\multicolovershoot=\dimen293
-\multicolundershoot=\dimen294
-\mult@nat@firstbox=\box124
-\colbreak@box=\box125
-\mc@col@check@num=\count393
-\g__mc_curr_col_int=\count394
+\@tempa=\box124
+\c@minrows=\count402
+\c@columnbadness=\count403
+\c@finalcolumnbadness=\count404
+\last@try=\dimen294
+\multicolovershoot=\dimen295
+\multicolundershoot=\dimen296
+\mult@nat@firstbox=\box125
+\colbreak@box=\box126
+\mc@col@check@num=\count405
+\g__mc_curr_col_int=\count406
 )
 (C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/latex/pgf/frontendlayer\tikz.s
 ty
@@ -2102,13 +1020,13 @@ ty
 
 (C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfutil-
 common.tex
-\pgfutil@everybye=\toks46
-\pgfutil@tempdima=\dimen295
-\pgfutil@tempdimb=\dimen296
+\pgfutil@everybye=\toks44
+\pgfutil@tempdima=\dimen297
+\pgfutil@tempdimb=\dimen298
 )
 (C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfutil-
 latex.def
-\pgfutil@abb=\box126
+\pgfutil@abb=\box127
 )
 (C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfrcs.c
 ode.tex
@@ -2127,53 +1045,59 @@ Package: pgfsys 2025-08-29 v3.1.11a (3.1.11a)
 
 (C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfkeys.
 code.tex
-\pgfkeys@pathtoks=\toks47
-\pgfkeys@temptoks=\toks48
+\pgfkeys@pathtoks=\toks45
+\pgfkeys@temptoks=\toks46
 
 (C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfkeysl
 ibraryfiltered.code.tex
-\pgfkeys@tmptoks=\toks49
+\pgfkeys@tmptoks=\toks47
 ))
-\pgf@x=\dimen297
-\pgf@y=\dimen298
-\pgf@xa=\dimen299
-\pgf@ya=\dimen300
-\pgf@xb=\dimen301
-\pgf@yb=\dimen302
-\pgf@xc=\dimen303
-\pgf@yc=\dimen304
-\pgf@xd=\dimen305
-\pgf@yd=\dimen306
+\pgf@x=\dimen299
+\pgf@y=\dimen300
+\pgf@xa=\dimen301
+\pgf@ya=\dimen302
+\pgf@xb=\dimen303
+\pgf@yb=\dimen304
+\pgf@xc=\dimen305
+\pgf@yc=\dimen306
+\pgf@xd=\dimen307
+\pgf@yd=\dimen308
 \w@pgf@writea=\write3
-\r@pgf@reada=\read3
-\c@pgf@counta=\count395
-\c@pgf@countb=\count396
-\c@pgf@countc=\count397
-\c@pgf@countd=\count398
-\t@pgf@toka=\toks50
-\t@pgf@tokb=\toks51
-\t@pgf@tokc=\toks52
-\pgf@sys@id@count=\count399
+\r@pgf@reada=\read2
+\c@pgf@counta=\count407
+\c@pgf@countb=\count408
+\c@pgf@countc=\count409
+\c@pgf@countd=\count410
+\t@pgf@toka=\toks48
+\t@pgf@tokb=\toks49
+\t@pgf@tokc=\toks50
+\pgf@sys@id@count=\count411
 
 (C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgf.cf
 g
 File: pgf.cfg 2025-08-29 v3.1.11a (3.1.11a)
 )
-Driver file for pgf: pgfsys-pdftex.def
+Driver file for pgf: pgfsys-xetex.def
 
 (C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgfsys
--pdftex.def
-File: pgfsys-pdftex.def 2025-08-29 v3.1.11a (3.1.11a)
+-xetex.def
+File: pgfsys-xetex.def 2025-08-29 v3.1.11a (3.1.11a)
+
+(C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgfsys
+-dvipdfmx.def
+File: pgfsys-dvipdfmx.def 2025-08-29 v3.1.11a (3.1.11a)
 
 (C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgfsys
 -common-pdf.def
 File: pgfsys-common-pdf.def 2025-08-29 v3.1.11a (3.1.11a)
+)
+\pgfsys@objnum=\count412
 )))
 (C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgfsys
 softpath.code.tex
 File: pgfsyssoftpath.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgfsyssoftpath@smallbuffer@items=\count400
-\pgfsyssoftpath@bigbuffer@items=\count401
+\pgfsyssoftpath@smallbuffer@items=\count413
+\pgfsyssoftpath@bigbuffer@items=\count414
 )
 (C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgfsys
 protocol.code.tex
@@ -2185,11 +1109,10 @@ Package: xcolor 2024/09/29 v3.02 LaTeX color extensions (UK)
 (C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\color.cfg
 File: color.cfg 2016/01/02 v1.6 sample color configuration
 )
-Package xcolor Info: Driver file: pdftex.def on input line 274.
+Package xcolor Info: Driver file: xetex.def on input line 274.
 
 (C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/latex/graphics\mathcolor.ltx)
 Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1349.
-Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1353.
 Package xcolor Info: Model `RGB' extended on input line 1365.
 Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1367.
 Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1368.
@@ -2208,12 +1131,12 @@ tex
 ode.tex)
 (C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathparser
 .code.tex
-\pgfmath@dimen=\dimen307
-\pgfmath@count=\count402
-\pgfmath@box=\box127
-\pgfmath@toks=\toks53
-\pgfmath@stack@operand=\toks54
-\pgfmath@stack@operation=\toks55
+\pgfmath@dimen=\dimen309
+\pgfmath@count=\count415
+\pgfmath@box=\box128
+\pgfmath@toks=\toks51
+\pgfmath@stack@operand=\toks52
+\pgfmath@stack@operation=\toks53
 )
 (C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfuncti
 ons.code.tex)
@@ -2237,59 +1160,59 @@ ons.integerarithmetics.code.tex)
 ode.tex)
 (C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfloat.
 code.tex
-\c@pgfmathroundto@lastzeros=\count403
+\c@pgfmathroundto@lastzeros=\count416
 ))
 (C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfint.code.t
 ex)
 (C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcore
 points.code.tex
 File: pgfcorepoints.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgf@picminx=\dimen308
-\pgf@picmaxx=\dimen309
-\pgf@picminy=\dimen310
-\pgf@picmaxy=\dimen311
-\pgf@pathminx=\dimen312
-\pgf@pathmaxx=\dimen313
-\pgf@pathminy=\dimen314
-\pgf@pathmaxy=\dimen315
-\pgf@xx=\dimen316
-\pgf@xy=\dimen317
-\pgf@yx=\dimen318
-\pgf@yy=\dimen319
-\pgf@zx=\dimen320
-\pgf@zy=\dimen321
+\pgf@picminx=\dimen310
+\pgf@picmaxx=\dimen311
+\pgf@picminy=\dimen312
+\pgf@picmaxy=\dimen313
+\pgf@pathminx=\dimen314
+\pgf@pathmaxx=\dimen315
+\pgf@pathminy=\dimen316
+\pgf@pathmaxy=\dimen317
+\pgf@xx=\dimen318
+\pgf@xy=\dimen319
+\pgf@yx=\dimen320
+\pgf@yy=\dimen321
+\pgf@zx=\dimen322
+\pgf@zy=\dimen323
 )
 (C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcore
 pathconstruct.code.tex
 File: pgfcorepathconstruct.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgf@path@lastx=\dimen322
-\pgf@path@lasty=\dimen323
+\pgf@path@lastx=\dimen324
+\pgf@path@lasty=\dimen325
 )
 (C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcore
 pathusage.code.tex
 File: pgfcorepathusage.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgf@shorten@end@additional=\dimen324
-\pgf@shorten@start@additional=\dimen325
+\pgf@shorten@end@additional=\dimen326
+\pgf@shorten@start@additional=\dimen327
 )
 (C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcore
 scopes.code.tex
 File: pgfcorescopes.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgfpic=\box128
-\pgf@hbox=\box129
-\pgf@layerbox@main=\box130
-\pgf@picture@serial@count=\count404
+\pgfpic=\box129
+\pgf@hbox=\box130
+\pgf@layerbox@main=\box131
+\pgf@picture@serial@count=\count417
 )
 (C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcore
 graphicstate.code.tex
 File: pgfcoregraphicstate.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgflinewidth=\dimen326
+\pgflinewidth=\dimen328
 )
 (C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcore
 transformations.code.tex
 File: pgfcoretransformations.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgf@pt@x=\dimen327
-\pgf@pt@y=\dimen328
-\pgf@pt@temp=\dimen329
+\pgf@pt@x=\dimen329
+\pgf@pt@y=\dimen330
+\pgf@pt@temp=\dimen331
 )
 (C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcore
 quick.code.tex
@@ -2306,14 +1229,14 @@ File: pgfcorepathprocessing.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 (C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcore
 arrows.code.tex
 File: pgfcorearrows.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgfarrowsep=\dimen330
+\pgfarrowsep=\dimen332
 )
 (C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcore
 shade.code.tex
 File: pgfcoreshade.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgf@max=\dimen331
-\pgf@sys@shading@range@num=\count405
-\pgf@shadingcount=\count406
+\pgf@max=\dimen333
+\pgf@sys@shading@range@num=\count418
+\pgf@shadingcount=\count419
 )
 (C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcore
 image.code.tex
@@ -2322,7 +1245,7 @@ File: pgfcoreimage.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 (C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcore
 external.code.tex
 File: pgfcoreexternal.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgfexternal@startupbox=\box131
+\pgfexternal@startupbox=\box132
 )
 (C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcore
 layers.code.tex
@@ -2343,7 +1266,7 @@ File: pgfcorerdf.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 (C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/generic/pgf/modules\pgfmodules
 hapes.code.tex
 File: pgfmoduleshapes.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgfnodeparttextbox=\box132
+\pgfnodeparttextbox=\box133
 )
 (C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/generic/pgf/modules\pgfmodulep
 lot.code.tex
@@ -2352,8 +1275,8 @@ File: pgfmoduleplot.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 (C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/latex/pgf/compatibility\pgfcom
 p-version-0-65.sty
 Package: pgfcomp-version-0-65 2025-08-29 v3.1.11a (3.1.11a)
-\pgf@nodesepstart=\dimen332
-\pgf@nodesepend=\dimen333
+\pgf@nodesepstart=\dimen334
+\pgf@nodesepend=\dimen335
 )
 (C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/latex/pgf/compatibility\pgfcom
 p-version-1-18.sty
@@ -2371,10 +1294,10 @@ tex))
 (C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgffor.c
 ode.tex
 Package: pgffor 2025-08-29 v3.1.11a (3.1.11a)
-\pgffor@iter=\dimen334
-\pgffor@skip=\dimen335
-\pgffor@stack=\toks56
-\pgffor@toks=\toks57
+\pgffor@iter=\dimen336
+\pgffor@skip=\dimen337
+\pgffor@stack=\toks54
+\pgffor@toks=\toks55
 ))
 (C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tikz
 \tikz.code.tex
@@ -2383,34 +1306,34 @@ Package: tikz 2025-08-29 v3.1.11a (3.1.11a)
 (C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries\pgflibra
 ryplothandlers.code.tex
 File: pgflibraryplothandlers.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgf@plot@mark@count=\count407
-\pgfplotmarksize=\dimen336
+\pgf@plot@mark@count=\count420
+\pgfplotmarksize=\dimen338
 )
-\tikz@lastx=\dimen337
-\tikz@lasty=\dimen338
-\tikz@lastxsaved=\dimen339
-\tikz@lastysaved=\dimen340
-\tikz@lastmovetox=\dimen341
-\tikz@lastmovetoy=\dimen342
-\tikzleveldistance=\dimen343
-\tikzsiblingdistance=\dimen344
-\tikz@figbox=\box133
-\tikz@figbox@bg=\box134
-\tikz@tempbox=\box135
-\tikz@tempbox@bg=\box136
-\tikztreelevel=\count408
-\tikznumberofchildren=\count409
-\tikznumberofcurrentchild=\count410
-\tikz@fig@count=\count411
+\tikz@lastx=\dimen339
+\tikz@lasty=\dimen340
+\tikz@lastxsaved=\dimen341
+\tikz@lastysaved=\dimen342
+\tikz@lastmovetox=\dimen343
+\tikz@lastmovetoy=\dimen344
+\tikzleveldistance=\dimen345
+\tikzsiblingdistance=\dimen346
+\tikz@figbox=\box134
+\tikz@figbox@bg=\box135
+\tikz@tempbox=\box136
+\tikz@tempbox@bg=\box137
+\tikztreelevel=\count421
+\tikznumberofchildren=\count422
+\tikznumberofcurrentchild=\count423
+\tikz@fig@count=\count424
 
 (C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/generic/pgf/modules\pgfmodulem
 atrix.code.tex
 File: pgfmodulematrix.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgfmatrixcurrentrow=\count412
-\pgfmatrixcurrentcolumn=\count413
-\pgf@matrix@numberofcolumns=\count414
+\pgfmatrixcurrentrow=\count425
+\pgfmatrixcurrentcolumn=\count426
+\pgf@matrix@numberofcolumns=\count427
 )
-\tikz@expandcount=\count415
+\tikz@expandcount=\count428
 
 (C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tikz
 /libraries\tikzlibrarytopaths.code.tex
@@ -2418,9 +1341,9 @@ File: tikzlibrarytopaths.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 )))
 (C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/latex/colortbl\colortbl.sty
 Package: colortbl 2024/10/29 v1.0k Color table columns (DPC)
-\everycr=\toks58
-\minrowclearance=\skip137
-\rownum=\count416
+\everycr=\toks56
+\minrowclearance=\skip139
+\rownum=\count429
 )
 (C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tikz
 /libraries\tikzlibrarypositioning.code.tex
@@ -2429,10 +1352,10 @@ File: tikzlibrarypositioning.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 (C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries\pgflibra
 ryarrows.meta.code.tex
 File: pgflibraryarrows.meta.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgfarrowinset=\dimen345
-\pgfarrowlength=\dimen346
-\pgfarrowwidth=\dimen347
-\pgfarrowlinewidth=\dimen348
+\pgfarrowinset=\dimen347
+\pgfarrowlength=\dimen348
+\pgfarrowwidth=\dimen349
+\pgfarrowlinewidth=\dimen350
 )
 (C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tikz
 /libraries\tikzlibraryshapes.geometric.code.tex
@@ -2453,8 +1376,8 @@ File: tikzlibrarycalc.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 (C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tikz
 /libraries\tikzlibrarybackgrounds.code.tex
 File: tikzlibrarybackgrounds.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgf@layerbox@background=\box137
-\pgf@layerboxsaved@background=\box138
+\pgf@layerbox@background=\box138
+\pgf@layerboxsaved@background=\box139
 )
 (C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tikz
 /libraries\tikzlibrarydecorations.pathreplacing.code.tex
@@ -2462,16 +1385,16 @@ File: tikzlibrarybackgrounds.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 /libraries\tikzlibrarydecorations.code.tex
 (C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/generic/pgf/modules\pgfmoduled
 ecorations.code.tex
-\pgfdecoratedcompleteddistance=\dimen349
-\pgfdecoratedremainingdistance=\dimen350
-\pgfdecoratedinputsegmentcompleteddistance=\dimen351
-\pgfdecoratedinputsegmentremainingdistance=\dimen352
-\pgf@decorate@distancetomove=\dimen353
-\pgf@decorate@repeatstate=\count417
-\pgfdecorationsegmentamplitude=\dimen354
-\pgfdecorationsegmentlength=\dimen355
+\pgfdecoratedcompleteddistance=\dimen351
+\pgfdecoratedremainingdistance=\dimen352
+\pgfdecoratedinputsegmentcompleteddistance=\dimen353
+\pgfdecoratedinputsegmentremainingdistance=\dimen354
+\pgf@decorate@distancetomove=\dimen355
+\pgf@decorate@repeatstate=\count430
+\pgfdecorationsegmentamplitude=\dimen356
+\pgfdecorationsegmentlength=\dimen357
 )
-\tikz@lib@dec@box=\box139
+\tikz@lib@dec@box=\box140
 )
 (C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries/decorati
 ons\pgflibrarydecorations.pathreplacing.code.tex))
@@ -2496,12 +1419,12 @@ Package: pgfplots 2021/05/15 v1.18.1 Data Visualization (1.18.1)
 .tex
 (C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots\pgfplotscore.
 code.tex
-\t@pgfplots@toka=\toks59
-\t@pgfplots@tokb=\toks60
-\t@pgfplots@tokc=\toks61
-\pgfplots@tmpa=\dimen356
-\c@pgfplots@coordindex=\count418
-\c@pgfplots@scanlineindex=\count419
+\t@pgfplots@toka=\toks57
+\t@pgfplots@tokb=\toks58
+\t@pgfplots@tokc=\toks59
+\pgfplots@tmpa=\dimen358
+\c@pgfplots@coordindex=\count431
+\c@pgfplots@scanlineindex=\count432
 
 (C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/sys\pgfplotss
 ysgeneric.code.tex))
@@ -2512,9 +1435,9 @@ b\pgfplotsoldpgfsupp_loader.code.tex
 (C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries\pgflibra
 ryfpu.code.tex)
 Package pgfplots: loading complementary utilities for your pgf version...
-\t@pgf@toka=\toks62
-\t@pgf@tokb=\toks63
-\t@pgf@tokc=\toks64
+\t@pgf@toka=\toks60
+\t@pgf@tokb=\toks61
+\t@pgf@tokc=\toks62
 
 (C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/oldpgfcompati
 b\pgfplotsoldpgfsupp_pgfutil-common-lists.tex))
@@ -2526,14 +1449,14 @@ util.code.tex
 \pgfplotsliststructureext.code.tex)
 (C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/liststructure
 \pgfplotsarray.code.tex
-\c@pgfplotsarray@tmp=\count420
+\c@pgfplotsarray@tmp=\count433
 )
 (C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/liststructure
 \pgfplotsmatrix.code.tex)
 (C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/numtable\pgfp
 lotstableshared.code.tex
-\c@pgfplotstable@counta=\count421
-\t@pgfplotstable@a=\toks65
+\c@pgfplotstable@counta=\count434
+\t@pgfplotstable@a=\toks63
 )
 (C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/liststructure
 \pgfplotsdeque.code.tex)
@@ -2545,10 +1468,14 @@ binary.data.code.tex))
 util.verb.code.tex)
 (C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/libs\pgflibra
 rypgfplots.surfshading.code.tex
-\c@pgfplotslibrarysurf@no=\count422
+\c@pgfplotslibrarysurf@no=\count435
 
 (C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/sys\pgflibrar
-ypgfplots.surfshading.pgfsys-pdftex.def)))
+ypgfplots.surfshading.pgfsys-xetex.def
+(C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/sys\pgflibrar
+ypgfplots.surfshading.pgfsys-dvipdfmx.def
+\c@pgfplotslibrarysurf@streamlen=\count436
+))))
 (C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/util\pgfplots
 colormap.code.tex
 (C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/util\pgfplots
@@ -2579,13 +1506,13 @@ s.code.tex)
 ons\pgflibrarydecorations.pathmorphing.code.tex))
 (C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/libs\tikzlibr
 arypgfplots.contourlua.code.tex)
-\pgfplots@numplots=\count423
-\pgfplots@xmin@reg=\dimen357
-\pgfplots@xmax@reg=\dimen358
-\pgfplots@ymin@reg=\dimen359
-\pgfplots@ymax@reg=\dimen360
-\pgfplots@zmin@reg=\dimen361
-\pgfplots@zmax@reg=\dimen362
+\pgfplots@numplots=\count437
+\pgfplots@xmin@reg=\dimen359
+\pgfplots@xmax@reg=\dimen360
+\pgfplots@ymin@reg=\dimen361
+\pgfplots@ymax@reg=\dimen362
+\pgfplots@zmin@reg=\dimen363
+\pgfplots@zmax@reg=\dimen364
 )
 (C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tikz
 /libraries\tikzlibraryplotmarks.code.tex
@@ -2603,7 +1530,7 @@ kzlibraryfillbetween.code.tex
 /libraries\tikzlibraryintersections.code.tex
 (C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries\pgflibra
 ryintersections.code.tex
-\pgf@intersect@solutions=\count424
+\pgf@intersect@solutions=\count438
 ))
 (C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/pgfcontrib\ti
 kzlibrarydecorations.softclip.code.tex
@@ -2613,121 +1540,77 @@ flibraryfillbetween.code.tex)))
 arypgfplots.decorations.softclip.code.tex))
 (C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/libs\tikzlibr
 arypgfplots.fillbetween.code.tex)
-LaTeX Font Info:    Trying to load font information for T1+Tempora-TLF on input
- line 43.
 
-(C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/latex/tempora\t1tempora-tlf.fd
-File: T1Tempora-TLF.fd 2016/02/02 (autoinst) Font definitions for T1/Tempora-TL
-F.
-)
-LaTeX Font Info:    Font shape `T1/Tempora-TLF/m/n' will be
-(Font)              scaled to size 10.0pt on input line 43.
+Package fontspec Info: 
+(fontspec)             Font family 'TimesNewRoman(1)' created for font 'Times
+(fontspec)             New Roman' with options
+(fontspec)             [Ligatures=TeX,Script=Cyrillic].
+(fontspec)              
+(fontspec)              This font family consists of the following NFSS
+(fontspec)             series/shapes:
+(fontspec)              
+(fontspec)             - 'normal' (m/n) with NFSS spec.: <->"Times New
+(fontspec)             Roman/OT:script=cyrl;language=dflt;mapping=tex-text;"
+(fontspec)             - 'small caps'  (m/sc) with NFSS spec.: <->"Times New
+(fontspec)             Roman/OT:script=cyrl;language=dflt;+smcp;mapping=tex-tex
+t;"
+(fontspec)             - 'bold' (b/n) with NFSS spec.: <->"Times New
+(fontspec)             Roman/B/OT:script=cyrl;language=dflt;mapping=tex-text;"
+(fontspec)             - 'bold small caps'  (b/sc) with NFSS spec.: <->"Times
+(fontspec)             New
+(fontspec)             Roman/B/OT:script=cyrl;language=dflt;+smcp;mapping=tex-t
+ext;"
+(fontspec)             - 'italic' (m/it) with NFSS spec.: <->"Times New
+(fontspec)             Roman/I/OT:script=cyrl;language=dflt;mapping=tex-text;"
+(fontspec)             - 'italic small caps'  (m/scit) with NFSS spec.:
+(fontspec)             <->"Times New
+(fontspec)             Roman/I/OT:script=cyrl;language=dflt;+smcp;mapping=tex-t
+ext;"
+(fontspec)             - 'bold italic' (b/it) with NFSS spec.: <->"Times New
+(fontspec)             Roman/BI/OT:script=cyrl;language=dflt;mapping=tex-text;"
 
-(C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdft
-ex.def
-File: l3backend-pdftex.def 2025-10-09 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count425
-) (main.aux (Information.aux)
-LaTeX Font Info:    Trying to load font information for T2A+Tempora-TLF on inpu
-t line 11.
+(fontspec)             - 'bold italic small caps'  (b/scit) with NFSS spec.:
+(fontspec)             <->"Times New
+(fontspec)             Roman/BI/OT:script=cyrl;language=dflt;+smcp;mapping=tex-
+text;"
 
-(C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/latex/tempora\t2atempora-tlf.f
-d
-File: t2atempora-tlf.fd 2015/09/13 Font definitions for T2A/Tempora-TLF.
-)
-LaTeX Font Info:    Font shape `T2A/Tempora-TLF/m/n' will be
-(Font)              scaled to size 10.0pt on input line 11.
-Package babel Info: 'mongolian' activates 'mongolian' shorthands.
-(babel)             Reported on input line 11.
-)
+ (main.aux)
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 43.
-LaTeX Font Info:    ... okay on input line 43.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 43.
-LaTeX Font Info:    ... okay on input line 43.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 43.
-LaTeX Font Info:    ... okay on input line 43.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 43.
-LaTeX Font Info:    ... okay on input line 43.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 43.
-LaTeX Font Info:    ... okay on input line 43.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 43.
-LaTeX Font Info:    ... okay on input line 43.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 43.
-LaTeX Font Info:    ... okay on input line 43.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 43.
-LaTeX Font Info:    ... okay on input line 43.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 43.
-LaTeX Font Info:    ... okay on input line 43.
-LaTeX Font Info:    Checking defaults for T2A/cmr/m/n on input line 43.
-LaTeX Font Info:    Trying to load font information for T2A+cmr on input line 4
-3.
- (C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/latex/cyrillic\t2acmr.fd
-File: t2acmr.fd 2001/08/11 v1.0a Computer Modern Cyrillic font definitions
-)
-LaTeX Font Info:    ... okay on input line 43.
-LaTeX Font Info:    Checking defaults for OT2/cmr/m/n on input line 43.
-LaTeX Font Info:    Trying to load font information for OT2+cmr on input line 4
-3.
-
-(C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/latex/cyrillic\ot2cmr.fd
-File: ot2cmr.fd 2001/08/11 v3.2c Computer Modern Cyrillic font definitions
-)
-LaTeX Font Info:    ... okay on input line 43.
-LaTeX Font Info:    Checking defaults for T2C/cmr/m/n on input line 43.
-LaTeX Font Info:    Trying to load font information for T2C+cmr on input line 4
-3.
-
-(C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/latex/cyrillic\t2ccmr.fd
-File: t2ccmr.fd 2001/08/11 v1.0a Computer Modern Cyrillic font definitions
-)
-LaTeX Font Info:    ... okay on input line 43.
-LaTeX Font Info:    Checking defaults for T2B/cmr/m/n on input line 43.
-LaTeX Font Info:    Trying to load font information for T2B+cmr on input line 4
-3.
-
-(C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/latex/cyrillic\t2bcmr.fd
-File: t2bcmr.fd 2001/08/11 v1.0a Computer Modern Cyrillic font definitions
-)
-LaTeX Font Info:    ... okay on input line 43.
-LaTeX Font Info:    Checking defaults for LGR/cmr/m/n on input line 43.
-LaTeX Font Info:    Trying to load font information for LGR+cmr on input line 4
-3.
-
-(C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/latex/cbfonts-fd\lgrcmr.fd
-File: lgrcmr.fd 2017/07/29 v1.2 Greek European Computer Regular
-)
-LaTeX Font Info:    ... okay on input line 43.
-
-(C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mki
-i
-[Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count426
-\scratchdimen=\dimen363
-\scratchbox=\box140
-\nofMPsegments=\count427
-\nofMParguments=\count428
-\everyMPshowfont=\toks66
-\MPscratchCnt=\count429
-\MPscratchDim=\dimen364
-\MPnumerator=\count430
-\makeMPintoPDFobject=\count431
-\everyMPtoPDFconversion=\toks67
-)
-\c@lstlisting=\count432
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 45.
+LaTeX Font Info:    ... okay on input line 45.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 45.
+LaTeX Font Info:    ... okay on input line 45.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 45.
+LaTeX Font Info:    ... okay on input line 45.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 45.
+LaTeX Font Info:    ... okay on input line 45.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 45.
+LaTeX Font Info:    ... okay on input line 45.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 45.
+LaTeX Font Info:    ... okay on input line 45.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 45.
+LaTeX Font Info:    ... okay on input line 45.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 45.
+LaTeX Font Info:    ... okay on input line 45.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 45.
+LaTeX Font Info:    ... okay on input line 45.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 45.
+LaTeX Font Info:    ... okay on input line 45.
+\c@lstlisting=\count439
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: float package is loaded.
 Package caption Info: hyperref package is loaded.
 Package caption Info: longtable package is loaded.
- (C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/latex/caption\ltcaption.sty
+
+(C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/latex/caption\ltcaption.sty
 Package: ltcaption 2021/01/08 v1.4c longtable captions (AR)
 )
 Package caption Info: threeparttable package is loaded.
 Package caption Info: wrapfig package is loaded.
 Package caption Info: End \AtBeginDocument code.
 Package translations Info: no dictionary file `translations-basic-dictionary-mo
-ngolian.trsl' found. on input line 43.
+ngolian.trsl' found. on input line 45.
 
 (C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/latex/translations/dicts\trans
 lations-basic-dictionary-english.trsl
@@ -2735,344 +1618,89 @@ File: translations-basic-dictionary-english.trsl (english translation file `tra
 nslations-basic-dictionary')
 )
 Package translations Info: loading dictionary `translations-basic-dictionary' f
-or `english'. on input line 43.
-Package hyperref Info: Link coloring ON on input line 43.
+or `english'. on input line 45.
+Package hyperref Info: Link coloring ON on input line 45.
  (main.out) (main.out)
 \@outlinefile=\write4
 \openout4 = `main.out'.
 
-\c@mv@tabular=\count433
-\c@mv@boldtabular=\count434
 
 Package pgfplots notification 'compat/show suggested version=true': document ha
 s been generated with the most recent feature set (\pgfplotsset{compat=1.18}).
 
-\openout2 = `Information.aux'.
-
 (Information.tex) (Chapters/CoverPage.tex
-<Pictures/NMCT.png, id=206, 69.25874pt x 86.57344pt>
-File: Pictures/NMCT.png Graphic file (type png)
-<use Pictures/NMCT.png>
-Package pdftex.def Info: Pictures/NMCT.png  used on input line 10.
-(pdftex.def)             Requested size: 72.6476pt x 90.80966pt.
-LaTeX Font Info:    Trying to load font information for OT1+ztmcm on input line
- 11.
+File: Pictures/NMCT.png Graphic file (type bmp)
+<Pictures/NMCT.png>
+LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 1
+3.
 
-(C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ot1ztmcm.fd
-File: ot1ztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OT1/ztmcm.
+(C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/latex/lm\ot1lmr.fd
+File: ot1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-LaTeX Font Info:    Trying to load font information for OML+ztmcm on input line
- 11.
+LaTeX Font Info:    Trying to load font information for OML+lmm on input line 1
+3.
 
-(C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\omlztmcm.fd
-File: omlztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OML/ztmcm.
+(C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/latex/lm\omllmm.fd
+File: omllmm.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-LaTeX Font Info:    Trying to load font information for OMS+ztmcm on input line
- 11.
+LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 
+13.
 
-(C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\omsztmcm.fd
-File: omsztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OMS/ztmcm.
+(C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/latex/lm\omslmsy.fd
+File: omslmsy.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-LaTeX Font Info:    Trying to load font information for OMX+ztmcm on input line
- 11.
+LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 
+13.
 
-(C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\omxztmcm.fd
-File: omxztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OMX/ztmcm.
+(C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/latex/lm\omxlmex.fd
+File: omxlmex.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-LaTeX Font Info:    Trying to load font information for U+rsfs on input line 11
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <10.95> on input line 13.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <8> on input line 13.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <6> on input line 13.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 13.
+
+
+(C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 13.
+
+
+(C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+LaTeX Font Info:    Trying to load font information for U+rsfs on input line 13
 .
 
 (C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/latex/jknappen\ursfs.fd
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 )
-LaTeX Font Info:    Trying to load font information for OT1+ptm on input line 1
-1.
-
-(C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ot1ptm.fd
-File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
-)
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 11.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7.4> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 11.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 11.
-LaTeX Font Info:    Font shape `T2A/Tempora-TLF/b/n' will be
-(Font)              scaled to size 10.0pt on input line 16.
-
-
-LaTeX Font Warning: Font shape `T2A/Tempora-TLF/b/sc' undefined
-(Font)              using `T2A/Tempora-TLF/b/n' instead on input line 16.
-
-LaTeX Font Info:    Font shape `T2A/Tempora-TLF/b/sc' will be
-(Font)              scaled to size 12.0pt on input line 16.
-LaTeX Font Info:    Font shape `T2A/Tempora-TLF/b/sc' will be
-(Font)              scaled to size 10.0pt on input line 17.
-
-Underfull \hbox (badness 10000) in paragraph at lines 24--24
- [][]\T2A/Tempora-TLF/m/n/10 s21c033b
+Underfull \hbox (badness 10000) in paragraph at lines 26--26
+ [][]\TU/TimesNewRoman(1)/m/n/10.95 s21c033b
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 25--25
- []\T2A/Tempora-TLF/m/n/10 ̰����� ̐��-����
+Underfull \hbox (badness 10000) in paragraph at lines 27--27
+ [][]\TU/TimesNewRoman(1)/m/n/10.95 Мөнхсүлд МӨНХДОРЖ
  []
 
-LaTeX Font Info:    Font shape `T2A/Tempora-TLF/b/n' will be
-(Font)              scaled to size 12.0pt on input line 30.
+
+Overfull \hbox (3.97859pt too wide) in paragraph at lines 39--40
+[] 
+ []
+
+
+Overfull \hbox (3.64708pt too wide) in paragraph at lines 44--45
+[][] 
+ []
+
 [1
 
-
-
-
-{C:/Users/Acer/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{C:/Users/Acer/
-AppData/Local/Programs/MiKTeX/fonts/enc/dvips/tempora/t2a-tempora.enc} <./Pictu
-res/NMCT.png>]) (Chapters/TitlePage.tex [1]) (Chapters/acrolist.tex
-
-LaTeX Warning: Hyper reference `acro:ADX' on page i undefined on input line 7.
-
-
-LaTeX Warning: Hyper reference `acro:ADX' on page i undefined on input line 7.
-
-
-LaTeX Warning: Hyper reference `acro:AI' on page i undefined on input line 8.
-
-
-LaTeX Warning: Hyper reference `acro:AI' on page i undefined on input line 8.
-
-
-LaTeX Warning: Hyper reference `acro:API' on page i undefined on input line 9.
-
-
-LaTeX Warning: Hyper reference `acro:API' on page i undefined on input line 9.
-
-
-LaTeX Warning: Hyper reference `acro:ATR' on page i undefined on input line 10.
-
-
-
-LaTeX Warning: Hyper reference `acro:ATR' on page i undefined on input line 10.
-
-
-
-LaTeX Warning: Hyper reference `acro:AUC' on page i undefined on input line 11.
-
-
-
-LaTeX Warning: Hyper reference `acro:AUC' on page i undefined on input line 11.
-
-
-
-LaTeX Warning: Hyper reference `acro:BB' on page i undefined on input line 12.
-
-
-LaTeX Warning: Hyper reference `acro:BB' on page i undefined on input line 12.
-
-
-LaTeX Warning: Hyper reference `acro:CatBoost' on page i undefined on input lin
-e 13.
-
-
-LaTeX Warning: Hyper reference `acro:CatBoost' on page i undefined on input lin
-e 13.
-
-
-LaTeX Warning: Hyper reference `acro:CNN' on page i undefined on input line 14.
-
-
-
-LaTeX Warning: Hyper reference `acro:CNN' on page i undefined on input line 14.
-
-
-
-LaTeX Warning: Hyper reference `acro:EMA' on page i undefined on input line 15.
-
-
-
-LaTeX Warning: Hyper reference `acro:EMA' on page i undefined on input line 15.
-
-
-
-LaTeX Warning: Hyper reference `acro:EUR/USD' on page i undefined on input line
- 16.
-
-
-LaTeX Warning: Hyper reference `acro:EUR/USD' on page i undefined on input line
- 16.
-
-
-LaTeX Warning: Hyper reference `acro:FOREX' on page i undefined on input line 1
-7.
-
-
-LaTeX Warning: Hyper reference `acro:FOREX' on page i undefined on input line 1
-7.
-
-
-LaTeX Warning: Hyper reference `acro:HTTPS' on page i undefined on input line 1
-8.
-
-
-LaTeX Warning: Hyper reference `acro:HTTPS' on page i undefined on input line 1
-8.
-
-
-LaTeX Warning: Hyper reference `acro:JSON' on page i undefined on input line 19
-.
-
-
-LaTeX Warning: Hyper reference `acro:JSON' on page i undefined on input line 19
-.
-
-
-LaTeX Warning: Hyper reference `acro:JWT' on page i undefined on input line 20.
-
-
-
-LaTeX Warning: Hyper reference `acro:JWT' on page i undefined on input line 20.
-
-
-
-LaTeX Warning: Hyper reference `acro:LightGBM' on page i undefined on input lin
-e 21.
-
-
-LaTeX Warning: Hyper reference `acro:LightGBM' on page i undefined on input lin
-e 21.
-
-
-LaTeX Warning: Hyper reference `acro:LSTM' on page i undefined on input line 22
-.
-
-
-LaTeX Warning: Hyper reference `acro:LSTM' on page i undefined on input line 22
-.
-
-
-LaTeX Warning: Hyper reference `acro:MACD' on page i undefined on input line 23
-.
-
-
-LaTeX Warning: Hyper reference `acro:MACD' on page i undefined on input line 23
-.
-
-
-LaTeX Warning: Hyper reference `acro:MAE' on page i undefined on input line 24.
-
-
-
-LaTeX Warning: Hyper reference `acro:MAE' on page i undefined on input line 24.
-
-
-
-LaTeX Warning: Hyper reference `acro:ML' on page i undefined on input line 25.
-
-
-LaTeX Warning: Hyper reference `acro:ML' on page i undefined on input line 25.
-
-
-LaTeX Warning: Hyper reference `acro:MongoDB' on page i undefined on input line
- 26.
-
-
-LaTeX Warning: Hyper reference `acro:MongoDB' on page i undefined on input line
- 26.
-
-
-LaTeX Warning: Hyper reference `acro:OHLCV' on page i undefined on input line 2
-7.
-
-
-LaTeX Warning: Hyper reference `acro:OHLCV' on page i undefined on input line 2
-7.
-
-
-LaTeX Warning: Hyper reference `acro:pip' on page i undefined on input line 28.
-
-
-
-LaTeX Warning: Hyper reference `acro:pip' on page i undefined on input line 28.
-
-
-
-LaTeX Warning: Hyper reference `acro:REST' on page i undefined on input line 29
-.
-
-
-LaTeX Warning: Hyper reference `acro:REST' on page i undefined on input line 29
-.
-
-
-LaTeX Warning: Hyper reference `acro:RMSE' on page i undefined on input line 30
-.
-
-
-LaTeX Warning: Hyper reference `acro:RMSE' on page i undefined on input line 30
-.
-
-
-LaTeX Warning: Hyper reference `acro:ROC' on page i undefined on input line 31.
-
-
-
-LaTeX Warning: Hyper reference `acro:ROC' on page i undefined on input line 31.
-
-
-
-LaTeX Warning: Hyper reference `acro:RNN' on page i undefined on input line 32.
-
-
-
-LaTeX Warning: Hyper reference `acro:RNN' on page i undefined on input line 32.
-
-
-
-LaTeX Warning: Hyper reference `acro:RSI' on page i undefined on input line 33.
-
-
-
-LaTeX Warning: Hyper reference `acro:RSI' on page i undefined on input line 33.
-
-
-
-LaTeX Warning: Hyper reference `acro:SL' on page i undefined on input line 34.
-
-
-LaTeX Warning: Hyper reference `acro:SL' on page i undefined on input line 34.
-
-
-LaTeX Warning: Hyper reference `acro:SMA' on page i undefined on input line 35.
-
-
-
-LaTeX Warning: Hyper reference `acro:SMA' on page i undefined on input line 35.
-
-
-
-LaTeX Warning: Hyper reference `acro:TP' on page i undefined on input line 36.
-
-
-LaTeX Warning: Hyper reference `acro:TP' on page i undefined on input line 36.
-
-
-LaTeX Warning: Hyper reference `acro:WSGI' on page i undefined on input line 37
-.
-
-
-LaTeX Warning: Hyper reference `acro:WSGI' on page i undefined on input line 37
-.
-
-
-LaTeX Warning: Hyper reference `acro:XGBoost' on page i undefined on input line
- 38.
-
-
-LaTeX Warning: Hyper reference `acro:XGBoost' on page i undefined on input line
- 38.
-
-) [1
-
-]
+]) (Chapters/TitlePage.tex [1]) (Chapters/Abstract.tex) [1]
 ------------------------------------------------------------------------------
  Table of Contents
 ------------------------------------------------------------------------------
@@ -3082,209 +1710,421 @@ LaTeX Warning: Hyper reference `acro:XGBoost' on page i undefined on input line
 
  [2
 
+] (Chapters/acrolist.tex) [3
+
+
 ]
 ------------------------------------------------------------------------------
- Зураг болон Хүснэгтийн жагсаалт
+ Хүснэгтийн жагсаалт
+------------------------------------------------------------------------------
+(main.lot)
+\tf@lot=\write6
+\openout6 = `main.lot'.
+
+ [4
+
+]
+------------------------------------------------------------------------------
+ Зургийн жагсаалт
 ------------------------------------------------------------------------------
 (main.lof)
-\tf@lof=\write6
-\openout6 = `main.lof'.
+\tf@lof=\write7
+\openout7 = `main.lof'.
 
- (main.lot)
-\tf@lot=\write7
-\openout7 = `main.lot'.
+ [5
 
- [3
+] (Chapters/Orshil.tex [1
 
-
-] (Chapters/Abstract.tex
-LaTeX Font Info:    Font shape `T2A/Tempora-TLF/m/n' will be
-(Font)              scaled to size 14.4pt on input line 4.
-LaTeX Font Info:    Font shape `T2A/Tempora-TLF/b/n' will be
-(Font)              scaled to size 14.4pt on input line 4.
-LaTeX Font Info:    Font shape `T2A/Tempora-TLF/m/n' will be
-(Font)              scaled to size 14.0pt on input line 11.
-LaTeX Font Info:    Font shape `T2A/Tempora-TLF/b/n' will be
-(Font)              scaled to size 14.0pt on input line 11.
-LaTeX Font Info:    Font shape `T2A/Tempora-TLF/m/it' will be
-(Font)              scaled to size 10.0pt on input line 15.
-LaTeX Font Info:    Font shape `T2A/Tempora-TLF/b/it' will be
-(Font)              scaled to size 10.0pt on input line 16.
-LaTeX Font Info:    Trying to load font information for TS1+Tempora-TLF on inpu
-t line 30.
-
-(C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/latex/tempora\ts1tempora-tlf.f
-d
-File: TS1Tempora-TLF.fd 2016/02/02 (autoinst) Font definitions for TS1/Tempora-
-TLF.
-)
-LaTeX Font Info:    Font shape `TS1/Tempora-TLF/m/n' will be
-(Font)              scaled to size 10.0pt on input line 30.
- [4{C:/Users/Acer/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/tempora/tmp_ac5
-xuc.enc}] [5] [6]) [7] (Chapters/Chapter1_Introduction.tex
-{\Mongolian \CYRB \cyry \cyrl \cyrerev \cyrg } 1.
-[1
-
-] [2]) (Chapters/Chapter2_Literature.tex [3]
-{\Mongolian \CYRB \cyry \cyrl \cyrerev \cyrg } 2.
-[4
-
-{C:/Users/Acer/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc}]
-LaTeX Font Info:    Font shape `T2A/Tempora-TLF/m/n' will be
-(Font)              scaled to size 7.4pt on input line 58.
-LaTeX Font Info:    Font shape `T2A/Tempora-TLF/m/n' will be
-(Font)              scaled to size 6.0pt on input line 58.
-
-[5]) (Chapters/Chapter3_Methodology.tex [6]
-{\Mongolian \CYRB \cyry \cyrl \cyrerev \cyrg } 3.
-LaTeX Font Info:    Font shape `T2A/Tempora-TLF/m/n' will be
-(Font)              scaled to size 12.0pt on input line 17.
-LaTeX Font Info:    Font shape `T2A/Tempora-TLF/m/n' will be
-(Font)              scaled to size 9.0pt on input line 25.
-[7
+]) (Chapters/plan.tex [2]
+Бүлэг 1.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <10> on input line 13.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <7> on input line 13.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <5> on input line 13.
+) (Chapters/Chapter1_Introduction.tex [3
 
 ]
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 100.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 100.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <5> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 100.
-LaTeX Font Info:    Font shape `T2A/Tempora-TLF/b/n' will be
-(Font)              scaled to size 9.0pt on input line 163.
-LaTeX Font Info:    Font shape `T2A/Tempora-TLF/m/n' will be
-(Font)              scaled to size 7.0pt on input line 197.
- [8
+Бүлэг 2.
+) (Chapters/Chapter2_Literature.tex [4
 
 ]
-LaTeX Font Info:    Trying to load font information for T2A+lmss on input line 
-261.
-LaTeX Font Info:    No file T2Almss.fd. on input line 261.
+Бүлэг 3.
+[5
+
+] [6] [7]) (Chapters/Chapter3_Methodology.tex [8]
+Бүлэг 4.
+LaTeX Font Info:    Font shape `TU/Consolas(0)/m/n' will be
+(Font)              scaled to size 9.85492pt on input line 94.
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
 
 
-LaTeX Font Warning: Font shape `T2A/lmss/m/n' undefined
-(Font)              using `T2A/cmr/m/n' instead on input line 261.
-
-LaTeX Font Info:    Trying to load font information for TS1+lmss on input line 
-265.
-(C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/latex/lm\ts1lmss.fd
-File: ts1lmss.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-)
-
-LaTeX Font Warning: Font shape `T2A/lmss/m/it' undefined
-(Font)              using `T2A/lmss/m/n' instead on input line 288.
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
 
 
-LaTeX Font Warning: Font shape `T2A/lmss/bx/n' undefined
-(Font)              using `T2A/lmss/m/n' instead on input line 308.
-
-[9{C:/Users/Acer/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ts1.enc}]
-[10]
-Package pgfplots info on input line 431: Using 'lua backend=false' for axis: x 
-coord trafo unsupported.
- [11] [12] [13] [14] [15]
-LaTeX Font Info:    Font shape `TS1/Tempora-TLF/b/n' will be
-(Font)              scaled to size 10.0pt on input line 649.
- [16{C:/Users/Acer/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/tempora/tmp_ar
-nbc6.enc}] [17] [18]
-LaTeX Font Info:    Trying to load font information for T2A+lmtt on input line 
-856.
-LaTeX Font Info:    No file T2Almtt.fd. on input line 856.
+Package fontspec Info: 
+(fontspec)             Consolas/B scale = 0.9.
 
 
-LaTeX Font Warning: Font shape `T2A/lmtt/m/n' undefined
-(Font)              using `T2A/cmr/m/n' instead on input line 856.
+Package fontspec Info: 
+(fontspec)             Consolas/I scale = 0.9.
 
-[19] [20] [21]) (Chapters/Chapter4_Results.tex [22]
-{\Mongolian \CYRB \cyry \cyrl \cyrerev \cyrg } 4.
-Package pgfplots info on input line 53: Using 'lua backend=false' for axis: x c
-oord trafo unsupported.
-[23
 
-] [24]
-Package pgfplots info on input line 222: Using 'lua backend=false' for axis: x 
-coord trafo unsupported.
- [25] [26]
-Package pgfplots info on input line 316: Using 'lua backend=false' for axis: x 
-coord trafo unsupported.
- [27]) (Chapters/Chapter5_Conclusion.tex [28]
-{\Mongolian \CYRB \cyry \cyrl \cyrerev \cyrg } 5.
-[29
+Package fontspec Info: 
+(fontspec)             Consolas/BI scale = 0.9.
 
-] [30] [31]) (Chapters/Bibliography.tex [32] [33
 
+Package fontspec Info: 
+(fontspec)             Font family 'Consolas(1)' created for font 'Consolas'
+(fontspec)             with options
+(fontspec)             [WordSpace={1,0,0},HyphenChar=None,PunctuationSpace=Word
+Space,Scale=0.9,Script=Cyrillic].
+(fontspec)              
+(fontspec)              This font family consists of the following NFSS
+(fontspec)             series/shapes:
+(fontspec)              
+(fontspec)             - 'normal' (m/n) with NFSS spec.:
+(fontspec)             <->s*[0.9]"Consolas/OT:script=cyrl;language=dflt;"
+(fontspec)             - 'bold' (b/n) with NFSS spec.:
+(fontspec)             <->s*[0.9]"Consolas/B/OT:script=cyrl;language=dflt;"
+(fontspec)             - 'italic' (m/it) with NFSS spec.:
+(fontspec)             <->s*[0.9]"Consolas/I/OT:script=cyrl;language=dflt;"
+(fontspec)             - 'bold italic' (b/it) with NFSS spec.:
+(fontspec)             <->s*[0.9]"Consolas/BI/OT:script=cyrl;language=dflt;"
+
+LaTeX Font Info:    Font shape `TU/Consolas(1)/m/n' will be
+(Font)              scaled to size 9.85492pt on input line 94.
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+[9
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 77--78
-[]\T2A/Tempora-TLF/m/n/10 MetaQuotes Software Corp. (2024). MetaTrader 5 Tradin
-g Platform. [Online]. Available:
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+ [10]
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on in
+put line 240.
+ [11]
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+ [12]
+LaTeX Font Info:    Font shape `TU/Consolas(0)/m/n' will be
+(Font)              scaled to size 8.99994pt on input line 375.
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+LaTeX Font Info:    Font shape `TU/Consolas(1)/m/n' will be
+(Font)              scaled to size 8.99994pt on input line 375.
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+ [13]
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+ [14]) (Chapters/Chapter4_Results.tex [15]
+Бүлэг 5.
+[16
+
+]
+Overfull \hbox (23.0023pt too wide) in paragraph at lines 176--177
+ [][] 
  []
 
-) (Chapters/appendix.tex [34]
-LaTeX Font Info:    Font shape `T2A/Tempora-TLF/m/n' will be
-(Font)              scaled to size 20.74pt on input line 5.
-LaTeX Font Info:    Font shape `T2A/Tempora-TLF/b/n' will be
-(Font)              scaled to size 20.74pt on input line 5.
+[17] [18] [19]
+LaTeX Font Info:    Font shape `TU/Consolas(0)/m/n' will be
+(Font)              scaled to size 7.19995pt on input line 350.
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+LaTeX Font Info:    Font shape `TU/Consolas(1)/m/n' will be
+(Font)              scaled to size 7.19995pt on input line 350.
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
 
 
-LaTeX Font Warning: Font shape `T2A/lmtt/bx/n' undefined
-(Font)              using `T2A/lmtt/m/n' instead on input line 14.
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
 
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <14.4> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 14.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10.95> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 14.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <8> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 14.
-[35
 
-] [36]) [37] (main.aux (Information.aux))
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+ [20]
+Package pgfplots info on input line 392: Using 'lua backend=false' for axis: x 
+coord trafo unsupported.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <9> on input line 460.
+ [21] [22]) (Chapters/Chapter5_Conclusion.tex [23])
+(Chapters/Bibliography.tex [24]
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+) (Chapters/appendix.tex [25
+
+]
+(C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstlang1.sty
+File: lstlang1.sty 2025/11/14 1.11b listings language file
+)
+Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on i
+nput line 9.
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+LaTeX Font Info:    Font shape `TU/Consolas(1)/m/n' will be
+(Font)              scaled to size 11.69994pt on input line 48.
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+[26
+
+]
+(C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstlang1.sty
+File: lstlang1.sty 2025/11/14 1.11b listings language file
+)
+(C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstmisc.sty
+File: lstmisc.sty 2025/11/14 1.11b (Carsten Heinz)
+)
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+(C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstlang1.sty
+File: lstlang1.sty 2025/11/14 1.11b listings language file
+)
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+[27]) (Chapters/Talarhal.tex [28]) (Chapters/Tovchlol.tex [29
+
+] [30
+
+]) [31]
+(main.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2025-11-06>
  ***********
-
-
-LaTeX Font Warning: Some font shapes were not available, defaults substituted.
-
-
-LaTeX Warning: There were undefined references.
-
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: CA5A5A378E384387FF62DBE95919EB6E;8796.
+(rerunfilecheck)             Checksum: 154C3FB059CC9BC60163A664EF247855;7982.
  ) 
 Here is how much of TeX's memory you used:
- 49870 strings out of 467871
- 1134953 string characters out of 5418859
- 1611073 words of memory out of 5000000
- 77470 multiletter control sequences out of 15000+600000
- 715685 words of font info for 170 fonts, out of 8000000 for 9000
- 1141 hyphenation exceptions out of 8191
- 88i,19n,104p,1015b,2333s stack positions out of 10000i,1000n,20000p,200000b,200000s
- <C:\Users\Acer\AppData\Local\MiKTeX\fonts/pk/ljfour/lh/lh-t2a/dpi600\larm144
-0.pk> <C:\Users\Acer\AppData\Local\MiKTeX\fonts/pk/ljfour/lh/lh-t2a/dpi600\larm
-1000.pk> <C:\Users\Acer\AppData\Local\MiKTeX\fonts/pk/ljfour/lh/lh-t2a/dpi600\l
-arm0800.pk> <C:\Users\Acer\AppData\Local\MiKTeX\fonts/pk/ljfour/lh/lh-t2a/dpi60
-0\larm0700.pk> <C:\Users\Acer\AppData\Local\MiKTeX\fonts/pk/ljfour/lh/lh-t2a/dp
-i600\larm0900.pk><C:/Users/Acer/AppData/Local/Programs/MiKTeX/fonts/type1/publi
-c/tempora/Tempora-Bold.pfb><C:/Users/Acer/AppData/Local/Programs/MiKTeX/fonts/t
-ype1/public/tempora/Tempora-BoldItalic.pfb><C:/Users/Acer/AppData/Local/Program
-s/MiKTeX/fonts/type1/public/tempora/Tempora-Italic.pfb><C:/Users/Acer/AppData/L
-ocal/Programs/MiKTeX/fonts/type1/public/tempora/Tempora-Regular.pfb><C:/Users/A
-cer/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:
-/Users/Acer/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.
-pfb><C:/Users/Acer/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm
-/cmsy10.pfb><C:/Users/Acer/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/
-lmss8.pfb><C:/Users/Acer/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfo
-nts/symbols/msam10.pfb><C:/Users/Acer/AppData/Local/Programs/MiKTeX/fonts/type1
-/public/rsfs/rsfs10.pfb><C:/Users/Acer/AppData/Local/Programs/MiKTeX/fonts/type
-1/urw/symbol/usyr.pfb><C:/Users/Acer/AppData/Local/Programs/MiKTeX/fonts/type1/
-urw/symbol/usyr.pfb><C:/Users/Acer/AppData/Local/Programs/MiKTeX/fonts/type1/ur
-w/times/utmr8a.pfb><C:/Users/Acer/AppData/Local/Programs/MiKTeX/fonts/type1/urw
-/times/utmri8a.pfb>
-Output written on main.pdf (46 pages, 501356 bytes).
-PDF statistics:
- 1108 PDF objects out of 1200 (max. 8388607)
- 361 named destinations out of 1000 (max. 500000)
- 466 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 48321 strings out of 402987
+ 1142598 string characters out of 5448731
+ 2139293 words of memory out of 5000000
+ 76169 multiletter control sequences out of 15000+600000
+ 658224 words of font info for 170 fonts, out of 8000000 for 9000
+ 1348 hyphenation exceptions out of 8191
+ 88i,17n,104p,771b,2517s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
+Output written on main.pdf (38 pages).

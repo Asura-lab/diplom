@@ -1,98 +1,171 @@
-\chapter{ОНОЛЫН ҮНДЭСЛЭЛ}
+\chapter{Судалгааны сэдвийн онол, өнөөгийн түвшин}
+\label{ch:literature}
 
-\section{Машин сургалтын онолын үндэс}
+\section{Онолын хэсэг}
 
-Machine Learning нь өгөгдлөөс автоматаар суралцаж, туршлагаасаа сайжирдаг алгоритмуудыг судалдаг салбар юм. Том Митчелл (1997) машин сургалтыг дараах байдлаар тодорхойлсон \cite{mitchell1997}:
+\subsection{Валютын зах зээлийн тухай ойлголт}
 
-\begin{quote}
-``Компьютерийн программ нь T даалгаврын хувьд P гүйцэтгэлийн үзүүлэлтээр хэмжигдэх E туршлагаас суралцсан гэж хэлнэ, хэрэв T даалгаврын P гүйцэтгэл E туршлагын дагуу сайжирсан бол.''
-\end{quote}
+Валютын зах зээл (Foreign Exchange Market) нь дэлхий дээрх хамгийн том, хамгийн хөрвөх чадвартай санхүүгийн зах зээл юм. Олон Улсын Төлбөр Тооцооны Банкны (BIS) 2022 оны судалгаагаар өдрийн дундаж арилжааны хэмжээ 7.5 их наяд ам.доллар байна \citep{bis2022}. Зах зээл долоо хоногийн 5 өдөр, 24 цагийн турш ажилладаг бөгөөд Лондон, Нью-Йорк, Токио, Сидней гэсэн дөрвөн гол сесстэй.
 
-Энэхүү судалгааны хүрээнд:
+EUR/USD нь Forex зах зээлийн хамгийн их арилжаалагддаг валютын хослол бөгөөд нийт арилжааны $\sim$22.7\%-ийг бүрдүүлдэг. Энэ хослолын өвөрмөц шинж чанарууд:
 \begin{itemize}
-    \item \textbf{T (Даалгавар)}: EUR/USD валютын үнийн чиг хандлагыг таамаглах
-    \item \textbf{E (Туршлага)}: Түүхэн үнийн өгөгдөл болон Technical Indicators
-    \item \textbf{P (Гүйцэтгэл)}: Ангилалын accuracy, recall, precision
+    \item \textbf{Хөрвөх чадвар}: Маш өндөр -- спрэд бага, хэрэгжилт хурдан
+    \item \textbf{Хэлбэлзэл}: Дунд зэргийн -- өдөрт 50--100 пипс хүрээнд
+    \item \textbf{Хүчин зүйлс}: ECB, Fed-ийн мөнгөний бодлого, эдийн засгийн макро үзүүлэлтүүд
 \end{itemize}
 
-\subsection{Supervised Learning}
+\section{Техник шинжилгээний үндэс}
 
-Supervised Learning нь шошготой өгөгдлөөс суралцдаг арга юм. Оролтын $X$ болон гаралтын $Y$ хоорондын хамаарлыг $f: X \rightarrow Y$ функцээр дүрсэлнэ. Энэ судалгаанд binary classification ашигласан бөгөөд $Y \in \{0, 1\}$ буюу HOLD эсвэл BUY дохио юм.
+Техник шинжилгээ нь өнгөрсөн үнийн өгөгдөлд дүн шинжилгээ хийж ирээдүйн үнийн хөдөлгөөнийг таамаглах арга юм. Энэхүү судалгаанд хэрэглэсэн гол индикаторууд:
 
-\section{Ensemble Learning}
+\subsection{Хөдөлгөөнт дунджууд (Moving Averages)}
 
-Ensemble Learning арга нь олон загварын таамаглалыг нэгтгэн илүү нарийвчлалтай үр дүнд хүрдэг. Dietterich (2000) ensemble аргын гурван үндсэн давуу талыг тодорхойлсон \cite{dietterich2000}: статистик, тооцооллын болон дүрслэлийн.
-
-\subsection{Gradient Boosting}
-
-Gradient Boosting нь алдааг дараалан засах зарчмаар ажилладаг. $m$-р алхам дахь загвар нь өмнөх загварын алдааг (residual) таамаглахад суралцана:
+Энгийн хөдөлгөөнт дундаж (SMA) нь $n$ үеийн хаалтын үнийн арифметик дунджаар тооцоологдоно:
 
 \begin{equation}
-F_m(x) = F_{m-1}(x) + \gamma_m h_m(x)
+    \text{SMA}_n = \frac{1}{n} \sum_{i=0}^{n-1} P_{t-i}
 \end{equation}
 
-\subsubsection{XGBoost}
-
-Chen ба Guestrin (2016) XGBoost (eXtreme Gradient Boosting) алгоритмыг санал болгосон \cite{chen2016}. XGBoost нь L1, L2 regularization ашиглан overfitting-аас сэргийлж, параллел тооцоолол хийх боломжтой.
-
-Зорилгын функц:
-\begin{equation}
-\mathcal{L} = \sum_{i=1}^{n} l(y_i, \hat{y}_i) + \sum_{k=1}^{K} \Omega(f_k)
-\end{equation}
-
-Энд $\Omega(f) = \gamma T + \frac{1}{2}\lambda||w||^2$ нь regularization term юм.
-
-\subsubsection{LightGBM}
-
-Ke, Meng нар (2017) LightGBM алгоритмыг хөгжүүлсэн \cite{ke2017}. LightGBM нь leaf-wise tree growth стратеги ашигладаг бөгөөд энэ нь level-wise стратегиас илүү хурдан бөгөөд нарийвчлалтай.
-
-\subsubsection{CatBoost}
-
-Yandex-ийн хөгжүүлсэн CatBoost нь categorical feature-тэй сайн ажилладаг Gradient Boosting алгоритм юм. Ordered boosting арга ашиглан target leakage-аас сэргийлдэг бөгөөд hyperparameter тохируулга бага шаарддаг.
-
-\subsection{Hybrid Ensemble арга}
-
-Энэ судалгаанд Hybrid Ensemble гэж нэрлэгдсэн 7 загварыг нэгтгэх арга ашигласан. 3 XGBoost, 2 LightGBM, 2 CatBoost загварыг нэгтгэж, Agreement Bonus System-ээр итгэлцүүрийг нэмэгдүүлсэн:
+Экспоненциал хөдөлгөөнт дундаж (EMA) нь сүүлийн өгөгдөлд илүү жин өгдөг:
 
 \begin{equation}
-P_{final} = \sum_{i=1}^{7} w_i \cdot P_i(BUY) + \text{Agreement Bonus}
+    \text{EMA}_t = \alpha \cdot P_t + (1 - \alpha) \cdot \text{EMA}_{t-1}, \quad \alpha = \frac{2}{n+1}
 \end{equation}
 
-Agreement Bonus System нь загваруудын зөвшилцлөөс хамааран +7\% (7/7), +4\% (6/7), +2\% (5/7) нэмдэг.
+Энэхүү системд SMA болон EMA-г 5, 10, 20, 50, 200 гэсэн 5 янз бүрийн үетэй тооцоолж, чиг хандлагын дохио, кросс дохио (жишээ нь Golden Cross: SMA50 > SMA200) үүсгэсэн.
 
-\section{Technical Analysis}
+\subsection{Relative Strength Index (RSI)}
 
-Technical Analysis нь түүхэн үнэ, хэмжээний өгөгдлөөс ирээдүйн үнийн хөдөлгөөнийг таамаглахад ашиглагддаг. Murphy (1999) Technical Analysis-ийн гурван үндсэн зарчмыг тодорхойлсон \cite{murphy1999}: зах зээл бүх мэдээллийг агуулдаг, үнэ чиг хандлагаар хөдөлдөг, түүх давтагддаг.
+RSI нь моментум индикатор бөгөөд 0--100 хүрээнд хэлбэлздэг:
 
-\subsection{Trend Indicators}
-
-\textbf{Moving Average (MA):} Тодорхой хугацааны дундаж үнийг тооцоолно.
 \begin{equation}
-SMA_n = \frac{1}{n} \sum_{i=0}^{n-1} P_{t-i}
+    \text{RSI} = 100 - \frac{100}{1 + RS}, \quad RS = \frac{\text{Дундаж өсөлт}}{\text{Дундаж бууралт}}
 \end{equation}
 
-\textbf{MACD:} Хоёр EMA-ийн зөрүүгээр momentum-ийг хэмждэг.
+RSI < 30 бол ``хэт зарагдсан'' (oversold), RSI > 70 бол ``хэт худалдан авагдсан'' (overbought) гэж үзнэ. Системд RSI-г 7, 14, 21 гэсэн гурван үетэй тооцоолсон.
+
+\subsection{MACD (Moving Average Convergence Divergence)}
+
+MACD нь хоёр экспоненциал хөдөлгөөнт дундажийн ялгавар юм:
+
 \begin{equation}
-MACD = EMA_{12} - EMA_{26}
+    \text{MACD} = \text{EMA}_{12} - \text{EMA}_{26}
 \end{equation}
-
-\subsection{Momentum Indicators}
-
-\textbf{RSI (Relative Strength Index):} Wilder (1978) санал болгосон RSI нь 0-100 хооронд хэмжигддэг \cite{wilder1978}.
 \begin{equation}
-RSI = 100 - \frac{100}{1 + RS}, \quad RS = \frac{\text{Average Gain}}{\text{Average Loss}}
+    \text{Signal Line} = \text{EMA}_9(\text{MACD})
+\end{equation}
+\begin{equation}
+    \text{MACD Histogram} = \text{MACD} - \text{Signal Line}
 \end{equation}
 
-\subsection{Volatility Indicators}
+MACD шугам нь дохионы шугамыг дээшээ огтлоход BUY, доошоо огтлоход SELL дохио үүснэ.
 
-\textbf{Bollinger Bands:} Bollinger (2002) хөгжүүлсэн энэ индикатор нь үнийн хэлбэлзлийг хэмждэг \cite{bollinger2002}.
-\begin{align}
-\text{Upper Band} &= SMA_{20} + 2\sigma \\
-\text{Lower Band} &= SMA_{20} - 2\sigma
-\end{align}
+\subsection{Average True Range (ATR)}
 
-\section{Холбогдох судалгааны тойм}
+ATR нь зах зээлийн хэлбэлзлийг хэмждэг:
 
-Forex таамаглалд машин сургалт ашигласан судалгаанууд сүүлийн жилүүдэд нэмэгдэж байна. Krollner, Vanstone нар (2010) 2010 оноос өмнөх 25 жилийн судалгааг нэгтгэн дүгнэхдээ машин сургалтын аргууд нь уламжлалт статистик аргуудаас илүү үр дүнтэй болохыг тогтоосон \cite{krollner2010}.
+\begin{equation}
+    TR = \max(H_t - L_t,\ |H_t - C_{t-1}|,\ |L_t - C_{t-1}|)
+\end{equation}
+\begin{equation}
+    \text{ATR}_n = \frac{1}{n}\sum_{i=0}^{n-1} TR_{t-i}
+\end{equation}
 
-Fischer ба Krauss (2018) LSTM сүлжээг S\&P 500 индексийн таамаглалд ашиглаж, уламжлалт аргуудаас давсан үр дүн гаргасан \cite{fischer2018}.
+ATR-ийг Stop Loss, Take Profit-ийн динамик тооцоолол болон дохио шүүлтүүрлэх зорилгоор ашигласан. ATR < 4 пипс үед зах зээл хэт тогтвортой байгааг илтгэх тул дохио үүсгээгүй.
+
+\subsection{Bollinger Bands}
+
+Bollinger Band нь дундаж утга болон стандарт хазайлтаас бүрдэнэ:
+
+\begin{equation}
+    \text{Upper Band} = \text{SMA}_{20} + 2\sigma, \quad \text{Lower Band} = \text{SMA}_{20} - 2\sigma
+\end{equation}
+
+Band-ийн өргөн (BB Width) нь хэлбэлзлийн өөрчлөлтийг, Band Squeeze нь нэвтрэлтийн (breakout) дохиог илэрхийлнэ.
+
+\subsection{ADX (Average Directional Index)}
+
+ADX нь чиг хандлагын хүчийг хэмждэг (0--100 хүрээ):
+\begin{itemize}
+    \item ADX > 25: Хүчтэй чиг хандлага
+    \item ADX < 20: Чиг хандлагагүй (range) зах зээл
+\end{itemize}
+
+\section{Машин сургалтын ансамбль аргууд}
+
+\subsection{Gradient Boosted Decision Trees (GBDT)}
+
+GBDT нь олон сул суралцагч (decision tree)-ийг дараалалтай нэмж, алдааг (gradient) бууруулах аргачлал юм. Загварыг дараахь байдлаар илэрхийлнэ:
+
+\begin{equation}
+    F_M(x) = F_0 + \sum_{m=1}^{M} \eta \cdot h_m(x)
+\end{equation}
+
+Үүнд $F_0$ -- анхны утга, $h_m$ -- $m$-р шийдвэрийн мод, $\eta$ -- сургалтын хурд.
+
+\subsection{XGBoost}
+
+XGBoost \citep{chen2016xgboost} нь GBDT-ийн оновчтой хэрэгжүүлэлт бөгөөд дараахь давуу талтай:
+\begin{itemize}
+    \item L1 ба L2 нормчлол (regularization) -- overfitting-аас сэргийлнэ
+    \item Column subsampling -- загварын нарийвчлалыг нэмэгдүүлнэ
+    \item Newton's method ашиглан хоёрдугаар эрэмбийн оновчлол
+\end{itemize}
+
+\subsection{LightGBM}
+
+LightGBM \citep{ke2017lightgbm} нь Microsoft-ийн боловсруулсан GBDT хэрэгжүүлэлт:
+\begin{itemize}
+    \item \textbf{Leaf-wise tree growth}: Level-wise-ийн оронд -- илүү хурдан, нарийвчлалтай
+    \item \textbf{Gradient-based One-Side Sampling (GOSS)}: Том gradient-тэй жишээнүүдэд анхаарах
+    \item \textbf{Exclusive Feature Bundling (EFB)}: Шинж чанарын тоог бууруулах
+\end{itemize}
+
+\subsection{CatBoost}
+
+CatBoost \citep{prokhorenkova2018catboost} нь Yandex-ийн боловсруулсан GBDT-ийн хувилбар:
+\begin{itemize}
+    \item \textbf{Ordered boosting}: Target leakage-аас сэргийлнэ
+    \item \textbf{Symmetric trees}: Тооцооллыг хурдасгана
+    \item \textbf{Categorical feature handling}: Категори шинж чанарыг шууд боловсруулна
+\end{itemize}
+
+\subsection{Ансамбль стратеги}
+
+Ансамбль аргын үндсэн санаа нь олон загварын таамгийг нэгтгэснээр нэг загварын алдааг нөхөж чаддагт оршино. Энэ системд гурван загварын магадлалын утгыг Logistic Regression calibrator-аар нэгтгэсэн:
+
+\begin{equation}
+    P_{\text{ensemble}} = \text{LR}\left(\frac{1}{3}\sum_{k=1}^{3} f_k(x)\right)
+\end{equation}
+
+Calibrated магадлалын утга нь загварын итгэлцлийн хэмжүүр (confidence score) болж, дохио үүсгэх эсэхийг шийднэ.
+
+\section{Ижил төрлийн судалгаа}
+
+\subsection{Машин сургалт ба Forex таамаглал}
+
+Forex зах зээлийг таамаглахад ML ашигласан судалгаанууд сүүлийн жилүүдэд ихэссэн. Zhang нар (2019) нь LSTM сүлжээг алтны үнэ таамаглахад хэрэглэж 58.7\% нарийвчлал авсан \citep{zhang2019deep}. Fischer ба Krauss (2018) нь LSTM-ийг S\&P 500 хувьцааны зах зээлд хэрэглэж уламжлалт аргуудаас давуу гүйцэтгэлтэй болохыг батласан \citep{fischer2018deep}.
+
+GBDT аргуудыг санхүүгийн таамаглалд хэрэглэсэн судалгаа мөн их байна. Gu нар (2020) нь 150+ шинж чанартай GBDT загварыг хувьцааны өгөөж таамаглахад хэрэглэж, гүн сургалтын загваруудтай харьцуулахад дутуугүй нарийвчлалтай байсныг тогтоосон \citep{gu2020empirical}.
+
+\subsection{Ансамбль аргуудын санхүүгийн хэрэглээ}
+
+Sezer нар (2020) нь хувьцааны зах зээлийн таамаглалд машин сургалтын өргөн хүрээний аргуудыг тоймлосон судалгаандаа ансамбль аргууд нь дангаар ажилладаг загваруудаас тогтмол давуу гүйцэтгэлтэй байдгийг тэмдэглэсэн \citep{sezer2020financial}. Ялангуяа бүтцэлэгдсэн (табулар) өгөгдөл дээр GBDT загварууд нь гүн сургалтын загваруудаас илүү хурдан, нарийвчлалтай байдаг нь олон тэмцээн, бенчмаркаар батлагдсан.
+
+\subsection{Walk-Forward Validation}
+
+Уламжлалт cross-validation нь санхүүгийн цуваа өгөгдөлд тохиромжгүй, учир нь цаг хугацааны дарааллыг зөрчдөг. Walk-forward validation \citep{pardo2008evaluation} нь энэ асуудлыг шийдэж, ирээдүйн өгөгдөл сургалтад алдагдахаас (look-ahead bias) сэргийлнэ:
+\begin{itemize}
+    \item Сургалт: 2015--2022 (өнгөрсөн)
+    \item Баталгаажуулалт: 2023 (дунд)
+    \item Тест: 2024 (ирээдүй)
+    \item Бэктест: 2025 (бодит зах зээл)
+\end{itemize}
+
+\subsection{Мобайл арилжааны технологи}
+
+Гар утасны арилжааны аппликейшнууд санхүүгийн салбарт хурдацтай нэвтэрч байна. Charles Schwab-ийн 2023 оны судалгаагаар хөрөнгө оруулагчдын 60\%-аас дээш нь гар утсаар арилжаа хийдэг болсон. React Native \citep{reactnative} нь нэг код бааз дээр iOS болон Android аппликейшн хөгжүүлэх боломж олгодог cross-platform фреймворк юм.
+
+\section{Бүлгийн дүгнэлт}
+
+Онолын үндэслэлийн хүрээнд Forex зах зээлийн онцлог, техник шинжилгээний индикаторууд, GBDT ансамбль загварууд, walk-forward validation аргачлалыг авч үзлээ. Одоо байгаа судалгаанууд ML загварууд Forex таамаглалд үр дүнтэй байж болохыг харуулсан ч overfitting, зах зээлийн горимын өөрчлөлт зэрэг сорилтууд байсаар байна. Дараагийн бүлэгт энэхүү судалгааны арга зүйг дэлгэрэнгүй тайлбарлана.

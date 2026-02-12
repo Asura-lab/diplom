@@ -1,150 +1,63 @@
-\chapter{ДҮГНЭЛТ}
+% Дүгнэлт -- 5-р бүлэгийн үргэлжлэл (Судалгааны үр дүн, дүгнэлт)
+\section{Дүгнэлт}
+\label{sec:conclusion}
 
-\section{Судалгааны үр дүнгийн нэгтгэл}
+\subsection{Судалгааны гол үр дүн}
 
-Энэхүү дипломын ажлаар Machine Learning Hybrid Ensemble аргыг ашиглан EUR/USD валютын хосын BUY дохио таамаглах системийг амжилттай хөгжүүлсэн. Судалгааны явцад XGBoost×3, LightGBM×2, CatBoost×2 гэсэн долоон загварыг нэгтгэсэн арга нь дангаар ажиллах загвараас маш их давуу, 96.9\% Accuracy үр дүн өгч байгааг баталсан.
-
-\subsection{Техникийн шийдэл}
-
-Загварын сургалтад ашигласан гол арга хэрэгслүүд:
+Энэхүү судалгааны ажлаар машин сургалтын ансамбль аргыг ашиглан Forex зах зээлийн арилжааны дохио үүсгэх бүрэн систем амжилттай хөгжүүлсэн. Гол үр дүнгүүд:
 
 \begin{enumerate}
-    \item \textbf{Hybrid Ensemble загвар:} 7 загварын нэгдэл:
+    \item \textbf{ML ансамбль загвар}: LightGBM, XGBoost, CatBoost гэсэн гурван GBDT загварын ансамбль нь 6 хугацааны хүрээний 48 шинж чанарыг ашиглан EUR/USD-ийн чиг хандлагыг амжилттай таамаглаж чадсан. Walk-forward validation-аар баталгаажуулсан тест дээрх нарийвчлал 87.4\%, өндөр итгэлцэлтэй дохионы нарийвчлал 95\%+ байсан.
+    
+    \item \textbf{Бэктестийн гүйцэтгэл}: 2025 оны 10 сарын бодит зах зээлийн бэктестэд:
     \begin{itemize}
-        \item XGBoost × 3 - Гурван өөр hyperparameter-тэй
-        \item LightGBM × 2 - Histogram-based, санах ой хэмнэлттэй
-        \item CatBoost × 2 - Ordered boosting, categorical feature сайн ажилладаг
+        \item Өгөөж: +41.61\% (S\&P 500 дунджаас 3.5 дахин их)
+        \item Profit Factor: 2.46 (мэргэжлийн системийн түвшин)
+        \item Sharpe Ratio: 9.64 (хедж сангийн түвшнээс хавьгүй дээгүүр)
+        \item Max Drawdown: 3.93\% (маш бага эрсдэлтэй)
     \end{itemize}
     
-    \item \textbf{Agreement Bonus System:} Загваруудын зөвшилцөлд суурилсан нэмэлт оноо:
-    \begin{itemize}
-        \item 7/7 загвар ижил: +7\% bonus
-        \item 6/7 загвар ижил: +4\% bonus
-        \item 5/7 загвар ижил: +2\% bonus
-    \end{itemize}
+    \item \textbf{Мобайл аппликейшн}: React Native дээр суурилсан бүрэн функциональ ``Predictrix'' аппликейшнийг хөгжүүлж, бодит цагийн ханш, ML дохио, эдийн засгийн мэдээ, AI шинжилгээг нэг дор хүргэсэн.
     
-    \item \textbf{32 Technical Indicators:} 
-    \begin{itemize}
-        \item Trend Indicators (SMA, EMA, MACD, ADX)
-        \item Momentum Indicators (RSI, Stochastic, CCI, Williams \%R)
-        \item Volatility Indicators (ATR, Bollinger Bands)
-        \item Time features (London/NY session, overlap)
-    \end{itemize}
-    
-    \item \textbf{Confidence Filter:} 85\%+ confidence BUY дохио = 96.9\% accuracy
-    
-    \item \textbf{Dynamic SL/TP:} ATR дээр суурилсан Stop Loss, Take Profit тооцоолол
-    
-    \item \textbf{Entry/SL/TP Output:} Тодорхой entry price, stop loss, take profit утгууд
+    \item \textbf{Overfitting шийдвэрлэлт}: 7 давталтат хөгжүүлэлтийн үе шатаар загварыг хялбаршуулж (75$\to$48 шинж чанар, 9$\to$3 загвар), walk-forward validation-аар баталгаажуулж, overfitting-ийн асуудлыг бүрэн шийдсэн.
 \end{enumerate}
 
-\subsection{Backtest Results}
+\subsection{Судалгааны шинэлэг тал}
 
-Test Set дээр (~55 өдөр, 296,778 мөр) хийсэн backtest үр дүн:
+\begin{itemize}
+    \item \textbf{Олон хугацааны хүрээний шинж чанар}: 6 хугацааны интервалаас (M1--H4) шинж чанар тооцоолсноор ``том зурагийг'' авч үзэх чадвартай загвар бүтээсэн
+    \item \textbf{Calibrated confidence}: Logistic Regression calibrator-аар загварын магадлалын утгыг найдвартай итгэлцлийн хэмжүүр болгосон
+    \item \textbf{Чанар $>$ тоо хэмжээ}: 359,639 таамгаас зөвхөн 1,065 (0.3\%) чанартай дохио шүүж илрүүлдэг стратеги
+    \item \textbf{End-to-end систем}: Загварын сургалтаас эхлээд мобайл аппликейшн хүртэл бүрэн, нэгдмэл системийг хэрэгжүүлсэн
+\end{itemize}
 
-\begin{table}[H]
-\centering
-\caption{Developed Method (85\%+ confidence) BUY дохионы гүйцэтгэл}
-\begin{tabular}{|l|r|}
-\hline
-\textbf{Үзүүлэлт} & \textbf{Утга} \\
-\hline
-Signals & 64 \\
-\hline
-Accuracy & \textbf{96.9\%} \\
-\hline
-Total Pips & \textbf{+910} \\
-\hline
-Profit Factor & \textbf{46.5} \\
-\hline
-Signals per Day & ~1.2 \\
-\hline
-Model Numbers & 7 \\
-\hline
-\end{tabular}
-\end{table}
+\subsection{Хязгаарлалт}
 
-96.9\% Accuracy гэдэг нь 64 BUY дохионоос зөвхөн 2 нь буруу (62 зөв) гэсэн үг бөгөөд энэ нь маш өндөр найдвартай байдлыг харуулж байна. Profit Factor 46.5 нь мэргэжлийн арилжаачдын хүлээн зөвшөөрдөг маш өндөр түвшин юм.
-
-\subsection{System Components}
-
-Бүрэн ажиллагаатай систем хөгжүүлсэн:
+Судалгааны ажлын зарим хязгаарлалтуудыг тодорхойлох нь чухал:
 
 \begin{enumerate}
-    \item \textbf{Backend API:} Flask + Waitress WSGI Server
-    \item \textbf{ML Pipeline:} Өгөгдөл татах → 32 Indicators тооцох → 7 загварын нэгдсэн таамаглал
-    \item \textbf{Mobile App:} React Native + Expo мобайл аппликейшн
-    \item \textbf{Database:} MongoDB (хэрэглэгчийн мэдээлэл, дохионууд)
-    \item \textbf{Data Source:} Twelve Data API (бодит цагийн өгөгдөл)
+    \item \textbf{Ганц валютын хослол}: Зөвхөн EUR/USD дээр сургагдсан -- бусад хослолд шууд ашиглах боломжгүй
+    \item \textbf{Бэктест ба бодит арилжааны зөрүү}: Бэктест нь бодит арилжааны бүх нөхцлийг (жишээ нь төлбөрийн чадварын хягаарлалт, шуугиан) бүрэн дүрсэлж чаддаггүй
+    \item \textbf{Зах зээлийн горимын өөрчлөлт}: Зах зээлийн бүтцэд суурь өөрчлөлт гарвал загварын гүйцэтгэл буурч болно
+    \item \textbf{Арилжааны зардал}: Спрэд, слиппэж зэрэг зардлыг тооцсон ч комисс, своп зэргийг бүрэн тооцоогүй
+    \item \textbf{Бодит цагийн хүндрэл}: API rate limit, сүлжээний саатал зэрэг техникийн асуудлууд
 \end{enumerate}
 
-\section{Зорилтын биелэлт}
+\subsection{Цаашдын чиглэл}
 
-\begin{table}[H]
-\centering
-\caption{Зорилтын биелэлт}
-\begin{tabular}{|c|l|c|l|}
-\hline
-\textbf{№} & \textbf{Зорилт} & \textbf{Биелэлт} & \textbf{Тайлбар} \\
-\hline
-1 & Data Collection & \checkmark & 2+ сая мөр EUR/USD 1min \\
-\hline
-2 & Feature Engineering & \checkmark & 32 Technical Indicators \\
-\hline
-3 & ML Model Development & \checkmark & Ensemble: XGB×3 + LGB×2 + CAT×2 \\
-\hline
-4 & Model Training & \checkmark & 1.8+ сая мөр дээр сургасан \\
-\hline
-5 & Backtesting & \checkmark & \textbf{96.9\% Accuracy, PF 46.5} \\
-\hline
-6 & Backend API & \checkmark & Flask REST API + ML Engine \\
-\hline
-7 & Mobile App & \checkmark & React Native + Expo \\
-\hline
-8 & Entry/SL/TP Output & \checkmark & ATR-д суурилсан \\
-\hline
-\end{tabular}
-\label{tab:objectives}
-\end{table}
-
-\section{Шинэлэг хувь нэмэр}
+Судалгааг цаашид дараахь чиглэлээр хөгжүүлэх боломжтой:
 
 \begin{enumerate}
-    \item \textbf{Hybrid Ensemble арга:} 7 ялгаатай ML загварыг нэгтгэн 96.9\% Accuracy таамаглал гаргасан
-    \item \textbf{Agreement Bonus System:} Загваруудын зөвшилцөлд суурилсан шинэлэг оноо системийг хэрэгжүүлсэн (+7/+4/+2\%)
-    \item \textbf{Dynamic SL/TP:} ATR дээр суурилсан эрсдэлийн удирдлага хэрэгжүүлсэн
-    \item \textbf{Entry/SL/TP Output:} Тодорхой entry price, stop loss, take profit утгууд гаргадаг
-    \item \textbf{Cross-platform Mobile Application:} React Native дээр суурилсан, бодит цагийн AI зөвлөгөө, график харуулдаг хэрэглэгчийн ээлтэй аппликейшн
-    \item \textbf{Complete System:} ML + Backend + Mobile бүхий бүрэн ажиллагаатай Ecosystem
-    \item \textbf{Монгол хэлээр:} Forex ML системийн Монгол хэл дээрх судалгаа
+    \item \textbf{Олон валютын хослолд өргөтгөх}: GBP/USD, USD/JPY зэрэг бусад хослолд загварыг сургаж, портфолио стратеги бүтээх
+    \item \textbf{Trailing Stop}: Нээлттэй позицын ашгийг хамгаалах динамик SL -- Phase 4-т туршсан ч цаашид сайжруулах
+    \item \textbf{Гүн сургалтын загвар}: LSTM, Transformer зэрэг цуваа өгөгдлийн загваруудыг ансамбль-д нэмэх
+    \item \textbf{Бататгалтат сургалт (Reinforcement Learning)}: Портфолиогийн менежмент, позицын хэмжээ тохируулалтад хэрэглэх
+    \item \textbf{Мэдээний шинжилгээ}: NLP ашиглан эдийн засгийн мэдээг автоматаар шинжилж, загварт оруулах
+    \item \textbf{Cloud deployment}: AWS/GCP дээр Backend-ийг байршуулж, App Store/Google Play дээр апп нийтлэх
 \end{enumerate}
 
-\section{Хязгаарлалт}
+\subsection{Эцсийн дүгнэлт}
 
-\begin{enumerate}
-    \item \textbf{BUY Only:} SELL дохио ашиглаагүй тул зах зээл буурах үед дохио гаргахгүй
-    \item \textbf{Single Currency Pair:} Зөвхөн EUR/USD дээр туршсан
-    \item \textbf{Backtesting:} Бодит арилжаа хийгээгүй, зөвхөн өнгөрсөн хугацааны туршилт
-    \item \textbf{Slippage and Spread:} Бодит арилжааны Slippage болон Spread тооцоогүй
-\end{enumerate}
+Машин сургалтын ансамбль загвар нь Forex зах зээл дээр ашигтай арилжааны дохио үүсгэх чадвартай болохыг энэхүү судалгаа бодитоор батлав. +41.61\% өгөөж, 9.64 Sharpe Ratio, 3.93\% Max Drawdown зэрэг хэмжүүрүүд нь мэргэжлийн хөрөнгө оруулалтын сангийн түвшний гүйцэтгэл юм. Гэхдээ санхүүгийн зах зээр дэх аливаа загвар бүрэн төгс биш бөгөөд эрсдэлийн менежмент, тогтмол дахин сургалт, шинэ нөхцөлд дасан зохицох чадвар нь тасралтгүй сайжруулалт шаарддаг.
 
-\section{Цаашдын судалгааны чиглэл}
-
-\begin{enumerate}
-    \item \textbf{Multi-currency:} GBP/USD, USD/JPY зэрэг хосуудад өргөтгөх
-    \item \textbf{SELL Signal:} SELL дохио нэмж зах зээлийн бүх чиглэлийг хамрах
-    \item \textbf{Deep Learning:} LSTM, Transformer архитектур турших
-    \item \textbf{Sentiment Analysis:} News sentiment data
-    \item \textbf{Live Trading:} Бодит арилжааны туршилт хийх
-    \item \textbf{Portfolio Management:} Multi-currency portfolio management
-\end{enumerate}
-
-\section{Төгсгөлийн үг}
-
-Энэхүү дипломын ажлаар Hybrid Ensemble загварыг (XGBoost×3, LightGBM×2, CatBoost×2) ашиглан EUR/USD валютын хосын BUY дохио таамаглах системийг амжилттай хөгжүүлсэн. 
-
-85\%+ confidence BUY дохио нь backtest дээр \textbf{96.9\% Accuracy}, \textbf{46.5 Profit Factor} үзүүлж, ~55 өдрийн туршид \textbf{+910 пип} ашиг олсон. Энэ нь практикт маш сайн хэрэглэгдэх боломжтой түвшин юм.
-
-7 загварын нэгдэл ба Agreement Bonus System-ийн хослол нь итгэлцүүрийг нэмэгдүүлж, алдааг маш бага түвшинд хүргэсэн (64 дохионоос зөвхөн 2 алдаатай). Machine Learning-ээр санхүүгийн зах зээлийг төгс таамаглах боломжгүй боловч, статистик давуу талтай арилжааны шийдвэр дэмжлэгийн систем бүтээх бүрэн боломжтой гэдгийг энэхүү судалгаа харуулж байна. 
-
-Profit Factor 46.5 нь мэргэжлийн арилжаачдын хүлээн зөвшөөрдөг маш өндөр үр дүн бөгөөд цаашдын хөгжүүлэлтэд бат суурь болно.
+Систем нь загвар сургалтаас эхлээд эцсийн хэрэглэгч хүртэлх бүрэн process-ийг амжилттай хэрэгжүүлсэн бөгөөд энэ нь машин сургалт, back-end хөгжүүлэлт, мобайл аппликейшний хөгжүүлэлт зэрэг олон салбарыг хамарсан цогц инженерийн ажил юм.

@@ -1,24 +1,20 @@
-\babel@toc {mongolian}{}\relax 
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {3.1}{\ignorespaces Data Time Range}}{11}{table.caption.72}%
-\contentsline {table}{\numberline {3.2}{\ignorespaces Target Variable Parameters}}{15}{table.caption.126}%
-\contentsline {table}{\numberline {3.3}{\ignorespaces Agreement Bonus System}}{18}{table.caption.141}%
-\contentsline {table}{\numberline {3.4}{\ignorespaces Ensemble Model Hyperparameters}}{18}{table.caption.146}%
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {4.1}{\ignorespaces Өгөгдлийн статистик}}{23}{table.caption.172}%
-\contentsline {table}{\numberline {4.2}{\ignorespaces Сургалтын өгөгдлийн статистик}}{24}{table.caption.178}%
-\contentsline {table}{\numberline {4.3}{\ignorespaces Confidence түвшин бүрийн BUY дохионы дэлгэрэнгүй гүйцэтгэл}}{25}{table.caption.183}%
-\contentsline {table}{\numberline {4.4}{\ignorespaces Динамик SL/TP тохиргоо}}{26}{table.caption.188}%
-\contentsline {table}{\numberline {4.5}{\ignorespaces 85\%+ Confidence Level Backtest Statistics}}{26}{table.caption.190}%
-\contentsline {table}{\numberline {4.6}{\ignorespaces Configuration Comparison}}{27}{table.caption.193}%
-\contentsline {table}{\numberline {4.7}{\ignorespaces System Performance Metrics}}{27}{table.caption.196}%
-\contentsline {table}{\numberline {4.8}{\ignorespaces Proposed Method vs Baseline Comparison}}{28}{table.caption.205}%
+\contentsline {table}{\numberline {4.1}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces Өгөгдлийн хэмжээний хураангуй}}{9}{table.caption.62}%
+\contentsline {table}{\numberline {4.2}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces Шинж чанарын жагсаалт (интервал бүрд)}}{10}{table.caption.64}%
+\contentsline {table}{\numberline {4.3}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces Walk-Forward Validation -- өгөгдлийн хуваалт}}{10}{table.caption.68}%
+\contentsline {table}{\numberline {4.4}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces Загвар бүрийн гол гиперпараметрүүд}}{11}{table.caption.71}%
+\contentsline {table}{\numberline {4.5}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces EA-ийн тохиргооны параметрүүд}}{13}{table.caption.92}%
+\contentsline {table}{\numberline {4.6}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces Backend технологийн стек}}{13}{table.caption.96}%
+\contentsline {table}{\numberline {4.7}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces Гол API endpoint-ууд}}{14}{table.caption.98}%
+\contentsline {table}{\numberline {4.8}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces Мобайл аппликейшний технологийн стек}}{14}{table.caption.108}%
+\contentsline {table}{\numberline {4.9}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces Хөгжүүлэлтийн үе шатууд}}{15}{table.caption.112}%
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {5.1}{\ignorespaces Developed Method (85\%+ confidence) BUY дохионы гүйцэтгэл}}{30}{table.caption.216}%
-\contentsline {table}{\numberline {5.2}{\ignorespaces Зорилтын биелэлт}}{30}{table.caption.224}%
-\contentsline {table}{\numberline {5.3}{\ignorespaces Labeling Parameters}}{36}{table.caption.249}%
-\contentsline {table}{\numberline {5.4}{\ignorespaces XGBoost Hyperparameters}}{36}{table.caption.250}%
-\contentsline {table}{\numberline {5.5}{\ignorespaces LightGBM Hyperparameters}}{37}{table.caption.251}%
-\contentsline {table}{\numberline {5.6}{\ignorespaces CatBoost Hyperparameters}}{37}{table.caption.252}%
+\contentsline {table}{\numberline {5.1}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces Загварын нарийвчлалын хэмжүүрүүд}}{16}{table.caption.117}%
+\contentsline {table}{\numberline {5.2}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces Загвар бүрийн шинж чанар}}{16}{table.caption.119}%
+\contentsline {table}{\numberline {5.3}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces MetaTrader 5 бэктестийн дүн (Phase 7B)}}{17}{table.caption.122}%
+\contentsline {table}{\numberline {5.4}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces Phase 6B ба Phase 7B-ийн харьцуулалт}}{21}{table.caption.139}%
+\contentsline {table}{\numberline {5.5}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces Бенчмарк харьцуулалт}}{22}{table.caption.142}%
+\contentsline {table}{\numberline {5.6}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces 2025 оны дохионы жишээ}}{28}{table.caption.270}%
