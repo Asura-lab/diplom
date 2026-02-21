@@ -6,86 +6,80 @@
 \contentsline {chapter}{Товчилсон үгсийн жагсаалт}{iii}{dummy.4}%
 \contentsline {chapter}{Хүснэгтийн жагсаалт}{iv}{dummy.6}%
 \contentsline {chapter}{Зургийн жагсаалт}{v}{dummy.8}%
-\contentsline {chapter}{Оршил}{1}{dummy.10}%
-\contentsline {chapter}{\numberline {1}Ажлын төлөвлөгөө}{3}{chapter.20}%
-\contentsline {chapter}{\numberline {2}Удиртгал}{4}{chapter.22}%
-\contentsline {section}{\numberline {2.1}Ажлын бүтэц ба агуулга}{4}{section.23}%
-\contentsline {chapter}{\numberline {3}Судалгааны сэдвийн онол, өнөөгийн түвшин}{5}{chapter.24}%
-\contentsline {section}{\numberline {3.1}Онолын хэсэг}{5}{section.25}%
-\contentsline {subsection}{\numberline {3.1.1}Валютын зах зээлийн тухай ойлголт}{5}{subsection.26}%
-\contentsline {section}{\numberline {3.2}Техник шинжилгээний үндэс}{5}{section.27}%
-\contentsline {subsection}{\numberline {3.2.1}Хөдөлгөөнт дунджууд (Moving Averages)}{5}{subsection.28}%
-\contentsline {subsection}{\numberline {3.2.2}Relative Strength Index (RSI)}{5}{subsection.31}%
-\contentsline {subsection}{\numberline {3.2.3}MACD (Moving Average Convergence Divergence)}{5}{subsection.33}%
-\contentsline {subsection}{\numberline {3.2.4}Average True Range (ATR)}{6}{subsection.37}%
-\contentsline {subsection}{\numberline {3.2.5}Bollinger Bands}{6}{subsection.40}%
-\contentsline {subsection}{\numberline {3.2.6}ADX (Average Directional Index)}{6}{subsection.42}%
-\contentsline {section}{\numberline {3.3}Машин сургалтын ансамбль аргууд}{6}{section.43}%
-\contentsline {subsection}{\numberline {3.3.1}Gradient Boosted Decision Trees (GBDT)}{6}{subsection.44}%
-\contentsline {subsection}{\numberline {3.3.2}XGBoost}{6}{subsection.46}%
-\contentsline {subsection}{\numberline {3.3.3}LightGBM}{7}{subsection.47}%
-\contentsline {subsection}{\numberline {3.3.4}CatBoost}{7}{subsection.48}%
-\contentsline {subsection}{\numberline {3.3.5}Ансамбль стратеги}{7}{subsection.49}%
-\contentsline {section}{\numberline {3.4}Ижил төрлийн судалгаа}{7}{section.51}%
-\contentsline {subsection}{\numberline {3.4.1}Машин сургалт ба Forex таамаглал}{7}{subsection.52}%
-\contentsline {subsection}{\numberline {3.4.2}Ансамбль аргуудын санхүүгийн хэрэглээ}{7}{subsection.53}%
-\contentsline {subsection}{\numberline {3.4.3}Walk-Forward Validation}{8}{subsection.54}%
-\contentsline {subsection}{\numberline {3.4.4}Мобайл арилжааны технологи}{8}{subsection.55}%
-\contentsline {section}{\numberline {3.5}Бүлгийн дүгнэлт}{8}{section.56}%
-\contentsline {chapter}{\numberline {4}Судалгааны арга зүй}{9}{chapter.57}%
-\contentsline {section}{\numberline {4.1}Системийн ерөнхий архитектур}{9}{section.58}%
-\contentsline {section}{\numberline {4.2}Өгөгдлийн бэлтгэл}{9}{section.60}%
-\contentsline {subsection}{\numberline {4.2.1}Түүхэн өгөгдөл}{9}{subsection.61}%
-\contentsline {subsection}{\numberline {4.2.2}Шинж чанарын инженерчлэл (Feature Engineering)}{9}{subsection.63}%
-\contentsline {subsection}{\numberline {4.2.3}Шошго (Label) үүсгэх}{10}{subsection.65}%
-\contentsline {subsection}{\numberline {4.2.4}Өгөгдлийн хуваалт -- Walk-Forward Validation}{10}{subsection.67}%
-\contentsline {section}{\numberline {4.3}Загварын бүтэц ба сургалт}{11}{section.69}%
-\contentsline {subsection}{\numberline {4.3.1}Ансамбль загварын бүтэц}{11}{subsection.70}%
-\contentsline {subsection}{\numberline {4.3.2}Overfitting-аас сэргийлэх арга хэмжээ}{11}{subsection.73}%
-\contentsline {subsection}{\numberline {4.3.3}Сургалтын алгоритм}{11}{subsection.80}%
-\contentsline {section}{\numberline {4.4}Дохио үүсгэх систем}{12}{section.82}%
-\contentsline {subsection}{\numberline {4.4.1}Дохионы шүүлтүүр}{12}{subsection.83}%
-\contentsline {subsection}{\numberline {4.4.2}Stop Loss ба Take Profit тооцоолол}{12}{subsection.85}%
-\contentsline {subsection}{\numberline {4.4.3}Эрсдэлийн менежмент}{12}{subsection.88}%
-\contentsline {section}{\numberline {4.5}MetaTrader 5 бэктест}{13}{section.90}%
-\contentsline {subsection}{\numberline {4.5.1}Expert Advisor (EA) бүтэц}{13}{subsection.91}%
-\contentsline {subsection}{\numberline {4.5.2}Бэктестийн нөхцөл}{13}{subsection.93}%
-\contentsline {section}{\numberline {4.6}Backend API хөгжүүлэлт}{13}{section.94}%
-\contentsline {subsection}{\numberline {4.6.1}Технологийн стек}{13}{subsection.95}%
-\contentsline {subsection}{\numberline {4.6.2}API Endpoint-ууд}{13}{subsection.97}%
-\contentsline {subsection}{\numberline {4.6.3}Бодит цагийн мэдээлэл}{14}{subsection.99}%
-\contentsline {subsection}{\numberline {4.6.4}Дохио үүсгэх урсгал (Signal Generation Flow)}{14}{subsection.100}%
-\contentsline {section}{\numberline {4.7}Мобайл аппликейшн хөгжүүлэлт}{14}{section.106}%
-\contentsline {subsection}{\numberline {4.7.1}Технологийн стек}{14}{subsection.107}%
-\contentsline {subsection}{\numberline {4.7.2}Аппликейшний бүтэц}{14}{subsection.109}%
-\contentsline {subsection}{\numberline {4.7.3}Бодит цагийн өгөгдлийн менежмент}{15}{subsection.110}%
-\contentsline {section}{\numberline {4.8}Хөгжүүлэлтийн үе шатууд}{15}{section.111}%
-\contentsline {section}{\numberline {4.9}Бүлгийн дүгнэлт}{15}{section.113}%
-\contentsline {chapter}{\numberline {5}Судалгааны үр дүн, дүгнэлт}{16}{chapter.114}%
-\contentsline {section}{\numberline {5.1}Загварын сургалтын үр дүн}{16}{section.115}%
-\contentsline {subsection}{\numberline {5.1.1}Нарийвчлалын хэмжүүрүүд}{16}{subsection.116}%
-\contentsline {subsection}{\numberline {5.1.2}Загвар бүрийн хувь нэмэр}{16}{subsection.118}%
-\contentsline {section}{\numberline {5.2}Бэктестийн дүн}{16}{section.120}%
-\contentsline {subsection}{\numberline {5.2.1}Ерөнхий гүйцэтгэл}{16}{subsection.121}%
-\contentsline {subsection}{\numberline {5.2.2}Equity муруй}{17}{subsection.123}%
-\contentsline {subsection}{\numberline {5.2.3}Сарын гүйцэтгэл}{18}{subsection.125}%
-\contentsline {subsection}{\numberline {5.2.4}Уналтын (Drawdown) шинжилгээ}{18}{subsection.127}%
-\contentsline {section}{\numberline {5.3}Гүйцэтгэлийн гүнзгий шинжилгээ}{19}{section.129}%
-\contentsline {subsection}{\numberline {5.3.1}Эрсдэлийн хэмжүүрүүд}{19}{subsection.130}%
-\contentsline {subsection}{\numberline {5.3.2}Итгэлцэл ба нарийвчлалын хамаарал}{19}{subsection.132}%
-\contentsline {subsection}{\numberline {5.3.3}Шинж чанарын ач холбогдол (Feature Importance)}{20}{subsection.134}%
-\contentsline {section}{\numberline {5.4}Хөгжүүлэлтийн үе шатуудын харьцуулалт}{21}{section.136}%
-\contentsline {subsection}{\numberline {5.4.1}Phase 6B ба Phase 7B-ийн харьцуулалт}{21}{subsection.137}%
-\contentsline {subsection}{\numberline {5.4.2}Бенчмарк харьцуулалт}{22}{subsection.141}%
-\contentsline {section}{\numberline {5.5}Overfitting шинжилгээ}{22}{section.143}%
-\contentsline {section}{\numberline {5.6}Мобайл аппликейшний ажиллагаа}{23}{section.149}%
-\contentsline {section}{\numberline {5.7}Дүгнэлт}{23}{section.156}%
-\contentsline {subsection}{\numberline {5.7.1}Судалгааны гол үр дүн}{23}{subsection.157}%
-\contentsline {subsection}{\numberline {5.7.2}Судалгааны шинэлэг тал}{23}{subsection.162}%
-\contentsline {subsection}{\numberline {5.7.3}Хязгаарлалт}{24}{subsection.163}%
-\contentsline {subsection}{\numberline {5.7.4}Цаашдын чиглэл}{24}{subsection.169}%
-\contentsline {subsection}{\numberline {5.7.5}Эцсийн дүгнэлт}{24}{subsection.176}%
-\contentsline {chapter}{Ном зүй}{24}{dummy.177}%
-\contentsline {chapter}{Хавсралт}{25}{dummy.179}%
-\contentsline {chapter}{Талархал}{28}{dummy.271}%
-\contentsline {chapter}{Товчлол}{29}{dummy.273}%
+\contentsline {chapter}{\numberline {1}Ажлын төлөвлөгөө}{1}{chapter.10}%
+\contentsline {chapter}{\numberline {2}Удиртгал}{2}{chapter.12}%
+\contentsline {section}{\numberline {2.1}Үндэслэл, ач холбогдол}{2}{section.13}%
+\contentsline {section}{\numberline {2.2}Зорилго, зорилт}{2}{section.14}%
+\contentsline {subsection}{\numberline {2.2.1}Судалгааны зорилго}{2}{subsection.15}%
+\contentsline {subsection}{\numberline {2.2.2}Судалгааны зорилтууд}{2}{subsection.16}%
+\contentsline {chapter}{\numberline {3}Судалгааны сэдвийн онол, өнөөгийн түвшин}{3}{chapter.21}%
+\contentsline {section}{\numberline {3.1}Forex зах зээлийн таамаглалд машин сургалтыг хэрэглэсэн судалгаанууд}{3}{section.22}%
+\contentsline {subsection}{\numberline {3.1.1}Уламжлалт машин сургалтын аргууд}{3}{subsection.23}%
+\contentsline {subsection}{\numberline {3.1.2}Гүн сургалтын аргууд}{3}{subsection.24}%
+\contentsline {subsection}{\numberline {3.1.3}Gradient Boosted Decision Trees санхүүгийн таамаглалд}{3}{subsection.25}%
+\contentsline {subsection}{\numberline {3.1.4}Ансамбль аргуудын санхүүгийн хэрэглээ}{4}{subsection.26}%
+\contentsline {section}{\numberline {3.2}Техник шинжилгээний индикаторуудын судалгаа}{4}{section.27}%
+\contentsline {subsection}{\numberline {3.2.1}Индикаторын үр дүнтэй байдлын харьцуулалт}{4}{subsection.28}%
+\contentsline {subsection}{\numberline {3.2.2}Индикаторуудын хослуулалт ба feature engineering}{4}{subsection.29}%
+\contentsline {section}{\numberline {3.3}Walk-Forward Validation ба санхүүгийн цаг хугацааны цуваа}{5}{section.30}%
+\contentsline {section}{\numberline {3.4}Forex арилжааны аппликейшн ба технологийн хэрэгжүүлэлт}{5}{section.31}%
+\contentsline {subsection}{\numberline {3.4.1}Мобайл арилжааны технологи}{5}{subsection.32}%
+\contentsline {subsection}{\numberline {3.4.2}Backend технологи ба API design}{5}{subsection.33}%
+\contentsline {section}{\numberline {3.5}Судалгааны gap ба энэхүү ажлын хувь нэмэр}{5}{section.34}%
+\contentsline {section}{\numberline {3.6}Бүлгийн дүгнэлт}{6}{section.40}%
+\contentsline {chapter}{\numberline {4}Судалгааны арга зүй}{7}{chapter.41}%
+\contentsline {section}{\numberline {4.1}Системийн ерөнхий архитектур}{7}{section.42}%
+\contentsline {section}{\numberline {4.2}Өгөгдлийн бэлтгэл}{7}{section.44}%
+\contentsline {subsection}{\numberline {4.2.1}Түүхэн өгөгдөл}{7}{subsection.45}%
+\contentsline {subsection}{\numberline {4.2.2}Шинж чанарын инженерчлэл (Feature Engineering)}{7}{subsection.47}%
+\contentsline {subsection}{\numberline {4.2.3}Шошго (Label) үүсгэх}{8}{subsection.49}%
+\contentsline {subsection}{\numberline {4.2.4}Өгөгдлийн хуваалт -- Walk-Forward Validation}{8}{subsection.51}%
+\contentsline {section}{\numberline {4.3}Загварын бүтэц ба сургалт}{9}{section.53}%
+\contentsline {subsection}{\numberline {4.3.1}Ансамбль загварын бүтэц}{9}{subsection.54}%
+\contentsline {subsection}{\numberline {4.3.2}Overfitting-аас сэргийлэх арга хэмжээ}{9}{subsection.57}%
+\contentsline {subsection}{\numberline {4.3.3}Сургалтын алгоритм}{9}{subsection.64}%
+\contentsline {section}{\numberline {4.4}Дохио үүсгэх систем}{10}{section.66}%
+\contentsline {subsection}{\numberline {4.4.1}Дохионы шүүлтүүр}{10}{subsection.67}%
+\contentsline {subsection}{\numberline {4.4.2}Stop Loss ба Take Profit тооцоолол}{10}{subsection.69}%
+\contentsline {subsection}{\numberline {4.4.3}Эрсдэлийн менежмент}{10}{subsection.72}%
+\contentsline {section}{\numberline {4.5}MetaTrader 5 бэктест}{11}{section.74}%
+\contentsline {subsection}{\numberline {4.5.1}Expert Advisor (EA) бүтэц}{11}{subsection.75}%
+\contentsline {subsection}{\numberline {4.5.2}Бэктестийн нөхцөл}{11}{subsection.77}%
+\contentsline {section}{\numberline {4.6}Backend API хөгжүүлэлт}{11}{section.78}%
+\contentsline {subsection}{\numberline {4.6.1}Технологийн стек}{11}{subsection.79}%
+\contentsline {subsection}{\numberline {4.6.2}API Endpoint-ууд}{11}{subsection.81}%
+\contentsline {subsection}{\numberline {4.6.3}Бодит цагийн мэдээлэл}{12}{subsection.83}%
+\contentsline {subsection}{\numberline {4.6.4}Дохио үүсгэх урсгал (Signal Generation Flow)}{12}{subsection.84}%
+\contentsline {section}{\numberline {4.7}Мобайл аппликейшн хөгжүүлэлт}{12}{section.90}%
+\contentsline {subsection}{\numberline {4.7.1}Технологийн стек}{12}{subsection.91}%
+\contentsline {subsection}{\numberline {4.7.2}Аппликейшний бүтэц}{12}{subsection.93}%
+\contentsline {subsection}{\numberline {4.7.3}Бодит цагийн өгөгдлийн менежмент}{13}{subsection.94}%
+\contentsline {section}{\numberline {4.8}Хөгжүүлэлтийн үе шатууд}{13}{section.95}%
+\contentsline {section}{\numberline {4.9}Бүлгийн дүгнэлт}{13}{section.97}%
+\contentsline {chapter}{\numberline {5}Судалгааны үр дүн, дүгнэлт}{14}{chapter.98}%
+\contentsline {section}{\numberline {5.1}Загварын сургалтын үр дүн}{14}{section.99}%
+\contentsline {subsection}{\numberline {5.1.1}Нарийвчлалын хэмжүүрүүд}{14}{subsection.100}%
+\contentsline {subsection}{\numberline {5.1.2}Загвар бүрийн хувь нэмэр}{14}{subsection.102}%
+\contentsline {section}{\numberline {5.2}Бэктестийн дүн}{14}{section.104}%
+\contentsline {subsection}{\numberline {5.2.1}Ерөнхий гүйцэтгэл}{14}{subsection.105}%
+\contentsline {subsection}{\numberline {5.2.2}Equity муруй}{15}{subsection.107}%
+\contentsline {subsection}{\numberline {5.2.3}Сарын гүйцэтгэл}{16}{subsection.109}%
+\contentsline {subsection}{\numberline {5.2.4}Уналтын (Drawdown) шинжилгээ}{16}{subsection.111}%
+\contentsline {section}{\numberline {5.3}Гүйцэтгэлийн гүнзгий шинжилгээ}{17}{section.113}%
+\contentsline {subsection}{\numberline {5.3.1}Эрсдэлийн хэмжүүрүүд}{17}{subsection.114}%
+\contentsline {subsection}{\numberline {5.3.2}Итгэлцэл ба нарийвчлалын хамаарал}{17}{subsection.116}%
+\contentsline {subsection}{\numberline {5.3.3}Шинж чанарын ач холбогдол (Feature Importance)}{18}{subsection.118}%
+\contentsline {section}{\numberline {5.4}Хөгжүүлэлтийн үе шатуудын харьцуулалт}{19}{section.120}%
+\contentsline {subsection}{\numberline {5.4.1}Phase 6B ба Phase 7B-ийн харьцуулалт}{19}{subsection.121}%
+\contentsline {subsection}{\numberline {5.4.2}Бенчмарк харьцуулалт}{20}{subsection.125}%
+\contentsline {section}{\numberline {5.5}Overfitting шинжилгээ}{20}{section.127}%
+\contentsline {section}{\numberline {5.6}Мобайл аппликейшний ажиллагаа}{21}{section.133}%
+\contentsline {section}{\numberline {5.7}Дүгнэлт}{21}{section.140}%
+\contentsline {subsection}{\numberline {5.7.1}Судалгааны гол үр дүн}{21}{subsection.141}%
+\contentsline {subsection}{\numberline {5.7.2}Судалгааны шинэлэг тал}{21}{subsection.146}%
+\contentsline {subsection}{\numberline {5.7.3}Хязгаарлалт}{22}{subsection.147}%
+\contentsline {subsection}{\numberline {5.7.4}Цаашдын чиглэл}{22}{subsection.153}%
+\contentsline {subsection}{\numberline {5.7.5}Эцсийн дүгнэлт}{22}{subsection.160}%
+\contentsline {chapter}{Ном зүй}{22}{dummy.161}%
+\contentsline {chapter}{Хавсралт}{25}{dummy.164}%
+\contentsline {chapter}{Талархал}{28}{dummy.256}%

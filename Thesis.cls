@@ -33,7 +33,7 @@
 \usepackage{mathrsfs}
 \usepackage{blindtext}
 \usepackage{titlepic}
-\usepackage[round]{natbib}
+\usepackage[numbers,square,sort&compress]{natbib}
 %\usepackage{acronym} 
 \usepackage{lmodern}
 \usepackage{longtable}
@@ -53,6 +53,14 @@
 %\onehalfspacing
 \setlength{\parindent}{1.25cm}
 \setlength{\parskip}{6pt plus1pt minus1pt}
+
+% Текстийг хоёр талаас тэгшлэх тохиргоо
+\tolerance=1000
+\emergencystretch=3em
+\hyphenpenalty=1000
+\widowpenalty=10000
+\clubpenalty=10000
+
 \usepackage{vmargin}
 \setmarginsrb               { 25mm}  % left margin
                             { 20mm}  % top margin

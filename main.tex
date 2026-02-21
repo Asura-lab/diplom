@@ -7,7 +7,6 @@
 \setdefaultlanguage{mongolian}
 \setotherlanguage{english}
 \usepackage{wrapfig}
-\usepackage{ragged2e}
 \usepackage{multirow}
 \usepackage{amssymb}
 \usepackage{indentfirst}
@@ -43,6 +42,7 @@
 }
 
 \begin{document}
+\frenchspacing
 \captionsetup{labelfont=bf, textfont=it}
 \pagenumbering{roman}
 \pagestyle{fancy}
@@ -85,17 +85,12 @@
 \listoffig
 
 %---------
-%	Оршил (1-р хуудас)
+%	Үндсэн хэсэг
 %---------
+
 \newpage
 \pagenumbering{arabic}
 \setcounter{page}{1}
-\justifying
-\input{Chapters/Orshil}
-
-%---------
-%	Үндсэн хэсэг
-%---------
 
 % 1-р бүлэг: Ажлын төлөвлөгөө
 \input{Chapters/plan}
@@ -127,10 +122,5 @@
 %	Талархал
 %---------
 \input{Chapters/Talarhal}
-
-%---------
-%	Товчлол
-%---------
-\input{Chapters/Tovchlol}
 
 \end{document}

@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999997 (MiKTeX 25.4) (preloaded format=xelatex 2025.12.1)  13 FEB 2026 00:21
+This is XeTeX, Version 3.141592653-2.6-0.999997 (MiKTeX 25.4) (preloaded format=xelatex 2025.12.1)  16 FEB 2026 22:42
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -728,7 +728,7 @@ Package: vmargin 2004/07/15 V2.5 set document margins (VK)
 \PaperWidth=\dimen280
 \PaperHeight=\dimen281
 )
-Package hyperref Info: Option `colorlinks' set `true' on input line 69.
+Package hyperref Info: Option `colorlinks' set `true' on input line 77.
 \c@dummy=\count378
 ) (C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/latex/fontspec\fontspec.sty
 (C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/latex/l3packages/xparse\xparse
@@ -915,28 +915,11 @@ File: gloss-english.ldf polyglossia: module for English
 \WF@everypar=\toks43
 Package: wrapfig 2003/01/31  v 3.6
 )
-(C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/latex/ragged2e\ragged2e.sty
-Package: ragged2e 2023/06/22 v3.6 ragged2e Package
-\CenteringLeftskip=\skip121
-\RaggedLeftLeftskip=\skip122
-\RaggedRightLeftskip=\skip123
-\CenteringRightskip=\skip124
-\RaggedLeftRightskip=\skip125
-\RaggedRightRightskip=\skip126
-\CenteringParfillskip=\skip127
-\RaggedLeftParfillskip=\skip128
-\RaggedRightParfillskip=\skip129
-\JustifyingParfillskip=\skip130
-\CenteringParindent=\skip131
-\RaggedLeftParindent=\skip132
-\RaggedRightParindent=\skip133
-\JustifyingParindent=\skip134
-)
 (C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/latex/multirow\multirow.sty
 Package: multirow 2024/11/12 v2.9 Span multiple rows of a table
-\multirow@colwidth=\skip135
+\multirow@colwidth=\skip121
 \multirow@cntb=\count395
-\multirow@dima=\skip136
+\multirow@dima=\skip122
 \bigstrutjot=\dimen287
 )
 (C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/latex/tools\indentfirst.sty
@@ -956,8 +939,8 @@ Package: multicol 2025/10/21 v2.0b multicolumn formatting (FMi)
 \page@free=\dimen290
 \premulticols=\dimen291
 \postmulticols=\dimen292
-\multicolsep=\skip137
-\multicolbaselineskip=\skip138
+\multicolsep=\skip123
+\multicolbaselineskip=\skip124
 \partial@page=\box82
 \last@line=\box83
 \mc@boxedresult=\box84
@@ -1342,7 +1325,7 @@ File: tikzlibrarytopaths.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 (C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/latex/colortbl\colortbl.sty
 Package: colortbl 2024/10/29 v1.0k Color table columns (DPC)
 \everycr=\toks56
-\minrowclearance=\skip139
+\minrowclearance=\skip125
 \rownum=\count429
 )
 (C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tikz
@@ -1577,26 +1560,26 @@ text;"
  (main.aux)
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 45.
-LaTeX Font Info:    ... okay on input line 45.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 45.
-LaTeX Font Info:    ... okay on input line 45.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 45.
-LaTeX Font Info:    ... okay on input line 45.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 45.
-LaTeX Font Info:    ... okay on input line 45.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 45.
-LaTeX Font Info:    ... okay on input line 45.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 45.
-LaTeX Font Info:    ... okay on input line 45.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 45.
-LaTeX Font Info:    ... okay on input line 45.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 45.
-LaTeX Font Info:    ... okay on input line 45.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 45.
-LaTeX Font Info:    ... okay on input line 45.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 45.
-LaTeX Font Info:    ... okay on input line 45.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 44.
+LaTeX Font Info:    ... okay on input line 44.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 44.
+LaTeX Font Info:    ... okay on input line 44.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 44.
+LaTeX Font Info:    ... okay on input line 44.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 44.
+LaTeX Font Info:    ... okay on input line 44.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 44.
+LaTeX Font Info:    ... okay on input line 44.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 44.
+LaTeX Font Info:    ... okay on input line 44.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 44.
+LaTeX Font Info:    ... okay on input line 44.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 44.
+LaTeX Font Info:    ... okay on input line 44.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 44.
+LaTeX Font Info:    ... okay on input line 44.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 44.
+LaTeX Font Info:    ... okay on input line 44.
 \c@lstlisting=\count439
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: float package is loaded.
@@ -1610,7 +1593,7 @@ Package caption Info: threeparttable package is loaded.
 Package caption Info: wrapfig package is loaded.
 Package caption Info: End \AtBeginDocument code.
 Package translations Info: no dictionary file `translations-basic-dictionary-mo
-ngolian.trsl' found. on input line 45.
+ngolian.trsl' found. on input line 44.
 
 (C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/latex/translations/dicts\trans
 lations-basic-dictionary-english.trsl
@@ -1618,8 +1601,8 @@ File: translations-basic-dictionary-english.trsl (english translation file `tra
 nslations-basic-dictionary')
 )
 Package translations Info: loading dictionary `translations-basic-dictionary' f
-or `english'. on input line 45.
-Package hyperref Info: Link coloring ON on input line 45.
+or `english'. on input line 44.
+Package hyperref Info: Link coloring ON on input line 44.
  (main.out) (main.out)
 \@outlinefile=\write4
 \openout4 = `main.out'.
@@ -1679,23 +1662,18 @@ LaTeX Font Info:    Trying to load font information for U+rsfs on input line 13
 (C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/latex/jknappen\ursfs.fd
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 )
-Underfull \hbox (badness 10000) in paragraph at lines 26--26
- [][]\TU/TimesNewRoman(1)/m/n/10.95 s21c033b
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 27--27
- [][]\TU/TimesNewRoman(1)/m/n/10.95 Мөнхсүлд МӨНХДОРЖ
- []
-
-
-Overfull \hbox (3.97859pt too wide) in paragraph at lines 39--40
+Overfull \hbox (3.97859pt too wide) in paragraph at lines 38--40
 [] 
  []
 
 
-Overfull \hbox (3.64708pt too wide) in paragraph at lines 44--45
+Overfull \hbox (3.64708pt too wide) in paragraph at lines 44--46
 [][] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 44--46
+
  []
 
 [1
@@ -1733,9 +1711,7 @@ Overfull \hbox (3.64708pt too wide) in paragraph at lines 44--45
 
  [5
 
-] (Chapters/Orshil.tex [1
-
-]) (Chapters/plan.tex [2]
+] (Chapters/plan.tex
 Бүлэг 1.
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <10> on input line 13.
@@ -1743,17 +1719,23 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <7> on input line 13.
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <5> on input line 13.
-) (Chapters/Chapter1_Introduction.tex [3
+) (Chapters/Chapter1_Introduction.tex [1
 
 ]
 Бүлэг 2.
-) (Chapters/Chapter2_Literature.tex [4
+) (Chapters/Chapter2_Literature.tex [2
 
 ]
 Бүлэг 3.
-[5
+[3
 
-] [6] [7]) (Chapters/Chapter3_Methodology.tex [8]
+] [4] [5]
+Underfull \hbox (badness 1540) in paragraph at lines 113--114
+[]\TU/TimesNewRoman(1)/m/n/10.95 Энэ бүлэгт Forex зах зээлийн таамаглалд машин 
+сургалтыг хэрэглэсэн судалгаануудыг
+ []
+
+) (Chapters/Chapter3_Methodology.tex [6]
 Бүлэг 4.
 LaTeX Font Info:    Font shape `TU/Consolas(0)/m/n' will be
 (Font)              scaled to size 9.85492pt on input line 94.
@@ -1826,7 +1808,7 @@ Package fontspec Info:
 Package fontspec Info: 
 (fontspec)             Consolas scale = 0.9.
 
-[9
+[7
 
 ]
 
@@ -1841,6 +1823,38 @@ Package fontspec Info:
 Package fontspec Info: 
 (fontspec)             Consolas scale = 0.9.
 
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+ [8]
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on in
+put line 239.
+ [9]
 
 Package fontspec Info: 
 (fontspec)             Consolas scale = 0.9.
@@ -1862,46 +1876,14 @@ Package fontspec Info:
 (fontspec)             Consolas scale = 0.9.
 
  [10]
-
-Package fontspec Info: 
-(fontspec)             Consolas scale = 0.9.
-
-
-Package fontspec Info: 
-(fontspec)             Consolas scale = 0.9.
-
-Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on in
-put line 240.
- [11]
-
-Package fontspec Info: 
-(fontspec)             Consolas scale = 0.9.
-
-
-Package fontspec Info: 
-(fontspec)             Consolas scale = 0.9.
-
-
-Package fontspec Info: 
-(fontspec)             Consolas scale = 0.9.
-
-
-Package fontspec Info: 
-(fontspec)             Consolas scale = 0.9.
-
-
-Package fontspec Info: 
-(fontspec)             Consolas scale = 0.9.
-
- [12]
 LaTeX Font Info:    Font shape `TU/Consolas(0)/m/n' will be
-(Font)              scaled to size 8.99994pt on input line 375.
+(Font)              scaled to size 8.99994pt on input line 374.
 
 Package fontspec Info: 
 (fontspec)             Consolas scale = 0.9.
 
 LaTeX Font Info:    Font shape `TU/Consolas(1)/m/n' will be
-(Font)              scaled to size 8.99994pt on input line 375.
+(Font)              scaled to size 8.99994pt on input line 374.
 
 Package fontspec Info: 
 (fontspec)             Consolas scale = 0.9.
@@ -1938,21 +1920,21 @@ Package fontspec Info:
 Package fontspec Info: 
 (fontspec)             Consolas scale = 0.9.
 
- [13]
+ [11]
 
 Package fontspec Info: 
 (fontspec)             Consolas scale = 0.9.
 
- [14]) (Chapters/Chapter4_Results.tex [15]
+ [12]) (Chapters/Chapter4_Results.tex [13]
 Бүлэг 5.
-[16
+[14
 
 ]
 Overfull \hbox (23.0023pt too wide) in paragraph at lines 176--177
  [][] 
  []
 
-[17] [18] [19]
+[15] [16] [17]
 LaTeX Font Info:    Font shape `TU/Consolas(0)/m/n' will be
 (Font)              scaled to size 7.19995pt on input line 350.
 
@@ -2037,28 +2019,23 @@ Package fontspec Info:
 Package fontspec Info: 
 (fontspec)             Consolas scale = 0.9.
 
- [20]
+ [18]
 Package pgfplots info on input line 392: Using 'lua backend=false' for axis: x 
 coord trafo unsupported.
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <9> on input line 460.
- [21] [22]) (Chapters/Chapter5_Conclusion.tex [23])
-(Chapters/Bibliography.tex [24]
+ [19] [20]) (Chapters/Chapter5_Conclusion.tex
+Underfull \hbox (badness 1867) in paragraph at lines 22--23
+[]\TU/TimesNewRoman(1)/b/n/10.95 Overfitting шийдвэрлэлт\TU/TimesNewRoman(1)/m/
+n/10.95 : 7 давталтат хөгжүүлэлтийн үе шатаар загварыг хялбаршуулж
+ []
 
-Package fontspec Info: 
-(fontspec)             Consolas scale = 0.9.
+[21]) (Chapters/Bibliography.tex [22] (main.bbl [23
 
+] [24
 
-Package fontspec Info: 
-(fontspec)             Consolas scale = 0.9.
-
-
-Package fontspec Info: 
-(fontspec)             Consolas scale = 0.9.
-
-) (Chapters/appendix.tex [25
-
-]
+]))
+(Chapters/appendix.tex [25]
 (C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstlang1.sty
 File: lstlang1.sty 2025/11/14 1.11b listings language file
 )
@@ -2105,26 +2082,23 @@ Package fontspec Info:
 (fontspec)             Consolas scale = 0.9.
 
 
-[27]) (Chapters/Talarhal.tex [28]) (Chapters/Tovchlol.tex [29
+[27]) (Chapters/Talarhal.tex [28]) [29
 
-] [30
-
-]) [31]
-(main.aux)
+] (main.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2025-11-06>
  ***********
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 154C3FB059CC9BC60163A664EF247855;7982.
+(rerunfilecheck)             Checksum: 4D56E21C44C582D5FAF800F9F5F4EF29;9344.
  ) 
 Here is how much of TeX's memory you used:
- 48321 strings out of 402987
- 1142598 string characters out of 5448731
- 2139293 words of memory out of 5000000
- 76169 multiletter control sequences out of 15000+600000
+ 48264 strings out of 402987
+ 1141463 string characters out of 5448731
+ 2138509 words of memory out of 5000000
+ 76118 multiletter control sequences out of 15000+600000
  658224 words of font info for 170 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 88i,17n,104p,771b,2517s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 88i,17n,104p,782b,2517s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on main.pdf (38 pages).
+Output written on main.pdf (36 pages).

@@ -1,0 +1,162 @@
+\begin{thebibliography}{10}
+
+\bibitem{BIS2022}
+{Bank for International Settlements}.
+\newblock Triennial central bank survey of foreign exchange and
+  over-the-counter (otc) derivatives markets in 2022.
+\newblock Technical report, Bank for International Settlements, Basel,
+  Switzerland, 2022.
+
+\bibitem{chen2016xgboost}
+Tianqi Chen and Carlos Guestrin.
+\newblock Xgboost: A scalable tree boosting system.
+\newblock In {\em Proceedings of the 22nd ACM SIGKDD International Conference
+  on Knowledge Discovery and Data Mining}, pages 785--794. ACM, 2016.
+
+\bibitem{ke2017lightgbm}
+Guolin Ke, Qi~Meng, Thomas Finley, Taifeng Wang, Wei Chen, Weidong Ma, Qiwei
+  Ye, and Tie-Yan Liu.
+\newblock Lightgbm: A highly efficient gradient boosting decision tree.
+\newblock In {\em Advances in Neural Information Processing Systems},
+  volume~30, pages 3146--3154. NeurIPS, 2017.
+
+\bibitem{kamruzzaman2003forecasting}
+Joarder Kamruzzaman and Ruhul~A Sarker.
+\newblock Forecasting of currency exchange rates using ann: A case study.
+\newblock {\em International Conference on Neural Networks and Signal
+  Processing}, pages 793--797, 2003.
+
+\bibitem{kumar2006forecasting}
+Manish Kumar and M~Thenmozhi.
+\newblock Forecasting stock index movement: A comparison of support vector
+  machines and random forest.
+\newblock {\em Indian Institute of Capital Markets 9th Capital Markets
+  Conference Paper}, 2006.
+\newblock Available at SSRN.
+
+\bibitem{ballings2015evaluating}
+Michel Ballings, Dirk Van~den Poel, Nathalie Hespeels, and Ruben Gryp.
+\newblock Evaluating multiple classifiers for stock price direction prediction.
+\newblock {\em Expert Systems with Applications}, 42(20):7046--7056, 2015.
+
+\bibitem{fischer2018deep}
+Thomas Fischer and Christopher Krauss.
+\newblock Deep learning with long short-term memory networks for financial
+  market predictions.
+\newblock {\em European Journal of Operational Research}, 270(2):654--669,
+  2018.
+
+\bibitem{zhang2019deep}
+Zihao Zhang, Stefan Zohren, and Stephen Roberts.
+\newblock Deep learning for financial time series forecasting: A systematic
+  literature review and future research directions.
+\newblock {\em Applied Soft Computing}, 97, 2019.
+
+\bibitem{krauss2017deep}
+Christopher Krauss, Xuan~Anh Do, and Nicolas Huck.
+\newblock Deep neural networks, gradient-boosted trees, random forests:
+  Statistical arbitrage on the s\&p 500.
+\newblock {\em European Journal of Operational Research}, 259(2):689--702,
+  2017.
+
+\bibitem{friedman2001greedy}
+Jerome~H Friedman.
+\newblock Greedy function approximation: a gradient boosting machine.
+\newblock {\em Annals of statistics}, pages 1189--1232, 2001.
+
+\bibitem{gu2020empirical}
+Shihao Gu, Bryan Kelly, and Dacheng Xiu.
+\newblock Empirical asset pricing via machine learning.
+\newblock {\em The Review of Financial Studies}, 33(5):2223--2273, 2020.
+
+\bibitem{prokhorenkova2018catboost}
+Liudmila Prokhorenkova, Gleb Gusev, Aleksandr Vorobev, Anna~Veronika Dorogush,
+  and Andrey Gulin.
+\newblock Catboost: unbiased boosting with categorical features.
+\newblock In {\em Advances in Neural Information Processing Systems},
+  volume~31, 2018.
+
+\bibitem{dietterich2000ensemble}
+Thomas~G Dietterich.
+\newblock Ensemble methods in machine learning.
+\newblock In {\em International workshop on multiple classifier systems}, pages
+  1--15. Springer, 2000.
+
+\bibitem{breiman2001random}
+Leo Breiman.
+\newblock Random forests.
+\newblock {\em Machine learning}, 45:5--32, 2001.
+
+\bibitem{sezer2020financial}
+Omer~Berat Sezer, Mehmet~Ugur Gudelek, and Ahmet~Murat Ozbayoglu.
+\newblock Financial time series forecasting with deep learning: A systematic
+  literature review: 2005--2019.
+\newblock {\em Applied Soft Computing}, 90:106181, 2020.
+
+\bibitem{murphy1999technical}
+John~J Murphy.
+\newblock Technical analysis of the financial markets: A comprehensive guide to
+  trading methods and applications.
+\newblock {\em New York Institute of Finance}, 1999.
+
+\bibitem{fama1970efficient}
+Eugene~F Fama.
+\newblock Efficient capital markets: A review of theory and empirical work.
+\newblock {\em The Journal of Finance}, 25(2):383--417, 1970.
+
+\bibitem{lo2000foundations}
+Andrew~W Lo, Harry Mamaysky, and Jiang Wang.
+\newblock Foundations of technical analysis: Computational algorithms,
+  statistical inference, and empirical implementation.
+\newblock {\em The Journal of Finance}, 55(4):1705--1765, 2000.
+
+\bibitem{olson2004have}
+Dennis Olson.
+\newblock Have trading rule profits in the currency markets declined over time?
+\newblock {\em Journal of Banking \& Finance}, 28(1):85--105, 2004.
+
+\bibitem{brock1992simple}
+William Brock, Josef Lakonishok, and Blake LeBaron.
+\newblock Simple technical trading rules and the stochastic properties of stock
+  returns.
+\newblock {\em The Journal of Finance}, 47(5):1731--1764, 1992.
+
+\bibitem{marshall2008technical}
+Ben~R Marshall, Rochester~H Cahan, and Jared~M Cahan.
+\newblock Can commodity futures be profitably traded with quantitative market
+  timing strategies?
+\newblock {\em Journal of Banking \& Finance}, 32(9):1810--1819, 2008.
+
+\bibitem{park2007we}
+Cheol-Ho Park and Scott~H Irwin.
+\newblock What do we know about the profitability of technical analysis?
+\newblock {\em Journal of Economic Surveys}, 21(4):786--826, 2007.
+
+\bibitem{pardo2008evaluation}
+Robert Pardo.
+\newblock {\em The evaluation and optimization of trading strategies}.
+\newblock John Wiley \& Sons, 2008.
+
+\bibitem{bailey2014probability}
+David~H Bailey, Jonathan~M Borwein, Marcos Lopez~de Prado, and Qiji~Jim Zhu.
+\newblock The probability of backtest overfitting.
+\newblock {\em Journal of Computational Finance}, 20(4):39--69, 2014.
+
+\bibitem{reactnative}
+{Meta Platforms, Inc.}
+\newblock React native: Learn once, write anywhere, 2023.
+\newblock Accessed: 2024-12-01.
+
+\bibitem{eisenman2018react}
+Bonnie Eisenman.
+\newblock {\em Learning React Native: Building Native Mobile Apps with
+  JavaScript}.
+\newblock O'Reilly Media, 2nd edition, 2018.
+
+\bibitem{fastapi}
+Sebasti\'an Ram\'irez.
+\newblock Fastapi: Modern, fast (high-performance), web framework for building
+  apis with python, 2023.
+\newblock Accessed: 2024-12-01.
+
+\end{thebibliography}
