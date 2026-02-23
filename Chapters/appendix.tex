@@ -57,7 +57,7 @@ MIN_TP_PIPS = 45.0       # Minimum TP: 45 pips
 
 \begin{lstlisting}[language=Python, caption={Flask API -- V10 дохио үүсгэх}, label={lst:api_signal}]
 @app.route('/signal/v2', methods=['GET'])
-def get_signal_v2():
+def get_signal():
     min_confidence = float(
         request.args.get('min_confidence', 85))
     pair = request.args.get('pair', 'EUR/USD')
