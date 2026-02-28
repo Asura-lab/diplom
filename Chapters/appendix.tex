@@ -4,9 +4,9 @@
 
 \section*{A. Загварын код (Python)}
 
-\subsection*{A.1 Шинж чанар тооцоолох функц}
+\subsection*{A.1 Техник индикатор тооцоолох функц}
 
-\begin{lstlisting}[language=Python, caption={Олон хугацааны хүрээний шинж чанар тооцоолол}, label={lst:features}]
+\begin{lstlisting}[language=Python, caption={Олон хугацааны хүрээний техник индикатор тооцоолол}, label={lst:features}]
 def compute_features(df, suffix):
     close = df["close"]
     feats = pd.DataFrame(index=df.index)
@@ -62,9 +62,9 @@ def get_signal():
         request.args.get('min_confidence', 85))
     pair = request.args.get('pair', 'EUR/USD')
     
-    # Historical data (500 bars, 1min)
-    df = get_twelvedata_dataframe(
-        interval="1min", outputsize=500, symbol=pair)
+    # Historical data (800 bars, 1min, yfinance)
+    df = get_yfinance_dataframe(
+        interval="1min", outputsize=800, symbol=pair)
     
     if df is None or len(df) < 200:
         return jsonify({'error': 'rate_limited'}), 429

@@ -153,10 +153,20 @@ Bonnie Eisenman.
   JavaScript}.
 \newblock O'Reilly Media, 2nd edition, 2018.
 
-\bibitem{fastapi}
-Sebasti\'an Ram\'irez.
-\newblock Fastapi: Modern, fast (high-performance), web framework for building
-  apis with python, 2023.
-\newblock Accessed: 2024-12-01.
+\bibitem{grinberg2018flask}
+Miguel Grinberg.
+\newblock {\em Flask Web Development: Developing Web Applications with Python}.
+\newblock O'Reilly Media, 2nd edition, 2018.
+
+\bibitem{hevner2004}
+Alan~R Hevner, Salvatore~T March, Jinsoo Park, and Sudha Ram.
+\newblock Design science in information systems research.
+\newblock {\em MIS Quarterly}, 28(1):75--105, 2004.
+
+\bibitem{peffers2007}
+Ken Peffers, Tuure Tuunanen, Marcus~A Rothenberger, and Samir Chatterjee.
+\newblock A design science research methodology for information systems
+  research.
+\newblock {\em Journal of Management Information Systems}, 24(3):45--77, 2007.
 
 \end{thebibliography}

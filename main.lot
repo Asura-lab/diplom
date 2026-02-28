@@ -2,19 +2,20 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {4.1}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces Өгөгдлийн хэмжээний хураангуй}}{7}{table.caption.46}%
-\contentsline {table}{\numberline {4.2}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces Шинж чанарын жагсаалт (интервал бүрд)}}{8}{table.caption.48}%
-\contentsline {table}{\numberline {4.3}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces Walk-Forward Validation -- өгөгдлийн хуваалт}}{8}{table.caption.52}%
-\contentsline {table}{\numberline {4.4}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces Загвар бүрийн гол гиперпараметрүүд}}{9}{table.caption.55}%
-\contentsline {table}{\numberline {4.5}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces EA-ийн тохиргооны параметрүүд}}{11}{table.caption.76}%
-\contentsline {table}{\numberline {4.6}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces Backend технологийн стек}}{11}{table.caption.80}%
-\contentsline {table}{\numberline {4.7}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces Гол API endpoint-ууд}}{12}{table.caption.82}%
-\contentsline {table}{\numberline {4.8}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces Мобайл аппликейшний технологийн стек}}{12}{table.caption.92}%
-\contentsline {table}{\numberline {4.9}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces Хөгжүүлэлтийн үе шатууд}}{13}{table.caption.96}%
+\contentsline {table}{\numberline {4.1}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces Түүхэн өгөгдлийн хэмжээний хураангуй}}{10}{table.caption.59}%
+\contentsline {table}{\numberline {4.2}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces Техник индикаторын жагсаалт (интервал бүрд)}}{11}{table.caption.61}%
+\contentsline {table}{\numberline {4.3}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces Walk-Forward Validation -- өгөгдлийн хуваалт}}{11}{table.caption.65}%
+\contentsline {table}{\numberline {4.4}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces Загвар бүрийн гол гиперпараметрүүд}}{13}{table.caption.70}%
+\contentsline {table}{\numberline {4.5}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces Expert Advisor-ийн тохиргооны параметрүүд}}{17}{table.caption.98}%
+\contentsline {table}{\numberline {4.6}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces Системийн үнэлгээний шалгуур үзүүлэлтүүд}}{17}{table.caption.101}%
+\contentsline {table}{\numberline {4.7}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces Backend серверийн технологийн стек}}{18}{table.caption.104}%
+\contentsline {table}{\numberline {4.8}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces Гол API endpoint-ууд (бүлгээр)}}{19}{table.caption.106}%
+\contentsline {table}{\numberline {4.9}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces Мобайл аппликейшний технологийн стек}}{20}{table.caption.115}%
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {5.1}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces Загварын нарийвчлалын хэмжүүрүүд}}{14}{table.caption.101}%
-\contentsline {table}{\numberline {5.2}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces Загвар бүрийн шинж чанар}}{14}{table.caption.103}%
-\contentsline {table}{\numberline {5.3}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces MetaTrader 5 бэктестийн дүн (Phase 7B)}}{15}{table.caption.106}%
-\contentsline {table}{\numberline {5.4}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces Phase 6B ба Phase 7B-ийн харьцуулалт}}{19}{table.caption.123}%
-\contentsline {table}{\numberline {5.5}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces Бенчмарк харьцуулалт}}{20}{table.caption.126}%
-\contentsline {table}{\numberline {5.6}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces 2025 оны дохионы жишээ}}{28}{table.caption.255}%
+\contentsline {table}{\numberline {5.1}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces Загварын нарийвчлалын хэмжүүрүүд}}{23}{table.caption.127}%
+\contentsline {table}{\numberline {5.2}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces Загвар бүрийн онцлог}}{23}{table.caption.129}%
+\contentsline {table}{\numberline {5.3}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces MetaTrader 5 backtest-ийн дүн (Phase 7)}}{23}{table.caption.132}%
+\contentsline {table}{\numberline {5.4}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces Эрсдэлийн гол хэмжүүрүүд}}{25}{table.caption.141}%
+\contentsline {table}{\numberline {5.5}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces Phase 6 ба Phase 7-ийн харьцуулалт}}{27}{table.caption.149}%
+\contentsline {table}{\numberline {5.6}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces Бенчмарк харьцуулалт}}{28}{table.caption.152}%
+\contentsline {table}{\numberline {5.7}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces 2025 оны дохионы жишээ}}{35}{table.caption.280}%

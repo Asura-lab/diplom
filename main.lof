@@ -2,14 +2,21 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces Системийн ерөнхий архитектур}}{7}{figure.caption.43}%
-\contentsline {figure}{\numberline {4.2}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces Ансамбль загварын архитектур}}{9}{figure.caption.56}%
+\contentsline {figure}{\numberline {4.1}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces Системийн үндсэн ойлголт -- өгөгдлөөс трейдер хүртэлх урсгал}}{8}{figure.caption.50}%
+\contentsline {figure}{\numberline {4.2}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces Системийн гурван давхаргат бүтэц}}{9}{figure.caption.51}%
+\contentsline {figure}{\numberline {4.3}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces Өгөгдлийн урсгалын диаграмм (Data Flow Diagram)}}{9}{figure.caption.56}%
+\contentsline {figure}{\numberline {4.4}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces Walk-Forward Validation -- цаг хугацааны дарааллыг хадгалсан өгөгдлийн хуваалт}}{12}{figure.caption.66}%
+\contentsline {figure}{\numberline {4.5}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces GBDT ансамбль загварын архитектур}}{13}{figure.caption.69}%
+\contentsline {figure}{\numberline {4.6}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces Дохионы шүүлтүүрийн юүлүүр диаграмм -- 359,639 таамгаас 1,065 чанартай дохио}}{15}{figure.caption.82}%
+\contentsline {figure}{\numberline {4.7}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces Дохио үүсгэх дарааллын диаграмм (Sequence Diagram)}}{16}{figure.caption.87}%
+\contentsline {figure}{\numberline {4.8}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces Мобайл аппликейшний хэрэглэгчийн навигацийн урсгал}}{20}{figure.caption.117}%
+\contentsline {figure}{\numberline {4.9}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces Хэрэглэгчийн бүртгэл ба нэвтрэлтийн дарааллын диаграмм (Sequence Diagram)}}{21}{figure.caption.119}%
+\contentsline {figure}{\numberline {4.10}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces Загварын давталтат сайжруулалтын үе шатууд ба гол өөрчлөлтүүд}}{22}{figure.caption.122}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {5.1}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces Equity муруй -- \$10,000-аас \$14,161.20 хүртэл (+41.61\%)}}{15}{figure.caption.108}%
-\contentsline {figure}{\numberline {5.2}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces Сарын гүйцэтгэл -- ашиг (\$) ба win rate (\%)}}{16}{figure.caption.110}%
-\contentsline {figure}{\numberline {5.3}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces Уналтын шинжилгээ (Max Drawdown: 3.93\%)}}{16}{figure.caption.112}%
-\contentsline {figure}{\numberline {5.4}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces Эрсдэлийн хэмжүүрүүдийн самбар}}{17}{figure.caption.115}%
-\contentsline {figure}{\numberline {5.5}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces Итгэлцлийн утга ба таамаглалын нарийвчлалын хамаарал}}{18}{figure.caption.117}%
-\contentsline {figure}{\numberline {5.6}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces Шинж чанарын ач холбогдол (Top 20)}}{18}{figure.caption.119}%
-\contentsline {figure}{\numberline {5.7}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces Phase 6B ба Phase 7B-ийн харьцуулалт}}{19}{figure.caption.122}%
-\contentsline {figure}{\numberline {5.8}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces Phase 6B ба Phase 7B харьцуулалтын хүснэгт}}{20}{figure.caption.124}%
+\contentsline {figure}{\numberline {5.1}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces Equity муруй -- \$10,000-аас \$14,161.20 хүртэл (+41.61\%)}}{24}{figure.caption.134}%
+\contentsline {figure}{\numberline {5.2}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces Сарын гүйцэтгэл -- ашиг (\$) ба win rate (\%)}}{24}{figure.caption.136}%
+\contentsline {figure}{\numberline {5.3}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces Уналтын шинжилгээ (Max Drawdown: 3.93\%)}}{25}{figure.caption.138}%
+\contentsline {figure}{\numberline {5.4}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces Итгэлцлийн утга ба таамаглалын нарийвчлалын хамаарал}}{26}{figure.caption.143}%
+\contentsline {figure}{\numberline {5.5}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces Техник индикаторын ач холбогдол (Top 20)}}{26}{figure.caption.145}%
+\contentsline {figure}{\numberline {5.6}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces Phase 6 ба Phase 7-ийн харьцуулалт}}{27}{figure.caption.148}%
+\contentsline {figure}{\numberline {5.7}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces Phase 6 ба Phase 7 харьцуулалтын хүснэгт}}{28}{figure.caption.150}%

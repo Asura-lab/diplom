@@ -1,109 +1,237 @@
 \chapter{Судалгааны арга зүй}
 \label{ch:methodology}
 
-\section{Системийн ерөнхий архитектур}
+Энэ бүлэгт судалгааны ажлын арга зүйг дэлгэрэнгүй тайлбарлана. Эхлээд судалгааны ерөнхий арга барилыг тодорхойлж, дараа нь системийн бүтэц, өгөгдлийн бэлтгэл, AI загварын архитектур, дохио үүсгэх механизм, MetaTrader 5 backtest, серверийн болон мобайл аппликейшний хөгжүүлэлт, мөн үнэлгээний шалгуур үзүүлэлтүүдийг хамарна.
 
-Хөгжүүлсэн систем нь гурван үндсэн хэсгээс бүрдэнэ: (1) ML загварын сургалт ба дохио үүсгэх хэсэг, (2) Backend API сервер, (3) Мобайл аппликейшн. \fref{fig:system_architecture} нь системийн ерөнхий бүтцийг харуулав.
+%% ============================================================
+%% 3.1 Судалгааны арга барил
+%% ============================================================
+\section{Судалгааны арга барил}
+
+Энэхүү судалгаа нь \textbf{дизайн шинжлэх ухаан} (Design Science Research -- DSR) \cite{hevner2004} арга зүйд суурилсан. DSR нь бодит асуудлыг шийдвэрлэхэд чиглэсэн цоо шинэ артефакт (систем, загвар, бүтээгдэхүүн) бүтээж, түүний ашиг тусыг туршилтаар баталгаажуулдаг \cite{peffers2007}. Энэ судалгааны хувьд DSR-ийн дараахь гурван үндсэн зарчмыг баримтлав:
+
+\begin{enumerate}
+    \item \textbf{Артефакт бүтээх}: Форекс зах зээлийн арилжааны дохио үүсгэж, мобайл аппликейшнаар хүргэх бүрэн бүтэн систем хөгжүүлэх
+    \item \textbf{Асуудалд чиглэсэн}: Жижиг трейдерүүдийн мэдээлэл дутмаг, мэргэжлийн дүн шинжилгээний хүртээмж бага байдлыг шийдвэрлэх
+    \item \textbf{Туршилтаар баталгаажуулах}: MetaTrader 5 Strategy Tester-ийн бодит зах зээлийн нөхцөлд (спрэд, слиппэж) backtest хийж, системийн ашигт ажиллагааг шинжлэх ухааны аргаар үнэлэх
+\end{enumerate}
+
+Судалгааны процесс нь \textbf{давталтат хөгжүүлэлт} (iterative development) загвараар явагдсан. Үе шат бүрд загварын гүйцэтгэлийг хэмжиж, сул талыг тодорхойлон, дараагийн хувилбарт засварлах мөчлөгийг 7 удаа давтсан. Энэхүү давталтат арга барил нь нэг удаагийн шугаман хөгжүүлэлтээс ялгаатай нь системийн чанарыг алхам алхмаар сайжруулах боломжийг олгосон.
+
+%% ============================================================
+%% 3.2 Системийн ерөнхий бүтэц
+%% ============================================================
+\section{Системийн ерөнхий бүтэц}
+
+\fref{fig:concept_overview} нь системийн үндсэн санааг товч харуулав: форекс зах зээлийн өгөгдлийг автоматаар дүн шинжилгээ хийж, AI загвараар арилжааны дохио үүсгэн, хэрэглэгчийн утасны аппликейшнд хүргэнэ.
+
+\begin{figure}[H]
+\centering
+\resizebox{\textwidth}{!}{%
+\begin{tikzpicture}[
+  cbox/.style={
+    rectangle, draw, rounded corners=10pt,
+    minimum width=6cm, minimum height=3cm,
+    align=center, line width=1.5pt,
+    font=\Huge, text width=5.5cm
+  },
+  arr/.style={-{Stealth[length=8mm,width=5mm]}, line width=3pt}
+]
+
+\node[cbox, fill=blue!10, draw=blue!45] (d1) at (0, 0)
+    {Форекс өгөгдөл};
+\node[cbox, fill=green!10, draw=green!45] (d2) at (8, 0)
+    {AI Загвар\\сургалт};
+
+\node[cbox, fill=orange!12, draw=orange!50] (d3) at (16, 0)
+    {\textcolor{green!50!black}{BUY} /
+     \textcolor{red!60!black}{SELL} /
+     HOLD};
+
+\node[cbox, fill=purple!10, draw=purple!45] (d4) at (24, 0)
+    {Мобайл Апп};
+
+\node[cbox, fill=gray!10, draw=gray!45] (d5) at (32, 0)
+    {Трейдер};
+
+\draw[arr, blue!55]   (d1.east) -- (d2.west);
+\draw[arr, green!55]  (d2.east) -- (d3.west);
+\draw[arr, orange!60] (d3.east) -- (d4.west);
+\draw[arr, gray!55]   (d4.east) -- (d5.west);
+
+\end{tikzpicture}%
+}
+\caption{Системийн үндсэн ойлголт -- өгөгдлөөс трейдер хүртэлх урсгал}
+\label{fig:concept_overview}
+\end{figure}
+
+Хөгжүүлсэн систем нь гурван үндсэн давхаргаас бүрдэнэ: (1) Машин сургалтын загварын давхарга, (2) Backend серверийн давхарга, (3) Мобайл аппликейшний давхарга. \fref{fig:system_architecture} нь энэ бүтцийг харуулав.
 
 \begin{figure}[H]
 \centering
 \begin{tikzpicture}[
-    node distance=1.2cm and 2.5cm,
-    box/.style={rectangle, draw, rounded corners, minimum width=3cm, minimum height=1cm, align=center, font=\small},
-    data/.style={box, fill=blue!10},
-    model/.style={box, fill=green!10},
-    server/.style={box, fill=orange!10},
-    app/.style={box, fill=purple!10},
-    arrow/.style={-{Stealth[length=3mm]}, thick}
+    layer/.style={rectangle, draw, rounded corners=8pt, line width=1pt,
+                  minimum width=9cm, minimum height=1.6cm,
+                  align=center, font=\small\bfseries},
+    arrow/.style={-{Stealth[length=2.5mm, width=2mm]}, line width=1.2pt}
 ]
 
-% Data layer
-\node[data] (rawdata) {Түүхэн өгөгдөл\\(2015--2024)\\M1--H4 интервал};
-\node[data, right=of rawdata] (features) {48 шинж чанар\\6 хугацааны хүрээ};
-\node[model, right=of features] (ensemble) {GBDT Ансамбль\\LightGBM + XGBoost\\+ CatBoost};
+\node[layer, fill=blue!10,   draw=blue!45]   (ml)      at (0, 5)   {ML загварын давхарга\\{\scriptsize\normalfont Сургалт · Таамаглал · Ансамбль}};
+\node[layer, fill=orange!10, draw=orange!45] (backend) at (0, 2.5) {Backend серверийн давхарга\\{\scriptsize\normalfont Flask REST API · MongoDB · Yahoo Finance}};
+\node[layer, fill=purple!10, draw=purple!45] (mobile)  at (0, 0)   {Мобайл аппликейшний давхарга\\{\scriptsize\normalfont React Native · Ханш · Дохио · Мэдээ}};
 
-% Signal layer
-\node[model, below=of ensemble] (calibrator) {Logistic Regression\\Calibrator};
-\node[model, left=of calibrator] (signals) {Дохио үүсгэгч\\(conf $\geq$ 0.90)};
-\node[data, left=of signals] (mt5) {MT5 Strategy\\Tester бэктест};
-
-% Server layer
-\node[server, below=2cm of signals] (flask) {Flask Backend\\REST API сервер};
-\node[server, left=of flask] (mongodb) {MongoDB\\өгөгдлийн сан};
-\node[server, right=of flask] (twelvedata) {Twelve Data\\API (бодит цагийн)};
-
-% App layer
-\node[app, below=of flask] (mobile) {React Native\\Мобайл апп};
-\node[app, left=of mobile] (auth) {Хэрэглэгчийн\\баталгаажуулалт};
-\node[app, right=of mobile] (display) {Ханш, дохио,\\мэдээ харуулах};
-
-% Arrows
-\draw[arrow] (rawdata) -- (features);
-\draw[arrow] (features) -- (ensemble);
-\draw[arrow] (ensemble) -- (calibrator);
-\draw[arrow] (calibrator) -- (signals);
-\draw[arrow] (signals) -- (mt5);
-\draw[arrow] (signals) -- (flask);
-\draw[arrow] (twelvedata) -- (flask);
-\draw[arrow] (mongodb) -- (flask);
-\draw[arrow] (flask) -- (mobile);
-\draw[arrow] (mobile) -- (auth);
-\draw[arrow] (mobile) -- (display);
+\draw[arrow, blue!50]   (ml.south)      -- (backend.north);
+\draw[arrow, orange!50] (backend.south) -- (mobile.north);
 
 \end{tikzpicture}
-\caption{Системийн ерөнхий архитектур}
+\caption{Системийн гурван давхаргат бүтэц}
 \label{fig:system_architecture}
 \end{figure}
 
+Системийн ажиллах зарчим дараахь байдалтай:
+\begin{enumerate}
+    \item \textbf{ML давхарга}: MetaTrader 5-аас татсан 10 жилийн түүхэн өгөгдлөөр 3 GBDT загварыг сургаж, Soft Voting ансамблиар нэгтгэн, LogReg calibrator-оор магадлалыг тохируулна
+    \item \textbf{Backend давхарга}: Flask REST API сервер нь Yahoo Finance-аас бодит цагийн ханш авч, GBDT загвараар дохио үүсгэж, MongoDB-д хадгалж, Expo Push-ээр хэрэглэгчдэд мэдэгдэл илгээнэ
+    \item \textbf{Мобайл давхарга}: React Native аппликейшн нь Backend-тэй REST API-аар холбогдож, ханш, дохио, мэдээг хэрэглэгчдэд харуулна
+\end{enumerate}
+
+%% ============================================================
+%% 3.2 Өгөгдлийн урсгалын диаграмм
+%% ============================================================
+\section{Өгөгдлийн урсгал}
+
+Системд өгөгдөл хэрхэн урсаж, боловсруулагддагийг \fref{fig:data_flow} харуулав. Гадаад эх сурвалжаас (MetaTrader 5, Yahoo Finance, TradingView, AlphaVantage) өгөгдөл орж ирэн, Backend сервер дээр боловсруулагдаж, эцэст нь мобайл аппликейшнаар хэрэглэгчдэд хүрнэ.
+
+\begin{figure}[H]
+\centering
+\resizebox{\textwidth}{!}{
+\begin{tikzpicture}[
+    src/.style ={rectangle, rounded corners=8pt, draw=blue!65,   fill=blue!8,
+                 line width=1.5pt, minimum width=4cm, minimum height=1.3cm,
+                 align=center, font=\large\bfseries},
+    proc/.style={rectangle, rounded corners=8pt, draw=green!65,  fill=green!8,
+                 line width=1.5pt, minimum width=4cm, minimum height=1.3cm,
+                 align=center, font=\large\bfseries},
+    stor/.style={rectangle, rounded corners=10pt, draw=orange!75, fill=orange!8,
+                 line width=2pt, minimum width=3.8cm, minimum height=6cm,
+                 align=center, font=\large\bfseries},
+    dest/.style={rectangle, rounded corners=8pt, draw=purple!65, fill=purple!8,
+                 line width=1.5pt, minimum width=4cm, minimum height=1.3cm,
+                 align=center, font=\large\bfseries},
+    A/.style={-{Stealth[length=4.5mm,width=3.5mm]}, line width=1.6pt},
+    L/.style={font=\normalsize\bfseries, text=black, fill=white, inner sep=2pt, align=center},
+]
+
+\node[src]  (mt5)    at ( 0,  6)   {MetaTrader 5};
+\node[src]  (yf)     at ( 0,  4)   {Yahoo Finance};
+\node[src]  (av)     at ( 0,  1.5) {AlphaVantage};
+\node[src]  (tv)     at ( 0,  0)   {TradingView};
+
+\node[proc] (feat)   at ( 6,  6)   {Индикатор};
+\node[proc] (gbdt)   at ( 6,  4)   {GBDT};
+\node[proc] (gemini) at ( 9,  0.75) {Gemini AI};
+
+\node[proc] (filter) at (12,  4)   {Дохионы шүүлтүүр};
+
+\node[stor] (mongo)  at (18,  2.5) {MongoDB};
+
+\node[dest] (push)   at (24,  4)   {Push мэдэгдэл};
+\node[dest] (app)    at (24,  1)   {Мобайл апп};
+
+%% ─── ML pipeline ───────────────────────────────────────────────
+\draw[A, blue!65]   (mt5.east)    -- node[L,above]{OHLCV}           (feat.west);
+\draw[A, green!65]  (feat.south)  --                                  (gbdt.north);
+\draw[A, blue!65]   (yf.east)     -- node[L,above]{Ханш}            (gbdt.west);
+\draw[A, green!65]  (gbdt.east)   -- node[L,above]{Дохио}           (filter.west);
+\draw[A, green!65]  (filter.east) -- node[L,above]{Баталгаат\\дохио} (mongo.west |- filter.east);
+
+%% ─── AI pipeline: av болон tv-г bracket-ээр нэгтгэж gemini-рүү ──
+\coordinate (avR) at (3, 1.5);
+\coordinate (tvR) at (3, 0);
+\coordinate (mid) at (3, 0.75);
+
+\draw[blue!65, line width=1.6pt] (av.east) -- (avR);
+\draw[blue!65, line width=1.6pt] (tv.east) -- (tvR);
+\draw[blue!65, line width=1.6pt] (avR) -- (tvR);
+\draw[A, blue!65] (mid) -- node[L,above]{Мэдээ} (gemini.west);
+
+\draw[A, green!65]  (gemini.east) -- node[L,above]{Шинжилгээ} (mongo.west |- gemini.east);
+
+%% ─── MongoDB → гарц ────────────────────────────────────────────
+\draw[A, purple!65] (mongo.east |- push.west) -- node[L,above]{Мэдэгдэл} (push.west);
+\draw[A, purple!65] (mongo.east |- app.west)  -- node[L,above]{REST API}  (app.west);
+\draw[purple!40, line width=1.6pt]
+    (mongo.east |- push.west) -- (mongo.east |- app.west);
+
+\end{tikzpicture}
+}
+\caption{Өгөгдлийн урсгалын диаграмм (Data Flow Diagram)}
+\label{fig:data_flow}
+\end{figure}
+
+Өгөгдлийн урсгалын гол шатуудыг тайлбарлавал:
+\begin{itemize}
+    \item \textbf{Өгөгдөл цуглуулах}: MetaTrader 5-аас 10 жилийн OHLCV, Yahoo Finance-аас бодит цагийн ханш, AlphaVantage (мэдээний сентимент) болон TradingView (эдийн засгийн хуанли)-аас эдийн засгийн мэдээ татна
+    \item \textbf{Индикатор тооцоолох}: 6 хугацааны интервалаас (M1, M5, M15, M30, H1, H4) тус бүр 8 техник индикатор тооцоолж, нийт 48 техник индикатор үүсгэнэ
+    \item \textbf{Таамаглал хийх}: LightGBM, XGBoost, CatBoost гурван загварын ансамбль магадлалаар дохио үүсгэнэ
+    \item \textbf{Шүүж хадгалах}: Итгэлцэл $\geq$ 90\%, ATR $\geq$ 4.0 пипс шалгуурыг хангасан дохиог MongoDB-д хадгалж, хэрэглэгчдэд push мэдэгдэл илгээнэ
+    \item \textbf{Хэрэглэгчид хүргэх}: Мобайл аппликейшн REST API-аар Backend-тэй холбогдож бүх мэдээллийг авна
+\end{itemize}
+
+%% ============================================================
+%% 3.3 Өгөгдлийн бэлтгэл
+%% ============================================================
 \section{Өгөгдлийн бэлтгэл}
 
 \subsection{Түүхэн өгөгдөл}
 
-MetaTrader 5-аас EUR/USD валютын хослолын 2015--2024 оны OHLCV (Open, High, Low, Close, Volume) өгөгдлийг 6 хугацааны интервалаар татан авсан. \tref{tab:data_summary} нь өгөгдлийн хэмжээг харуулав.
+MetaTrader 5 платформоос EUR/USD валютын хослолын 2015--2024 оны OHLCV (Open, High, Low, Close, Volume) өгөгдлийг 6 хугацааны интервалаар татан авсан. \tref{tab:data_summary} нь интервал бүрийн өгөгдлийн хэмжээг харуулав.
 
 \begin{table}[H]
 \centering
-\caption{Өгөгдлийн хэмжээний хураангуй}
+\caption{Түүхэн өгөгдлийн хэмжээний хураангуй}
 \label{tab:data_summary}
 \begin{tabular}{lrrl}
 \toprule
-\textbf{Интервал} & \textbf{Бааруудын тоо} & \textbf{Хугацаа} & \textbf{Үүрэг} \\
+\textbf{Интервал} & \textbf{Мөрийн тоо} & \textbf{Хугацаа} \\
 \midrule
-M1 (1 мин) & $\sim$3,700,000 & 2015--2024 & Үндсэн давтамж \\
-M5 (5 мин) & $\sim$740,000 & 2015--2024 & Нэмэлт шинж чанар \\
-M15 (15 мин) & $\sim$247,000 & 2015--2024 & Нэмэлт шинж чанар \\
-M30 (30 мин) & $\sim$123,000 & 2015--2024 & Нэмэлт шинж чанар \\
-H1 (1 цаг) & $\sim$62,000 & 2015--2024 & Нэмэлт шинж чанар \\
-H4 (4 цаг) & $\sim$15,500 & 2015--2024 & Нэмэлт шинж чанар \\
+M1 (1 минут) & $\sim$3,700,000 & 2015--2024 \\
+M5 (5 минут) & $\sim$740,000 & 2015--2024  \\
+M15 (15 минут) & $\sim$247,000 & 2015--2024  \\
+M30 (30 минут) & $\sim$123,000 & 2015--2024  \\
+H1 (1 цаг) & $\sim$62,000 & 2015--2024  \\
+H4 (4 цаг) & $\sim$15,500 & 2015--2024  \\
 \bottomrule
 \end{tabular}
 \end{table}
 
-\subsection{Шинж чанарын инженерчлэл (Feature Engineering)}
+Олон цагийн интервал бүхий өгөгдлийг хослуулах замаар загвар нь зах зээлийн богино хугацааны хэлбэлзэл (M1, M5), дунд хугацааны чиг хандлага (M15, M30), мөн урт хугацааны бүтэц (H1, H4)-ыг нэгэн зэрэг харах боломжтой болсон. Энэ олон хугацааны интервалын арга нь \cite{murphy1999technical} техникийн шинжилгээний ``олон хугацааны хүрээ'' (multiple timeframe analysis) зарчимд нийцнэ.
 
-Интервал бүрээс 8 техник шинж чанар тооцоолж, нийт 48 шинж чанар бүхий өгөгдлийн бүтэц (feature matrix) үүсгэсэн. \tref{tab:features} нь шинж чанаруудыг жагсаав.
+\subsection{Техник индикаторын инженерчлэл (Feature Engineering)}
+
+Интервал бүрээс 8 техник индикатор тооцоолж, нийт 48 техник индикатор бүхий матриц үүсгэсэн. \tref{tab:features} нь техник индикаторуудыг жагсаав.
 
 \begin{table}[H]
 \centering
-\caption{Шинж чанарын жагсаалт (интервал бүрд)}
+\caption{Техник индикаторын жагсаалт (интервал бүрд)}
 \label{tab:features}
-\begin{tabular}{llp{7cm}}
+\begin{tabular}{llp{12.5cm}}
 \toprule
-\textbf{№} & \textbf{Шинж чанар} & \textbf{Тайлбар}  \\
+\textbf{№} & \textbf{Индикатор} & \textbf{Тайлбар}  \\
 \midrule
-1 & \texttt{close} & Хаалтын үнэ \\
-2 & \texttt{rsi\_14} & 14 цонхтой RSI \\
-3 & \texttt{atr\_14} & 14 цонхтой ATR (хэлбэлзэл) \\
-4 & \texttt{ma\_5} & 5 цонхтой SMA \\
-5 & \texttt{ma\_20} & 20 цонхтой SMA \\
-6 & \texttt{ma\_50} & 50 цонхтой SMA \\
-7 & \texttt{volatility} & 20 цонхтой стандарт хазайлт \\
-8 & \texttt{returns} & Үнийн өөрчлөлтийн хувь \\
+1 & \texttt{close}      & Тухайн candle-ийн хаалтын үнэ \\
+2 & \texttt{rsi}    & RSI (14 candle) --- хэт худалдсан/хэт худалдан авсан байдлыг 0--100 хуваарьт хэмждэг импульс индикатор \\
+3 & \texttt{atr}    & ATR (14 candle) --- сүүлийн 14 candle-ийн дундаж жинхэнэ хэлбэлзэл; зах зээлийн эрсдэлийн хэмжүүр \\
+4 & \texttt{ma\_5}      & Сүүлийн 5 candle-ийн хаалтын үнийн энгийн гулсах дундаж (SMA) --- богино хугацааны чиглэл \\
+5 & \texttt{ma\_20}     & Сүүлийн 20 candle-ийн SMA --- дунд хугацааны чиглэл \\
+6 & \texttt{ma\_50}     & Сүүлийн 50 candle-ийн SMA --- урт хугацааны чиглэл \\
+7 & \texttt{volatility} & Сүүлийн 20 candle-ийн хаалтын үнийн стандарт хазайлт; зах зээлийн тайван эсвэл тавгүй байдлын үзүүлэлт \\
+8 & \texttt{returns}    & Өмнөх candle-тэй харьцуулсан үнийн өөрчлөлтийн хувь (\texttt{pct\_change}) \\
 \bottomrule
 \end{tabular}
 \end{table}
 
-Шинж чанаруудыг \texttt{\_M1}, \texttt{\_M5}, \texttt{\_M15}, \texttt{\_M30}, \texttt{\_H1}, \texttt{\_H4} гэсэн дагаваруудаар ялгаж, нийт $8 \times 6 = 48$ шинж чанар үүсгэсэн. Жишээлбэл, \texttt{rsi\_M1} нь 1 минутын RSI, \texttt{atr\_H4} нь 4 цагийн ATR-ийг илэрхийлнэ.
+Индикаторуудыг \texttt{\_1min}, \texttt{\_5min}, \texttt{\_15min}, \texttt{\_30min}, \texttt{\_1H}, \texttt{\_4H} гэсэн дагаваруудаар ялгана. Жишээлбэл, \texttt{rsi\_1min} нь 1 минутын RSI, \texttt{atr\_4H} нь 4 цагийн ATR-ийг илэрхийлнэ. 1 минутын суурь өгөгдлөөс бусад интервалуудын индикаторыг \texttt{merge\_asof} (backward) аргаар нэгтгэсэн.
 
 \subsection{Шошго (Label) үүсгэх}
 
@@ -127,7 +255,7 @@ H4 (4 цаг) & $\sim$15,500 & 2015--2024 & Нэмэлт шинж чанар \\
 
 \subsection{Өгөгдлийн хуваалт -- Walk-Forward Validation}
 
-Цаг хугацааны дарааллыг хадгалсан Walk-Forward Validation аргачлалыг ашиглан өгөгдлийг дараахь байдлаар хуваасан:
+Цаг хугацааны дарааллыг хадгалсан Walk-Forward Validation (WFV) аргачлалыг ашигласан. Энэ нь уламжлалт k-fold cross-validation-аас ялгаатай нь цаг хугацааны дарааллыг зөрчихгүй тул санхүүгийн загварт зохимжтой. \tref{tab:data_split} нь хуваалтын дэлгэрэнгүйг харуулав.
 
 \begin{table}[H]
 \centering
@@ -135,7 +263,7 @@ H4 (4 цаг) & $\sim$15,500 & 2015--2024 & Нэмэлт шинж чанар \\
 \label{tab:data_split}
 \begin{tabular}{llrl}
 \toprule
-\textbf{Бүлэг} & \textbf{Хугацаа} & \textbf{Баарын тоо} & \textbf{Зорилго} \\
+\textbf{Бүлэг} & \textbf{Хугацаа} & \textbf{Candle-ын тоо} & \textbf{Зорилго} \\
 \midrule
 Сургалт & 2015--2022 & $\sim$2,972,000 & Загвар сургах (80\%) \\
 Баталгаажуулалт & 2023 & $\sim$371,000 & Early stopping, calibration (10\%) \\
@@ -144,13 +272,145 @@ H4 (4 цаг) & $\sim$15,500 & 2015--2024 & Нэмэлт шинж чанар \\
 \end{tabular}
 \end{table}
 
-Энэ хуваалт нь look-ahead bias-аас бүрэн сэргийлж, загварын бодит гүйцэтгэлийг зөв үнэлэх боломжийг олгоно.
+\fref{fig:wfv_timeline} нь энэхүү хуваалтыг цаг хугацааны тэнхлэг дээр дүрслэн харуулав. Сургалтын өгөгдөл (80\%) баталгаажуулалтын өгөгдөл (10\%) тестийн өгөгдөл (10\%)-өөс цаг хугацааны дарааллаар ялгагдана.
 
-\section{Загварын бүтэц ба сургалт}
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}[
+    block/.style={rectangle, minimum height=1.0cm, minimum width=0.5cm,
+                  draw=none, font=\small\bfseries, text=white, align=center},
+    lbl/.style={font=\scriptsize, text=black},
+    yr/.style={font=\tiny, text=gray!70},
+]
 
-\subsection{Ансамбль загварын бүтэц}
+%% Тэнхлэг
+\draw[-{Stealth[length=3mm]}, thick, gray!50]
+    (0, 0) -- (15, 0) node[right, font=\small] {хугацаа};
 
-Системийн загвар нь гурван GBDT загвараас бүрдэх ансамбль юм. \tref{tab:model_params} нь загвар бүрийн гол параметрүүдийг харуулав.
+%% Сургалт (2015--2022): 8 жил = 10.4 unit
+\fill[blue!55, rounded corners=3pt] (0.3, 0.2) rectangle (10.7, 1.2);
+\node[block] at (5.5, 0.7) {Сургалт (80\%)};
+
+%% Баталгаажуулалт (2023): 1 жил = 1.3 unit
+\fill[orange!70, rounded corners=3pt] (10.7, 0.2) rectangle (12.0, 1.2);
+\node[block] at (11.35, 0.7) {\scriptsize Val};
+
+%% Тест (2024): 1 жил = 1.3 unit
+\fill[red!55, rounded corners=3pt] (12.0, 0.2) rectangle (13.3, 1.2);
+\node[block] at (12.65, 0.7) {\scriptsize Тест};
+
+%% Жилийн тэмдэглэл
+\foreach \x/\y in {0.3/2015, 1.6/2016, 2.9/2017, 4.2/2018, 5.5/2019, 6.8/2020, 8.1/2021, 9.4/2022, 10.7/2023, 12.0/2024} {
+    \draw[gray!40] (\x, 0) -- (\x, 0.15);
+    \node[yr] at (\x, -0.25) {\y};
+}
+
+%% Тайлбар
+\node[lbl, blue!70] at (5.5, 1.55) {$\sim$2.97M candle (2015--2022)};
+\node[lbl, orange!80!black] at (11.35, 1.55) {371K};
+\node[lbl, red!70] at (12.65, 1.55) {371K};
+
+%% Legend
+\fill[blue!55, rounded corners=2pt] (0.3, -1.0) rectangle (0.8, -0.7);
+\node[lbl, right] at (0.85, -0.85) {Сургалт: загвар сургах};
+\fill[orange!70, rounded corners=2pt] (5.0, -1.0) rectangle (5.5, -0.7);
+\node[lbl, right] at (5.55, -0.85) {Баталгаажуулалт: early stopping, calibration};
+\fill[red!55, rounded corners=2pt] (11.0, -1.0) rectangle (11.5, -0.7);
+\node[lbl, right] at (11.55, -0.85) {Тест: эцсийн үнэлгээ};
+
+%% Look-ahead bias сэргийлэх сум
+\draw[-{Stealth[length=2.5mm]}, thick, red!60, dashed]
+    (13.3, 0.7) -- ++(1.0, 0) node[right, font=\scriptsize, text=red!60] {Ирээдүйн дата};
+
+\end{tikzpicture}
+\caption{Walk-Forward Validation -- цаг хугацааны дарааллыг хадгалсан өгөгдлийн хуваалт}
+\label{fig:wfv_timeline}
+\end{figure}
+
+Энэ хуваалтаар загварыг сургахдаа зөвхөн тухайн цэгийн өмнөх өгөгдлийг ашигладаг тул ирээдүйн мэдээлэл алдагдах (look-ahead bias) асуудлаас бүрэн сэргийлнэ. Санхүүгийн цуваа өгөгдөлд уламжлалт k-fold cross-validation ашиглах нь цаг хугацааны бүтцийг эвдэж, зохиомол өндөр үр дүн үзүүлэх эрсдэлтэй тул WFV нь стандарт хандлага юм \cite{pardo2008evaluation}.
+
+%% ============================================================
+%% 3.4 AI загварын бүтэц ба сургалт
+%% ============================================================
+\section{AI загварын бүтэц ба сургалт}
+
+\subsection{Ансамбль загварын архитектур}
+
+Системийн загвар нь гурван GBDT (Gradient Boosted Decision Trees) загвараас бүрдэх Soft Voting ансамбль юм. GBDT нь олон модны нэгтгэсэн загвар бөгөөд санхүүгийн өгөгдлийн хүснэгтийн (tabular) бүтэцтэй сайн нийцдэг \cite{chen2016xgboost}. Загвар бүр нь ижил 48 техник индикаторыг хүлээн авч, BUY, SELL, HOLD гурван ангиллын магадлалыг тус тусдаа тооцоолно. Эдгээр магадлалуудыг дундажилж, Logistic Regression calibrator-оор тохируулсны дараа эцсийн дохиог үүсгэнэ. \fref{fig:ensemble_arch} нь ансамбль загварын бүтцийг харуулав.
+
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}[
+    inp/.style ={rectangle, rounded corners=8pt, draw=blue!60,        fill=blue!8,
+                 line width=1.2pt, minimum width=5cm, minimum height=1.1cm,
+                 align=center, font=\small\bfseries},
+    lgbm/.style={rectangle, rounded corners=8pt, draw=teal!70,        fill=teal!8,
+                 line width=1.2pt, minimum width=4.2cm, minimum height=1.4cm,
+                 align=center, font=\small\bfseries},
+    xgb/.style ={rectangle, rounded corners=8pt, draw=green!65!black, fill=green!8,
+                 line width=1.2pt, minimum width=4.2cm, minimum height=1.4cm,
+                 align=center, font=\small\bfseries},
+    cat/.style ={rectangle, rounded corners=8pt, draw=olive!75,       fill=olive!8,
+                 line width=1.2pt, minimum width=4.2cm, minimum height=1.4cm,
+                 align=center, font=\small\bfseries},
+    vote/.style={rectangle, rounded corners=8pt, draw=orange!70,      fill=orange!10,
+                 line width=1.4pt, minimum width=5cm, minimum height=1.3cm,
+                 align=center, font=\small\bfseries},
+    cal/.style ={rectangle, rounded corners=8pt, draw=purple!55,      fill=purple!6,
+                 line width=1.2pt, minimum width=5cm, minimum height=1.1cm,
+                 align=center, font=\small\bfseries},
+    outp/.style={rectangle, rounded corners=8pt, draw=red!55,         fill=red!6,
+                 line width=1.4pt, minimum width=5cm, minimum height=1.1cm,
+                 align=center, font=\small\bfseries},
+    arr/.style={-{Stealth[length=3.5mm,width=2.5mm]}, line width=1.2pt, color=gray!70!black},
+    lin/.style={line width=1pt, color=gray!60},
+    lbl/.style={font=\scriptsize\bfseries, fill=white, inner sep=1pt, text=gray!50!black},
+]
+
+\node[inp]  (X)   at (0,  0)   {48 features};
+\node[lgbm] (lgb) at (-5, -3)  {\textcolor{teal!80!black}{LightGBM} \\ {\footnotesize leaf-wise өсөлт}};
+\node[xgb]  (xgb) at ( 0, -3)  {\textcolor{green!60!black}{XGBoost} \\ {\footnotesize level-wise өсөлт}};
+\node[cat]  (cat) at ( 5, -3)  {\textcolor{olive!80!black}{CatBoost} \\ {\footnotesize symmetric өсөлт}};
+\node[vote] (avg) at (0, -6.2) {Soft Voting};
+\node[cal]  (cal) at (0, -8.5) {LogReg Calibrator};
+\node[outp] (sig) at (0,-10.6) {Эцсийн дохио \\ (BUY/SELL/HOLD)};
+
+%% X → загварууд
+\draw[arr] (X.south) -- (lgb.north);
+\draw[arr] (X.south) -- (xgb.north);
+\draw[arr] (X.south) -- (cat.north);
+
+%% Загварууд → нэгтгэх горизонтал шугам → avg
+\coordinate (Lbot) at (lgb.south);
+\coordinate (Xbot) at (xgb.south);
+\coordinate (Cbot) at (cat.south);
+\coordinate (bus)  at (0, -5.3);
+
+\draw[lin] (lgb.south) -- ++(0, -0.6) -| (bus);
+\draw[lin] (xgb.south) -- (bus);
+\draw[lin] (cat.south) -- ++(0, -0.6) -| (bus);
+
+\node[lbl, right=2pt] at ($(lgb.south) + (0,-0.3)$) {};
+\node[lbl, right=2pt] at ($(xgb.south) + (0,-0.3)$) {};
+\node[lbl, right=2pt] at ($(cat.south) + (0,-0.3)$) {};
+
+\draw[arr] (bus) -- (avg.north);
+\draw[arr] (avg.south) -- (cal.north);
+\draw[arr] (cal.south) -- (sig.north);
+
+\end{tikzpicture}
+\caption{GBDT ансамбль загварын архитектур}
+\label{fig:ensemble_arch}
+\end{figure}
+
+Гурван загварыг ансамбль хэлбэрээр хослуулсан шалтгаан нь тус бүр нь өөр өөр давуу талтай:
+\begin{itemize}
+    \item \textbf{LightGBM}: Leaf-wise (навч чиглэлтэй) модны өсөлт ашигладаг тул сургалтын хурд маш өндөр. Их хэмжээний өгөгдөлд тохиромжтой
+    \item \textbf{XGBoost}: Level-wise (түвшин чиглэлтэй) модны өсөлт болон L1/L2 нормчлолоор тогтвортой гүйцэтгэл үзүүлдэг. Тохируулах параметрийн уян хатан байдал өндөр
+    \item \textbf{CatBoost}: Symmetric (тэгш хэмт) модны бүтэц, ordered boosting ашиглан overfitting-аас хамгийн сайн хамгаалагддаг
+\end{itemize}
+
+\tref{tab:model_params} нь загвар бүрийн гол гиперпараметрүүдийг харуулав.
 
 \begin{table}[H]
 \centering
@@ -160,120 +420,134 @@ H4 (4 цаг) & $\sim$15,500 & 2015--2024 & Нэмэлт шинж чанар \\
 \toprule
 \textbf{Параметр} & \textbf{LightGBM} & \textbf{XGBoost} & \textbf{CatBoost} \\
 \midrule
-Модны тоо & 496 & $\sim$400 & 499 \\
-Хамгийн их гүн & 4 & 4 & 4 \\
-Сургалтын хурд & 0.03 & 0.03 & 0.03 \\
-L1 нормчлол & Тийм & Тийм & -- \\
-L2 нормчлол & Тийм & Тийм & Тийм \\
-Early stopping & 50 давталт & 50 давталт & 50 давталт \\
+Модны тоо (n\_estimators) & 496 & $\sim$400 & 499 \\
+Хамгийн их гүн (max\_depth) & 6 & 5 & 5 \\
+Сургалтын хурд (learning\_rate) & 0.03 & 0.03 & 0.03 \\
+L1 нормчлол (reg\_alpha) & Тийм & Тийм & -- \\
+L2 нормчлол (reg\_lambda) & Тийм & Тийм & Тийм \\
+Early stopping (patience) & 50 давталт & 50 давталт & 50 давталт \\
 Модны өсөлтийн арга & Leaf-wise & Level-wise & Symmetric \\
 \bottomrule
 \end{tabular}
 \end{table}
 
-Загварын бүтцийг \fref{fig:ensemble_arch} нь харуулав.
-
-\begin{figure}[H]
-\centering
-\resizebox{\textwidth}{!}{
-\begin{tikzpicture}[
-    node distance=1cm and 1.5cm,
-    box/.style={rectangle, draw, rounded corners, minimum width=2.8cm, minimum height=0.9cm, align=center, font=\small},
-    input/.style={box, fill=blue!15},
-    model/.style={box, fill=green!15},
-    output/.style={box, fill=red!15},
-    arrow/.style={-{Stealth[length=2.5mm]}, thick}
-]
-
-% Input
-\node[input] (X) {48 шинж чанар};
-
-% Models
-\node[model, above right=1cm and 2cm of X] (lgb) {LightGBM\\496 мод};
-\node[model, right=2cm of X] (xgb) {XGBoost\\$\sim$400 мод};
-\node[model, below right=1cm and 2cm of X] (cat) {CatBoost\\499 мод};
-
-% Probabilities
-\node[box, fill=yellow!15, right=2cm of xgb] (avg) {Магадлалын\\дундаж};
-
-% Calibrator
-\node[box, fill=orange!15, right=1.5cm of avg] (cal) {LogReg\\Calibrator};
-
-% Output
-\node[output, right=1.5cm of cal] (signal) {Дохио\\BUY/SELL/HOLD};
-
-% Arrows
-\draw[arrow] (X) -- (lgb);
-\draw[arrow] (X) -- (xgb);
-\draw[arrow] (X) -- (cat);
-\draw[arrow] (lgb) -- (avg);
-\draw[arrow] (xgb) -- (avg);
-\draw[arrow] (cat) -- (avg);
-\draw[arrow] (avg) -- (cal);
-\draw[arrow] (cal) -- (signal);
-
-\end{tikzpicture}
-}
-\caption{Ансамбль загварын архитектур}
-\label{fig:ensemble_arch}
-\end{figure}
-
 \subsection{Overfitting-аас сэргийлэх арга хэмжээ}
 
-Санхүүгийн загварт overfitting нь хамгийн чухал сорилт юм. Дараахь арга хэмжээнүүдийг авсан:
+Санхүүгийн загварт overfitting нь хамгийн чухал сорилт юм. Сургалтын өгөгдлийг хэт сайн цээжлэх нь шинэ өгөгдөл дээр гүйцэтгэл буурахад хүргэдэг. Үүнээс сэргийлэх дараахь арга хэмжээнүүдийг авсан:
 
 \begin{enumerate}
-    \item \textbf{Модны гүнийг хязгаарлах}: \texttt{max\_depth=4} -- энгийн мод нь ерөнхийлөн суралцах чадвартай
-    \item \textbf{Сургалтын хурд бага}: \texttt{learning\_rate=0.03} -- удаан ч тогтвортой суралцах
-    \item \textbf{Early stopping}: Баталгаажуулалтын алдаа 50 давталт дотор сайжрахгүй бол зогсоох
-    \item \textbf{L1/L2 нормчлол}: Загвар хэт нарийн тааруулахаас сэргийлэх
-    \item \textbf{Walk-forward validation}: Цаг хугацааны дарааллыг хадгалах
-    \item \textbf{Шинж чанарын хялбаржуулалт}: Анхны 75 шинж чанараас 48 болгож бууруулсан (Phase 6B)
+    \item \textbf{Модны гүнийг хязгаарлах} (\texttt{max\_depth=5--6}): Гүн бага мод нь ерөнхийлөн суралцах чадвартай тул шинэ өгөгдөл дээр илүү тогтвортой ажилладаг
+    \item \textbf{Сургалтын хурдыг бага тогтоох} (\texttt{learning\_rate=0.03}): Загварыг удаан боловч илүү нарийвчлалтай сургах. Алхам бүрд бага зэргийн өөрчлөлт хийдэг
+    \item \textbf{Early stopping}: Баталгаажуулалтын алдаа 50 давталт дотор сайжрахгүй бол сургалтыг зогсоох
+    \item \textbf{L1/L2 нормчлол}: Загварын жингүүдийг хэт их болгохоос сэргийлж, ерөнхийлөн суралцах чадварыг нэмэгдүүлэх
+    \item \textbf{Walk-Forward Validation}: Цаг хугацааны дарааллыг хадгалж, ирээдүйн өгөгдөл сургалтад нэвтрэхээс сэргийлэх
+    \item \textbf{Индикатор хялбаржуулалт}: Анхны 75 индикатораас 48 болгож бууруулсан. Хэт олон индикатор нь загварыг шуугианд суралцуулах эрсдэлтэй
 \end{enumerate}
 
 \subsection{Сургалтын алгоритм}
 
-Загварын сургалтын үндсэн алгоритмыг \fref{alg:training} нь харуулав.
+Загварын сургалтын алгоритмыг Алгоритм~\ref{alg:training} нь харуулав.
 
 \begin{algorithm}[H]
-\caption{Ансамбль загварын сургалт}
+\caption{Ансамбль загварын сургалтын алгоритм}
 \label{alg:training}
 \begin{algorithmic}[1]
 \REQUIRE Өгөгдлийн бүтэц $D = \{(x_i, y_i)\}_{i=1}^{N}$, хугацааны хуваалт
 \ENSURE Сургагдсан ансамбль загвар $\mathcal{M}$
-\STATE $D_{\text{train}}, D_{\text{cal}}, D_{\text{val}}, D_{\text{test}} \gets \text{TimeSplit}(D)$
-\STATE Шинж чанар тооцоолох: $X \gets \text{ComputeFeatures}(D)$ (48 шинж чанар)
+\STATE $D_{\text{train}}, D_{\text{cal}}, D_{\text{test}} \gets \text{TimeSplit}(D)$
+\STATE Индикатор тооцоолох: $X \gets \text{ComputeFeatures}(D)$ \COMMENT{48 индикатор}
 \FOR{загвар $k \in \{\text{LightGBM, XGBoost, CatBoost}\}$}
-    \STATE $M_k \gets \text{Train}(X_{\text{train}}, y_{\text{train}})$ early stopping ${X_{\text{val}}}$-тэй
+    \STATE $M_k \gets \text{Train}(X_{\text{train}}, y_{\text{train}}, \text{eval\_set}=X_{\text{cal}}, \text{early\_stopping}=50)$
 \ENDFOR
-\STATE Магадлал: $P_k \gets M_k.\text{predict\_proba}(X_{\text{cal}})$ загвар бүрд
-\STATE Calibrator: $\text{LR} \gets \text{LogisticRegression.fit}(\bar{P}, y_{\text{cal}})$
-\STATE Тест дээрх гүйцэтгэл үнэлэх: $\text{accuracy}(M, X_{\text{test}}, y_{\text{test}})$
+\STATE Загвар бүрийн магадлал: $P_k \gets M_k.\text{predict\_proba}(X_{\text{cal}})$, $k = 1,2,3$
+\STATE Дундаж магадлал: $\bar{P} \gets \frac{1}{3}(P_1 + P_2 + P_3)$
+\STATE Calibrator сургах: $\text{LR} \gets \text{LogisticRegression.fit}(\bar{P}, y_{\text{cal}})$
+\STATE Тест дээр үнэлэх: $\text{accuracy}(\mathcal{M}, X_{\text{test}}, y_{\text{test}})$
 \STATE \textbf{return} $\mathcal{M} = \{M_1, M_2, M_3, \text{LR}\}$
 \end{algorithmic}
 \end{algorithm}
 
+%% ============================================================
+%% 3.5 Дохио үүсгэх систем
+%% ============================================================
 \section{Дохио үүсгэх систем}
 
 \subsection{Дохионы шүүлтүүр}
 
-Ансамбль загварын 2025 оны өгөгдөл дээрх анхны 359,639 таамгаас дохионы шүүлтүүрийг хэрэглэж 1,065 чанартай дохио үүсгэсэн. Шүүлтүүрийн нөхцөлүүд:
+Загварын таамгаас чанартай дохиог ялгахын тулд хоёр шүүлтүүр ашигласан:
 
 \begin{itemize}
-    \item \textbf{Итгэлцлийн босго}: Calibrated confidence $\geq$ 0.90 (90\%)
-    \item \textbf{ATR шүүлтүүр}: ATR $\geq$ 4.0 пипс (зах зээлд хангалттай хэлбэлзэл байх)
+    \item \textbf{Итгэлцлийн босго}: Calibrated confidence $\geq$ 0.90 (90\%). Загвар 90\%-аас дээш итгэлтэй тохиолдолд л дохио үүсгэнэ
+    \item \textbf{ATR шүүлтүүр}: ATR $\geq$ 4.0 пипс. Зах зээлд хангалттай хэлбэлзэл байх үед л дохио өгнө (бага хэлбэлзэлтэй үед арилжаа хийх нь ашиггүй)
 \end{itemize}
 
-Шүүлтүүрийн үр дүнд:
-\begin{equation}
-\frac{1{,}065}{359{,}639} \times 100\% = 0.296\%
-\end{equation}
+2025 оны өгөгдөл дээрх анхны 359,639 таамгаас зөвхөн 1,065 нь (0.3\%) эдгээр шалгуурыг хангасан. \fref{fig:signal_funnel} нь энэхүү шүүлтүүрийн процессыг юүлүүр диаграммаар харуулав.
 
-Бүх таамгийн зөвхөн 0.3\% нь шаардлагыг хангасан -- энэ нь ``чанар $>$ тоо хэмжээ'' зарчмыг баримталсан болохыг харуулна.
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}[
+    cnt/.style={font=\small\bfseries, text=black},
+    pct/.style={font=\scriptsize, text=black},
+    arr/.style={-{Stealth[length=2.5mm]}, thick, gray!50},
+]
+
+%% Үе шат 1: Нийт таамаг
+\node[trapezium, trapezium angle=78, trapezium stretches body,
+      shape border rotate=180,
+      draw=blue!60, fill=blue!10, line width=1pt,
+      minimum height=1.0cm, minimum width=12cm,
+      align=center, font=\small\bfseries] (s1) at (0, 0)
+    {Нийт таамаг (GBDT ансамбль)};
+\node[cnt, right=0.5cm of s1] {359,639};
+\node[pct, right=2.2cm of s1] {(100\%)};
+
+%% Үе шат 2: Итгэлцлийн шүүлтүүр
+\node[trapezium, trapezium angle=78, trapezium stretches body,
+      shape border rotate=180,
+      draw=orange!70, fill=orange!10, line width=1pt,
+      minimum height=1.0cm, minimum width=8cm,
+      align=center, font=\small\bfseries,
+      below=0.6cm of s1] (s2)
+    {Итгэлцэл $\geq$ 90\% шүүлтүүр};
+\node[cnt, right=0.5cm of s2] {$\sim$2,800};
+\node[pct, right=2.0cm of s2] {(0.8\%)};
+
+%% Үе шат 3: ATR шүүлтүүр
+\node[trapezium, trapezium angle=78, trapezium stretches body,
+      shape border rotate=180,
+      draw=red!60, fill=red!10, line width=1pt,
+      minimum height=1.0cm, minimum width=5cm,
+      align=center, font=\small\bfseries,
+      below=0.6cm of s2] (s3)
+    {ATR $\geq$ 4.0 пипс шүүлтүүр};
+\node[cnt, right=0.5cm of s3] {1,065};
+\node[pct, right=1.8cm of s3] {(0.3\%)};
+
+%% Үе шат 4: Эцсийн дохио
+\node[rectangle, draw=green!60!black, fill=green!12, rounded corners=5pt,
+      line width=1.2pt, minimum width=3.5cm, minimum height=0.9cm,
+      align=center, font=\small\bfseries,
+      below=0.6cm of s3] (s4)
+    {\textcolor{green!50!black}{Чанартай дохио}};
+\node[cnt, right=0.5cm of s4] {1,065};
+
+%% Сумнууд
+\draw[arr] (s1.south) -- (s2.north);
+\draw[arr] (s2.south) -- (s3.north);
+\draw[arr] (s3.south) -- (s4.north);
+
+%% Хасагдсан хэсгийн тэмдэглэл
+\node[pct, left=0.3cm of s2] {-99.2\% хасагдсан};
+\node[pct, left=0.3cm of s3] {-62\% хасагдсан};
+
+\end{tikzpicture}
+\caption{Дохионы шүүлтүүрийн юүлүүр диаграмм -- 359,639 таамгаас 1,065 чанартай дохио}
+\label{fig:signal_funnel}
+\end{figure}
 
 \subsection{Stop Loss ба Take Profit тооцоолол}
 
-SL/TP-г ATR дээр суурилан динамикаар тооцоолсон:
+SL/TP-г ATR (Average True Range) дээр суурилан динамикаар тооцоолсон:
 
 \begin{equation}
     SL = \max(\text{ATR}_{14} \times 5.0,\ 15\text{ пипс})
@@ -282,32 +556,107 @@ SL/TP-г ATR дээр суурилан динамикаар тооцоолсон
     TP = \max(SL \times 3.0,\ 45\text{ пипс})
 \end{equation}
 
+Энэ аргын давуу тал нь зах зээлийн хэлбэлзэлд тохируулан SL/TP-г динамикаар тогтоодог. Хэлбэлзэл их байхад SL/TP өргөн, бага байхад нарийн болно. Гол параметрүүд:
 \begin{itemize}
-    \item SL-ийн ATR үржвэр: 5.0 -- зах зээлийн хэлбэлзэлд тохирсон
-    \item TP/SL харьцаа: 3:1 -- эрсдэл-өгөөжийн харьцаа
-    \item Хамгийн бага SL: 15 пипс -- хэт бага SL-аас сэргийлэх
-    \item Хамгийн бага TP: 45 пипс -- утга учиртай ашгийг баталгаажуулах
+    \item SL-ийн ATR үржвэр: 5.0 -- зах зээлийн шуугиан, спрэдийг тооцоолсон
+    \item TP/SL харьцаа: 3:1 -- 33\% нарийвчлалтай ч ашигтай байх боломжтой эрсдэл-өгөөжийн харьцаа
+    \item Хамгийн бага SL: 15 пипс -- хэт бага SL нь шуугиан дээр зогсох эрсдэлтэй
+    \item Хамгийн бага TP: 45 пипс -- утга бүхий ашгийг баталгаажуулах
 \end{itemize}
 
-\subsection{Эрсдэлийн менежмент}
+\subsection{Дохио үүсгэх дарааллын диаграмм}
 
-Арилжаа бүрд балансын 1\%-ийг эрсдэлд оруулах зарчим баримталсан. Лотын тооцоолол:
+\fref{fig:signal_sequence} нь backend автоматаар дохио үүсгэх бүрэн дарааллыг харуулав.
 
-\begin{equation}
-    \text{Lot} = \frac{\text{Balance} \times 0.01}{\text{SL}_{\text{пипс}} \times \text{Pip Value}}
-\end{equation}
+\begin{figure}[H]
+\centering
+\resizebox{\textwidth}{!}{
+\begin{tikzpicture}[
+    font=\small,
+    lifeline/.style={dashed, gray!50},
+    msg/.style   ={-{Stealth[length=3mm]}, line width=1pt, black},
+    rmsg/.style  ={-{Stealth[length=3mm]}, line width=1pt, dashed, black},
+    actor/.style ={rectangle, draw, fill=#1, line width=0.9pt,
+                   minimum width=2.4cm, minimum height=0.75cm,
+                   align=center, font=\small\bfseries, rounded corners=6pt},
+    note/.style  ={rectangle, draw=gray!50, fill=#1, rounded corners=3pt,
+                   minimum width=2.8cm, minimum height=0.55cm,
+                   font=\small, align=center},
+]
 
-МaxPositions = 1 гэсэн хязгаарлалт тавьж, нэг удаад зөвхөн нэг нээлттэй позиц байлгасан.
+%% ── Оролцогчид ──────────────────────────────────────────────────────
+\node[actor=gray!20]   (sched)   at ( 0, 0) {Scheduler\\(1 мин)};
+\node[actor=orange!20] (backend) at ( 4, 0) {Flask Backend};
+\node[actor=blue!15]   (yf)      at ( 8, 0) {Yahoo Finance};
+\node[actor=green!15]  (ml)      at (12, 0) {GBDT ансамбль};
+\node[actor=purple!15] (app)     at (16, 0) {Мобайл апп};
 
-\section{MetaTrader 5 бэктест}
+%% ── Lifeline-ууд ────────────────────────────────────────────────────
+\foreach \x in {0,4,8,12,16} {
+    \draw[lifeline] (\x,-0.38) -- (\x,-12.4);
+}
 
-\subsection{Expert Advisor (EA) бүтэц}
+%% 1. Scheduler → Backend
+\draw[msg]  (0,-1.2)  -- node[above, font=\small] {Trigger (минут бүр)} (4,-1.2);
 
-MQL5 хэл дээр хөгжүүлсэн Expert Advisor нь CSV файлаас дохиог уншиж, бодит зах зээлийн нөхцөлд (спрэд, слиппэж) шалгадаг. EA-ийн гол параметрүүд:
+%% 2. Backend → Yahoo Finance
+\draw[msg]  (4,-2.2)  -- node[above, font=\small] {OHLCV хүсэлт (6 интервал: M1–H4)} (8,-2.2);
+\draw[rmsg] (8,-3.0) -- node[above, font=\small] {OHLCV өгөгдөл буцаах} (4,-3.0);
+
+%% 3. Feature engineering (backend дотор)
+\node[note=orange!10] at (4,-3.9) {48 индикатор тооцоолох};
+
+%% 4. Backend → GBDT
+\draw[msg]  (4,-4.8)  -- node[above, font=\small] {Индикаторын вектор (48)} (12,-4.8);
+
+%% 5. ML дотоод үйл ажиллагаа
+\node[note=green!10, minimum width=3.8cm] at (12,-6.0) {LGB + XGB + CatBoost\\Soft Voting → LogReg Calibrator};
+
+%% 6. GBDT → Backend
+\draw[rmsg] (12,-7.0) -- node[above, font=\small] {Дохио (BUY/SELL/HOLD, итгэлцэл)} (4,-7.0);
+
+%% 7-9. Backend дотоод боловсруулалт
+\node[note=orange!10] at (4,-7.9) {Өндөр итгэлцэл бүхий\\дохио шүүх};
+\node[note=orange!10] at (4,-8.7) {SL/TP тооцоолол};
+\node[note=orange!10] at (4,-9.5) {MongoDB-д хадгалах};
+
+%% 10. Push мэдэгдэл
+\draw[msg]  (4,-10.5) -- node[above, font=\small] {Push мэдэгдэл} (16,-10.5);
+
+%% 11. Мобайл апп REST хүсэлт
+\draw[msg]  (16,-11.2) -- node[above, font=\small] {GET /signals} (4,-11.2);
+\draw[rmsg] (4,-12.0)  -- node[above, font=\small] {JSON: дохио \{итгэлцэл, SL, TP\}} (16,-12.0);
+
+\end{tikzpicture}
+}
+\caption{Дохио үүсгэх дарааллын диаграмм (Sequence Diagram)}
+\label{fig:signal_sequence}
+\end{figure}
+
+Дарааллын диаграммаас харахад, дохио үүсгэх процесс дараах дарааллаар явагдана:
+\begin{enumerate}
+    \item Scheduler минут бүр автоматаар Backend-ийг trigger хийнэ
+    \item Backend нь Yahoo Finance-аас 6 интервал (M1, M5, M15, M30, H1, H4) тус бүрийн OHLCV өгөгдлийг тусад нь татна: M1 сүүлийн 7 хоног, M5/M15/M30 сүүлийн 60 хоног, H1/H4 сүүлийн 2 жилийн өгөгдөл
+    \item Татсан өгөгдлөөс 6 интервалын 48 техник индикаторыг тооцоолно
+    \item GBDT ансамбль загвараар BUY/SELL/HOLD гурван ангиллын магадлалыг тооцоолно
+    \item Итгэлцэл ($\geq$90\%) болон ATR ($\geq$4 пипс) шүүлтүүрийг давсан тохиолдолд л дохио үүснэ
+    \item Динамик SL/TP-г ATR дээр суурилан тооцоолно
+    \item Дохиог MongoDB-д хадгалж, мобайл апп-руу push мэдэгдэл илгээнэ
+    \item Мобайл апп \texttt{GET /signals} хүсэлтээр JSON хариуг авна
+\end{enumerate}
+
+%% ============================================================
+%% 3.6 MetaTrader 5 backtest
+%% ============================================================
+\section{MetaTrader 5 backtest}
+
+\subsection{Expert Advisor-ийн бүтэц}
+
+MQL5 хэл дээр хөгжүүлсэн Expert Advisor (EA) нь CSV файлаас дохиог уншиж, бодит зах зээлийн нөхцөлд (спрэд, слиппэж) шалгадаг. \tref{tab:ea_params} нь EA-ийн тохиргооны параметрүүдийг харуулав.
 
 \begin{table}[H]
 \centering
-\caption{EA-ийн тохиргооны параметрүүд}
+\caption{Expert Advisor-ийн тохиргооны параметрүүд}
 \label{tab:ea_params}
 \begin{tabular}{lll}
 \toprule
@@ -316,23 +665,59 @@ MQL5 хэл дээр хөгжүүлсэн Expert Advisor нь CSV файлаас
 \texttt{RiskPerTrade} & 1.0\% & Арилжаа бүрийн эрсдэл \\
 \texttt{MaxPositions} & 1 & Нэг удаад нэг позиц \\
 \texttt{MinConfidence} & 0.90 & Итгэлцлийн доод хязгаар \\
-\texttt{SlippagePoints} & 10 & Зөвшөөрөгдөх слиппэж \\
-\texttt{MagicNumber} & 60609688 & EA-ийн дугаар \\
+\texttt{SlippagePoints} & 10 & Зөвшөөрөгдөх слиппэж (пипс) \\
+\texttt{MagicNumber} & 60609688 & EA-ийн таних дугаар \\
 \bottomrule
 \end{tabular}
 \end{table}
 
-\subsection{Бэктестийн нөхцөл}
+\subsection{Backtest-ийн нөхцөл}
 
 \begin{itemize}
     \item \textbf{Платформ}: MetaTrader 5 Strategy Tester
-    \item \textbf{Горим}: Every tick (бүх тикийн өгөгдөлтэй)
-    \item \textbf{Хугацаа}: 2025.01.01 -- 2025.10.31
+    \item \textbf{Горим}: Every tick (бүх тикийн өгөгдөл -- хамгийн бодит нөхцөл)
+    \item \textbf{Хугацаа}: 2025.01.01 -- 2025.10.31 (10 сарын backtest)
     \item \textbf{Анхны хөрөнгө}: \$10,000
     \item \textbf{Хэрэгсэл}: EUR/USD (бодит спрэд)
+    \item \textbf{Загвар}: GBDT\_v7 ансамбль загвараас үүсгэсэн 1,065 дохио
 \end{itemize}
 
-\section{Backend API хөгжүүлэлт}
+\subsection{Үнэлгээний шалгуур үзүүлэлтүүд}
+
+Загварын болон арилжааны системийн гүйцэтгэлийг үнэлэхэд дараахь шалгуур үзүүлэлтүүдийг ашигласан. \tref{tab:eval_metrics} нь тэдгээрийн тодорхойлолт, зорилтот утгыг нэгтгэн харуулав.
+
+\begin{table}[H]
+\centering
+\caption{Системийн үнэлгээний шалгуур үзүүлэлтүүд}
+\label{tab:eval_metrics}
+\small
+\begin{tabular}{lp{6.5cm}l}
+\toprule
+\textbf{Үзүүлэлт} & \textbf{Тодорхойлолт} & \textbf{Зорилтот утга} \\
+\midrule
+\multicolumn{3}{l}{\textit{Загварын ангиллын үзүүлэлтүүд}} \\
+\midrule
+Нарийвчлал (Accuracy) & Нийт таамаглалаас зөв таамгийн хувь & $\geq$ 50\% \\
+F1-score (macro) & Precision ба Recall-ийн гармоник дундаж (ангилал бүрд) & $\geq$ 0.45 \\
+AUC-ROC & Ангилагчийн тасгалзах чадварыг үнэлэх & $\geq$ 0.65 \\
+\midrule
+\multicolumn{3}{l}{\textit{Backtest-ийн арилжааны үзүүлэлтүүд}} \\
+\midrule
+Нийт ашиг (\%) & Backtest хугацааны эцсийн хөрөнгийн өсөлт & $>$ 0\% \\
+Profit Factor & $\frac{\text{нийт ашиг}}{\text{нийт алдагдал}}$ & $>$ 1.0 \\
+Max Drawdown (\%) & Хамгийн их хөрөнгийн уналтын хувь & $<$ 20\% \\
+Win Rate (\%) & Ашигтай арилжааны хувь & $\geq$ 40\% \\
+Sharpe Ratio & Эрсдэлд тохируулсан өгөөж & $>$ 0.5 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Загварын ангиллын нарийвчлал нь форекс зах зээл дээр 50\%-аас давахад хэцүү гэдгийг \cite{gu2020empirical} онцолсон тул бидний зорилтот утгыг бага тогтоосон. Гэвч арилжааны системд нарийвчлал дангаараа хангалтгүй бөгөөд эрсдэл-өгөөжийн харьцаа (TP:SL = 3:1) нь Win Rate 33\% ч ашигтай байх нөхцөлийг бүрдүүлдэг \cite{pardo2008evaluation}. Иймд backtest-ийн арилжааны үзүүлэлтүүд нь загварын бодит ашиг тусыг илүү үнэн зөв илэрхийлнэ.
+
+%% ============================================================
+%% 3.8 Backend серверийн хөгжүүлэлт
+%% ============================================================
+\section{Backend серверийн хөгжүүлэлт}
 
 \subsection{Технологийн стек}
 
@@ -340,67 +725,88 @@ Backend серверийг Python хэл дээр Flask фреймворк аш�
 
 \begin{table}[H]
 \centering
-\caption{Backend технологийн стек}
+\caption{Backend серверийн технологийн стек}
 \label{tab:backend_stack}
 \begin{tabular}{llp{6cm}}
 \toprule
 \textbf{Технологи} & \textbf{Хувилбар} & \textbf{Үүрэг} \\
 \midrule
-Python & 3.10+ & Серверийн хэл \\
-Flask & 3.0+ & REST API фреймворк \\
-MongoDB & 7.0+ & Хэрэглэгч, дохионы мэдээллийн сан \\
-JWT & -- & Хэрэглэгчийн баталгаажуулалт \\
-Twelve Data API & -- & Бодит цагийн Forex ханш (20 хослол) \\
-Google Gemini & -- & AI зах зээлийн дүн шинжилгээ \\
+Python & 3.10+ & Backend програмчлалын хэл \\
+Flask & 3.0+ & REST API вэб фреймворк \\
+MongoDB & 7.0+ & Баримт бичигт суурилсан өгөгдлийн сан \\
+PyMongo & 4.0+ & MongoDB-ийн Python драйвер \\
+JWT & -- & Хэрэглэгчийн баталгаажуулалт (token) \\
+Yahoo Finance (yfinance) & -- & Бодит цагийн ханш (20 хослол) \\
+Google Gemini 2.5 Flash & -- & AI зах зээлийн шинжилгээ \\
 Waitress & -- & WSGI сервер (4 thread) \\
-Flask-Mail & -- & Имэйл баталгаажуулалт \\
+Flask-Mail & -- & Имэйл илгээх (SMTP) \\
+bcrypt & -- & Нууц үг шифрлэх \\
+Expo Push API & -- & Push мэдэгдэл илгээх \\
 \bottomrule
 \end{tabular}
 \end{table}
 
-\subsection{API Endpoint-ууд}
+\subsection{API endpoint-ууд}
 
-Backend API нь дараахь гол endpoint-уудтай:
+Backend API нь дараахь endpoint бүлгүүдтэй. \tref{tab:api_endpoints} нь гол endpoint-уудыг харуулав.
 
 \begin{table}[H]
 \centering
-\caption{Гол API endpoint-ууд}
+\caption{Гол API endpoint-ууд (бүлгээр)}
 \label{tab:api_endpoints}
 \small
-\begin{tabular}{lll}
+\begin{tabular}{lllp{4.5cm}}
 \toprule
-\textbf{Endpoint} & \textbf{Арга} & \textbf{Тайлбар} \\
+\textbf{Бүлэг} & \textbf{Endpoint} & \textbf{Арга} & \textbf{Тайлбар} \\
 \midrule
-\texttt{/auth/register} & POST & Хэрэглэгч бүртгэх \\
-\texttt{/auth/verify-email} & POST & Имэйл баталгаажуулах \\
-\texttt{/auth/login} & POST & Нэвтрэх \\
-\texttt{/rates/live} & GET & 20 хослолын бодит ханш \\
-\texttt{/signal/v2} & GET & V10 ML дохио авах \\
-\texttt{/signal/save} & POST & Дохио хадгалах \\
-\texttt{/signals/history} & GET & Дохионы түүх \\
-\texttt{/api/news} & GET & Мэдээ мэдээлэл \\
-\texttt{/api/market-analysis} & GET & AI зах зээлийн дүн шинжилгээ \\
-\texttt{/health} & GET & Серверийн төлөв \\
+\multirow{6}{*}{Нэвтрэлт} & \texttt{/auth/register} & POST & Хэрэглэгч бүртгэх \\
+& \texttt{/auth/verify-email} & POST & Имэйл баталгаажуулах \\
+& \texttt{/auth/login} & POST & Нэвтрэх (JWT token буцаах) \\
+& \texttt{/auth/forgot-password} & POST & Нууц үг сэргээх код илгээх \\
+& \texttt{/auth/reset-password} & POST & Шинэ нууц үг тохируулах \\
+& \texttt{/auth/me} & GET & Хэрэглэгчийн мэдээлэл авах \\
+\midrule
+\multirow{2}{*}{Ханш} & \texttt{/rates/live} & GET & 20 хослолын бодит ханш \\
+& \texttt{/rates/specific} & GET & Тодорхой хослолын ханш \\
+\midrule
+\multirow{5}{*}{Дохио} & \texttt{/signal} & GET & Бодит цагийн ML дохио \\
+& \texttt{/signal/save} & POST & Дохио хадгалах \\
+& \texttt{/signals/history} & GET & Дохионы түүх \\
+& \texttt{/signals/latest} & GET & Сүүлийн дохио(нууд) \\
+& \texttt{/signals/stats} & GET & Дохионы статистик \\
+\midrule
+\multirow{3}{*}{Мэдээ} & \texttt{/api/news} & GET & Эдийн засгийн мэдээ \\
+& \texttt{/api/news/analyze} & POST & Мэдээний AI шинжилгээ \\
+& \texttt{/api/market-analysis} & GET & AI зах зээлийн шинжилгээ \\
+\midrule
+\multirow{5}{*}{Мэдэгдэл} & \texttt{/notifications/register} & POST & Push token бүртгэх \\
+& \texttt{/notifications/preferences} & GET/PUT & Мэдэгдлийн тохиргоо \\
+& \texttt{/notifications/in-app} & GET & Апп доторх мэдэгдлүүд \\
+& \texttt{/notifications/in-app/unread-count} & GET & Уншаагүй мэдэгдлийн тоо \\
+& \texttt{/notifications/in-app/mark-read} & POST & Мэдэгдэл уншсан болгох \\
 \bottomrule
 \end{tabular}
 \end{table}
 
-\subsection{Бодит цагийн мэдээлэл}
+\subsection{Серверийн арын процессууд}
 
-Twelve Data API-аас EUR/USD-ийн бодит ханш авч, кэш механизмтай (2 минутын TTL) ажилладаг. 20 валютын хослолд зориулсан ханшийг cross-rate тооцоолсноор нэг API дуудлагаар бүгдийг нийлүүлдэг. Rate limiting (1 хүсэлт/минут, үнэгүй төлөвлөгөө)-ийг non-blocking хандлагаар шийдсэн -- rate limit-д орвол кэш-дэх сүүлийн хадгалсан өгөгдлийг шууд буцаана.
+Backend сервер нь хэрэглэгчийн хүсэлтүүдийг хүлээн авахаас гадна 4 арын процесс (background thread) тасралтгүй ажиллуулдаг:
 
-\subsection{Дохио үүсгэх урсгал (Signal Generation Flow)}
-
-Мобайл аппликейшнаас \texttt{/signal/v2} endpoint-руу хүсэлт ирэхэд:
 \begin{enumerate}
-    \item Twelve Data API-аас сүүлийн 500 бааран (1 минутын интервал) авна
-    \item Загварын шинж чанарыг тооцоолно (48 шинж чанар)
-    \item V10 ансамбль загвараар магадлал тооцоолно
-    \item Confidence босго шалгана ($\geq$ 85\%)
-    \item BUY/SELL/HOLD дохиог динамик SL/TP-тэй хамт буцаана
+    \item \textbf{Мэдээний шинэчлэгч} (30 минут тутам): AlphaVantage-аас мэдээний сентиментийг (гол эх сурвалж), TradingView-аас эдийн засгийн хуанлийн үйл явдлуудыг (нөөц болон хуанли) татаж, хэрэглэгчдэд хүргэхэд бэлтгэнэ
+    \item \textbf{Мэдээний мэдэгдэл} (2 минут тутам): Дараагийн 10 минутад болох өндөр нөлөөтэй эдийн засгийн мэдээний талаар хэрэглэгчдэд push мэдэгдэл илгээнэ
+    \item \textbf{Автомат дохио үүсгэгч} (60 секунд тутам): Yahoo Finance-аас бодит ханш авч, GBDT ансамбль загвараар таамаглал хийж, шалгуур хангасан дохиог автоматаар хадгалж, хэрэглэгчдэд мэдэгдэл илгээнэ
+    \item \textbf{Өгөгдлийн урьдчилсан ачаалагч} (серверийн эхлэл): Сервер асах үед Yahoo Finance-аас 500 candle 1 минутын өгөгдлийг урьдчилан ачаалж, анхны дохио хурдан үүсгэхэд бэлтгэнэ
 \end{enumerate}
 
-\section{Мобайл аппликейшн хөгжүүлэлт}
+\subsection{Бодит цагийн ханшийн мэдээлэл}
+
+Yahoo Finance API-аас 20 Forex хослолын бодит ханшийг авч, 60 секундын кэш (cache) механизмтай ажилладаг. \texttt{yfinance} Python сангаар API түлхүүр шаардахгүйгээр зах зээлийн өгөгдлийг татна. Дэмждэг хослолуудын жагсаалт: EUR/USD, GBP/USD, USD/JPY, USD/CHF, AUD/USD, USD/CAD, NZD/USD, EUR/GBP, EUR/JPY, GBP/JPY, EUR/CHF, EUR/AUD, GBP/CHF, AUD/JPY, CHF/JPY, NZD/JPY, AUD/NZD, EUR/CAD, GBP/AUD, GBP/CAD.
+
+%% ============================================================
+%% 3.8 Мобайл аппликейшний хөгжүүлэлт
+%% ============================================================
+\section{Мобайл аппликейшний хөгжүүлэлт}
 
 \subsection{Технологийн стек}
 
@@ -412,70 +818,267 @@ Twelve Data API-аас EUR/USD-ийн бодит ханш авч, кэш мех�
 \toprule
 \textbf{Технологи} & \textbf{Хувилбар} & \textbf{Үүрэг} \\
 \midrule
-React Native & 0.74.5 & Cross-platform мобайл фреймворк \\
-TypeScript & 5.9+ & Type-safe хөгжүүлэлт \\
-Expo & 51.0 & Хөгжүүлэлтийн хэрэгсэл \\
-React Navigation & 6.x & Навигаци (Stack + Tab) \\
-React Query & 5.x & Серверийн өгөгдөл менежмент \\
-Axios & 1.6+ & HTTP client \\
-AsyncStorage & -- & Локал хадгалалт (JWT token) \\
+React Native & 0.74.5 & Мобайл хөгжүүлэлтийн фреймворк \\
+TypeScript & 5.3.x & Төрлийн аюулгүй байдалтай код \\
+Expo & 51.0 & Хөгжүүлэлт, бэлтгэлийн хэрэгсэл \\
+React Navigation & 6.x & Дэлгэцийн навигаци (Stack + Tab) \\
+React Query & 5.x & Серверийн өгөгдлийн менежмент, кэш \\
+Axios & 1.6+ & HTTP хүсэлт (auto-retry) \\
+AsyncStorage & -- & Дотоод хадгалалт (JWT token, тохиргоо) \\
+Expo Notifications & -- & Push мэдэгдэл хүлээн авах \\
 \bottomrule
 \end{tabular}
 \end{table}
 
-\subsection{Аппликейшний бүтэц}
+\subsection{Аппликейшний навигацийн бүтцийн диаграмм}
 
-Аппликейшн нь дараахь дэлгэцүүдтэй:
+Аппликейшний хэрэглэгчийн урсгалыг \fref{fig:app_navigation} харуулав. Нэвтрэлтийн дараа Bottom Tab Navigator-ийн 4 таб нэвтрэх боломжтой болно.
 
-\begin{itemize}
-    \item \textbf{Нэвтрэх дэлгэц} (LoginScreen) -- Имэйл + нууц үгээр нэвтрэх
-    \item \textbf{Бүртгэлийн дэлгэц} (SignUpScreen) -- Шинэ хэрэглэгч бүртгэх
-    \item \textbf{Баталгаажуулалт} (EmailVerificationScreen) -- 6 оронтой код
-    \item \textbf{Нүүр дэлгэц} (HomeScreen) -- 20 валютын хослолын бодит ханш, өсөлт/бууралт
-    \item \textbf{Дохио дэлгэц} (SignalScreen) -- ML дохио, итгэлцлийн хувь, SL/TP
-    \item \textbf{Мэдээний дэлгэц} (NewsScreen) -- Эдийн засгийн мэдээ, AI шинжилгээ
-    \item \textbf{Профайл дэлгэц} (ProfileScreen) -- Хэрэглэгчийн мэдээлэл, тохиргоо
-\end{itemize}
+\begin{figure}[H]
+\centering
+\resizebox{0.92\textwidth}{!}{%
+\begin{tikzpicture}[
+    auth/.style  ={rectangle, draw=purple!55, fill=purple!6,
+                   rounded corners=5pt, line width=1pt,
+                   minimum width=3.6cm, minimum height=1.1cm,
+                   align=center, font=\small\bfseries},
+    main/.style  ={rectangle, draw=orange!70!black, fill=orange!10,
+                   rounded corners=5pt, line width=1.4pt,
+                   minimum width=4.2cm, minimum height=1.2cm,
+                   align=center, font=\small\bfseries},
+    tab/.style   ={rectangle, draw=teal!55, fill=teal!5,
+                   rounded corners=5pt, line width=1pt,
+                   minimum width=3cm, minimum height=1.25cm,
+                   align=center, font=\small\bfseries},
+    modal/.style ={rectangle, draw=blue!45, fill=blue!4,
+                   rounded corners=5pt, line width=1pt, dashed,
+                   minimum width=3.4cm, minimum height=1.1cm,
+                   align=center, font=\small\bfseries},
+    lbl/.style   ={font=\scriptsize, text=black, inner sep=1.5pt},
+    arr/.style   ={-{Stealth[length=2.5mm,width=1.8mm]}, line width=0.8pt,
+                   draw=gray!55!black},
+    arrok/.style ={-{Stealth[length=2.5mm,width=1.8mm]}, line width=1pt,
+                   draw=green!50!black},
+    arrdash/.style={-{Stealth[length=2.5mm,width=1.8mm]}, line width=0.8pt,
+                    draw=blue!40, dashed},
+]
 
-Аппликейшний навигацийн бүтэц:
-\begin{itemize}
-    \item \textbf{Stack Navigator}: Auth дэлгэцүүд (Login, SignUp, Verify, Forgot Password, Main)
-    \item \textbf{Bottom Tab Navigator}: Market (Нүүр), News (Мэдээ), Profile (Профайл)
-\end{itemize}
+%% ─── 1-р мөр: Login ────────────────────────────────────────────
+\node[auth] (login) at (7, 0) {Нэвтрэх};
+
+%% ─── 2-р мөр: SignUp + Forgot (тэгш хэмд, Login-д ойр) ────────
+\node[auth] (signup) at (2, -2.4) {Бүртгүүлэх};
+\node[auth] (forgot) at (12,-3.4) {Нууц үг сэргээх};
+
+%% ─── 3-р мөр: Verify ──────────────────────────────────────────
+\node[auth] (verify) at (2, -5) {Имэйл баталгаажуулалт};
+
+%% ─── 4-р мөр: Bottom Tab Navigator ────────────────────────────
+\node[main] (maintab) at (7, -8) {Bottom Tab Navigator};
+
+%% ─── 5-р мөр: 4 таб ───────────────────────────────────────────
+\node[tab] (home)    at (1,  -12) {Ханш\\{\scriptsize\color{teal!65} MARKET}};
+\node[tab] (pred)    at (4.8,-12) {Дохио\\{\scriptsize\color{teal!65} SIGNAL}};
+\node[tab] (news)    at (8.8,-12) {Мэдээ\\{\scriptsize\color{teal!65} NEWS}};
+\node[tab] (profile) at (12.8,-12){Профайл\\{\scriptsize\color{teal!65} PROFILE}};
+
+%% ─── Modal (баруун гадна талд) ─────────────────────────────────
+\node[modal] (notif)  at (17.8,-8)   {Мэдэгдэлүүд};
+\node[modal] (signal) at (17.8,-12)  {Дохионы дэлгэрэнгүй};
+
+%% ═══════════════════════════════════════════════════════════════
+%% СУМНУУД
+%% ═══════════════════════════════════════════════════════════════
+
+%% --- Auth: Login → SignUp (зүүнрүү → доош, тэгш өнцөг) ---
+\draw[arr] (login.west) -| (signup.north)
+    node[lbl, pos=0.25, above=2pt] {Бүртгэл үгүй};
+
+%% --- Auth: Login → Forgot (баруунруу → доош, тэгш өнцөг) ---
+\draw[arr] (login.east) -| (forgot.north)
+    node[lbl, pos=0.25, above=2pt] {Нууц үг мартсан};
+
+%% --- Auth: SignUp → Verify ---
+\draw[arr] (signup.south) -- (verify.north)
+    node[lbl, midway, right=2pt] {Код авах};
+
+%% --- Амжилтын сумнууд (ногоон → MainTab.north) ---
+
+%% Login → MainTab (голоор шууд доош)
+\draw[arrok] (login.south) -- (maintab.north)
+    node[lbl, pos=0.55, right=4pt, text=green!50!black] {Нэвтрэлт амжилттай};
+
+%% Verify → MainTab (доош → баруунруу → дээрээс .north руу)
+\draw[arrok] (verify.south) -- ++(0,-1.2)
+    node[lbl, midway, left=2pt, text=green!50!black] {Баталгаа амжилттай}
+    -| ([xshift=-1.2cm]maintab.north);
+
+%% Forgot → MainTab (доош → зүүнрүү → дээрээс .north руу)
+\draw[arrok] (forgot.south) -- ++(0,-2.8)
+    node[lbl, midway, right=2pt, text=green!50!black] {Нууц үг шинэчлэгдсэн}
+    -| ([xshift=1.2cm]maintab.north);
+
+%% --- MainTab → 4 Tabs (bus шугам) ---
+\coordinate (busc) at (7, -10.2);
+\draw[line width=1pt, gray!40] (maintab.south) -- (busc);
+\draw[line width=1pt, gray!40] (1, -10.2) -- (12.8, -10.2);
+\foreach \t in {home, pred, news, profile}
+    \draw[arr] (\t |- busc) -- (\t.north);
+
+%% --- Modal руу (тасархай) ---
+
+%% MainTab → Notifications (хэвтээ шугам)
+\draw[arrdash] (maintab.east) -- (notif.west)
+    node[lbl, midway, above=2pt] {Хонхны дүрс};
+
+%% Prediction → Signal (доод талаар тойрч)
+\draw[arrdash] (pred.south) -- ++(0,-0.8) -| (signal.south)
+    node[lbl, pos=0.5, below=2pt] {Дохио сонгох};
+
+\end{tikzpicture}%
+}
+\caption{Мобайл аппликейшний хэрэглэгчийн навигацийн урсгал}
+\label{fig:app_navigation}
+\end{figure}
+
+\subsection{Хэрэглэгчийн нэвтрэлтийн дарааллын диаграмм}
+
+\fref{fig:auth_sequence} нь хэрэглэгч бүртгүүлэх болон нэвтрэх дарааллыг харуулав.
+
+\begin{figure}[H]
+\centering
+\resizebox{\textwidth}{!}{
+\begin{tikzpicture}[
+    font=\small,
+    lifeline/.style={dashed, gray},
+    msg/.style={-{Stealth[length=2.5mm]}, thick},
+    rmsg/.style={-{Stealth[length=2.5mm]}, thick, dashed},
+    actor/.style={rectangle, draw, fill=#1, minimum width=2cm, minimum height=0.6cm, align=center, font=\small\bfseries, rounded corners=3pt},
+    note/.style={rectangle, draw, fill=yellow!10, font=\scriptsize, align=left, rounded corners=2pt}
+]
+
+% Оролцогчид
+\node[actor=gray!20] (user) at (0,0) {Хэрэглэгч};
+\node[actor=purple!15] (app) at (4.5,0) {Мобайл апп};
+\node[actor=orange!15] (backend) at (9.5,0) {Backend API};
+\node[actor=blue!15] (db) at (14,0) {MongoDB};
+
+% Амьдралын шугамууд
+\draw[lifeline] (0,-0.3) -- (0,-14);
+\draw[lifeline] (4.5,-0.3) -- (4.5,-14);
+\draw[lifeline] (9.5,-0.3) -- (9.5,-14);
+\draw[lifeline] (14,-0.3) -- (14,-14);
+
+% === БҮРТГЭЛ ХЭСЭГ ===
+\node[note, fill=blue!5] at (7,-1.3) {\textbf{Бүртгүүлэх үйлдэл}};
+
+\draw[msg] (0,-1.5) -- node[above, font=\scriptsize] {Нэр, имэйл, нууц үг оруулах} (4.5,-1.5);
+\draw[msg] (4.5,-2.2) -- node[above, font=\scriptsize] {POST /auth/register} (9.5,-2.2);
+\draw[msg] (9.5,-2.9) -- node[above, font=\scriptsize] {verification\_codes.insert()} (14,-2.9);
+\draw[rmsg] (14,-3.4) -- node[above, font=\scriptsize] {OK} (9.5,-3.4);
+
+\node[note] at (12,-4) {Имэйлээр 6 оронтой\\код илгээх (SMTP)};
+
+\draw[rmsg] (9.5,-4.6) -- node[above, font=\scriptsize] {Код илгээсэн} (4.5,-4.6);
+\draw[rmsg] (4.5,-5.1) -- node[above, font=\scriptsize] {Код оруулна уу} (0,-5.1);
+
+\draw[msg] (0,-5.8) -- node[above, font=\scriptsize] {6 оронтой код оруулах} (4.5,-5.8);
+\draw[msg] (4.5,-6.4) -- node[above, font=\scriptsize] {POST /auth/verify-email} (9.5,-6.4);
+\draw[msg] (9.5,-7) -- node[above, font=\scriptsize] {users.insert(), verification.delete()} (14,-7);
+\draw[rmsg] (14,-7.5) -- node[above, font=\scriptsize] {OK} (9.5,-7.5);
+\draw[rmsg] (9.5,-8) -- node[above, font=\scriptsize] {JWT token буцаах} (4.5,-8);
+\draw[rmsg] (4.5,-8.5) -- node[above, font=\scriptsize] {Нэвтрэлт амжилттай} (0,-8.5);
+
+% === НЭВТРЭХ ХЭСЭГ ===
+\node[note, fill=blue!5] at (7,-9.7) {\textbf{Нэвтрэх үйлдэл}};
+
+\draw[msg] (0,-9.9) -- node[above, font=\scriptsize] {Имэйл, нууц үг} (4.5,-9.9);
+\draw[msg] (4.5,-10.5) -- node[above, font=\scriptsize] {POST /auth/login} (9.5,-10.5);
+\draw[msg] (9.5,-11.1) -- node[above, font=\scriptsize] {users.find(), bcrypt.verify()} (14,-11.1);
+\draw[rmsg] (14,-11.6) -- node[above, font=\scriptsize] {Хэрэглэгч олдсон} (9.5,-11.6);
+
+\node[note] at (12,-12.2) {JWT token үүсгэх\\(7 хоногийн хугацаатай)};
+
+\draw[rmsg] (9.5,-12.8) -- node[above, font=\scriptsize] {JWT token} (4.5,-12.8);
+\draw[rmsg] (4.5,-13.3) -- node[above, font=\scriptsize] {Нүүр дэлгэц рүү шилжих} (0,-13.3);
+
+\end{tikzpicture}
+}
+\caption{Хэрэглэгчийн бүртгэл ба нэвтрэлтийн дарааллын диаграмм (Sequence Diagram)}
+\label{fig:auth_sequence}
+\end{figure}
 
 \subsection{Бодит цагийн өгөгдлийн менежмент}
 
-React Query ашиглан серверийн өгөгдлийг бодит цагийн горимд удирддаг:
-\begin{itemize}
-    \item Ханшийн дата: 60 секунд тутам автоматаар шинэчлэгднэ
-    \item API төлөв: 30 секунд тутам шалгана
-    \item Pull-to-refresh: Хэрэглэгч гараар шинэчлэх боломжтой
-\end{itemize}
+Аппликейшн нь React Query сан ашиглан серверийн өгөгдлийг бодит цагийн горимд удирддаг. Ханшийн өгөгдлийг 60 секунд тутам, серверийн төлвийг 30 секунд тутам автоматаар шинэчилдэг. Алдаа гарсан тохиолдолд 3 удаа дахин оролдох, JWT token хүчингүй болвол нэвтрэх дэлгэц рүү шилжүүлэх механизмтай.
 
-\section{Хөгжүүлэлтийн үе шатууд}
+%% ============================================================
+%% 3.9 Хөгжүүлэлтийн үе шатууд
+%% ============================================================
+\section{Загварын давталтат сайжруулалт}
 
-Систем нь 7 давталтат (iterative) үе шатаар хөгжсөн:
+DSR арга зүйн дагуу загварын хөгжүүлэлтийг 7 давталтат (iterative) үе шатаар явуулсан. Үе шат бүрт ``бүтээх $\to$ үнэлэх $\to$ сайжруулах'' мөчлөгийг давтаж, өмнөх хувилбарын backtest үр дүнд тулгуурлан сул талыг зассан. \fref{fig:dev_workflow} нь энэ давталтат урсгал болон үе шат бүрийн гол өөрчлөлтийг нэгтгэн харуулав.
 
-\begin{table}[H]
+\begin{figure}[H]
 \centering
-\caption{Хөгжүүлэлтийн үе шатууд}
-\label{tab:dev_phases}
-\small
-\begin{tabular}{clp{8cm}}
-\toprule
-\textbf{Үе шат} & \textbf{Нэр} & \textbf{Гол өөрчлөлт} \\
-\midrule
-Phase 1 & ATR шүүлтүүр & ATR босго 3$\to$4 пипс (86.8\% дохио буурсан) \\
-Phase 2 & Шинж чанар нэмэх & +15 нэмэлт шинж чанар \\
-Phase 3 & Загварын олон янз байдал & 3$\to$9 загвар (сүүлд 3 болгож хялбаршуулсан) \\
-Phase 4 & Trailing stop & Хойшлогдсон SL стратеги \\
-Phase 5 & Drawdown засвар & MaxPositions=1, Risk=1\% \\
-Phase 6B & Overfitting засвар & 75$\to$48 шинж чанар, walk-forward, шуурхай загвар \\
-Phase 7B & Чанартай дохио & conf$\geq$0.90, ATR$\geq$4.0, TP:SL=3:1 \\
-\bottomrule
-\end{tabular}
-\end{table}
+\begin{tikzpicture}[
+    phase/.style={rectangle, draw=gray!60, fill=#1, rounded corners=5pt,
+                  minimum width=3.2cm, minimum height=0.9cm,
+                  align=center, font=\small\bfseries},
+    desc/.style={font=\small, align=left, text width=8.5cm, anchor=west},
+    arrow/.style={-{Stealth[length=3mm]}, thick, gray!50},
+]
 
+\def\dy{-1.6}
+
+%% ─── Үе шатууд (босоо, зүүн талд) + тайлбар (баруун талд) ──
+\node[phase=blue!15]   (p1) at (0, 0)      {Үе шат 1};
+\node[phase=blue!20]   (p2) at (0, \dy)     {Үе шат 2};
+\node[phase=green!15]  (p3) at (0, 2*\dy)   {Үе шат 3};
+\node[phase=green!20]  (p4) at (0, 3*\dy)   {Үе шат 4};
+\node[phase=orange!15] (p5) at (0, 4*\dy)   {Үе шат 5};
+\node[phase=orange!25] (p6) at (0, 5*\dy)   {Үе шат 6};
+\node[phase=red!15]    (p7) at (0, 6*\dy)   {Үе шат 7};
+
+%% ─── Сумнууд ───────────────────────────────────────────────
+\draw[arrow] (p1) -- (p2);
+\draw[arrow] (p2) -- (p3);
+\draw[arrow] (p3) -- (p4);
+\draw[arrow] (p4) -- (p5);
+\draw[arrow] (p5) -- (p6);
+\draw[arrow] (p6) -- (p7);
+
+%% ─── Тайлбарууд (баруун талд) ──────────────────────────────
+\node[desc] at (2.6, 0)      {\textbf{ATR шүүлтүүр} -- босго 3$\to$4 пипс. Бага хэлбэлзэлтэй 86.8\% дохиог хассан};
+\node[desc] at (2.6, \dy)     {\textbf{Индикатор нэмэх} -- 15 нэмэлт индикатор нэмсэн (нийт 63)};
+\node[desc] at (2.6, 2*\dy)   {\textbf{Загварын олон янз} -- 9 загвар туршсан, хамгийн сайн 3 сонгосон (LGB, XGB, Cat)};
+\node[desc] at (2.6, 3*\dy)   {\textbf{Trailing stop} -- хойшлогдсон SL стратеги. Ашигтай арилжааг урт хугацаагаар барих};
+\node[desc] at (2.6, 4*\dy)   {\textbf{Drawdown засвар} -- MaxPositions=1, Risk=1\%. Max DD бууруулсан};
+\node[desc] at (2.6, 5*\dy)   {\textbf{Overfitting засвар} -- 75$\to$48 индикатор. WFV шинжилгээ хийсэн};
+\node[desc] at (2.6, 6*\dy)   {\textbf{Чанартай дохио} -- conf$\geq$90\%, ATR$\geq$4.0, TP:SL=3:1. Чанарыг эрс сайжруулсан};
+
+%% ─── Холбоос шугамууд ──────────────────────────────────────
+\foreach \i in {1,...,7}
+    \draw[gray!35, densely dotted] (p\i.east) -- ++(0.7,0);
+
+\end{tikzpicture}
+\caption{Загварын давталтат сайжруулалтын үе шатууд ба гол өөрчлөлтүүд}
+\label{fig:dev_workflow}
+\end{figure}
+
+%% ============================================================
+%% 3.11 Бүлгийн дүгнэлт
+%% ============================================================
 \section{Бүлгийн дүгнэлт}
 
-Арга зүйн хүрээнд олон хугацааны хүрээний 48 шинж чанарыг тооцоолж, 3 GBDT загварын ансамблийг walk-forward validation-аар сургаж, чанарын шүүлтүүрээр дохио үүсгэж, MT5-д бэктест хийж, Flask backend болон React Native мобайл аппликейшнаар хэрэглэгчдэд хүргэх бүрэн системийг бүтээсэн. Дараагийн бүлэгт энэ системийн бодит үр дүнг танилцуулна.
+Энэ бүлэгт дизайн шинжлэх ухааны (DSR) арга зүйд суурилсан судалгааны арга зүйг дэлгэрэнгүй тайлбарлав. Арга зүйн гол хэсгүүдэд:
+\begin{itemize}
+    \item \textbf{Өгөгдлийн бэлтгэл}: MetaTrader~5-аас 10 жилийн OHLCV өгөгдлийг 6 интервалаар татаж, олон хугацааны шинжилгээний зарчмаар 48 техник индикатор тооцоолсон
+    \item \textbf{Загварын архитектур}: 3 GBDT загварын (LightGBM, XGBoost, CatBoost) Soft Voting ансамблийг Walk-Forward Validation-аар сургаж, LogReg calibrator-оор тааруулсан
+    \item \textbf{Дохионы чанарын хяналт}: Итгэлцэл $\geq$~90\%, ATR~$\geq$~4.0~пипс, TP:SL~=~3:1 шүүлтүүрээр чанартай дохиог ялгасан
+    \item \textbf{Backtest баталгаажуулалт}: MT5 Strategy Tester-ийн бодит зах зээлийн нөхцөлд (спрэд, слиппэж) үнэлгээ хийсэн
+    \item \textbf{Системийн хэрэгжүүлэлт}: Flask REST API backend, MongoDB, React Native мобайл аппликейшнийг бүрэн хөгжүүлж, дохиог хэрэглэгчдэд хүргэх end-to-end систем бүтээсэн
+    \item \textbf{Давталтат сайжруулалт}: 7 үе шаттай ``бүтээх $\to$ үнэлэх $\to$ сайжруулах'' мөчлөгөөр загварын чанарыг алхам дараалан сайжруулсан
+\end{itemize}
+
+Эдгээр бэлтгэсэн арга зүйн дагуу хөгжүүлсэн системийн бодит үр дүнгийн дэлгэрэнгүйг дараагийн бүлэгт танилцуулна.

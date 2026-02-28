@@ -1,10 +1,9 @@
-This is XeTeX, Version 3.141592653-2.6-0.999997 (MiKTeX 25.4) (preloaded format=xelatex 2025.12.1)  16 FEB 2026 22:42
+This is XeTeX, Version 3.141592653-2.6-0.999997 (MiKTeX 25.4) (preloaded format=xelatex 2025.12.1)  1 MAR 2026 03:56
 entering extended mode
  restricted \write18 enabled.
- file:line:error style messages enabled.
  %&-line parsing enabled.
-**c:/Users/Acer/Desktop/Forex-Signal-App/diplom/main.tex
-(c:/Users/Acer/Desktop/Forex-Signal-App/diplom/main.tex
+**./main.tex
+(main.tex
 LaTeX2e <2025-11-01>
 L3 programming layer <2025-11-06>
 (Thesis.cls
@@ -1603,7 +1602,6 @@ nslations-basic-dictionary')
 Package translations Info: loading dictionary `translations-basic-dictionary' f
 or `english'. on input line 44.
 Package hyperref Info: Link coloring ON on input line 44.
- (main.out) (main.out)
 \@outlinefile=\write4
 \openout4 = `main.out'.
 
@@ -1730,15 +1728,24 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 [3
 
 ] [4] [5]
-Underfull \hbox (badness 1540) in paragraph at lines 113--114
+Underfull \hbox (badness 1112) in paragraph at lines 105--106
+[]\TU/TimesNewRoman(1)/m/it/10.95 Ялгаа\TU/TimesNewRoman(1)/m/n/10.95 : Энэхүү 
+апп нь бодит цагийн Forex дохио өгдөггүй, зөвхөн түүхэн өгөгдөл дээрх
+ []
+
+[6]
+Underfull \hbox (badness 1540) in paragraph at lines 145--146
 []\TU/TimesNewRoman(1)/m/n/10.95 Энэ бүлэгт Forex зах зээлийн таамаглалд машин 
 сургалтыг хэрэглэсэн судалгаануудыг
  []
 
-) (Chapters/Chapter3_Methodology.tex [6]
+) (Chapters/Chapter3_Methodology.tex [7]
 Бүлэг 4.
+[8
+
+] [9]
 LaTeX Font Info:    Font shape `TU/Consolas(0)/m/n' will be
-(Font)              scaled to size 9.85492pt on input line 94.
+(Font)              scaled to size 9.85492pt on input line 222.
 
 Package fontspec Info: 
 (fontspec)             Consolas scale = 0.9.
@@ -1779,7 +1786,7 @@ Space,Scale=0.9,Script=Cyrillic].
 (fontspec)             <->s*[0.9]"Consolas/BI/OT:script=cyrl;language=dflt;"
 
 LaTeX Font Info:    Font shape `TU/Consolas(1)/m/n' will be
-(Font)              scaled to size 9.85492pt on input line 94.
+(Font)              scaled to size 9.85492pt on input line 222.
 
 Package fontspec Info: 
 (fontspec)             Consolas scale = 0.9.
@@ -1792,69 +1799,6 @@ Package fontspec Info:
 Package fontspec Info: 
 (fontspec)             Consolas scale = 0.9.
 
-
-Package fontspec Info: 
-(fontspec)             Consolas scale = 0.9.
-
-
-Package fontspec Info: 
-(fontspec)             Consolas scale = 0.9.
-
-
-Package fontspec Info: 
-(fontspec)             Consolas scale = 0.9.
-
-
-Package fontspec Info: 
-(fontspec)             Consolas scale = 0.9.
-
-[7
-
-]
-
-Package fontspec Info: 
-(fontspec)             Consolas scale = 0.9.
-
-
-Package fontspec Info: 
-(fontspec)             Consolas scale = 0.9.
-
-
-Package fontspec Info: 
-(fontspec)             Consolas scale = 0.9.
-
-
-Package fontspec Info: 
-(fontspec)             Consolas scale = 0.9.
-
-
-Package fontspec Info: 
-(fontspec)             Consolas scale = 0.9.
-
-
-Package fontspec Info: 
-(fontspec)             Consolas scale = 0.9.
-
-
-Package fontspec Info: 
-(fontspec)             Consolas scale = 0.9.
-
-
-Package fontspec Info: 
-(fontspec)             Consolas scale = 0.9.
-
- [8]
-
-Package fontspec Info: 
-(fontspec)             Consolas scale = 0.9.
-
-
-Package fontspec Info: 
-(fontspec)             Consolas scale = 0.9.
-
-Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on in
-put line 239.
- [9]
 
 Package fontspec Info: 
 (fontspec)             Consolas scale = 0.9.
@@ -1876,14 +1820,6 @@ Package fontspec Info:
 (fontspec)             Consolas scale = 0.9.
 
  [10]
-LaTeX Font Info:    Font shape `TU/Consolas(0)/m/n' will be
-(Font)              scaled to size 8.99994pt on input line 374.
-
-Package fontspec Info: 
-(fontspec)             Consolas scale = 0.9.
-
-LaTeX Font Info:    Font shape `TU/Consolas(1)/m/n' will be
-(Font)              scaled to size 8.99994pt on input line 374.
 
 Package fontspec Info: 
 (fontspec)             Consolas scale = 0.9.
@@ -1920,29 +1856,70 @@ Package fontspec Info:
 Package fontspec Info: 
 (fontspec)             Consolas scale = 0.9.
 
- [11]
+ [11] [12] [13]
 
 Package fontspec Info: 
 (fontspec)             Consolas scale = 0.9.
 
- [12]) (Chapters/Chapter4_Results.tex [13]
-Бүлэг 5.
-[14
 
-]
-Overfull \hbox (23.0023pt too wide) in paragraph at lines 176--177
- [][] 
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on in
+put line 452.
+ [14] [15]
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+ [16]
+Underfull \hbox (badness 1097) in paragraph at lines 701--701
+[]|\TU/TimesNewRoman(1)/m/n/10 Precision ба Recall-ийн гармоник дундаж
  []
 
-[15] [16] [17]
+
+Underfull \hbox (badness 10000) in paragraph at lines 706--706
+[]|\TU/TimesNewRoman(1)/m/n/10 Backtest хугацааны эцсийн хөрөнгийн
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 738--739
+[]|\TU/TimesNewRoman(1)/m/n/10.95 Хэрэглэгчийн баталгаажуулалт
+ []
+
+[17]
 LaTeX Font Info:    Font shape `TU/Consolas(0)/m/n' will be
-(Font)              scaled to size 7.19995pt on input line 350.
+(Font)              scaled to size 8.99994pt on input line 762.
 
 Package fontspec Info: 
 (fontspec)             Consolas scale = 0.9.
 
 LaTeX Font Info:    Font shape `TU/Consolas(1)/m/n' will be
-(Font)              scaled to size 7.19995pt on input line 350.
+(Font)              scaled to size 8.99994pt on input line 762.
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
 
 Package fontspec Info: 
 (fontspec)             Consolas scale = 0.9.
@@ -2020,22 +1997,129 @@ Package fontspec Info:
 (fontspec)             Consolas scale = 0.9.
 
  [18]
-Package pgfplots info on input line 392: Using 'lua backend=false' for axis: x 
+Underfull \hbox (badness 3118) in paragraph at lines 793--794
+[]\TU/TimesNewRoman(1)/m/n/10.95 Backend сервер нь хэрэглэгчийн хүсэлтүүдийг хү
+лээн авахаас гадна 4 арын процесс
+ []
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 825--826
+[]|\TU/TimesNewRoman(1)/m/n/10.95 Серверийн өгөгдлийн менежмент,
+ []
+
+[19] [20] [21]) (Chapters/Chapter4_Results.tex [22]
+Бүлэг 5.
+[23
+
+]
+Overfull \hbox (23.0023pt too wide) in paragraph at lines 165--166
+ [][] 
+ []
+
+[24] [25]
+LaTeX Font Info:    Font shape `TU/Consolas(0)/m/n' will be
+(Font)              scaled to size 7.19995pt on input line 326.
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+LaTeX Font Info:    Font shape `TU/Consolas(1)/m/n' will be
+(Font)              scaled to size 7.19995pt on input line 326.
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+ [26]
+Package pgfplots info on input line 368: Using 'lua backend=false' for axis: x 
 coord trafo unsupported.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <9> on input line 460.
- [19] [20]) (Chapters/Chapter5_Conclusion.tex
+(Font)              <9> on input line 436.
+ [27] [28]) (Chapters/Chapter5_Conclusion.tex
 Underfull \hbox (badness 1867) in paragraph at lines 22--23
 []\TU/TimesNewRoman(1)/b/n/10.95 Overfitting шийдвэрлэлт\TU/TimesNewRoman(1)/m/
 n/10.95 : 7 давталтат хөгжүүлэлтийн үе шатаар загварыг хялбаршуулж
  []
 
-[21]) (Chapters/Bibliography.tex [22] (main.bbl [23
+[29]) (Chapters/Bibliography.tex (main.bbl [30] [31
 
-] [24
-
-]))
-(Chapters/appendix.tex [25]
+])) (Chapters/appendix.tex
+[32]
 (C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstlang1.sty
 File: lstlang1.sty 2025/11/14 1.11b listings language file
 )
@@ -2060,7 +2144,7 @@ Package fontspec Info:
 (fontspec)             Consolas scale = 0.9.
 
 
-[26
+[33
 
 ]
 (C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstlang1.sty
@@ -2082,23 +2166,30 @@ Package fontspec Info:
 (fontspec)             Consolas scale = 0.9.
 
 
-[27]) (Chapters/Talarhal.tex [28]) [29
+[34]) (Chapters/Talarhal.tex [35]) [36
 
 ] (main.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2025-11-06>
  ***********
-Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 4D56E21C44C582D5FAF800F9F5F4EF29;9344.
+
+
+Package rerunfilecheck Warning: File `main.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `main.out':
+(rerunfilecheck)             Before: <no file>
+(rerunfilecheck)             After:  CC19784B0686B4C019292AA4C8AE0F4D;10410.
  ) 
 Here is how much of TeX's memory you used:
- 48264 strings out of 402987
- 1141463 string characters out of 5448731
- 2138509 words of memory out of 5000000
- 76118 multiletter control sequences out of 15000+600000
- 658224 words of font info for 170 fonts, out of 8000000 for 9000
+ 48822 strings out of 402987
+ 1151111 string characters out of 5448731
+ 2148687 words of memory out of 5000000
+ 76676 multiletter control sequences out of 15000+600000
+ 658264 words of font info for 175 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 88i,17n,104p,782b,2517s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 88i,17n,104p,727b,2517s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on main.pdf (36 pages).
+Output written on main.pdf (43 pages).
