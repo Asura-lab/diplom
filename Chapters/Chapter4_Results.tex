@@ -197,7 +197,7 @@ CatBoost & Ordered boosting & Target leakage-аас хамгаална \\
 \addlegendentry{Уналт}
 \addplot[dashed, orange, ultra thick] coordinates {(0,-3.93) (46,-3.93)};
 \addlegendentry{Max DD: 3.93\%}
-\node[anchor=south, font=\small\bfseries, red!70!black] at (axis cs:18,-3.93) {$\downarrow$ 3.93\%};
+\node[anchor=south, font=\small\bfseries, red!70!black] at (axis cs:21,-3.8) {$\downarrow$ 3.93\%};
 \end{axis}
 \end{tikzpicture}
 \caption{Уналтын шинжилгээ (Max Drawdown: 3.93\%)}
@@ -343,7 +343,7 @@ Win Rate & 44.44\% & $>$ 50\% & Хангалтгүй$^{*}$ \\
 
 \subsection{Phase 6 ба Phase 7-ийн харьцуулалт}
 
-\fref{fig:phase_comparison} нь хоёр үе шатын гүйцэтгэлийг харьцуулав.
+  \fref{fig:phase_comparison} нь хоёр үе шатын гүйцэтгэлийг харьцуулав.
 
 \begin{figure}[H]
 \centering
@@ -354,7 +354,7 @@ Win Rate & 44.44\% & $>$ 50\% & Хангалтгүй$^{*}$ \\
     ybar,
     bar width=16pt,
     ylabel={Утга},
-    symbolic x coords={Ашиг (\$), PF, Sharpe, DD (\%), Арилжаа},
+    symbolic x coords={Өгөөж (\%), PF, Sharpe, DD (\%), Арилжаа},
     xtick=data,
     xticklabel style={font=\small},
     ymin=0, ymax=200,
@@ -362,16 +362,22 @@ Win Rate & 44.44\% & $>$ 50\% & Хангалтгүй$^{*}$ \\
     grid style={gray!15},
     legend pos=north west,
     legend style={font=\small},
-    nodes near coords,
-    nodes near coords style={font=\tiny, above},
     enlarge x limits=0.15,
 ]
-\addplot[fill=red!40, draw=red!60] coordinates {
-    (Ашиг (\$),76) (PF,18) (Sharpe,45) (DD (\%),90) (Арилжаа,121)
+\addplot[fill=red!40, draw=red!60,
+    nodes near coords,
+    nodes near coords style={font=\tiny, above},
+    point meta=explicit symbolic,
+] coordinates {
+    (Өгөөж (\%),76)[76.46\%] (PF,18)[1.80] (Sharpe,45)[4.50] (DD (\%),90)[9.0\%] (Арилжаа,121)[121]
 };
 \addlegendentry{Phase 6}
-\addplot[fill=green!50, draw=green!70] coordinates {
-    (Ашиг (\$),42) (PF,25) (Sharpe,96) (DD (\%),39) (Арилжаа,45)
+\addplot[fill=green!50, draw=green!70,
+    nodes near coords,
+    nodes near coords style={font=\tiny, above},
+    point meta=explicit symbolic,
+] coordinates {
+    (Өгөөж (\%),42)[41.61\%] (PF,25)[2.46] (Sharpe,96)[9.64] (DD (\%),39)[3.93\%] (Арилжаа,45)[45]
 };
 \addlegendentry{Phase 7}
 \end{axis}
