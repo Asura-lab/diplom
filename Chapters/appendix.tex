@@ -2,148 +2,82 @@
 
 \chapter*{Хавсралт}
 
-\section*{A. Загварын код (Python)}
-
-\subsection*{A.1 Техник индикатор тооцоолох функц}
-
-\begin{lstlisting}[language=Python, caption={Олон хугацааны хүрээний техник индикатор тооцоолол}, label={lst:features}]
-def compute_features(df, suffix):
-    close = df["close"]
-    feats = pd.DataFrame(index=df.index)
-    feats[f"close_{suffix}"] = close
-    feats[f"rsi_{suffix}"] = rsi(close, 14)
-    feats[f"atr_{suffix}"] = atr(df, 14)
-    feats[f"ma_5_{suffix}"] = close.rolling(5).mean()
-    feats[f"ma_20_{suffix}"] = close.rolling(20).mean()
-    feats[f"ma_50_{suffix}"] = close.rolling(50).mean()
-    feats[f"volatility_{suffix}"] = close.rolling(20).std()
-    feats[f"returns_{suffix}"] = close.pct_change()
-    return feats
-\end{lstlisting}
-
-\subsection*{A.2 Ансамбль загварын сургалт}
-
-\begin{lstlisting}[language=Python, caption={Walk-Forward Validation сургалт}, label={lst:training}]
-# Walk-Forward Validation: 2015-2022 train, 2023 val, 2024 test
-train_end = "2023-01-01"
-val_end = "2024-01-01"
-train_df = df[df["time"] < train_end]
-val_df = df[(df["time"] >= train_end) & (df["time"] < val_end)]
-test_df = df[(df["time"] >= val_end) & (df["time"] < TEST_START_DATE)]
-
-# Train GBDT models
-for seed in [42]:
-    models = fit_models(X_fit, y_fit, seed, pos_weight, X_val, y_val)
-
-# Calibration with Logistic Regression
-cal = LogisticRegression(max_iter=1000)
-cal.fit(predict_proba(models_flat, X_cal).reshape(-1, 1), y_cal)
-\end{lstlisting}
-
-\subsection*{A.3 Дохио шүүлтүүрлэх}
-
-\begin{lstlisting}[language=Python, caption={Дохионы шүүлтүүрийн тохиргоо}, label={lst:signal_filter}]
-CONF_THRESHOLD = 0.90    # Confidence >= 90%
-MIN_ATR_PIPS = 4.0       # ATR >= 4.0 pips
-SL_MULT = 5.0            # SL = ATR * 5
-TP_MULT = 15.0           # TP = ATR * 15 (SL * 3)
-MIN_SL_PIPS = 15.0       # Minimum SL: 15 pips
-MIN_TP_PIPS = 45.0       # Minimum TP: 45 pips
-\end{lstlisting}
-
-\section*{B. Backend API код}
-
-\subsection*{B.1 Дохио үүсгэх endpoint}
-
-\begin{lstlisting}[language=Python, caption={Flask API -- V10 дохио үүсгэх}, label={lst:api_signal}]
-@app.route('/signal/v2', methods=['GET'])
-def get_signal():
-    min_confidence = float(
-        request.args.get('min_confidence', 85))
-    pair = request.args.get('pair', 'EUR/USD')
-    
-    # Historical data (800 bars, 1min, yfinance)
-    df = get_yfinance_dataframe(
-        interval="1min", outputsize=800, symbol=pair)
-    
-    if df is None or len(df) < 200:
-        return jsonify({'error': 'rate_limited'}), 429
-    
-    # Generate signal with V10 ensemble
-    signal = signal_generator.generate_signal(
-        df, min_confidence)
-    
-    return jsonify({'success': True, **signal})
-\end{lstlisting}
-
-\section*{C. MetaTrader 5 Expert Advisor}
-
-\subsection*{C.1 Эрсдэлд суурилсан лотын тооцоолол}
-
-\begin{lstlisting}[language=C, caption={MQL5 -- Лотын тооцоолол}, label={lst:mql5_risk}]
-double CalcLotByRisk(const string sym, double sl_pips)
-{
-   if(sl_pips <= 0.0) 
-       return SymbolInfoDouble(sym, SYMBOL_VOLUME_MIN);
-
-   double bal  = AccountInfoDouble(ACCOUNT_BALANCE);
-   double risk = bal * (RiskPerTrade / 100.0);
-   double pip  = PipSizeForSymbol(sym);
-   double tick_val = SymbolInfoDouble(sym, 
-                         SYMBOL_TRADE_TICK_VALUE);
-   double tick_sz  = SymbolInfoDouble(sym, 
-                         SYMBOL_TRADE_TICK_SIZE);
-   double pip_val = tick_val * (pip / tick_sz);
-   double vol = risk / (sl_pips * pip_val);
-   return ClampVolumeForSymbol(sym, vol);
-}
-\end{lstlisting}
-
-\section*{D. Мобайл аппликейшн код}
-
-\subsection*{D.1 React Native -- Ханшийн дэлгэц}
-
-\begin{lstlisting}[language=Java, caption={React Native -- Бодит цагийн ханш}, label={lst:mobile_rates}]
-const { data: liveRates, isLoading, refetch } = useQuery({
-    queryKey: ["liveRates"],
-    queryFn: async () => {
-        const result = await getLiveRates();
-        if (result.success) {
-            const ratesMap = {};
-            const rates = result.data.rates || {};
-            Object.keys(rates).forEach((key) => {
-                const pairName = key.replace("_", "/");
-                ratesMap[pairName] = rates[key];
-            });
-            return ratesMap;
-        }
-        return {};
-    },
-    refetchInterval: 60000, // 60 sec
-});
-\end{lstlisting}
-
-\section*{E. 2025 оны дохионы жишээ}
-
-Дохионы CSV файлын формат болон зарим жишээ:
+\section*{A. Системийн модуль ба үүргийн нэгтгэл}
 
 \begin{table}[H]
 \centering
-\caption{2025 оны дохионы жишээ}
-\label{tab:signals_sample}
+\caption{Системийн үндсэн модуль, оролт, гаралтын тодорхойлолт}
+\label{tab:appendix_module_summary}
 \small
-\begin{tabular}{lllcccc}
+\begin{tabular}{>{\raggedright\arraybackslash}p{3.4cm}>{\raggedright\arraybackslash}p{4.3cm}>{\raggedright\arraybackslash}p{4.8cm}}
 \toprule
-\textbf{Цаг} & \textbf{Sym} & \textbf{Чиглэл} & \textbf{Conf} & \textbf{SL} & \textbf{TP} \\
+\textbf{Модуль} & \textbf{Оролт} & \textbf{Гаралт} \\
 \midrule
-2025-01-14 13:30 & EURUSD & BUY & 0.930 & 21 & 64 \\
-2025-01-14 13:32 & EURUSD & BUY & 0.934 & 28 & 85 \\
-2025-01-23 14:00 & EURUSD & BUY & 0.921 & 25 & 75 \\
-2025-02-03 16:00 & EURUSD & SELL & 0.920 & 33 & 100 \\
-2025-03-07 15:30 & EURUSD & BUY & 0.912 & 20 & 60 \\
-2025-05-14 13:00 & EURUSD & BUY & 0.945 & 30 & 90 \\
+Баталгаажуулалт (Authentication) & Бүртгэл, нэвтрэлтийн мэдээлэл & Токен, хэрэглэгчийн суурь төлөв \\
+Тэмдэглэлийн удирдлага (Notes management) & Гарчиг, агуулга, сэтгэл хөдлөлийн төлөв (mood), огноо & Тэмдэглэлийн шинэчилсэн жагсаалт \\
+Календарийн харагдац (Calendar view) & Огнооны сонголт, шүүлтийн нөхцөл & Тухайн өдрийн тэмдэглэлийн дэлгэц \\
+Наалт зураг үүсгэх (Sticker generation) & Хэрэглэгчийн заавар текст (prompt) & Наалт зургийн URL эсвэл алдааны тайлбар \\
+Профайл ба сешн (Profile and session) & Хэрэглэгчийн профайл, гарах үйлдэл & Сешний төлөв шинэчлэлт, навигац \\
 \bottomrule
 \end{tabular}
 \end{table}
 
-Нийт 1,065 дохио, 90\%+ confidence, ATR $\geq$ 4.0 пипс шүүлтүүртэй.
+\section*{B. API үйлчилгээний баримтжуулалт (кодгүй хэлбэр)}
+
+\begin{table}[H]
+\centering
+\caption{Гол төгсгөлийн цэгүүдийн (endpoints) зориулалт ба хариу зан төлөв}
+\label{tab:appendix_api_summary}
+\small
+\begin{tabular}{>{\raggedright\arraybackslash}p{3.8cm}>{\raggedright\arraybackslash}p{4.2cm}>{\raggedright\arraybackslash}p{4.6cm}}
+\toprule
+\textbf{Төгсгөлийн цэг (Endpoint)} & \textbf{Зориулалт} & \textbf{Үндсэн хариу} \\
+\midrule
+POST /api/auth/signup & Шинэ хэрэглэгч бүртгэх & Амжилттай бол токен болон хэрэглэгчийн мэдээлэл буцаана \\
+POST /api/auth/login & Хэрэглэгч нэвтрүүлэх & Баталгаажсан тохиолдолд токен олгоно \\
+GET /api/notes & Хэрэглэгчийн тэмдэглэл татах & Эрэмбэлэгдсэн тэмдэглэлийн жагсаалт буцаана \\
+POST /api/notes & Шинэ тэмдэглэл үүсгэх & Шинэ тэмдэглэлийн объектыг баталгаажуулж хадгална \\
+PUT /api/notes/:id & Тэмдэглэл засварлах & Засварласан үр дүнг буцаана \\
+DELETE /api/notes/:id & Тэмдэглэл устгах & Амжилтын төлөв буцаана \\
+POST /api/notes/generate-sticker & Хиймэл оюун ухаанаар стикер үүсгэх (AI sticker generation) & Заавар текстээс (prompt) үүссэн зураг эсвэл алдааны мэдээлэл буцаана \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\section*{C. Эрсдэл ба хяналтын матриц}
+
+\begin{table}[H]
+\centering
+\caption{Системийн ашиглалтын эрсдэлийн хяналтын матриц}
+\label{tab:appendix_risk_matrix}
+\small
+\begin{tabular}{>{\raggedright\arraybackslash}p{3.8cm}>{\raggedright\arraybackslash}p{4.0cm}>{\raggedright\arraybackslash}p{4.8cm}}
+\toprule
+\textbf{Эрсдэл} & \textbf{Нөлөөлөл} & \textbf{Хяналтын арга} \\
+\midrule
+Токен алдагдах & Хэрэглэгчийн эрх зөрчигдөх & Хамгаалалттай санах ой (secure storage) ашиглах, сешн менежмент сайжруулах \\
+Гадаад хиймэл оюуны үйлчилгээ (AI service) тасалдах & Наалт зургийн функц саатах & Дахин оролдох механизм (retry) болон алдааны ойлгомжтой тайлбар өгөх \\
+API түлхүүрийн буруу удирдлага & Нууцлалын алдагдал & Орчны хувьсагч, сервер талын түлхүүрийн бодлого мөрдөх \\
+Сүлжээ тасалдах & CRUD үйлдэл хойшлох & Дахин оролдох горим, хэрэглэгчид төлөв ойлгомжтой харуулах \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\section*{D. Урсгалын баталгаажуулалтын хураангуй}
+
+\begin{table}[H]
+\centering
+\caption{Гол урсгалуудын бодит баталгаажуулалтын товч хүснэгт}
+\label{tab:appendix_flow_summary}
+\small
+\begin{tabular}{>{\raggedright\arraybackslash}p{3.6cm}>{\raggedright\arraybackslash}p{4.8cm}>{\raggedright\arraybackslash}p{4.5cm}}
+\toprule
+\textbf{Урсгал} & \textbf{Харагдах хэсгийн үйлдэл} & \textbf{Сервер талын үр дүн (backend)} \\
+\midrule
+Нэвтрэх (Login) & Нэвтрэх дэлгэцээс (Login screen) имэйл/нууц үг илгээх & Токен үүсгэж JSON буцаах \\
+Тэмдэглэл үүсгэх (Create Note) & Хянах самбарын цонхноос (Dashboard dialog) тэмдэглэл нэмэх & Тэмдэглэлийн сан (collection)-д шинэ баримт үүсэх \\
+Тэмдэглэл шинэчлэх/устгах (Update/Delete Note) & Dashboard/Calendar-аас засах, устгах & Шинэчлэлт болон устгалын үр дүн тогтвортой хадгалагдах \\
+Наалт зураг үүсгэх (Generate Sticker) & Наалт зургийн дэлгэц дээр (Sticker screen) заавар текст (prompt) оруулах & OpenAI API-аас зураг үүсгэж холбоос буцаж ирэх \\
+\bottomrule
+\end{tabular}
+\end{table}

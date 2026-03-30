@@ -8,14 +8,14 @@
 
 \sloppy
 
-Энэхүү судалгааны ажлаар машин сургалтын ансамбль аргуудыг ашиглан валютын зах зээл (Forex) дээрх EUR/USD хослолын үнийн чиг хандлагыг таамаглах, автомат арилжааны дохио үүсгэх систем болон гар утасны аппликейшн хөгжүүлсэн.
+Энэхүү төгсөлтийн судалгааны ажлаар сэтгэл хөдлөл болон өдөр тутмын бодлоо тэмдэглэх боломжтой ``AI Notebook'' системийг бүтээв. Систем нь Flutter дээр хөгжүүлсэн гар утасны харагдах хэсэг (frontend), Node.js/Express дээр хөгжүүлсэн REST хэвийн сервер талын хэсэг (RESTful backend), MongoDB өгөгдлийн сан, JWT баталгаажуулалт, мөн OpenAI API-д суурилсан хиймэл оюун ухаанаар стикер үүсгэх модуль (AI sticker generation module)-аас бүрдэнэ.
 
-Системийн цөм нь LightGBM, XGBoost, CatBoost гэсэн гурван градиент нэмэгдүүлсэн шийдвэрийн модны (GBDT) ансамбль загвар юм. Загваруудыг 2015--2022 оны $\sim$2.97 сая candle ашиглан сургаж, 2023 оны 371,000 candle-аар баталгаажуулж, 2024 оны 371,000 candle-д тестэлсэн. Walk-forward validation аргачлалыг хэрэглэж overfitting-ийн эрсдэлийг бууруулсан. 6 хугацааны интервалаас (M1--H4) нийт 48 техник индикатор тооцоолж, олон хугацааны хүрээний дүн шинжилгээг хэрэгжүүлсэн.
+Судалгаанд Дизайн шинжлэх ухааны судалгааны арга зүй (Design Science Research) ашиглаж, шаардлага тодорхойлох, архитектур боловсруулах, хэрэгжүүлэх, турших гэсэн давталтат үе шатаар ажилласан. Харагдах хэсгийн (frontend) түвшинд хэрэглэгчийн бүртгэл/нэвтрэлт, тэмдэглэл нэмэх-засах-устгах, сэтгэл хөдлөлийн төлөв (mood), календарьтай уялдсан харагдац, профайл удирдлага, мэдэгдлийн дэлгэц, хиймэл оюун ухаанаар стикер үүсгэх интерфейс (AI sticker generation interface) зэрэг боломжуудыг хөгжүүлсэн. Сервер талын түвшинд (backend level) хэрэглэгч болон тэмдэглэлийн өгөгдлийн загвар, токеноор хамгаалагдсан API төгсгөлийн цэгүүд (endpoints), тэмдэглэлийн CRUD үйлдэл, зураг үүсгэх интеграц зэрэг үндсэн бизнес логикийг хэрэгжүүлсэн.
 
-2025 оны backtest дүн: 10,000\$ анхны хөрөнгөөс 14,161.20\$ болж \textbf{+41.61\%} өгөөж, \textbf{Profit Factor 2.46}, \textbf{Sharpe Ratio 9.64}, \textbf{хамгийн их уналт 3.93\%} хүрсэн. React Native технологи дээр суурилсан ``Predictrix'' мобайл аппликейшн нь бодит цагийн ханш, ML дохио, эдийн засгийн мэдээ, хэрэглэгчийн баталгаажуулалт зэрэг бүрэн функцийг хэрэгжүүлсэн.
+Системийн туршилтаар нэвтрэлт, тэмдэглэлийн амьдралын мөчлөг, хиймэл оюун ухаанаар стикер үүсгэх урсгал (AI sticker generation flow), токен дээр суурилсан хандалтын хяналт зэрэг гол үйлдлүүд амжилттай ажиллаж байгааг баталгаажуулсан. Үр дүнд нь зөвхөн тэмдэглэл хадгалах бус, хэрэглэгчийн оролцоог нэмэгдүүлэх хиймэл оюунтай интерактив аппликейшний загварыг бодитоор хэрэгжүүлж, цаашдын үүлэн байршуулалт (cloud deployment), түлхэх мэдэгдлийн үйлчилгээ (push notification), хэрэглээний шинжилгээ (analytics) зэрэг өргөтгөлийн үндэс тавигдсан.
 
 \vspace{3mm}
-\textit{Түлхүүр үгс:} машин сургалт, ансамбль загвар, валютын зах зээл, GBDT, XGBoost, LightGBM, CatBoost, техник шинжилгээ, арилжааны дохио, React Native, backtest
+\textit{Түлхүүр үгс:} Flutter, Node.js, Express, MongoDB, JWT, REST хэвийн API (REST API), хиймэл оюун ухаанаар стикер үүсгэх (AI sticker generation), OpenAI-ийн API (OpenAI API), гар утасны аппликейшн (mobile application)
 
 \vspace{10mm}
 
@@ -24,12 +24,12 @@
 \end{center}
 
 \begin{english}
-This research develops an automated trading signal generation system and mobile application for predicting EUR/USD price movements in the Forex market using machine learning ensemble methods.
+This thesis presents the design and implementation of ``AI Notebook'', a cross-platform mobile journaling application that combines a Flutter frontend with a Node.js/Express backend, MongoDB storage, JWT-based authentication, and OpenAI-powered AI sticker generation.
 
-The core of the system is an ensemble of three Gradient Boosted Decision Tree (GBDT) models: LightGBM (496 trees), XGBoost ($\sim$400 trees), and CatBoost (499 trees). The models were trained on $\sim$2.97 million bars from 2015--2022, validated on 371,000 bars from 2023, and tested on 371,000 bars from 2024. Walk-forward validation methodology was employed to mitigate overfitting risks. A total of 48 technical features were computed from 6 timeframes (M1, M5, M15, M30, H1, H4), implementing multi-timeframe analysis.
+The study follows a Design Science Research process with iterative phases: requirements analysis, architecture design, implementation, and validation. The frontend provides user registration/login, note creation and editing, mood tagging, calendar-based review, profile management, and an AI sticker generation interface. The backend exposes secure REST APIs, manages user and note entities, enforces token-based authorization, and integrates with OpenAI image generation endpoints.
 
-Backtest results for 2025: starting from \$10,000 initial capital, the system achieved \$14,161.20 final balance (\textbf{+41.61\%} return), \textbf{Profit Factor 2.46}, \textbf{Sharpe Ratio 9.64}, and \textbf{Maximum Drawdown 3.93\%}. The ``Predictrix'' mobile application, built with React Native, provides real-time exchange rates, ML signals, economic news, and user authentication.
+Functional validation confirms the end-to-end operation of key user flows including authentication, note CRUD lifecycle, sticker generation, and protected resource access. The resulting system demonstrates a practical and extensible architecture for AI-enhanced personal journaling applications and establishes a foundation for future production features such as cloud deployment, push notifications, and usage analytics.
 
 \vspace{3mm}
-\textit{Keywords: machine learning, ensemble model, foreign exchange market, GBDT, XGBoost, LightGBM, CatBoost, technical analysis, trading signals, React Native, backtesting}
+\textit{Keywords: Flutter, Node.js, Express, MongoDB, JWT, REST API, AI sticker, OpenAI API, mobile application}
 \end{english}

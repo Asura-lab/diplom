@@ -1,66 +1,60 @@
 \chapter{Ажлын төлөвлөгөө}
 \label{ch:plan}
 
-\noindent\textbf{Оюутны нэр:} \authorShort \hfill \textbf{Удирдагч багшийн нэр:} \supervisorname
-
-\noindent\textbf{Судалгааны ажлын сэдэв:} Машин сургалтын аргаар хөрөнгийн зах зээлийн чиг хандлагыг таамаглах арилжааны бот хөгжүүлэх
-
-\vspace{0.3cm}
-
 \begin{table}[h!t]
 \centering
 \small
-\begin{tabular}{|c|c|p{7.5cm}|c|}
+\begin{tabular}{|c|c|>{\raggedright\arraybackslash}p{7.5cm}|c|}
 \hline
 \textbf{Сар} & \textbf{Долоо хоног} & \textbf{Төлөвлөгөө} & \textbf{Гүйцэтгэл} \\
 \hline
-\multirow{4}{*}{10 сар} & 1 & Сэдэв сонгох, судалгааны чиглэл тодорхойлох & $\checkmark$ \\
+\multirow{4}{*}{10 сар} & 1 & Сэдэв сонгох, AI Notebook системийн асуудлын хүрээг тодорхойлох & $\checkmark$ \\
 \cline{2-4}
-& 2 & Forex арилжаа, ML онолын судалгаа хийх & $\checkmark$ \\
+& 2 & Дижитал тэмдэглэл, олон платформт гар утасны хөгжүүлэлт (cross-platform mobile development)-ийн судалгаа хийх & $\checkmark$ \\
 \cline{2-4}
-& 3 & Yahoo Finance API-аас EUR/USD өгөгдөл цуглуулах & $\checkmark$ \\
+& 3 & Flutter, Dart, архитектурын технологийн сонголт хийх & $\checkmark$ \\
 \cline{2-4}
-& 4 & Өгөгдлийн урьдчилсан боловсруулалт хийх & $\checkmark$ \\
+& 4 & Хэрэглэгчийн интерфейс ба туршлагын (UI/UX) ноорог загвар (wireframe), мэдээллийн урсгалын зураг гаргах & $\checkmark$ \\
 \hline
-\multirow{4}{*}{11 сар} & 1 & 70+ техникийн индикатор хөгжүүлэх (RSI, MACD, BB, ATR) & $\checkmark$ \\
+\multirow{4}{*}{11 сар} & 1 & Node.js, Express сервер талын хэсгийн (backend) суурь бүтэц байгуулах & $\checkmark$ \\
 \cline{2-4}
-& 2 & XGBoost, LightGBM, Random Forest модел сургах & $\checkmark$ \\
+& 2 & MongoDB схем (schema: User, Note) болон баталгаажуулалтын завсрын модуль (auth middleware) хэрэгжүүлэх & $\checkmark$ \\
 \cline{2-4}
-& 3 & Stacking Ensemble модел хөгжүүлэх, backtesting хийх & $\checkmark$ \\
+& 3 & JWT-д суурилсан бүртгэл/нэвтрэлтийн API (signup/login API) хөгжүүлэх & $\checkmark$ \\
 \cline{2-4}
-& 4 & Flask REST API сервер, React Native апп хөгжүүлэх & $\checkmark$ \\
+& 4 & Тэмдэглэлийн CRUD болон наалт зураг үүсгэх төгсгөлийн цэг (sticker generation endpoint) хөгжүүлэх & $\checkmark$ \\
 \hline
-\multirow{4}{*}{12 сар} & 1 & \textcolor{red}{ТСА Үзлэг 1} & $\checkmark$ \\
+\multirow{4}{*}{12 сар} & 1 & Flutter дээр нэвтрэх/бүртгэх дэлгэц (Login/Signup screen) хөгжүүлэх & $\checkmark$ \\
 \cline{2-4}
-& 2 & Төгсөлтийн тайлан бичиж эхлэх & $\checkmark$ \\
+& 2 & Хянах самбар, календарь, профайл дэлгэц (Dashboard/Calendar/Profile)-үүдийг хэрэгжүүлэх & $\checkmark$ \\
 \cline{2-4}
-& 3 & Тайлангийн 1-2 бүлэг бичих & $\checkmark$ \\
+& 3 & Наалт зураг болон мэдэгдлийн дэлгэц (Sticker/Notifications)-үүдийг хөгжүүлэх & $\checkmark$ \\
 \cline{2-4}
-& 4 & Тайлангийн 3 бүлэг бичих & $\checkmark$ \\
+& 4 & API үйлчилгээний давхарга (ApiService) холболт, токен хадгалалт, урсгал шалгалт хийх & $\checkmark$ \\
 \hline
-\multirow{4}{*}{1 сар} & 1 & Тайлангийн 4 бүлэг бичих & $\checkmark$ \\
+\multirow{4}{*}{1 сар} & 1 & Хиймэл оюун ухаанаар стикер үүсгэх (AI sticker generation) функцийг OpenAI API-тай холбох & $\checkmark$ \\
 \cline{2-4}
-& 2 & Тайлангийн 5 бүлэг бичих & $\checkmark$ \\
+& 2 & Сервер тал ба Харагдах хэсгийн интеграцийн туршилт хийх & $\checkmark$ \\
 \cline{2-4}
-& 3 & График, хүснэгт, үр дүнг боловсруулах & $\checkmark$ \\
+& 3 & Алдааны боловсруулалт, хэрэглэгчийн туршлагын (UX) сайжруулалт хийх & $\checkmark$ \\
 \cline{2-4}
-& 4 & Тайланг засварлах, форматлах & $\checkmark$ \\
+& 4 & Судалгааны тайлангийн эхний ноорог боловсруулах & $\checkmark$ \\
 \hline
-\multirow{4}{*}{2 сар} & 1 & Тайлангийн эцсийн засвар & $\checkmark$ \\
+\multirow{4}{*}{2 сар} & 1 & Удиртгал, онолын бүлэг шинэчлэн бичих & $\checkmark$ \\
 \cline{2-4}
-& 2 & Ном зүй, хавсралт бэлдэх & $\checkmark$ \\
+& 2 & Арга зүй, архитектурын бүлгийг хэрэгжилттэй уялдуулж бичих & $\checkmark$ \\
 \cline{2-4}
-& 3 & Хамгаалалтын слайд бэлдэх & $\checkmark$ \\
+& 3 & Үр дүн, дүгнэлтийн бүлгийг туршилтын баримтаар шинэчлэх & $\checkmark$ \\
 \cline{2-4}
-& 4 & Хамгаалалтын бэлтгэл хийх & $\checkmark$ \\
+& 4 & Ном зүй, хавсралт, формат нэгтгэл хийх & $\checkmark$ \\
 \hline
-\multirow{4}{*}{3 сар} & 1 & \textcolor{red}{ТСА Үзлэг 2} & $\square$ \\
+\multirow{4}{*}{3 сар} & 1 & \textcolor{red}{ТСА Үзлэг 2} & $\checkmark$ \\
 \cline{2-4}
-& 2 & Засвар хийх, санал хүсэлтийг тусгах & $\square$ \\
+& 2 & Шүүмжийн дагуу систем, бичвэрийн засвар хийх & $\checkmark$ \\
 \cline{2-4}
-& 3 & Код тайлбар, баримтжуулалт & $\square$ \\
+& 3 & Хэрэгжилтийн тайлбар болон төгсгөлийн цэгийн баримтжуулалт (endpoint documentation) бэлтгэх & $\checkmark$ \\
 \cline{2-4}
-& 4 & Хамгаалалтын дадлага хийх & $\square$ \\
+& 4 & Урьдчилсан хамгаалалтын дадлага хийх & $\checkmark$ \\
 \hline
 \multirow{4}{*}{4 сар} & 1 & Эцсийн засвар хийх & $\square$ \\
 \cline{2-4}
@@ -85,6 +79,7 @@
 \noindent\begin{minipage}{0.4\textwidth}
 Удирдагч багш:
 \end{minipage}
+
 \hfill
 \begin{minipage}{0.4\textwidth}
 /\supervisorname/
