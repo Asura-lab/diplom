@@ -1,0 +1,21 @@
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {table}{\numberline {4.1}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces Түүхэн өгөгдлийн хэмжээний хураангуй}}{11}{table.caption.60}%
+\contentsline {table}{\numberline {4.2}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces Техник индикаторын жагсаалт (интервал бүрд)}}{12}{table.caption.62}%
+\contentsline {table}{\numberline {4.3}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces Walk-Forward Validation -- өгөгдлийн хуваалт}}{12}{table.caption.66}%
+\contentsline {table}{\numberline {4.4}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces Загвар бүрийн гол гиперпараметрүүд}}{14}{table.caption.71}%
+\contentsline {table}{\numberline {4.5}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces Expert Advisor-ийн тохиргооны параметрүүд}}{18}{table.caption.99}%
+\contentsline {table}{\numberline {4.6}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces Системийн үнэлгээний шалгуур үзүүлэлтүүд}}{18}{table.caption.102}%
+\contentsline {table}{\numberline {4.7}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces Backend серверийн технологийн стек}}{19}{table.caption.105}%
+\contentsline {table}{\numberline {4.8}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces Гол API endpoint-ууд (бүлгээр)}}{20}{table.caption.107}%
+\contentsline {table}{\numberline {4.9}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces Мобайл аппликейшний технологийн стек}}{21}{table.caption.117}%
+\addvspace {10\p@ }
+\contentsline {table}{\numberline {5.1}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces Загварын нарийвчлалын хэмжүүрүүд}}{25}{table.caption.129}%
+\contentsline {table}{\numberline {5.2}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces Загвар бүрийн онцлог}}{25}{table.caption.131}%
+\contentsline {table}{\numberline {5.3}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces MetaTrader 5 бэктест (backtest)-ийн дүн (Үе шат (Phase) 7)}}{26}{table.caption.134}%
+\contentsline {table}{\numberline {5.4}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces Эрсдэлийн гол хэмжүүрүүд}}{28}{table.caption.143}%
+\contentsline {table}{\numberline {5.5}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces Phase 6 ба Phase 7-ийн харьцуулалт}}{30}{table.caption.151}%
+\contentsline {table}{\numberline {5.6}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces Лавлагааны түвшний нөхцөлт бенчмарк харьцуулалт}}{31}{table.caption.154}%
+\contentsline {table}{\numberline {5.7}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces Production орчны operational шалгалтын үр дүн}}{32}{table.caption.162}%
