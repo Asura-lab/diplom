@@ -2,10 +2,10 @@
 \contentsline {chapter}{Хураангуй}{i}{dummy.1}%
 \xpg@aux {}{english}
 \xpg@aux {}{mongolian}
-\contentsline {chapter}{Гарчиг}{ii}{dummy.2}%
-\contentsline {chapter}{Товчилсон үгсийн жагсаалт}{iii}{dummy.4}%
-\contentsline {chapter}{Хүснэгтийн жагсаалт}{iv}{dummy.6}%
-\contentsline {chapter}{Зургийн жагсаалт}{v}{dummy.8}%
+\contentsline {chapter}{Гарчиг}{iii}{dummy.2}%
+\contentsline {chapter}{Товчилсон үгсийн жагсаалт}{iv}{dummy.4}%
+\contentsline {chapter}{Хүснэгтийн жагсаалт}{v}{dummy.6}%
+\contentsline {chapter}{Зургийн жагсаалт}{vi}{dummy.8}%
 \contentsline {chapter}{\numberline {1}Ажлын төлөвлөгөө}{1}{chapter.10}%
 \contentsline {chapter}{\numberline {2}Удиртгал}{2}{chapter.12}%
 \contentsline {section}{\numberline {2.1}Үндэслэл, ач холбогдол}{2}{section.13}%
@@ -27,7 +27,7 @@
 \contentsline {subsection}{\numberline {3.4.2}Серверийн хэсэг (Backend) технологи ба API загварчлал (design)}{6}{subsection.33}%
 \contentsline {subsection}{\numberline {3.4.3}Системийн найдвартай байдал ба аюулгүй байдлын судалгааны цоорхой}{6}{subsection.34}%
 \contentsline {section}{\numberline {3.5}Төсөөтэй системүүд ба харьцуулалт}{6}{section.35}%
-\contentsline {subsection}{\numberline {3.5.1}Зах зээлд байгаа төсөөтэй аппликейшнууд}{6}{subsection.36}%
+\contentsline {subsection}{\numberline {3.5.1}Зах зээлд байгаа төсөөтэй аппликейшнууд}{7}{subsection.36}%
 \contentsline {subsection}{\numberline {3.5.2}Харьцуулсан судалгаа ба open source системүүд}{7}{subsection.37}%
 \contentsline {section}{\numberline {3.6}Бусад судалгааны ажлуудын дутагдал ба энэхүү ажлын хувь нэмэр}{7}{section.38}%
 \contentsline {section}{\numberline {3.7}Бүлгийн дүгнэлт}{8}{section.44}%

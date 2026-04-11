@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999997 (MiKTeX 25.4) (preloaded format=xelatex 2025.12.1)  9 APR 2026 13:50
+This is XeTeX, Version 3.141592653-2.6-0.999997 (MiKTeX 25.4) (preloaded format=xelatex 2025.12.1)  9 APR 2026 22:10
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1669,7 +1669,7 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 
 [1
 
-]) (Chapters/TitlePage.tex [1]) (Chapters/Abstract.tex) [1]
+]) (Chapters/TitlePage.tex [1]) (Chapters/Abstract.tex) [1] [2]
 ------------------------------------------------------------------------------
  Table of Contents
 ------------------------------------------------------------------------------
@@ -1677,9 +1677,9 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 \tf@toc=\write5
 \openout5 = `main.toc'.
 
- [2
+ [3
 
-] (Chapters/acrolist.tex) [3
+] (Chapters/acrolist.tex) [4
 
 
 ]
@@ -1690,7 +1690,7 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 \tf@lot=\write6
 \openout6 = `main.lot'.
 
- [4
+ [5
 
 ]
 ------------------------------------------------------------------------------
@@ -1700,7 +1700,7 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 \tf@lof=\write7
 \openout7 = `main.lof'.
 
- [5
+ [6
 
 ] (Chapters/plan.tex
 Бүлэг 1.
@@ -1716,19 +1716,13 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 Бүлэг 3.
 [3
 
-] [4]
-Underfull \hbox (badness 1014) in paragraph at lines 65--66
-\TU/TimesNewRoman(1)/m/n/10.95 стратегиудыг судалж, тодорхой нөхцөлд ашигтай ба
-йж болохыг харуулсан боловч \TU/TimesNewRoman(1)/b/n/10.95 арилжааны
- []
-
-[5]
+] [4] [5] [6]
 Underfull \hbox (badness 1112) in paragraph at lines 111--112
 []\TU/TimesNewRoman(1)/m/it/10.95 Ялгаа\TU/TimesNewRoman(1)/m/n/10.95 : Энэхүү 
 апп нь бодит цагийн Forex дохио өгдөггүй, зөвхөн түүхэн өгөгдөл дээрх
  []
 
-[6] [7]) (Chapters/Chapter3_Methodology.tex [8]
+[7]) (Chapters/Chapter3_Methodology.tex [8]
 Бүлэг 4.
 [9
 
@@ -2235,6 +2229,6 @@ Here is how much of TeX's memory you used:
  76293 multiletter control sequences out of 15000+600000
  662422 words of font info for 178 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 88i,17n,104p,915b,2373s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 88i,17n,104p,1135b,2373s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on main.pdf (43 pages).
+Output written on main.pdf (44 pages).
