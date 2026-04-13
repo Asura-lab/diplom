@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999997 (MiKTeX 25.4) (preloaded format=xelatex 2025.12.1)  9 APR 2026 22:10
+This is XeTeX, Version 3.141592653-2.6-0.999997 (MiKTeX 25.4) (preloaded format=xelatex 2025.12.1)  13 APR 2026 13:30
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1669,7 +1669,13 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 
 [1
 
-]) (Chapters/TitlePage.tex [1]) (Chapters/Abstract.tex) [1] [2]
+]) (Chapters/TitlePage.tex [1]) (Chapters/Abstract.tex
+Underfull \hbox (badness 1466) in paragraph at lines 18--19
+[]\TU/TimesNewRoman(1)/m/it/10.95 Түлхүүр үгс: \TU/TimesNewRoman(1)/m/n/10.95 м
+ашин сургалт, ансамбль загвар, цаг хугацааны цувааны өгөгдөл, GBDT,
+ []
+
+) [1] [2]
 ------------------------------------------------------------------------------
  Table of Contents
 ------------------------------------------------------------------------------
@@ -1710,23 +1716,41 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 
 ]
 Бүлэг 2.
-) (Chapters/Chapter2_Literature.tex [2
 
-]
-Бүлэг 3.
-[3
-
-] [4] [5] [6]
-Underfull \hbox (badness 1112) in paragraph at lines 111--112
-[]\TU/TimesNewRoman(1)/m/it/10.95 Ялгаа\TU/TimesNewRoman(1)/m/n/10.95 : Энэхүү 
-апп нь бодит цагийн Forex дохио өгдөггүй, зөвхөн түүхэн өгөгдөл дээрх
+Underfull \hbox (badness 3168) in paragraph at lines 12--13
+[]\TU/TimesNewRoman(1)/m/n/10.95 Компьютерийн ухааны салбарын судалгаанд зөвхөн
+ алгоритмын нарийвчлалыг (model
  []
 
-[7]) (Chapters/Chapter3_Methodology.tex [8]
-Бүлэг 4.
-[9
 
-] [10]
+Underfull \hbox (badness 3019) in paragraph at lines 12--13
+\TU/TimesNewRoman(1)/m/n/10.95 accuracy) сайжруулаад зогсох нь хангалтгүй юм. Х
+эрэглэгчийн нэвтрэлтийн аюулгүй байдал
+ []
+
+
+Underfull \hbox (badness 1082) in paragraph at lines 25--26
+[]\TU/TimesNewRoman(1)/m/n/10.95 Компьютерийн ухааны үүднээс шуугиантай цаг хуг
+ацааны цувааны өгөгдлийг цуглуулах,
+ []
+
+[2
+
+]
+Underfull \hbox (badness 2809) in paragraph at lines 28--29
+[]\TU/TimesNewRoman(1)/m/n/10.95 Хэрэглэгчдэд ойлгомжтой график интерфэйс бүхий
+ (UI/UX) гар утасны харагдах хэсэг
+ []
+
+) (Chapters/Chapter2_Literature.tex [3]
+Бүлэг 3.
+[4
+
+] [5] [6] [7] [8]) (Chapters/Chapter3_Methodology.tex [9]
+Бүлэг 4.
+[10
+
+] [11]
 LaTeX Font Info:    Font shape `TU/Consolas(0)/m/n' will be
 (Font)              scaled to size 9.85492pt on input line 222.
 
@@ -1803,11 +1827,11 @@ Package fontspec Info:
 (fontspec)             Consolas scale = 0.9.
 
 
-Overfull \hbox (23.82002pt too wide) in paragraph at lines 218--232
+Overfull \hbox (43.70967pt too wide) in paragraph at lines 218--232
  [][] 
  []
 
-[11]
+[12]
 
 Package fontspec Info: 
 (fontspec)             Consolas scale = 0.9.
@@ -1844,7 +1868,7 @@ Package fontspec Info:
 Package fontspec Info: 
 (fontspec)             Consolas scale = 0.9.
 
- [12] [13] [14]
+ [13] [14] [15]
 
 Package fontspec Info: 
 (fontspec)             Consolas scale = 0.9.
@@ -1855,7 +1879,7 @@ Package fontspec Info:
 
 Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on in
 put line 452.
- [15] [16]
+ [16] [17]
 
 Package fontspec Info: 
 (fontspec)             Consolas scale = 0.9.
@@ -1880,7 +1904,7 @@ Package fontspec Info:
 Package fontspec Info: 
 (fontspec)             Consolas scale = 0.9.
 
- [17]
+ [18]
 Underfull \hbox (badness 1097) in paragraph at lines 702--702
 []|\TU/TimesNewRoman(1)/m/n/10 Precision ба Recall-ийн гармоник дундаж
  []
@@ -1895,7 +1919,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 739--740
 []|\TU/TimesNewRoman(1)/m/n/10.95 Хэрэглэгчийн баталгаажуулалт
  []
 
-[18]
+[19]
 LaTeX Font Info:    Font shape `TU/Consolas(0)/m/n' will be
 (Font)              scaled to size 8.99994pt on input line 763.
 
@@ -2000,7 +2024,7 @@ Package fontspec Info:
 Package fontspec Info: 
 (fontspec)             Consolas scale = 0.9.
 
- [19]
+ [20]
 
 Package fontspec Info: 
 (fontspec)             Consolas scale = 0.9.
@@ -2045,7 +2069,7 @@ Underfull \hbox (badness 1082) in paragraph at lines 804--805
  instance орчинд ижил ажил давхар ажиллах
  []
 
-[20]
+[21]
 
 Package fontspec Info: 
 (fontspec)             Consolas scale = 0.9.
@@ -2055,14 +2079,14 @@ Underfull \hbox (badness 10000) in paragraph at lines 836--837
 []|\TU/TimesNewRoman(1)/m/n/10.95 Серверийн өгөгдлийн менежмент,
  []
 
-[21] [22] [23]) (Chapters/Chapter4_Results.tex [24]
-Бүлэг 5.
-
-Underfull \hbox (badness 7558) in paragraph at lines 27--28
-[]\TU/TimesNewRoman(1)/m/n/10.95 Сургалт, баталгаажуулалт, тестийн нарийвчлалын
- ялгааг дангаар нь хэт тааруулалт
+[22] [23]
+Underfull \hbox (badness 2142) in paragraph at lines 1067--1067
+[][]\TU/TimesNewRoman(1)/b/n/10 Алдааны хэлбэлзэл (Drawdown) засвар \TU/TimesNe
+wRoman(1)/m/n/10 – 
  []
 
+[24]) (Chapters/Chapter4_Results.tex [25]
+Бүлэг 5.
 
 Underfull \hbox (badness 4242) in paragraph at lines 41--41
 []|\TU/TimesNewRoman(1)/m/n/10.95 Хурдан, навч чиглэсэн
@@ -2088,14 +2112,14 @@ Underfull \hbox (badness 10000) in paragraph at lines 43--44
 []|\TU/TimesNewRoman(1)/m/n/10.95 Зорилтот хувьсагчийн алдагдал
  []
 
-[25
+[26
 
 ]
 Overfull \hbox (23.0023pt too wide) in paragraph at lines 165--166
  [][] 
  []
 
-[26] [27]
+[27] [28]
 Underfull \hbox (badness 1137) in paragraph at lines 274--275
 []\TU/TimesNewRoman(1)/m/n/10.95 Зурагнаас харахад confidence утга нэмэгдэх тус
 ам нарийвчлал мөн нэмэгдэж байгаа нь
@@ -2185,13 +2209,13 @@ Package fontspec Info:
 Package fontspec Info: 
 (fontspec)             Consolas scale = 0.9.
 
-[28]
+[29]
 Package pgfplots info on input line 366: Using 'lua backend=false' for axis: x 
 coord trafo unsupported.
- [29]
+ [30]
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <9> on input line 442.
- [30]
+ [31] [32]
 Underfull \hbox (badness 1259) in paragraph at lines 494--494
 []|\TU/TimesNewRoman(1)/b/n/10.95 Ажиглагдсан тө-
  []
@@ -2200,7 +2224,14 @@ Underfull \hbox (badness 1259) in paragraph at lines 494--494
 Package fontspec Info: 
 (fontspec)             Consolas scale = 0.9.
 
-[31]) (Chapters/Chapter5_Conclusion.tex [32]
+) (Chapters/Chapter5_Conclusion.tex [33]
+Underfull \hbox (badness 1067) in paragraph at lines 22--23
+\TU/TimesNewRoman(1)/m/n/10.95 хялбаршуулж (75$\OMS/lmsy/m/n/10.95 !$\TU/TimesN
+ewRoman(1)/m/n/10.95 48 шинж чанар (feature), 9$\OMS/lmsy/m/n/10.95 !$\TU/Times
+NewRoman(1)/m/n/10.95 3 загвар), урагш гүйлгэн баталгаажуулах
+ []
+
+
 Underfull \hbox (badness 1082) in paragraph at lines 24--25
 \TU/TimesNewRoman(1)/m/n/10.95 дохио үүсгэгчийн ачаалалт зэрэг үйл ажиллагааны 
 (operational) шалгалтуудыг амжилттай
@@ -2212,23 +2243,94 @@ Underfull \hbox (badness 1377) in paragraph at lines 31--32
 time) тогтвортой ашиглаж, тохируулга
  []
 
-[33]) (Chapters/Bibliography.tex (main.bbl [34] [35
+[34]) (Chapters/Bibliography.tex (main.bbl [35] [36
 
-])) [36] (main.aux)
+])) [37]
+(Chapters/Tovchlol.tex
+Underfull \hbox (badness 5161) in paragraph at lines 24--25
+\TU/TimesNewRoman(1)/m/n/10.95 грамм хангамжийн системийн хэрэгжилттэй
+ []
+
+
+Underfull \hbox (badness 7649) in paragraph at lines 30--31
+[]\TU/TimesNewRoman(1)/m/n/10.95 Судалгаанд дизайн шинжлэх ухааны
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 34--35
+[]\TU/TimesNewRoman(1)/m/n/10.95 Загварчлалын түвшинд LightGBM,
+ []
+
+[38
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 38--39
+[]\TU/TimesNewRoman(1)/m/n/10.95 Системийн хэрэгжилтийн түвшинд
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 38--39
+\TU/TimesNewRoman(1)/m/n/10.95 Flask REST API бүхий серверийн хэсэг
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 40--41
+[]\TU/TimesNewRoman(1)/m/n/10.95 Үр дүнгийн баталгаажуулалтад
+ []
+
+
+Underfull \hbox (badness 6675) in paragraph at lines 40--41
+\TU/TimesNewRoman(1)/m/n/10.95 дүгнэсэн. Ингэхдээ зөвхөн нэг хэмжүүрээр
+ []
+
+[39]
+Underfull \hbox (badness 10000) in paragraph at lines 66--67
+\TU/TimesNewRoman(1)/m/n/10.95 Unbiased Boosting with Categorical
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 67--68
+\TU/TimesNewRoman(1)/m/n/10.95 Approximation: A Gradient Boosting
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 68--69
+[]\TU/TimesNewRoman(1)/m/n/10.95 Pardo, R. (2008). \TU/TimesNewRoman(1)/m/it/10
+.95 The Evaluation and
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 69--70
+\TU/TimesNewRoman(1)/m/n/10.95 of Backtest Overfitting. \TU/TimesNewRoman(1)/m/
+it/10.95 Journal of
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 70--71
+\TU/TimesNewRoman(1)/m/n/10.95 in Information Systems Research. \TU/TimesNewRom
+an(1)/m/it/10.95 MIS
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 71--72
+\TU/TimesNewRoman(1)/m/n/10.95 Research Methodology for Information
+ []
+
+[40]) (main.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2025-11-06>
  ***********
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: FE5D45FA7057D6C94055417FF1E555B3;10754.
+(rerunfilecheck)             Checksum: 46F283E22907D7616CDC1AA3394D5A64;11628.
  ) 
 Here is how much of TeX's memory you used:
- 48429 strings out of 402987
- 1145979 string characters out of 5448731
- 1707657 words of memory out of 5000000
- 76293 multiletter control sequences out of 15000+600000
- 662422 words of font info for 178 fonts, out of 8000000 for 9000
+ 48441 strings out of 402987
+ 1146290 string characters out of 5448731
+ 1707802 words of memory out of 5000000
+ 76303 multiletter control sequences out of 15000+600000
+ 662414 words of font info for 177 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 88i,17n,104p,1135b,2373s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 88i,17n,104p,1212b,2373s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on main.pdf (44 pages).
+Output written on main.pdf (48 pages).
