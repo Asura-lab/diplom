@@ -4,91 +4,84 @@
 \xpg@aux {}{mongolian}
 \contentsline {chapter}{Гарчиг}{iii}{dummy.2}%
 \contentsline {chapter}{Товчилсон үгсийн жагсаалт}{iv}{dummy.4}%
-\contentsline {chapter}{Хүснэгтийн жагсаалт}{v}{dummy.6}%
-\contentsline {chapter}{Зургийн жагсаалт}{vi}{dummy.8}%
-\contentsline {chapter}{\numberline {1}Ажлын төлөвлөгөө}{1}{chapter.10}%
-\contentsline {chapter}{\numberline {2}Удиртгал}{2}{chapter.12}%
-\contentsline {section}{\numberline {2.1}Үндэслэл, ач холбогдол}{2}{section.13}%
-\contentsline {section}{\numberline {2.2}Зорилго, зорилт}{2}{section.14}%
-\contentsline {subsection}{\numberline {2.2.1}Судалгааны зорилго}{2}{subsection.15}%
-\contentsline {subsection}{\numberline {2.2.2}Судалгааны зорилтууд}{2}{subsection.16}%
-\contentsline {chapter}{\numberline {3}Судалгааны сэдвийн онол, өнөөгийн түвшин}{4}{chapter.21}%
-\contentsline {section}{\numberline {3.1}Санхүүгийн цаг хугацааны цувааны (Time-series) зах зээлийн таамаглалд машин сургалтыг хэрэглэсэн судалгаанууд}{4}{section.22}%
-\contentsline {subsection}{\numberline {3.1.1}Уламжлалт машин сургалтын аргууд}{4}{subsection.23}%
-\contentsline {subsection}{\numberline {3.1.2}Гүн сургалтын аргууд}{4}{subsection.24}%
-\contentsline {subsection}{\numberline {3.1.3}Градиент нэмэгдүүлсэн шийдвэрийн мод (Gradient Boosted Decision Trees) санхүүгийн салбарт}{4}{subsection.25}%
-\contentsline {subsection}{\numberline {3.1.4}Ансамбль аргуудын санхүүгийн хэрэглээ}{5}{subsection.26}%
-\contentsline {section}{\numberline {3.2}Шинж чанар (Feature)-уудын судалгаа}{5}{section.27}%
-\contentsline {subsection}{\numberline {3.2.1}Шинж чанар (Feature)-уудын үр дүнтэй байдлын харьцуулалт}{5}{subsection.28}%
-\contentsline {subsection}{\numberline {3.2.2}Шинж чанар (Feature)-уудын хослуулалт ба шинж чанарын инженерчлэл (feature engineering)}{6}{subsection.29}%
-\contentsline {section}{\numberline {3.3}Урагш гүйлгэн баталгаажуулах (Walk-Forward Validation) ба санхүүгийн цаг хугацааны цуваа}{6}{section.30}%
-\contentsline {section}{\numberline {3.4}Forex санхүүгийн таамаглалын аппликейшн ба технологийн хэрэгжүүлэлт}{7}{section.31}%
-\contentsline {subsection}{\numberline {3.4.1}Мобайл санхүүгийн таамаглалын технологи}{7}{subsection.32}%
-\contentsline {subsection}{\numberline {3.4.2}Серверийн хэсэг (Backend) технологи ба API загварчлал (design)}{7}{subsection.33}%
-\contentsline {subsection}{\numberline {3.4.3}Системийн найдвартай байдал ба аюулгүй байдлын судалгааны цоорхой}{7}{subsection.34}%
-\contentsline {section}{\numberline {3.5}Төсөөтэй системүүд ба харьцуулалт}{7}{section.35}%
-\contentsline {subsection}{\numberline {3.5.1}Зах зээлд байгаа төсөөтэй аппликейшнууд}{8}{subsection.36}%
-\contentsline {subsection}{\numberline {3.5.2}Харьцуулсан судалгаа ба open source системүүд}{8}{subsection.37}%
-\contentsline {section}{\numberline {3.6}Бусад судалгааны ажлуудын дутагдал ба энэхүү ажлын хувь нэмэр}{8}{section.38}%
-\contentsline {section}{\numberline {3.7}Бүлгийн дүгнэлт}{9}{section.44}%
-\contentsline {chapter}{\numberline {4}Судалгааны арга зүй}{10}{chapter.45}%
-\contentsline {section}{\numberline {4.1}Судалгааны арга барил}{10}{section.46}%
-\contentsline {section}{\numberline {4.2}Системийн ерөнхий бүтэц}{10}{section.50}%
-\contentsline {section}{\numberline {4.3}Өгөгдлийн урсгал}{11}{section.56}%
-\contentsline {section}{\numberline {4.4}Өгөгдлийн бэлтгэл}{12}{section.58}%
-\contentsline {subsection}{\numberline {4.4.1}Түүхэн өгөгдөл}{12}{subsection.59}%
-\contentsline {subsection}{\numberline {4.4.2}Шинж чанар (Feature)ын инженерчлэл (Feature Engineering)}{12}{subsection.61}%
-\contentsline {subsection}{\numberline {4.4.3}Шошго (Label) үүсгэх}{13}{subsection.63}%
-\contentsline {subsection}{\numberline {4.4.4}Өгөгдлийн хуваалт -- Walk-Forward Validation}{13}{subsection.65}%
-\contentsline {section}{\numberline {4.5}AI загварын бүтэц ба сургалт}{14}{section.68}%
-\contentsline {subsection}{\numberline {4.5.1}Ансамбль загварын архитектур}{14}{subsection.69}%
-\contentsline {subsection}{\numberline {4.5.2}Хэт нийцэл (Overfitting)-аас сэргийлэх арга хэмжээ}{16}{subsection.72}%
-\contentsline {subsection}{\numberline {4.5.3}Сургалтын алгоритм}{16}{subsection.79}%
-\contentsline {section}{\numberline {4.6}Дохио үүсгэх систем}{16}{section.81}%
-\contentsline {subsection}{\numberline {4.6.1}Дохионы шүүлтүүр}{16}{subsection.82}%
-\contentsline {subsection}{\numberline {4.6.2}Stop Loss ба Take Profit тооцоолол}{17}{subsection.84}%
-\contentsline {subsection}{\numberline {4.6.3}Дохио үүсгэх дарааллын диаграмм}{17}{subsection.87}%
-\contentsline {section}{\numberline {4.7}MetaTrader 5 backtest}{18}{section.97}%
-\contentsline {subsection}{\numberline {4.7.1}Expert Advisor-ийн бүтэц}{18}{subsection.98}%
-\contentsline {subsection}{\numberline {4.7.2}Backtest-ийн нөхцөл}{19}{subsection.100}%
-\contentsline {subsection}{\numberline {4.7.3}Үнэлгээний шалгуур үзүүлэлтүүд}{19}{subsection.101}%
-\contentsline {section}{\numberline {4.8}Backend серверийн хөгжүүлэлт}{20}{section.103}%
-\contentsline {subsection}{\numberline {4.8.1}Технологийн стек}{20}{subsection.104}%
-\contentsline {subsection}{\numberline {4.8.2}API endpoint-ууд}{20}{subsection.106}%
-\contentsline {subsection}{\numberline {4.8.3}Нэвтрэлтийн аюулгүй байдлын бодлого}{21}{subsection.108}%
-\contentsline {subsection}{\numberline {4.8.4}Серверийн арын процессууд}{21}{subsection.109}%
-\contentsline {subsection}{\numberline {4.8.5}Бодит цагийн ханшийн мэдээлэл}{22}{subsection.114}%
-\contentsline {section}{\numberline {4.9}Мобайл аппликейшний хөгжүүлэлт}{22}{section.115}%
-\contentsline {subsection}{\numberline {4.9.1}Технологийн стек}{22}{subsection.116}%
-\contentsline {subsection}{\numberline {4.9.2}Аппликейшний навигацийн бүтцийн диаграмм}{22}{subsection.118}%
-\contentsline {subsection}{\numberline {4.9.3}Хэрэглэгчийн нэвтрэлтийн дарааллын диаграмм}{23}{subsection.120}%
-\contentsline {subsection}{\numberline {4.9.4}Бодит цагийн өгөгдлийн менежмент}{24}{subsection.122}%
-\contentsline {section}{\numberline {4.10}Загварын давталтат сайжруулалт}{24}{section.123}%
-\contentsline {section}{\numberline {4.11}Бүлгийн дүгнэлт}{25}{section.125}%
-\contentsline {chapter}{\numberline {5}Судалгааны үр дүн, дүгнэлт}{26}{chapter.126}%
-\contentsline {section}{\numberline {5.1}Загварын сургалтын үр дүн}{26}{section.127}%
-\contentsline {subsection}{\numberline {5.1.1}Нарийвчлалын хэмжүүрүүд}{26}{subsection.128}%
-\contentsline {subsection}{\numberline {5.1.2}Загвар бүрийн хувь нэмэр}{26}{subsection.130}%
-\contentsline {section}{\numberline {5.2}Түүхэн өгөгдөл дээрх системийн туршилт (Backtesting)-ийн дүн}{26}{section.132}%
-\contentsline {subsection}{\numberline {5.2.1}Ерөнхий гүйцэтгэл}{26}{subsection.133}%
-\contentsline {subsection}{\numberline {5.2.2}Хөрөнгийн (Equity) муруй}{27}{subsection.135}%
-\contentsline {subsection}{\numberline {5.2.3}Сарын гүйцэтгэл}{27}{subsection.137}%
-\contentsline {subsection}{\numberline {5.2.4}Уналтын (Алдааны хэлбэлзэл (Drawdown)) шинжилгээ}{28}{subsection.139}%
-\contentsline {section}{\numberline {5.3}Гүйцэтгэлийн гүнзгий шинжилгээ}{28}{section.141}%
-\contentsline {subsection}{\numberline {5.3.1}Эрсдэлийн хэмжүүрүүд}{28}{subsection.142}%
-\contentsline {subsection}{\numberline {5.3.2}Итгэлцэл ба нарийвчлалын хамаарал}{29}{subsection.144}%
-\contentsline {subsection}{\numberline {5.3.3}Шинж чанар (Feature)ын ач холбогдол (Feature Importance)}{29}{subsection.146}%
-\contentsline {section}{\numberline {5.4}Хөгжүүлэлтийн үе шатуудын харьцуулалт}{30}{section.148}%
-\contentsline {subsection}{\numberline {5.4.1}Phase 6 ба Phase 7-ийн харьцуулалт}{30}{subsection.149}%
-\contentsline {subsection}{\numberline {5.4.2}Бенчмарк харьцуулалт}{32}{subsection.153}%
-\contentsline {section}{\numberline {5.5}Хэт нийцэл (Overfitting) шинжилгээ}{32}{section.155}%
-\contentsline {section}{\numberline {5.6}Operational үр дүн (production орчин)}{33}{section.161}%
-\contentsline {section}{\numberline {5.7}Мобайл аппликейшний ажиллагаа}{33}{section.163}%
-\contentsline {section}{\numberline {5.8}Дүгнэлт}{33}{section.170}%
-\contentsline {subsection}{\numberline {5.8.1}Судалгааны гол үр дүн}{33}{subsection.171}%
-\contentsline {subsection}{\numberline {5.8.2}Судалгааны шинэлэг тал}{34}{subsection.177}%
-\contentsline {subsection}{\numberline {5.8.3}Хязгаарлалт}{34}{subsection.178}%
-\contentsline {subsection}{\numberline {5.8.4}Цаашдын чиглэл}{35}{subsection.184}%
-\contentsline {subsection}{\numberline {5.8.5}Эцсийн дүгнэлт}{35}{subsection.191}%
-\contentsline {chapter}{Ном зүй}{35}{dummy.192}%
-\contentsline {chapter}{Товчлол}{38}{dummy.194}%
+\contentsline {chapter}{Нэр томьёоны тайлбар толь}{v}{dummy.6}%
+\contentsline {chapter}{Хүснэгтийн жагсаалт}{vii}{dummy.8}%
+\contentsline {chapter}{Зургийн жагсаалт}{viii}{dummy.10}%
+\contentsline {chapter}{\numberline {1}Ажлын төлөвлөгөө}{1}{chapter.12}%
+\contentsline {chapter}{\numberline {2}Удиртгал}{2}{chapter.14}%
+\contentsline {section}{\numberline {2.1}Үндэслэл, ач холбогдол}{2}{section.15}%
+\contentsline {section}{\numberline {2.2}Зорилго, зорилт}{2}{section.16}%
+\contentsline {subsection}{\numberline {2.2.1}Судалгааны зорилго}{2}{subsection.17}%
+\contentsline {subsection}{\numberline {2.2.2}Судалгааны зорилтууд}{2}{subsection.18}%
+\contentsline {chapter}{\numberline {3}Судалгааны сэдвийн онол, өнөөгийн түвшин}{3}{chapter.23}%
+\contentsline {section}{\numberline {3.1}Санхүүгийн цаг хугацааны цувааны (Time-series) зах зээлийн таамаглалд машин сургалтыг хэрэглэсэн судалгаанууд}{3}{section.24}%
+\contentsline {subsection}{\numberline {3.1.1}Уламжлалт машин сургалтын аргууд}{3}{subsection.25}%
+\contentsline {subsection}{\numberline {3.1.2}Гүн сургалтын аргууд}{3}{subsection.26}%
+\contentsline {subsection}{\numberline {3.1.3}Градиент нэмэгдүүлсэн шийдвэрийн мод (Gradient Boosted Decision Trees) санхүүгийн салбарт}{3}{subsection.27}%
+\contentsline {subsection}{\numberline {3.1.4}Ансамбль аргуудын санхүүгийн хэрэглээ}{4}{subsection.28}%
+\contentsline {section}{\numberline {3.2}Шинж чанар (Feature)-уудын судалгаа}{4}{section.29}%
+\contentsline {subsection}{\numberline {3.2.1}Шинж чанар (Feature)-уудын үр дүнтэй байдлын харьцуулалт}{4}{subsection.30}%
+\contentsline {subsection}{\numberline {3.2.2}Шинж чанар (feature)-уудын хослуулалт ба шинж чанарын инженерчлэл (feature engineering)}{5}{subsection.31}%
+\contentsline {section}{\numberline {3.3}Урагш гүйлгэсэн баталгаажуулалт (walk-forward validation) ба санхүүгийн цаг хугацааны цуваа}{5}{section.32}%
+\contentsline {section}{\numberline {3.4}Forex санхүүгийн таамаглалын аппликейшн ба технологийн хэрэгжүүлэлт}{6}{section.33}%
+\contentsline {subsection}{\numberline {3.4.1}Мобайл санхүүгийн таамаглалын технологи}{6}{subsection.34}%
+\contentsline {subsection}{\numberline {3.4.2}Серверийн хэсгийн ерөнхий архитектурын хандлага}{6}{subsection.35}%
+\contentsline {subsection}{\numberline {3.4.3}Системийн найдвартай байдал ба аюулгүй байдлын судалгааны цоорхой}{6}{subsection.36}%
+\contentsline {section}{\numberline {3.5}Төсөөтэй системүүд ба харьцуулалт}{6}{section.37}%
+\contentsline {subsection}{\numberline {3.5.1}Зах зээлд байгаа төсөөтэй аппликейшнууд}{6}{subsection.38}%
+\contentsline {subsection}{\numberline {3.5.2}Харьцуулсан судалгаа ба open source системүүд}{7}{subsection.39}%
+\contentsline {section}{\numberline {3.6}Бусад судалгааны ажлуудын дутагдал ба энэхүү ажлын хувь нэмэр}{7}{section.40}%
+\contentsline {section}{\numberline {3.7}Бүлгийн дүгнэлт}{8}{section.46}%
+\contentsline {chapter}{\numberline {4}Судалгааны арга зүй}{9}{chapter.47}%
+\contentsline {section}{\numberline {4.1}Судалгааны арга барил}{9}{section.48}%
+\contentsline {section}{\numberline {4.2}Системийн ерөнхий бүтэц}{9}{section.52}%
+\contentsline {section}{\numberline {4.3}Өгөгдлийн урсгал}{10}{section.58}%
+\contentsline {section}{\numberline {4.4}Өгөгдлийн бэлтгэл}{11}{section.60}%
+\contentsline {subsection}{\numberline {4.4.1}Түүхэн өгөгдөл}{11}{subsection.61}%
+\contentsline {subsection}{\numberline {4.4.2}Шинж чанар (Feature)ын инженерчлэл (feature engineering)}{11}{subsection.63}%
+\contentsline {subsection}{\numberline {4.4.3}Шошго (Label) үүсгэх}{12}{subsection.65}%
+\contentsline {subsection}{\numberline {4.4.4}Өгөгдлийн хуваалт -- урагш гүйлгэсэн баталгаажуулалт (walk-forward validation)}{12}{subsection.67}%
+\contentsline {section}{\numberline {4.5}AI загварын бүтэц ба сургалт}{13}{section.70}%
+\contentsline {subsection}{\numberline {4.5.1}Ансамбль загварын архитектур}{13}{subsection.71}%
+\contentsline {subsection}{\numberline {4.5.2}Хэт нийцэл (overfitting)-аас сэргийлэх арга хэмжээ}{15}{subsection.74}%
+\contentsline {subsection}{\numberline {4.5.3}Сургалтын алгоритм}{15}{subsection.81}%
+\contentsline {section}{\numberline {4.6}Дохио үүсгэх систем}{15}{section.83}%
+\contentsline {subsection}{\numberline {4.6.1}Дохионы шүүлтүүр}{15}{subsection.84}%
+\contentsline {subsection}{\numberline {4.6.2}Stop Loss ба Take Profit тооцоолол}{16}{subsection.86}%
+\contentsline {subsection}{\numberline {4.6.3}Дохио үүсгэх дарааллын диаграмм}{16}{subsection.89}%
+\contentsline {section}{\numberline {4.7}MetaTrader 5 түүхэн өгөгдөл дээрх системийн туршилт (backtesting)}{17}{section.99}%
+\contentsline {subsection}{\numberline {4.7.1}Түүхэн өгөгдөл дээрх системийн туршилтын (backtesting) гүйцэтгэлийн логик}{17}{subsection.100}%
+\contentsline {subsection}{\numberline {4.7.2}Түүхэн өгөгдөл дээрх системийн туршилтын (backtesting) нөхцөл}{18}{subsection.102}%
+\contentsline {subsection}{\numberline {4.7.3}Үнэлгээний шалгуур үзүүлэлтүүд}{18}{subsection.103}%
+\contentsline {section}{\numberline {4.8}Серверийн хэсгийн хэрэгжүүлэлт}{19}{section.105}%
+\contentsline {subsection}{\numberline {4.8.1}Архитектурын үндсэн бүрэлдэхүүн}{19}{subsection.106}%
+\contentsline {subsection}{\numberline {4.8.2}Үйлчилгээний функцийн бүлгүүд}{19}{subsection.108}%
+\contentsline {subsection}{\numberline {4.8.3}Нэвтрэлтийн аюулгүй байдал ба тогтвортой ажиллагаа}{19}{subsection.110}%
+\contentsline {subsection}{\numberline {4.8.4}Серверийн арын процессууд}{19}{subsection.111}%
+\contentsline {subsection}{\numberline {4.8.5}Бодит цагийн ханшийн мэдээлэл}{20}{subsection.116}%
+\contentsline {section}{\numberline {4.9}Мобайл аппликейшний хөгжүүлэлт}{20}{section.117}%
+\contentsline {subsection}{\numberline {4.9.1}Технологийн стек}{20}{subsection.118}%
+\contentsline {subsection}{\numberline {4.9.2}Аппликейшний навигацийн бүтцийн диаграмм}{20}{subsection.120}%
+\contentsline {subsection}{\numberline {4.9.3}Хэрэглэгчийн нэвтрэлтийн дарааллын диаграмм}{21}{subsection.122}%
+\contentsline {subsection}{\numberline {4.9.4}Бодит цагийн өгөгдлийн менежмент}{22}{subsection.124}%
+\contentsline {section}{\numberline {4.10}Загварын давталтат сайжруулалт}{22}{section.125}%
+\contentsline {section}{\numberline {4.11}Бүлгийн дүгнэлт}{23}{section.127}%
+\contentsline {chapter}{\numberline {5}Судалгааны үр дүн, дүгнэлт}{25}{chapter.128}%
+\contentsline {section}{\numberline {5.1}Үр дүнгийн өгөгдлийн эх сурвалж}{25}{section.129}%
+\contentsline {subsection}{\numberline {5.1.1}Эх сурвалжийн мөрийн баталгаа}{25}{subsection.130}%
+\contentsline {section}{\numberline {5.2}Загварын ангиллын үзүүлэлтүүд}{25}{section.132}%
+\contentsline {section}{\numberline {5.3}Threshold sweep-ийн нэгтгэсэн үр дүн}{25}{section.134}%
+\contentsline {section}{\numberline {5.4}Үр дүнгийн тайлбар}{26}{section.137}%
+\contentsline {subsection}{\numberline {5.4.1}Хамгийн өндөр нийт өгөөжтэй цэг}{26}{subsection.138}%
+\contentsline {subsection}{\numberline {5.4.2}Чанар-тоо хэмжээний зөрчил (trade-off)}{26}{subsection.139}%
+\contentsline {subsection}{\numberline {5.4.3}Орон нутгийн хэлбэлзэл}{26}{subsection.140}%
+\contentsline {section}{\numberline {5.5}Практик шийдвэр гаргалтын хүрээ}{26}{section.141}%
+\contentsline {section}{\numberline {5.6}Бүлгийн дүгнэлт}{27}{section.142}%
+\contentsline {section}{\numberline {5.7}Дүгнэлт}{27}{section.143}%
+\contentsline {subsection}{\numberline {5.7.1}Судалгааны гол үр дүн}{27}{subsection.144}%
+\contentsline {subsection}{\numberline {5.7.2}Судалгааны шинэлэг тал}{28}{subsection.150}%
+\contentsline {subsection}{\numberline {5.7.3}Хязгаарлалт}{28}{subsection.151}%
+\contentsline {subsection}{\numberline {5.7.4}Цаашдын чиглэл}{28}{subsection.157}%
+\contentsline {subsection}{\numberline {5.7.5}Эцсийн дүгнэлт}{29}{subsection.164}%
+\contentsline {chapter}{Ном зүй}{29}{dummy.165}%
+\contentsline {chapter}{Товчлол}{32}{dummy.167}%

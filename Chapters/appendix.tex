@@ -23,8 +23,8 @@ def compute_features(df, suffix):
 
 \subsection*{A.2 Ансамбль загварын сургалт}
 
-\begin{lstlisting}[language=Python, caption={Walk-Forward Validation сургалт}, label={lst:training}]
-# Walk-Forward Validation: 2015-2022 train, 2023 val, 2024 test
+\begin{lstlisting}[language=Python, caption={Урагш гүйлгэсэн баталгаажуулалт (walk-forward validation)-ын сургалт}, label={lst:training}]
+# walk-forward validation: 2015-2022 train, 2023 val, 2024 test
 train_end = "2023-01-01"
 val_end = "2024-01-01"
 train_df = df[df["time"] < train_end]
@@ -43,7 +43,7 @@ cal.fit(predict_proba(models_flat, X_cal).reshape(-1, 1), y_cal)
 \subsection*{A.3 Дохио шүүлтүүрлэх}
 
 \begin{lstlisting}[language=Python, caption={Дохионы шүүлтүүрийн тохиргоо}, label={lst:signal_filter}]
-CONF_THRESHOLD = 0.90    # Confidence >= 90%
+CONF_THRESHOLD = 0.90    # confidence >= 90%
 MIN_ATR_PIPS = 4.0       # ATR >= 4.0 pips
 SL_MULT = 5.0            # SL = ATR * 5
 TP_MULT = 15.0           # TP = ATR * 15 (SL * 3)
@@ -51,52 +51,35 @@ MIN_SL_PIPS = 15.0       # Minimum SL: 15 pips
 MIN_TP_PIPS = 45.0       # Minimum TP: 45 pips
 \end{lstlisting}
 
-\section*{B. Backend API код}
+\section*{B. Серверийн хэсгийн псевдокод}
 
-\subsection*{B.1 Дохио үүсгэх endpoint}
+\subsection*{B.1 Дохио үүсгэх ерөнхий урсгал}
 
-\begin{lstlisting}[language=Python, caption={Flask API -- V10 дохио үүсгэх}, label={lst:api_signal}]
-@app.route('/signal/v2', methods=['GET'])
-def get_signal():
-    min_confidence = float(
-        request.args.get('min_confidence', 85))
-    pair = request.args.get('pair', 'EUR/USD')
-    
-    # Historical data (800 bars, 1min, yfinance)
-    df = get_yfinance_dataframe(
-        interval="1min", outputsize=800, symbol=pair)
-    
-    if df is None or len(df) < 200:
-        return jsonify({'error': 'rate_limited'}), 429
-    
-    # Generate signal with V10 ensemble
-    signal = signal_generator.generate_signal(
-        df, min_confidence)
-    
-    return jsonify({'success': True, **signal})
+\begin{lstlisting}[language=Python, caption={Бодит цагийн дохио үүсгэх псевдокод}, label={lst:api_signal}]
+def generate_realtime_signal(market_stream):
+    recent_data = load_recent_data(market_stream)
+    features = build_features(recent_data)
+    prediction = ensemble_predict(features)
+
+    if not passes_quality_filters(prediction):
+        return {"status": "no-action"}
+
+    risk_plan = compute_risk_parameters(prediction)
+    return format_signal_output(prediction, risk_plan)
 \end{lstlisting}
 
-\section*{C. MetaTrader 5 Expert Advisor}
+\section*{C. Эрсдэлд суурилсан байрлалын тооцоолол}
 
-\subsection*{C.1 Эрсдэлд суурилсан лотын тооцоолол}
+\subsection*{C.1 Байрлалын хэмжээг тооцох логик}
 
-\begin{lstlisting}[language=C, caption={MQL5 -- Лотын тооцоолол}, label={lst:mql5_risk}]
-double CalcLotByRisk(const string sym, double sl_pips)
-{
-   if(sl_pips <= 0.0) 
-       return SymbolInfoDouble(sym, SYMBOL_VOLUME_MIN);
+\begin{lstlisting}[language=Python, caption={Эрсдэлийн хязгаарт суурилсан байрлалын хэмжээ (псевдокод)}, label={lst:mql5_risk}]
+def position_size(balance, risk_pct, stop_loss_pips, pip_value):
+    if stop_loss_pips <= 0:
+        return minimum_position()
 
-   double bal  = AccountInfoDouble(ACCOUNT_BALANCE);
-   double risk = bal * (RiskPerTrade / 100.0);
-   double pip  = PipSizeForSymbol(sym);
-   double tick_val = SymbolInfoDouble(sym, 
-                         SYMBOL_TRADE_TICK_VALUE);
-   double tick_sz  = SymbolInfoDouble(sym, 
-                         SYMBOL_TRADE_TICK_SIZE);
-   double pip_val = tick_val * (pip / tick_sz);
-   double vol = risk / (sl_pips * pip_val);
-   return ClampVolumeForSymbol(sym, vol);
-}
+    risk_amount = balance * risk_pct
+    raw_size = risk_amount / (stop_loss_pips * pip_value)
+    return clamp_to_symbol_limits(raw_size)
 \end{lstlisting}
 
 \section*{D. Мобайл аппликейшн код}
@@ -134,7 +117,7 @@ const { data: liveRates, isLoading, refetch } = useQuery({
 \small
 \begin{tabular}{lllcccc}
 \toprule
-\textbf{Цаг} & \textbf{Sym} & \textbf{Чиглэл} & \textbf{Conf} & \textbf{SL} & \textbf{TP} \\
+\textbf{Цаг} & \textbf{Sym} & \textbf{Чиглэл} & \textbf{Итгэлцэл (confidence)} & \textbf{SL} & \textbf{TP} \\
 \midrule
 2025-01-14 13:30 & EURUSD & BUY & 0.930 & 21 & 64 \\
 2025-01-14 13:32 & EURUSD & BUY & 0.934 & 28 & 85 \\
@@ -146,4 +129,6 @@ const { data: liveRates, isLoading, refetch } = useQuery({
 \end{tabular}
 \end{table}
 
-Нийт 1,065 дохио, 90\%+ confidence, ATR $\geq$ 4.0 пипс шүүлтүүртэй.
+Нийт 3,567 дохио, итгэлцэл (confidence) 90\%-аас дээш, ATR $\geq$ 4.0 пипс шүүлтүүртэй.
+
+
