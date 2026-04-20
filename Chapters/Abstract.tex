@@ -8,30 +8,13 @@
 
 \sloppy
 
-Энэхүү судалгааны ажлаар машин сургалтын ансамбль аргыг ашиглан санхүүгийн шуугиан ихтэй цаг хугацааны цувааны өгөгдөл дээр таамаглал хийж, үр дүнг хэрэглэгчид бодит хугацаанд хүргэх өгөгдөл боловсруулах урсгал болон харагдах хэсэг (frontend)-тэй мобайл аппликейшн хөгжүүлсэн.
+Энэхүү судалгааны зорилго нь валютын зах зээл (Forex)-ийн шуугиан өндөр, горим өөрчлөгдөх магадлалтай цаг хугацааны цуваанаас арилжааны дохио үүсгэх машин сургалтын цогц системийг хөгжүүлж үнэлэхэд оршино. Ажлын гол санаа нь загварын ангиллын чанарыг дангаар нь биш, дохио бодит гүйцэтгэлд хэрхэн хөрвөж байгааг түүхэн өгөгдөл дээрх системийн туршилтын үр дүнтэй хамтатган шинжлэх явдал байв.
 
-Системийн цөм нь LightGBM, XGBoost, CatBoost гэсэн гурван градиент нэмэгдүүлсэн шийдвэрийн модны (GBDT) алгоритмуудаас бүрдэх санал өгөх механизмтай (Voting Classifier) ансамбль загвар юм. Загваруудыг 2015--2022 оны $\sim$2.97 сая өгөгдлийн цэг (өгөгдлийн түүвэр)-ийг ашиглан сургаж, 2023 оны 371,000 цэг дээр баталгаажуулж, 2024 оны 371,000 цэг дээр тестэлсэн. Загварын хэт нийцэл (overfitting) үүсэх эрсдэлийг бууруулах зорилгоор урагш гүйлгэсэн баталгаажуулалт (walk-forward validation) хэрэглэсэн. 6 хугацааны интервалаас нийт 48 шинж чанар (feature) боловсруулж сургалтад ашигласан. Загварын магадлалын тохируулгыг (probability calibration) сүлжээнээс гадуурх үнэлгээнд ашигласан бөгөөд бодит ажиллах орчинд (production runtime) ансамблийн шууд магадлалд суурилсан итгэлцлийн босго (confidence threshold) хэрэглэсэн.
+Судалгаанд EUR/USD-ийн 2015--2024 оны өгөгдлийг зургаан хугацааны интервалаар нэгтгэн 48 шинж чанар үүсгэж, LightGBM, XGBoost, CatBoost загваруудыг зөөлөн саналын ансамблиар нэгтгэсэн. Үнэлгээний үндсэн хүрээ нь урагш гүйлгэн баталгаажуулалт (WFV) бөгөөд KPI-ийн нэгтгэсэн тайланг Fold 5 огтлол (2015--2022 сургалт, 2023 баталгаажуулалт, 2024 тест)-д төвлөрүүлэв. Үүний дараа түүхэн өгөгдөл дээрх системийн туршилтыг 2025.01.01--2026.01.01 цонхонд хийж, ажиллах үеийн итгэлцлийн босгыг 0.90 дээр тогтмол байлгасан нөхцөлд 0.90--0.99 урьдчилан шүүсэн сценариудыг харьцуулсан.
 
-Программ хангамжийн туршилтын (system testing) шинэ багцад EA талын runtime итгэлцлийн босгыг 0.90 дээр тогтмол байлгаж, 0.90--0.99 мужийн урьдчилан шүүсэн дохионы 10 багцаар түүхэн өгөгдөл дээрх системийн туршилт (backtesting) ажиллуулж, бүх тохиргоонд эерэг өгөөж гарсан. Хамгийн өндөр үр дүн нь 0.91 багц дээр \$61,770.46 (+517.70\%), 0.90 багц дээр \$58,262.39 (+482.62\%) эцсийн баланс байв. Эдгээр дүн нь EUR/USD хэрэгслийн EA тестийн цонх (2025.01.01--2026.01.01) дахь sweep туршилтын хүрээнд тайлбарлагдана. React Native технологи дээр суурилсан ``Predictrix'' харагдах хэсэг (frontend) нь бодит цагийн мэдээлэл, таамаглалын үр дүн, хэрэглэгчийн баталгаажуулалт зэргийг харуулсан. Мөн серверийн хэсгийн аюулгүй байдал, өгөгдлийн урсгалын тогтвортой ажиллагааг хангах инженерчлэлийн шийдлүүдийг системийн хэрэгжилтэд тусгасан.
+Туршилтын тоон дүнг логийн мөрөөс шууд нэгтгэхэд 359{,}639 анхны таамгаас 3{,}567 дохио (1.0\%) үлдэж, босго өсөх тусам дохионы тоо 147 хүртэл буурсан. Сценарийн харьцуулалтад 0.91 босгон дээр ажиглагдсан хамгийн өндөр эцсийн баланс \$61{,}770.46 (+517.70\%), 0.90 босгон дээр \$58{,}262.39 (+482.62\%), 0.99 босгон дээр \$17{,}428.89 (+74.29\%) гарсан. Дохио-арилжааны хөрвүүлэлт 6.45\%--23.81\% мужид хэлбэлзсэн тул win rate (44.78\%--65.71\%) болон Expectancy ($R$) (0.79--1.63)-г зөвхөн хэрэгжсэн арилжаанд нөхцөлтөөр тайлбарласан. Эрсдэлийн нэгтгэлээр Max drawdown (дансны хамгийн их уналт) 1.98\%--9.53\%, хамгийн урт дараалалсан алдагдал 2--10, балансын сценарийн хэлбэлзэл (CV) 38.01\% байв. Спред ба гулсалтыг тусгасан ч шимтгэл, свопыг бүрэн хамраагүй тул өгөөжийн дүнг нөхцөлт сценарийн харьцуулалтын хүрээнд тайлбарлав.
 
-\vspace{3mm}
-\textit{Түлхүүр үгс:} машин сургалт, ансамбль загвар, цаг хугацааны цувааны өгөгдөл, GBDT, XGBoost, LightGBM, CatBoost, шинж чанарын инженерчлэл, өгөгдөл боловсруулах урсгал, React Native, харагдах хэсэг, туршин шалгах
-
-\vspace{10mm}
-
-\begin{center}
-\textbf{\large Abstract}
-\end{center}
-
-\begin{english}
-This research develops an end-to-end machine learning system, which uses ensemble methods for classifying and predicting high-noise, financial time-series data, and integrating a data pipeline with a mobile frontend application to provide real-time results. 
-
-The core of the system is an ensemble voting classifier composed of three Gradient Boosted Decision Tree (GBDT) models: LightGBM, XGBoost, and CatBoost. The models were trained on $\sim$2.97 million data points from 2015--2022, validated on 371,000 points from 2023, and tested on 371,000 points from 2024. A walk-forward validation methodology was implemented to mitigate overfitting risks. Feature engineering produced 48 distinct features spanning across 6 time intervals (M1--H4). Probability calibration was retained for offline evaluation, while production runtime utilizes direct ensemble probability confidence thresholds for stability.
-
-The updated system evaluation keeps the EA runtime confidence threshold fixed at 0.90 and runs 10 backtests using pre-filtered signal sets across the 0.90--0.99 range; all configurations remain profitable. The best outcome is observed for the 0.91 signal set with a final balance of \$61,770.46 (+517.70\%), while the 0.90 set yields \$58,262.39 (+482.62\%). These outcomes are reported for EUR/USD within the EA test window (2025.01.01--2026.01.01). The ``Predictrix'' mobile frontend application, developed with React Native, integrates real-time data flows, predictive results, and secure user authentication. System engineering contributions include robust backend stability, secure access control, and reliable production-grade data delivery.
+Эцэст нь машин сургалт, серверийн хэсэг (backend), харагдах хэсэг (frontend)-ийг API-гаар нэгтгэснээр таамаглалын үр дүнг хэрэглэгчийн түвшинд хүргэх инженерчлэлийн боломжийг системийн түвшинд харуулсан.
 
 \vspace{3mm}
-\textit{Keywords: machine learning, ensemble models, time-series data forecasting, feature engineering, data pipelines, GBDT, XGBoost, LightGBM, CatBoost, React Native, frontend application, algorithm testing}
-\end{english}
-
-
+\textit{Түлхүүр үгс:} машин сургалт, ансамбль загвар, GBDT, урагш гүйлгэн баталгаажуулалт, түүхэн өгөгдөл дээрх системийн туршилт, дохио-арилжааны хөрвүүлэлт, Wilson итгэлцлийн интервал, хүлээгдэж буй өгөөж ($R$), Max drawdown, сценарийн хэлбэлзэл (CV), серверийн хэсэг (backend), харагдах хэсэг (frontend)

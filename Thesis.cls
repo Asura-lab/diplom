@@ -2,7 +2,7 @@
 \ProvidesClass{Thesis}[2022/04/12 v0.1 testclass]
 \DeclareOption*{\PassOptionsToClass{\CurrentOption}{report}}
 \ProcessOptions
-\LoadClass{report}
+\LoadClass[a4paper]{report}
 
 \newcommand\bhrule{\typeout{------------------------------------------------------------------------------}}
 
@@ -52,7 +52,7 @@
 
 %\onehalfspacing
 \setlength{\parindent}{1.25cm}
-\setlength{\parskip}{6pt plus1pt minus1pt}
+\setlength{\parskip}{6pt}
 
 % Текстийг хоёр талаас тэгшлэх тохиргоо
 \tolerance=1000
@@ -62,15 +62,15 @@
 \clubpenalty=10000
 
 \usepackage{vmargin}
-\setmarginsrb               { 25mm}  % left margin
+\setmarginsrb               { 30mm}  % left margin
                             { 20mm}  % top margin
-                            { 20mm}  % right margin
+                            { 15mm}  % right margin
                             { 20mm}  % bottom margin
                             {  20pt}  % head height
                             {0.25in}  % head sep
                             {   9pt}  % foot height
                             { 0.3in}  % foot sep
-\setstretch{1.0}
+\setstretch{1.15}
 
 
    
