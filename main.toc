@@ -22,80 +22,70 @@
 \contentsline {subsection}{\numberline {3.2.1}Шинж чанаруудын үр дүнтэй байдлын харьцуулалт}{5}{subsection.32}%
 \contentsline {subsection}{\numberline {3.2.2}Шинж чанарын хослуулалт ба шинж чанарын инженерчлэл}{6}{subsection.33}%
 \contentsline {section}{\numberline {3.3}Урагш гүйлгэн баталгаажуулалт (walk-forward validation) ба санхүүгийн цаг хугацааны цуваа}{6}{section.34}%
-\contentsline {section}{\numberline {3.4}Форекс санхүүгийн таамаглалын аппликейшн ба технологийн хэрэгжүүлэлт}{7}{section.35}%
-\contentsline {subsection}{\numberline {3.4.1}Мобайл санхүүгийн таамаглалын технологи}{7}{subsection.36}%
+\contentsline {section}{\numberline {3.4}Форекс арилжааны аппликейшн ба технологийн хэрэгжүүлэлт}{7}{section.35}%
+\contentsline {subsection}{\numberline {3.4.1}Мобайл арилжааны технологи}{7}{subsection.36}%
 \contentsline {subsection}{\numberline {3.4.2}Серверийн хэсгийн ерөнхий архитектурын хандлага}{7}{subsection.37}%
 \contentsline {subsection}{\numberline {3.4.3}Системийн найдвартай байдал ба аюулгүй байдлын судалгааны цоорхой}{7}{subsection.38}%
-\contentsline {section}{\numberline {3.5}Төсөөтэй системүүд ба харьцуулалт}{8}{section.39}%
+\contentsline {section}{\numberline {3.5}Төсөөтэй системүүд ба харьцуулалт}{7}{section.39}%
 \contentsline {subsection}{\numberline {3.5.1}Зах зээлд байгаа төсөөтэй аппликейшнууд}{8}{subsection.40}%
 \contentsline {subsection}{\numberline {3.5.2}Харьцуулсан судалгаа ба open source системүүд}{8}{subsection.41}%
-\contentsline {chapter}{\numberline {4}Судалгааны арга зүй}{9}{chapter.42}%
-\contentsline {section}{\numberline {4.1}Судалгааны арга барил}{9}{section.43}%
-\contentsline {section}{\numberline {4.2}Системийн ерөнхий бүтэц}{9}{section.48}%
-\contentsline {section}{\numberline {4.3}Өгөгдлийн урсгал}{10}{section.54}%
-\contentsline {section}{\numberline {4.4}Өгөгдлийн бэлтгэл}{11}{section.56}%
-\contentsline {subsection}{\numberline {4.4.1}Түүхэн өгөгдөл}{11}{subsection.57}%
-\contentsline {subsection}{\numberline {4.4.2}Шинж чанар (feature)ын инженерчлэл (feature engineering)}{12}{subsection.59}%
-\contentsline {subsection}{\numberline {4.4.3}Шошго (label) үүсгэх}{12}{subsection.61}%
-\contentsline {subsection}{\numberline {4.4.4}Шошго ба шинж чанарын цагийн нийцлийн аудит (leakage audit)}{13}{subsection.63}%
-\contentsline {subsection}{\numberline {4.4.5}WFV-ийн олон огтлолтын алхамт логик (концепц)}{13}{subsection.66}%
-\contentsline {section}{\numberline {4.5}AI загварын бүтэц ба сургалт}{15}{section.74}%
-\contentsline {subsection}{\numberline {4.5.1}Ансамбль загварын архитектур}{15}{subsection.75}%
-\contentsline {subsection}{\numberline {4.5.2}Гиперпараметр сонголтын протокол}{16}{subsection.77}%
-\contentsline {subsection}{\numberline {4.5.3}Хэт нийцэл (overfitting)-аас сэргийлэх арга хэмжээ}{17}{subsection.79}%
-\contentsline {subsection}{\numberline {4.5.4}Сургалтын алгоритм}{17}{subsection.86}%
-\contentsline {section}{\numberline {4.6}Дохио үүсгэх систем}{18}{section.87}%
-\contentsline {subsection}{\numberline {4.6.1}Дохионы шүүлтүүр}{18}{subsection.88}%
-\contentsline {subsection}{\numberline {4.6.2}Stop Loss ба Take Profit тооцоолол}{19}{subsection.90}%
-\contentsline {subsection}{\numberline {4.6.3}Дохио үүсгэх дарааллын диаграмм}{19}{subsection.93}%
-\contentsline {subsection}{\numberline {4.6.4}Дохионы эх үүсвэрийн бүрэн бүтэн байдал ба leakage-ээс сэргийлэлт}{20}{subsection.103}%
-\contentsline {section}{\numberline {4.7}MetaTrader 5 түүхэн өгөгдөл дээрх системийн туршилт (backtesting)}{21}{section.104}%
-\contentsline {subsection}{\numberline {4.7.1}Түүхэн өгөгдөл дээрх системийн туршилтын (backtesting) гүйцэтгэлийн логик}{21}{subsection.105}%
-\contentsline {subsection}{\numberline {4.7.2}Түүхэн өгөгдөл дээрх системийн туршилтын (backtesting) нөхцөл}{21}{subsection.107}%
-\contentsline {subsection}{\numberline {4.7.3}Арилжааны зардлын хамралтын матриц}{22}{subsection.108}%
-\contentsline {subsection}{\numberline {4.7.4}Босго сонголтын протокол ба data-snooping эрсдэлийн хяналт}{22}{subsection.110}%
-\contentsline {subsection}{\numberline {4.7.5}Үнэлгээний шалгуур үзүүлэлтүүд}{22}{subsection.114}%
-\contentsline {section}{\numberline {4.8}Серверийн хэсгийн хэрэгжүүлэлт}{24}{section.117}%
-\contentsline {subsection}{\numberline {4.8.1}Архитектурын үндсэн бүрэлдэхүүн}{24}{subsection.118}%
-\contentsline {subsection}{\numberline {4.8.2}Deployment архитектур ба ажиллуулах орчин}{24}{subsection.120}%
-\contentsline {subsection}{\numberline {4.8.3}Системийн модулийн бүлгүүд}{25}{subsection.122}%
-\contentsline {subsection}{\numberline {4.8.4}Нэвтрэлтийн аюулгүй байдал ба тогтвортой ажиллагаа}{25}{subsection.124}%
-\contentsline {subsection}{\numberline {4.8.5}Серверийн арын ажлууд}{25}{subsection.125}%
-\contentsline {subsection}{\numberline {4.8.6}Бодит цагийн ханшийн мэдээлэл}{26}{subsection.130}%
-\contentsline {section}{\numberline {4.9}Мобайл аппликейшний хөгжүүлэлт}{26}{section.131}%
-\contentsline {subsection}{\numberline {4.9.1}Технологийн стек}{26}{subsection.132}%
-\contentsline {subsection}{\numberline {4.9.2}Аппликейшний навигацийн бүтцийн диаграмм}{26}{subsection.134}%
-\contentsline {subsection}{\numberline {4.9.3}Хэрэглэгчийн нэвтрэлтийн дарааллын диаграмм}{27}{subsection.136}%
-\contentsline {subsection}{\numberline {4.9.4}Бодит цагийн өгөгдлийн менежмент}{28}{subsection.138}%
-\contentsline {section}{\numberline {4.10}Загварын давталтат сайжруулалт}{28}{section.139}%
-\contentsline {chapter}{\numberline {5}Судалгааны үр дүн, дүгнэлт}{30}{chapter.141}%
-\contentsline {section}{\numberline {5.1}Үр дүнгийн өгөгдлийн эх сурвалж}{30}{section.142}%
-\contentsline {subsection}{\numberline {5.1.1}Эх сурвалжийн индексжүүлсэн баталгаа}{30}{subsection.143}%
-\contentsline {section}{\numberline {5.2}Босгын мужийн нэгтгэсэн үр дүн}{30}{section.145}%
-\contentsline {subsection}{\numberline {5.2.1}Дохио-арилжааны хөрвүүлэлт ба гүйцэтгэлийн чанар}{31}{subsection.148}%
-\contentsline {subsection}{\numberline {5.2.2}Статистикийн тодорхойгүй байдлын нэмэлт нэгтгэл}{32}{subsection.150}%
-\contentsline {section}{\numberline {5.3}График дүрслэл (LaTeX кодоор)}{33}{section.153}%
-\contentsline {subsection}{\numberline {5.3.1}0.91 босгын equity муруй (нэмэлт дүрслэл)}{33}{subsection.154}%
-\contentsline {subsection}{\numberline {5.3.2}Босго-өгөөж-арилжааны хос график}{34}{subsection.156}%
-\contentsline {subsection}{\numberline {5.3.3}Босго ба MaxDD (хамгийн их уналт)-ын хамаарал}{34}{subsection.158}%
-\contentsline {subsection}{\numberline {5.3.4}Босго ба Execution rate-ийн хамаарал}{35}{subsection.160}%
-\contentsline {subsection}{\numberline {5.3.5}Босго ба Win rate (95\% CI)-ийн хамаарал}{35}{subsection.162}%
-\contentsline {subsection}{\numberline {5.3.6}Босго ба Expectancy (R)-ийн хамаарал}{36}{subsection.164}%
-\contentsline {section}{\numberline {5.4}Үр дүнгийн тайлбар}{36}{section.166}%
-\contentsline {subsection}{\numberline {5.4.1}Сценарийн хүрээнд ажиглагдсан дээд цэг}{37}{subsection.167}%
-\contentsline {subsection}{\numberline {5.4.2}Чанар-тоо хэмжээний зөрчил}{37}{subsection.168}%
-\contentsline {subsection}{\numberline {5.4.3}Босго сонголтын зарчим (data-snooping эрсдэлийн хяналт)}{37}{subsection.169}%
-\contentsline {subsection}{\numberline {5.4.4}Орон нутгийн хэлбэлзэл}{37}{subsection.170}%
-\contentsline {subsection}{\numberline {5.4.5}Арга зүйн эрсдэлийн нэгдсэн тайлбар}{38}{subsection.171}%
-\contentsline {section}{\numberline {5.5}Дахин хэрэгжүүлэх боломж ба орчны нөхцөл}{38}{section.173}%
-\contentsline {section}{\numberline {5.6}Практик шийдвэр гаргалтын хүрээ}{39}{section.174}%
-\contentsline {section}{\numberline {5.7}Дүгнэлт}{39}{section.175}%
-\contentsline {subsection}{\numberline {5.7.1}Судалгааны гол үр дүн}{39}{subsection.176}%
-\contentsline {subsection}{\numberline {5.7.2}Судалгааны практик хувь нэмэр}{40}{subsection.182}%
-\contentsline {subsection}{\numberline {5.7.3}Хязгаарлалт}{40}{subsection.183}%
-\contentsline {subsection}{\numberline {5.7.4}Нууцлалын амьдралын мөчлөгийн формаль хүрээ}{41}{subsection.192}%
-\contentsline {subsection}{\numberline {5.7.5}Ил тод байдал ба нууцлалын тэнцвэр}{41}{subsection.196}%
-\contentsline {subsection}{\numberline {5.7.6}Цаашдын чиглэл}{41}{subsection.197}%
-\contentsline {subsection}{\numberline {5.7.7}Эцсийн дүгнэлт}{42}{subsection.204}%
-\contentsline {chapter}{Ном зүй}{42}{dummy.205}%
-\contentsline {chapter}{Товчлол}{45}{dummy.207}%
+\contentsline {section}{\numberline {3.6}Судалгааны арга барил}{9}{section.42}%
+\contentsline {section}{\numberline {3.7}Системийн ерөнхий бүтэц}{9}{section.47}%
+\contentsline {section}{\numberline {3.8}Өгөгдлийн урсгал}{10}{section.53}%
+\contentsline {section}{\numberline {3.9}Өгөгдлийн бэлтгэл}{11}{section.55}%
+\contentsline {subsection}{\numberline {3.9.1}Түүхэн өгөгдөл}{11}{subsection.56}%
+\contentsline {subsection}{\numberline {3.9.2}Шинж чанар (feature)ын инженерчлэл (feature engineering)}{12}{subsection.58}%
+\contentsline {subsection}{\numberline {3.9.3}Шошго (label) үүсгэх}{12}{subsection.60}%
+\contentsline {subsection}{\numberline {3.9.4}Шошго ба шинж чанарын цагийн нийцлийн аудит (leakage audit)}{13}{subsection.62}%
+\contentsline {subsection}{\numberline {3.9.5}WFV-ийн олон огтлолтын алхамт логик (концепц)}{13}{subsection.65}%
+\contentsline {section}{\numberline {3.10}AI загварын бүтэц ба сургалт}{15}{section.73}%
+\contentsline {subsection}{\numberline {3.10.1}Ансамбль загварын архитектур}{15}{subsection.74}%
+\contentsline {subsection}{\numberline {3.10.2}Гиперпараметр сонголтын протокол}{16}{subsection.76}%
+\contentsline {subsection}{\numberline {3.10.3}Хэт нийцэл (overfitting)-аас сэргийлэх арга хэмжээ}{17}{subsection.78}%
+\contentsline {subsection}{\numberline {3.10.4}Сургалтын алгоритм}{17}{subsection.85}%
+\contentsline {section}{\numberline {3.11}Дохио үүсгэх систем}{18}{section.86}%
+\contentsline {subsection}{\numberline {3.11.1}Дохионы шүүлтүүр}{18}{subsection.87}%
+\contentsline {subsection}{\numberline {3.11.2}Stop Loss ба Take Profit тооцоолол}{19}{subsection.89}%
+\contentsline {subsection}{\numberline {3.11.3}Дохио үүсгэх дарааллын диаграмм}{19}{subsection.92}%
+\contentsline {subsection}{\numberline {3.11.4}Дохионы эх үүсвэрийн бүрэн бүтэн байдал ба leakage-ээс сэргийлэлт}{20}{subsection.102}%
+\contentsline {section}{\numberline {3.12}MetaTrader 5 түүхэн өгөгдөл дээрх системийн туршилт (backtesting)}{21}{section.103}%
+\contentsline {subsection}{\numberline {3.12.1}Түүхэн өгөгдөл дээрх системийн туршилтын (backtesting) гүйцэтгэлийн логик}{21}{subsection.104}%
+\contentsline {subsection}{\numberline {3.12.2}Түүхэн өгөгдөл дээрх системийн туршилтын (backtesting) нөхцөл}{21}{subsection.106}%
+\contentsline {subsection}{\numberline {3.12.3}Арилжааны зардлын хамралтын матриц}{22}{subsection.107}%
+\contentsline {subsection}{\numberline {3.12.4}Босго сонголтын протокол ба data-snooping эрсдэлийн хяналт}{22}{subsection.109}%
+\contentsline {subsection}{\numberline {3.12.5}Үнэлгээний шалгуур үзүүлэлтүүд}{22}{subsection.113}%
+\contentsline {section}{\numberline {3.13}Серверийн хэсгийн хэрэгжүүлэлт}{24}{section.116}%
+\contentsline {subsection}{\numberline {3.13.1}Архитектурын үндсэн бүрэлдэхүүн}{24}{subsection.117}%
+\contentsline {subsection}{\numberline {3.13.2}Deployment архитектур ба ажиллуулах орчин}{24}{subsection.119}%
+\contentsline {subsection}{\numberline {3.13.3}Системийн модулийн бүлгүүд}{25}{subsection.121}%
+\contentsline {subsection}{\numberline {3.13.4}Нэвтрэлтийн аюулгүй байдал ба тогтвортой ажиллагаа}{25}{subsection.123}%
+\contentsline {subsection}{\numberline {3.13.5}Серверийн арын ажлууд}{25}{subsection.124}%
+\contentsline {subsection}{\numberline {3.13.6}Бодит цагийн ханшийн мэдээлэл}{26}{subsection.129}%
+\contentsline {section}{\numberline {3.14}Мобайл давхаргын архитектурын хураангуй}{26}{section.130}%
+\contentsline {section}{\numberline {3.15}Загварын давталтат сайжруулалт}{26}{section.131}%
+\contentsline {chapter}{\numberline {4}Судалгааны үр дүн, дүгнэлт}{28}{chapter.133}%
+\contentsline {section}{\numberline {4.1}Үр дүнгийн өгөгдлийн эх сурвалж}{28}{section.134}%
+\contentsline {subsection}{\numberline {4.1.1}Эх сурвалжийн индексжүүлсэн баталгаа}{28}{subsection.135}%
+\contentsline {section}{\numberline {4.2}Босгын мужийн нэгтгэсэн үр дүн}{28}{section.137}%
+\contentsline {subsection}{\numberline {4.2.1}Суурь benchmark: EUR/USD buy-and-hold}{29}{subsection.140}%
+\contentsline {subsection}{\numberline {4.2.2}Дохио-арилжааны хөрвүүлэлт ба гүйцэтгэлийн чанар}{29}{subsection.142}%
+\contentsline {subsection}{\numberline {4.2.3}Статистикийн тодорхойгүй байдлын нэмэлт нэгтгэл}{30}{subsection.144}%
+\contentsline {subsection}{\numberline {4.2.4}Босго ба Execution rate-ийн хамаарал}{31}{subsection.146}%
+\contentsline {subsection}{\numberline {4.2.5}Босго ба Win rate (95\% CI)-ийн хамаарал}{31}{subsection.148}%
+\contentsline {subsection}{\numberline {4.2.6}Босго ба Expectancy (R)-ийн хамаарал}{32}{subsection.150}%
+\contentsline {section}{\numberline {4.3}Үр дүнгийн тайлбар}{32}{section.152}%
+\contentsline {subsection}{\numberline {4.3.1}Сценарийн хүрээнд ажиглагдсан дээд цэг}{32}{subsection.153}%
+\contentsline {subsection}{\numberline {4.3.2}Чанар-тоо хэмжээний зөрчил}{32}{subsection.154}%
+\contentsline {subsection}{\numberline {4.3.3}Босго сонголтын зарчим (data-snooping эрсдэлийн хяналт)}{33}{subsection.155}%
+\contentsline {subsection}{\numberline {4.3.4}Орон нутгийн хэлбэлзэл}{33}{subsection.156}%
+\contentsline {subsection}{\numberline {4.3.5}Арга зүйн эрсдэлийн нэгдсэн тайлбар}{34}{subsection.157}%
+\contentsline {section}{\numberline {4.4}Дахин хэрэгжүүлэх боломж ба орчны нөхцөл}{34}{section.159}%
+\contentsline {section}{\numberline {4.5}Практик шийдвэр гаргалтын хүрээ}{35}{section.160}%
+\contentsline {section}{\numberline {4.6}Дүгнэлт}{35}{section.161}%
+\contentsline {subsection}{\numberline {4.6.1}Судалгааны гол үр дүн}{35}{subsection.162}%
+\contentsline {subsection}{\numberline {4.6.2}Судалгааны практик хувь нэмэр}{35}{subsection.167}%
+\contentsline {subsection}{\numberline {4.6.3}Хязгаарлалт}{36}{subsection.168}%
+\contentsline {subsection}{\numberline {4.6.4}Цаашдын чиглэл}{36}{subsection.175}%
+\contentsline {subsection}{\numberline {4.6.5}Эцсийн дүгнэлт}{36}{subsection.182}%
+\contentsline {chapter}{Ном зүй}{37}{dummy.183}%
+\contentsline {chapter}{Товчлол}{40}{dummy.185}%

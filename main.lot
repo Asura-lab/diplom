@@ -2,25 +2,21 @@
 \addvspace {10\p@ }
 \contentsline {table}{\numberline {2.1}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces Судалгааны асуулт ба үнэлгээний шалгуур үзүүлэлтүүд (KPIs)}}{3}{table.caption.24}%
 \addvspace {10\p@ }
+\contentsline {table}{\numberline {3.1}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces Түүхэн өгөгдлийн хэмжээний хураангуй}}{11}{table.caption.57}%
+\contentsline {table}{\numberline {3.2}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces Шинж чанар (feature)ын жагсаалт (интервал бүрд)}}{12}{table.caption.59}%
+\contentsline {table}{\numberline {3.3}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces Leakage audit-ын цагийн нийцлийн дүрэм}}{13}{table.caption.64}%
+\contentsline {table}{\numberline {3.4}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces Урагш гүйлгэн баталгаажуулалтын хүрээнд ашигласан үндсэн огтлолын өгөгдлийн хуваалт}}{14}{table.caption.66}%
+\contentsline {table}{\numberline {3.5}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces Загвар бүрийн гол гиперпараметрүүд}}{17}{table.caption.77}%
+\contentsline {table}{\numberline {3.6}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces Түүхэн өгөгдөл дээрх системийн туршилтын (backtesting) гүйцэтгэлийн үндсэн тохиргоо}}{21}{table.caption.105}%
+\contentsline {table}{\numberline {3.7}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces Арилжааны зардлын хамралтын матриц}}{22}{table.caption.108}%
+\contentsline {table}{\numberline {3.8}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces Системийн үнэлгээний шалгуур үзүүлэлтүүд}}{23}{table.caption.114}%
+\contentsline {table}{\numberline {3.9}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces Серверийн хэсгийн үндсэн бүрэлдэхүүн}}{24}{table.caption.118}%
+\contentsline {table}{\numberline {3.10}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces Deployment топологийн хураангуй}}{25}{table.caption.120}%
+\contentsline {table}{\numberline {3.11}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces Серверийн хэсгийн функцийн бүлгүүд}}{25}{table.caption.122}%
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {4.1}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces Түүхэн өгөгдлийн хэмжээний хураангуй}}{11}{table.caption.58}%
-\contentsline {table}{\numberline {4.2}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces Шинж чанар (feature)ын жагсаалт (интервал бүрд)}}{12}{table.caption.60}%
-\contentsline {table}{\numberline {4.3}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces Leakage audit-ын цагийн нийцлийн дүрэм}}{13}{table.caption.65}%
-\contentsline {table}{\numberline {4.4}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces Урагш гүйлгэн баталгаажуулалтын хүрээнд ашигласан үндсэн огтлолын өгөгдлийн хуваалт}}{14}{table.caption.67}%
-\contentsline {table}{\numberline {4.5}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces Загвар бүрийн гол гиперпараметрүүд}}{17}{table.caption.78}%
-\contentsline {table}{\numberline {4.6}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces Түүхэн өгөгдөл дээрх системийн туршилтын (backtesting) гүйцэтгэлийн үндсэн тохиргоо}}{21}{table.caption.106}%
-\contentsline {table}{\numberline {4.7}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces Арилжааны зардлын хамралтын матриц}}{22}{table.caption.109}%
-\contentsline {table}{\numberline {4.8}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces Системийн үнэлгээний шалгуур үзүүлэлтүүд}}{23}{table.caption.115}%
-\contentsline {table}{\numberline {4.9}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces Серверийн хэсгийн үндсэн бүрэлдэхүүн}}{24}{table.caption.119}%
-\contentsline {table}{\numberline {4.10}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces Deployment топологийн хураангуй}}{25}{table.caption.121}%
-\contentsline {table}{\numberline {4.11}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces Серверийн хэсгийн функцийн бүлгүүд}}{25}{table.caption.123}%
-\contentsline {table}{\numberline {4.12}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces Мобайл аппликейшний технологийн стек}}{26}{table.caption.133}%
-\addvspace {10\p@ }
-\contentsline {table}{\numberline {5.1}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces Босго тус бүрийн нотолгооны индексжүүлсэн холболт}}{30}{table.caption.144}%
-\contentsline {table}{\numberline {5.2}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces 0.90--0.99 босгын мужийн харьцуулсан шинжилгээний баталгаажсан дүн}}{31}{table.caption.147}%
-\contentsline {table}{\numberline {5.3}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces Босго тус бүрийн дохио-арилжааны хөрвүүлэлт ба win rate (95\% CI)}}{32}{table.caption.149}%
-\contentsline {table}{\numberline {5.4}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces Босгын мужийн лог дээр суурилсан эрсдэл-өгөөжийн шинжилгээ}}{33}{table.caption.151}%
-\contentsline {table}{\numberline {5.5}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces Босгын мужийн балансын тархалтын хураангуй}}{33}{table.caption.152}%
-\contentsline {table}{\numberline {5.6}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces Арга зүйн эрсдэлийн нэгдсэн хүснэгт (энэ хувилбар)}}{38}{table.caption.172}%
-\contentsline {table}{\numberline {1}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces WFV-ийн үндсэн огтлолын өгөгдлийн хуваалт}}{46}{table.caption.208}%
-\contentsline {table}{\numberline {2}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces Босгын мужийн балансын тархалтын хураангуй}}{47}{table.caption.210}%
+\contentsline {table}{\numberline {4.1}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces Босго тус бүрийн нотолгооны индексжүүлсэн холболт}}{28}{table.caption.136}%
+\contentsline {table}{\numberline {4.2}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces 0.90--0.99 босгын мужийн харьцуулсан шинжилгээний баталгаажсан дүн}}{29}{table.caption.139}%
+\contentsline {table}{\numberline {4.3}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces EUR/USD buy-and-hold benchmark-ийн хураангуй}}{29}{table.caption.141}%
+\contentsline {table}{\numberline {4.4}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces Босго тус бүрийн дохио-арилжааны хөрвүүлэлт ба win rate (95\% CI)}}{30}{table.caption.143}%
+\contentsline {table}{\numberline {4.5}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces Босгын мужийн лог дээр суурилсан эрсдэл-өгөөжийн шинжилгээ}}{30}{table.caption.145}%
+\contentsline {table}{\numberline {4.6}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces Арга зүйн эрсдэлийн нэгдсэн хүснэгт (энэ хувилбар)}}{34}{table.caption.158}%

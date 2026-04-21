@@ -1,4 +1,4 @@
-﻿\chapter{Судалгааны арга зүй}
+﻿apter{Судалгааны арга зүй}
 \label{ch:methodology}
 
 Энэ бүлэгт судалгааны ажлын арга зүйг дэлгэрэнгүй тайлбарлана. Эхлээд судалгааны ерөнхий арга барилыг тодорхойлж, дараа нь системийн бүтэц, өгөгдлийн бэлтгэл, AI загварын архитектур, дохио үүсгэх механизм, MetaTrader 5 дээрх түүхэн өгөгдөл дээрх системийн туршилт (backtesting), серверийн болон мобайл аппликейшний хөгжүүлэлт, мөн үнэлгээний шалгуур үзүүлэлтүүдийг хамарна.
@@ -11,7 +11,7 @@
 Энэхүү судалгаа нь \textbf{дизайн шинжлэх ухаан} (design science research -- DSR) \cite{hevner2004} арга зүйд суурилсан. DSR нь бодит асуудлыг шийдвэрлэхэд чиглэсэн цоо шинэ артефакт (систем, загвар, бүтээгдэхүүн) бүтээж, түүний ашиг тусыг туршилтаар баталгаажуулдаг \cite{peffers2007}. Энэ судалгааны хувьд DSR-ийн дараахь гурван үндсэн зарчмыг баримтлав:
 
 \begin{enumerate}
-    \item \textbf{Артефакт бүтээх}: Санхүүгийн зах зээлийн таамаглалын үр дүн үүсгэж, мобайл аппликейшнаар дамжуулан хэрэглэгчид хүргэх цогц систем хөгжүүлэх
+    \item \textbf{Артефакт бүтээх}: Санхүүгийн зах зээлийн таамаглалын үр дүн үүсгэж, мобайл аппликейшнаар дамжуулан хэрэглэгчид хүргэх систем хөгжүүлэх
     \item \textbf{Асуудалд чиглэсэн}: Жижиг арилжаачдын мэдээлэл дутмаг, мэргэжлийн дүн шинжилгээний хүртээмж бага байдлыг шийдвэрлэх
     \item \textbf{Туршилтаар баталгаажуулах}: MetaTrader 5 Strategy Tester-ийн бодит зах зээлийн нөхцөлд (спрэд буюу spread, гулсалт буюу slippage) түүхэн өгөгдөл дээрх системийн туршилт (backtesting) хийж, системийн ашигт ажиллагааг шинжлэх ухааны аргаар үнэлэх
 \end{enumerate}
@@ -117,7 +117,7 @@
 
 Системийн ажиллах зарчим дараах байдалтай:
 \begin{enumerate}
-    \item \textbf{Машин сургалт (machine learning)-ын давхарга}: MetaTrader 5-аас татсан 10 жилийн түүхэн өгөгдлөөр 3 GBDT загварыг сургаж, зөөлөн санал хураалт (soft voting) ансамблиар нэгтгэн итгэлцлийн (confidence) утга тооцно. Тохируулга (calibration)-ийг сүлжээнээс гадуурх (offline) үнэлгээнд ашиглаж, бодит ажиллах орчин (production runtime) дээр ансамблийн шууд магадлалыг хэрэглэнэ
+    \item \textbf{Машин сургалт (machine learning)-ын давхарга}: MetaTrader 5-аас татсан 10 жилийн түүхэн өгөгдлөөр 3 GBDT загварыг сургаж, зөөлөн санал хураалт (soft voting) ансамблиар нэгтгэн итгэлцлийн (confidence) утга тооцно. Магадлалын тохируулгыг (calibration) сүлжээнээс гадуурх (offline) туршилтын ажиглалтаар шалгасан бөгөөд энэ тайлангийн ажиллах үеийн үнэлгээнд ансамблийн шууд магадлалыг ашиглана
     \item \textbf{Серверийн хэсэг (backend)}: Бодит цагийн мэдээллийг нэгтгэн боловсруулж, загварын дүгнэлт дээр суурилсан дохиог хадгалж, API-гаар хэрэглэгчдэд түгээнэ
     \item \textbf{Харагдах хэсэг (frontend)}: Серверийн хэсэг (backend)-тэй холбогдож ханш, дохио, мэдээг хэрэглэгчдэд ойлгомжтой байдлаар харуулна
 \end{enumerate}
@@ -249,7 +249,7 @@ H4 (4 цаг) & $\sim$15,500 & 2015--2024  \\ \hline
 4 & \texttt{ma\_5}      & Сүүлийн 5 candle-ийн хаалтын ханшийн хөдөлгөөний дундаж (SMA) --- богино хугацааны чиглэл \\ \hline
 5 & \texttt{ma\_20}     & Сүүлийн 20 candle-ийн SMA --- дунд хугацааны чиглэл \\ \hline
 6 & \texttt{ma\_50}     & Сүүлийн 50 candle-ийн SMA --- урт хугацааны чиглэл \\ \hline
-7 & \texttt{volatility} & Сүүлийн 20 candle-ийн хаалтын ханшийн стандарт хазайлт; зах зээлийн тайван эсвэл тавгүй байдлын үзүүлэлт \\ \hline
+7 & \texttt{volatility} & Сүүлийн 20 candle-ийн хаалтын ханшийн стандарт хазайлт; зах зээлийн тайван эсвэл хэлбэлзэлтэй байдлын үзүүлэлт \\ \hline
 8 & \texttt{returns}    & Өмнөх candle-тэй харьцуулсан ханшийн өөрчлөлтийн хувь (\texttt{pct\_change}) \\ \hline
 \end{tabularx}
 \end{table}
@@ -312,13 +312,15 @@ Label тооцоолол & $(t_0, t_0+240\text{m}]$ & -- & Ирээдүйн цо
 \centering
 \caption{Урагш гүйлгэн баталгаажуулалтын хүрээнд ашигласан үндсэн огтлолын өгөгдлийн хуваалт}
 \label{tab:data_split}
-\begin{tabular}{|l|l|r|l|}
+\small
+\setlength{\tabcolsep}{4pt}
+\begin{tabularx}{\textwidth}{|l|l|r|>{\raggedright\arraybackslash}X|}
 \hline
 \textbf{Бүлэг} & \textbf{Хугацаа} & \textbf{Candle-ын тоо} & \textbf{Зорилго} \\ \hline
 Сургалт & 2015--2022 & $\sim$2,972,000 & Загвар сургах (80\%) \\ \hline
-Баталгаажуулалт & 2023 & $\sim$371,000 & Early stopping, calibration (10\%) \\ \hline
+Баталгаажуулалт & 2023 & $\sim$371,000 & Early stopping, calibration туршилтын ажиглалт (10\%) \\ \hline
 Тест & 2024 & $\sim$371,000 & Эцсийн үнэлгээ (10\%) \\ \hline
-\end{tabular}
+\end{tabularx}
 \end{table}
 
 \fref{fig:wfv_timeline} нь энэхүү хуваалтыг цаг хугацааны тэнхлэг дээр дүрслэн харуулав. Сургалтын өгөгдөл (80\%) баталгаажуулалтын өгөгдөл (10\%) тестийн өгөгдөл (10\%)-өөс цаг хугацааны дарааллаар ялгагдана.
@@ -363,11 +365,11 @@ Label тооцоолол & $(t_0, t_0+240\text{m}]$ & -- & Ирээдүйн цо
 \fill[blue!55, rounded corners=2pt] (0.3, -1.0) rectangle (0.8, -0.7);
 \node[lbl, right] at (0.85, -0.85) {Сургалт: загвар сургах};
 \fill[orange!70, rounded corners=2pt] (5.0, -1.0) rectangle (5.5, -0.7);
-\node[lbl, right] at (5.55, -0.85) {Баталгаажуулалт: early stopping, calibration};
+\node[lbl, right] at (5.55, -0.85) {Баталгаажуулалт: early stopping, calibration туршилтын ажиглалт};
 \fill[red!55, rounded corners=2pt] (11.0, -1.0) rectangle (11.5, -0.7);
 \node[lbl, right] at (11.55, -0.85) {Тест: эцсийн үнэлгээ};
 
-%% Look-ahead bias сэргийлэх сум
+%% Ирээдүйн мэдээлэл ашиглах хэвийдэл сэргийлэх сум
 \draw[-{Stealth[length=2.5mm]}, thick, red!60, dashed]
     (13.3, 0.7) -- ++(1.0, 0) node[right, font=\scriptsize, text=red!60] {Ирээдүйн дата};
 
@@ -458,7 +460,7 @@ WFV-ийн олон огтлолтын ерөнхий алхамт логик н
 
 \subsection{Ансамбль загварын архитектур}
 
-Системийн загвар нь гурван GBDT (gradient boosted decision trees) загвараас бүрдэх soft-voting ансамбль юм. GBDT нь олон модны нэгтгэсэн загвар бөгөөд санхүүгийн хүснэгтэн өгөгдөлтэй сайн нийцдэг \cite{chen2016xgboost}. Загвар бүр ижил 48 шинж чанарыг хүлээн авч BUY, SELL, HOLD гурван ангиллын магадлалыг тус тус тооцоолно. Эдгээр магадлалыг дундажилж эцсийн итгэлцлийг үүсгэнэ. Logistic Regression-д суурилсан магадлалын тохируулгыг сургалтын үеийн баталгаажуулалтын шинжилгээнд туршсан боловч бодит ажиллах орчинд тогтмол утгад ойртох эрсдэл ажиглагдсан тул энэ хувилбарт ансамблийн шууд магадлалыг ашигласан. Энэ шийдэл нь түр зуурын инженерийн сонголт бөгөөд сургалтын орчин ба ажиллах орчны зөрүүний эрсдэлийг бүрэн шийдээгүй. \fref{fig:ensemble_arch} нь энэхүү бүтцийг харуулав.
+Системийн загвар нь гурван GBDT (gradient boosted decision trees) загвараас бүрдэх soft-voting ансамбль юм. GBDT нь олон модны нэгтгэсэн загвар бөгөөд санхүүгийн хүснэгтэн өгөгдөлтэй сайн нийцдэг \cite{chen2016xgboost}. Загвар бүр ижил 48 шинж чанарыг хүлээн авч BUY, SELL, HOLD гурван ангиллын магадлалыг тус тус тооцоолно. Эдгээр магадлалыг дундажилж эцсийн итгэлцлийг үүсгэнэ. Logistic Regression-д суурилсан магадлалын тохируулгыг сургалтын үеийн баталгаажуулалтын огтлол дээр туршилтын ажиглалтаар шалгахад зарим нөхцөлд магадлалын тархалт хэт төвлөрөх шинж ажиглагдсан. Иймээс энэ тайлангийн ажиллах үеийн дүнг тохируулга хэрэглээгүй ансамблийн шууд магадлалаар тайлагнав. Calibration-ийн үр дүнг production хэрэглээ гэж бус, туршилтын ажиглалт гэж тайлбарлав. \fref{fig:ensemble_arch} нь энэхүү бүтцийг харуулав.
 
 Ансамблийн жинг \(w=(\tfrac13,\tfrac13,\tfrac13)\) гэж тэгш авсан шалтгаан нь хоёр талтай. Нэгдүгээрт, LightGBM/XGBoost/CatBoost нь суралцах хандлагын хувьд ялгаатай тул нэг загварт жинг хэт төвлөрүүлэхээс сэргийлсэн. Хоёрдугаарт, нэг баталгаажуулалтын огтлолын дүн дээр жинг тусад нь оновчлох нь data-snooping эрсдэл нэмэгдүүлэх тул энэ хувилбарт тогтвортой, дахин хэрэгжүүлэхэд энгийн тэгш жингийн бодлогыг баримталсан.
 
@@ -878,7 +880,7 @@ Data-snooping эрсдэлийг бууруулахын тулд босго со
 
 \subsection{Үнэлгээний шалгуур үзүүлэлтүүд}
 
-Загварын болон системийн гүйцэтгэлийг үнэлэхэд дараах, энэ тайланд бодитоор нэгтгэн харуулсан шалгуур үзүүлэлтүүдийг ашигласан. \tref{tab:eval_metrics} нь тэдгээрийн тодорхойлолт болон үнэлгээний чиглэлийг нэгтгэн харуулав.
+Загварын болон системийн гүйцэтгэлийг дараах шалгуур үзүүлэлтүүдээр үнэлсэн. \tref{tab:eval_metrics} нь тэдгээрийн тодорхойлолт болон чиглэлийг харуулав.
 
 \begin{table}[H]
 \centering
@@ -1001,209 +1003,11 @@ Cloud орчин & PaaS байршуулалт & Орчны хувьсагч, pr
 %% ============================================================
 %% 3.8 Мобайл аппликейшний хөгжүүлэлт
 %% ============================================================
-\section{Мобайл аппликейшний хөгжүүлэлт}
+\section{Мобайл давхаргын архитектурын хураангуй}
 
-\subsection{Технологийн стек}
+Харагдах хэсэг (frontend)-ийн зорилго нь серверийн хэсгээс ирэх ханш, дохио, мэдээ, мэдэгдлийг нэгтгэн хэрэглэгчид тасралтгүй хүргэхэд оршино. Энэ судалгаанд мобайл давхаргыг гурван түвшний архитектураар тайлбарлав: (i) нэвтрэлт ба сессийн удирдлага, (ii) өгөгдөл харуулах үндсэн модуль (ханш/дохио/мэдээ), (iii) сервертэй синхрончлол ба алдааны сэргээн оролт.
 
-\begin{table}[H]
-\centering
-\caption{Мобайл аппликейшний технологийн стек}
-\label{tab:mobile_stack}
-\begin{tabular}{|l|l|>{\raggedright\arraybackslash}p{6cm}|}
-\hline
-\textbf{Технологи} & \textbf{Хувилбар} & \textbf{Үүрэг} \\ \hline
-React Native & 0.74.5 & Мобайл хөгжүүлэлтийн фреймворк \\ \hline
-TypeScript & 5.3.x & Төрлийн аюулгүй байдалтай код \\ \hline
-Expo & 51.0 & Хөгжүүлэлт, бэлтгэлийн хэрэгсэл \\ \hline
-React Navigation & 6.x & Дэлгэцийн навигаци (stack + Tab) \\ \hline
-React Query & 5.x & Серверийн өгөгдлийн менежмент, кэш \\ \hline
-Axios & 1.6+ & HTTP хүсэлт (auto-retry) \\ \hline
-AsyncStorage & -- & Дотоод хадгалалт (нэвтрэлтийн мэдээлэл, тохиргоо) \\ \hline
-Expo Notifications & -- & Push мэдэгдэл хүлээн авах \\ \hline
-\end{tabular}
-\end{table}
-
-\subsection{Аппликейшний навигацийн бүтцийн диаграмм}
-
-Аппликейшний хэрэглэгчийн урсгалыг \fref{fig:app_navigation} харуулав. Нэвтрэлтийн дараа Bottom Tab Navigator-ийн 4 таб нэвтрэх боломжтой болно.
-
-\begin{figure}[H]
-\centering
-\resizebox{0.92\textwidth}{!}{%
-\begin{tikzpicture}[
-    auth/.style  ={rectangle, draw=purple!55, fill=purple!6,
-                   rounded corners=5pt, line width=1pt,
-                   minimum width=3.6cm, minimum height=1.1cm,
-                   align=center, font=\small\bfseries},
-    main/.style  ={rectangle, draw=orange!70!black, fill=orange!10,
-                   rounded corners=5pt, line width=1.4pt,
-                   minimum width=4.2cm, minimum height=1.2cm,
-                   align=center, font=\small\bfseries},
-    tab/.style   ={rectangle, draw=teal!55, fill=teal!5,
-                   rounded corners=5pt, line width=1pt,
-                   minimum width=3cm, minimum height=1.25cm,
-                   align=center, font=\small\bfseries},
-    modal/.style ={rectangle, draw=blue!45, fill=blue!4,
-                   rounded corners=5pt, line width=1pt, dashed,
-                   minimum width=3.4cm, minimum height=1.1cm,
-                   align=center, font=\small\bfseries},
-    lbl/.style   ={font=\scriptsize, text=black, inner sep=1.5pt},
-    arr/.style   ={-{Stealth[length=2.5mm,width=1.8mm]}, line width=0.8pt,
-                   draw=gray!55!black},
-    arrok/.style ={-{Stealth[length=2.5mm,width=1.8mm]}, line width=1pt,
-                   draw=green!50!black},
-    arrdash/.style={-{Stealth[length=2.5mm,width=1.8mm]}, line width=0.8pt,
-                    draw=blue!40, dashed},
-]
-
-%% ─── 1-р мөр: Login ────────────────────────────────────────────
-\node[auth] (login) at (7, 0) {Нэвтрэх};
-
-%% ─── 2-р мөр: SignUp + Forgot (тэгш хэмд, Login-д ойр) ────────
-\node[auth] (signup) at (2, -2.4) {Бүртгүүлэх};
-\node[auth] (forgot) at (12,-3.4) {Нууц үг сэргээх};
-
-%% ─── 3-р мөр: Verify ──────────────────────────────────────────
-\node[auth] (verify) at (2, -5) {Имэйл баталгаажуулалт};
-
-%% ─── 4-р мөр: Bottom Tab Navigator ────────────────────────────
-\node[main] (maintab) at (7, -8) {Bottom Tab Navigator};
-
-%% ─── 5-р мөр: 4 таб ───────────────────────────────────────────
-\node[tab] (home)    at (1,  -12) {Ханш\\{\scriptsize\color{teal!65} MARKET}};
-\node[tab] (pred)    at (4.8,-12) {Дохио\\{\scriptsize\color{teal!65} SIGNAL}};
-\node[tab] (news)    at (8.8,-12) {Мэдээ\\{\scriptsize\color{teal!65} NEWS}};
-\node[tab] (profile) at (12.8,-12){Профайл\\{\scriptsize\color{teal!65} PROFILE}};
-
-%% ─── Modal (баруун гадна талд) ─────────────────────────────────
-\node[modal] (notif)  at (17.8,-8)   {Мэдэгдэлүүд};
-\node[modal] (signal) at (17.8,-12)  {Дохионы дэлгэрэнгүй};
-
-%% ═══════════════════════════════════════════════════════════════
-%% СУМНУУД
-%% ═══════════════════════════════════════════════════════════════
-
-%% --- Auth: Login → SignUp (зүүнрүү → доош, тэгш өнцөг) ---
-\draw[arr] (login.west) -| (signup.north)
-    node[lbl, pos=0.25, above=2pt] {Бүртгэл үгүй};
-
-%% --- Auth: Login → Forgot (баруунруу → доош, тэгш өнцөг) ---
-\draw[arr] (login.east) -| (forgot.north)
-    node[lbl, pos=0.25, above=2pt] {Нууц үг мартсан};
-
-%% --- Auth: SignUp → Verify ---
-\draw[arr] (signup.south) -- (verify.north)
-    node[lbl, midway, right=2pt] {Код авах};
-
-%% --- Амжилтын сумнууд (ногоон → MainTab.north) ---
-
-%% Login → MainTab (голоор шууд доош)
-\draw[arrok] (login.south) -- (maintab.north)
-    node[lbl, pos=0.55, right=4pt, text=green!50!black] {Нэвтрэлт амжилттай};
-
-%% Verify → MainTab (доош → баруунруу → дээрээс .north руу)
-\draw[arrok] (verify.south) -- ++(0,-1.2)
-    node[lbl, midway, left=2pt, text=green!50!black] {Баталгаа амжилттай}
-    -| ([xshift=-1.2cm]maintab.north);
-
-%% Forgot → MainTab (доош → зүүнрүү → дээрээс .north руу)
-\draw[arrok] (forgot.south) -- ++(0,-2.8)
-    node[lbl, midway, right=2pt, text=green!50!black] {Нууц үг шинэчлэгдсэн}
-    -| ([xshift=1.2cm]maintab.north);
-
-%% --- MainTab → 4 Tabs (bus шугам) ---
-\coordinate (busc) at (7, -10.2);
-\draw[line width=1pt, gray!40] (maintab.south) -- (busc);
-\draw[line width=1pt, gray!40] (1, -10.2) -- (12.8, -10.2);
-\foreach \t in {home, pred, news, profile}
-    \draw[arr] (\t |- busc) -- (\t.north);
-
-%% --- Modal руу (тасархай) ---
-
-%% MainTab → Notifications (хэвтээ шугам)
-\draw[arrdash] (maintab.east) -- (notif.west)
-    node[lbl, midway, above=2pt] {Хонхны дүрс};
-
-%% Prediction → Signal (доод талаар тойрч)
-\draw[arrdash] (pred.south) -- ++(0,-0.8) -| (signal.south)
-    node[lbl, pos=0.5, below=2pt] {Дохио сонгох};
-
-\end{tikzpicture}%
-}
-\caption{Мобайл аппликейшний хэрэглэгчийн навигацийн урсгал}
-\label{fig:app_navigation}
-\end{figure}
-
-\subsection{Хэрэглэгчийн нэвтрэлтийн дарааллын диаграмм}
-
-\fref{fig:auth_sequence} нь хэрэглэгч бүртгүүлэх болон нэвтрэх дарааллыг харуулав.
-
-\begin{figure}[H]
-\centering
-\resizebox{\textwidth}{!}{
-\begin{tikzpicture}[
-    font=\small,
-    lifeline/.style={dashed, gray},
-    msg/.style={-{Stealth[length=2.5mm]}, thick},
-    rmsg/.style={-{Stealth[length=2.5mm]}, thick, dashed},
-    actor/.style={rectangle, draw, fill=#1, minimum width=2cm, minimum height=0.6cm, align=center, font=\small\bfseries, rounded corners=3pt},
-    note/.style={rectangle, draw, fill=yellow!10, font=\scriptsize, align=left, rounded corners=2pt}
-]
-
-% Оролцогчид
-\node[actor=gray!20] (user) at (0,0) {Хэрэглэгч};
-\node[actor=purple!15] (app) at (4.5,0) {Мобайл апп};
-\node[actor=orange!15] (backend) at (9.5,0) {Серверийн хэсэг};
-\node[actor=blue!15] (db) at (14,0) {Өгөгдлийн сан};
-
-% Амьдралын шугамууд
-\draw[lifeline] (0,-0.3) -- (0,-14);
-\draw[lifeline] (4.5,-0.3) -- (4.5,-14);
-\draw[lifeline] (9.5,-0.3) -- (9.5,-14);
-\draw[lifeline] (14,-0.3) -- (14,-14);
-
-% === БҮРТГЭЛ ХЭСЭГ ===
-\node[note, fill=blue!5] at (7,-1.3) {\textbf{Бүртгүүлэх үйлдэл}};
-
-\draw[msg] (0,-1.5) -- node[above, font=\scriptsize] {Нэр, имэйл, нууц үг оруулах} (4.5,-1.5);
-\draw[msg] (4.5,-2.2) -- node[above, font=\scriptsize] {Бүртгэлийн хүсэлт} (9.5,-2.2);
-\draw[msg] (9.5,-2.9) -- node[above, font=\scriptsize] {Баталгаажуулах мэдээлэл хадгалах} (14,-2.9);
-\draw[rmsg] (14,-3.4) -- node[above, font=\scriptsize] {OK} (9.5,-3.4);
-
-\node[note] at (12,-4) {Имэйлээр 6 оронтой\\код илгээх (SMTP)};
-
-\draw[rmsg] (9.5,-4.6) -- node[above, font=\scriptsize] {Код илгээсэн} (4.5,-4.6);
-\draw[rmsg] (4.5,-5.1) -- node[above, font=\scriptsize] {Код оруулна уу} (0,-5.1);
-
-\draw[msg] (0,-5.8) -- node[above, font=\scriptsize] {6 оронтой код оруулах} (4.5,-5.8);
-\draw[msg] (4.5,-6.4) -- node[above, font=\scriptsize] {Баталгаажуулах хүсэлт} (9.5,-6.4);
-\draw[msg] (9.5,-7) -- node[above, font=\scriptsize] {Хэрэглэгч үүсгэх, түр мэдээлэл цэвэрлэх} (14,-7);
-\draw[rmsg] (14,-7.5) -- node[above, font=\scriptsize] {OK} (9.5,-7.5);
-\draw[rmsg] (9.5,-8) -- node[above, font=\scriptsize] {Нэвтрэлтийн токен буцаах} (4.5,-8);
-\draw[rmsg] (4.5,-8.5) -- node[above, font=\scriptsize] {Нэвтрэлт амжилттай} (0,-8.5);
-
-% === НЭВТРЭХ ХЭСЭГ ===
-\node[note, fill=blue!5] at (7,-9.7) {\textbf{Нэвтрэх үйлдэл}};
-
-\draw[msg] (0,-9.9) -- node[above, font=\scriptsize] {Имэйл, нууц үг} (4.5,-9.9);
-\draw[msg] (4.5,-10.5) -- node[above, font=\scriptsize] {Нэвтрэх хүсэлт} (9.5,-10.5);
-\draw[msg] (9.5,-11.1) -- node[above, font=\scriptsize] {Хэрэглэгчийн мэдээлэл шалгах} (14,-11.1);
-\draw[rmsg] (14,-11.6) -- node[above, font=\scriptsize] {Хэрэглэгч олдсон} (9.5,-11.6);
-
-\node[note] at (12,-12.2) {Нэвтрэлтийн токен үүсгэх\\(богино хугацаат бодлого)};
-
-\draw[rmsg] (9.5,-12.8) -- node[above, font=\scriptsize] {Нэвтрэлтийн токен} (4.5,-12.8);
-\draw[rmsg] (4.5,-13.3) -- node[above, font=\scriptsize] {Нүүр дэлгэц рүү шилжих} (0,-13.3);
-
-\end{tikzpicture}
-}
-\caption{Хэрэглэгчийн бүртгэл ба нэвтрэлтийн дарааллын диаграмм (sequence diagram)}
-\label{fig:auth_sequence}
-\end{figure}
-
-\subsection{Бодит цагийн өгөгдлийн менежмент}
-
-Аппликейшн нь серверийн өгөгдлийг бодит цагийн горимоор удирдаж, тодорхой давтамжаар автоматаар шинэчилдэг. Мөн алдаа гарсан үед сэргээн оролдох бодлого болон сессийн хамгаалалтын механизмыг ашигласнаар хэрэглэгчийн урсгал тасалдах эрсдэлийг бууруулсан.
+Ийм зохион байгуулалт нь мобайл хэсгийг технологийн хувилбарын жагсаалтаас илүү системийн интеграцийн үр нөлөөгөөр үнэлэх боломж олгов. Технологийн нарийвчилсан тохиргоо, дэлгэцийн микро-урсгал, диаграммын дэлгэрэнгүйг хавсралтад авч үзнэ.
 
 %% ============================================================
 %% 3.9 Хөгжүүлэлтийн үе шатууд
