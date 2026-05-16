@@ -49,18 +49,6 @@ Zihao Zhang, Stefan Zohren, and Stephen Roberts.
   literature review.
 \newblock {\em Applied Soft Computing}, 97, 2019.
 
-\bibitem{nie2023patchtst}
-Yuqi Nie, Nam Nguyen, Phanwadee Sinthong, and Jayant Kalagnanam.
-\newblock A time series is worth 64 words: Long-term forecasting with
-  transformers.
-\newblock {\em International Conference on Learning Representations}, 2023.
-
-\bibitem{wu2023timesnet}
-Haixu Wu, Jiehui Xu, Jianmin Wang, and Mingsheng Long.
-\newblock Timesnet: Temporal 2d-variation modeling for general time series
-  analysis.
-\newblock {\em International Conference on Learning Representations}, 2023.
-
 \bibitem{krauss2017deep}
 Christopher Krauss, Xuan~Anh Do, and Nicolas Huck.
 \newblock Deep neural networks, gradient-boosted trees, random forests:

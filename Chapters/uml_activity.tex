@@ -1,0 +1,174 @@
+\begin{figure}[H]
+\centering
+\adjustbox{max width=\textwidth}{%
+\begin{tikzpicture}[
+    act/.style={
+        rectangle, rounded corners=5pt,
+        draw=black!75, fill=white,
+        line width=0.8pt,
+        minimum width=3.6cm, minimum height=0.7cm,
+        align=center, font=\scriptsize
+    },
+    dec/.style={
+        diamond, draw=black!75, fill=white,
+        line width=0.8pt,
+        minimum width=2.0cm, minimum height=1.0cm,
+        aspect=2.5,
+        align=center, font=\scriptsize
+    },
+    A/.style={-{Stealth[length=2.8mm,width=2mm]}, line width=0.85pt},
+    lbl/.style={font=\tiny, fill=white, inner sep=1pt},
+]
+
+%% ── Swimlane column widths and positions ───────────────────────────
+%% Lane centers:  L1=-7.0  L2=-2.3  L3=2.3  L4=7.0
+%% Lane boundaries: -9.2 | -4.8 | 0.2 | 4.8 | 9.2
+
+\def\laneTop{16.5}
+\def\laneBot{-2.0}
+\def\headerH{0.7}
+
+%% Vertical lane separators
+\draw[gray!40, line width=0.6pt] (-9.2, \laneBot) -- (-9.2, \laneTop+\headerH);
+\draw[gray!40, line width=0.6pt] (-4.8, \laneBot) -- (-4.8, \laneTop+\headerH);
+\draw[gray!40, line width=0.6pt]  (0.2, \laneBot) --  (0.2, \laneTop+\headerH);
+\draw[gray!40, line width=0.6pt]  (4.8, \laneBot) --  (4.8, \laneTop+\headerH);
+\draw[gray!40, line width=0.6pt]  (9.2, \laneBot) --  (9.2, \laneTop+\headerH);
+
+%% Top border
+\draw[gray!60, line width=0.9pt]
+    (-9.2, \laneTop+\headerH) -- (9.2, \laneTop+\headerH);
+%% Bottom border
+\draw[gray!60, line width=0.9pt]
+    (-9.2, \laneBot) -- (9.2, \laneBot);
+%% Outer left/right
+\draw[gray!60, line width=0.9pt]
+    (-9.2, \laneBot) -- (-9.2, \laneTop+\headerH);
+\draw[gray!60, line width=0.9pt]
+    (9.2, \laneBot) -- (9.2, \laneTop+\headerH);
+
+%% Header separator
+\draw[gray!50, line width=0.6pt]
+    (-9.2, \laneTop) -- (9.2, \laneTop);
+\fill[gray!12] (-9.2, \laneTop) rectangle (9.2, \laneTop+\headerH);
+
+%% Lane header labels
+\node[font=\small\bfseries, align=center] at (-7.0, \laneTop+0.35)
+    {Гадаад Эх Сурвалж};
+\node[font=\small\bfseries, align=center] at (-2.3, \laneTop+0.35)
+    {Серверийн Хэсэг};
+\node[font=\small\bfseries, align=center] at  (2.3, \laneTop+0.35)
+    {Хадгалалт (MongoDB)};
+\node[font=\small\bfseries, align=center] at  (7.0, \laneTop+0.35)
+    {Мобайл Апп};
+
+%%
+%% ── Flow A: Signal generation ──────────────────────────────────────
+%%
+
+%% Start node
+\fill[black] (-7.0, 15.8) circle (0.22cm);
+
+%% MT5/YF: OHLCV татах
+\node[act, fill=blue!8] (fetch) at (-7.0, 15.0)
+    {MT5/YF:\\OHLCV өгөгдөл татах};
+\draw[A] (-7.0, 15.58) -- (fetch.north);
+
+%% → Backend: 48 шинж чанар
+\node[act, fill=orange!10] (feat48) at (-2.3, 15.0)
+    {48 шинж чанар\\тооцоолох};
+\draw[A] (fetch.east) -- node[lbl, above]{OHLCV} (feat48.west);
+
+%% → GBDT predict
+\node[act, fill=orange!10] (gbdtpred) at (-2.3, 13.7)
+    {GBDT ансамбль\\таамаглал};
+\draw[A] (feat48.south) -- (gbdtpred.north);
+
+%% Decision: Итгэлцэл ≥ 0.90?
+\node[dec, fill=yellow!15] (conf) at (-2.3, 12.3)
+    {Итгэлцэл\\≥ 0.90?};
+\draw[A] (gbdtpred.south) -- (conf.north);
+
+%% [No] → end branch (skip, just label)
+\draw[A] (conf.west) -- node[lbl, above]{[Үгүй]} ++(-1.6, 0)
+    node[act, fill=gray!12, minimum width=1.6cm, anchor=east]
+    (skip) {Алгасах\\(HOLD)};
+
+%% [Yes] → MongoDB-д дохио хадгалах
+\node[act, fill=green!10, draw=green!60!black] (savesig) at (2.3, 12.3)
+    {MongoDB-д\\дохио хадгалах};
+\draw[A] (conf.east) -- node[lbl, above]{[Тийм]} (savesig.west);
+
+%% FCM Push
+\node[act, fill=red!8, draw=red!55] (fcmpush) at (2.3, 11.0)
+    {FCM Push\\мэдэгдэл};
+\draw[A] (savesig.south) -- (fcmpush.north);
+
+%% Mobile: Push харуулах
+\node[act, fill=purple!10, draw=purple!60] (pushshow) at (7.0, 11.0)
+    {Push харуулах};
+\draw[A] (fcmpush.east) -- (pushshow.west);
+
+%% Mobile: Дохионы дэлгэц харах
+\node[act, fill=purple!10, draw=purple!60] (predscr) at (7.0, 9.7)
+    {Дохионы дэлгэц\\харах};
+\draw[A] (pushshow.south) -- (predscr.north);
+
+%%
+%% ── Flow B: News / LLM ─────────────────────────────────────────────
+%%
+
+%% AlphaVantage/TradingView: мэдээ татах
+\node[act, fill=blue!8] (newsrc) at (-7.0, 9.0)
+    {AlphaVantage/TV:\\мэдээ татах};
+
+%% Gemini API шинжилгээ
+\node[act, fill=yellow!12, draw=yellow!60!black] (gemana) at (-2.3, 9.0)
+    {Gemini API\\шинжилгээ};
+\draw[A] (newsrc.east) -- node[lbl, above]{мэдээ} (gemana.west);
+
+%% MongoDB-д LLM гаралт хадгалах
+\node[act, fill=green!10, draw=green!60!black] (savellm) at (2.3, 9.0)
+    {MongoDB-д LLM\\гаралт хадгалах};
+\draw[A] (gemana.east) -- (savellm.west);
+
+%%
+%% ── Flow C: REST request ───────────────────────────────────────────
+%%
+
+%% Mobile: REST хүсэлт
+\node[act, fill=purple!10, draw=purple!60] (restreq) at (7.0, 7.6)
+    {REST хүсэлт};
+
+%% Backend: MongoDB-оос дохио буцаах
+\node[act, fill=orange!10] (querydb) at (-2.3, 7.6)
+    {MongoDB-оос\\дохио буцаах};
+\draw[A] (restreq.west) -- node[lbl, above]{GET /signals} (querydb.east);
+
+%% MongoDB query
+\node[act, fill=green!10, draw=green!60!black] (dbquery) at (2.3, 7.6)
+    {Дохионы хүсэлт};
+\draw[A] (querydb.east) -- (dbquery.west);
+\draw[A] (dbquery.west) -- (querydb.east);
+
+%% Mobile: дэлгэцэнд харуулах
+\node[act, fill=purple!10, draw=purple!60] (display) at (7.0, 6.3)
+    {Дэлгэцэнд\\харуулах};
+\draw[A] (querydb.east) to[bend left=15]
+    node[lbl, above]{JSON} (display.west);
+\draw[A] (restreq.south) -- (display.north);
+
+%%
+%% ── End node ───────────────────────────────────────────────────────
+%%
+
+%% Double circle end node
+\fill[black] (7.0, 5.2) circle (0.22cm);
+\draw[black, line width=1.0pt] (7.0, 5.2) circle (0.32cm);
+\draw[A] (display.south) -- (7.0, 5.54);
+
+\end{tikzpicture}%
+}
+\caption{Өгөгдлийн урсгалын UML Activity Diagram: swimlane-аар дата боловсруулалтын алхмууд}
+\label{fig:data_flow_unified}
+\end{figure}

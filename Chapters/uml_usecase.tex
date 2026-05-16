@@ -1,0 +1,79 @@
+\begin{figure}[H]
+\centering
+\adjustbox{max width=\textwidth}{%
+\begin{tikzpicture}[
+    uc/.style={
+        ellipse, draw=black!70, fill=white,
+        line width=0.85pt,
+        minimum width=4.2cm, minimum height=0.9cm,
+        align=center, font=\small
+    },
+    ASS/.style={{Circle[length=2pt,fill]}-{Stealth[length=3mm,width=2mm]},
+                line width=0.8pt},
+    INC/.style={-{Stealth[length=2.8mm,width=2mm,open]},
+                dashed, line width=0.75pt},
+    lbl/.style={font=\small, fill=white, inner sep=1.5pt},
+]
+
+%% ── Stick figure macro (actor) ──────────────────────────────────────
+%% Actor 1: Трейдер at (-8.5, 0)
+\def\ax{-8.5}
+\def\ay{1.5}
+%% head
+\draw[black, line width=0.9pt] (\ax, \ay+1.1) circle (0.35cm);
+%% body
+\draw[black, line width=0.9pt] (\ax, \ay+0.75) -- (\ax, \ay-0.15);
+%% arms
+\draw[black, line width=0.9pt] (\ax-0.5, \ay+0.35) -- (\ax+0.5, \ay+0.35);
+%% legs
+\draw[black, line width=0.9pt] (\ax, \ay-0.15) -- (\ax-0.45, \ay-0.8);
+\draw[black, line width=0.9pt] (\ax, \ay-0.15) -- (\ax+0.45, \ay-0.8);
+\node[font=\small\bfseries, align=center] at (\ax, \ay-1.15) {«actor»\\Трейдер};
+
+%% Actor 2: ML Систем at (8.5, -1.0)
+\def\bx{8.5}
+\def\by{-0.5}
+\draw[black, line width=0.9pt] (\bx, \by+1.1) circle (0.35cm);
+\draw[black, line width=0.9pt] (\bx, \by+0.75) -- (\bx, \by-0.15);
+\draw[black, line width=0.9pt] (\bx-0.5, \by+0.35) -- (\bx+0.5, \by+0.35);
+\draw[black, line width=0.9pt] (\bx, \by-0.15) -- (\bx-0.45, \by-0.8);
+\draw[black, line width=0.9pt] (\bx, \by-0.15) -- (\bx+0.45, \by-0.8);
+\node[font=\small\bfseries, align=center] at (\bx, \by-1.15) {«actor»\\ML Систем};
+
+%% ── System boundary ──────────────────────────────────────────────────
+\draw[black, line width=1.2pt]
+    (-6.5, -5.8) rectangle (6.5, 4.5);
+\node[font=\small\bfseries, anchor=north west] at (-6.5, 4.5)
+    {«system»  Форекс Дохионы Систем};
+
+%% ── Use cases (Трейдерийн) ───────────────────────────────────────────
+\node[uc] (uc1) at (0,  3.5) {Нэвтрэх / бүртгүүлэх};
+\node[uc] (uc2) at (0,  2.2) {Дохионы жагсаалт харах};
+\node[uc] (uc3) at (0,  0.9) {Push мэдэгдэл хүлээн авах};
+\node[uc] (uc4) at (0, -0.4) {Ханш / графикийн мэдээлэл харах};
+\node[uc] (uc5) at (0, -1.7) {Зах зээлийн LLM дүн\\шинжилгээ унших};
+\node[uc] (uc6) at (0, -3.0) {Профайл / тохиргоо удирдах};
+
+%% Use case for ML System
+\node[uc, minimum width=4.0cm] (uc7) at (0, -4.5)
+    {Дохио автоматаар үүсгэх};
+
+%% ── Associations: Трейдер ──────────────────────────────────────────
+\draw[line width=0.8pt] (\ax+0.5, 1.5) -- (uc1.west);
+\draw[line width=0.8pt] (\ax+0.5, 1.5) -- (uc2.west);
+\draw[line width=0.8pt] (\ax+0.5, 1.5) -- (uc3.west);
+\draw[line width=0.8pt] (\ax+0.5, 1.5) -- (uc4.west);
+\draw[line width=0.8pt] (\ax+0.5, 1.5) -- (uc5.west);
+\draw[line width=0.8pt] (\ax+0.5, 1.5) -- (uc6.west);
+
+%% ── Associations: ML Систем ────────────────────────────────────────
+\draw[line width=0.8pt] (\bx-0.5, -0.5) -- (uc7.east);
+
+%% ── «include» dependency ───────────────────────────────────────────
+\draw[INC] (uc2.south) -- node[lbl, right=2pt]{«include»} (uc3.north);
+
+\end{tikzpicture}%
+}
+\caption{Системийн UML Use Case Diagram: Трейдерийн ашиглах тохиолдлуудын хавтгай}
+\label{fig:use_case}
+\end{figure}

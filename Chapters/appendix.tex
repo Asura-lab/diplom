@@ -2,132 +2,263 @@
 
 \chapter*{Хавсралт}
 
-\section*{A. Загварын код (Python)}
+%% ============================================================
+%% Хавсралт А: Гиперпараметрийн дэлгэрэнгүй
+%% ============================================================
+\section*{Хавсралт А: Гиперпараметрийн дэлгэрэнгүй}
+\label{app:hyperparameters}
 
-\subsection*{A.1 Техник индикатор тооцоолох функц}
+\subsection*{Гиперпараметрийн бодит утгуудын хүснэгт}
 
-\begin{lstlisting}[language=Python, caption={Олон хугацааны хүрээний техник индикатор тооцоолол}, label={lst:features}]
-def compute_features(df, suffix):
-    close = df["close"]
-    feats = pd.DataFrame(index=df.index)
-    feats[f"close_{suffix}"] = close
-    feats[f"rsi_{suffix}"] = rsi(close, 14)
-    feats[f"atr_{suffix}"] = atr(df, 14)
-    feats[f"ma_5_{suffix}"] = close.rolling(5).mean()
-    feats[f"ma_20_{suffix}"] = close.rolling(20).mean()
-    feats[f"ma_50_{suffix}"] = close.rolling(50).mean()
-    feats[f"volatility_{suffix}"] = close.rolling(20).std()
-    feats[f"returns_{suffix}"] = close.pct_change()
-    return feats
-\end{lstlisting}
+Доор гурван загварын эцэст сонгогдсон гиперпараметрийн бодит утгуудыг нэгтгэн харуулав. Параметр сонголтын аргачлал, тогтвортой байдлын протокол, early stopping болон тогтмолжуулалтын нарийвчилсан тайлбарыг Аргазүйн бүлгийн §3.4-т үзнэ үү.
 
-\subsection*{A.2 Ансамбль загварын сургалт}
-
-\begin{lstlisting}[language=Python, caption={Урагш гүйлгэн баталгаажуулалт (walk-forward validation)-ын сургалт}, label={lst:training}]
-# walk-forward validation: 2015-2022 train, 2023 val, 2024 test
-train_end = "2023-01-01"
-val_end = "2024-01-01"
-train_df = df[df["time"] < train_end]
-val_df = df[(df["time"] >= train_end) & (df["time"] < val_end)]
-test_df = df[(df["time"] >= val_end) & (df["time"] < TEST_START_DATE)]
-
-# Train GBDT models
-for seed in [42]:
-    models = fit_models(X_fit, y_fit, seed, pos_weight, X_val, y_val)
-
-# Calibration with Logistic Regression
-cal = LogisticRegression(max_iter=1000)
-cal.fit(predict_proba(models_flat, X_cal).reshape(-1, 1), y_cal)
-\end{lstlisting}
-
-\subsection*{A.3 Дохио шүүлтүүрлэх}
-
-\begin{lstlisting}[language=Python, caption={Дохионы шүүлтүүрийн ерөнхий зарчим (нууцлагдсан тохиргоо)}, label={lst:signal_filter}]
-# Operational утгууд private profile-д хадгалагдана
-CONF_THRESHOLD = QUALITY_PROFILE["confidence_threshold"]
-MIN_ATR_PIPS = QUALITY_PROFILE["atr_floor_pips"]
-SL_MULT = RISK_PROFILE["sl_multiplier"]
-TP_MULT = RISK_PROFILE["tp_multiplier"]
-MIN_SL_PIPS = RISK_PROFILE["min_sl_floor_pips"]
-MIN_TP_PIPS = RISK_PROFILE["min_tp_floor_pips"]
-\end{lstlisting}
-
-\section*{B. Серверийн хэсгийн псевдокод}
-
-\subsection*{B.1 Дохио үүсгэх ерөнхий урсгал}
-
-\begin{lstlisting}[language=Python, caption={Бодит цагийн дохио үүсгэх псевдокод}, label={lst:api_signal}]
-def generate_realtime_signal(market_stream):
-    recent_data = load_recent_data(market_stream)
-    features = build_features(recent_data)
-    prediction = ensemble_predict(features)
-
-    if not passes_quality_filters(prediction):
-        return {"status": "no-action"}
-
-    risk_plan = compute_risk_parameters(prediction)
-    return format_signal_output(prediction, risk_plan)
-\end{lstlisting}
-
-\section*{C. Эрсдэлд суурилсан байрлалын тооцоолол}
-
-\subsection*{C.1 Байрлалын хэмжээг тооцох логик}
-
-\begin{lstlisting}[language=Python, caption={Эрсдэлийн хязгаарт суурилсан байрлалын хэмжээ (псевдокод)}, label={lst:mql5_risk}]
-def position_size(balance, risk_pct, stop_loss_pips, pip_value):
-    if stop_loss_pips <= 0:
-        return minimum_position()
-
-    risk_amount = balance * risk_pct
-    raw_size = risk_amount / (stop_loss_pips * pip_value)
-    return clamp_to_symbol_limits(raw_size)
-\end{lstlisting}
-
-\section*{D. Мобайл аппликейшн код}
-
-\subsection*{D.1 React Native -- Ханшийн дэлгэц}
-
-Энэ жишээнд endpoint, authentication болон орчны хувьсагчийн нэршлийг нууцлалын бодлогоор ерөнхийшүүлсэн.
-
-\begin{lstlisting}[language=Java, caption={React Native -- Бодит цагийн ханш}, label={lst:mobile_rates}]
-const { data: liveRates, isLoading, refetch } = useQuery({
-    queryKey: ["liveRatesPublic"],
-    queryFn: async () => {
-        const result = await getLiveRates();
-        if (result.success) {
-            const ratesMap = {};
-            const rates = result.data.rates || {};
-            Object.keys(rates).forEach((key) => {
-                const pairName = key.replace("_", "/");
-                ratesMap[pairName] = rates[key];
-            });
-            return ratesMap;
-        }
-        return {};
-    },
-    refetchInterval: REFRESH_INTERVAL_MS,
-});
-\end{lstlisting}
-
-\section*{E. 2025 оны дохионы жишээ}
-
-Дохионы CSV файлын формат болон зарим жишээ:
+\subsection*{Гиперпараметрийн дэлгэрэнгүй үзүүлэлтүүд}
 
 \begin{table}[H]
 \centering
-\caption{2025 оны дохионы жишээ}
-\label{tab:signals_sample}
+\caption{Гурван суурь загварын сонгогдсон гиперпараметрүүд}
+\label{tab:hyperparameter_details}
 \small
-\begin{tabular}{|l|l|l|c|c|c|c|}
+\setlength{\tabcolsep}{3pt}
+\renewcommand{\arraystretch}{1.25}
+\begin{adjustbox}{max width=\textwidth}
+\begin{tabular}{|l|l|l|l|}
 \hline
-\textbf{Цаг} & \textbf{Sym} & \textbf{Чиглэл} & \textbf{Итгэлцэл (confidence)} & \textbf{SL} & \textbf{TP} \\ \hline
-2025-01-14 13:30 & EURUSD & BUY & 0.930 & 21 & 64 \\ \hline
-2025-01-14 13:32 & EURUSD & BUY & 0.934 & 28 & 85 \\ \hline
-2025-01-23 14:00 & EURUSD & BUY & 0.921 & 25 & 75 \\ \hline
-2025-02-03 16:00 & EURUSD & SELL & 0.920 & 33 & 100 \\ \hline
-2025-03-07 15:30 & EURUSD & BUY & 0.912 & 20 & 60 \\ \hline
-2025-05-14 13:00 & EURUSD & BUY & 0.945 & 30 & 90 \\ \hline
+\textbf{Параметр} & \textbf{LightGBM} & \textbf{XGBoost} & \textbf{CatBoost} \\ \hline
+max\_depth & 5 & 5 & 6 \\ \hline
+num\_leaves & 32 & --- & --- \\ \hline
+learning\_rate & 0.03 & 0.03 & 0.03 \\ \hline
+n\_estimators & 200 & 200 & 200 \\ \hline
+subsample & 0.8 & 0.8 & 0.8 \\ \hline
+colsample\_bytree & 0.8 & 0.7 & 0.8 \\ \hline
+reg\_alpha (L1) & 0.01 & 0.01 & 0.01 \\ \hline
+reg\_lambda (L2) & 0.1 & 0.1 & 0.1 \\ \hline
+early\_stopping\_rounds & 50 & 50 & 50 \\ \hline
+min\_data\_in\_leaf & 20 & --- & --- \\ \hline
+min\_child\_weight & --- & 1 & 1 \\ \hline
+\end{tabular}
+\end{adjustbox}
+\end{table}
+
+\noindent\textit{Тайлбар:} Бүх гурван загварт модны гүнийг 5--6-р хязгаарлаж, learning rate-ийг 0.03 байлгасан. Early stopping patience нь 50 давталт байв. L1/L2 тогтмолжуулалт нь загварын ерөнхийлөн суралцах чадварыг нэмэгдүүлэхэд ашиглагдав.
+
+\subsection*{Хэт нийцлээс сэргийлэх арга хэмжээ ба шинж чанарын сонголт}
+
+Хэт нийцлээс сэргийлэх зургаан арга хэмжээ (модны гүн хязгаарлалт, learning rate=0.03, early stopping patience=50, L1/L2 тогтмолжуулалт, урагш гүйлгэн баталгаажуулалт, шинж чанарын хялбарчлал) болон 75 шинж чанараас 48-д шилжсэн шалтгааны дэлгэрэнгүй тайлбарыг Аргазүйн бүлгийн §3.4-ийн ``Гиперпараметр сонголтын протокол'' ба ``Шинж чанарын инженерчлэл'' дэд хэсгүүдэд үзнэ үү. Эцэст сонгогдсон 8 шинж чанар (close, RSI-14, ATR-14, MA-5, MA-20, MA-50, volatility-20, returns) нь хэлбэлзэл, импульс, чиг хандлагын гурван өнцгийг хамарна.
+
+%% ============================================================
+%% Хавсралт Б: Leakage audit-ын дэлгэрэнгүй дүрэм
+%% ============================================================
+\section*{Хавсралт Б: Leakage audit-ын дэлгэрэнгүй дүрэм}
+\label{app:leakage_audit}
+
+\subsection*{Цагийн нийцлийн дүрэм}
+
+Мэдээллийн нэвчилтээс (leakage) сэргийлэх цагийн нийцлийн үндсэн томьёо (томьёо~3.2) болон ерөнхий тайлбарыг Аргазүйн бүлгийн §3.3-т (``Шошго ба шинж чанарын цагийн нийцлийн аудит'' дэд хэсэг) үзнэ үү. Доор компонент бүрийн нарийвчилсан аудитын дүрмийн хүснэгтийг харуулав.
+
+\subsection*{Leakage audit дүрмүүдийн дэлгэрэнгүй тайлан}
+
+\begin{table}[H]
+\centering
+\caption{Leakage audit-ын цагийн нийцлийн дүрмүүд}
+\label{tab:leakage_audit_rules}
+\small
+\setlength{\tabcolsep}{4pt}
+\renewcommand{\arraystretch}{1.28}
+\begin{adjustbox}{max width=\textwidth}
+\begin{tabular}{|l|l|l|l|}
+\hline
+\textbf{Компонент} & \textbf{Үйлдэл} & \textbf{Цагийн нөхцөл} & \textbf{Leakage эрсдэл} \\ \hline
+OHLCV өгөгдөл & $t_0$-д хаалтын ханш ба үзүүлэлтүүдийг ашиглах & $t_{\text{candle}} < t_0$ & Бага (хаалтны мэдээлэл хэмжээст мэдэгдэх) \\ \hline
+MA (движущ. дундаж) & $t_0$-г оруулаад өмнөх 50 шоосны дундаж & $t_{\text{MA window}} < t_0$ & Бага (историко мэдээлэл)\\ \hline
+RSI, ATR & $t_0$-г оруулаад өмнөх өгөгдлөөс тооцох & $t_{\text{period}} \leq t_0$ & Бага \\ \hline
+240 минутын label & $t_0$ -ээс дараах 240 минутын хамгийн дээд/доод & $t_{\text{label}} > t_0$ & \textbf{ӨНДӨР} (future data) \\ \hline
+Олон интервалын синхрончлол & merge\_asof(direction=backward) & $t_{\text{small}} \leq t_{\text{large}}$ & Дунд (boundary алдаа) \\ \hline
+\end{tabular}
+\end{adjustbox}
+\end{table}
+
+\noindent\textit{Тайлбар:} \texttt{merge\_asof(backward)} болон хугацааны тусгаарлалтын дүрэм нь leakage эрсдэлийг бууруулдаг ч олон интервалын синхрончлолын үлдэгдэл эрсдэлийг бүрэн үгүйсгэхгүй. Иймээс үр дүнг тайлбарлахдаа энэ эрсдэлийг хязгаарлалтын хүрээнд хамтад нь авч үзсэн.
+
+%% ============================================================
+%% Хавсралт В: WFV олон огтлолын схем
+%% ============================================================
+\section*{Хавсралт В: Урагш гүйлгэн баталгаажуулалтын олон огтлолын схем}
+\label{app:wfv_multifold}
+
+\subsection*{WFV олон огтлолт (expanding window) протокол}
+
+Урагш гүйлгэн баталгаажуулалтыг цаг хугацааны дараалал хадгалсан \textbf{олон огтлолт, өргөтгөх сургалтын цонх} (expanding window) протоколоор хэрэгжүүлсэн. Өөрөөр хэлбэл Fold 1--Fold 5 огтлол бүрт сургалт\(\to\)баталгаажуулалт\(\to\)тестийн алхмыг урагшлуулан давтаж, ирээдүйн мэдээлэл сургалтад нэвтрэх эрсдэлийг хязгаарласан.
+
+\noindent\textbf{Олон огтлолтын ерөнхий алхамт логик:}
+\begin{enumerate}
+    \item Эхний хугацааны огтлолд өмнөх жилүүдээр загвар сургана (Fold 1: 2015--2017)
+    \item Дараагийн хугацааны огтлолд баталгаажуулалт/шалгалт (early stopping, calibration) хийнэ
+    \item Дараагийн огтлол руу шилжихдээ сургалтын цонхыг урагшлуулж дахин сургана (Fold 2: 2015--2018, ..., Fold 5: 2015--2022)
+    \item Эцсийн үнэлгээнд сүүлийн огтлолын (Fold 5) түүврийн гадуурх (out-of-sample) гүйцэтгэлийг ашиглана (2024 тестийн өгөгдөл)
+\end{enumerate}
+
+\subsection*{WFV олон огтлолын концепцын схем}
+
+\renewcommand{\thefigure}{В.\arabic{figure}}
+\setcounter{figure}{0}
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}[
+    fold_train/.style={rectangle, fill=blue!50, draw=blue!80, line width=1pt, minimum height=0.8cm},
+    fold_val/.style={rectangle, fill=orange!60, draw=orange!80, line width=1pt, minimum height=0.8cm},
+    fold_test/.style={rectangle, fill=red!50, draw=red!80, line width=1pt, minimum height=0.8cm},
+    lbl/.style={font=\small\bfseries, text=black},
+]
+
+\node[lbl] at (-0.5, 5.5) {Fold 1:};
+\node[fold_train] at (2, 5.5) {2015--2017};
+\node[fold_val] at (4, 5.5) {2017};
+\node[fold_test] at (5.2, 5.5) {2018};
+
+\node[lbl] at (-0.5, 4.5) {Fold 2:};
+\node[fold_train] at (2, 4.5) {2015--2018};
+\node[fold_val] at (4, 4.5) {2018};
+\node[fold_test] at (5.2, 4.5) {2019};
+
+\node[lbl] at (-0.5, 3.5) {Fold 3:};
+\node[fold_train] at (2, 3.5) {2015--2019};
+\node[fold_val] at (4, 3.5) {2019};
+\node[fold_test] at (5.2, 3.5) {2020};
+
+\node[lbl] at (-0.5, 2.5) {Fold 4:};
+\node[fold_train] at (2, 2.5) {2015--2020};
+\node[fold_val] at (4, 2.5) {2020};
+\node[fold_test] at (5.2, 2.5) {2021};
+
+\node[lbl] at (-0.5, 1.5) {Fold 5:};
+\node[fold_train] at (2, 1.5) {2015--2022};
+\node[fold_val] at (4, 1.5) {2023};
+\node[fold_test] at (5.2, 1.5) {2024};
+
+\draw[-{Stealth[length=2.5mm]}, thick, gray!50] (0.2, 0.8) -- (6, 0.8);
+\node[font=\small] at (3, 0.3) {хугацаа (цаг хугацааны дараалал)};
+
+\end{tikzpicture}
+\caption{WFV олон огтлолтын ерөнхий концепцын схем (Fold 1--Fold 5 expand window protocol)}
+\label{fig:wfv_rolling_scheme}
+\end{figure}
+
+\noindent\textit{Тайлбар:} Энэ схем нь Fold 1--Fold 5 протоколыг \textbf{нэг зурагт} жилээр нь харуулсан: бүх Fold-ийн сургалт 2015-аас эхэлж, Fold өсөх тусам сургалтын цонх өргөжин, баталгаажуулалт ба тестийн цонх урагш шилжинэ. Энэ судалгааны KPI үнэлгээнд нэг огтлолын (Fold 5) дэлгэрэнгүй хуваалт ашиглагдсан (үндсэн бичвэрийн Figure 4.6-г үзнэ үү).
+
+%% ============================================================
+%% Хавсралт Г: Архитектурын KPI-ийн хэмжилтийн нөхцөл
+%% ============================================================
+\section*{Хавсралт Г: Архитектурын KPI-ийн хэмжилтийн нөхцөл}
+\label{app:kpi_measurement}
+
+\subsection*{Архитектурын хэмжигдэх KPI ба баталгаажуулалтын протокол}
+
+Архитектурын шийдлүүдийг зөвхөн бүтэц дүрслэлээр бус хэмжигдэх шалгуураар үнэлэх зорилгоор дараах баталгаажуулалтын протокол нэгтгэсэн. Энэ протокол нь API, worker, push урсгалын ажиллах чанарыг ижил нөхцөлд давтан шалгах үндсэн хүрээг тогтооно.
+
+\begin{table}[H]
+\centering
+\caption{Архитектурын баталгаажуулалтын KPI протокол}
+\label{tab:kpi_protocol_detail}
+\small
+\renewcommand{\arraystretch}{1.18}
+\begin{tabularx}{\textwidth}{|>{\raggedright\arraybackslash}p{2.9cm}|>{\raggedright\arraybackslash}p{2.8cm}|>{\raggedright\arraybackslash}p{2.2cm}|>{\raggedright\arraybackslash}X|}
+\hline
+\textbf{Компонент} & \textbf{KPI} & \textbf{Зорилтот босго} & \textbf{Баталгаажуулах арга} \\ \hline
+API давхарга & p95 latency & $\leq$ 350ms & Ижил endpoint дээр 15 минутын тогтмол ачааллын туршилт, median/p95-г нэгтгэн тайлагнах \\ \hline
+API давхарга & 5xx алдааны хувь & $<1.0\%$ & Ачааллын туршилтын хугацаанд нийт хүсэлтэд харьцуулж тооцох \\ \hline
+Worker урсгал & Job completion rate & $\geq$ 99\% & Төлөвлөгөөт ажлын log мөрөөр амжилт/алдааны харьцааг өдөр тутамд тооцох \\ \hline
+Worker урсгал & Retry recovery rate & $\geq$ 95\% & Алдаатай job-ийн дахин оролдлогоос амжилттай сэргэсний хувийг хэмжих \\ \hline
+Push урсгал & Notification delivery rate & $\geq$ 98\% & Push сервисийн нийлбэр илгээлт ба хүрсэн мэдэгдлийн тоог харьцуулах \\ \hline
+\end{tabularx}
+\end{table}
+
+\subsection*{Хэмжилтийн нөхцөл}
+
+API давхаргын p95 latency хэмжилтийг дараах нөхцөлд явуулсан:
+\begin{itemize}
+    \item \textbf{Эх цэг}: Улаанбаатар (Mongolia)
+    \item \textbf{Серверийн байршил}: Токио (Tokyo, Fly.io)
+    \item \textbf{Сүлжээний RTT}: дунджаа 150--180ms
+    \item \textbf{Хүсэлтийн тоо}: Эндпойнт тутамд n=30 хүсэлт
+    \item \textbf{Ачааллын загвар}: Дараалсан (sequential) ачаалал, өөр өөр 3 endpoint-т
+    \item \textbf{Хэмжилтийн хугацаа}: 15 минут (900 сек), тасралтгүй
+\end{itemize}
+
+Worker ба Push урсгалын KPI:
+\begin{itemize}
+    \item \textbf{Worker job completion}: Өдөрт 50--100 ажил процесс хийгдэж, лог дээр бичигдэнэ
+    \item \textbf{Worker scheduling}: Python threading (time.sleep мөчлөгт суурилсан) ашиглан минут бүр дохио үүсгэх мөчлөгийг гүйцэтгэдэг
+    \item \textbf{Push delivery}: Firebase FCM платформ, хүргэлтийн статистик FCM console-ээр тайлагнана
+\end{itemize}
+
+\subsection*{p95 latency зорилтот босгоос хэтрэлтийн дүн шинжилгээ}
+
+API давхаргын p95 latency 471--536ms байсан нь зорилтот 350ms-ийг хэтэрсэн. Үндсэн шалтгааны дүн шинжилгээ:
+
+\begin{enumerate}
+    \item \textbf{Сүлжээний RTT нөлөө}: Улаанбаатараас Токиогийн сервер хүртэлх RTT дунджаа 150--180ms байдаг тул сүлжээний холболтын орыг зохисон хүлээлтэнд оруулах шаардлагатай
+    \item \textbf{MongoDB query latency}: /signals/latest endpoint-т MongoDB дээр дохиог авах query хэрэгтэй бөгөөд үндсэн database-д индекс оновчлол хийхээр үлдсэн
+    \item \textbf{Сериалчлалын ачаалал}: JSON сериалчлалын үед томоохон объектын цуглуулгыг үйлдэх үйлүүлэгдсэн
+    \item \textbf{Кэшлэлтийн хомсдол}: /rates/live-ийн үр дүнг Redis кэш-д байнаар хадгалснаас гадна, түүвэр дүүргэлтийн үедээ кэш сайн ажиллавал бууна
+\end{enumerate}
+
+Практик сайжруулах сонголтууд:
+\begin{itemize}
+    \item MongoDB дохионы хадгалалтад \texttt{(timestamp, symbol, timeframe)} compound unique index + \texttt{upsert} бодлого хэрэгжүүлэх (idempotency)
+    \item Серверийн бүсчлэлийг хэрэглэгчийн байршилд ойртуулах, эсвэл CDN/edge cache ашиглах
+    \item Redis multi-tier кэшлэл (L1 in-memory, L2 Redis)
+    \item Мейл query-ийн цуврал хүсэлт (batch requests) хийх
+\end{itemize}
+
+%% ============================================================
+%% Хавсралт Д: Эх сурвалжийн нэгтгэлийн дүрэм
+%% ============================================================
+\section*{Хавсралт Д: Эх сурвалжийн нэгтгэлийн дүрэм}
+\label{app:data_aggregation}
+
+\subsection*{Үр дүнгийн өгөгдлийн эх сурвалж ба reproducibility}
+
+Энэ бүлгийн бүх тоон дүнг түүхэн өгөгдөл дээрх системийн туршилтын логуудаас гаргав. Лог файлууд нь хуримтлагдсан (append) бүтэцтэй тул өмнөх гүйлтийн мөрүүд дараагийн файлд давтагддаг. Иймээс босго бүрийн run-ыг \texttt{Loaded signals} мөрөөр таньж, тухайн run-т харгалзах \texttt{final balance} болон TP/SL мөрүүдтэй тогтмол дүрмээр хослуулан нэгтгэл хийв. Энэ дүрэм нь ижил өгөгдөл дээр дахин тооцоход ижил үр дүн гаргах нөхцөлийг хангана.
+
+\subsection*{Босго тус бүрийн нотолгооны индексжүүлсэн холболт}
+
+\begin{table}[H]
+\centering
+\caption{Босго тус бүрийн нотолгооны индексжүүлсэн холболт (reproducibility reference)}
+\label{tab:log_evidence_indexed}
+\small
+\begin{tabular}{|l|l|l|r|r|}
+\hline
+\textbf{Босго} & \textbf{Дохио индекс} & \textbf{Баланс индекс} & \textbf{Дохионы тоо} & \textbf{Эцсийн баланс (\$)} \\ \hline
+0.90 & SIG-090 & BAL-090 & 3{,}567 & 58{,}262.39 \\ \hline
+0.91 & SIG-091 & BAL-091 & 3{,}274 & 61{,}770.46 \\ \hline
+0.92 & SIG-092 & BAL-092 & 2{,}958 & 56{,}512.20 \\ \hline
+0.93 & SIG-093 & BAL-093 & 2{,}643 & 46{,}807.24 \\ \hline
+0.94 & SIG-094 & BAL-094 & 2{,}287 & 38{,}050.13 \\ \hline
+0.95 & SIG-095 & BAL-095 & 1{,}914 & 32{,}844.40 \\ \hline
+0.96 & SIG-096 & BAL-096 & 1{,}588 & 33{,}040.14 \\ \hline
+0.97 & SIG-097 & BAL-097 & 1{,}195 & 29{,}019.19 \\ \hline
+0.98 & SIG-098 & BAL-098 & 673 & 25{,}447.43 \\ \hline
+0.99 & SIG-099 & BAL-099 & 147 & 17{,}428.89 \\ \hline
 \end{tabular}
 \end{table}
 
-Нийт 3,567 дохио, итгэлцэл (confidence) 90\%-аас дээш, ATR $\geq$ 4.0 пипс шүүлтүүртэй.
+\noindent\textit{Тайлбар:} Индексжүүлэлт нь нэгтгэлийн мөр-эх сурвалжийн холболтыг тогтвортой хадгалах зорилготой. Дахин хэрэгжүүлэлтийн үед ижил MT5 лог-д эдгээр индексүүдийг судлахаар хүрэлцээ.
+
+\subsection*{Дахин хэрэгжүүлэх боломж ба орчны нөхцөл}
+
+Энэ бүлгийн үр дүнг дахин хэрэгжүүлэхэд дараах нөхцөлүүдийг тогтмол хадгалах шаардлагатай:
+
+\begin{itemize}
+    \item \textbf{Эх сурвалжийн лог багц}: Босгын мужийн 0.90--0.99 бүх гүйлтийн MT5 логийг өөрчлөхгүй хадгалах
+    \item \textbf{Нэгтгэлийн дүрэм}: Босго бүрт \texttt{Loaded signals} anchor мөрөөс хойших эхний \texttt{final balance} мөрийг холбох
+    \item \textbf{Арилжааны үзүүлэлтүүд}: \texttt{Trades/Trade} мөрөөс TP/SL болон хаагдсан арилжааны дарааллыг нэг ижил дүрмээр тооцох
+    \item \textbf{Гүйцэтгэлийн нөхцөл}: Ижил MT5 тестийн хугацааны цонх, ижил EA ажиллах үеийн дүрмүүд (нэг агшинд нэг байрлал, ижил дохио ачаалах журам)
+\end{itemize}
+
+Эдгээр нөхцөл зөрвөл тайланд буй тоон үр дүнтэй 1:1 давхцахгүй байж болох тул дахин хэрэгжүүлэлтийн үед параметрийн өөрчлөлт бүрийг тусдаа протоколын хүснэгтээр бүртгэх нь зүйтэй.
+
+\subsection*{Практик шийдвэр гаргалтын нэмэлт тайлбар}
+
+Практик шийдвэр гаргалтын хүрээний дэлгэрэнгүй тайлбарыг Үр дүнгийн бүлгийн ``Практик шийдвэр гаргалтын хүрээ'' хэсгээс үзнэ үү. Тухайн хэсэгт эрсдэл-өмнөх шалгуур (CV, MaxDD, урт дараалсан алдагдал, win rate CI) болон босгын практик мужийн нөхцөлт тайлбарыг нэгтгэн харуулсан болно.

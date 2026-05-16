@@ -1,22 +1,34 @@
 \addvspace {10\p@ }
+\contentsline {table}{\numberline {1.1}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces Судалгааны асуулт ба үнэлгээний шалгуур үзүүлэлтүүд (KPIs)}}{3}{table.caption.24}%
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {2.1}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces Судалгааны асуулт ба үнэлгээний шалгуур үзүүлэлтүүд (KPIs)}}{3}{table.caption.24}%
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {3.1}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces Түүхэн өгөгдлийн хэмжээний хураангуй}}{11}{table.caption.57}%
-\contentsline {table}{\numberline {3.2}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces Шинж чанар (feature)ын жагсаалт (интервал бүрд)}}{12}{table.caption.59}%
-\contentsline {table}{\numberline {3.3}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces Leakage audit-ын цагийн нийцлийн дүрэм}}{13}{table.caption.64}%
-\contentsline {table}{\numberline {3.4}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces Урагш гүйлгэн баталгаажуулалтын хүрээнд ашигласан үндсэн огтлолын өгөгдлийн хуваалт}}{14}{table.caption.66}%
-\contentsline {table}{\numberline {3.5}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces Загвар бүрийн гол гиперпараметрүүд}}{17}{table.caption.77}%
-\contentsline {table}{\numberline {3.6}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces Түүхэн өгөгдөл дээрх системийн туршилтын (backtesting) гүйцэтгэлийн үндсэн тохиргоо}}{21}{table.caption.105}%
-\contentsline {table}{\numberline {3.7}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces Арилжааны зардлын хамралтын матриц}}{22}{table.caption.108}%
-\contentsline {table}{\numberline {3.8}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces Системийн үнэлгээний шалгуур үзүүлэлтүүд}}{23}{table.caption.114}%
-\contentsline {table}{\numberline {3.9}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces Серверийн хэсгийн үндсэн бүрэлдэхүүн}}{24}{table.caption.118}%
-\contentsline {table}{\numberline {3.10}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces Deployment топологийн хураангуй}}{25}{table.caption.120}%
-\contentsline {table}{\numberline {3.11}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces Серверийн хэсгийн функцийн бүлгүүд}}{25}{table.caption.122}%
+\contentsline {table}{\numberline {3.1}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces Түүхэн өгөгдлийн хэмжээний хураангуй}}{16}{table.caption.67}%
+\contentsline {table}{\numberline {3.2}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces Шинж чанарын жагсаалт (интервал бүрд)}}{16}{table.caption.69}%
+\contentsline {table}{\numberline {3.3}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces Урагш гүйлгэн баталгаажуулалтын хүрээнд ашигласан үндсэн огтлолын өгөгдлийн хуваалт}}{18}{table.caption.75}%
+\contentsline {table}{\numberline {3.4}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces Түүхэн өгөгдөл дээрх системийн туршилтын (backtesting) гүйцэтгэлийн үндсэн тохиргоо}}{26}{table.caption.98}%
+\contentsline {table}{\numberline {3.5}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces Арилжааны зардлын хамралтын матриц}}{27}{table.caption.101}%
+\contentsline {table}{\numberline {3.6}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces Системийн үнэлгээний шалгуур үзүүлэлтүүд}}{29}{table.caption.107}%
+\contentsline {table}{\numberline {3.7}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces Серверийн хэсгийн програм хангамжийн архитектурын бүрэлдэхүүн}}{30}{table.caption.111}%
+\contentsline {table}{\numberline {3.8}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces Байршуулалтын (deployment) топологийн технологийн стек}}{31}{table.caption.113}%
+\contentsline {table}{\numberline {3.9}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces API endpoint-ийн хандалтын хурдны хязгаарлалт}}{32}{table.caption.115}%
+\contentsline {table}{\numberline {3.10}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces Архитектурын нэг цэгийн эмзэглэлийн шинжилгээ}}{32}{table.caption.116}%
+\contentsline {table}{\numberline {3.11}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces Харагдах хэсгийн модулиуд, харилцааны загвар ба API endpoint бүлэг}}{34}{table.caption.126}%
+\contentsline {table}{\numberline {3.12}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces Өгөгдөл дамжуулах загварын харьцуулалт}}{35}{table.caption.131}%
+\contentsline {table}{\numberline {3.13}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces Системийн гэрээ: автомат ба зөвлөмжийн үйлдэл}}{36}{table.caption.133}%
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {4.1}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces Босго тус бүрийн нотолгооны индексжүүлсэн холболт}}{28}{table.caption.136}%
-\contentsline {table}{\numberline {4.2}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces 0.90--0.99 босгын мужийн харьцуулсан шинжилгээний баталгаажсан дүн}}{29}{table.caption.139}%
-\contentsline {table}{\numberline {4.3}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces EUR/USD buy-and-hold benchmark-ийн хураангуй}}{29}{table.caption.141}%
-\contentsline {table}{\numberline {4.4}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces Босго тус бүрийн дохио-арилжааны хөрвүүлэлт ба win rate (95\% CI)}}{30}{table.caption.143}%
-\contentsline {table}{\numberline {4.5}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces Босгын мужийн лог дээр суурилсан эрсдэл-өгөөжийн шинжилгээ}}{30}{table.caption.145}%
-\contentsline {table}{\numberline {4.6}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces Арга зүйн эрсдэлийн нэгдсэн хүснэгт (энэ хувилбар)}}{34}{table.caption.158}%
+\contentsline {table}{\numberline {4.1}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces GBDT ансамблийн нарийвчлал ба F1 оноо — хуваарь тус бүрээр}}{38}{table.caption.139}%
+\contentsline {table}{\numberline {4.2}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces Тестийн өгөгдөл дээрх ангилалт тусдаа (BUY / HOLD / SELL)}}{38}{table.caption.141}%
+\contentsline {table}{\numberline {4.3}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces Итгэлцлийн бүрийн нарийвчлал (баталгаажуулалтын өгөгдөл дээр)}}{39}{table.caption.143}%
+\contentsline {table}{\numberline {4.4}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces 0.90--0.99 босгын мужийн харьцуулсан шинжилгээний баталгаажсан дүн}}{39}{table.caption.146}%
+\contentsline {table}{\numberline {4.5}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces EUR/USD худалдан аваад барих жишгийн хураангуй}}{40}{table.caption.148}%
+\contentsline {table}{\numberline {4.6}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces Босго тус бүрийн дохио-арилжааны гүйцэтгэл ба ялалтын хувь (95\% CI)}}{41}{table.caption.151}%
+\contentsline {table}{\numberline {4.7}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces Босгын мужийн лог дээр суурилсан эрсдэл-өгөөжийн шинжилгээ}}{41}{table.caption.153}%
+\contentsline {table}{\numberline {4.8}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces Сценарийн дүгнэлтийг ерөнхийлөн дүгнэх боломжийн түвшин}}{45}{table.caption.164}%
+\contentsline {table}{\numberline {4.9}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces Арга зүйн эрсдэлийн нэгдсэн хүснэгт (энэ хувилбар)}}{46}{table.caption.169}%
+\contentsline {table}{\numberline {4.10}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces API давхаргын KPI: хэмжигдсэн дүн (n=30 хүсэлт/endpoint)}}{47}{table.caption.173}%
+\contentsline {table}{\numberline {4.11}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces API давхаргын 5xx алдааны хувь (n=90 нийт хүсэлт)}}{47}{table.caption.174}%
+\contentsline {table}{\numberline {4.12}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces API давхаргын KPI баталгаажуулалтын хураангуй}}{48}{table.caption.177}%
+\contentsline {table}{\numberline {4.13}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces Гурван суурь загварын сонгогдсон гиперпараметрүүд}}{53}{table.caption.206}%
+\contentsline {table}{\numberline {4.14}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces Leakage audit-ын цагийн нийцлийн дүрмүүд}}{54}{table.caption.207}%
+\contentsline {table}{\numberline {4.15}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces Архитектурын баталгаажуулалтын KPI протокол}}{55}{table.caption.213}%
+\contentsline {table}{\numberline {4.16}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces Босго тус бүрийн нотолгооны индексжүүлсэн холболт (reproducibility reference)}}{57}{table.caption.218}%
