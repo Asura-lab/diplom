@@ -3,87 +3,40 @@
 \chapter*{Хавсралт}
 
 %% ============================================================
-%% Хавсралт А: Гиперпараметрийн дэлгэрэнгүй
+%% Хавсралт А: Leakage audit-ын дэлгэрэнгүй дүрэм
 %% ============================================================
-\section*{Хавсралт А: Гиперпараметрийн дэлгэрэнгүй}
-\label{app:hyperparameters}
-
-\subsection*{Гиперпараметрийн бодит утгуудын хүснэгт}
-
-Доор гурван загварын эцэст сонгогдсон гиперпараметрийн бодит утгуудыг нэгтгэн харуулав. Параметр сонголтын аргачлал, тогтвортой байдлын протокол, early stopping болон тогтмолжуулалтын нарийвчилсан тайлбарыг Аргазүйн бүлгийн §3.4-т үзнэ үү.
-
-\subsection*{Гиперпараметрийн дэлгэрэнгүй үзүүлэлтүүд}
-
-\begin{table}[H]
-\centering
-\caption{Гурван суурь загварын сонгогдсон гиперпараметрүүд}
-\label{tab:hyperparameter_details}
-\small
-\setlength{\tabcolsep}{3pt}
-\renewcommand{\arraystretch}{1.25}
-\begin{adjustbox}{max width=\textwidth}
-\begin{tabular}{|l|l|l|l|}
-\hline
-\textbf{Параметр} & \textbf{LightGBM} & \textbf{XGBoost} & \textbf{CatBoost} \\ \hline
-max\_depth & 5 & 5 & 6 \\ \hline
-num\_leaves & 32 & --- & --- \\ \hline
-learning\_rate & 0.03 & 0.03 & 0.03 \\ \hline
-n\_estimators & 200 & 200 & 200 \\ \hline
-subsample & 0.8 & 0.8 & 0.8 \\ \hline
-colsample\_bytree & 0.8 & 0.7 & 0.8 \\ \hline
-reg\_alpha (L1) & 0.01 & 0.01 & 0.01 \\ \hline
-reg\_lambda (L2) & 0.1 & 0.1 & 0.1 \\ \hline
-early\_stopping\_rounds & 50 & 50 & 50 \\ \hline
-min\_data\_in\_leaf & 20 & --- & --- \\ \hline
-min\_child\_weight & --- & 1 & 1 \\ \hline
-\end{tabular}
-\end{adjustbox}
-\end{table}
-
-\noindent\textit{Тайлбар:} Бүх гурван загварт модны гүнийг 5--6-р хязгаарлаж, learning rate-ийг 0.03 байлгасан. Early stopping patience нь 50 давталт байв. L1/L2 тогтмолжуулалт нь загварын ерөнхийлөн суралцах чадварыг нэмэгдүүлэхэд ашиглагдав.
-
-\subsection*{Хэт нийцлээс сэргийлэх арга хэмжээ ба шинж чанарын сонголт}
-
-Хэт нийцлээс сэргийлэх зургаан арга хэмжээ (модны гүн хязгаарлалт, learning rate=0.03, early stopping patience=50, L1/L2 тогтмолжуулалт, урагш гүйлгэн баталгаажуулалт, шинж чанарын хялбарчлал) болон 75 шинж чанараас 48-д шилжсэн шалтгааны дэлгэрэнгүй тайлбарыг Аргазүйн бүлгийн §3.4-ийн ``Гиперпараметр сонголтын протокол'' ба ``Шинж чанарын инженерчлэл'' дэд хэсгүүдэд үзнэ үү. Эцэст сонгогдсон 8 шинж чанар (close, RSI-14, ATR-14, MA-5, MA-20, MA-50, volatility-20, returns) нь хэлбэлзэл, импульс, чиг хандлагын гурван өнцгийг хамарна.
-
-%% ============================================================
-%% Хавсралт Б: Leakage audit-ын дэлгэрэнгүй дүрэм
-%% ============================================================
-\section*{Хавсралт Б: Leakage audit-ын дэлгэрэнгүй дүрэм}
+\section*{Хавсралт А: Нэвчилтийн аудитын нарийвчилсан дүрэм}
 \label{app:leakage_audit}
 
 \subsection*{Цагийн нийцлийн дүрэм}
 
-Мэдээллийн нэвчилтээс (leakage) сэргийлэх цагийн нийцлийн үндсэн томьёо (томьёо~3.2) болон ерөнхий тайлбарыг Аргазүйн бүлгийн §3.3-т (``Шошго ба шинж чанарын цагийн нийцлийн аудит'' дэд хэсэг) үзнэ үү. Доор компонент бүрийн нарийвчилсан аудитын дүрмийн хүснэгтийг харуулав.
+Мэдээллийн нэвчилтээс сэргийлэх цагийн нийцлийн үндсэн томьёо (томьёо~3.2) болон ерөнхий тайлбарыг Арга зүйн бүлгийн §3.3-т (``Шошго ба шинж чанарын цагийн нийцлийн аудит'' дэд хэсэг) үзнэ үү. Доор компонент бүрийн нарийвчилсан аудитын дүрмийн хүснэгтийг харуулав.
 
-\subsection*{Leakage audit дүрмүүдийн дэлгэрэнгүй тайлан}
+\subsection*{Нэвчилтийн аудит дүрмүүдийн нарийвчилсан тайлан}
 
 \begin{table}[H]
 \centering
-\caption{Leakage audit-ын цагийн нийцлийн дүрмүүд}
+\caption{Нэвчилтийн аудитын цагийн нийцлийн дүрмүүд}
 \label{tab:leakage_audit_rules}
-\small
 \setlength{\tabcolsep}{4pt}
 \renewcommand{\arraystretch}{1.28}
-\begin{adjustbox}{max width=\textwidth}
-\begin{tabular}{|l|l|l|l|}
+\begin{tabularx}{\textwidth}{|>{\raggedright\arraybackslash}p{2.8cm}|>{\raggedright\arraybackslash}X|>{\centering\arraybackslash}p{2.6cm}|>{\raggedright\arraybackslash}X|}
 \hline
-\textbf{Компонент} & \textbf{Үйлдэл} & \textbf{Цагийн нөхцөл} & \textbf{Leakage эрсдэл} \\ \hline
-OHLCV өгөгдөл & $t_0$-д хаалтын ханш ба үзүүлэлтүүдийг ашиглах & $t_{\text{candle}} < t_0$ & Бага (хаалтны мэдээлэл хэмжээст мэдэгдэх) \\ \hline
-MA (движущ. дундаж) & $t_0$-г оруулаад өмнөх 50 шоосны дундаж & $t_{\text{MA window}} < t_0$ & Бага (историко мэдээлэл)\\ \hline
+\textbf{Компонент} & \textbf{Үйлдэл} & \textbf{Цагийн нөхцөл} & \textbf{Нэвчилтийн эрсдэл} \\ \hline
+OHLCV өгөгдөл & $t_0$-д хаалтын ханш ба үзүүлэлтүүдийг ашиглах & $t_{\text{candle}} < t_0$ & Бага (хаалтын ханш шийдвэрийн агшинд мэдэгдсэн байдаг) \\ \hline
+MA (хөдөлгөөнт дундаж) & $t_0$-г оруулаад өмнөх 50 лааны (candle) дундаж & $t_{\text{MA window}} < t_0$ & Бага (түүхэн мэдээлэл) \\ \hline
 RSI, ATR & $t_0$-г оруулаад өмнөх өгөгдлөөс тооцох & $t_{\text{period}} \leq t_0$ & Бага \\ \hline
-240 минутын label & $t_0$ -ээс дараах 240 минутын хамгийн дээд/доод & $t_{\text{label}} > t_0$ & \textbf{ӨНДӨР} (future data) \\ \hline
-Олон интервалын синхрончлол & merge\_asof(direction=backward) & $t_{\text{small}} \leq t_{\text{large}}$ & Дунд (boundary алдаа) \\ \hline
-\end{tabular}
-\end{adjustbox}
+240 минутын label & $t_0$-ээс дараах 240 минутын хамгийн дээд/доод & $t_{\text{label}} > t_0$ & \textbf{ӨНДӨР} (future data) \\ \hline
+Олон интервалын синхрончлол & \texttt{merge\_asof}, \texttt{direction=backward} & $t_{\text{small}} \leq t_{\text{large}}$ & Дунд (boundary алдаа) \\ \hline
+\end{tabularx}
 \end{table}
 
-\noindent\textit{Тайлбар:} \texttt{merge\_asof(backward)} болон хугацааны тусгаарлалтын дүрэм нь leakage эрсдэлийг бууруулдаг ч олон интервалын синхрончлолын үлдэгдэл эрсдэлийг бүрэн үгүйсгэхгүй. Иймээс үр дүнг тайлбарлахдаа энэ эрсдэлийг хязгаарлалтын хүрээнд хамтад нь авч үзсэн.
+\noindent\textit{Тайлбар:} \texttt{merge\_asof(backward)} болон хугацааны тусгаарлалтын дүрэм нь нэвчилтийн эрсдэлийг бууруулдаг ч олон интервалын синхрончлолын үлдэгдэл эрсдэлийг бүрэн үгүйсгэхгүй. Иймээс үр дүнг тайлбарлахдаа энэ эрсдэлийг хязгаарлалтын хүрээнд хамтад нь авч үзсэн.
 
 %% ============================================================
-%% Хавсралт В: WFV олон огтлолын схем
+%% Хавсралт Б: WFV олон огтлолын схем
 %% ============================================================
-\section*{Хавсралт В: Урагш гүйлгэн баталгаажуулалтын олон огтлолын схем}
+\section*{Хавсралт Б: Урагш гүйлгэн баталгаажуулалтын олон огтлолын схем}
 \label{app:wfv_multifold}
 
 \subsection*{WFV олон огтлолт (expanding window) протокол}
@@ -93,14 +46,14 @@ RSI, ATR & $t_0$-г оруулаад өмнөх өгөгдлөөс тооцох 
 \noindent\textbf{Олон огтлолтын ерөнхий алхамт логик:}
 \begin{enumerate}
     \item Эхний хугацааны огтлолд өмнөх жилүүдээр загвар сургана (Fold 1: 2015--2017)
-    \item Дараагийн хугацааны огтлолд баталгаажуулалт/шалгалт (early stopping, calibration) хийнэ
+    \item Дараагийн хугацааны огтлолд баталгаажуулалт/шалгалт (эрт зогсоолт, calibration) хийнэ
     \item Дараагийн огтлол руу шилжихдээ сургалтын цонхыг урагшлуулж дахин сургана (Fold 2: 2015--2018, ..., Fold 5: 2015--2022)
     \item Эцсийн үнэлгээнд сүүлийн огтлолын (Fold 5) түүврийн гадуурх (out-of-sample) гүйцэтгэлийг ашиглана (2024 тестийн өгөгдөл)
 \end{enumerate}
 
 \subsection*{WFV олон огтлолын концепцын схем}
 
-\renewcommand{\thefigure}{В.\arabic{figure}}
+\renewcommand{\thefigure}{Б.\arabic{figure}}
 \setcounter{figure}{0}
 \begin{figure}[H]
 \centering
@@ -147,9 +100,9 @@ RSI, ATR & $t_0$-г оруулаад өмнөх өгөгдлөөс тооцох 
 \noindent\textit{Тайлбар:} Энэ схем нь Fold 1--Fold 5 протоколыг \textbf{нэг зурагт} жилээр нь харуулсан: бүх Fold-ийн сургалт 2015-аас эхэлж, Fold өсөх тусам сургалтын цонх өргөжин, баталгаажуулалт ба тестийн цонх урагш шилжинэ. Энэ судалгааны KPI үнэлгээнд нэг огтлолын (Fold 5) дэлгэрэнгүй хуваалт ашиглагдсан (үндсэн бичвэрийн Figure 4.6-г үзнэ үү).
 
 %% ============================================================
-%% Хавсралт Г: Архитектурын KPI-ийн хэмжилтийн нөхцөл
+%% Хавсралт В: Архитектурын KPI-ийн хэмжилтийн нөхцөл
 %% ============================================================
-\section*{Хавсралт Г: Архитектурын KPI-ийн хэмжилтийн нөхцөл}
+\section*{Хавсралт В: Архитектурын KPI-ийн хэмжилтийн нөхцөл}
 \label{app:kpi_measurement}
 
 \subsection*{Архитектурын хэмжигдэх KPI ба баталгаажуулалтын протокол}
@@ -160,7 +113,6 @@ RSI, ATR & $t_0$-г оруулаад өмнөх өгөгдлөөс тооцох 
 \centering
 \caption{Архитектурын баталгаажуулалтын KPI протокол}
 \label{tab:kpi_protocol_detail}
-\small
 \renewcommand{\arraystretch}{1.18}
 \begin{tabularx}{\textwidth}{|>{\raggedright\arraybackslash}p{2.9cm}|>{\raggedright\arraybackslash}p{2.8cm}|>{\raggedright\arraybackslash}p{2.2cm}|>{\raggedright\arraybackslash}X|}
 \hline
@@ -178,7 +130,7 @@ Push урсгал & Notification delivery rate & $\geq$ 98\% & Push сервис
 API давхаргын p95 latency хэмжилтийг дараах нөхцөлд явуулсан:
 \begin{itemize}
     \item \textbf{Эх цэг}: Улаанбаатар (Mongolia)
-    \item \textbf{Серверийн байршил}: Токио (Tokyo, Fly.io)
+    \item \textbf{Серверийн байршил}: Токио (Japan East, Azure App Service)
     \item \textbf{Сүлжээний RTT}: дунджаа 150--180ms
     \item \textbf{Хүсэлтийн тоо}: Эндпойнт тутамд n=30 хүсэлт
     \item \textbf{Ачааллын загвар}: Дараалсан (sequential) ачаалал, өөр өөр 3 endpoint-т
@@ -189,7 +141,7 @@ Worker ба Push урсгалын KPI:
 \begin{itemize}
     \item \textbf{Worker job completion}: Өдөрт 50--100 ажил процесс хийгдэж, лог дээр бичигдэнэ
     \item \textbf{Worker scheduling}: Python threading (time.sleep мөчлөгт суурилсан) ашиглан минут бүр дохио үүсгэх мөчлөгийг гүйцэтгэдэг
-    \item \textbf{Push delivery}: Firebase FCM платформ, хүргэлтийн статистик FCM console-ээр тайлагнана
+    \item \textbf{Push delivery}: Expo Push API (\texttt{exp.host}) платформ, хүргэлтийн статистик Expo dashboard-аар тайлагнана
 \end{itemize}
 
 \subsection*{p95 latency зорилтот босгоос хэтрэлтийн дүн шинжилгээ}
@@ -197,10 +149,10 @@ Worker ба Push урсгалын KPI:
 API давхаргын p95 latency 471--536ms байсан нь зорилтот 350ms-ийг хэтэрсэн. Үндсэн шалтгааны дүн шинжилгээ:
 
 \begin{enumerate}
-    \item \textbf{Сүлжээний RTT нөлөө}: Улаанбаатараас Токиогийн сервер хүртэлх RTT дунджаа 150--180ms байдаг тул сүлжээний холболтын орыг зохисон хүлээлтэнд оруулах шаардлагатай
-    \item \textbf{MongoDB query latency}: /signals/latest endpoint-т MongoDB дээр дохиог авах query хэрэгтэй бөгөөд үндсэн database-д индекс оновчлол хийхээр үлдсэн
-    \item \textbf{Сериалчлалын ачаалал}: JSON сериалчлалын үед томоохон объектын цуглуулгыг үйлдэх үйлүүлэгдсэн
-    \item \textbf{Кэшлэлтийн хомсдол}: /rates/live-ийн үр дүнг Redis кэш-д байнаар хадгалснаас гадна, түүвэр дүүргэлтийн үедээ кэш сайн ажиллавал бууна
+    \item \textbf{Сүлжээний RTT нөлөө}: Улаанбаатараас Токиогийн сервер хүртэлх RTT дунджаар 150--180ms байдаг тул энэ сүлжээний саатлыг латентын зорилтот хүлээлтэд тооцох шаардлагатай
+    \item \textbf{MongoDB query latency}: /signals/latest endpoint-т MongoDB дээр дохиог авах query хэрэгтэй бөгөөд үндсэн database-д индексийн оновчлол хийгдээгүй үлдсэн
+    \item \textbf{Сериалчлалын ачаалал}: JSON сериалчлал нь томоохон объектын цуглуулгыг боловсруулахад нэмэлт ачаалал үүсгэдэг
+    \item \textbf{Кэшлэлтийн хомсдол}: /rates/live-ийн үр дүнг Redis кэшэд тогтмол хадгалдаггүй тул кэшлэлтийг сайжруулбал латент буурах боломжтой
 \end{enumerate}
 
 Практик сайжруулах сонголтууд:
@@ -208,57 +160,186 @@ API давхаргын p95 latency 471--536ms байсан нь зорилтот
     \item MongoDB дохионы хадгалалтад \texttt{(timestamp, symbol, timeframe)} compound unique index + \texttt{upsert} бодлого хэрэгжүүлэх (idempotency)
     \item Серверийн бүсчлэлийг хэрэглэгчийн байршилд ойртуулах, эсвэл CDN/edge cache ашиглах
     \item Redis multi-tier кэшлэл (L1 in-memory, L2 Redis)
-    \item Мейл query-ийн цуврал хүсэлт (batch requests) хийх
+    \item Олон query-г багцлан (batch request) илгээх
 \end{itemize}
 
 %% ============================================================
-%% Хавсралт Д: Эх сурвалжийн нэгтгэлийн дүрэм
+%% Хавсралт Г: Эх сурвалжийн нэгтгэлийн дүрэм
 %% ============================================================
-\section*{Хавсралт Д: Эх сурвалжийн нэгтгэлийн дүрэм}
+\section*{Хавсралт Г: Эх сурвалжийн нэгтгэлийн дүрэм}
 \label{app:data_aggregation}
 
 \subsection*{Үр дүнгийн өгөгдлийн эх сурвалж ба reproducibility}
 
 Энэ бүлгийн бүх тоон дүнг түүхэн өгөгдөл дээрх системийн туршилтын логуудаас гаргав. Лог файлууд нь хуримтлагдсан (append) бүтэцтэй тул өмнөх гүйлтийн мөрүүд дараагийн файлд давтагддаг. Иймээс босго бүрийн run-ыг \texttt{Loaded signals} мөрөөр таньж, тухайн run-т харгалзах \texttt{final balance} болон TP/SL мөрүүдтэй тогтмол дүрмээр хослуулан нэгтгэл хийв. Энэ дүрэм нь ижил өгөгдөл дээр дахин тооцоход ижил үр дүн гаргах нөхцөлийг хангана.
 
-\subsection*{Босго тус бүрийн нотолгооны индексжүүлсэн холболт}
+%% ============================================================
+%% Хавсралт Д: MongoDB схемийн диаграмм
+%% ============================================================
+\section*{Хавсралт Д: MongoDB цуглуулгын схемийн диаграмм}
+\label{app:mongodb_schema}
 
-\begin{table}[H]
+Системийн өгөгдлийн тогтвортой давхарга нь MongoDB Atlas үүлэн дээр байршуулсан 12 цуглуулгаас бүрдэх ба тэдгээрийг гүйцэтгэх үүргээр нь Хэрэглэгчийн, Дохио-Мэдэгдлийн, Мэдээний болон Системийн гэсэн 4 бүлэгт ангилав. Цуглуулгын бүтэц, гол индекс ба TTL (Time-To-Live) тохиргоог \fref{fig:mongodb_schema}-т харуулсан. Хэрэглэгчийн \texttt{\_id} нь \texttt{push\_tokens}, \texttt{refresh\_tokens} цуглуулгын \texttt{user\_id} талбартай гадаад түлхүүрийн харьцаатай ба \texttt{signals.\_id} нь \texttt{in\_app\_notifications.data.signal\_id}-тэй холбогдоно.
+
+\begin{figure}[H]
 \centering
-\caption{Босго тус бүрийн нотолгооны индексжүүлсэн холболт (reproducibility reference)}
-\label{tab:log_evidence_indexed}
-\small
-\begin{tabular}{|l|l|l|r|r|}
-\hline
-\textbf{Босго} & \textbf{Дохио индекс} & \textbf{Баланс индекс} & \textbf{Дохионы тоо} & \textbf{Эцсийн баланс (\$)} \\ \hline
-0.90 & SIG-090 & BAL-090 & 3{,}567 & 58{,}262.39 \\ \hline
-0.91 & SIG-091 & BAL-091 & 3{,}274 & 61{,}770.46 \\ \hline
-0.92 & SIG-092 & BAL-092 & 2{,}958 & 56{,}512.20 \\ \hline
-0.93 & SIG-093 & BAL-093 & 2{,}643 & 46{,}807.24 \\ \hline
-0.94 & SIG-094 & BAL-094 & 2{,}287 & 38{,}050.13 \\ \hline
-0.95 & SIG-095 & BAL-095 & 1{,}914 & 32{,}844.40 \\ \hline
-0.96 & SIG-096 & BAL-096 & 1{,}588 & 33{,}040.14 \\ \hline
-0.97 & SIG-097 & BAL-097 & 1{,}195 & 29{,}019.19 \\ \hline
-0.98 & SIG-098 & BAL-098 & 673 & 25{,}447.43 \\ \hline
-0.99 & SIG-099 & BAL-099 & 147 & 17{,}428.89 \\ \hline
-\end{tabular}
-\end{table}
+\adjustbox{max width=\textwidth}{%
+\begin{tikzpicture}[
+    coll/.style={rectangle, draw=black!75, fill=white, line width=0.9pt,
+                 minimum width=4.6cm, minimum height=2.2cm, align=left,
+                 font=\scriptsize, inner sep=4pt, rounded corners=3pt},
+    collTtl/.style={coll, draw=red!55, fill=red!4},
+    collIdx/.style={coll, draw=blue!55, fill=blue!4},
+    grp/.style={rectangle, draw=black!40, fill=gray!4, line width=0.7pt,
+                rounded corners=6pt, dashed, inner sep=8pt},
+    grpttl/.style={font=\small\bfseries, anchor=north west, text=black!70},
+    fk/.style={-{Stealth[length=2.5mm]}, line width=0.7pt, color=black!55, dashed},
+    hdr/.style={font=\scriptsize\bfseries},
+    fld/.style={font=\scriptsize, anchor=west},
+    idxlbl/.style={font=\tiny\itshape, text=blue!60!black, anchor=west},
+    ttllbl/.style={font=\tiny\itshape, text=red!60!black, anchor=west},
+]
 
-\noindent\textit{Тайлбар:} Индексжүүлэлт нь нэгтгэлийн мөр-эх сурвалжийн холболтыг тогтвортой хадгалах зорилготой. Дахин хэрэгжүүлэлтийн үед ижил MT5 лог-д эдгээр индексүүдийг судлахаар хүрэлцээ.
+%% ── Хэрэглэгчийн бүлэг (зүүн дээр) ──
+\node[grp, minimum width=10.4cm, minimum height=8.0cm] (grpUser) at (-3.0, 3.0) {};
+\node[grpttl] at ([xshift=4pt, yshift=-4pt]grpUser.north west)
+    {Хэрэглэгчийн бүлэг};
 
-\subsection*{Дахин хэрэгжүүлэх боломж ба орчны нөхцөл}
+\node[coll] (users) at (-5.4, 5.4) {%
+    \textbf{users}\\[2pt]
+    \texttt{\_id} : ObjectId\\
+    \texttt{email} : string\\
+    \texttt{password\_hash} : string\\
+    \texttt{name} : string\\
+    \texttt{created\_at} : Date};
+\node[idxlbl] at ([xshift=2pt, yshift=-2pt]users.south west)
+    {unique(email)};
 
-Энэ бүлгийн үр дүнг дахин хэрэгжүүлэхэд дараах нөхцөлүүдийг тогтмол хадгалах шаардлагатай:
+\node[coll] (tokens) at (-0.5, 5.4) {%
+    \textbf{push\_tokens}\\[2pt]
+    \texttt{user\_id} : ObjectId\\
+    \texttt{push\_token} : string\\
+    \texttt{platform} : string\\
+    \texttt{notifications\_enabled} : bool\\
+    \texttt{signal\_threshold} : float};
+\node[idxlbl] at ([xshift=2pt, yshift=-2pt]tokens.south west)
+    {unique(user\_id)};
 
-\begin{itemize}
-    \item \textbf{Эх сурвалжийн лог багц}: Босгын мужийн 0.90--0.99 бүх гүйлтийн MT5 логийг өөрчлөхгүй хадгалах
-    \item \textbf{Нэгтгэлийн дүрэм}: Босго бүрт \texttt{Loaded signals} anchor мөрөөс хойших эхний \texttt{final balance} мөрийг холбох
-    \item \textbf{Арилжааны үзүүлэлтүүд}: \texttt{Trades/Trade} мөрөөс TP/SL болон хаагдсан арилжааны дарааллыг нэг ижил дүрмээр тооцох
-    \item \textbf{Гүйцэтгэлийн нөхцөл}: Ижил MT5 тестийн хугацааны цонх, ижил EA ажиллах үеийн дүрмүүд (нэг агшинд нэг байрлал, ижил дохио ачаалах журам)
-\end{itemize}
+\node[collTtl] (refresh) at (-5.4, 2.0) {%
+    \textbf{refresh\_tokens}\\[2pt]
+    \texttt{user\_id} : ObjectId\\
+    \texttt{token\_hash} : string\\
+    \texttt{expires\_at} : Date\\
+    \texttt{created\_at} : Date};
+\node[ttllbl] at ([xshift=2pt, yshift=-2pt]refresh.south west)
+    {TTL(expires\_at)};
 
-Эдгээр нөхцөл зөрвөл тайланд буй тоон үр дүнтэй 1:1 давхцахгүй байж болох тул дахин хэрэгжүүлэлтийн үед параметрийн өөрчлөлт бүрийг тусдаа протоколын хүснэгтээр бүртгэх нь зүйтэй.
+\node[collTtl] (verif) at (-0.5, 2.0) {%
+    \textbf{verification\_codes}\\[2pt]
+    \texttt{email} : string\\
+    \texttt{code} : string (OTP)\\
+    \texttt{expires\_at} : Date (+10мин)\\
+    \texttt{created\_at} : Date};
+\node[ttllbl] at ([xshift=2pt, yshift=-2pt]verif.south west)
+    {TTL(expires\_at)};
 
-\subsection*{Практик шийдвэр гаргалтын нэмэлт тайлбар}
+\node[collTtl] (reset) at (-2.95, -0.55) {%
+    \textbf{reset\_codes}\\[2pt]
+    \texttt{email}, \texttt{code}\\
+    \texttt{expires\_at} : Date\\
+    \texttt{used} : bool};
+\node[ttllbl] at ([xshift=2pt, yshift=-2pt]reset.south west)
+    {TTL(expires\_at)};
 
-Практик шийдвэр гаргалтын хүрээний дэлгэрэнгүй тайлбарыг Үр дүнгийн бүлгийн ``Практик шийдвэр гаргалтын хүрээ'' хэсгээс үзнэ үү. Тухайн хэсэгт эрсдэл-өмнөх шалгуур (CV, MaxDD, урт дараалсан алдагдал, win rate CI) болон босгын практик мужийн нөхцөлт тайлбарыг нэгтгэн харуулсан болно.
+%% ── Дохио / Мэдэгдлийн бүлэг (баруун дээр) ──
+\node[grp, minimum width=10.4cm, minimum height=8.0cm] (grpSig) at (8.0, 3.0) {};
+\node[grpttl] at ([xshift=4pt, yshift=-4pt]grpSig.north west)
+    {Дохио / Мэдэгдлийн бүлэг};
+
+\node[collIdx] (signals) at (5.6, 5.4) {%
+    \textbf{signals}\\[2pt]
+    \texttt{pair, symbol, timeframe}\\
+    \texttt{signal} : \{BUY,SELL,HOLD\}\\
+    \texttt{confidence} : float\\
+    \texttt{entry\_price, SL, TP}\\
+    \texttt{run\_id, source, timestamp}};
+\node[idxlbl] at ([xshift=2pt, yshift=-2pt]signals.south west)
+    {unique(source,ts,sym,tf), (pair,created\_at)};
+
+\node[collTtl] (inapp) at (10.5, 5.4) {%
+    \textbf{in\_app\_notifications}\\[2pt]
+    \texttt{type} : \{signal,news,security\}\\
+    \texttt{title, body, data}\\
+    \texttt{created\_at, expires\_at}\\
+    \texttt{read\_by} : [user\_id]};
+\node[ttllbl] at ([xshift=2pt, yshift=-2pt]inapp.south west)
+    {TTL(expires\_at)};
+
+%% ── Мэдээний бүлэг (баруун доор) ──
+\node[grp, minimum width=10.4cm, minimum height=5.5cm] (grpNews) at (8.0, -3.5) {};
+\node[grpttl] at ([xshift=4pt, yshift=-4pt]grpNews.north west)
+    {Мэдээний бүлэг};
+
+\node[collTtl] (ai) at (5.6, -3.7) {%
+    \textbf{ai\_insights}\\[2pt]
+    \texttt{pair, timestamp}\\
+    \texttt{analysis} : string\\
+    \texttt{type, expires\_at}};
+\node[ttllbl] at ([xshift=2pt, yshift=-2pt]ai.south west)
+    {TTL(expires\_at)};
+
+\node[coll] (newsAn) at (10.5, -3.7) {%
+    \textbf{news\_analysis}\\[2pt]
+    \texttt{event, impact}\\
+    \texttt{analysis, sentiment}\\
+    \texttt{timestamp, created\_at}};
+
+\node[coll] (notif) at (8.0, -6.5) {%
+    \textbf{notified\_events}\\[2pt]
+    \texttt{event\_id} : string\\
+    \texttt{notified\_at} : Date};
+
+%% ── Системийн бүлэг (зүүн доор) ──
+\node[grp, minimum width=10.4cm, minimum height=5.5cm] (grpSys) at (-3.0, -3.5) {};
+\node[grpttl] at ([xshift=4pt, yshift=-4pt]grpSys.north west)
+    {Системийн бүлэг};
+
+\node[collTtl] (locks) at (-5.4, -3.7) {%
+    \textbf{job\_locks}\\[2pt]
+    \texttt{job\_name} : string\\
+    \texttt{owner\_id, expires\_at}\\
+    \textit{(хуваарилагдсан түгжээ)}};
+\node[ttllbl] at ([xshift=2pt, yshift=-2pt]locks.south west)
+    {TTL(expires\_at)};
+
+\node[coll] (jobs) at (-0.5, -3.7) {%
+    \textbf{analysis\_jobs}\\[2pt]
+    \texttt{job\_id} : string\\
+    \texttt{status} : \{pending,...,done\}\\
+    \texttt{result, created\_at}};
+
+%% ── Гадаад түлхүүрийн харилцаа (foreign keys) ──
+\draw[fk] (users.east) -- node[font=\tiny, fill=white, inner sep=1pt, midway, above=-1pt]
+    {1\,:\,1} (tokens.west);
+\draw[fk] (users.south) -- node[font=\tiny, fill=white, inner sep=1pt, midway, right=-1pt]
+    {1\,:\,N} (refresh.north);
+\draw[fk] (signals.east) -- node[font=\tiny, fill=white, inner sep=1pt, midway, above=-1pt]
+    {data.signal\_id} (inapp.west);
+
+%% ── Тэмдэглэгээний тайлбар ──
+\node[draw=black!40, dashed, rounded corners=3pt, line width=0.6pt,
+      inner sep=4pt, font=\scriptsize, align=left]
+      at (-3.0, -7.5) {%
+\begin{tabular}{ll}
+\textcolor{blue!60!black}{$\square$} & нэмэлт индекс (unique эсвэл compound)\\
+\textcolor{red!60!black}{$\square$} & TTL индекстэй (хугацааны хязгаартай)\\
+$\dashrightarrow$ & гадаад түлхүүрийн харилцаа (логик холбоо)\\
+\end{tabular}};
+
+\end{tikzpicture}%
+}
+\caption{MongoDB Atlas-д байршсан 12 цуглуулгын схем — индекс ба TTL тохиргоо}
+\label{fig:mongodb_schema}
+\end{figure}
+
+\noindent\textbf{Дизайны зарчмууд:} (1)~\texttt{TTL} индексүүд нь түр зуурын баримтуудыг (verification\_codes, reset\_codes, job\_locks, refresh\_tokens, in\_app\_notifications) автоматаар цэвэрлэж хадгалалтын зайг хэмнэдэг. (2)~\texttt{signals} цуглуулгын \texttt{(source, timestamp, symbol, timeframe)} unique compound индекс нь олон instance-ын зэрэгцээ ажиллагаанд давхардсан дохио үүсэхээс сэргийлдэг (idempotent upsert). (3)~\texttt{job\_locks} цуглуулга нь олон Azure App Service instance-ийн зэрэгцээ ажиллах үед нэг scheduler-ийг зөвхөн нэг instance гүйцэтгэхийг хангадаг.

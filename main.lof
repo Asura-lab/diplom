@@ -1,23 +1,22 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces Давталтат хөгжүүлэлтийн үе шат: 7 давталтаар 75 шинж чанар, 9 загвараас 48 шинж чанар, 3 загварт шилжсэн нь}}{10}{figure.caption.49}%
-\contentsline {figure}{\numberline {3.2}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces Системийн UML Deployment Diagram: хөгжүүлэгчийн компьютер, серверийн орчин, мобайл төхөөрөмж}}{11}{figure.caption.51}%
-\contentsline {figure}{\numberline {3.3}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces Мобайл аппын UML Component Diagram: навигацийн бүтэц, дэлгэцийн давхарга, үйлчилгээний давхарга}}{12}{figure.caption.56}%
-\contentsline {figure}{\numberline {3.4}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces Системийн UML Use Case Diagram: Трейдерийн ашиглах тохиолдлуудын хавтгай}}{13}{figure.caption.58}%
-\contentsline {figure}{\numberline {3.5}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces Өгөгдлийн урсгалын UML Activity Diagram: swimlane-аар дата боловсруулалтын алхмууд}}{14}{figure.caption.60}%
-\contentsline {figure}{\numberline {3.6}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces Урагш гүйлгэн баталгаажуулалт (WFV): энэ судалгааны үнэлгээнд ашигласан нэг огтлолын (Fold 5) өгөгдлийн хуваалт}}{18}{figure.caption.76}%
-\contentsline {figure}{\numberline {3.7}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces GBDT ансамбль загварын архитектур}}{19}{figure.caption.81}%
-\contentsline {figure}{\numberline {3.8}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces Гурван GBDT алгоритмын харьцуулалт: өсөлтийн стратеги, сургалтын хурд, хэт нийцлийн эрсдэл}}{20}{figure.caption.82}%
-\contentsline {figure}{\numberline {3.9}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces Дохионы шүүлтүүрийн юүлүүр диаграмм -- 359,639 таамгаас 3,567 чанартай дохио}}{22}{figure.caption.88}%
-\contentsline {figure}{\numberline {3.10}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces Дохио үүсгэх UML Sequence Diagram --- (A) өгөгдөл татаж таамаглах}}{24}{figure.caption.93}%
-\contentsline {figure}{\numberline {3.11}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces Дохио үүсгэх UML Sequence Diagram --- (B) дохио шүүж хэрэглэгчид хүргэх}}{25}{figure.caption.94}%
-\contentsline {figure}{\numberline {3.12}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces Архитектурын зураглал — (A) REST polling урсгал: харагдах хэсгийн модуль бүр тохирох API endpoint-тай шууд холбогдоно}}{34}{figure.caption.128}%
-\contentsline {figure}{\numberline {3.13}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces Архитектурын зураглал — (B) Push мэдэгдлийн урсгал: серверийн хэсэг FCM-ийг дамжуулан апп руу шуурхай мэдэгдэл хүргэнэ. Сумны чиглэл баруунаас зүүн тийш байна.}}{35}{figure.caption.129}%
-\contentsline {figure}{\numberline {3.14}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces Загварын давталтат сайжруулалтын үе шатууд ба гол өөрчлөлтүүд}}{37}{figure.caption.135}%
+\contentsline {figure}{\numberline {3.1}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces 7 давталтын явцад шинж чанар ба загварын тоог цөөлсөн байдал}}{8}{figure.caption.41}%
+\contentsline {figure}{\numberline {3.2}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces Системийн архитектур}}{8}{figure.caption.43}%
+\contentsline {figure}{\numberline {3.3}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces Дохио үүсгэх ба хүргэх үйл явцын UML үйл ажиллагааны диаграмм}}{10}{figure.caption.45}%
+\contentsline {figure}{\numberline {3.4}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces Олон цаг хугацааны интервал бүхий 48 шинж чанарын инженерчлэлийн матриц}}{12}{figure.caption.52}%
+\contentsline {figure}{\numberline {3.5}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces Урагш гүйлгэн баталгаажуулалт (offline сургалтын үе шат) — Fold 5-ын өгөгдлийн хуваалт}}{14}{figure.caption.60}%
+\contentsline {figure}{\numberline {3.6}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces GBDT ансамбль загварын архитектур}}{17}{figure.caption.72}%
+\contentsline {figure}{\numberline {3.7}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces Дохионы шүүлтүүрийн юүлүүр: 359{,}639 таамгаас 230 хэлцэл хүртэл (0.90 босго)}}{19}{figure.caption.77}%
+\contentsline {figure}{\numberline {3.8}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces Дохионы амьдралын мөчлөгийн төлөвт автомат}}{21}{figure.caption.82}%
+\contentsline {figure}{\numberline {3.9}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces Дохио үүсгэх дараалалтын диаграмм — (A) Таамаглах фаза}}{22}{figure.caption.84}%
+\contentsline {figure}{\numberline {3.10}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces Дохио үүсгэх дараалалтын диаграмм — (B) Шүүх ба хүргэх фаза}}{23}{figure.caption.85}%
+\contentsline {figure}{\numberline {3.11}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces Системийн байршуулалтын диаграмм — Docker, Azure App Service, role-based scaling}}{26}{figure.caption.96}%
+\contentsline {figure}{\numberline {3.12}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces Харагдах хэсэг ба серверийн сервисүүдийн REST polling холболтын архитектур}}{29}{figure.caption.104}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces Босгын мужийн шинжилгээ: гүйцэтгэлийн хувийн өөрчлөлт}}{42}{figure.caption.155}%
-\contentsline {figure}{\numberline {4.2}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces Босгын мужийн шинжилгээ: ялалтын хувь ба 95\% итгэлцлийн интервал}}{43}{figure.caption.157}%
-\contentsline {figure}{\numberline {4.3}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces Босгын мужийн шинжилгээ: хүлээгдэж буй өгөөжийн өөрчлөлт}}{43}{figure.caption.159}%
-\contentsline {figure}{\numberline {4.4}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces Хамгийн өндөр өгөөжтэй 3 босгын equity curve — MT5 бодит хэлцлийн лог дээр суурилсан}}{44}{figure.caption.161}%
-\contentsline {figure}{\numberline {В.1}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces WFV олон огтлолтын ерөнхий концепцын схем (Fold 1--Fold 5 expand window protocol)}}{55}{figure.caption.212}%
+\contentsline {figure}{\numberline {4.1}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces Босгын мужийн шинжилгээ: гүйцэтгэлийн хувийн өөрчлөлт}}{35}{figure.caption.127}%
+\contentsline {figure}{\numberline {4.2}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces Босгын мужийн шинжилгээ: ялалтын хувь ба 95\% итгэлцлийн интервал}}{35}{figure.caption.129}%
+\contentsline {figure}{\numberline {4.3}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces Босгын мужийн шинжилгээ: хүлээгдэж буй өгөөжийн өөрчлөлт}}{36}{figure.caption.131}%
+\contentsline {figure}{\numberline {4.4}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces Хамгийн өндөр өгөөжтэй 3 босгын хөрөнгийн өөрчлөлтийн муруй}}{36}{figure.caption.133}%
+\contentsline {figure}{\numberline {Б.1}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces WFV олон огтлолтын ерөнхий концепцын схем (Fold 1--Fold 5 expand window protocol)}}{44}{figure.caption.171}%
+\contentsline {figure}{\numberline {Б.2}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces MongoDB Atlas-д байршсан 12 цуглуулгын схем — индекс ба TTL тохиргоо}}{47}{figure.caption.177}%

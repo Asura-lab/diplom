@@ -1,0 +1,180 @@
+%% =====================================================================
+%% BACKUP: Системийн байршуулалтын диаграмм (Deployment Diagram)
+%% =====================================================================
+%% Эх байршил: Chapters/Chapter3_Methodology.tex §3.2 (мөр 50-216)
+%% Хадгалсан огноо: 2026-05-24
+%% Шалтгаан: Системийн архитектурын шинэ диаграмм гаргахын өмнө байршуулалтын
+%%           диаграммын анхны код үлдээх (зохиогчийн зөвшөөрөл).
+%%
+%% Хэрэглэх заавар: Энэ файлыг \include{} эсвэл \input{} аргаар үндсэн
+%%                  баримтад хавсаргаж болно. Үндсэн баримтад өөрчлөлт
+%%                  хийгдсэнгүй.
+%% =====================================================================
+
+\begin{figure}[H]
+\centering
+\adjustbox{max width=\textwidth}{%
+\begin{tikzpicture}[
+    comp/.style={
+        rectangle, draw=black!75, fill=white, line width=0.9pt,
+        minimum width=3.0cm, minimum height=1.5cm,
+        align=center, font=\normalsize
+    },
+    artf/.style={
+        rectangle, draw=black!65, fill=gray!4, line width=0.85pt,
+        minimum width=2.8cm, minimum height=1.1cm,
+        align=center, font=\normalsize\itshape
+    },
+    DEP/.style={-{Triangle[open, length=4mm, width=3mm]}, dashed, black!70, line width=1.0pt},
+    MAN/.style={-{Triangle[open, length=3.5mm, width=2.5mm]}, dashed, black!60, line width=0.9pt},
+    COMM/.style={black, line width=1.4pt},
+    SIG/.style={-{Stealth[length=3.5mm,width=2.5mm]}, dashed, black!75, line width=1.0pt},
+    cloudnode/.style={cloud, cloud puffs=12, cloud puff arc=120, cloud ignores aspect,
+                  draw=black!60, fill=gray!4, line width=0.9pt,
+                  minimum width=3.2cm, minimum height=1.8cm,
+                  align=center, font=\normalsize},
+    stereo/.style={font=\normalsize\itshape, fill=white, inner sep=1.5pt},
+]
+
+
+%% ══════════════════════════════════════════════
+%% NODE A: «device» Хөгжүүлэгчийн Компьютер  (offline training)
+%% ══════════════════════════════════════════════
+\def\naTop{11.5} \def\naBot{8.5}
+\def\naLeft{-7.0} \def\naRight{7.0}
+\fill[gray!8] (\naLeft,\naTop-0.85) rectangle (\naRight,\naTop);
+\draw[black, line width=1.3pt] (\naLeft,\naBot) rectangle (\naRight,\naTop);
+\draw[black, line width=0.9pt] (\naLeft,\naTop-0.85) -- (\naRight,\naTop-0.85);
+\node[font=\large\itshape, anchor=west]
+    at (\naLeft+0.25, \naTop-0.28) {«device»};
+\node[font=\large\bfseries, anchor=west]
+    at (\naLeft+0.25, \naTop-0.62) {Хөгжүүлэгчийн Компьютер {\normalsize\itshape(offline training)}};
+
+%% GBDT Training Pipeline
+\node[comp, minimum width=4.5cm] (gbdtpipe)
+    at (-2.5, 9.5) {GBDT Training Pipeline\\{\small LGB · XGB · CatBoost}};
+
+%% model.pkl artifact
+\node[artf] (pkl) at (4.5, 9.5) {«artifact»\\\textit{model.pkl}};
+\fill[gray!22]
+    ($(pkl.north east)+(-0.35,0)$) --
+    (pkl.north east) --
+    ($(pkl.north east)+(0,-0.35)$) -- cycle;
+\draw[black!55, line width=0.55pt]
+    ($(pkl.north east)+(-0.35,0)$) -- ($(pkl.north east)+(0,-0.35)$);
+
+%% «manifest»: GBDT Pipeline → model.pkl (direct, no obstacle — WFV removed)
+\draw[MAN] (gbdtpipe.east) -- node[above, stereo] {«manifest»} (pkl.west);
+
+%% ══════════════════════════════════════════════
+%% NODE B: «executionEnvironment» Flask Сервер
+%% Row 1 (y=5.2): pklrt — top-left, isolated
+%% Row 2 (y=3.2): flaskapi · sched · mongo
+%% Right column: expcomp (y=5.0) / gemcomp (y=2.4)
+%% ══════════════════════════════════════════════
+\def\nbTop{7.0} \def\nbBot{0.8}
+\def\nbLeft{-7.0} \def\nbRight{7.0}
+\fill[gray!8] (\nbLeft,\nbTop-0.85) rectangle (\nbRight,\nbTop);
+\draw[black, line width=1.3pt] (\nbLeft,\nbBot) rectangle (\nbRight,\nbTop);
+\draw[black, line width=0.9pt] (\nbLeft,\nbTop-0.85) -- (\nbRight,\nbTop-0.85);
+\node[font=\large\itshape, anchor=west]
+    at (\nbLeft+0.25, \nbTop-0.28) {«executionEnvironment»};
+\node[font=\large\bfseries, anchor=west]
+    at (\nbLeft+0.25, \nbTop-0.62) {Flask Сервер {\normalsize\itshape(Docker · Azure App Service)}};
+
+%% Deployed artifact (top-left, own row — clear of row-2 components)
+\node[artf, minimum width=2.2cm, minimum height=0.9cm, font=\small\itshape]
+    (pklrt) at (2.5, 5.2) {\textit{model.pkl}};
+\fill[gray!22]
+    ($(pklrt.north east)+(-0.28,0)$) --
+    (pklrt.north east) --
+    ($(pklrt.north east)+(0,-0.28)$) -- cycle;
+\draw[black!55, line width=0.45pt]
+    ($(pklrt.north east)+(-0.28,0)$) -- ($(pklrt.north east)+(0,-0.28)$);
+
+%% Flask REST API (role=api)
+\node[comp] (flaskapi) at (-1.0, 3.2) {Flask REST API\\{\scriptsize role=api}};
+
+%% Background Worker (role=worker) — APScheduler + threading
+\node[comp] (sched) at (-4.5, 3.2) {Background Worker\\{\scriptsize role=worker}};
+
+%% MongoDB Atlas with job_locks for distributed coordination
+\node[comp] (mongo) at (2.5, 3.2) {MongoDB Atlas\\{\small «datastore»}\\{\scriptsize +~job\_locks (TTL)}};
+
+%% Expo Push SDK (right column, upper)
+\node[comp, minimum width=2.4cm] (expcomp) at (5.6, 2.4) {Expo Push\\SDK};
+
+%% Gemini SDK (right column, lower)
+\node[comp, minimum width=2.4cm] (gemcomp) at (5.6, 5.0) {Gemini SDK\\{\small client}};
+
+%% ══════════════════════════════════════════════
+%% NODE C: «device» Android Утас
+%% ══════════════════════════════════════════════
+\def\ncTop{-0.2} \def\ncBot{-4.0}
+\def\ncLeft{-7.0} \def\ncRight{7.0}
+\fill[gray!8] (\ncLeft,\ncTop-0.85) rectangle (\ncRight,\ncTop);
+\draw[black, line width=1.3pt] (\ncLeft,\ncBot) rectangle (\ncRight,\ncTop);
+\draw[black, line width=0.9pt] (\ncLeft,\ncTop-0.85) -- (\ncRight,\ncTop-0.85);
+\node[font=\large\itshape, anchor=west]
+    at (\ncLeft+0.25, \ncTop-0.28) {«device»};
+\node[font=\large\bfseries, anchor=west]
+    at (\ncLeft+0.25, \ncTop-0.62) {Android Утас};
+
+%% React Native App nested component
+\draw[black!75, line width=0.95pt] (-6.5,-1.5) rectangle (6.5,-3.7);
+\node[font=\normalsize\bfseries, anchor=west] at (-6.1,-1.90)
+    {«component» React Native App};
+\node[font=\normalsize, text=black!70, anchor=west] at (-6.2,-2.55)
+    {Дэлгэц: Prediction · Rates · News · Profile · Login · Register};
+\node[font=\normalsize, text=black!70, anchor=west] at (-6.2,-3.20)
+    {Үйлчилгээ: API Service · AuthTokenStorage · Push Handler};
+
+%% ══════════════════════════════════════════════
+%% EXTERNAL CLOUD SERVICES
+%% ══════════════════════════════════════════════
+\node[cloudnode] (yfincloud) at (-10.5, 4.5)
+    {«cloud»\\Yahoo Finance\\{\small yfinance}};
+\node[cloudnode] (newscloud) at (-10.5, 1.7)
+    {«cloud»\\News APIs\\{\small AlphaVantage · TV}};
+\node[cloudnode] (expcloud) at (10.5, 2.4)
+    {«cloud»\\Expo Push API\\{\small exp.host}};
+\node[cloudnode] (gemcloud) at (10.5, 5.0)
+    {«cloud»\\Gemini API\\{\small Google AI}};
+
+%% ══════════════════════════════════════════════
+%% RELATIONS (UML 2.5)
+%% ══════════════════════════════════════════════
+
+%% «deploy»: pkl → inter-node gap (y=7.7) → pklrt (now at x=2.5)
+\draw[DEP] (pkl.south) -- (4.5,7.7) -- (2.5,7.7) -- (pklrt.north)
+    node[pos=0.4, stereo, above=3pt] {«deploy»};
+
+%% Communication: Flask REST API ↔ Android
+\draw[COMM] (flaskapi.south) -- (-1.0,\ncTop)
+    node[midway, stereo, above=3pt] {«HTTPS/REST»};
+
+%% Communication: Expo Push SDK → Expo Push API
+\draw[COMM] (expcomp.east) -- (expcloud.west)
+    node[midway, stereo, above=3pt] {«HTTPS»};
+
+%% Async: Expo Push API → Android right border (vertical down then horizontal left)
+\draw[SIG] (expcloud.south) |- (\ncRight,-1.5)
+    node[midway, stereo, above=3pt] {«Expo push»};
+
+%% Communication: Gemini SDK → Gemini API
+\draw[COMM] (gemcomp.east) -- (gemcloud.west)
+    node[midway, stereo, above=3pt] {«HTTPS»};
+
+%% Communication: Yahoo Finance → Background Threads (horizontal at y=4.5 → down to sched)
+\draw[COMM] (yfincloud.east) -| (sched.north)
+    node[pos=0.5, stereo, above=3pt] {«HTTPS/pull»};
+
+%% Communication: News APIs → Background Threads (horizontal at y=1.7 → up to sched)
+\draw[COMM] (newscloud.east) -| (sched.south)
+    node[pos=0.5, stereo, above=3pt] {«HTTPS/pull»};
+
+\end{tikzpicture}%
+}
+\caption{Системийн байршуулалтын диаграмм}
+\label{fig:system_architecture}
+\end{figure}

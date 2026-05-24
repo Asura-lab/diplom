@@ -49,6 +49,29 @@ Zihao Zhang, Stefan Zohren, and Stephen Roberts.
   literature review.
 \newblock {\em Applied Soft Computing}, 97, 2019.
 
+\bibitem{yildirim2021forecasting}
+Deniz~Can Yildirim, Ismail~Hakki Toroslu, and Ugo Fiore.
+\newblock Forecasting directional movement of {Forex} data using {LSTM} with
+  technical and macroeconomic indicators.
+\newblock {\em Financial Innovation}, 7(1), 2021.
+
+\bibitem{ozbayoglu2020deep}
+Ahmet~Murat Ozbayoglu, Mehmet~Ugur Gudelek, and Omer~Berat Sezer.
+\newblock Deep learning for financial applications: A survey.
+\newblock {\em Applied Soft Computing}, 93:106384, 2020.
+
+\bibitem{nie2023patchtst}
+Yuqi Nie, Nam Nguyen, Phanwadee Sinthong, and Jayant Kalagnanam.
+\newblock A time series is worth 64 words: Long-term forecasting with
+  transformers.
+\newblock {\em International Conference on Learning Representations}, 2023.
+
+\bibitem{wu2023timesnet}
+Haixu Wu, Jiehui Xu, Jianmin Wang, and Mingsheng Long.
+\newblock Timesnet: Temporal 2d-variation modeling for general time series
+  analysis.
+\newblock {\em International Conference on Learning Representations}, 2023.
+
 \bibitem{krauss2017deep}
 Christopher Krauss, Xuan~Anh Do, and Nicolas Huck.
 \newblock Deep neural networks, gradient-boosted trees, random forests:
@@ -90,20 +113,15 @@ Omer~Berat Sezer, Mehmet~U. Gudelek, and A.~Murat Ozbayoglu.
   literature review: 2005--2019.
 \newblock {\em Applied Soft Computing}, 90:106181, 2020.
 
-\bibitem{fama1970efficient}
-Eugene~F. Fama.
-\newblock Efficient capital markets: A review of theory and empirical work.
-\newblock {\em The Journal of Finance}, 25(2):383--417, 1970.
-
-\bibitem{murphy1999technical}
-John~J. Murphy.
-\newblock {\em Technical Analysis of the Financial Markets}.
-\newblock New York Institute of Finance, 1999.
-
 \bibitem{lo2000foundations}
 Andrew~W Lo, Harry Mamaysky, and Jiang Wang.
 \newblock Foundations of technical analysis.
 \newblock {\em The Journal of Finance}, 55(4):1705--1765, 2000.
+
+\bibitem{fama1970efficient}
+Eugene~F. Fama.
+\newblock Efficient capital markets: A review of theory and empirical work.
+\newblock {\em The Journal of Finance}, 25(2):383--417, 1970.
 
 \bibitem{olson2004have}
 Dennis Olson.
@@ -162,5 +180,10 @@ Ken Peffers, Tuure Tuunanen, Marcus~A Rothenberger, and Samir Chatterjee.
 \newblock A design science research methodology for information systems
   research.
 \newblock {\em Journal of Management Information Systems}, 24(3):45--77, 2007.
+
+\bibitem{murphy1999technical}
+John~J. Murphy.
+\newblock {\em Technical Analysis of the Financial Markets}.
+\newblock New York Institute of Finance, 1999.
 
 \end{thebibliography}
