@@ -7,6 +7,10 @@
 %% ============================================================
 \section*{Хавсралт А: Нэвчилтийн аудитын нарийвчилсан дүрэм}
 \label{app:leakage_audit}
+\renewcommand{\thetable}{А.\arabic{table}}
+\renewcommand{\thefigure}{А.\arabic{figure}}
+\setcounter{table}{0}
+\setcounter{figure}{0}
 
 \subsection*{Цагийн нийцлийн дүрэм}
 
@@ -38,72 +42,115 @@ RSI, ATR & $t_0$-г оруулаад өмнөх өгөгдлөөс тооцох 
 %% ============================================================
 \section*{Хавсралт Б: Урагш гүйлгэн баталгаажуулалтын олон огтлолын схем}
 \label{app:wfv_multifold}
-
-\subsection*{WFV олон огтлолт (expanding window) протокол}
-
-Урагш гүйлгэн баталгаажуулалтыг цаг хугацааны дараалал хадгалсан \textbf{олон огтлолт, өргөтгөх сургалтын цонх} (expanding window) протоколоор хэрэгжүүлсэн. Өөрөөр хэлбэл Fold 1--Fold 5 огтлол бүрт сургалт\(\to\)баталгаажуулалт\(\to\)тестийн алхмыг урагшлуулан давтаж, ирээдүйн мэдээлэл сургалтад нэвтрэх эрсдэлийг хязгаарласан.
-
-\noindent\textbf{Олон огтлолтын ерөнхий алхамт логик:}
-\begin{enumerate}
-    \item Эхний хугацааны огтлолд өмнөх жилүүдээр загвар сургана (Fold 1: 2015--2017)
-    \item Дараагийн хугацааны огтлолд баталгаажуулалт/шалгалт (эрт зогсоолт, calibration) хийнэ
-    \item Дараагийн огтлол руу шилжихдээ сургалтын цонхыг урагшлуулж дахин сургана (Fold 2: 2015--2018, ..., Fold 5: 2015--2022)
-    \item Эцсийн үнэлгээнд сүүлийн огтлолын (Fold 5) түүврийн гадуурх (out-of-sample) гүйцэтгэлийг ашиглана (2024 тестийн өгөгдөл)
-\end{enumerate}
+\renewcommand{\thetable}{Б.\arabic{table}}
+\renewcommand{\thefigure}{Б.\arabic{figure}}
+\setcounter{table}{0}
+\setcounter{figure}{0}
 
 \subsection*{WFV олон огтлолын концепцын схем}
 
-\renewcommand{\thefigure}{Б.\arabic{figure}}
-\setcounter{figure}{0}
+Үндсэн бичвэрийн §\ref{subsec:wfv_logic}-т тайлбарласан \textbf{олон огтлол, өргөтгөх сургалтын цонх} (expanding window) протоколын Fold 1--Fold 5-ийн хуваарийг нэг зурагт төвлөрүүлэн харуулав.
+
 \begin{figure}[H]
 \centering
+\adjustbox{max width=\textwidth}{%
 \begin{tikzpicture}[
-    fold_train/.style={rectangle, fill=blue!50, draw=blue!80, line width=1pt, minimum height=0.8cm},
-    fold_val/.style={rectangle, fill=orange!60, draw=orange!80, line width=1pt, minimum height=0.8cm},
-    fold_test/.style={rectangle, fill=red!50, draw=red!80, line width=1pt, minimum height=0.8cm},
-    lbl/.style={font=\small\bfseries, text=black},
+    %% Каноник палитр: train=blue, val=orange, test=red — fig:wfv_timeline-тэй нэгдсэн дизайн
+    block/.style={rectangle, minimum height=0.7cm, draw=none,
+                  font=\scriptsize\bfseries, text=white, align=center},
+    rowlbl/.style={font=\small\bfseries, text=black!82, anchor=east},
+    lbl/.style={font=\scriptsize, text=black!82},
+    yr/.style={font=\tiny, text=black!60},
 ]
 
-\node[lbl] at (-0.5, 5.5) {Fold 1:};
-\node[fold_train] at (2, 5.5) {2015--2017};
-\node[fold_val] at (4, 5.5) {2017};
-\node[fold_test] at (5.2, 5.5) {2018};
+%% ── Хугацааны тэнхлэг (доод тал) ──
+\draw[-{Stealth[length=5pt 1.5, width'=0pt 0.6, sep=0pt 0.5]}, line width=1.0pt, color=black!72]
+    (0, 0.4) -- (14, 0.4) node[right, font=\small, text=black!82] {хугацаа};
 
-\node[lbl] at (-0.5, 4.5) {Fold 2:};
-\node[fold_train] at (2, 4.5) {2015--2018};
-\node[fold_val] at (4, 4.5) {2018};
-\node[fold_test] at (5.2, 4.5) {2019};
+%% ── Жилийн тэмдэглэл (1 жил = 1.3 unit, Зураг 3.4-тэй ижил) ──
+\foreach \x/\y in {0.3/2015, 1.6/2016, 2.9/2017, 4.2/2018, 5.5/2019, 6.8/2020,
+                   8.1/2021, 9.4/2022, 10.7/2023, 12.0/2024, 13.3/2025} {
+    \draw[black!40] (\x, 0.4) -- (\x, 0.55);
+    \node[yr] at (\x, 0.18) {\y};
+}
 
-\node[lbl] at (-0.5, 3.5) {Fold 3:};
-\node[fold_train] at (2, 3.5) {2015--2019};
-\node[fold_val] at (4, 3.5) {2019};
-\node[fold_test] at (5.2, 3.5) {2020};
+%% ══════════════════════════════════════════════════════════
+%% Fold блокуудыг зурах макро (start, end_train, end_val, end_test, y, label)
+%% ══════════════════════════════════════════════════════════
+%% Fold 1 — train 2015–2018 (4 жил), val 2019, test 2020
+\node[rowlbl] at (-0.05, 5.5) {Fold 1:};
+\fill[blue!65,        rounded corners=3pt] (0.3, 5.15) rectangle (5.5, 5.85);
+\fill[orange!85!black, rounded corners=3pt] (5.5, 5.15) rectangle (6.8, 5.85);
+\fill[red!70!black,   rounded corners=3pt] (6.8, 5.15) rectangle (8.1, 5.85);
+\node[block] at (2.9, 5.5)  {Сургалт 2015--2018};
+\node[block, font=\scriptsize\bfseries] at (6.15, 5.5) {Val\\\tiny 2019};
+\node[block, font=\scriptsize\bfseries] at (7.45, 5.5) {Тест\\\tiny 2020};
 
-\node[lbl] at (-0.5, 2.5) {Fold 4:};
-\node[fold_train] at (2, 2.5) {2015--2020};
-\node[fold_val] at (4, 2.5) {2020};
-\node[fold_test] at (5.2, 2.5) {2021};
+%% Fold 2 — train 2015–2019 (5 жил), val 2020, test 2021
+\node[rowlbl] at (-0.05, 4.5) {Fold 2:};
+\fill[blue!65,        rounded corners=3pt] (0.3, 4.15) rectangle (6.8, 4.85);
+\fill[orange!85!black, rounded corners=3pt] (6.8, 4.15) rectangle (8.1, 4.85);
+\fill[red!70!black,   rounded corners=3pt] (8.1, 4.15) rectangle (9.4, 4.85);
+\node[block] at (3.55, 4.5) {Сургалт 2015--2019};
+\node[block, font=\scriptsize\bfseries] at (7.45, 4.5) {Val\\\tiny 2020};
+\node[block, font=\scriptsize\bfseries] at (8.75, 4.5) {Тест\\\tiny 2021};
 
-\node[lbl] at (-0.5, 1.5) {Fold 5:};
-\node[fold_train] at (2, 1.5) {2015--2022};
-\node[fold_val] at (4, 1.5) {2023};
-\node[fold_test] at (5.2, 1.5) {2024};
+%% Fold 3 — train 2015–2020 (6 жил), val 2021, test 2022
+\node[rowlbl] at (-0.05, 3.5) {Fold 3:};
+\fill[blue!65,        rounded corners=3pt] (0.3, 3.15) rectangle (8.1, 3.85);
+\fill[orange!85!black, rounded corners=3pt] (8.1, 3.15) rectangle (9.4, 3.85);
+\fill[red!70!black,   rounded corners=3pt] (9.4, 3.15) rectangle (10.7, 3.85);
+\node[block] at (4.2, 3.5)  {Сургалт 2015--2020};
+\node[block, font=\scriptsize\bfseries] at (8.75, 3.5)  {Val\\\tiny 2021};
+\node[block, font=\scriptsize\bfseries] at (10.05, 3.5) {Тест\\\tiny 2022};
 
-\draw[-{Stealth[length=2.5mm]}, thick, gray!50] (0.2, 0.8) -- (6, 0.8);
-\node[font=\small] at (3, 0.3) {хугацаа (цаг хугацааны дараалал)};
+%% Fold 4 — train 2015–2021 (7 жил), val 2022, test 2023
+\node[rowlbl] at (-0.05, 2.5) {Fold 4:};
+\fill[blue!65,        rounded corners=3pt] (0.3, 2.15) rectangle (9.4, 2.85);
+\fill[orange!85!black, rounded corners=3pt] (9.4, 2.15) rectangle (10.7, 2.85);
+\fill[red!70!black,   rounded corners=3pt] (10.7, 2.15) rectangle (12.0, 2.85);
+\node[block] at (4.85, 2.5) {Сургалт 2015--2021};
+\node[block, font=\scriptsize\bfseries] at (10.05, 2.5) {Val\\\tiny 2022};
+\node[block, font=\scriptsize\bfseries] at (11.35, 2.5) {Тест\\\tiny 2023};
 
-\end{tikzpicture}
-\caption{WFV олон огтлолтын ерөнхий концепцын схем (Fold 1--Fold 5 expand window protocol)}
+%% Fold 5 — train 2015–2022 (8 жил), val 2023, test 2024  ← KPI үнэлгээнд ашиглагдсан
+\node[rowlbl] at (-0.05, 1.5) {Fold 5:};
+\fill[blue!65,        rounded corners=3pt] (0.3, 1.15) rectangle (10.7, 1.85);
+\fill[orange!85!black, rounded corners=3pt] (10.7, 1.15) rectangle (12.0, 1.85);
+\fill[red!70!black,   rounded corners=3pt] (12.0, 1.15) rectangle (13.3, 1.85);
+\node[block] at (5.5, 1.5)  {Сургалт 2015--2022};
+\node[block, font=\scriptsize\bfseries] at (11.35, 1.5) {Val\\\tiny 2023};
+\node[block, font=\scriptsize\bfseries] at (12.65, 1.5) {Тест\\\tiny 2024};
+
+%% Fold 5-ийг онцлох тэмдэглэгээ
+\node[font=\scriptsize\itshape, text=black!65, anchor=west] at (13.55, 1.5)
+    {← KPI үнэлгээ};
+
+%% ── Тэмдэглэгээ (legend) ──
+\fill[blue!65, rounded corners=2pt]        (0.3, -0.7) rectangle (0.8, -0.4);
+\node[lbl, right] at (0.85, -0.55) {Сургалт (expanding)};
+\fill[orange!85!black, rounded corners=2pt] (4.0, -0.7) rectangle (4.5, -0.4);
+\node[lbl, right] at (4.55, -0.55) {Баталгаажуулалт};
+\fill[red!70!black, rounded corners=2pt]   (7.5, -0.7) rectangle (8.0, -0.4);
+\node[lbl, right] at (8.05, -0.55) {Тест};
+
+\end{tikzpicture}%
+}
+\caption{WFV олон огтлолын ерөнхий концепцын схем (Fold 1--Fold 5 expanding window protocol)}
 \label{fig:wfv_rolling_scheme}
 \end{figure}
 
-\noindent\textit{Тайлбар:} Энэ схем нь Fold 1--Fold 5 протоколыг \textbf{нэг зурагт} жилээр нь харуулсан: бүх Fold-ийн сургалт 2015-аас эхэлж, Fold өсөх тусам сургалтын цонх өргөжин, баталгаажуулалт ба тестийн цонх урагш шилжинэ. Энэ судалгааны KPI үнэлгээнд нэг огтлолын (Fold 5) дэлгэрэнгүй хуваалт ашиглагдсан (үндсэн бичвэрийн Figure 4.6-г үзнэ үү).
+\noindent\textit{Тайлбар:} Бүх Fold-ийн сургалт 2015-аас эхэлж, Fold өсөх тусам сургалтын цонх жил жилээр өргөжин (4 → 5 → 6 → 7 → 8 жил), баталгаажуулалт ба тестийн цонх урагш шилждэг \emph{expanding window} протокол. Сургалтын блокын урт нь бодит хугацааны хэмжээтэй пропорциональ зурагдсан тул дээд folds бага, доод folds (Fold 5) хамгийн урт болж харагдана. Энэ судалгааны KPI үнэлгээнд Fold 5-ын хуваалт ашиглагдсан (үндсэн бичвэрийн \fref{fig:wfv_timeline}-ийг үзнэ үү).
 
 %% ============================================================
 %% Хавсралт В: Архитектурын KPI-ийн хэмжилтийн нөхцөл
 %% ============================================================
 \section*{Хавсралт В: Архитектурын KPI-ийн хэмжилтийн нөхцөл}
 \label{app:kpi_measurement}
+\renewcommand{\thetable}{В.\arabic{table}}
+\renewcommand{\thefigure}{В.\arabic{figure}}
+\setcounter{table}{0}
+\setcounter{figure}{0}
 
 \subsection*{Архитектурын хэмжигдэх KPI ба баталгаажуулалтын протокол}
 
@@ -129,7 +176,7 @@ Push урсгал & Notification delivery rate & $\geq$ 98\% & Push сервис
 
 API давхаргын p95 latency хэмжилтийг дараах нөхцөлд явуулсан:
 \begin{itemize}
-    \item \textbf{Эх цэг}: Улаанбаатар (Mongolia)
+    \item \textbf{Хэмжилтийн байршил}: Улаанбаатар (Монгол улс)
     \item \textbf{Серверийн байршил}: Токио (Japan East, Azure App Service)
     \item \textbf{Сүлжээний RTT}: дунджаа 150--180ms
     \item \textbf{Хүсэлтийн тоо}: Эндпойнт тутамд n=30 хүсэлт
@@ -168,6 +215,10 @@ API давхаргын p95 latency 471--536ms байсан нь зорилтот
 %% ============================================================
 \section*{Хавсралт Г: Эх сурвалжийн нэгтгэлийн дүрэм}
 \label{app:data_aggregation}
+\renewcommand{\thetable}{Г.\arabic{table}}
+\renewcommand{\thefigure}{Г.\arabic{figure}}
+\setcounter{table}{0}
+\setcounter{figure}{0}
 
 \subsection*{Үр дүнгийн өгөгдлийн эх сурвалж ба reproducibility}
 
@@ -176,170 +227,106 @@ API давхаргын p95 latency 471--536ms байсан нь зорилтот
 %% ============================================================
 %% Хавсралт Д: MongoDB схемийн диаграмм
 %% ============================================================
-\section*{Хавсралт Д: MongoDB цуглуулгын схемийн диаграмм}
+\section*{Хавсралт Д: MongoDB цуглуулгын схемийн хүснэгт}
 \label{app:mongodb_schema}
+\renewcommand{\thetable}{Д.\arabic{table}}
+\renewcommand{\thefigure}{Д.\arabic{figure}}
+\setcounter{table}{0}
+\setcounter{figure}{0}
 
-Системийн өгөгдлийн тогтвортой давхарга нь MongoDB Atlas үүлэн дээр байршуулсан 12 цуглуулгаас бүрдэх ба тэдгээрийг гүйцэтгэх үүргээр нь Хэрэглэгчийн, Дохио-Мэдэгдлийн, Мэдээний болон Системийн гэсэн 4 бүлэгт ангилав. Цуглуулгын бүтэц, гол индекс ба TTL (Time-To-Live) тохиргоог \fref{fig:mongodb_schema}-т харуулсан. Хэрэглэгчийн \texttt{\_id} нь \texttt{push\_tokens}, \texttt{refresh\_tokens} цуглуулгын \texttt{user\_id} талбартай гадаад түлхүүрийн харьцаатай ба \texttt{signals.\_id} нь \texttt{in\_app\_notifications.data.signal\_id}-тэй холбогдоно.
+Системийн өгөгдлийн тогтвортой давхарга нь MongoDB Atlas үүлэн дээр байршуулсан 12 цуглуулгаас бүрдэх ба тэдгээрийг гүйцэтгэх үүргээр нь Хэрэглэгчийн, Дохио-Мэдэгдлийн, Мэдээний болон Системийн гэсэн 4 бүлэгт ангилав. Цуглуулга бүрийн гол талбарууд, индекс ба TTL (Time-To-Live) тохиргоог \tref{tab:mongodb_schema}-т нэгтгэв.
 
-\begin{figure}[H]
+\begin{table}[H]
 \centering
-\adjustbox{max width=\textwidth}{%
-\begin{tikzpicture}[
-    coll/.style={rectangle, draw=black!75, fill=white, line width=0.9pt,
-                 minimum width=4.6cm, minimum height=2.2cm, align=left,
-                 font=\scriptsize, inner sep=4pt, rounded corners=3pt},
-    collTtl/.style={coll, draw=red!55, fill=red!4},
-    collIdx/.style={coll, draw=blue!55, fill=blue!4},
-    grp/.style={rectangle, draw=black!40, fill=gray!4, line width=0.7pt,
-                rounded corners=6pt, dashed, inner sep=8pt},
-    grpttl/.style={font=\small\bfseries, anchor=north west, text=black!70},
-    fk/.style={-{Stealth[length=2.5mm]}, line width=0.7pt, color=black!55, dashed},
-    hdr/.style={font=\scriptsize\bfseries},
-    fld/.style={font=\scriptsize, anchor=west},
-    idxlbl/.style={font=\tiny\itshape, text=blue!60!black, anchor=west},
-    ttllbl/.style={font=\tiny\itshape, text=red!60!black, anchor=west},
-]
+\caption{MongoDB Atlas-д байршсан 12 цуглуулгын схем — гол талбарууд, индекс ба TTL тохиргоо}
+\label{tab:mongodb_schema}
+\renewcommand{\arraystretch}{1.20}
+\setlength{\tabcolsep}{3pt}
+\footnotesize
+\begin{tabularx}{\textwidth}{|>{\raggedright\arraybackslash}p{3.0cm}|>{\raggedright\arraybackslash}X|>{\raggedright\arraybackslash}p{3.0cm}|>{\centering\arraybackslash}p{1.9cm}|}
+\hline
+\textbf{Цуглуулга} & \textbf{Гол талбарууд} & \textbf{Индекс} & \textbf{TTL} \\ \hline
+\multicolumn{4}{|l|}{\cellcolor{black!5}\textit{1. Хэрэглэгчийн бүлэг}} \\ \hline
+\texttt{users} & \texttt{\_id}, \texttt{email}, \texttt{password\_hash}, \texttt{name}, \texttt{created\_at} & \textcolor{orange!85!black}{unique(email)} & --- \\ \hline
+\texttt{push\_tokens} & \texttt{user\_id}, \texttt{push\_token}, \texttt{platform}, \texttt{notifications\_enabled}, \texttt{signal\_threshold} & \textcolor{orange!85!black}{unique(user\_id)} & --- \\ \hline
+\texttt{refresh\_tokens} & \texttt{user\_id}, \texttt{token\_hash}, \texttt{expires\_at}, \texttt{created\_at} & --- & \textcolor{red!70!black}{\texttt{expires\_at}} \\ \hline
+\texttt{verification\_codes} & \texttt{email}, \texttt{code} (OTP), \texttt{expires\_at} (+10мин), \texttt{created\_at} & --- & \textcolor{red!70!black}{\texttt{expires\_at}} \\ \hline
+\texttt{reset\_codes} & \texttt{email}, \texttt{code}, \texttt{expires\_at}, \texttt{used} & --- & \textcolor{red!70!black}{\texttt{expires\_at}} \\ \hline
+\multicolumn{4}{|l|}{\cellcolor{black!5}\textit{2. Дохио / Мэдэгдлийн бүлэг}} \\ \hline
+\texttt{signals} & \texttt{pair}, \texttt{symbol}, \texttt{timeframe}, \texttt{signal} \{BUY,SELL,HOLD\}, \texttt{confidence}, \texttt{entry\_price}, \texttt{SL}, \texttt{TP}, \texttt{run\_id}, \texttt{source}, \texttt{timestamp} & \textcolor{orange!85!black}{unique(source, ts, sym, tf); (pair, created\_at)} & --- \\ \hline
+\texttt{in\_app\_\allowbreak notifications} & \texttt{type} \{signal, news, security\}, \texttt{title}, \texttt{body}, \texttt{data}, \texttt{created\_at}, \texttt{expires\_at}, \texttt{read\_by}: [user\_id] & --- & \textcolor{red!70!black}{\texttt{expires\_at}} \\ \hline
+\multicolumn{4}{|l|}{\cellcolor{black!5}\textit{3. Мэдээний бүлэг}} \\ \hline
+\texttt{ai\_insights} & \texttt{pair}, \texttt{timestamp}, \texttt{analysis}, \texttt{type}, \texttt{expires\_at} & --- & \textcolor{red!70!black}{\texttt{expires\_at}} \\ \hline
+\texttt{news\_analysis} & \texttt{event}, \texttt{impact}, \texttt{analysis}, \texttt{sentiment}, \texttt{timestamp}, \texttt{created\_at} & --- & --- \\ \hline
+\texttt{notified\_events} & \texttt{event\_id}, \texttt{notified\_at} & --- & --- \\ \hline
+\multicolumn{4}{|l|}{\cellcolor{black!5}\textit{4. Системийн бүлэг}} \\ \hline
+\texttt{job\_locks} & \texttt{job\_name}, \texttt{owner\_id}, \texttt{expires\_at} \textit{(хуваарилагдсан түгжээ)} & --- & \textcolor{red!70!black}{\texttt{expires\_at}} \\ \hline
+\texttt{analysis\_jobs} & \texttt{job\_id}, \texttt{status} \{pending,\ldots,done\}, \texttt{result}, \texttt{created\_at} & --- & --- \\ \hline
+\end{tabularx}
+\end{table}
 
-%% ── Хэрэглэгчийн бүлэг (зүүн дээр) ──
-\node[grp, minimum width=10.4cm, minimum height=8.0cm] (grpUser) at (-3.0, 3.0) {};
-\node[grpttl] at ([xshift=4pt, yshift=-4pt]grpUser.north west)
-    {Хэрэглэгчийн бүлэг};
+\noindent Цуглуулга хоорондын гадаад түлхүүрийн (foreign key) харьцааг \tref{tab:mongodb_fk}-т харуулав.
 
-\node[coll] (users) at (-5.4, 5.4) {%
-    \textbf{users}\\[2pt]
-    \texttt{\_id} : ObjectId\\
-    \texttt{email} : string\\
-    \texttt{password\_hash} : string\\
-    \texttt{name} : string\\
-    \texttt{created\_at} : Date};
-\node[idxlbl] at ([xshift=2pt, yshift=-2pt]users.south west)
-    {unique(email)};
+\begin{table}[H]
+\centering
+\caption{Цуглуулга хоорондын гадаад түлхүүрийн харилцаа}
+\label{tab:mongodb_fk}
+\renewcommand{\arraystretch}{1.15}
+\begin{tabular}{|l|c|l|l|}
+\hline
+\textbf{Эх цуглуулга} & \textbf{Харьцаа} & \textbf{Зорилтот цуглуулга} & \textbf{Холбогдох талбар} \\ \hline
+\texttt{users.\_id} & 1\,:\,1 & \texttt{push\_tokens} & \texttt{user\_id} \\ \hline
+\texttt{users.\_id} & 1\,:\,N & \texttt{refresh\_tokens} & \texttt{user\_id} \\ \hline
+\texttt{signals.\_id} & 1\,:\,N & \texttt{in\_app\_notifications} & \texttt{data.signal\_id} \\ \hline
+\end{tabular}
+\end{table}
 
-\node[coll] (tokens) at (-0.5, 5.4) {%
-    \textbf{push\_tokens}\\[2pt]
-    \texttt{user\_id} : ObjectId\\
-    \texttt{push\_token} : string\\
-    \texttt{platform} : string\\
-    \texttt{notifications\_enabled} : bool\\
-    \texttt{signal\_threshold} : float};
-\node[idxlbl] at ([xshift=2pt, yshift=-2pt]tokens.south west)
-    {unique(user\_id)};
+\noindent\textbf{Дизайны зарчмууд:} (1)~\texttt{TTL} индексүүд нь түр зуурын баримтуудыг (\texttt{verification\_codes}, \texttt{reset\_codes}, \texttt{job\_locks}, \texttt{refresh\_tokens}, \texttt{in\_app\_notifications}, \texttt{ai\_insights}) автоматаар цэвэрлэж хадгалалтын зайг хэмнэдэг. (2)~\texttt{signals} цуглуулгын \texttt{(source, timestamp, symbol, timeframe)} unique compound индекс нь олон instance-ын зэрэгцээ ажиллагаанд давхардсан дохио үүсэхээс сэргийлдэг (idempotent upsert). (3)~\texttt{job\_locks} цуглуулга нь олон Azure App Service instance-ийн зэрэгцээ ажиллах үед нэг scheduler-ийг зөвхөн нэг instance гүйцэтгэхийг хангадаг.
 
-\node[collTtl] (refresh) at (-5.4, 2.0) {%
-    \textbf{refresh\_tokens}\\[2pt]
-    \texttt{user\_id} : ObjectId\\
-    \texttt{token\_hash} : string\\
-    \texttt{expires\_at} : Date\\
-    \texttt{created\_at} : Date};
-\node[ttllbl] at ([xshift=2pt, yshift=-2pt]refresh.south west)
-    {TTL(expires\_at)};
+%% ============================================================
+%% Хавсралт Е: GBDT гиперпараметрүүдийн нарийвчилсан жагсаалт
+%% ============================================================
+\section*{Хавсралт Е: GBDT гиперпараметрүүдийн нарийвчилсан жагсаалт}
+\label{app:hyperparams}
+\renewcommand{\thetable}{Е.\arabic{table}}
+\renewcommand{\thefigure}{Е.\arabic{figure}}
+\setcounter{table}{0}
+\setcounter{figure}{0}
 
-\node[collTtl] (verif) at (-0.5, 2.0) {%
-    \textbf{verification\_codes}\\[2pt]
-    \texttt{email} : string\\
-    \texttt{code} : string (OTP)\\
-    \texttt{expires\_at} : Date (+10мин)\\
-    \texttt{created\_at} : Date};
-\node[ttllbl] at ([xshift=2pt, yshift=-2pt]verif.south west)
-    {TTL(expires\_at)};
+\S3.4-т (Гиперпараметр сонголтын протокол) дурдсан тогтвортой байдлын протоколын дагуу сонгогдсон LightGBM, XGBoost ба CatBoost загваруудын бүх гиперпараметрийг \tref{tab:hyperparams_full} хүснэгтэд нэгтгэв. Хүснэгт нь reproducibility-ийн зорилгод зориулагдсан бөгөөд параметр тус бүрийн утга ба үүргийг загвар бүрд харьцуулан харуулав.
 
-\node[collTtl] (reset) at (-2.95, -0.55) {%
-    \textbf{reset\_codes}\\[2pt]
-    \texttt{email}, \texttt{code}\\
-    \texttt{expires\_at} : Date\\
-    \texttt{used} : bool};
-\node[ttllbl] at ([xshift=2pt, yshift=-2pt]reset.south west)
-    {TTL(expires\_at)};
+\begin{table}[H]
+\centering
+\caption{Гурван GBDT загварын гиперпараметрүүд}
+\label{tab:hyperparams_full}
+\renewcommand{\arraystretch}{1.18}
+\setlength{\tabcolsep}{5pt}
+\begin{tabularx}{\textwidth}{|>{\raggedright\arraybackslash}p{3.4cm}|c|c|c|>{\raggedright\arraybackslash}X|}
+\hline
+\textbf{Параметр} & \textbf{LightGBM} & \textbf{XGBoost} & \textbf{CatBoost} & \textbf{Үүрэг} \\ \hline
+\multicolumn{5}{|l|}{\textit{Загварын ерөнхий бүтэц}} \\ \hline
+\texttt{n\_estimators} & 500 & 500 & 500 & Модны дээд тоо (эрт зогсоолтоор тасалдаг) \\ \hline
+\texttt{learning\_rate} & 0.03 & 0.03 & 0.03 & Алхамын хэмжээ; бага утга → удаан, гэхдээ тогтвортой \\ \hline
+\texttt{max\_depth} & 6 & 5 & 5 & Модны хамгийн их гүн \\ \hline
+\texttt{num\_leaves} & 31 & --- & --- & Leaf-wise өсөлтийн (LGBM) бутархай хязгаар \\ \hline
+\multicolumn{5}{|l|}{\textit{Тогтмолжуулалт}} \\ \hline
+\texttt{min\_child\_samples} & 20 & --- & --- & Leaf-д байх хамгийн бага дээж (LightGBM) \\ \hline
+\texttt{min\_child\_weight} & --- & 5 & --- & Leaf-д шаардлагатай хамгийн бага жин (XGBoost) \\ \hline
+\texttt{reg\_alpha} (L1) & 0.10 & 0.10 & --- & L1 норм нэмэх жин \\ \hline
+\texttt{reg\_lambda} (L2) & 1.0 & 1.0 & 3.0 & L2 норм нэмэх жин (CatBoost-д \texttt{l2\_leaf\_reg}) \\ \hline
+\texttt{gamma} & --- & 0.1 & --- & Хуваалт хийх хамгийн бага алдагдлын бууралт (XGBoost) \\ \hline
+\texttt{subsample} & 0.7 & 0.7 & --- & Мөр түүвэрлэх хувь (bagging) \\ \hline
+\texttt{colsample\_bytree} & 0.7 & 0.7 & --- & Шинж чанар түүвэрлэх хувь \\ \hline
+\multicolumn{5}{|l|}{\textit{Сургалтын протокол}} \\ \hline
+\texttt{early\_\allowbreak stopping\_\allowbreak rounds} & 50 & 50 & 50 & Val loss сайжрахгүй $50$ давталт → зогсооно \\ \hline
+\texttt{eval\_metric} & multi\_logloss & mlogloss & MultiClass & Multi-class cross-entropy \\ \hline
+\texttt{scale\_pos\_weight} & neg/pos & neg/pos & --- & Ангийн тэнцвэргүй байдлыг зохицуулах \\ \hline
+\texttt{random\_state} & 42 & 42 & 42 & Reproducibility-н seed \\ \hline
+\multicolumn{5}{|l|}{\textit{Алгоритмын онцлог параметр}} \\ \hline
+\texttt{boosting\_type} & gbdt & gbtree & Plain & Үндсэн boosting аргачлал \\ \hline
+\texttt{grow\_policy} & leaf-wise & depth-wise & symmetric & Модны өсөлтийн стратеги \\ \hline
+\texttt{bootstrap\_type} & --- & --- & Bayesian & CatBoost-ийн bagging схем (\texttt{bagging\_temperature}=1.0) \\ \hline
+\end{tabularx}
+\end{table}
 
-%% ── Дохио / Мэдэгдлийн бүлэг (баруун дээр) ──
-\node[grp, minimum width=10.4cm, minimum height=8.0cm] (grpSig) at (8.0, 3.0) {};
-\node[grpttl] at ([xshift=4pt, yshift=-4pt]grpSig.north west)
-    {Дохио / Мэдэгдлийн бүлэг};
-
-\node[collIdx] (signals) at (5.6, 5.4) {%
-    \textbf{signals}\\[2pt]
-    \texttt{pair, symbol, timeframe}\\
-    \texttt{signal} : \{BUY,SELL,HOLD\}\\
-    \texttt{confidence} : float\\
-    \texttt{entry\_price, SL, TP}\\
-    \texttt{run\_id, source, timestamp}};
-\node[idxlbl] at ([xshift=2pt, yshift=-2pt]signals.south west)
-    {unique(source,ts,sym,tf), (pair,created\_at)};
-
-\node[collTtl] (inapp) at (10.5, 5.4) {%
-    \textbf{in\_app\_notifications}\\[2pt]
-    \texttt{type} : \{signal,news,security\}\\
-    \texttt{title, body, data}\\
-    \texttt{created\_at, expires\_at}\\
-    \texttt{read\_by} : [user\_id]};
-\node[ttllbl] at ([xshift=2pt, yshift=-2pt]inapp.south west)
-    {TTL(expires\_at)};
-
-%% ── Мэдээний бүлэг (баруун доор) ──
-\node[grp, minimum width=10.4cm, minimum height=5.5cm] (grpNews) at (8.0, -3.5) {};
-\node[grpttl] at ([xshift=4pt, yshift=-4pt]grpNews.north west)
-    {Мэдээний бүлэг};
-
-\node[collTtl] (ai) at (5.6, -3.7) {%
-    \textbf{ai\_insights}\\[2pt]
-    \texttt{pair, timestamp}\\
-    \texttt{analysis} : string\\
-    \texttt{type, expires\_at}};
-\node[ttllbl] at ([xshift=2pt, yshift=-2pt]ai.south west)
-    {TTL(expires\_at)};
-
-\node[coll] (newsAn) at (10.5, -3.7) {%
-    \textbf{news\_analysis}\\[2pt]
-    \texttt{event, impact}\\
-    \texttt{analysis, sentiment}\\
-    \texttt{timestamp, created\_at}};
-
-\node[coll] (notif) at (8.0, -6.5) {%
-    \textbf{notified\_events}\\[2pt]
-    \texttt{event\_id} : string\\
-    \texttt{notified\_at} : Date};
-
-%% ── Системийн бүлэг (зүүн доор) ──
-\node[grp, minimum width=10.4cm, minimum height=5.5cm] (grpSys) at (-3.0, -3.5) {};
-\node[grpttl] at ([xshift=4pt, yshift=-4pt]grpSys.north west)
-    {Системийн бүлэг};
-
-\node[collTtl] (locks) at (-5.4, -3.7) {%
-    \textbf{job\_locks}\\[2pt]
-    \texttt{job\_name} : string\\
-    \texttt{owner\_id, expires\_at}\\
-    \textit{(хуваарилагдсан түгжээ)}};
-\node[ttllbl] at ([xshift=2pt, yshift=-2pt]locks.south west)
-    {TTL(expires\_at)};
-
-\node[coll] (jobs) at (-0.5, -3.7) {%
-    \textbf{analysis\_jobs}\\[2pt]
-    \texttt{job\_id} : string\\
-    \texttt{status} : \{pending,...,done\}\\
-    \texttt{result, created\_at}};
-
-%% ── Гадаад түлхүүрийн харилцаа (foreign keys) ──
-\draw[fk] (users.east) -- node[font=\tiny, fill=white, inner sep=1pt, midway, above=-1pt]
-    {1\,:\,1} (tokens.west);
-\draw[fk] (users.south) -- node[font=\tiny, fill=white, inner sep=1pt, midway, right=-1pt]
-    {1\,:\,N} (refresh.north);
-\draw[fk] (signals.east) -- node[font=\tiny, fill=white, inner sep=1pt, midway, above=-1pt]
-    {data.signal\_id} (inapp.west);
-
-%% ── Тэмдэглэгээний тайлбар ──
-\node[draw=black!40, dashed, rounded corners=3pt, line width=0.6pt,
-      inner sep=4pt, font=\scriptsize, align=left]
-      at (-3.0, -7.5) {%
-\begin{tabular}{ll}
-\textcolor{blue!60!black}{$\square$} & нэмэлт индекс (unique эсвэл compound)\\
-\textcolor{red!60!black}{$\square$} & TTL индекстэй (хугацааны хязгаартай)\\
-$\dashrightarrow$ & гадаад түлхүүрийн харилцаа (логик холбоо)\\
-\end{tabular}};
-
-\end{tikzpicture}%
-}
-\caption{MongoDB Atlas-д байршсан 12 цуглуулгын схем — индекс ба TTL тохиргоо}
-\label{fig:mongodb_schema}
-\end{figure}
-
-\noindent\textbf{Дизайны зарчмууд:} (1)~\texttt{TTL} индексүүд нь түр зуурын баримтуудыг (verification\_codes, reset\_codes, job\_locks, refresh\_tokens, in\_app\_notifications) автоматаар цэвэрлэж хадгалалтын зайг хэмнэдэг. (2)~\texttt{signals} цуглуулгын \texttt{(source, timestamp, symbol, timeframe)} unique compound индекс нь олон instance-ын зэрэгцээ ажиллагаанд давхардсан дохио үүсэхээс сэргийлдэг (idempotent upsert). (3)~\texttt{job\_locks} цуглуулга нь олон Azure App Service instance-ийн зэрэгцээ ажиллах үед нэг scheduler-ийг зөвхөн нэг instance гүйцэтгэхийг хангадаг.
+\noindent\textit{Тэмдэглэл:} ``---'' нь тухайн параметр уг загварт байхгүйг харуулна. Хэт нийцлээс сэргийлэх зургаан арга хэмжээ (модны гүнийг хязгаарлах, бага learning rate, эрт зогсоолт, L1/L2 нормчлол, WFV, шинж чанарын цөөрөлт) бүгд энэ хүснэгтэд тусгагдсан.

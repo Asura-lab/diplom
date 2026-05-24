@@ -3,22 +3,24 @@
 \addvspace {10\p@ }
 \contentsline {table}{\numberline {2.1}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces Холбогдох судалгаатай харьцуулсан үндсэн ялгаа}}{6}{table.caption.37}%
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {3.1}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces Түүхэн өгөгдлийн хэмжээний хураангуй}}{11}{table.caption.49}%
-\contentsline {table}{\numberline {3.2}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces Шинж чанарын жагсаалт (интервал бүрд)}}{12}{table.caption.51}%
-\contentsline {table}{\numberline {3.3}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces Урагш гүйлгэн баталгаажуулалтын өгөгдлийн хуваалт}}{14}{table.caption.59}%
-\contentsline {table}{\numberline {3.4}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces Гурван GBDT загварын гиперпараметрүүд}}{18}{table.caption.74}%
-\contentsline {table}{\numberline {3.5}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces Түүхэн өгөгдөл дээрх системийн туршилтын үндсэн тохиргоо}}{24}{table.caption.88}%
-\contentsline {table}{\numberline {3.6}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces Системийн үнэлгээний шалгуур үзүүлэлтүүд}}{25}{table.caption.93}%
-\contentsline {table}{\numberline {3.7}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces API endpoint-ийн хандалтын хурдны хязгаарлалт}}{27}{table.caption.98}%
-\contentsline {table}{\numberline {3.8}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces Харагдах хэсгийн модулиуд, харилцааны загвар ба API endpoint бүлэг}}{28}{table.caption.102}%
-\contentsline {table}{\numberline {3.9}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces Загварын давталтын 7 үе шат — гол өөрчлөлт ба үндэслэл}}{29}{table.caption.106}%
+\contentsline {table}{\numberline {3.1}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces Түүхэн өгөгдлийн хэмжээний хураангуй}}{11}{table.caption.48}%
+\contentsline {table}{\numberline {3.2}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces Шинж чанарын жагсаалт (интервал бүрд)}}{11}{table.caption.50}%
+\contentsline {table}{\numberline {3.3}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces Урагш гүйлгэн баталгаажуулалтын өгөгдлийн хуваалт}}{13}{table.caption.57}%
+\contentsline {table}{\numberline {3.4}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces Түүхэн өгөгдөл дээрх системийн туршилтын үндсэн тохиргоо}}{22}{table.caption.85}%
+\contentsline {table}{\numberline {3.5}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces Системийн үнэлгээний шалгуур үзүүлэлтүүд}}{23}{table.caption.90}%
+\contentsline {table}{\numberline {3.6}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces API endpoint-ийн хандалтын хурдны хязгаарлалт}}{25}{table.caption.95}%
+\contentsline {table}{\numberline {3.7}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces Харагдах хэсгийн модулиуд, харилцааны загвар ба API endpoint бүлэг}}{26}{table.caption.99}%
+\contentsline {table}{\numberline {3.8}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces Загварын давталтын 7 үе шат — гол өөрчлөлт ба үндэслэл}}{27}{table.caption.103}%
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {4.1}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces GBDT ансамблийн нарийвчлал ба F1 оноо — хуваарь тус бүрээр}}{30}{table.caption.110}%
-\contentsline {table}{\numberline {4.2}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces Тестийн өгөгдөл дээрх ангилалт тусдаа (BUY / HOLD / SELL)}}{30}{table.caption.112}%
-\contentsline {table}{\numberline {4.3}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces Итгэлцлийн бүрийн нарийвчлал (баталгаажуулалтын өгөгдөл дээр)}}{31}{table.caption.114}%
-\contentsline {table}{\numberline {4.4}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces 0.90--0.99 мужийн босгын харьцуулалт}}{32}{table.caption.117}%
-\contentsline {table}{\numberline {4.5}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces EUR/USD худалдан аваад барих жишгийн хураангуй}}{32}{table.caption.119}%
-\contentsline {table}{\numberline {4.6}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces Босго тус бүрийн дохио-арилжааны гүйцэтгэл ба ялалтын хувь (95\% CI)}}{33}{table.caption.122}%
-\contentsline {table}{\numberline {4.7}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces Босгын мужийн лог дээр суурилсан эрсдэл-өгөөжийн шинжилгээ}}{34}{table.caption.125}%
-\contentsline {table}{\numberline {4.8}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces Нэвчилтийн аудитын цагийн нийцлийн дүрмүүд}}{43}{table.caption.166}%
-\contentsline {table}{\numberline {4.9}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces Архитектурын баталгаажуулалтын KPI протокол}}{45}{table.caption.172}%
+\contentsline {table}{\numberline {4.1}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces GBDT ансамблийн нарийвчлал ба F1 оноо — хуваарь тус бүрээр}}{28}{table.caption.107}%
+\contentsline {table}{\numberline {4.2}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces Тестийн өгөгдөл дээрх ангилал тус бүрийн үзүүлэлт (BUY / HOLD / SELL)}}{29}{table.caption.109}%
+\contentsline {table}{\numberline {4.3}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces Итгэлцлийн бүрийн нарийвчлал (баталгаажуулалтын өгөгдөл дээр)}}{29}{table.caption.111}%
+\contentsline {table}{\numberline {4.4}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces 0.90--0.99 мужийн босгын харьцуулалт}}{30}{table.caption.114}%
+\contentsline {table}{\numberline {4.5}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces EUR/USD худалдан аваад барих жишгийн хураангуй}}{30}{table.caption.116}%
+\contentsline {table}{\numberline {4.6}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces Босго тус бүрийн дохио-арилжааны гүйцэтгэл ба ялалтын хувь (95\% CI)}}{31}{table.caption.118}%
+\contentsline {table}{\numberline {4.7}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces Босгын мужийн лог дээр суурилсан эрсдэл-өгөөжийн шинжилгээ}}{32}{table.caption.121}%
+\contentsline {table}{\numberline {А.1}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces Нэвчилтийн аудитын цагийн нийцлийн дүрмүүд}}{41}{table.caption.162}%
+\contentsline {table}{\numberline {В.1}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces Архитектурын баталгаажуулалтын KPI протокол}}{43}{table.caption.164}%
+\contentsline {table}{\numberline {Д.1}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces MongoDB Atlas-д байршсан 12 цуглуулгын схем — гол талбарууд, индекс ба TTL тохиргоо}}{45}{table.caption.169}%
+\contentsline {table}{\numberline {Д.2}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces Цуглуулга хоорондын гадаад түлхүүрийн харилцаа}}{45}{table.caption.170}%
+\contentsline {table}{\numberline {Е.1}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces Гурван GBDT загварын гиперпараметрүүд}}{47}{table.caption.171}%

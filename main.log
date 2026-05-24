@@ -1,13 +1,12 @@
-This is XeTeX, Version 3.141592653-2.6-0.999997 (MiKTeX 25.4) (preloaded format=xelatex 2025.12.1)  24 MAY 2026 19:33
+This is XeTeX, Version 3.141592653-2.6-0.999997 (MiKTeX 25.4) (preloaded format=xelatex 2025.12.1)  24 MAY 2026 23:39
 entering extended mode
  restricted \write18 enabled.
- file:line:error style messages enabled.
  %&-line parsing enabled.
-**c:/Users/Acer/Desktop/Forex-Signal-App/diplom/main.tex
-(c:/Users/Acer/Desktop/Forex-Signal-App/diplom/main.tex
+**C:/Users/Acer/Desktop/Forex-Signal-App/diplom/main.tex
+(C:/Users/Acer/Desktop/Forex-Signal-App/diplom/main.tex
 LaTeX2e <2025-11-01>
 L3 programming layer <2025-11-06>
-(Thesis.cls
+(C:\Users\Acer\Desktop\Forex-Signal-App\diplom\Thesis.cls
 Document Class: Thesis 2022/04/12 v0.1 testclass
 (C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/latex/base\report.cls
 Document Class: report 2025/01/22 v1.4n Standard LaTeX document class
@@ -1634,7 +1633,8 @@ ext;"
 (fontspec)             Roman/BI/OT:script=cyrl;language=dflt;+smcp;mapping=tex-
 text;"
 
- (main.aux)
+
+(C:\Users\Acer\Desktop\Forex-Signal-App\diplom\main.aux)
 \openout1 = `main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 49.
@@ -1680,7 +1680,9 @@ nslations-basic-dictionary')
 Package translations Info: loading dictionary `translations-basic-dictionary' f
 or `english'. on input line 49.
 Package hyperref Info: Link coloring ON on input line 49.
- (main.out) (main.out)
+
+(C:\Users\Acer\Desktop\Forex-Signal-App\diplom\main.out)
+(C:\Users\Acer\Desktop\Forex-Signal-App\diplom\main.out)
 \@outlinefile=\write4
 \openout4 = `main.out'.
 
@@ -1688,7 +1690,8 @@ Package hyperref Info: Link coloring ON on input line 49.
 Package pgfplots notification 'compat/show suggested version=true': document ha
 s been generated with the most recent feature set (\pgfplotsset{compat=1.18}).
 
-(Information.tex) (Chapters/CoverPage.tex
+(C:\Users\Acer\Desktop\Forex-Signal-App\diplom\Information.tex)
+(C:\Users\Acer\Desktop\Forex-Signal-App\diplom\Chapters/CoverPage.tex
 File: Pictures/NMCT.png Graphic file (type bmp)
 <Pictures/NMCT.png>
 LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 8
@@ -1746,13 +1749,8 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 
 [1
 
-]) (Chapters/TitlePage.tex [1]) (Chapters/Abstract.tex
-Underfull \hbox (badness 1297) in paragraph at lines 13--14
-\TU/TimesNewRoman(1)/m/n/10.95 талгаажуулалтын (Walk-Forward Validation, WFV) F
-old 5 огтлолын 2024 оны тестийн ерөнхий
- []
-
-
+]) (C:\Users\Acer\Desktop\Forex-Signal-App\diplom\Chapters/TitlePage.tex
+[1]) (C:\Users\Acer\Desktop\Forex-Signal-App\diplom\Chapters/Abstract.tex
 Underfull \hbox (badness 2351) in paragraph at lines 15--16
 []\TU/TimesNewRoman(1)/m/n/10.95 Системийн инженерчлэлийн талд оффлайн загвар с
 ургалт, REST API сервер (Flask +
@@ -1762,16 +1760,18 @@ Underfull \hbox (badness 2351) in paragraph at lines 15--16
 ------------------------------------------------------------------------------
  Table of Contents
 ------------------------------------------------------------------------------
-(main.toc)
+(C:\Users\Acer\Desktop\Forex-Signal-App\diplom\main.toc)
 \tf@toc=\write5
 \openout5 = `main.toc'.
 
  [2
 
-] (Chapters/acrolist.tex [3
+]
+(C:\Users\Acer\Desktop\Forex-Signal-App\diplom\Chapters/acrolist.tex [3
 
 
-] [4
+]
+[4
 
 
 ]
@@ -1824,7 +1824,7 @@ LaTeX Font Info:    Font shape `TU/Consolas(1)/m/n' will be
 ------------------------------------------------------------------------------
  Хүснэгтийн жагсаалт
 ------------------------------------------------------------------------------
-(main.lot)
+(C:\Users\Acer\Desktop\Forex-Signal-App\diplom\main.lot)
 \tf@lot=\write6
 \openout6 = `main.lot'.
 
@@ -1834,13 +1834,14 @@ LaTeX Font Info:    Font shape `TU/Consolas(1)/m/n' will be
 ------------------------------------------------------------------------------
  Зургийн жагсаалт
 ------------------------------------------------------------------------------
-(main.lof)
+(C:\Users\Acer\Desktop\Forex-Signal-App\diplom\main.lof)
 \tf@lof=\write7
 \openout7 = `main.lof'.
 
  [7
 
-] (Chapters/plan.tex
+]
+(C:\Users\Acer\Desktop\Forex-Signal-App\diplom\Chapters/plan.tex
 Underfull \hbox (badness 3803) in paragraph at lines 19--19
 []|\TU/TimesNewRoman(1)/m/n/10.95 Форекс арилжаа, машин сургалт (machine
  []
@@ -1865,7 +1866,9 @@ Underfull \hbox (badness 4084) in paragraph at lines 29--29
 \TU/TimesNewRoman(1)/m/n/10.95 түүхэн өгөгдөл дээрх системийн туршилт
  []
 
-) (Chapters/Chapter1_Introduction.tex [1
+)
+(C:\Users\Acer\Desktop\Forex-Signal-App\diplom\Chapters/Chapter1_Introduction.t
+ex [1
 
 ]
 Бүлэг 1.
@@ -1877,50 +1880,19 @@ Underfull \hbox (badness 2538) in paragraph at lines 20--21
 
 [2
 
-]
-Overfull \hbox (0.76945pt too wide) in paragraph at lines 54--54
- []|\TU/TimesNewRoman(1)/m/n/10.95 RQ1| 
- []
-
-
-Overfull \hbox (0.76945pt too wide) in paragraph at lines 54--54
- []|\TU/TimesNewRoman(1)/m/n/10.95 RQ2| 
- []
-
-
-Overfull \hbox (0.76945pt too wide) in paragraph at lines 54--54
- []|\TU/TimesNewRoman(1)/m/n/10.95 RQ3| 
- []
-
-) (Chapters/Chapter2_Literature.tex [3]
+])
+(C:\Users\Acer\Desktop\Forex-Signal-App\diplom\Chapters/Chapter2_Literature.tex
+[3]
 Бүлэг 2.
 [4
 
-] [5]) [6] (Chapters/Chapter3_Methodology.tex [7]
+] [5]) [6]
+(C:\Users\Acer\Desktop\Forex-Signal-App\diplom\Chapters/Chapter3_Methodology.te
+x [7]
 Бүлэг 3.
 [8
 
 ]
-
-Package fontspec Info: 
-(fontspec)             Consolas scale = 0.9.
-
-
-Package fontspec Info: 
-(fontspec)             Consolas scale = 0.9.
-
-
-Package fontspec Info: 
-(fontspec)             Consolas scale = 0.9.
-
-
-Package fontspec Info: 
-(fontspec)             Consolas scale = 0.9.
-
-
-Package fontspec Info: 
-(fontspec)             Consolas scale = 0.9.
-
 
 Package fontspec Info: 
 (fontspec)             Consolas scale = 0.9.
@@ -2110,276 +2082,43 @@ Package fontspec Info:
 Package fontspec Info: 
 (fontspec)             Consolas scale = 0.9.
 
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
  [11]
-
-Package fontspec Info: 
-(fontspec)             Consolas scale = 0.9.
-
-
-Package fontspec Info: 
-(fontspec)             Consolas scale = 0.9.
-
-
-Package fontspec Info: 
-(fontspec)             Consolas scale = 0.9.
-
-LaTeX Font Info:    Font shape `TU/Consolas(0)/m/it' will be
-(Font)              scaled to size 7.19995pt on input line 496.
-
-Package fontspec Info: 
-(fontspec)             Consolas scale = 0.9.
-
-LaTeX Font Info:    Font shape `TU/Consolas(1)/m/it' will be
-(Font)              scaled to size 7.19995pt on input line 496.
-LaTeX Font Info:    Font shape `TU/Consolas(0)/m/n' will be
-(Font)              scaled to size 7.19995pt on input line 510.
-
-Package fontspec Info: 
-(fontspec)             Consolas scale = 0.9.
-
-LaTeX Font Info:    Font shape `TU/Consolas(1)/m/n' will be
-(Font)              scaled to size 7.19995pt on input line 510.
-
-Package fontspec Info: 
-(fontspec)             Consolas scale = 0.9.
-
-
-Package fontspec Info: 
-(fontspec)             Consolas scale = 0.9.
-
-
-Package fontspec Info: 
-(fontspec)             Consolas scale = 0.9.
-
-
-Package fontspec Info: 
-(fontspec)             Consolas scale = 0.9.
-
-
-Package fontspec Info: 
-(fontspec)             Consolas scale = 0.9.
-
-
-Package fontspec Info: 
-(fontspec)             Consolas scale = 0.9.
-
-
-Package fontspec Info: 
-(fontspec)             Consolas scale = 0.9.
-
-
-Package fontspec Info: 
-(fontspec)             Consolas scale = 0.9.
-
-
-Package fontspec Info: 
-(fontspec)             Consolas scale = 0.9.
-
-
-Package fontspec Info: 
-(fontspec)             Consolas scale = 0.9.
-
-
-Package fontspec Info: 
-(fontspec)             Consolas scale = 0.9.
-
-
-Package fontspec Info: 
-(fontspec)             Consolas scale = 0.9.
-
-
-Package fontspec Info: 
-(fontspec)             Consolas scale = 0.9.
-
-
-Package fontspec Info: 
-(fontspec)             Consolas scale = 0.9.
-
-
-Package fontspec Info: 
-(fontspec)             Consolas scale = 0.9.
-
-
-Package fontspec Info: 
-(fontspec)             Consolas scale = 0.9.
-
-
-Package fontspec Info: 
-(fontspec)             Consolas scale = 0.9.
-
-
-Package fontspec Info: 
-(fontspec)             Consolas scale = 0.9.
-
-
-Package fontspec Info: 
-(fontspec)             Consolas scale = 0.9.
-
-
-Package fontspec Info: 
-(fontspec)             Consolas scale = 0.9.
-
-
-Package fontspec Info: 
-(fontspec)             Consolas scale = 0.9.
-
-
-Package fontspec Info: 
-(fontspec)             Consolas scale = 0.9.
-
-
-Package fontspec Info: 
-(fontspec)             Consolas scale = 0.9.
-
-
-Package fontspec Info: 
-(fontspec)             Consolas scale = 0.9.
-
-
-Package fontspec Info: 
-(fontspec)             Consolas scale = 0.9.
-
-
-Package fontspec Info: 
-(fontspec)             Consolas scale = 0.9.
-
-
-Package fontspec Info: 
-(fontspec)             Consolas scale = 0.9.
-
-
-Package fontspec Info: 
-(fontspec)             Consolas scale = 0.9.
-
-
-Package fontspec Info: 
-(fontspec)             Consolas scale = 0.9.
-
-
-Package fontspec Info: 
-(fontspec)             Consolas scale = 0.9.
-
-
-Package fontspec Info: 
-(fontspec)             Consolas scale = 0.9.
-
-
-Package fontspec Info: 
-(fontspec)             Consolas scale = 0.9.
-
-
-Package fontspec Info: 
-(fontspec)             Consolas scale = 0.9.
-
-
-Package fontspec Info: 
-(fontspec)             Consolas scale = 0.9.
-
-
-Package fontspec Info: 
-(fontspec)             Consolas scale = 0.9.
-
-
-Package fontspec Info: 
-(fontspec)             Consolas scale = 0.9.
-
-
-Package fontspec Info: 
-(fontspec)             Consolas scale = 0.9.
-
-
-Package fontspec Info: 
-(fontspec)             Consolas scale = 0.9.
-
-
-Package fontspec Info: 
-(fontspec)             Consolas scale = 0.9.
-
-
-Package fontspec Info: 
-(fontspec)             Consolas scale = 0.9.
-
-
-Package fontspec Info: 
-(fontspec)             Consolas scale = 0.9.
-
-
-Package fontspec Info: 
-(fontspec)             Consolas scale = 0.9.
-
-
-Package fontspec Info: 
-(fontspec)             Consolas scale = 0.9.
-
-
-Package fontspec Info: 
-(fontspec)             Consolas scale = 0.9.
-
-
-Package fontspec Info: 
-(fontspec)             Consolas scale = 0.9.
-
-
-Package fontspec Info: 
-(fontspec)             Consolas scale = 0.9.
-
-
-Package fontspec Info: 
-(fontspec)             Consolas scale = 0.9.
-
-
-Package fontspec Info: 
-(fontspec)             Consolas scale = 0.9.
-
-
-Package fontspec Info: 
-(fontspec)             Consolas scale = 0.9.
-
-
-Package fontspec Info: 
-(fontspec)             Consolas scale = 0.9.
-
-
-Package fontspec Info: 
-(fontspec)             Consolas scale = 0.9.
-
-
-Package fontspec Info: 
-(fontspec)             Consolas scale = 0.9.
-
-
-Package fontspec Info: 
-(fontspec)             Consolas scale = 0.9.
-
-
-Package fontspec Info: 
-(fontspec)             Consolas scale = 0.9.
-
-
-Package fontspec Info: 
-(fontspec)             Consolas scale = 0.9.
-
+Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on in
+put line 453.
 
 Package fontspec Info: 
 (fontspec)             Consolas scale = 0.9.
 
  [12]
-Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on in
-put line 569.
 
 Package fontspec Info: 
 (fontspec)             Consolas scale = 0.9.
 
- [13]
 
 Package fontspec Info: 
 (fontspec)             Consolas scale = 0.9.
 
+ [13] [14]
 
 Package fontspec Info: 
 (fontspec)             Consolas scale = 0.9.
 
- [14]
 
 Package fontspec Info: 
 (fontspec)             Consolas scale = 0.9.
@@ -2396,251 +2135,16 @@ Package fontspec Info:
 Package fontspec Info: 
 (fontspec)             Consolas scale = 0.9.
 
+ [15]
 
 Package fontspec Info: 
 (fontspec)             Consolas scale = 0.9.
 
- [15] [16]
 
 Package fontspec Info: 
 (fontspec)             Consolas scale = 0.9.
 
 
-Underfull \hbox (badness 1033) in paragraph at lines 861--862
-\TU/TimesNewRoman(1)/m/n/10.95 Jaccard коэффициент $\OML/lmm/m/it/10.95 > \OT1/
-lmr/m/n/10.95 0\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 7$ \TU/TimesNewRoman(1)/
-m/n/10.95 гэсэн гурван шалгуурыг зэрэг хангах утгуудыг хайсан. Ансамбль
- []
-
-
-Package fontspec Info: 
-(fontspec)             Consolas scale = 0.9.
-
-
-Package fontspec Info: 
-(fontspec)             Consolas scale = 0.9.
-
-
-Package fontspec Info: 
-(fontspec)             Consolas scale = 0.9.
-
-
-Package fontspec Info: 
-(fontspec)             Consolas scale = 0.9.
-
-
-Package fontspec Info: 
-(fontspec)             Consolas scale = 0.9.
-
-
-Package fontspec Info: 
-(fontspec)             Consolas scale = 0.9.
-
-
-Package fontspec Info: 
-(fontspec)             Consolas scale = 0.9.
-
-
-Package fontspec Info: 
-(fontspec)             Consolas scale = 0.9.
-
-
-Package fontspec Info: 
-(fontspec)             Consolas scale = 0.9.
-
-
-Package fontspec Info: 
-(fontspec)             Consolas scale = 0.9.
-
-
-Package fontspec Info: 
-(fontspec)             Consolas scale = 0.9.
-
-
-Package fontspec Info: 
-(fontspec)             Consolas scale = 0.9.
-
-
-Package fontspec Info: 
-(fontspec)             Consolas scale = 0.9.
-
-
-Package fontspec Info: 
-(fontspec)             Consolas scale = 0.9.
-
-
-Package fontspec Info: 
-(fontspec)             Consolas scale = 0.9.
-
-
-Package fontspec Info: 
-(fontspec)             Consolas scale = 0.9.
-
-
-Package fontspec Info: 
-(fontspec)             Consolas scale = 0.9.
-
-
-Package fontspec Info: 
-(fontspec)             Consolas scale = 0.9.
-
-
-Package fontspec Info: 
-(fontspec)             Consolas scale = 0.9.
-
-
-Package fontspec Info: 
-(fontspec)             Consolas scale = 0.9.
-
-
-Package fontspec Info: 
-(fontspec)             Consolas scale = 0.9.
-
-
-Package fontspec Info: 
-(fontspec)             Consolas scale = 0.9.
-
-
-Package fontspec Info: 
-(fontspec)             Consolas scale = 0.9.
-
-
-Package fontspec Info: 
-(fontspec)             Consolas scale = 0.9.
-
-
-Package fontspec Info: 
-(fontspec)             Consolas scale = 0.9.
-
-
-Package fontspec Info: 
-(fontspec)             Consolas scale = 0.9.
-
-
-Package fontspec Info: 
-(fontspec)             Consolas scale = 0.9.
-
-
-Package fontspec Info: 
-(fontspec)             Consolas scale = 0.9.
-
-
-Package fontspec Info: 
-(fontspec)             Consolas scale = 0.9.
-
-
-Package fontspec Info: 
-(fontspec)             Consolas scale = 0.9.
-
-
-Package fontspec Info: 
-(fontspec)             Consolas scale = 0.9.
-
-
-Package fontspec Info: 
-(fontspec)             Consolas scale = 0.9.
-
-
-Package fontspec Info: 
-(fontspec)             Consolas scale = 0.9.
-
-
-Package fontspec Info: 
-(fontspec)             Consolas scale = 0.9.
-
-
-Package fontspec Info: 
-(fontspec)             Consolas scale = 0.9.
-
-
-Package fontspec Info: 
-(fontspec)             Consolas scale = 0.9.
-
-
-Package fontspec Info: 
-(fontspec)             Consolas scale = 0.9.
-
-
-Package fontspec Info: 
-(fontspec)             Consolas scale = 0.9.
-
-
-Package fontspec Info: 
-(fontspec)             Consolas scale = 0.9.
-
-
-Package fontspec Info: 
-(fontspec)             Consolas scale = 0.9.
-
-
-Package fontspec Info: 
-(fontspec)             Consolas scale = 0.9.
-
-
-Package fontspec Info: 
-(fontspec)             Consolas scale = 0.9.
-
-
-Package fontspec Info: 
-(fontspec)             Consolas scale = 0.9.
-
-
-Package fontspec Info: 
-(fontspec)             Consolas scale = 0.9.
-
-
-Package fontspec Info: 
-(fontspec)             Consolas scale = 0.9.
-
-
-Package fontspec Info: 
-(fontspec)             Consolas scale = 0.9.
-
-
-Package fontspec Info: 
-(fontspec)             Consolas scale = 0.9.
-
-
-Package fontspec Info: 
-(fontspec)             Consolas scale = 0.9.
-
-
-Package fontspec Info: 
-(fontspec)             Consolas scale = 0.9.
-
-
-Package fontspec Info: 
-(fontspec)             Consolas scale = 0.9.
-
-
-Package fontspec Info: 
-(fontspec)             Consolas scale = 0.9.
-
-
-Package fontspec Info: 
-(fontspec)             Consolas scale = 0.9.
-
-
-Package fontspec Info: 
-(fontspec)             Consolas scale = 0.9.
-
-
-Package fontspec Info: 
-(fontspec)             Consolas scale = 0.9.
-
-
-Package fontspec Info: 
-(fontspec)             Consolas scale = 0.9.
-
-
-Package fontspec Info: 
-(fontspec)             Consolas scale = 0.9.
-
-
-Package fontspec Info: 
-(fontspec)             Consolas scale = 0.9.
-
-
 Package fontspec Info: 
 (fontspec)             Consolas scale = 0.9.
 
@@ -2652,17 +2156,17 @@ Package fontspec Info:
 Package fontspec Info: 
 (fontspec)             Consolas scale = 0.9.
 
-[17] [18]
+ [16]
 
 Package fontspec Info: 
 (fontspec)             Consolas scale = 0.9.
 
- [19] [20] [21]
+ [17] [18] [19]
 
 Package fontspec Info: 
 (fontspec)             Consolas scale = 0.9.
 
- [22]
+ [20]
 
 Package fontspec Info: 
 (fontspec)             Consolas scale = 0.9.
@@ -2671,7 +2175,8 @@ Package fontspec Info:
 Package fontspec Info: 
 (fontspec)             Consolas scale = 0.9.
 
- [23] [24] [25]
+ [21] [22]
+[23]
 
 Package fontspec Info: 
 (fontspec)             Consolas scale = 0.9.
@@ -2700,7 +2205,7 @@ Package fontspec Info:
 Package fontspec Info: 
 (fontspec)             Consolas scale = 0.9.
 
- [26]
+ [24]
 
 Package fontspec Info: 
 (fontspec)             Consolas scale = 0.9.
@@ -2837,15 +2342,15 @@ Package fontspec Info:
 Package fontspec Info: 
 (fontspec)             Consolas scale = 0.9.
 
- [27]
+ [25]
 LaTeX Font Info:    Font shape `TU/Consolas(0)/m/n' will be
-(Font)              scaled to size 8.99994pt on input line 1683.
+(Font)              scaled to size 8.99994pt on input line 1551.
 
 Package fontspec Info: 
 (fontspec)             Consolas scale = 0.9.
 
 LaTeX Font Info:    Font shape `TU/Consolas(1)/m/n' will be
-(Font)              scaled to size 8.99994pt on input line 1683.
+(Font)              scaled to size 8.99994pt on input line 1551.
 
 Package fontspec Info: 
 (fontspec)             Consolas scale = 0.9.
@@ -2874,20 +2379,23 @@ Package fontspec Info:
 Package fontspec Info: 
 (fontspec)             Consolas scale = 0.9.
 
- [28])
-(Chapters/Chapter4_Results.tex [29]
+ [26])
+(C:\Users\Acer\Desktop\Forex-Signal-App\diplom\Chapters/Chapter4_Results.tex
+[27]
 Бүлэг 4.
 
 Package fontspec Info: 
 (fontspec)             Consolas scale = 0.9.
 
-[30
 
-] [31] [32]
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <9> on input line 138.
- [33] [34] [35] [36]) (Chapters/Chapter5_Conclusion.tex [37]
-[38]
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+[28
+
+] [29] [30] [31] [32] [33] [34])
+(C:\Users\Acer\Desktop\Forex-Signal-App\diplom\Chapters/Chapter5_Conclusion.tex
+[35] [36]
 
 Package fontspec Info: 
 (fontspec)             Consolas scale = 0.9.
@@ -2903,46 +2411,11 @@ Underfull \hbox (badness 3612) in paragraph at lines 54--55
 алгаажуулалт).
  []
 
-[39]) (Chapters/Bibliography.tex (main.bbl [40] [41
+[37]) (C:\Users\Acer\Desktop\Forex-Signal-App\diplom\Chapters/Bibliography.tex
+(C:\Users\Acer\Desktop\Forex-Signal-App\diplom\main.bbl [38] [39
 
-])) (Chapters/appendix.tex
-[42]
-
-Package fontspec Info: 
-(fontspec)             Consolas scale = 0.9.
-
-
-Package fontspec Info: 
-(fontspec)             Consolas scale = 0.9.
-
-
-Package fontspec Info: 
-(fontspec)             Consolas scale = 0.9.
-
-
-Package fontspec Info: 
-(fontspec)             Consolas scale = 0.9.
-
-
-Package fontspec Info: 
-(fontspec)             Consolas scale = 0.9.
-
-
-Package fontspec Info: 
-(fontspec)             Consolas scale = 0.9.
-
-
-Package fontspec Info: 
-(fontspec)             Consolas scale = 0.9.
-
- [43
-
-] [44]
-
-Package fontspec Info: 
-(fontspec)             Consolas scale = 0.9.
-
- [45]
+]))
+(C:\Users\Acer\Desktop\Forex-Signal-App\diplom\Chapters/appendix.tex [40]
 
 Package fontspec Info: 
 (fontspec)             Consolas scale = 0.9.
@@ -2972,6 +2445,15 @@ Package fontspec Info:
 (fontspec)             Consolas scale = 0.9.
 
 
+[41
+
+] [42]
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+ [43]
+
 Package fontspec Info: 
 (fontspec)             Consolas scale = 0.9.
 
@@ -2984,25 +2466,1031 @@ Package fontspec Info:
 (fontspec)             Consolas scale = 0.9.
 
 
-Underfull \hbox (badness 2035) in paragraph at lines 182--183
-\TU/TimesNewRoman(1)/m/n/10.95 12 цуглуулгаас бүрдэх ба тэдгээрийг гүйцэтгэх үү
-ргээр нь Хэрэглэгчийн, Дохио-Мэдэгдлийн,
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+ [44]
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Underfull \hbox (badness 6268) in paragraph at lines 284--285
+\TU/TimesNewRoman(1)/b/n/10.95 Дизайны зарчмууд: \TU/TimesNewRoman(1)/m/n/10.95
+ (1) \TU/Consolas(1)/m/n/10.95 TTL \TU/TimesNewRoman(1)/m/n/10.95 индексүүд нь 
+түр зуурын баримтуудыг (\TU/Consolas(1)/m/n/10.95 verification_codes\TU/TimesNe
+wRoman(1)/m/n/10.95 ,
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 182--183
-\TU/TimesNewRoman(1)/m/n/10.95 Мэдээний болон Системийн гэсэн 4 бүлэгт ангилав.
- Цуглуулгын бүтэц, гол индекс ба
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 182--183
-\TU/TimesNewRoman(1)/m/n/10.95 TTL (Time-To-Live) тохиргоог Зураг [][]Б.2[][]-т
- харуулсан. Хэрэглэгчийн \TU/Consolas(1)/m/n/10.95 _id \TU/TimesNewRoman(1)/m/n
-/10.95 нь \TU/Consolas(1)/m/n/10.95 push_tokens\TU/TimesNewRoman(1)/m/n/10.95 ,
-
- []
-
+[45]
 
 Package fontspec Info: 
 (fontspec)             Consolas scale = 0.9.
@@ -3179,7 +3667,6 @@ Package fontspec Info:
 Package fontspec Info: 
 (fontspec)             Consolas scale = 0.9.
 
-[46]
 
 Package fontspec Info: 
 (fontspec)             Consolas scale = 0.9.
@@ -3196,13 +3683,56 @@ Package fontspec Info:
 Package fontspec Info: 
 (fontspec)             Consolas scale = 0.9.
 
-)
-Underfull \hbox (badness 2608) in paragraph at lines 345--125
-\TU/TimesNewRoman(1)/m/n/10.95 job_locks, refresh_tokens, in_app_notifications)
- автоматаар цэвэрлэж хадгалалтын зайг хэмнэдэг.
- []
 
-[47] (Chapters/Tovchlol.tex
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+ [46]) [47] [48]
+(C:\Users\Acer\Desktop\Forex-Signal-App\diplom\Chapters/Tovchlol.tex
 Underfull \hbox (badness 10000) in paragraph at lines 28--29
 []\TU/TimesNewRoman(1)/m/n/10.95 Гадаад валютын зах зээл (Форекс)
  []
@@ -3219,12 +3749,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 28--29
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 28--29
-\TU/TimesNewRoman(1)/m/n/10.95 цуваанаас BUY/HOLD/SELL ангилалтын
+\TU/TimesNewRoman(1)/m/n/10.95 (classification signal) найдвартай гаргах нь
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 28--29
-\TU/TimesNewRoman(1)/m/n/10.95 нь машин сургалтын тулгамдсан сорилтын
+\TU/TimesNewRoman(1)/m/n/10.95 машин сургалтын тулгамдсан сорилтын
  []
 
 
@@ -3297,21 +3827,22 @@ Underfull \hbox (badness 10000) in paragraph at lines 92--93
 \TU/TimesNewRoman(1)/m/n/10.95 USD/JPY зэрэг хэрэгсэлд өргөтгөх,
  []
 
-[3]) (main.aux)
+[3]) (C:\Users\Acer\Desktop\Forex-Signal-App\diplom\main.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2025-11-06>
  ***********
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 5F45E5557811294F87B0CC41077704AF;10567.
+(rerunfilecheck)             Checksum: F5801AB80B7129C7EDCD9FF7325AE099;10550.
  ) 
 Here is how much of TeX's memory you used:
- 50419 strings out of 402987
- 1195732 string characters out of 5448731
- 1797677 words of memory out of 5000000
- 78237 multiletter control sequences out of 15000+600000
- 683087 words of font info for 194 fonts, out of 8000000 for 9000
+ 49869 strings out of 402987
+ 1186226 string characters out of 5448731
+ 1774292 words of memory out of 5000000
+ 77689 multiletter control sequences out of 15000+600000
+ 683063 words of font info for 191 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 88i,18n,104p,1340b,2682s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 88i,18n,104p,1188b,2682s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on main.pdf (59 pages).
+Output written on C:\Users\Acer\Desktop\Forex-Signal-App\diplom\main.pdf (60 pa
+ges).
