@@ -1,12 +1,12 @@
-This is XeTeX, Version 3.141592653-2.6-0.999997 (MiKTeX 25.4) (preloaded format=xelatex 2025.12.1)  24 MAY 2026 23:39
+This is XeTeX, Version 3.141592653-2.6-0.999997 (MiKTeX 25.4) (preloaded format=xelatex 2025.12.1)  25 MAY 2026 13:09
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**C:/Users/Acer/Desktop/Forex-Signal-App/diplom/main.tex
-(C:/Users/Acer/Desktop/Forex-Signal-App/diplom/main.tex
+**./main.tex
+(main.tex
 LaTeX2e <2025-11-01>
 L3 programming layer <2025-11-06>
-(C:\Users\Acer\Desktop\Forex-Signal-App\diplom\Thesis.cls
+(Thesis.cls
 Document Class: Thesis 2022/04/12 v0.1 testclass
 (C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/latex/base\report.cls
 Document Class: report 2025/01/22 v1.4n Standard LaTeX document class
@@ -1633,8 +1633,7 @@ ext;"
 (fontspec)             Roman/BI/OT:script=cyrl;language=dflt;+smcp;mapping=tex-
 text;"
 
-
-(C:\Users\Acer\Desktop\Forex-Signal-App\diplom\main.aux)
+ (main.aux)
 \openout1 = `main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 49.
@@ -1680,9 +1679,7 @@ nslations-basic-dictionary')
 Package translations Info: loading dictionary `translations-basic-dictionary' f
 or `english'. on input line 49.
 Package hyperref Info: Link coloring ON on input line 49.
-
-(C:\Users\Acer\Desktop\Forex-Signal-App\diplom\main.out)
-(C:\Users\Acer\Desktop\Forex-Signal-App\diplom\main.out)
+ (main.out) (main.out)
 \@outlinefile=\write4
 \openout4 = `main.out'.
 
@@ -1690,8 +1687,7 @@ Package hyperref Info: Link coloring ON on input line 49.
 Package pgfplots notification 'compat/show suggested version=true': document ha
 s been generated with the most recent feature set (\pgfplotsset{compat=1.18}).
 
-(C:\Users\Acer\Desktop\Forex-Signal-App\diplom\Information.tex)
-(C:\Users\Acer\Desktop\Forex-Signal-App\diplom\Chapters/CoverPage.tex
+(Information.tex) (Chapters/CoverPage.tex
 File: Pictures/NMCT.png Graphic file (type bmp)
 <Pictures/NMCT.png>
 LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 8
@@ -1749,29 +1745,20 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 
 [1
 
-]) (C:\Users\Acer\Desktop\Forex-Signal-App\diplom\Chapters/TitlePage.tex
-[1]) (C:\Users\Acer\Desktop\Forex-Signal-App\diplom\Chapters/Abstract.tex
-Underfull \hbox (badness 2351) in paragraph at lines 15--16
-[]\TU/TimesNewRoman(1)/m/n/10.95 Системийн инженерчлэлийн талд оффлайн загвар с
-ургалт, REST API сервер (Flask +
- []
-
-) [1]
+]) (Chapters/TitlePage.tex [1]) (Chapters/Abstract.tex) [1]
 ------------------------------------------------------------------------------
  Table of Contents
 ------------------------------------------------------------------------------
-(C:\Users\Acer\Desktop\Forex-Signal-App\diplom\main.toc)
+(main.toc)
 \tf@toc=\write5
 \openout5 = `main.toc'.
 
  [2
 
-]
-(C:\Users\Acer\Desktop\Forex-Signal-App\diplom\Chapters/acrolist.tex [3
+] (Chapters/acrolist.tex [3
 
 
-]
-[4
+] [4
 
 
 ]
@@ -1824,7 +1811,7 @@ LaTeX Font Info:    Font shape `TU/Consolas(1)/m/n' will be
 ------------------------------------------------------------------------------
  Хүснэгтийн жагсаалт
 ------------------------------------------------------------------------------
-(C:\Users\Acer\Desktop\Forex-Signal-App\diplom\main.lot)
+(main.lot)
 \tf@lot=\write6
 \openout6 = `main.lot'.
 
@@ -1834,14 +1821,13 @@ LaTeX Font Info:    Font shape `TU/Consolas(1)/m/n' will be
 ------------------------------------------------------------------------------
  Зургийн жагсаалт
 ------------------------------------------------------------------------------
-(C:\Users\Acer\Desktop\Forex-Signal-App\diplom\main.lof)
+(main.lof)
 \tf@lof=\write7
 \openout7 = `main.lof'.
 
  [7
 
-]
-(C:\Users\Acer\Desktop\Forex-Signal-App\diplom\Chapters/plan.tex
+] (Chapters/plan.tex
 Underfull \hbox (badness 3803) in paragraph at lines 19--19
 []|\TU/TimesNewRoman(1)/m/n/10.95 Форекс арилжаа, машин сургалт (machine
  []
@@ -1866,9 +1852,7 @@ Underfull \hbox (badness 4084) in paragraph at lines 29--29
 \TU/TimesNewRoman(1)/m/n/10.95 түүхэн өгөгдөл дээрх системийн туршилт
  []
 
-)
-(C:\Users\Acer\Desktop\Forex-Signal-App\diplom\Chapters/Chapter1_Introduction.t
-ex [1
+) (Chapters/Chapter1_Introduction.tex [1
 
 ]
 Бүлэг 1.
@@ -1880,15 +1864,11 @@ Underfull \hbox (badness 2538) in paragraph at lines 20--21
 
 [2
 
-])
-(C:\Users\Acer\Desktop\Forex-Signal-App\diplom\Chapters/Chapter2_Literature.tex
-[3]
+]) (Chapters/Chapter2_Literature.tex [3]
 Бүлэг 2.
 [4
 
-] [5]) [6]
-(C:\Users\Acer\Desktop\Forex-Signal-App\diplom\Chapters/Chapter3_Methodology.te
-x [7]
+] [5]) [6] (Chapters/Chapter3_Methodology.tex [7]
 Бүлэг 3.
 [8
 
@@ -2161,12 +2141,7 @@ Package fontspec Info:
 Package fontspec Info: 
 (fontspec)             Consolas scale = 0.9.
 
- [17] [18] [19]
-
-Package fontspec Info: 
-(fontspec)             Consolas scale = 0.9.
-
- [20]
+ [17] [18]
 
 Package fontspec Info: 
 (fontspec)             Consolas scale = 0.9.
@@ -2175,182 +2150,186 @@ Package fontspec Info:
 Package fontspec Info: 
 (fontspec)             Consolas scale = 0.9.
 
- [21] [22]
+ [19] [20] [21]
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+ [22]
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
 [23]
 
-Package fontspec Info: 
-(fontspec)             Consolas scale = 0.9.
+LaTeX Warning: Reference `fig:signal_seq_b' on page 24 undefined on input line 
+1422.
 
-
-Package fontspec Info: 
-(fontspec)             Consolas scale = 0.9.
-
-
-Package fontspec Info: 
-(fontspec)             Consolas scale = 0.9.
-
-
-Package fontspec Info: 
-(fontspec)             Consolas scale = 0.9.
-
-
-Package fontspec Info: 
-(fontspec)             Consolas scale = 0.9.
-
-
-Package fontspec Info: 
-(fontspec)             Consolas scale = 0.9.
-
-
-Package fontspec Info: 
-(fontspec)             Consolas scale = 0.9.
-
- [24]
-
-Package fontspec Info: 
-(fontspec)             Consolas scale = 0.9.
-
-
-Package fontspec Info: 
-(fontspec)             Consolas scale = 0.9.
-
-
-Package fontspec Info: 
-(fontspec)             Consolas scale = 0.9.
-
-
-Package fontspec Info: 
-(fontspec)             Consolas scale = 0.9.
-
-
-Package fontspec Info: 
-(fontspec)             Consolas scale = 0.9.
-
-
-Package fontspec Info: 
-(fontspec)             Consolas scale = 0.9.
-
-
-Package fontspec Info: 
-(fontspec)             Consolas scale = 0.9.
-
-
-Package fontspec Info: 
-(fontspec)             Consolas scale = 0.9.
-
-
-Package fontspec Info: 
-(fontspec)             Consolas scale = 0.9.
-
-
-Package fontspec Info: 
-(fontspec)             Consolas scale = 0.9.
-
-
-Package fontspec Info: 
-(fontspec)             Consolas scale = 0.9.
-
-
-Package fontspec Info: 
-(fontspec)             Consolas scale = 0.9.
-
-
-Package fontspec Info: 
-(fontspec)             Consolas scale = 0.9.
-
-
-Package fontspec Info: 
-(fontspec)             Consolas scale = 0.9.
-
-
-Package fontspec Info: 
-(fontspec)             Consolas scale = 0.9.
-
-
-Package fontspec Info: 
-(fontspec)             Consolas scale = 0.9.
-
-
-Package fontspec Info: 
-(fontspec)             Consolas scale = 0.9.
-
-
-Package fontspec Info: 
-(fontspec)             Consolas scale = 0.9.
-
-
-Package fontspec Info: 
-(fontspec)             Consolas scale = 0.9.
-
-
-Package fontspec Info: 
-(fontspec)             Consolas scale = 0.9.
-
-
-Package fontspec Info: 
-(fontspec)             Consolas scale = 0.9.
-
-
-Package fontspec Info: 
-(fontspec)             Consolas scale = 0.9.
-
-
-Package fontspec Info: 
-(fontspec)             Consolas scale = 0.9.
-
-
-Package fontspec Info: 
-(fontspec)             Consolas scale = 0.9.
-
-
-Package fontspec Info: 
-(fontspec)             Consolas scale = 0.9.
-
-
-Package fontspec Info: 
-(fontspec)             Consolas scale = 0.9.
-
-
-Package fontspec Info: 
-(fontspec)             Consolas scale = 0.9.
-
-
-Package fontspec Info: 
-(fontspec)             Consolas scale = 0.9.
-
-
-Package fontspec Info: 
-(fontspec)             Consolas scale = 0.9.
-
-
-Package fontspec Info: 
-(fontspec)             Consolas scale = 0.9.
-
-
-Package fontspec Info: 
-(fontspec)             Consolas scale = 0.9.
-
-
-Package fontspec Info: 
-(fontspec)             Consolas scale = 0.9.
-
-
-Package fontspec Info: 
-(fontspec)             Consolas scale = 0.9.
-
-
-Package fontspec Info: 
-(fontspec)             Consolas scale = 0.9.
-
- [25]
 LaTeX Font Info:    Font shape `TU/Consolas(0)/m/n' will be
-(Font)              scaled to size 8.99994pt on input line 1551.
+(Font)              scaled to size 8.99994pt on input line 1458.
 
 Package fontspec Info: 
 (fontspec)             Consolas scale = 0.9.
 
 LaTeX Font Info:    Font shape `TU/Consolas(1)/m/n' will be
-(Font)              scaled to size 8.99994pt on input line 1551.
+(Font)              scaled to size 8.99994pt on input line 1458.
 
 Package fontspec Info: 
 (fontspec)             Consolas scale = 0.9.
@@ -2379,9 +2358,7 @@ Package fontspec Info:
 Package fontspec Info: 
 (fontspec)             Consolas scale = 0.9.
 
- [26])
-(C:\Users\Acer\Desktop\Forex-Signal-App\diplom\Chapters/Chapter4_Results.tex
-[27]
+[24]) (Chapters/Chapter4_Results.tex [25]
 Бүлэг 4.
 
 Package fontspec Info: 
@@ -2391,11 +2368,10 @@ Package fontspec Info:
 Package fontspec Info: 
 (fontspec)             Consolas scale = 0.9.
 
-[28
+[26
 
-] [29] [30] [31] [32] [33] [34])
-(C:\Users\Acer\Desktop\Forex-Signal-App\diplom\Chapters/Chapter5_Conclusion.tex
-[35] [36]
+] [27] [28] [29] [30] [31] [32]) (Chapters/Chapter5_Conclusion.tex [33]
+[34]
 
 Package fontspec Info: 
 (fontspec)             Consolas scale = 0.9.
@@ -2411,11 +2387,10 @@ Underfull \hbox (badness 3612) in paragraph at lines 54--55
 алгаажуулалт).
  []
 
-[37]) (C:\Users\Acer\Desktop\Forex-Signal-App\diplom\Chapters/Bibliography.tex
-(C:\Users\Acer\Desktop\Forex-Signal-App\diplom\main.bbl [38] [39
+[35]) (Chapters/Bibliography.tex (main.bbl [36] [37
 
-]))
-(C:\Users\Acer\Desktop\Forex-Signal-App\diplom\Chapters/appendix.tex [40]
+])) (Chapters/appendix.tex
+[38]
 
 Package fontspec Info: 
 (fontspec)             Consolas scale = 0.9.
@@ -2444,15 +2419,14 @@ Package fontspec Info:
 Package fontspec Info: 
 (fontspec)             Consolas scale = 0.9.
 
+ [39
 
-[41
+] [40]
 
-] [42]
-
 Package fontspec Info: 
 (fontspec)             Consolas scale = 0.9.
 
- [43]
+ [41]
 
 Package fontspec Info: 
 (fontspec)             Consolas scale = 0.9.
@@ -3405,7 +3379,7 @@ Package fontspec Info:
 Package fontspec Info: 
 (fontspec)             Consolas scale = 0.9.
 
- [44]
+ [42]
 
 Package fontspec Info: 
 (fontspec)             Consolas scale = 0.9.
@@ -3490,7 +3464,7 @@ Underfull \hbox (badness 6268) in paragraph at lines 284--285
 wRoman(1)/m/n/10.95 ,
  []
 
-[45]
+[43]
 
 Package fontspec Info: 
 (fontspec)             Consolas scale = 0.9.
@@ -3731,35 +3705,19 @@ Package fontspec Info:
 Package fontspec Info: 
 (fontspec)             Consolas scale = 0.9.
 
- [46]) [47] [48]
-(C:\Users\Acer\Desktop\Forex-Signal-App\diplom\Chapters/Tovchlol.tex
-Underfull \hbox (badness 10000) in paragraph at lines 28--29
-[]\TU/TimesNewRoman(1)/m/n/10.95 Гадаад валютын зах зээл (Форекс)
+ [44]) [45] [46] (Chapters/Tovchlol.tex
+Underfull \hbox (badness 5245) in paragraph at lines 28--29
+\TU/TimesNewRoman(1)/m/n/10.95 зах зээлийн сэтгэл санааны нөлөөгөөр тас-
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 28--29
-\TU/TimesNewRoman(1)/m/n/10.95 хэлбэлзэлтэй өгөгдлийн эх сурвалж. Ийм
+\TU/TimesNewRoman(1)/m/n/10.95 ралтгүй өөрчлөгддөг олон хэмжээст, өндөр
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 28--29
-\TU/TimesNewRoman(1)/m/n/10.95 тогтворгүй (non-stationary) цаг хугацааны
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 28--29
-\TU/TimesNewRoman(1)/m/n/10.95 (classification signal) найдвартай гаргах нь
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 28--29
-\TU/TimesNewRoman(1)/m/n/10.95 машин сургалтын тулгамдсан сорилтын
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 28--29
-\TU/TimesNewRoman(1)/m/n/10.95 нэг. Энэ судалгаанд EUR/USD валютын
+Underfull \hbox (badness 7963) in paragraph at lines 28--29
+\TU/TimesNewRoman(1)/m/n/10.95 хэлбэлзэлтэй өгөгдлийн эх сурвалж болдог.
  []
 
 
@@ -3796,11 +3754,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 60--61
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 66--67
-\TU/TimesNewRoman(1)/m/n/10.95 тай ML serving урсгал хэлбэрт хэрэгжсэн:
- []
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 77--78
 []\TU/TimesNewRoman(1)/b/n/10.95 Эрсдэл: \TU/TimesNewRoman(1)/m/n/10.95 Sharpe 
 8.57–12.83, Sortino
@@ -3808,7 +3761,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 77--78
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 77--78
-\TU/TimesNewRoman(1)/m/n/10.95 23.97–44.76, Calmar 20.16–174.20. Хамгийн
+\TU/TimesNewRoman(1)/m/n/10.95 харьцуулалтын суурь болгож тайлбарлав
  []
 
 [2]
@@ -3827,22 +3780,25 @@ Underfull \hbox (badness 10000) in paragraph at lines 92--93
 \TU/TimesNewRoman(1)/m/n/10.95 USD/JPY зэрэг хэрэгсэлд өргөтгөх,
  []
 
-[3]) (C:\Users\Acer\Desktop\Forex-Signal-App\diplom\main.aux)
+[3]) (main.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2025-11-06>
  ***********
+
+
+LaTeX Warning: There were undefined references.
+
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: F5801AB80B7129C7EDCD9FF7325AE099;10550.
+(rerunfilecheck)             Checksum: 56656CE5AC73A86224C82F60B19A9F1D;10566.
  ) 
 Here is how much of TeX's memory you used:
- 49869 strings out of 402987
- 1186226 string characters out of 5448731
- 1774292 words of memory out of 5000000
- 77689 multiletter control sequences out of 15000+600000
- 683063 words of font info for 191 fonts, out of 8000000 for 9000
+ 49823 strings out of 402987
+ 1184130 string characters out of 5448731
+ 1773250 words of memory out of 5000000
+ 77646 multiletter control sequences out of 15000+600000
+ 683055 words of font info for 190 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 88i,18n,104p,1188b,2682s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 88i,17n,104p,1144b,2682s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on C:\Users\Acer\Desktop\Forex-Signal-App\diplom\main.pdf (60 pa
-ges).
+Output written on main.pdf (58 pages).

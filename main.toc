@@ -21,7 +21,7 @@
 \contentsline {subsection}{\numberline {2.1.5}Өмнөх судалгаануудын хүрээн дэх нээлттэй асуудлууд}{5}{subsection.31}%
 \contentsline {section}{\numberline {2.2}Шинж чанаруудын судалгаа}{5}{section.32}%
 \contentsline {section}{\numberline {2.3}Урагш гүйлгэн баталгаажуулалт}{5}{section.33}%
-\contentsline {section}{\numberline {2.4}ML serving урсгал ба мобайл аппын архитектур}{6}{section.34}%
+\contentsline {section}{\numberline {2.4}ML serving дамжлага ба мобайл аппын архитектур}{6}{section.34}%
 \contentsline {section}{\numberline {2.5}Төсөөтэй системүүд ба судалгааны цоорхой}{6}{section.35}%
 \contentsline {section}{\numberline {2.6}Үндсэн судалгаануудтай харьцуулсан тойм}{6}{section.36}%
 \contentsline {section}{\numberline {2.7}Судалгааны ажлын шинэлэг тал}{7}{section.38}%
@@ -45,46 +45,46 @@
 \contentsline {subsection}{\numberline {3.6.1}Дохионы шүүлтүүр ба тоон үр дүн}{17}{subsection.73}%
 \contentsline {subsection}{\numberline {3.6.2}Stop Loss ба Take Profit тооцоолол}{17}{subsection.75}%
 \contentsline {subsection}{\numberline {3.6.3}Дохионы амьдралын мөчлөгийн төлөвт автомат}{18}{subsection.78}%
-\contentsline {subsection}{\numberline {3.6.4}Дохио үүсгэх дарааллын диаграмм}{20}{subsection.80}%
-\contentsline {section}{\numberline {3.7}MetaTrader 5 түүхэн өгөгдөл дээрх системийн туршилт}{21}{section.83}%
-\contentsline {subsection}{\numberline {3.7.1}Түүхэн өгөгдөл дээрх системийн туршилтын гүйцэтгэлийн логик}{21}{subsection.84}%
-\contentsline {subsection}{\numberline {3.7.2}Түүхэн өгөгдөл дээрх системийн туршилтын нөхцөл}{22}{subsection.86}%
-\contentsline {subsection}{\numberline {3.7.3}Арилжааны зардлын хамралт}{22}{subsection.87}%
-\contentsline {subsection}{\numberline {3.7.4}Босго сонголтын протокол}{22}{subsection.88}%
-\contentsline {subsection}{\numberline {3.7.5}Үнэлгээний шалгуур үзүүлэлтүүд}{22}{subsection.89}%
-\contentsline {section}{\numberline {3.8}Серверийн хэсгийн хэрэгжүүлэлт}{23}{section.91}%
-\contentsline {subsection}{\numberline {3.8.1}Архитектурын үндсэн бүрэлдэхүүн}{23}{subsection.92}%
-\contentsline {subsection}{\numberline {3.8.2}Нэвтрэлтийн аюулгүй байдал ба тогтвортой ажиллагаа}{24}{subsection.94}%
-\contentsline {subsection}{\numberline {3.8.3}Архитектурын хэмжигдэх KPI ба баталгаажуулалтын протокол}{25}{subsection.96}%
-\contentsline {section}{\numberline {3.9}Харагдах хэсгийн архитектур}{25}{section.97}%
-\contentsline {subsection}{\numberline {3.9.1}Харагдах хэсгийн модулийн бүтэц ба API харилцаа}{25}{subsection.98}%
-\contentsline {subsection}{\numberline {3.9.2}Нэгдмэл архитектурын зураглал}{26}{subsection.100}%
-\contentsline {section}{\numberline {3.10}Загварын давталтын сайжруулалт}{27}{section.102}%
-\contentsline {chapter}{\numberline {4}Судалгааны үр дүн}{28}{chapter.104}%
-\contentsline {section}{\numberline {4.1}Үр дүнгийн өгөгдлийн эх сурвалж}{28}{section.105}%
-\contentsline {section}{\numberline {4.2}Загварын ангиллын гүйцэтгэл}{28}{section.106}%
-\contentsline {subsection}{\numberline {4.2.1}Тестийн өгөгдөл дээрх ангилал тус бүрийн үзүүлэлт (2024)}{29}{subsection.108}%
-\contentsline {subsection}{\numberline {4.2.2}Итгэлцлийн бүрийн нарийвчлал}{29}{subsection.110}%
-\contentsline {section}{\numberline {4.3}Босгын мужийн нэгтгэсэн үр дүн}{29}{section.112}%
-\contentsline {subsection}{\numberline {4.3.1}Суурь жишиг: EUR/USD худалдан аваад барих стратеги}{30}{subsection.115}%
-\contentsline {subsection}{\numberline {4.3.2}Дохионы гүйцэтгэлийн чанар}{30}{subsection.117}%
-\contentsline {subsubsection}{\numberline {4.3.2.1}Бином тестээр шалгасан статистикийн ач холбогдол}{31}{subsubsection.119}%
-\contentsline {subsection}{\numberline {4.3.3}Балансын хэлбэлзлийн нэгтгэл}{31}{subsection.120}%
-\contentsline {subsection}{\numberline {4.3.4}Босго ба гүйцэтгэлийн хувийн хамаарал}{32}{subsection.122}%
-\contentsline {subsection}{\numberline {4.3.5}Босго ба ялалтын хувийн хамаарал}{33}{subsection.124}%
-\contentsline {subsection}{\numberline {4.3.6}Босго ба хүлээгдэж буй өгөөжийн хамаарал}{33}{subsection.126}%
-\contentsline {subsection}{\numberline {4.3.7}Хамгийн өндөр өгөөжтэй 3 босгын хөрөнгийн өөрчлөлтийн муруй}{34}{subsection.128}%
-\contentsline {section}{\numberline {4.4}Үр дүнгийн тайлбар}{35}{section.130}%
-\contentsline {subsection}{\numberline {4.4.1}Үр дүнг ерөнхийлөн дүгнэх боломжийн хүрээ}{35}{subsection.131}%
-\contentsline {subsection}{\numberline {4.4.2}Сценарийн хүрээнд ажиглагдсан дээд цэг}{35}{subsection.132}%
-\contentsline {subsection}{\numberline {4.4.3}Үр дүнгийн нэгтгэсэн тайлбар}{35}{subsection.133}%
-\contentsline {section}{\numberline {4.5}Архитектурын KPI-ийн баталгаажуулалтын үр дүн}{35}{section.134}%
-\contentsline {section}{\numberline {4.6}Дүгнэлт}{36}{section.135}%
-\contentsline {subsection}{\numberline {4.6.1}Судалгааны гол үр дүн}{36}{subsection.136}%
-\contentsline {subsection}{\numberline {4.6.2}Судалгааны практик хувь нэмэр}{36}{subsection.140}%
-\contentsline {subsection}{\numberline {4.6.3}Хязгаарлалт}{36}{subsection.141}%
-\contentsline {subsection}{\numberline {4.6.4}Цаашдын чиглэл}{37}{subsection.149}%
-\contentsline {subsection}{\numberline {4.6.5}Эцсийн дүгнэлт}{37}{subsection.157}%
-\contentsline {chapter}{Ном зүй}{38}{dummy.158}%
-\contentsline {chapter}{Хавсралт}{40}{dummy.160}%
-\contentsline {chapter}{Товчлол}{1}{dummy.172}%
+\contentsline {subsection}{\numberline {3.6.4}Дохио үүсгэх дарааллын диаграмм}{18}{subsection.80}%
+\contentsline {section}{\numberline {3.7}MetaTrader 5 түүхэн өгөгдөл дээрх системийн туршилт}{19}{section.82}%
+\contentsline {subsection}{\numberline {3.7.1}Түүхэн өгөгдөл дээрх системийн туршилтын гүйцэтгэлийн логик}{20}{subsection.83}%
+\contentsline {subsection}{\numberline {3.7.2}Түүхэн өгөгдөл дээрх системийн туршилтын нөхцөл}{20}{subsection.85}%
+\contentsline {subsection}{\numberline {3.7.3}Арилжааны зардлын хамралт}{20}{subsection.86}%
+\contentsline {subsection}{\numberline {3.7.4}Босго сонголтын протокол}{20}{subsection.87}%
+\contentsline {subsection}{\numberline {3.7.5}Үнэлгээний шалгуур үзүүлэлтүүд}{20}{subsection.88}%
+\contentsline {section}{\numberline {3.8}Серверийн хэсгийн хэрэгжүүлэлт}{21}{section.90}%
+\contentsline {subsection}{\numberline {3.8.1}Архитектурын үндсэн бүрэлдэхүүн}{21}{subsection.91}%
+\contentsline {subsection}{\numberline {3.8.2}Нэвтрэлтийн аюулгүй байдал ба тогтвортой ажиллагаа}{22}{subsection.93}%
+\contentsline {subsection}{\numberline {3.8.3}Архитектурын хэмжигдэх KPI ба баталгаажуулалтын протокол}{23}{subsection.95}%
+\contentsline {section}{\numberline {3.9}Харагдах хэсгийн архитектур}{23}{section.96}%
+\contentsline {subsection}{\numberline {3.9.1}Харагдах хэсгийн модулийн бүтэц ба API харилцаа}{23}{subsection.97}%
+\contentsline {subsection}{\numberline {3.9.2}Нэгдмэл архитектурын зураглал}{24}{subsection.99}%
+\contentsline {section}{\numberline {3.10}Загварын давталтын сайжруулалт}{25}{section.101}%
+\contentsline {chapter}{\numberline {4}Судалгааны үр дүн}{26}{chapter.103}%
+\contentsline {section}{\numberline {4.1}Үр дүнгийн өгөгдлийн эх сурвалж}{26}{section.104}%
+\contentsline {section}{\numberline {4.2}Загварын ангиллын гүйцэтгэл}{26}{section.105}%
+\contentsline {subsection}{\numberline {4.2.1}Тестийн өгөгдөл дээрх ангилал тус бүрийн үзүүлэлт (2024)}{27}{subsection.107}%
+\contentsline {subsection}{\numberline {4.2.2}Итгэлцлийн бүрийн нарийвчлал}{27}{subsection.109}%
+\contentsline {section}{\numberline {4.3}Босгын мужийн нэгтгэсэн үр дүн}{27}{section.111}%
+\contentsline {subsection}{\numberline {4.3.1}Суурь жишиг: EUR/USD худалдан аваад барих стратеги}{28}{subsection.114}%
+\contentsline {subsection}{\numberline {4.3.2}Дохионы гүйцэтгэлийн чанар}{28}{subsection.116}%
+\contentsline {subsubsection}{\numberline {4.3.2.1}Бином тестээр шалгасан статистикийн ач холбогдол}{29}{subsubsection.118}%
+\contentsline {subsection}{\numberline {4.3.3}Балансын хэлбэлзлийн нэгтгэл}{29}{subsection.119}%
+\contentsline {subsection}{\numberline {4.3.4}Босго ба гүйцэтгэлийн хувийн хамаарал}{30}{subsection.121}%
+\contentsline {subsection}{\numberline {4.3.5}Босго ба ялалтын хувийн хамаарал}{31}{subsection.123}%
+\contentsline {subsection}{\numberline {4.3.6}Босго ба хүлээгдэж буй өгөөжийн хамаарал}{31}{subsection.125}%
+\contentsline {subsection}{\numberline {4.3.7}Хамгийн өндөр өгөөжтэй 3 босгын хөрөнгийн өөрчлөлтийн муруй}{32}{subsection.127}%
+\contentsline {section}{\numberline {4.4}Үр дүнгийн тайлбар}{33}{section.129}%
+\contentsline {subsection}{\numberline {4.4.1}Үр дүнг ерөнхийлөн дүгнэх боломжийн хүрээ}{33}{subsection.130}%
+\contentsline {subsection}{\numberline {4.4.2}Сценарийн хүрээнд ажиглагдсан дээд цэг}{33}{subsection.131}%
+\contentsline {subsection}{\numberline {4.4.3}Үр дүнгийн нэгтгэсэн тайлбар}{33}{subsection.132}%
+\contentsline {section}{\numberline {4.5}Архитектурын KPI-ийн баталгаажуулалтын үр дүн}{33}{section.133}%
+\contentsline {section}{\numberline {4.6}Дүгнэлт}{34}{section.134}%
+\contentsline {subsection}{\numberline {4.6.1}Судалгааны гол үр дүн}{34}{subsection.135}%
+\contentsline {subsection}{\numberline {4.6.2}Судалгааны практик хувь нэмэр}{34}{subsection.139}%
+\contentsline {subsection}{\numberline {4.6.3}Хязгаарлалт}{34}{subsection.140}%
+\contentsline {subsection}{\numberline {4.6.4}Цаашдын чиглэл}{35}{subsection.148}%
+\contentsline {subsection}{\numberline {4.6.5}Эцсийн дүгнэлт}{35}{subsection.156}%
+\contentsline {chapter}{Ном зүй}{36}{dummy.157}%
+\contentsline {chapter}{Хавсралт}{38}{dummy.159}%
+\contentsline {chapter}{Товчлол}{1}{dummy.171}%
