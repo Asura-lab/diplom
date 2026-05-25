@@ -8,12 +8,12 @@
 \contentsline {figure}{\numberline {3.5}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces GBDT ансамбль загварын архитектур}}{16}{figure.caption.70}%
 \contentsline {figure}{\numberline {3.6}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces Дохионы шүүлтүүрийн юүлүүр: 359{,}639 таамгаас 230 хэлцэл хүртэл (0.90 босго)}}{17}{figure.caption.74}%
 \contentsline {figure}{\numberline {3.7}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces Дохионы амьдралын мөчлөгийн төлөвт автомат}}{18}{figure.caption.79}%
-\contentsline {figure}{\numberline {3.8}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces Дохио үүсгэх дарааллын диаграмм (UML 2.5 sequence diagram)}}{19}{figure.caption.81}%
+\contentsline {figure}{\numberline {3.8}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces Дохио үүсгэх дараалал}}{19}{figure.caption.81}%
 \contentsline {figure}{\numberline {3.9}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces Системийн байршуулалтын диаграмм — Docker, Azure App Service, role-based scaling}}{22}{figure.caption.92}%
-\contentsline {figure}{\numberline {3.10}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces Харагдах хэсэг ба серверийн сервисүүдийн REST polling холболтын архитектур}}{25}{figure.caption.100}%
+\contentsline {figure}{\numberline {3.10}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces Харагдах хэсэг ба серверийн сервисүүдийн REST polling холболтын архитектур}}{23}{figure.caption.96}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces Босгын мужийн шинжилгээ: гүйцэтгэлийн хувийн өөрчлөлт}}{31}{figure.caption.122}%
-\contentsline {figure}{\numberline {4.2}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces Босгын мужийн шинжилгээ: ялалтын хувь ба 95\% итгэлцлийн интервал}}{31}{figure.caption.124}%
-\contentsline {figure}{\numberline {4.3}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces Босгын мужийн шинжилгээ: хүлээгдэж буй өгөөжийн өөрчлөлт}}{32}{figure.caption.126}%
-\contentsline {figure}{\numberline {4.4}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces Хамгийн өндөр өгөөжтэй 3 босгын хөрөнгийн өөрчлөлтийн муруй}}{32}{figure.caption.128}%
-\contentsline {figure}{\numberline {Б.1}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces WFV олон огтлолын ерөнхий концепцын схем (Fold 1--Fold 5 expanding window protocol)}}{40}{figure.caption.162}%
+\contentsline {figure}{\numberline {4.1}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces Босгын мужийн шинжилгээ: гүйцэтгэлийн хувийн өөрчлөлт}}{30}{figure.caption.118}%
+\contentsline {figure}{\numberline {4.2}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces Босгын мужийн шинжилгээ: ялалтын хувь ба 95\% итгэлцлийн интервал}}{30}{figure.caption.120}%
+\contentsline {figure}{\numberline {4.3}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces Босгын мужийн шинжилгээ: хүлээгдэж буй өгөөжийн өөрчлөлт}}{31}{figure.caption.122}%
+\contentsline {figure}{\numberline {4.4}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces Хамгийн өндөр өгөөжтэй 3 босгын хөрөнгийн өөрчлөлтийн муруй}}{31}{figure.caption.124}%
+\contentsline {figure}{\numberline {Б.1}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces WFV олон огтлолын ерөнхий концепцын схем (Fold 1--Fold 5 expanding window protocol)}}{39}{figure.caption.158}%

@@ -330,3 +330,31 @@ API давхаргын p95 latency 471--536ms байсан нь зорилтот
 \end{table}
 
 \noindent\textit{Тэмдэглэл:} ``---'' нь тухайн параметр уг загварт байхгүйг харуулна. Хэт нийцлээс сэргийлэх зургаан арга хэмжээ (модны гүнийг хязгаарлах, бага learning rate, эрт зогсоолт, L1/L2 нормчлол, WFV, шинж чанарын цөөрөлт) бүгд энэ хүснэгтэд тусгагдсан.
+
+%% ============================================================
+%% Хавсралт Ж: Харагдах хэсгийн модуль ба API endpoint жагсаалт
+%% ============================================================
+\section*{Хавсралт Ж: Харагдах хэсгийн модуль ба API endpoint жагсаалт}
+\label{app:frontend_modules}
+\renewcommand{\thetable}{Ж.\arabic{table}}
+\renewcommand{\thefigure}{Ж.\arabic{figure}}
+\setcounter{table}{0}
+\setcounter{figure}{0}
+
+\S3.9-т (Харагдах хэсгийн архитектур) дурдсан мобайл аппын дөрвөн модуль тус бүрийн үүрэг, харилцааны загвар ба холбогдох REST API endpoint-үүдийг \tref{tab:frontend_modules_app} хүснэгтэд нэгтгэв.
+
+\begin{table}[H]
+\centering
+\caption{Харагдах хэсгийн модулиуд, харилцааны загвар ба API endpoint бүлэг}
+\label{tab:frontend_modules_app}
+\renewcommand{\arraystretch}{1.22}
+\setlength{\tabcolsep}{4pt}
+\begin{tabularx}{\textwidth}{|>{\raggedright\arraybackslash}p{2.5cm}|>{\raggedright\arraybackslash}p{3.2cm}|>{\centering\arraybackslash}p{2.3cm}|>{\raggedright\arraybackslash}X|}
+\hline
+\textbf{Модуль} & \textbf{Үндсэн үүрэг} & \textbf{Харилцааны загвар} & \textbf{Холбогдох API endpoint} \\ \hline
+Нэвтрэлтийн модуль & Бүртгэл, нэвтрэлт, токен шинэчлэлт, профайл & REST POST/PUT & \texttt{/auth/register}, \texttt{/auth/login}, \texttt{/auth/refresh} \\ \hline
+Ханшийн модуль & Бодит цагийн ханш, 24 цагийн өөрчлөлт, хослол сонгох & REST GET (polling) & \texttt{/rates/live}, \texttt{/rates/\{pair\}/history} \\ \hline
+Дохионы модуль & Дохио жагсаалт, итгэлцэл, SL/TP дэлгэрэнгүй, гүйцэтгэлийн статистик & REST GET + Push & \texttt{/signals/latest}, \texttt{/signals/\{id\}}, \texttt{/signals/stats} \\ \hline
+Мэдээний модуль & Эдийн засгийн мэдээ, үйл явдлын хуанли, AI шинжилгээ & REST GET & \texttt{/news/feed}, \texttt{/news/calendar} \\ \hline
+\end{tabularx}
+\end{table}
