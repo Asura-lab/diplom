@@ -1,0 +1,87 @@
+\xpg@aux {}{mongolian}
+\contentsline {chapter}{Хураангуй}{i}{dummy.1}%
+\contentsline {chapter}{Гарчиг}{ii}{dummy.2}%
+\contentsline {chapter}{Товчилсон үгсийн жагсаалт}{iii}{dummy.4}%
+\contentsline {chapter}{Хүснэгтийн жагсаалт}{iv}{dummy.6}%
+\contentsline {chapter}{Зургийн жагсаалт}{v}{dummy.8}%
+\contentsline {chapter}{Ажлын төлөвлөгөө}{1}{chapter*.10}%
+\contentsline {chapter}{\numberline {1}Удиртгал}{2}{chapter.12}%
+\contentsline {section}{\numberline {1.1}Үндэслэл, ач холбогдол}{2}{section.13}%
+\contentsline {section}{\numberline {1.2}Зорилго, зорилт}{2}{section.14}%
+\contentsline {subsection}{\numberline {1.2.1}Судалгааны зорилго}{2}{subsection.15}%
+\contentsline {subsection}{\numberline {1.2.2}Судалгааны зорилтууд}{2}{subsection.16}%
+\contentsline {section}{\numberline {1.3}Судалгааны асуулт ба хэмжигдэх шалгуур}{3}{section.21}%
+\contentsline {chapter}{\numberline {2}Судалгааны сэдвийн онол, өнөөгийн түвшин}{4}{chapter.23}%
+\contentsline {section}{\numberline {2.1}Санхүүгийн зах зээлийн таамаглалд машин сургалтыг хэрэглэсэн судалгаанууд}{4}{section.24}%
+\contentsline {subsection}{\numberline {2.1.1}Уламжлалт машин сургалтын аргууд}{4}{subsection.25}%
+\contentsline {subsection}{\numberline {2.1.2}Гүн сургалтын аргууд}{4}{subsection.26}%
+\contentsline {subsection}{\numberline {2.1.3}Градиент нэмэгдүүлсэн шийдвэрийн мод санхүүгийн салбарт}{4}{subsection.27}%
+\contentsline {subsection}{\numberline {2.1.4}Ансамбль аргуудын хэрэглээ}{5}{subsection.28}%
+\contentsline {subsection}{\numberline {2.1.5}Өмнөх судалгаануудын хүрээн дэх нээлттэй асуудлууд}{5}{subsection.29}%
+\contentsline {section}{\numberline {2.2}Шинж чанаруудын судалгаа}{5}{section.30}%
+\contentsline {subsection}{\numberline {2.2.1}Зах зээлийн үр ашгийн таамаглалын эргэлзэл}{5}{subsection.31}%
+\contentsline {subsection}{\numberline {2.2.2}Олон шинж чанар, олон хугацааны интервалын хэрэгцээ}{5}{subsection.32}%
+\contentsline {subsection}{\numberline {2.2.3}Бодит зардлын тусгал}{6}{subsection.33}%
+\contentsline {section}{\numberline {2.3}Урагш гүйлгэн баталгаажуулалт}{6}{section.34}%
+\contentsline {section}{\numberline {2.4}ML serving дамжлага ба мобайл аппын архитектур}{6}{section.35}%
+\contentsline {section}{\numberline {2.5}Төсөөтэй системүүдийн харьцуулалт}{6}{section.36}%
+\contentsline {section}{\numberline {2.6}Үндсэн судалгаануудтай харьцуулсан тойм}{6}{section.37}%
+\contentsline {section}{\numberline {2.7}Судалгааны ажлын шинэлэг тал}{7}{section.39}%
+\contentsline {chapter}{\numberline {3}Судалгааны арга зүй}{8}{chapter.40}%
+\contentsline {section}{\numberline {3.1}Судалгааны арга барил}{8}{section.41}%
+\contentsline {section}{\numberline {3.2}Системийн ерөнхий бүтэц}{8}{section.43}%
+\contentsline {section}{\numberline {3.3}Өгөгдлийн урсгал}{9}{section.45}%
+\contentsline {section}{\numberline {3.4}Өгөгдөл бэлтгэл}{10}{section.47}%
+\contentsline {subsection}{\numberline {3.4.1}Түүхэн өгөгдөл}{10}{subsection.48}%
+\contentsline {subsection}{\numberline {3.4.2}Шинж чанарын инженерчлэл}{11}{subsection.50}%
+\contentsline {subsection}{\numberline {3.4.3}Шошго (label) үүсгэх}{12}{subsection.52}%
+\contentsline {subsection}{\numberline {3.4.4}Шошго ба шинж чанарын цагийн нийцлийн аудит (leakage audit)}{13}{subsection.55}%
+\contentsline {subsection}{\numberline {3.4.5}WFV-ийн олон огтлолын алхамт логик}{13}{subsection.57}%
+\contentsline {section}{\numberline {3.5}AI загварын бүтэц ба сургалт}{14}{section.60}%
+\contentsline {subsection}{\numberline {3.5.1}Ансамбль загварын архитектур}{14}{subsection.61}%
+\contentsline {subsubsection}{\numberline {3.5.1.1}Загварын математик тодорхойлолт}{14}{subsubsection.62}%
+\contentsline {subsubsection}{\numberline {3.5.1.2}Алдагдлын функц (loss function)}{14}{subsubsection.66}%
+\contentsline {subsubsection}{\numberline {3.5.1.3}Ансамблийн нэгтгэх дүрэм}{15}{subsubsection.68}%
+\contentsline {subsection}{\numberline {3.5.2}Гиперпараметр сонголтын протокол}{16}{subsection.72}%
+\contentsline {section}{\numberline {3.6}Дохио үүсгэх систем}{17}{section.73}%
+\contentsline {subsection}{\numberline {3.6.1}Дохионы шүүлтүүр ба тоон үр дүн}{17}{subsection.74}%
+\contentsline {subsection}{\numberline {3.6.2}Stop Loss ба Take Profit тооцоолол}{17}{subsection.76}%
+\contentsline {subsection}{\numberline {3.6.3}Дохионы амьдралын мөчлөгийн төлөвт автомат}{18}{subsection.79}%
+\contentsline {subsection}{\numberline {3.6.4}Дохио үүсгэх дарааллын диаграмм}{18}{subsection.81}%
+\contentsline {section}{\numberline {3.7}Стратегийн backtesting (түүхэн өгөгдөл дээрх системийн туршилт)}{19}{section.83}%
+\contentsline {subsection}{\numberline {3.7.1}Гүйцэтгэлийн логик}{20}{subsection.84}%
+\contentsline {subsection}{\numberline {3.7.2}Туршилтын нөхцөл}{20}{subsection.86}%
+\contentsline {subsection}{\numberline {3.7.3}Арилжааны зардлын хамралт}{20}{subsection.87}%
+\contentsline {subsection}{\numberline {3.7.4}Босго сонголтын протокол}{20}{subsection.88}%
+\contentsline {subsection}{\numberline {3.7.5}Нэгдсэн үнэлгээний шалгуур үзүүлэлтүүд}{20}{subsection.89}%
+\contentsline {section}{\numberline {3.8}Серверийн хэсгийн хэрэгжүүлэлт}{21}{section.91}%
+\contentsline {subsection}{\numberline {3.8.1}Архитектурын үндсэн бүрэлдэхүүн}{21}{subsection.92}%
+\contentsline {section}{\numberline {3.9}Харагдах хэсгийн архитектур}{23}{section.97}%
+\contentsline {subsection}{\numberline {3.9.1}Харагдах хэсгийн модулийн бүтэц ба API харилцаа}{23}{subsection.98}%
+\contentsline {subsection}{\numberline {3.9.2}Нэгдсэн архитектурын зураглал}{23}{subsection.99}%
+\contentsline {section}{\numberline {3.10}Загварын давталтын сайжруулалт}{23}{section.101}%
+\contentsline {chapter}{\numberline {4}Судалгааны үр дүн}{25}{chapter.103}%
+\contentsline {section}{\numberline {4.1}Үр дүнгийн өгөгдлийн эх сурвалж}{25}{section.104}%
+\contentsline {section}{\numberline {4.2}Загварын ангиллын гүйцэтгэл}{25}{section.105}%
+\contentsline {subsection}{\numberline {4.2.1}Тестийн өгөгдөл дээрх ангилал тус бүрийн үзүүлэлт (2024)}{25}{subsection.109}%
+\contentsline {subsection}{\numberline {4.2.2}Итгэлцлийн бүрийн нарийвчлал}{26}{subsection.111}%
+\contentsline {section}{\numberline {4.3}Босгын мужийн нэгдсэн үр дүн}{26}{section.113}%
+\contentsline {subsection}{\numberline {4.3.1}Нийт өгөөж ба худалдан аваад барих жишиг}{26}{subsection.114}%
+\contentsline {subsection}{\numberline {4.3.2}Дохио-арилжааны хувирлын механизм}{27}{subsection.116}%
+\contentsline {subsection}{\numberline {4.3.3}Ялалтын хувь ба статистикийн ач холбогдол}{28}{subsection.118}%
+\contentsline {subsection}{\numberline {4.3.4}Хүлээгдэж буй өгөөж}{28}{subsection.120}%
+\contentsline {subsection}{\numberline {4.3.5}Эрсдэлийн үзүүлэлтүүд}{29}{subsection.122}%
+\contentsline {subsection}{\numberline {4.3.6}Олон шалгуурт нэгтгэл ба босгын ранкинг}{29}{subsection.124}%
+\contentsline {subsection}{\numberline {4.3.7}Хөрөнгийн өөрчлөлтийн муруй ба сарын ашгийн жигдрэлт}{31}{subsection.127}%
+\contentsline {section}{\numberline {4.4}Үр дүнгийн тайлбар}{32}{section.130}%
+\contentsline {section}{\numberline {4.5}Архитектурын KPI-ийн баталгаажуулалтын үр дүн}{32}{section.131}%
+\contentsline {section}{\numberline {4.6}Дүгнэлт}{33}{section.132}%
+\contentsline {subsection}{\numberline {4.6.1}Судалгааны гол үр дүн}{33}{subsection.133}%
+\contentsline {subsection}{\numberline {4.6.2}Судалгааны практик хувь нэмэр}{33}{subsection.138}%
+\contentsline {subsection}{\numberline {4.6.3}Хязгаарлалт}{34}{subsection.139}%
+\contentsline {subsection}{\numberline {4.6.4}Цаашдын чиглэл}{34}{subsection.147}%
+\contentsline {subsection}{\numberline {4.6.5}Эцсийн дүгнэлт}{35}{subsection.151}%
+\contentsline {chapter}{Ном зүй}{35}{dummy.152}%
+\contentsline {chapter}{Талархал}{37}{dummy.154}%
+\contentsline {chapter}{Хавсралт}{38}{dummy.156}%
+\contentsline {chapter}{Товчлол}{1}{dummy.173}%
