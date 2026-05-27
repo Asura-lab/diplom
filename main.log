@@ -1,13 +1,12 @@
-This is XeTeX, Version 3.141592653-2.6-0.999997 (MiKTeX 25.4) (preloaded format=xelatex 2025.12.1)  26 MAY 2026 01:11
+This is XeTeX, Version 3.141592653-2.6-0.999997 (MiKTeX 25.4) (preloaded format=xelatex 2025.12.1)  27 MAY 2026 12:24
 entering extended mode
  restricted \write18 enabled.
- file:line:error style messages enabled.
  %&-line parsing enabled.
-**c:/Users/Acer/Desktop/Forex-Signal-App/diplom/main.tex
-(c:/Users/Acer/Desktop/Forex-Signal-App/diplom/main.tex
+**C:/Users/Acer/Desktop/Forex-Signal-App/diplom/main.tex
+(C:/Users/Acer/Desktop/Forex-Signal-App/diplom/main.tex
 LaTeX2e <2025-11-01>
 L3 programming layer <2025-11-06>
-(Thesis.cls
+(C:\Users\Acer\Desktop\Forex-Signal-App\diplom\Thesis.cls
 Document Class: Thesis 2022/04/12 v0.1 testclass
 (C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/latex/base\report.cls
 Document Class: report 2025/01/22 v1.4n Standard LaTeX document class
@@ -1634,7 +1633,8 @@ ext;"
 (fontspec)             Roman/BI/OT:script=cyrl;language=dflt;+smcp;mapping=tex-
 text;"
 
- (main.aux)
+
+(C:\Users\Acer\Desktop\Forex-Signal-App\diplom\main.aux)
 \openout1 = `main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 49.
@@ -1680,7 +1680,9 @@ nslations-basic-dictionary')
 Package translations Info: loading dictionary `translations-basic-dictionary' f
 or `english'. on input line 49.
 Package hyperref Info: Link coloring ON on input line 49.
- (main.out) (main.out)
+
+(C:\Users\Acer\Desktop\Forex-Signal-App\diplom\main.out)
+(C:\Users\Acer\Desktop\Forex-Signal-App\diplom\main.out)
 \@outlinefile=\write4
 \openout4 = `main.out'.
 
@@ -1688,7 +1690,8 @@ Package hyperref Info: Link coloring ON on input line 49.
 Package pgfplots notification 'compat/show suggested version=true': document ha
 s been generated with the most recent feature set (\pgfplotsset{compat=1.18}).
 
-(Information.tex) (Chapters/CoverPage.tex
+(C:\Users\Acer\Desktop\Forex-Signal-App\diplom\Information.tex)
+(C:\Users\Acer\Desktop\Forex-Signal-App\diplom\Chapters/CoverPage.tex
 File: Pictures/NMCT.png Graphic file (type bmp)
 <Pictures/NMCT.png>
 LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 8
@@ -1746,20 +1749,29 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 
 [1
 
-]) (Chapters/TitlePage.tex [1]) (Chapters/Abstract.tex) [1]
+]) (C:\Users\Acer\Desktop\Forex-Signal-App\diplom\Chapters/TitlePage.tex
+[1]) (C:\Users\Acer\Desktop\Forex-Signal-App\diplom\Chapters/Abstract.tex
+Underfull \hbox (badness 2173) in paragraph at lines 11--12
+[]\TU/TimesNewRoman(1)/m/n/10.95 Энэ судалгаагаар EUR/USD цаг хугацааны цуваан 
+дээр машин сургалтын ансамблиар
+ []
+
+) [1]
 ------------------------------------------------------------------------------
  Table of Contents
 ------------------------------------------------------------------------------
-(main.toc)
+(C:\Users\Acer\Desktop\Forex-Signal-App\diplom\main.toc)
 \tf@toc=\write5
 \openout5 = `main.toc'.
 
  [2
 
-] (Chapters/acrolist.tex [3
+]
+(C:\Users\Acer\Desktop\Forex-Signal-App\diplom\Chapters/acrolist.tex [3
 
 
-] [4
+]
+[4
 
 
 ]
@@ -1812,7 +1824,7 @@ LaTeX Font Info:    Font shape `TU/Consolas(1)/m/n' will be
 ------------------------------------------------------------------------------
  Хүснэгтийн жагсаалт
 ------------------------------------------------------------------------------
-(main.lot)
+(C:\Users\Acer\Desktop\Forex-Signal-App\diplom\main.lot)
 \tf@lot=\write6
 \openout6 = `main.lot'.
 
@@ -1822,13 +1834,14 @@ LaTeX Font Info:    Font shape `TU/Consolas(1)/m/n' will be
 ------------------------------------------------------------------------------
  Зургийн жагсаалт
 ------------------------------------------------------------------------------
-(main.lof)
+(C:\Users\Acer\Desktop\Forex-Signal-App\diplom\main.lof)
 \tf@lof=\write7
 \openout7 = `main.lof'.
 
  [7
 
-] (Chapters/plan.tex
+]
+(C:\Users\Acer\Desktop\Forex-Signal-App\diplom\Chapters/plan.tex
 Underfull \hbox (badness 3803) in paragraph at lines 19--19
 []|\TU/TimesNewRoman(1)/m/n/10.95 Форекс арилжаа, машин сургалт (machine
  []
@@ -1853,23 +1866,29 @@ Underfull \hbox (badness 4084) in paragraph at lines 29--29
 \TU/TimesNewRoman(1)/m/n/10.95 түүхэн өгөгдөл дээрх системийн туршилт
  []
 
-) (Chapters/Chapter1_Introduction.tex [1
+)
+(C:\Users\Acer\Desktop\Forex-Signal-App\diplom\Chapters/Chapter1_Introduction.t
+ex [1
 
 ]
 Бүлэг 1.
-
-Underfull \hbox (badness 2538) in paragraph at lines 20--21
-[]\TU/TimesNewRoman(1)/m/n/10.95 Судалгааны үндсэн зорилго нь \TU/TimesNewRoman
-(1)/b/n/10.95 шуугиан ихтэй санхүүгийн цаг хугацааны цуваанд
- []
-
 [2
 
-]) (Chapters/Chapter2_Literature.tex [3]
+])
+(C:\Users\Acer\Desktop\Forex-Signal-App\diplom\Chapters/Chapter2_Literature.tex
+[3]
 Бүлэг 2.
+
+Underfull \hbox (badness 1014) in paragraph at lines 18--19
+\TU/TimesNewRoman(1)/m/n/10.95 олон, хэт нийцэлд эмзэг, анхны параметрээс их ха
+мааралтай [[]]. Krauss нар (2017) S&P 500
+ []
+
 [4
 
-] [5]) [6] (Chapters/Chapter3_Methodology.tex [7]
+] [5] [6])
+(C:\Users\Acer\Desktop\Forex-Signal-App\diplom\Chapters/Chapter3_Methodology.te
+x [7]
 Бүлэг 3.
 [8
 
@@ -2047,13 +2066,7 @@ Package fontspec Info:
 Package fontspec Info: 
 (fontspec)             Consolas scale = 0.9.
 
-
-Underfull \hbox (badness 1067) in paragraph at lines 432--433
-[]\TU/TimesNewRoman(1)/m/n/10.95 Эхний шатанд 75 боломжит шинж чанарыг туршсаны
- дараа эцсийн матрицад 8 шинж
- []
-
-[11]
+ [11]
 Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on in
 put line 453.
 
@@ -2107,11 +2120,11 @@ Package fontspec Info:
 Package fontspec Info: 
 (fontspec)             Consolas scale = 0.9.
 
+ [16]
 
 Package fontspec Info: 
 (fontspec)             Consolas scale = 0.9.
 
- [16]
 
 Package fontspec Info: 
 (fontspec)             Consolas scale = 0.9.
@@ -2131,20 +2144,21 @@ Package fontspec Info:
 (fontspec)             Consolas scale = 0.9.
 
 
-Underfull \hbox (badness 1275) in paragraph at lines 1306--1307
-[]\TU/TimesNewRoman(1)/m/n/10.95 Систем нь гурван үе шатаар ажиллана: (1) офлай
-н сургалтаар 3 GBDT загвар бэлдэж
+Underfull \hbox (badness 3000) in paragraph at lines 1306--1307
+[]\TU/TimesNewRoman(1)/m/n/10.95 Офлайн сургалтаар 3 GBDT загвар бэлдэж \TU/Con
+solas(1)/m/n/10.95 model.pkl \TU/TimesNewRoman(1)/m/n/10.95 артефактыг серверт 
+байршуулна
  []
 
 [22]
 LaTeX Font Info:    Font shape `TU/Consolas(0)/m/n' will be
-(Font)              scaled to size 8.99994pt on input line 1358.
+(Font)              scaled to size 8.99994pt on input line 1362.
 
 Package fontspec Info: 
 (fontspec)             Consolas scale = 0.9.
 
 LaTeX Font Info:    Font shape `TU/Consolas(1)/m/n' will be
-(Font)              scaled to size 8.99994pt on input line 1358.
+(Font)              scaled to size 8.99994pt on input line 1362.
 
 Package fontspec Info: 
 (fontspec)             Consolas scale = 0.9.
@@ -2173,20 +2187,27 @@ Package fontspec Info:
 Package fontspec Info: 
 (fontspec)             Consolas scale = 0.9.
 
- [23]) (Chapters/Chapter4_Results.tex [24]
+ [23])
+(C:\Users\Acer\Desktop\Forex-Signal-App\diplom\Chapters/Chapter4_Results.tex
+[24]
 Бүлэг 4.
 
 Package fontspec Info: 
 (fontspec)             Consolas scale = 0.9.
 
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <9> on input line 31.
+LaTeX Font Info:    Font shape `TU/Consolas(0)/m/n' will be
+(Font)              scaled to size 8.09995pt on input line 31.
 
 Package fontspec Info: 
 (fontspec)             Consolas scale = 0.9.
 
+LaTeX Font Info:    Font shape `TU/Consolas(1)/m/n' will be
+(Font)              scaled to size 8.09995pt on input line 31.
 [25
 
-] [26] [27] [28] [29] [30] [31]) (Chapters/Chapter5_Conclusion.tex [32]
-[33]
+] [26]
 
 Package fontspec Info: 
 (fontspec)             Consolas scale = 0.9.
@@ -2195,18 +2216,49 @@ Package fontspec Info:
 Package fontspec Info: 
 (fontspec)             Consolas scale = 0.9.
 
+ [27] [28] [29]
 
-Underfull \hbox (badness 3612) in paragraph at lines 54--55
-\TU/TimesNewRoman(1)/m/n/10.95 89.25% нарийвчлал, итгэлцэл $\OMS/lmsy/m/n/10.95
- ^^U$\TU/TimesNewRoman(1)/m/n/10.95 0.90 дохионд 96.96% нарийвчлалд хүрсэн (бат
-алгаажуулалт).
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+ [30]
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+Package pgfplots info on input line 476: Using 'lua backend=false' for axis: x 
+coord trafo unsupported.
+ [31]
+Underfull \hbox (badness 6559) in paragraph at lines 502--503
+[]\TU/TimesNewRoman(1)/m/n/10.95 Босго 0.90$\OMS/lmsy/m/n/10.95 !$\TU/TimesNewR
+oman(1)/m/n/10.95 0.99 өсөхөд нийт дохио 95.88%-аар буурч нэг дохионы дундаж аш
+иг
  []
 
-[34]) (Chapters/Bibliography.tex (main.bbl [35] [36
+)
+(C:\Users\Acer\Desktop\Forex-Signal-App\diplom\Chapters/Chapter5_Conclusion.tex
+[32] [33]
 
-])) (Chapters/appendix.tex
-[37]
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+ [34]
+Underfull \hbox (badness 3396) in paragraph at lines 84--85
+[]\TU/TimesNewRoman(1)/b/n/10.95 RQ1 \TU/TimesNewRoman(1)/m/n/10.95 (загварын н
+айдвартай байдал): \TU/TimesNewRoman(1)/b/n/10.95 Тийм. \TU/TimesNewRoman(1)/m/
+n/10.95 Загвар нь 2024 оны харагдаагүй өгөгдөл
+ []
 
+) (C:\Users\Acer\Desktop\Forex-Signal-App\diplom\Chapters/Bibliography.tex
+(C:\Users\Acer\Desktop\Forex-Signal-App\diplom\main.bbl [35] [36
+
+]))
+(C:\Users\Acer\Desktop\Forex-Signal-App\diplom\Chapters/appendix.tex [37]
+
 Package fontspec Info: 
 (fontspec)             Consolas scale = 0.9.
 
@@ -2233,15 +2285,16 @@ Package fontspec Info:
 
 Package fontspec Info: 
 (fontspec)             Consolas scale = 0.9.
+
 
- [38
+[38
 
-] [39]
+]
 
 Package fontspec Info: 
 (fontspec)             Consolas scale = 0.9.
 
- [40]
+ [39]
 
 Package fontspec Info: 
 (fontspec)             Consolas scale = 0.9.
@@ -2258,6 +2311,7 @@ Package fontspec Info:
 Package fontspec Info: 
 (fontspec)             Consolas scale = 0.9.
 
+ [40] [41]
 
 Package fontspec Info: 
 (fontspec)             Consolas scale = 0.9.
@@ -3194,7 +3248,6 @@ Package fontspec Info:
 Package fontspec Info: 
 (fontspec)             Consolas scale = 0.9.
 
- [41]
 
 Package fontspec Info: 
 (fontspec)             Consolas scale = 0.9.
@@ -3231,6 +3284,7 @@ Package fontspec Info:
 Package fontspec Info: 
 (fontspec)             Consolas scale = 0.9.
 
+ [42]
 
 Package fontspec Info: 
 (fontspec)             Consolas scale = 0.9.
@@ -3272,14 +3326,13 @@ Package fontspec Info:
 (fontspec)             Consolas scale = 0.9.
 
 
-Underfull \hbox (badness 6268) in paragraph at lines 284--285
+Underfull \hbox (badness 6268) in paragraph at lines 389--390
 \TU/TimesNewRoman(1)/b/n/10.95 Дизайны зарчмууд: \TU/TimesNewRoman(1)/m/n/10.95
  (1) \TU/Consolas(1)/m/n/10.95 TTL \TU/TimesNewRoman(1)/m/n/10.95 индексүүд нь 
 түр зуурын баримтуудыг (\TU/Consolas(1)/m/n/10.95 verification_codes\TU/TimesNe
 wRoman(1)/m/n/10.95 ,
  []
 
-[42]
 
 Package fontspec Info: 
 (fontspec)             Consolas scale = 0.9.
@@ -3520,7 +3573,7 @@ Package fontspec Info:
 Package fontspec Info: 
 (fontspec)             Consolas scale = 0.9.
 
- [43] [44]
+[43]
 
 Package fontspec Info: 
 (fontspec)             Consolas scale = 0.9.
@@ -3641,96 +3694,64 @@ Package fontspec Info:
 Package fontspec Info: 
 (fontspec)             Consolas scale = 0.9.
 
-) [45] (Chapters/Tovchlol.tex
-Underfull \hbox (badness 7576) in paragraph at lines 42--43
-\TU/TimesNewRoman(1)/m/n/10.95 тулгуур векторын машин (SVM)-аас эхэлж,
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 56--57
-[]\TU/TimesNewRoman(1)/b/n/10.95 Арга барил: \TU/TimesNewRoman(1)/m/n/10.95 Зох
-иомжлох шинжлэх
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 56--57
-\TU/TimesNewRoman(1)/m/n/10.95 ухааны судалгаа (DSR) буюу “бүтээх–
- []
-
-[1
+) [44] (C:\Users\Acer\Desktop\Forex-Signal-App\diplom\Chapters/Tovchlol.tex [1
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 60--61
-\TU/TimesNewRoman(1)/m/n/10.95 гурвыг зөөлөн санал хураалтаар нэгтгэсэн.
+Underfull \hbox (badness 5681) in paragraph at lines 171--172
+\TU/TimesNewRoman(1)/m/n/10.95 вар өсөлтийн стратеги (leaf-wise, level-wise,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 60--61
-\TU/TimesNewRoman(1)/m/n/10.95 тогтвортой байдлын протоколоор сонгосон:
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 60--61
-\TU/TimesNewRoman(1)/m/n/10.95 модны гүнийг хязгаарлаж (max_depth=5–6),
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 77--78
-[]\TU/TimesNewRoman(1)/b/n/10.95 Эрсдэл: \TU/TimesNewRoman(1)/m/n/10.95 Sharpe 
-8.57–12.83, Sortino
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 77--78
-\TU/TimesNewRoman(1)/m/n/10.95 харьцуулагдахгүй (дэлгэрэнгүй анхааруулгыг
- []
-
-
-Underfull \hbox (badness 7362) in paragraph at lines 77--78
-\TU/TimesNewRoman(1)/m/n/10.95 Ch4 §4.4-өөс үзнэ үү). Хамгийн их уналт
- []
-
-
-Underfull \hbox (badness 6188) in paragraph at lines 77--78
-\TU/TimesNewRoman(1)/m/n/10.95 босго сонголт гүйцэтгэлд ихээхэн нөлөөтэй
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 77--78
-\TU/TimesNewRoman(1)/m/n/10.95 өгөөж (+517.70%) ба бага уналт (MaxDD
- []
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
 
 [2]
-Underfull \hbox (badness 10000) in paragraph at lines 82--83
-[]\TU/TimesNewRoman(1)/m/n/10.95 Судалгааны асуултуудад товчоор
+Underfull \hbox (badness 10000) in paragraph at lines 445--446
+[]\TU/TimesNewRoman(1)/m/it/10.95 Цаашдын чиглэл. \TU/TimesNewRoman(1)/m/n/10.9
+5 (1) GBP/USD,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 92--93
-[]\TU/TimesNewRoman(1)/b/n/10.95 Цаашдын чиглэл: \TU/TimesNewRoman(1)/m/n/10.95
- (1) GBP/USD,
+Underfull \hbox (badness 10000) in paragraph at lines 445--446
+\TU/TimesNewRoman(1)/m/n/10.95 USD/JPY зэрэг хослол руу өргөтгөн багц
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 92--93
-\TU/TimesNewRoman(1)/m/n/10.95 USD/JPY зэрэг хэрэгсэлд өргөтгөх,
+Underfull \hbox (badness 10000) in paragraph at lines 445--446
+\TU/TimesNewRoman(1)/m/n/10.95 стратеги бүтээх; (2) LSTM ба Transformer
  []
 
-[3]) (main.aux)
+
+Underfull \hbox (badness 6125) in paragraph at lines 445--446
+\TU/TimesNewRoman(1)/m/n/10.95 загваруудыг GBDT ансамбльтай харьцуулах;
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 445--446
+\TU/TimesNewRoman(1)/m/n/10.95 (3) бататгах сургалтаар (RL) байрлалын
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 445--446
+\TU/TimesNewRoman(1)/m/n/10.95 мэдээг автоматаар шинж чанарт оруулах;
+ []
+
+[3]) (C:\Users\Acer\Desktop\Forex-Signal-App\diplom\main.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2025-11-06>
  ***********
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: C98BDCA310AD4EB008ACE57AAE72B4A4;10654.
+(rerunfilecheck)             Checksum: 32A06B71E0BB0F2CFD8CBA1A2DB5C2F5;10590.
  ) 
 Here is how much of TeX's memory you used:
- 49821 strings out of 402987
- 1184054 string characters out of 5448731
- 1774059 words of memory out of 5000000
- 77643 multiletter control sequences out of 15000+600000
- 683055 words of font info for 190 fonts, out of 8000000 for 9000
+ 50093 strings out of 402987
+ 1191001 string characters out of 5448731
+ 1804436 words of memory out of 5000000
+ 77904 multiletter control sequences out of 15000+600000
+ 683135 words of font info for 200 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 88i,17n,104p,1188b,2682s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 88i,18n,104p,1470b,2662s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on main.pdf (57 pages).
+Output written on C:\Users\Acer\Desktop\Forex-Signal-App\diplom\main.pdf (56 pa
+ges).

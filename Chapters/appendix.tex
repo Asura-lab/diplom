@@ -22,9 +22,10 @@
 \centering
 \caption{Нэвчилтийн аудитын цагийн нийцлийн дүрмүүд}
 \label{tab:leakage_audit_rules}
-\setlength{\tabcolsep}{4pt}
-\renewcommand{\arraystretch}{1.28}
-\begin{tabularx}{\textwidth}{|>{\raggedright\arraybackslash}p{2.8cm}|>{\raggedright\arraybackslash}X|>{\centering\arraybackslash}p{2.6cm}|>{\raggedright\arraybackslash}X|}
+\setlength{\tabcolsep}{3pt}
+\renewcommand{\arraystretch}{1.15}
+\footnotesize
+\begin{tabularx}{\textwidth}{|>{\raggedright\arraybackslash}p{2.6cm}|>{\raggedright\arraybackslash}X|>{\centering\arraybackslash}p{2.4cm}|>{\raggedright\arraybackslash}X|}
 \hline
 \textbf{Компонент} & \textbf{Үйлдэл} & \textbf{Цагийн нөхцөл} & \textbf{Нэвчилтийн эрсдэл} \\ \hline
 OHLCV өгөгдөл & $t_0$-д хаалтын ханш ба үзүүлэлтүүдийг ашиглах & $t_{\text{candle}} < t_0$ & Бага (хаалтын ханш шийдвэрийн агшинд мэдэгдсэн байдаг) \\ \hline
@@ -154,14 +155,16 @@ RSI, ATR & $t_0$-г оруулаад өмнөх өгөгдлөөс тооцох 
 
 \subsection*{Архитектурын хэмжигдэх KPI ба баталгаажуулалтын протокол}
 
-Архитектурын шийдлүүдийг зөвхөн бүтэц дүрслэлээр бус хэмжигдэх шалгуураар үнэлэх зорилгоор дараах баталгаажуулалтын протокол нэгтгэсэн. Энэ протокол нь API, worker, push урсгалын ажиллах чанарыг ижил нөхцөлд давтан шалгах үндсэн хүрээг тогтооно.
+Архитектурын шийдлүүдийг зөвхөн бүтэц дүрслэлээр бус хэмжигдэх шалгуураар үнэлэх зорилгоор баталгаажуулалтын протоколыг доор тодорхойлсон. Энэ протокол нь API, worker, push урсгалын ажиллах чанарыг ижил нөхцөлд давтан шалгах үндсэн хүрээг тогтооно.
 
 \begin{table}[H]
 \centering
 \caption{Архитектурын баталгаажуулалтын KPI протокол}
 \label{tab:kpi_protocol_detail}
-\renewcommand{\arraystretch}{1.18}
-\begin{tabularx}{\textwidth}{|>{\raggedright\arraybackslash}p{2.9cm}|>{\raggedright\arraybackslash}p{2.8cm}|>{\raggedright\arraybackslash}p{2.2cm}|>{\raggedright\arraybackslash}X|}
+\renewcommand{\arraystretch}{1.10}
+\setlength{\tabcolsep}{3pt}
+\footnotesize
+\begin{tabularx}{\textwidth}{|>{\raggedright\arraybackslash}p{2.7cm}|>{\raggedright\arraybackslash}p{2.6cm}|>{\raggedright\arraybackslash}p{2.0cm}|>{\raggedright\arraybackslash}X|}
 \hline
 \textbf{Компонент} & \textbf{KPI} & \textbf{Зорилтот босго} & \textbf{Баталгаажуулах арга} \\ \hline
 API давхарга & p95 latency & $\leq$ 350ms & Ижил endpoint дээр 15 минутын тогтмол ачааллын туршилт, median/p95-г нэгтгэн тайлагнах \\ \hline
@@ -174,7 +177,7 @@ Push урсгал & Notification delivery rate & $\geq$ 98\% & Push сервис
 
 \subsection*{Хэмжилтийн нөхцөл}
 
-API давхаргын p95 latency хэмжилтийг дараах нөхцөлд явуулсан:
+API давхаргын p95 latency хэмжилтийг доорх нөхцөлд явуулсан:
 \begin{itemize}
     \item \textbf{Хэмжилтийн байршил}: Улаанбаатар (Монгол улс)
     \item \textbf{Серверийн байршил}: Токио (Japan East, Azure App Service)
@@ -224,6 +227,106 @@ API давхаргын p95 latency 471--536ms байсан нь зорилтот
 
 Энэ бүлгийн бүх тоон дүнг түүхэн өгөгдөл дээрх системийн туршилтын логуудаас гаргав. Лог файлууд нь хуримтлагдсан (append) бүтэцтэй тул өмнөх гүйлтийн мөрүүд дараагийн файлд давтагддаг. Иймээс босго бүрийн run-ыг \texttt{Loaded signals} мөрөөр таньж, тухайн run-т харгалзах \texttt{final balance} болон TP/SL мөрүүдтэй тогтмол дүрмээр хослуулан нэгтгэл хийв. Энэ дүрэм нь ижил өгөгдөл дээр дахин тооцоход ижил үр дүн гаргах нөхцөлийг хангана.
 
+\subsection*{Босгын мужийн нэгдсэн тоон үзүүлэлтийн дэлгэрэнгүй}
+
+§4.3-ын зургуудад харуулсан үзүүлэлтүүдийн тоон утгуудыг доорх дөрвөн хүснэгтэд нэгтгэв. \tref{tab:threshold_sweep_results} нь босго бүрийн дохио, баланс, өгөөжийн нэгтгэл; \tref{tab:execution_conversion_ci} нь дохио-арилжааны гүйцэтгэл, ялалтын хувь ба итгэлцлийн интервал; \tref{tab:risk_metrics_log_based} нь эрсдэлийн үзүүлэлтүүдийг; \tref{tab:benchmark_buy_hold} нь EUR/USD-ийн худалдан аваад барих жишгийн дэлгэрэнгүйг агуулна.
+
+\begin{table}[H]
+\centering
+\caption{EUR/USD худалдан аваад барих жишгийн хураангуй (2025)}
+\label{tab:benchmark_buy_hold}
+\footnotesize
+\setlength{\tabcolsep}{4pt}
+\renewcommand{\arraystretch}{1.10}
+\begin{tabular}{|l|r|}
+\hline
+\textbf{Үзүүлэлт} & \textbf{Утга} \\ \hline
+Эхлэл хаалт (2025) & 1.03514 \\ \hline
+Төгсгөл хаалт (2025) & 1.17456 \\ \hline
+Худалдан аваад барих өгөөж (\%) & 13.47 \\ \hline
+\$10{,}000 хөрөнгийн эцсийн баланс (\$) & 11{,}346.87 \\ \hline
+\end{tabular}
+\end{table}
+
+\noindent\textit{Тайлбар:} Энэ жишиг нь close-to-close энгийн загвар тул стратегийн өгөөжтэй шууд тэнцэхгүй; сценарийн дүнг харьцуулахад ашиглав.
+
+\begin{table}[H]
+\centering
+\caption{0.90--0.99 мужийн босгын харьцуулалт}
+\label{tab:threshold_sweep_results}
+{%
+\setlength{\tabcolsep}{1.8pt}
+\renewcommand{\arraystretch}{1.12}
+\scriptsize
+\begin{tabular}{|>{\centering\arraybackslash}m{1.0cm}|>{\centering\arraybackslash}m{1.35cm}|>{\centering\arraybackslash}m{1.35cm}|>{\centering\arraybackslash}m{2.0cm}|>{\centering\arraybackslash}m{1.85cm}|>{\centering\arraybackslash}m{1.2cm}|>{\centering\arraybackslash}m{2.2cm}|}
+\hline
+\textbf{Босго} & \textbf{\shortstack[c]{Нийт\\дохио}} & \textbf{\shortstack[c]{Дохио/\\өдөр}} & \textbf{\shortstack[c]{Эцсийн\\баланс (\$)}} & \textbf{\shortstack[c]{Цэвэр\\ашиг (\$)}} & \textbf{\shortstack[c]{Өгөөж\\(\%)}} & \textbf{\shortstack[c]{Нэг дохионы\\ашиг (\$)}} \\ \hline
+0.90 & 3{,}567 & 13.67 & 58{,}262.39 & 48{,}262.39 & 482.62 & 13.53 \\ \hline
+0.91 & 3{,}274 & 12.54 & 61{,}770.46 & 51{,}770.46 & 517.70 & 15.81 \\ \hline
+0.92 & 2{,}958 & 11.33 & 56{,}512.20 & 46{,}512.20 & 465.12 & 15.72 \\ \hline
+0.93 & 2{,}643 & 10.13 & 46{,}807.24 & 36{,}807.24 & 368.07 & 13.93 \\ \hline
+0.94 & 2{,}287 & 8.76 & 38{,}050.13 & 28{,}050.13 & 280.50 & 12.27 \\ \hline
+0.95 & 1{,}914 & 7.33 & 32{,}844.40 & 22{,}844.40 & 228.44 & 11.94 \\ \hline
+0.96 & 1{,}588 & 6.08 & 33{,}040.14 & 23{,}040.14 & 230.40 & 14.51 \\ \hline
+0.97 & 1{,}195 & 4.58 & 29{,}019.19 & 19{,}019.19 & 190.19 & 15.92 \\ \hline
+0.98 & 673 & 2.58 & 25{,}447.43 & 15{,}447.43 & 154.47 & 22.95 \\ \hline
+0.99 & 147 & 0.56 & 17{,}428.89 & 7{,}428.89 & 74.29 & 50.54 \\ \hline
+\end{tabular}
+}
+\end{table}
+
+\noindent\textit{Тайлбар:} Дохио/өдөр үзүүлэлтийг \(\text{Нийт дохио} / 261\) (2025 оны Даваа--Баасан ажлын өдрийн тоо) томьёогоор тооцсон.
+
+\begin{table}[H]
+\centering
+\caption{Босго тус бүрийн дохио-арилжааны гүйцэтгэл ба ялалтын хувь (95\% CI)}
+\label{tab:execution_conversion_ci}
+\setlength{\tabcolsep}{2.5pt}
+\renewcommand{\arraystretch}{1.10}
+\scriptsize
+\begin{tabular}{|c|r|r|r|r|r|r|c|r|}
+\hline
+\textbf{Босго} & \textbf{Ачаал.} & \textbf{Арилжаа} & \textbf{Хөрвөөгүй} & \textbf{Гүйц. (\%)} & \textbf{TP/SL} & \textbf{Ялалт (\%)} & \textbf{95\% CI} & \textbf{E[R]} \\ \hline
+0.90 & 3{,}567 & 230 & 3{,}337 & 6.45 & 103/127 & 44.78 & [38.49, 51.24] & 0.79 \\ \hline
+0.91 & 3{,}274 & 212 & 3{,}062 & 6.48 & 100/112 & 47.17 & [40.56, 53.88] & 0.89 \\ \hline
+0.92 & 2{,}958 & 201 & 2{,}757 & 6.80 & 95/106 & 47.26 & [40.48, 54.15] & 0.89 \\ \hline
+0.93 & 2{,}643 & 188 & 2{,}455 & 7.11 & 87/101 & 46.28 & [39.30, 53.41] & 0.85 \\ \hline
+0.94 & 2{,}287 & 154 & 2{,}133 & 6.73 & 73/81 & 47.40 & [39.68, 55.26] & 0.90 \\ \hline
+0.95 & 1{,}914 & 137 & 1{,}777 & 7.16 & 65/72 & 47.45 & [39.27, 55.76] & 0.90 \\ \hline
+0.96 & 1{,}588 & 113 & 1{,}475 & 7.12 & 59/54 & 52.21 & [43.08, 61.20] & 1.09 \\ \hline
+0.97 & 1{,}195 & 106 & 1{,}089 & 8.87 & 54/52 & 50.94 & [41.56, 60.26] & 1.04 \\ \hline
+0.98 & 673 & 76 & 597 & 11.29 & 43/33 & 56.58 & [45.39, 67.14] & 1.26 \\ \hline
+0.99 & 147 & 35 & 112 & 23.81 & 23/12 & 65.71 & [49.15, 79.17] & 1.63 \\ \hline
+\end{tabular}
+\end{table}
+
+\noindent\textit{Тайлбар:} Win rate-ийн 95\% Wilson итгэлцлийн интервал болон Expectancy ($E[R]$, TP/SL=3:1 нөхцөлд)-ийн тооцоолол §3.6-аар тодорхойлогдсон.
+
+\begin{table}[H]
+\centering
+\caption{Босгын мужийн лог дээр суурилсан эрсдэл-өгөөжийн шинжилгээ}
+\label{tab:risk_metrics_log_based}
+\setlength{\tabcolsep}{2.8pt}
+\renewcommand{\arraystretch}{1.10}
+\scriptsize
+\begin{tabular}{|c|r|r|r|r|r|}
+\hline
+\textbf{Босго} & \textbf{MaxDD (\%)} & \textbf{Sharpe} & \textbf{Sortino} & \textbf{Calmar} & \textbf{Хамгийн урт дараалсан алдагдал} \\ \hline
+0.90 & 3.93 & 9.11 & 24.82 & 122.96 & 7 \\ \hline
+0.91 & 2.97 & 9.75 & 25.99 & 174.20 & 7 \\ \hline
+0.92 & 2.99 & 9.90 & 29.78 & 155.79 & 7 \\ \hline
+0.93 & 9.53 & 9.21 & 25.92 & 38.63 & 10 \\ \hline
+0.94 & 6.80 & 8.87 & 24.66 & 41.23 & 8 \\ \hline
+0.95 & 3.94 & 8.57 & 23.97 & 57.97 & 6 \\ \hline
+0.96 & 4.88 & 9.84 & 30.15 & 47.18 & 5 \\ \hline
+0.97 & 2.96 & 9.02 & 24.90 & 64.19 & 4 \\ \hline
+0.98 & 7.66 & 10.63 & 28.84 & 20.16 & 8 \\ \hline
+0.99 & 1.98 & 12.83 & 44.76 & 37.53 & 2 \\ \hline
+\end{tabular}
+\end{table}
+
+\noindent\textit{Чухал анхааруулга:} Sharpe (9--13), Sortino (24--45), Calmar (20--174) утгууд нь арилжаа цөөн (35--230 хэлцэл), хугацааны цонх богино (1 жил) ба зардлын бүрэн тусгаагүйгээс \textit{зохиомлоор томруулагдсан} тул санхүүгийн стандарт утгуудтай шууд харьцуулах боломжгүй; зөвхөн босгуудын харьцангуй харьцуулалтын суурь болгон ашиглана.
+
 %% ============================================================
 %% Хавсралт Д: MongoDB схемийн диаграмм
 %% ============================================================
@@ -240,10 +343,10 @@ API давхаргын p95 latency 471--536ms байсан нь зорилтот
 \centering
 \caption{MongoDB Atlas-д байршсан 12 цуглуулгын схем — гол талбарууд, индекс ба TTL тохиргоо}
 \label{tab:mongodb_schema}
-\renewcommand{\arraystretch}{1.20}
-\setlength{\tabcolsep}{3pt}
-\footnotesize
-\begin{tabularx}{\textwidth}{|>{\raggedright\arraybackslash}p{3.0cm}|>{\raggedright\arraybackslash}X|>{\raggedright\arraybackslash}p{3.0cm}|>{\centering\arraybackslash}p{1.9cm}|}
+\renewcommand{\arraystretch}{1.10}
+\setlength{\tabcolsep}{2.5pt}
+\scriptsize
+\begin{tabularx}{\textwidth}{|>{\raggedright\arraybackslash}p{2.8cm}|>{\raggedright\arraybackslash}X|>{\raggedright\arraybackslash}p{2.8cm}|>{\centering\arraybackslash}p{1.7cm}|}
 \hline
 \textbf{Цуглуулга} & \textbf{Гол талбарууд} & \textbf{Индекс} & \textbf{TTL} \\ \hline
 \multicolumn{4}{|l|}{\cellcolor{black!5}\textit{1. Хэрэглэгчийн бүлэг}} \\ \hline
@@ -271,7 +374,9 @@ API давхаргын p95 latency 471--536ms байсан нь зорилтот
 \centering
 \caption{Цуглуулга хоорондын гадаад түлхүүрийн харилцаа}
 \label{tab:mongodb_fk}
-\renewcommand{\arraystretch}{1.15}
+\renewcommand{\arraystretch}{1.10}
+\setlength{\tabcolsep}{4pt}
+\footnotesize
 \begin{tabular}{|l|c|l|l|}
 \hline
 \textbf{Эх цуглуулга} & \textbf{Харьцаа} & \textbf{Зорилтот цуглуулга} & \textbf{Холбогдох талбар} \\ \hline
@@ -293,20 +398,21 @@ API давхаргын p95 latency 471--536ms байсан нь зорилтот
 \setcounter{table}{0}
 \setcounter{figure}{0}
 
-\S3.4-т (Гиперпараметр сонголтын протокол) дурдсан тогтвортой байдлын протоколын дагуу сонгогдсон LightGBM, XGBoost ба CatBoost загваруудын бүх гиперпараметрийг \tref{tab:hyperparams_full} хүснэгтэд нэгтгэв. Хүснэгт нь reproducibility-ийн зорилгод зориулагдсан бөгөөд параметр тус бүрийн утга ба үүргийг загвар бүрд харьцуулан харуулав.
+\S3.4-т (Гиперпараметр сонголтын протокол) дурдсан жигдрэлийн протоколын дагуу сонгогдсон LightGBM, XGBoost ба CatBoost загваруудын бүх гиперпараметрийг \tref{tab:hyperparams_full} хүснэгтэд нэгтгэв. Хүснэгт нь reproducibility-ийн зорилгод зориулагдсан бөгөөд параметр тус бүрийн утга ба үүргийг загвар бүрд харьцуулан харуулав.
 
 \begin{table}[H]
 \centering
 \caption{Гурван GBDT загварын гиперпараметрүүд}
 \label{tab:hyperparams_full}
-\renewcommand{\arraystretch}{1.18}
-\setlength{\tabcolsep}{5pt}
-\begin{tabularx}{\textwidth}{|>{\raggedright\arraybackslash}p{3.4cm}|c|c|c|>{\raggedright\arraybackslash}X|}
+\renewcommand{\arraystretch}{1.05}
+\setlength{\tabcolsep}{3.5pt}
+\footnotesize
+\begin{tabularx}{\textwidth}{|>{\raggedright\arraybackslash}p{3.2cm}|c|c|c|>{\raggedright\arraybackslash}X|}
 \hline
 \textbf{Параметр} & \textbf{LightGBM} & \textbf{XGBoost} & \textbf{CatBoost} & \textbf{Үүрэг} \\ \hline
 \multicolumn{5}{|l|}{\textit{Загварын ерөнхий бүтэц}} \\ \hline
 \texttt{n\_estimators} & 500 & 500 & 500 & Модны дээд тоо (эрт зогсоолтоор тасалдаг) \\ \hline
-\texttt{learning\_rate} & 0.03 & 0.03 & 0.03 & Алхамын хэмжээ; бага утга → удаан, гэхдээ тогтвортой \\ \hline
+\texttt{learning\_rate} & 0.03 & 0.03 & 0.03 & Алхамын хэмжээ; бага утга сургалтыг удаашруулдаг боловч хэт нийцлийг бууруулдаг \\ \hline
 \texttt{max\_depth} & 6 & 5 & 5 & Модны хамгийн их гүн \\ \hline
 \texttt{num\_leaves} & 31 & --- & --- & Leaf-wise өсөлтийн (LGBM) бутархай хязгаар \\ \hline
 \multicolumn{5}{|l|}{\textit{Тогтмолжуулалт}} \\ \hline
@@ -347,9 +453,10 @@ API давхаргын p95 latency 471--536ms байсан нь зорилтот
 \centering
 \caption{Харагдах хэсгийн модулиуд, харилцааны загвар ба API endpoint бүлэг}
 \label{tab:frontend_modules_app}
-\renewcommand{\arraystretch}{1.22}
-\setlength{\tabcolsep}{4pt}
-\begin{tabularx}{\textwidth}{|>{\raggedright\arraybackslash}p{2.5cm}|>{\raggedright\arraybackslash}p{3.2cm}|>{\centering\arraybackslash}p{2.3cm}|>{\raggedright\arraybackslash}X|}
+\renewcommand{\arraystretch}{1.10}
+\setlength{\tabcolsep}{3pt}
+\footnotesize
+\begin{tabularx}{\textwidth}{|>{\raggedright\arraybackslash}p{2.4cm}|>{\raggedright\arraybackslash}p{3.0cm}|>{\centering\arraybackslash}p{2.1cm}|>{\raggedright\arraybackslash}X|}
 \hline
 \textbf{Модуль} & \textbf{Үндсэн үүрэг} & \textbf{Харилцааны загвар} & \textbf{Холбогдох API endpoint} \\ \hline
 Нэвтрэлтийн модуль & Бүртгэл, нэвтрэлт, токен шинэчлэлт, профайл & REST POST/PUT & \texttt{/auth/register}, \texttt{/auth/login}, \texttt{/auth/refresh} \\ \hline

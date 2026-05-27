@@ -1,25 +1,28 @@
 \addvspace {10\p@ }
 \contentsline {table}{\numberline {1.1}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces Судалгааны асуулт ба үнэлгээний шалгуур үзүүлэлтүүд (KPIs)}}{3}{table.caption.24}%
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {2.1}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces Холбогдох судалгаатай харьцуулсан үндсэн ялгаа}}{6}{table.caption.37}%
+\contentsline {table}{\numberline {2.1}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces Холбогдох судалгаатай харьцуулсан үндсэн ялгаа}}{7}{table.caption.40}%
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {3.1}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces Түүхэн өгөгдлийн хэмжээний хураангуй}}{11}{table.caption.48}%
-\contentsline {table}{\numberline {3.2}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces Шинж чанарын жагсаалт (интервал бүрд)}}{11}{table.caption.50}%
-\contentsline {table}{\numberline {3.3}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces Урагш гүйлгэн баталгаажуулалтын өгөгдлийн хуваалт}}{13}{table.caption.57}%
-\contentsline {table}{\numberline {3.4}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces Backtesting-ийн EA-гийн үндсэн тохиргоо}}{20}{table.caption.84}%
-\contentsline {table}{\numberline {3.5}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces Системийн үнэлгээний шалгуур үзүүлэлтүүд}}{21}{table.caption.89}%
-\contentsline {table}{\numberline {3.6}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces Загварын давталтын 7 үе шат — гол өөрчлөлт ба үндэслэл}}{24}{table.caption.98}%
+\contentsline {table}{\numberline {3.1}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces Түүхэн өгөгдлийн хэмжээний хураангуй}}{11}{table.caption.51}%
+\contentsline {table}{\numberline {3.2}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces Шинж чанарын жагсаалт (интервал бүрд)}}{11}{table.caption.53}%
+\contentsline {table}{\numberline {3.3}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces Урагш гүйлгэн баталгаажуулалтын өгөгдлийн хуваалт}}{13}{table.caption.60}%
+\contentsline {table}{\numberline {3.4}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces Backtesting-ийн EA-гийн үндсэн тохиргоо}}{20}{table.caption.87}%
+\contentsline {table}{\numberline {3.5}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces Системийн үнэлгээний шалгуур үзүүлэлтүүд}}{21}{table.caption.92}%
+\contentsline {table}{\numberline {3.6}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces Загварын давталтын 7 үе шат}}{24}{table.caption.104}%
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {4.1}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces GBDT ансамблийн нарийвчлал ба F1 оноо — хуваарь тус бүрээр}}{25}{table.caption.102}%
-\contentsline {table}{\numberline {4.2}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces Тестийн өгөгдөл дээрх ангилал тус бүрийн үзүүлэлт (BUY / HOLD / SELL)}}{26}{table.caption.104}%
-\contentsline {table}{\numberline {4.3}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces Итгэлцлийн бүрийн нарийвчлал (баталгаажуулалтын өгөгдөл дээр)}}{26}{table.caption.106}%
-\contentsline {table}{\numberline {4.4}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces 0.90--0.99 мужийн босгын харьцуулалт}}{27}{table.caption.109}%
-\contentsline {table}{\numberline {4.5}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces EUR/USD худалдан аваад барих жишгийн хураангуй}}{27}{table.caption.111}%
-\contentsline {table}{\numberline {4.6}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces Босго тус бүрийн дохио-арилжааны гүйцэтгэл ба ялалтын хувь (95\% CI)}}{28}{table.caption.113}%
-\contentsline {table}{\numberline {4.7}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces Босгын мужийн лог дээр суурилсан эрсдэл-өгөөжийн шинжилгээ}}{29}{table.caption.116}%
-\contentsline {table}{\numberline {А.1}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces Нэвчилтийн аудитын цагийн нийцлийн дүрмүүд}}{38}{table.caption.157}%
-\contentsline {table}{\numberline {В.1}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces Архитектурын баталгаажуулалтын KPI протокол}}{40}{table.caption.159}%
-\contentsline {table}{\numberline {Д.1}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces MongoDB Atlas-д байршсан 12 цуглуулгын схем — гол талбарууд, индекс ба TTL тохиргоо}}{42}{table.caption.164}%
-\contentsline {table}{\numberline {Д.2}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces Цуглуулга хоорондын гадаад түлхүүрийн харилцаа}}{42}{table.caption.165}%
-\contentsline {table}{\numberline {Е.1}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces Гурван GBDT загварын гиперпараметрүүд}}{44}{table.caption.166}%
-\contentsline {table}{\numberline {Ж.1}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces Харагдах хэсгийн модулиуд, харилцааны загвар ба API endpoint бүлэг}}{45}{table.caption.167}%
+\contentsline {table}{\numberline {4.1}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces GBDT ансамблийн нарийвчлал ба F1 оноо — хуваарь тус бүрээр}}{25}{table.caption.108}%
+\contentsline {table}{\numberline {4.2}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces Тестийн өгөгдөл дээрх ангилал тус бүрийн үзүүлэлт}}{25}{table.caption.112}%
+\contentsline {table}{\numberline {4.3}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces Итгэлцлийн бүрийн нарийвчлал (баталгаажуулалтын өгөгдөл дээр)}}{26}{table.caption.114}%
+\contentsline {table}{\numberline {4.4}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces Composite ранкингийн тэргүүн 3 босгын товч үзүүлэлт (§\ref {subsec:composite_rank})}}{33}{table.caption.138}%
+\contentsline {table}{\numberline {А.1}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces Нэвчилтийн аудитын цагийн нийцлийн дүрмүүд}}{38}{table.caption.158}%
+\contentsline {table}{\numberline {В.1}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces Архитектурын баталгаажуулалтын KPI протокол}}{39}{table.caption.160}%
+\contentsline {table}{\numberline {Г.1}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces EUR/USD худалдан аваад барих жишгийн хураангуй (2025)}}{41}{table.caption.165}%
+\contentsline {table}{\numberline {Г.2}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces 0.90--0.99 мужийн босгын харьцуулалт}}{41}{table.caption.166}%
+\contentsline {table}{\numberline {Г.3}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces Босго тус бүрийн дохио-арилжааны гүйцэтгэл ба ялалтын хувь (95\% CI)}}{41}{table.caption.167}%
+\contentsline {table}{\numberline {Г.4}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces Босгын мужийн лог дээр суурилсан эрсдэл-өгөөжийн шинжилгээ}}{42}{table.caption.168}%
+\contentsline {table}{\numberline {Д.1}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces MongoDB Atlas-д байршсан 12 цуглуулгын схем — гол талбарууд, индекс ба TTL тохиргоо}}{42}{table.caption.169}%
+\contentsline {table}{\numberline {Д.2}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces Цуглуулга хоорондын гадаад түлхүүрийн харилцаа}}{43}{table.caption.170}%
+\contentsline {table}{\numberline {Е.1}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces Гурван GBDT загварын гиперпараметрүүд}}{43}{table.caption.171}%
+\contentsline {table}{\numberline {Ж.1}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces Харагдах хэсгийн модулиуд, харилцааны загвар ба API endpoint бүлэг}}{44}{table.caption.172}%
+\contentsline {table}{\numberline {1}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces GBDT ансамблийн нарийвчлал ба F1 оноо}}{2}{table.caption.177}%
+\contentsline {table}{\numberline {2}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces Composite ранкингийн тэргүүн 3 босго}}{3}{table.caption.180}%

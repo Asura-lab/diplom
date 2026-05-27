@@ -1,19 +1,29 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces 7 давталтын явцад шинж чанар ба загварын тоог цөөлсөн байдал}}{8}{figure.caption.41}%
-\contentsline {figure}{\numberline {3.2}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces Системийн архитектур}}{8}{figure.caption.43}%
-\contentsline {figure}{\numberline {3.3}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces Өгөгдлийн урсгал}}{10}{figure.caption.45}%
-\contentsline {figure}{\numberline {3.4}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces Урагш гүйлгэн баталгаажуулалт (offline сургалтын үе шат) — Fold 5-ын өгөгдлийн хуваалт}}{14}{figure.caption.58}%
-\contentsline {figure}{\numberline {3.5}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces GBDT ансамбль загварын архитектур}}{16}{figure.caption.70}%
-\contentsline {figure}{\numberline {3.6}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces Дохионы шүүлтүүрийн юүлүүр: 359{,}639 таамгаас 230 хэлцэл хүртэл (0.90 босго)}}{17}{figure.caption.74}%
-\contentsline {figure}{\numberline {3.7}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces Дохионы амьдралын мөчлөгийн төлөвт автомат}}{18}{figure.caption.79}%
-\contentsline {figure}{\numberline {3.8}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces Дохио үүсгэх дараалал}}{19}{figure.caption.81}%
-\contentsline {figure}{\numberline {3.9}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces Системийн байршуулалтын диаграмм — Docker, Azure App Service, role-based scaling}}{22}{figure.caption.92}%
-\contentsline {figure}{\numberline {3.10}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces Харагдах хэсэг ба серверийн сервисүүдийн REST polling холболтын архитектур}}{23}{figure.caption.96}%
+\contentsline {figure}{\numberline {3.1}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces Загварын 7 давталтын тойм}}{8}{figure.caption.44}%
+\contentsline {figure}{\numberline {3.2}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces Системийн архитектур}}{8}{figure.caption.46}%
+\contentsline {figure}{\numberline {3.3}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces Өгөгдлийн урсгал}}{10}{figure.caption.48}%
+\contentsline {figure}{\numberline {3.4}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces Урагш гүйлгэн баталгаажуулалтын Fold 5-ын өгөгдлийн хуваалт}}{14}{figure.caption.61}%
+\contentsline {figure}{\numberline {3.5}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces GBDT ансамбль загварын архитектур}}{16}{figure.caption.73}%
+\contentsline {figure}{\numberline {3.6}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces Дохионы шүүлтүүрийн юүлүүр (0.90 босго)}}{17}{figure.caption.77}%
+\contentsline {figure}{\numberline {3.7}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces Дохионы амьдралын мөчлөгийн төлөвт автомат}}{18}{figure.caption.82}%
+\contentsline {figure}{\numberline {3.8}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces Дохио үүсгэх дараалал}}{19}{figure.caption.84}%
+\contentsline {figure}{\numberline {3.9}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces Системийн байршуулалтын диаграмм}}{22}{figure.caption.95}%
+\contentsline {figure}{\numberline {3.10}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces REST polling холболтын архитектур}}{23}{figure.caption.102}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces Босгын мужийн шинжилгээ: гүйцэтгэлийн хувийн өөрчлөлт}}{30}{figure.caption.118}%
-\contentsline {figure}{\numberline {4.2}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces Босгын мужийн шинжилгээ: ялалтын хувь ба 95\% итгэлцлийн интервал}}{30}{figure.caption.120}%
-\contentsline {figure}{\numberline {4.3}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces Босгын мужийн шинжилгээ: хүлээгдэж буй өгөөжийн өөрчлөлт}}{31}{figure.caption.122}%
-\contentsline {figure}{\numberline {4.4}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces Хамгийн өндөр өгөөжтэй 3 босгын хөрөнгийн өөрчлөлтийн муруй}}{31}{figure.caption.124}%
-\contentsline {figure}{\numberline {Б.1}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces WFV олон огтлолын ерөнхий концепцын схем (Fold 1--Fold 5 expanding window protocol)}}{39}{figure.caption.158}%
+\contentsline {figure}{\numberline {4.1}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces Босго бүрийн эцсийн баланс}}{27}{figure.caption.117}%
+\contentsline {figure}{\numberline {4.2}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces Босго тус бүрийн гүйцэтгэлийн хувь}}{27}{figure.caption.119}%
+\contentsline {figure}{\numberline {4.3}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces Ялалтын хувь 95\% Wilson итгэлцлийн интервалтай}}{28}{figure.caption.121}%
+\contentsline {figure}{\numberline {4.4}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces Нэг арилжааны хүлээгдэж буй өгөөж $E[R]$}}{28}{figure.caption.123}%
+\contentsline {figure}{\numberline {4.5}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces Эрсдэлийн үзүүлэлтүүд босго тус бүрээр}}{29}{figure.caption.125}%
+\contentsline {figure}{\numberline {4.6}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces Босгуудын нэгдсэн (composite) ранкинг}}{30}{figure.caption.127}%
+\contentsline {figure}{\numberline {4.7}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces Тэргүүн 3 босгын 8 үзүүлэлтийн радар профайл}}{30}{figure.caption.128}%
+\contentsline {figure}{\numberline {4.8}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces Тэргүүн 3 босгын equity curve (2025 оны хуанлийн өдөр)}}{31}{figure.caption.130}%
+\contentsline {figure}{\numberline {4.9}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces Тэргүүн 3 босгын сар бүрийн цэвэр ашиг/алдагдал (2025)}}{32}{figure.caption.131}%
+\contentsline {figure}{\numberline {Б.1}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces WFV олон огтлолын ерөнхий концепцын схем (Fold 1--Fold 5 expanding window protocol)}}{38}{figure.caption.159}%
+\contentsline {figure}{\numberline {1}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces Системийн архитектур}}{1}{figure.caption.174}%
+\contentsline {figure}{\numberline {2}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces GBDT ансамбль загварын архитектур}}{2}{figure.caption.175}%
+\contentsline {figure}{\numberline {3}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces Дохионы шүүлтүүрийн юүлүүр (0.90 босго)}}{2}{figure.caption.176}%
+\contentsline {figure}{\numberline {4}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces Босго бүрийн эцсийн баланс}}{3}{figure.caption.178}%
+\contentsline {figure}{\numberline {5}{\ignorespaces \xpg@aux {}{mongolian}\ignorespaces Эрсдэлийн үзүүлэлтүүд босго тус бүрээр}}{3}{figure.caption.179}%

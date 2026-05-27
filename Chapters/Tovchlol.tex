@@ -20,76 +20,429 @@
 \setlength{\columnsep}{7mm}
 \begin{multicols*}{2}
 \setlength{\parskip}{4pt}
+\setlength{\intextsep}{4pt}
+\setlength{\textfloatsep}{4pt}
+\setlength{\abovecaptionskip}{2pt}
+\setlength{\belowcaptionskip}{2pt}
 \sloppy
 
 %%─────────────────────────────────────────────
 \noindent\textbf{1. Удиртгал}
 
-Гадаад валютын зах зээл (Форекс) нь олон улсын макро эдийн засгийн хүчин зүйл, зах зээлийн сэтгэл санааны нөлөөгөөр тасралтгүй өөрчлөгддөг олон хэмжээст, өндөр хэлбэлзэлтэй өгөгдлийн эх сурвалж болдог. Ийм тогтворгүй цаг хугацааны цуваанаас BUY/HOLD/SELL ангиллын дохио (classification signal) найдвартай гаргах нь машин сургалтын тулгамдсан сорилтын нэг. Энэ судалгаанд EUR/USD валютын хослолыг туршилтын домэйн болгон сонгов. Уламжлалт дүн шинжилгээ нь хүний субъектив шийдвэрт тулгуурладаг тул автоматжуулсан ML системийн хэрэгцээ тодорхой байна.
-
-Харин зөвхөн загварын нарийвчлалыг өндөр байлгах нь хангалтгүй. Бодит цагийн дохионы урсгал, гүйцэтгэлийн чанарыг хэмжих аргачлал, хэрэглэгчид үр дүнг хүргэх мобайл интерфэйс~--- эдгээрийг хамтад нь шийдэх шаардлагатай. Иймд энэ судалгааны зорилго нь EUR/USD дээр машин сургалтын ансамбль загвар боловсруулж, дохионы чанарыг бодит нөхцөлд шалгаад, үр дүнг хэрэглэгчид хүргэх нэгдсэн системийг ажиллах прототип хэлбэрээр бүтээхэд оршино.
-
-Гурван судалгааны асуулт тавьсан:
-\begin{itemize}\setlength\itemsep{0pt}
-    \item \textbf{RQ1:} Загвар нь цагийн дарааллыг алдагдуулахгүй тест дээр найдвартай ажиллах уу?
-    \item \textbf{RQ2:} Шүүгдсэн дохио бодит гүйцэтгэл дээр үнэхээр арилжаа болж хэрэгжих үү?
-    \item \textbf{RQ3:} Тогтмол эрсдэлийн дүрэмтэй үед систем 1 жилийн тестийн цонхонд эерэг хүлээгдэж буй өгөөж болон тогтвортой балансын өсөлттэй ажиллах уу?
+Гадаад валютын зах зээл нь олон улсын макро хүчин зүйлсээс хамааран өндөр хэлбэлзэлтэй, шуугиан ихтэй цаг хугацааны цуваан өгөгдлийг үүсгэдэг тул уламжлалт статистик аргад тулгуурласан таамаглал хязгаарлагдмал хэвээр байна. Сүүлийн жилүүдэд GBDT болон нейрон сүлжээний загварууд их хэмжээний өгөгдлөөс зүй тогтлыг илрүүлэх чадвартай нь нотлогдсон ч хэт нийцлийн эрсдэл, нэг загварт түшиглэсэн архитектурын инженерчлэлийн доголдлууд практик хэрэглээнд саад болсоор байна. Энэ судалгаа нь EUR/USD валютын зах зээлд BUY/HOLD/SELL ангиллын дохио үүсгэх GBDT ансамбль ML системийг бүтээж, мобайл аппликейшнаар хэрэглэгчид хүргэх зорилготой. Гурван судалгааны асуултыг дэвшүүлэв:
+\begin{itemize}\setlength\itemsep{0pt}\small
+    \item \textbf{RQ1:} Загвар цагийн дарааллыг хадгалсан тест дээр найдвартай ажиллах уу?
+    \item \textbf{RQ2:} Шүүгдсэн дохио бодит арилжаа болж хэрэгжих үү?
+    \item \textbf{RQ3:} Тогтмол эрсдэлтэй 1 жилд эерэг өгөөж гарах уу?
 \end{itemize}
 
 %%─────────────────────────────────────────────
-\noindent\textbf{2. Онолын суурь}
+\noindent\textbf{2. Судалгааны сэдвийн онол, өнөөгийн түвшин}
 
-Санхүүгийн таамаглалд машин сургалтыг хэрэглэсэн судалгаанууд нейрон сүлжээ, тулгуур векторын машин (SVM)-аас эхэлж, LSTM, Transformer зэрэг гүн сургалтын архитектурт хүрсэн. Хэдий тийм ч дунд хэмжээний хүснэгтэн өгөгдөлд гүн сургалт нь тайлбарлах чадвар сул, параметр олон, хэт нийцэлд эмзэг зэрэг практик бэрхшээлтэй.
+Санхүүгийн цаг хугацааны цуваа таамаглах судалгаа нь үр ашигтай зах зээлийн таамаглал (EMH)-аас үүдэлтэй онолын эргэлзээний дунд хөгжсөн ч сүүлийн жилүүдэд машин сургалтын аргуудаар зүй тогтлыг хязгаарлагдмал боловч мэдэгдэхүйц илрүүлэх боломжтой болохыг бэхжүүлсэн. Krauss нар (2017) хувьцааны зах зээлд GBDT нь гүн сургалтаас илүү найдвартай үр дүн үзүүлсэн гэж дүгнэсэн бол Ballings нар (2015) олон загварын ансамбль дангаар ажиллах загвараас 3--7\% нарийвчлалын ахиц гаргадгийг тогтоосон. Fischer, Krauss (2018) LSTM-ийг S\&P~500 дээр, Yildirim нар (2021) ганц интервалд LSTM-ийг EUR/USD дээр туршсан хэдий ч олон интервалын шинж чанарын инженерчлэлийг GBDT ансамбльтай хослуулсан эмпирик ажил харьцангуй цөөн хэвээр байна.
 
-Krauss нар (2017) S\&P~500 дээр градиент нэмэгдүүлсэн шийдвэрийн мод (GBDT) загварууд нь гүн нейрон сүлжээнээс \textbf{илүү тогтвортой гүйцэтгэл} үзүүлснийг тогтоосон. Ballings нар (2015) ансамбль аргууд дангаар ажилладаг загвараас \textbf{3--7\% нарийвчлалын давуу} талтайг харуулсан.
-
-Хэдий ийм нотолгоо бий ч дараах асуудлууд нээлттэй хэвээр:
-\begin{itemize}\setlength\itemsep{0pt}
-    \item Форекс зах зээлийн олон интервалын онцлогийг тусгасан судалгаа цөөн
-    \item XGBoost, LightGBM, CatBoost гурвыг ансамблаар Форекст харьцуулсан ажил дутмаг
-    \item Дохио шүүлтүүр, гүйцэтгэлийн хөрвүүлэлт, мобайл интерфэйсийг нэгтгэсэн судалгаа хийгдээгүй
-\end{itemize}
+\emph{Хувь нэмэр.} Энэ судалгаа Форекс зах зээлд GBDT ансамбль, олон хугацааны интервалын шинж чанар, итгэлцлийн босгот суурилсан дохио шүүлтүүр болон мобайл интерфэйсийг нэгдсэн системд хослуулан эмпирик байдлаар туршсан.
 
 %%─────────────────────────────────────────────
 \noindent\textbf{3. Судалгааны арга зүй}
 
-\textbf{Арга барил:} Зохиомжлох шинжлэх ухааны судалгаа (DSR) буюу ``бүтээх--үнэлэх--сайжруулах'' мөчлөгийг 7 давталтаар хэрэгжүүлсэн. Давталт бүрд өмнөх хувилбарын алдааг шинжилж загвар болон шинж чанарыг боловсронгуй болгосон. Эцэстээ шинж чанарын тоог 75-аас 48-д, загварын тоог 9-өөс 3-т хүртэл цөөлж хэт нийцлийн эрсдэлийг бууруулсан.
+Загвар сургалтаас мобайл апп хүртэлх ML serving системийг бүтээсэн (\fref{fig:tov_system_architecture}). Гурван үндсэн давхарга: (i)~офлайн сургалт (GBDT pkl); (ii)~Сервер (Flask + MongoDB + Redis + Expo Push) + 4 гадаад API; (iii)~Мобайл апп (React Native, 4 дэлгэц).
 
-\textbf{Өгөгдөл:} EUR/USD-ийн 2015--2024 оны OHLCV өгөгдлийг зургаан интервалаар (M1, M5, M15, M30, H1, H4) ашигласан. Интервал бүрээс 8 шинж чанар (хаалтын ханш, RSI, ATR, MA(5), MA(20), MA(50), хэлбэлзэл, өгөөж) тооцоолж нийт \textbf{48 шинж чанарын матриц} бүрдүүлсэн. Шошгыг ирээдүйн 240 минутын дээд/доод ханшийн хөдөлгөөнд (30 пипс, 1.5 дахин давамгайлал) үндэслэн BUY/SELL/HOLD гэж тодорхойлсон. Нэвчилтийн эрсдэлийг тусгай аудитаар шалгасан.
+\begin{figure}[H]
+\centering
+\adjustbox{max width=\columnwidth}{%
+\begin{tikzpicture}[
+    vm/.style={rectangle, rounded corners=5pt, draw=orange!85!black, fill=orange!22,
+               line width=1.1pt, minimum width=4.8cm, minimum height=1.4cm,
+               align=center, font=\normalsize\bfseries, inner sep=5pt},
+    plainbox/.style={rectangle, rounded corners=4pt, draw=black!75, fill=white,
+                     line width=1.0pt, minimum width=2.8cm, minimum height=1.0cm,
+                     align=center, font=\normalsize, inner sep=4pt},
+    websvc/.style={rectangle, rounded corners=5pt, draw=red!70!black, fill=red!25,
+                   line width=1.0pt, minimum width=2.9cm, minimum height=1.0cm,
+                   align=center, font=\normalsize\bfseries, text=black!85, inner sep=4pt},
+    db/.style={cylinder, shape border rotate=90, aspect=0.30,
+               draw=blue!65, fill=blue!18, line width=1.0pt,
+               minimum width=2.4cm, minimum height=1.2cm,
+               align=center, font=\normalsize\bfseries, text=blue!25!black},
+    extapi/.style={rectangle, rounded corners=5pt, draw=green!55!black, fill=green!15,
+                   line width=1.0pt, minimum width=3.0cm, minimum height=1.0cm,
+                   align=center, font=\normalsize\bfseries, inner sep=4pt},
+    pushsvc/.style={rectangle, rounded corners=5pt, draw=violet!70!black, fill=violet!18,
+                    line width=1.0pt, minimum width=2.8cm, minimum height=1.1cm,
+                    align=center, font=\normalsize\bfseries, inner sep=4pt},
+    userbox/.style={rectangle, minimum width=0.9cm, minimum height=1.5cm,
+                    draw=none, fill=none, inner sep=0pt},
+    stickline/.style={line width=1.1pt, color=black!75, line cap=round},
+    pipebox/.style={rectangle, rounded corners=4pt, draw=teal!60!black, fill=teal!14,
+                    line width=1.0pt, minimum width=2.9cm, minimum height=1.0cm,
+                    align=center, font=\normalsize, inner sep=4pt},
+    flowarr/.style={-{Stealth[length=5pt 1.5, width'=0pt 0.6, sep=0pt 0.5]},
+                    line width=1.0pt, color=black!72,
+                    rounded corners=4pt, shorten >=2pt},
+    thinarr/.style={-{Stealth[length=4pt 1.5, width'=0pt 0.6, sep=0pt 0.5]},
+                    line width=0.7pt, color=black!60,
+                    rounded corners=4pt, shorten >=2pt},
+    busline/.style={line width=1.0pt, color=black!72},
+    pusharr/.style={-{Stealth[length=5pt 1.5, width'=0pt 0.6, sep=0pt 0.5]},
+                    line width=1.0pt, densely dashed, color=violet!65!black,
+                    rounded corners=4pt, shorten >=2pt},
+    deparr/.style={-{Triangle[open, length=4mm, width=3mm]},
+                   line width=1.0pt, dashed, color=teal!55!black,
+                   rounded corners=4pt, shorten >=2pt},
+    elabel/.style={font=\small, text=black!65, fill=white, inner sep=1.5pt},
+]
+\node[userbox] (users) at (-9, 5.5) {};
+\draw[stickline] ($(users.center)+(0, 0.46)$) circle (0.17);
+\draw[stickline] ($(users.center)+(0, 0.29)$) -- ($(users.center)+(0, -0.25)$);
+\draw[stickline] ($(users.center)+(-0.30, 0.08)$) -- ($(users.center)+(0.30, 0.08)$);
+\draw[stickline] ($(users.center)+(0, -0.25)$) -- ($(users.center)+(-0.22, -0.65)$);
+\draw[stickline] ($(users.center)+(0, -0.25)$) -- ($(users.center)+(0.22, -0.65)$);
+\node[font=\small\bfseries, anchor=north] at ($(users.south)+(0, 0.05)$) {Хэрэглэгчид};
+\node[plainbox] (mob)  at (-4, 5.5) {Мобайл апп\\[1pt]{\small (React Native)}};
+\node[pushsvc]  (expo) at ( 0, 5.5) {Expo Push};
+\draw[flowarr] (users.east) -- (mob.west);
+\node[plainbox] (dns) at (-4, 3.5) {DNS};
+\draw[flowarr] (mob.south) -- (dns.north);
+\draw[black!55, line width=1.2pt, rounded corners=10pt]
+    (-7, -5.6) rectangle (1, 2.4);
+\node[font=\large\bfseries, anchor=north west, text=black!72]
+    at (-6.85, 2.32) {Сервер};
+\node[vm] (api)    at (-4,  0.9) {API сервер\\[1pt]{\small Flask + Gunicorn}};
+\node[vm] (worker) at (-4, -1.6) {Процесс\\[1pt]{\small Таамаглал · Боловсруулалт}};
+\draw[flowarr] (dns.south)  -- (api.north);
+\draw[flowarr] (api.south)  -- (worker.north);
+\node[plainbox] (cache) at (-5.3, -4.2) {Кэш сан\\[1pt]{\small (Redis)}};
+\node[db]       (mongo) at (-1.7, -4.4) {MongoDB};
+\coordinate (db_trunk) at (-4, -2.7);
+\draw[busline]  (worker.south) -- (db_trunk);
+\draw[flowarr] (db_trunk) -| (cache.north);
+\draw[flowarr] (db_trunk) -| (mongo.north);
+\draw[thinarr] (cache.east) -- (-2.9, -4.2);
+\fill[red!4, rounded corners=8pt]   (-12, -3.1) rectangle (-8, 1.95);
+\draw[red!50, line width=0.8pt, rounded corners=8pt]
+    (-12, -3.1) rectangle (-8, 1.95);
+\node[font=\small\bfseries, anchor=north, text=red!55!black]
+    at (-10, 1.85) {Дотоод сервис};
+\node[websvc] (mail)  at (-10,  0.9) {И-мэйл};
+\node[websvc] (queue) at (-10, -1.1) {Даалгаврын\\дараалал};
+\node[websvc] (mon)   at (-10, -2.1) {Хяналт};
+\draw[thinarr] (mail.east) -- (api.west);
+\draw[thinarr] (queue.east) -- ([yshift= 0.5cm]worker.west);
+\draw[thinarr] (mon.east) -- ([yshift=-0.5cm]worker.west);
+\fill[green!4, rounded corners=8pt]   (2.5, -2.9) rectangle (7.6, 3.2);
+\draw[green!45!black, line width=0.8pt, rounded corners=8pt]
+    (2.5, -2.9) rectangle (7.6, 3.2);
+\node[font=\small\bfseries, anchor=north, text=green!40!black]
+    at (5.05, 3.1) {Гуравдагч талын API};
+\node[extapi] (yf)  at (5.05,  1.9) {Yahoo Finance};
+\node[extapi] (av)  at (5.05,  0.7) {AlphaVantage};
+\node[extapi] (tv)  at (5.05, -0.5) {TradingView};
+\node[extapi] (gem) at (5.05, -1.6) {Gemini API};
+\draw[busline] (3.2, 1.9) -- (3.2, -1.6);
+\draw[busline] (yf.west)  -- (3.2,  1.9);
+\draw[busline] (av.west)  -- (3.2,  0.7);
+\draw[busline] (tv.west)  -- (3.2, -0.5);
+\draw[busline] (gem.west) -- (3.2, -1.6);
+\node[circle, fill=black!72, minimum size=4pt, inner sep=0pt] at (3.2, -1.6) {};
+\draw[flowarr] (3.2, -1.6) -- (worker.east);
+\draw[pusharr] ([yshift=0.5cm]worker.east) -- ++(0.5, 0) -| (expo.south);
+\draw[pusharr] (expo.west) -- (mob.east);
+\fill[teal!4, rounded corners=8pt]   (-7, -8.7) rectangle (5, -6.5);
+\draw[teal!50!black, line width=0.8pt, rounded corners=8pt]
+    (-7, -8.7) rectangle (5, -6.5);
+\node[font=\small\bfseries, anchor=north, text=teal!40!black]
+    at (-1, -6.6) {Офлайн сургалт};
+\node[pipebox] (csv)   at (-5, -7.7) {Түүхэн өгөгдөл};
+\node[pipebox] (train) at (-1, -7.7) {GBDT сургалт};
+\node[pipebox] (pkl)   at ( 3, -7.7) {model.pkl};
+\draw[flowarr] (csv.east)   -- (train.west);
+\draw[flowarr] (train.east) -- (pkl.west);
+\node[elabel] at ([yshift=32pt, xshift=-20pt]pkl.north) {deploy};
+\draw[deparr] (pkl.north) |- (1.5, -6.3) |- ([yshift=-0.5cm]worker.east);
+\end{tikzpicture}%
+}
+\caption{Системийн архитектур}
+\label{fig:tov_system_architecture}
+\end{figure}
 
-\textbf{Загвар:} LightGBM, XGBoost, CatBoost гурвыг зөөлөн санал хураалтаар нэгтгэсэн. Урагш гүйлгэн баталгаажуулалтын Fold~5 (2015--2022 сургалт, 2023 баталгаажуулалт, 2024 тест) дээр гол шинжилгээг хийсэн. Гиперпараметрийг тогтвортой байдлын протоколоор сонгосон: модны гүнийг хязгаарлаж (max\_depth=5--6), L1/L2 тогтмолжуулалт нэмж, эрт зогсоолтоор (patience=50) хяналт тогтоосон.
+\emph{Өгөгдөл.} EUR/USD 2015--2024 оны зах зээлийн түүхэн өгөгдөл дээр 6 хугацааны интервал (M1--H4) × 8 техникийн үзүүлэлт = 48 шинж чанарын матриц бүрдүүлсэн. Шошгыг 240 минутын ирээдүйн дээд/доод хөдөлгөөнөөс тооцох ба, 30 пипсийн босгыг 1.5× давамгайлалын дүрмээр шалгаж BUY / SELL / HOLD гурван ангилалд хуваасан.
 
-\textbf{Дохионы шүүлтүүр:} Ансамблийн гаралтад итгэлцлийн босго ($\geq$0.90) болон ATR ($\geq$4.0~пипс) гэсэн хоёр шатлалт шүүлтүүр хэрэглэхэд 2025 оны 359,639 таамгийн дөнгөж \textbf{1.0\% (3,567 дохио)} тэнцсэн. SL/TP-ийг ATR-д суурилан автоматаар тооцсон бөгөөд TP/SL=3:1 харьцаа тогтмол хадгалагдсан.
+\emph{Загвар.} LightGBM, XGBoost, CatBoost загваруудыг зөөлөн санал хураалтаар тэгш жингээр нэгтгэсэн ансамбль (\fref{fig:tov_ensemble_arch}). Гурван загвар өсөлтийн стратеги (leaf-wise, level-wise, symmetric)-аараа бие биенээ нөхөж хэт нийцлийн эрсдэлийг бууруулдаг. Сургалтыг урагш гүйлгэн баталгаажуулалтын (WFV) тав дахь нугалаа (train 2015--2022, val 2023, test 2024)-ээр явуулсан. Хэт нийцлээс сэргийлэх зургаан арга хэмжээ (модны гүний хязгаар, бага learning rate, эрт зогсоолт, L1/L2 нормчлол, WFV, шинж чанарын цөөрөлт)-г үндсэн ажлын §3.4-т нарийвчлан танилцуулсан.
 
-\textbf{Туршилт:} MetaTrader~5 дээр 2025.01.01--2026.01.01 хугацаанд, \$10,000 анхны хөрөнгөтэй, нэг агшинд нэг байрлал, бодит спрэд нөхцөлд туршсан. Итгэлцлийн босгыг 0.90-оос 0.99 хүртэл 10 утга бүхий сценарид харьцуулсан.
+\begin{figure}[H]
+\centering
+\adjustbox{max width=\columnwidth}{%
+\begin{tikzpicture}[
+    inp/.style ={rectangle, rounded corners=4pt, draw=blue!65, fill=blue!18,
+                 line width=1.0pt, minimum width=6.0cm, minimum height=1.0cm,
+                 align=center, font=\small\bfseries, text=blue!25!black},
+    lgbm/.style={rectangle, rounded corners=4pt, draw=orange!85!black, fill=orange!22,
+                 line width=1.0pt, minimum width=3.4cm, minimum height=1.25cm,
+                 align=center, font=\small\bfseries, text=black!82},
+    xgb/.style ={rectangle, rounded corners=4pt, draw=green!55!black, fill=green!15,
+                 line width=1.0pt, minimum width=3.4cm, minimum height=1.25cm,
+                 align=center, font=\small\bfseries, text=black!82},
+    cat/.style ={rectangle, rounded corners=4pt, draw=teal!60!black, fill=teal!14,
+                 line width=1.0pt, minimum width=3.4cm, minimum height=1.25cm,
+                 align=center, font=\small\bfseries, text=black!82},
+    vote/.style={rectangle, rounded corners=4pt, draw=violet!70!black, fill=violet!18,
+                 line width=1.1pt, minimum width=6.0cm, minimum height=1.2cm,
+                 align=center, font=\small\bfseries, text=black!82},
+    outp/.style={rectangle, rounded corners=4pt, draw=red!70!black, fill=red!25,
+                 line width=1.1pt, minimum width=3.4cm, minimum height=1.0cm,
+                 align=center, font=\small\bfseries, text=black!85},
+    sigb/.style={rectangle, rounded corners=4pt, draw=red!70!black, fill=red!25,
+                 line width=1.1pt, minimum width=7.2cm, minimum height=1.0cm,
+                 align=center, font=\small\bfseries, text=black!85},
+    arr/.style ={-{Stealth[length=5pt 1.5, width'=0pt 0.6, sep=0pt 0.5]},
+                 line width=1.0pt, color=black!72},
+    lin/.style ={line width=1.0pt, color=black!72},
+    lbl/.style ={font=\scriptsize\bfseries, fill=white, inner sep=1pt, text=black!65},
+]
+\node[inp]  (X)   at (0,  0)    {48 шинж чанар};
+\node[lgbm] (lgb) at (-4, -2.4) {LightGBM\\{\footnotesize leaf-wise}};
+\node[xgb]  (xgb) at ( 0, -2.4) {XGBoost\\{\footnotesize level-wise}};
+\node[cat]  (cat) at ( 4, -2.4) {CatBoost\\{\footnotesize symmetric}};
+\node[vote] (avg) at (0, -5.2)  {Зөөлөн санал хураалт\\$\bar{p}_c = \tfrac{1}{3}\sum_i p_i^{(c)},\ c\in\{$BUY,HOLD,SELL$\}$};
+\node[outp] (argmax) at (-2.2, -7.4) {Ангилал = $\arg\max_c \bar{p}_c$};
+\node[outp] (conf)   at ( 2.2, -7.4) {Итгэлцэл = $\max_c \bar{p}_c$};
+\node[sigb] (sig)    at (0, -9.2)    {Эцсийн дохио (BUY / HOLD / SELL, итгэлцэл $\in [0,1]$)};
 
-\textbf{Архитектур:} Систем гурван давхаргатай ML serving дамжлага хэлбэрт хэрэгжсэн: (1)~офлайн сургалтын давхарга (GBDT загвар); (2)~серверийн хэсэг (Python/Flask REST API, Python threading, MongoDB, Expo Push мэдэгдэл); (3)~мобайл апп (React Native, 4 дэлгэц). Загвар нь REST API polling болон push notification хоёр дамжуулалтыг хослуулан хэрэгжүүлсэн. Дохио үүсгэх дамжлагыг (өгөгдөл татах, таамаглах, шүүх, SL/TP тооцоолох, мэдэгдэл илгээх) бүхэлд нь автоматжуулсан. Эцсийн шийдвэр (арилжаа нээх, хаах) нь хэрэглэгчийн мэдэлд үлдэнэ.
+\draw[arr] (X.south) -- (lgb.north);
+\draw[arr] (X.south) -- (xgb.north);
+\draw[arr] (X.south) -- (cat.north);
+
+\coordinate (bus) at (0, -4.3);
+\draw[lin] (lgb.south) -- ++(0, -0.4) -| (bus);
+\draw[lin] (xgb.south) -- (bus);
+\draw[lin] (cat.south) -- ++(0, -0.4) -| (bus);
+\node[lbl, text=orange!85!black] at ($(lgb.south) + (0.35,-0.2)$) {$p_1$};
+\node[lbl, text=green!55!black]  at ($(xgb.south) + (0.35,-0.2)$) {$p_2$};
+\node[lbl, text=teal!60!black]   at ($(cat.south) + (0.35,-0.2)$) {$p_3$};
+\draw[arr] (bus) -- (avg.north);
+
+\draw[arr] (avg.south) -- ++(0,-0.4) -| (argmax.north);
+\draw[arr] (avg.south) -- ++(0,-0.4) -| (conf.north);
+\draw[arr] (argmax.south) -- ++(0,-0.4) -| (sig.north);
+\draw[arr] (conf.south)   -- ++(0,-0.4) -| (sig.north);
+\end{tikzpicture}%
+}
+\caption{GBDT ансамбль загварын архитектур}
+\label{fig:tov_ensemble_arch}
+\end{figure}
+
+\emph{Дохио шүүлтүүр.} Загварын магадлалын итгэлцэл (conf~$\geq 0.90$) болон зах зээлийн хэлбэлзлийн босго (ATR~$\geq 4$ пипс) хоёрыг хослуулан дохиог шүүсэн нь чанарын болон хөдөлгөөний шалгуурыг зэрэг хангах боломж бүрдүүлсэн. 2025 оны 359{,}639 таамаглалаас 3{,}567 (1.0\%) дохио үлдэж, MT5-ийн \texttt{MaxPositions=1} дүрмийн дор 230 хэлцэл хэрэгжсэн (\fref{fig:tov_signal_funnel}). SL/TP босгыг ATR-д суурилан динамикаар тооцох ба TP/SL=3:1 тэгшитгэлийн харьцааг хадгалсан.
+
+\begin{figure}[H]
+\centering
+\adjustbox{max width=\columnwidth}{%
+\begin{tikzpicture}[
+    cnt/.style={font=\small\bfseries, text=black!82},
+    pct/.style={font=\scriptsize, text=black!65},
+    arr/.style={-{Stealth[length=5pt 1.5, width'=0pt 0.6, sep=0pt 0.5]},
+                line width=1.0pt, color=black!72},
+]
+\node[trapezium, trapezium angle=78, trapezium stretches body,
+      shape border rotate=180,
+      draw=blue!65, fill=blue!18, line width=1.0pt,
+      minimum height=1.0cm, minimum width=12cm,
+      align=center, font=\small\bfseries, text=blue!25!black] (s1) at (0, 0)
+    {1. Нийт таамаг (GBDT ансамбль, 2025 он)};
+\node[cnt, right=0.5cm of s1] {359{,}639};
+\node[pct, right=2.4cm of s1] {(100\%)};
+\node[trapezium, trapezium angle=78, trapezium stretches body,
+      shape border rotate=180,
+      draw=orange!85!black, fill=orange!22, line width=1.0pt,
+      minimum height=1.0cm, minimum width=8cm,
+      align=center, font=\small\bfseries, text=black!82,
+      below=0.5cm of s1] (s2)
+    {2. Итгэлцэл $\geq 0.90$ шүүлтүүр};
+\node[cnt, right=0.5cm of s2] {$\sim$3{,}600};
+\node[pct, right=2.2cm of s2] {($\approx$1.00\%)};
+\node[trapezium, trapezium angle=78, trapezium stretches body,
+      shape border rotate=180,
+      draw=orange!85!black, fill=orange!22, line width=1.0pt,
+      minimum height=1.0cm, minimum width=5.5cm,
+      align=center, font=\small\bfseries, text=black!82,
+      below=0.5cm of s2] (s3)
+    {3. ATR $\geq 4.0$ пипс шүүлтүүр};
+\node[cnt, right=0.5cm of s3] {3{,}567};
+\node[pct, right=2.0cm of s3] {(0.99\%)};
+\node[trapezium, trapezium angle=78, trapezium stretches body,
+      shape border rotate=180,
+      draw=teal!60!black, fill=teal!14, line width=1.0pt,
+      minimum height=1.0cm, minimum width=3.6cm,
+      align=center, font=\small\bfseries, text=black!82,
+      below=0.5cm of s3] (s4)
+    {4. MaxPositions=1\\\scriptsize\itshape(MT5 EA гүйцэтгэлийн дүрэм)};
+\node[cnt, right=0.5cm of s4] {230};
+\node[pct, right=1.6cm of s4] {(0.064\%)};
+\node[rectangle, draw=red!70!black, fill=red!25, rounded corners=5pt,
+      line width=1.1pt, minimum width=2.6cm, minimum height=0.9cm,
+      align=center, font=\small\bfseries, text=black!85,
+      below=0.5cm of s4] (s5)
+    {5. Хаагдсан хэлцэл};
+\node[cnt, right=0.5cm of s5] {230};
+\node[pct, right=1.6cm of s5] {(TP: 103 / SL: 127)};
+\draw[arr] (s1.south) -- (s2.north);
+\draw[arr] (s2.south) -- (s3.north);
+\draw[arr] (s3.south) -- (s4.north);
+\draw[arr] (s4.south) -- (s5.north);
+\node[pct, left=0.3cm of s2] {$-99.00\%$};
+\node[pct, left=0.3cm of s3] {$-0.92\%$};
+\node[pct, left=0.3cm of s4] {$-93.55\%$ (давхцал)};
+\end{tikzpicture}%
+}
+\caption{Дохионы шүүлтүүрийн юүлүүр (0.90 босго)}
+\label{fig:tov_signal_funnel}
+\end{figure}
+
+\emph{Туршилт.} MT5 Strategy Tester, 2025.01--2026.01, \$10{,}000 анхны хөрөнгө, нэг агшинд нэг байрлал, бодит спрэд + 10~point гулсалт, 10 итгэлцлийн босго (0.90--0.99).
 
 %%─────────────────────────────────────────────
 \noindent\textbf{4. Судалгааны үр дүн}
 
-\textbf{Өгөөж:} Бүх 10 сценари эерэг өгөөжтэй гарсан. Buy-and-hold жишиг нь \$10,000-ийг +13.47\% буюу \$11,347 болгосон. Хамгийн өндөр өгөөж 0.91 босгонд +517.70\% (\$61,770) бол 0.90 дээр +482.62\% гарсан. Босго өсөхөд дохио цөөрч өгөөж буурна: 0.93 дээр +368\%, 0.96 дээр +230\%, 0.99 дээр +74\% (зөвхөн 147 дохио). Дэлгэрэнгүй томьёолол ба нийлмэлжүүлэлтийн контекстийг Ch4 §4.5.2-аас үзнэ үү.
+\emph{Ангиллын чанар.} 2024 оны харагдаагүй тестийн ерөнхий нарийвчлал \textbf{89.25\%} (бүх ангилал) бол баталгаажуулалтын (2023) дээж дээр conf~$\geq 0.90$ шүүлтийн дараах нарийвчлал \textbf{96.96\%} болж нэмэгдсэн. Val-Train зөрүү +1.77\% — хэт нийцэлгүй (\tref{tab:tov_model_accuracy}).
 
-\textbf{Дохионы гүйцэтгэл:} Ачаалагдсан дохиотой харьцуулахад бодитоор арилжаа болсон хувь 6.45--23.81\% байсан. Энэ нь системийн алдаа бус, зориудын чанарын шүүлтүүрийн үр дүн юм: загвар минут бүр таамаглал гаргадаг ч нэг агшинд нэг байрлалын дүрэм болон итгэлцлийн босгыг хангаагүй дохиог алгасдаг. Босго өсөхөд дохио цөөрч, гүйцэтгэлийн хувь нэмэгдэх хандлага ажиглагдсан.
+\begin{table}[H]
+\centering
+\caption{GBDT ансамблийн нарийвчлал ба F1 оноо}
+\label{tab:tov_model_accuracy}
+\scriptsize
+\renewcommand{\arraystretch}{1.15}
+\setlength{\tabcolsep}{3pt}
+\begin{tabular}{|l|c|r|r|r|}
+\hline
+Хуваарь & Цонх & Acc (\%) & F1-mac & F1-wgt \\ \hline
+Сургалт            & 2015--2022 & 82.71 & 67.74 & 80.94 \\ \hline
+Баталгаажуулалт    & 2023       & 84.48 & 62.67 & 82.29 \\ \hline
+Тест (out-of-sample) & 2024     & \textbf{89.25} & \textbf{59.45} & \textbf{87.23} \\ \hline
+\end{tabular}
+\end{table}
 
-\textbf{Ялалтын хувь:} Ялалтын хувь 44.78--65.71\% мужид байсан. TP/SL=3:1 нөхцөлд алдагдалгүй байх доод хязгаар 25\% тул бүх сценари түүнээс дээш гарсан. Нэг арилжааны дундаж хүлээгдэж буй өгөөж (Expectancy) 0.79--1.63R мужид эерэг. Босго өсөхөд ялалтын хувь өсөх боловч арилжааны тоо цөөрснөөс итгэлцлийн интервал (95\% Wilson CI) мөн өргөсдөг.
+\emph{Стратегийн өгөөж.} Бүх 10 итгэлцлийн босго (0.90--0.99) эерэг өгөөжтэй гарч, худалдан авч хадгалах (Buy~\&~Hold, +13.47\%) жишгийг 5.5--38 дахин давсан. 0.91 босгод хамгийн өндөр \textbf{+517.70\% (\$61{,}770)} утга бүртгэгдсэн; 0.90--0.92 муж нь өндөр өгөөжийг харьцангуй бага уналт (MaxDD $<$~3\%)-той хослуулан тэнцвэрт цэг болсон (\fref{fig:tov_threshold_final_balance}).
 
-\textbf{Эрсдэл:} Sharpe 8.57--12.83, Sortino 23.97--44.76, Calmar 20.16--174.20. Эдгээр утгууд нь сценарийн харьцангуй харьцуулалтын суурь болж буй ч санхүүгийн стандарт утгуудтай шууд харьцуулагдахгүй (дэлгэрэнгүй анхааруулгыг Ch4 §4.4-өөс үзнэ үү). Хамгийн их уналт (MaxDD) 1.98\% (0.99)--9.53\% (0.93), хамгийн урт дараалсан алдагдал 2--10 арилжаа. Балансын харьцангуй хэлбэлзэл (CV) 38.01\% байгаа нь босго сонголт гүйцэтгэлд ихээхэн нөлөөтэй болохыг харуулна. 0.91 босго хамгийн өндөр өгөөж (+517.70\%) ба бага уналт (MaxDD 2.97\%)-ийг хослуулсан тэнцвэртэй сценари.
+\begin{figure}[H]
+\centering
+\adjustbox{max width=\columnwidth}{%
+\begin{tikzpicture}
+\begin{axis}[
+    width=0.95\textwidth,
+    height=6.0cm,
+    ybar,
+    bar width=10pt,
+    xlabel={Итгэлцлийн босго},
+    ylabel={Эцсийн баланс (\$)},
+    xmin=0.895, xmax=0.995,
+    ymin=0, ymax=70000,
+    xtick={0.90,0.91,0.92,0.93,0.94,0.95,0.96,0.97,0.98,0.99},
+    ytick={10000,20000,30000,40000,50000,60000},
+    yticklabels={\$10K, \$20K, \$30K, \$40K, \$50K, \$60K},
+    scaled y ticks=false,
+    ymajorgrids=true,
+    grid style={gray!30},
+    tick label style={font=\scriptsize},
+    label style={font=\small},
+    legend style={at={(0.98,0.97)},anchor=north east,font=\scriptsize,draw=gray!40,fill=white},
+    area legend,
+    nodes near coords,
+    nodes near coords style={font=\tiny,yshift=2pt,/pgf/number format/.cd,fixed,precision=0,1000 sep={,}}
+]
+\addplot[fill=blue!22, draw=blue!60!black] coordinates {
+    (0.90,58262) (0.91,61770) (0.92,56512) (0.93,46807) (0.94,38050)
+    (0.95,32844) (0.96,33040) (0.97,29019) (0.98,25447) (0.99,17429)
+};
+\end{axis}
+\end{tikzpicture}%
+}
+\caption{Босго бүрийн эцсийн баланс}
+\label{fig:tov_threshold_final_balance}
+\end{figure}
+
+\emph{Эрсдэл ба статистик.} Win rate 44.78--65.71\% (Wilson 95\% CI); бином тест $z>5$, $p<0.0001$; $E[R]$=0.79--1.63R эерэг; MaxDD 1.98--9.53\% (\fref{fig:tov_risk_smallmult}). Sharpe 8.6--12.8 утга нь түүврийн хэмжээ бага (35--230 хэлцэл), цонх богино (1 жил) ба арилжааны зардал бүрэн тусгаагүйгээс \emph{зохиомлоор томруулагдсан} тул босгуудын харьцангуй харьцуулалтад л хүчинтэй (\S~\ref{sec:limitations}).
+
+\begin{figure}[H]
+\centering
+\adjustbox{max width=\columnwidth}{%
+\pgfplotsset{
+    smallpanel/.style={
+        width=7.2cm, height=4.4cm,
+        xmin=0.895, xmax=0.995,
+        xtick={0.90,0.92,0.94,0.96,0.98},
+        tick label style={font=\tiny},
+        label style={font=\scriptsize},
+        title style={font=\scriptsize,yshift=-2pt},
+        ymajorgrids=true, grid style={gray!30},
+        ybar, bar width=4.5pt,
+    }
+}
+\begin{tabular}{@{}cc@{}}
+\begin{tikzpicture}
+\begin{axis}[smallpanel, title={(A) MaxDD (\%)}, ylabel={MaxDD (\%)}, ymin=0, ymax=10.5]
+\addplot[fill=red!28, draw=red!60!black] coordinates {
+    (0.90,3.93) (0.91,2.97) (0.92,2.99) (0.93,9.53) (0.94,6.80)
+    (0.95,3.94) (0.96,4.88) (0.97,2.96) (0.98,7.66) (0.99,1.98)};
+\end{axis}
+\end{tikzpicture} &
+\begin{tikzpicture}
+\begin{axis}[smallpanel, title={(B) Sharpe}, ylabel={Sharpe}, ymin=0, ymax=14]
+\addplot[fill=blue!28, draw=blue!60!black] coordinates {
+    (0.90,9.11) (0.91,9.75) (0.92,9.90) (0.93,9.21) (0.94,8.87)
+    (0.95,8.57) (0.96,9.84) (0.97,9.02) (0.98,10.63) (0.99,12.83)};
+\end{axis}
+\end{tikzpicture} \\[4pt]
+\begin{tikzpicture}
+\begin{axis}[smallpanel, title={(C) Sortino}, ylabel={Sortino}, ymin=0, ymax=48]
+\addplot[fill=teal!28, draw=teal!60!black] coordinates {
+    (0.90,24.82) (0.91,25.99) (0.92,29.78) (0.93,25.92) (0.94,24.66)
+    (0.95,23.97) (0.96,30.15) (0.97,24.90) (0.98,28.84) (0.99,44.76)};
+\end{axis}
+\end{tikzpicture} &
+\begin{tikzpicture}
+\begin{axis}[smallpanel, title={(D) Calmar = Өгөөж / MaxDD}, ylabel={Calmar}, ymin=0, ymax=190]
+\addplot[fill=orange!30, draw=orange!72!black] coordinates {
+    (0.90,122.96) (0.91,174.20) (0.92,155.79) (0.93,38.63) (0.94,41.23)
+    (0.95,57.97) (0.96,47.18) (0.97,64.19) (0.98,20.16) (0.99,37.53)};
+\end{axis}
+\end{tikzpicture}
+\end{tabular}%
+}
+\caption{Эрсдэлийн үзүүлэлтүүд босго тус бүрээр}
+\label{fig:tov_risk_smallmult}
+\end{figure}
 
 %%─────────────────────────────────────────────
-\noindent\textbf{5. Судалгааны нэгтгэл}
+\noindent\textbf{5. Дүгнэлт}
 
-Судалгааны асуултуудад товчоор хариулвал:
-\begin{itemize}\setlength\itemsep{0pt}
-    \item \textbf{RQ1:} WFV Fold~5-ийн тест өгөгдөл (2024) дээр нарийвчлал 89.25\%, баталгаажуулалтын өгөгдөл дээрх итгэлцэл $\geq$0.90 дохионы нарийвчлал 96.96\% гарсан нь загвар харагдаагүй өгөгдөл дээр тогтвортой ажиллаж буйг харуулсан.
-    \item \textbf{RQ2:} Гүйцэтгэлийн хувь 6.45--23.81\% байсан тул дохио бодит арилжаа болж хэрэгжсэн, гэхдээ нэг агшинд нэг байрлалын дүрмээс нэлээд хэсэг алгасагдсан.
-    \item \textbf{RQ3:} Бүх сценарид buy-and-hold жишгийг давсан эерэг Expectancy (0.79--1.63R), MaxDD 1.98--9.53\% гарсан.
+Гурван RQ-д бүгд «Тийм»:
+\begin{itemize}\setlength\itemsep{0pt}\small
+    \item \textbf{RQ1}: 89.25\% (тест 2024, бүх ангилал) / 96.96\% (val 2023, conf~$\geq 0.90$)
+    \item \textbf{RQ2}: 3{,}567 дохио $\to$ 230 хэлцэл (6.45--23.81\%)
+    \item \textbf{RQ3}: +74--518\% өгөөж, $E[R]$=0.79--1.63R
 \end{itemize}
-Инженерчлэлийн талд загвар сургалтаас мобайл апп хүртэлх ML serving дамжлагыг нэгэн инженерчлэлийн хүрээнд end-to-end системээр хэрэгжүүлсэн.
 
-\textbf{Хязгаарлалт (товч):} (i)~EUR/USD, нэг хугацааны цонхонд батлагдсан тул бусад хэрэгсэлд шууд нэвтрүүлэх боломжгүй; (ii)~Спрэд, гулсалт тусгасан боловч шимтгэл, своп хамруулаагүй; (iii)~Гүйцэтгэлийн хувь 100\% биш тул ялалтын хувь хэрэгжсэн арилжааны багцад хүчинтэй. Бусад хязгаарлалт (нэвчилтийн үлдэгдэл, офлайн/онлайн зөрүү гэх мэт) §\ref{sec:limitations}-т нэгтгэгдсэн.
+Composite ранкингаар тэргүүн 3 (\tref{tab:tov_rq3_summary}):
 
-\textbf{Цаашдын чиглэл:} (1)~GBP/USD, USD/JPY зэрэг хэрэгсэлд өргөтгөх, (2)~LSTM/Transformer загвар ансамбльд нэмэх, (3)~байрлалын хэмжээнд бататгах сургалт (RL) хэрэглэх, (4)~NLP-ээр макро мэдээ шинжлэх, (5)~MLOps мониторинг ба Google Play түгээлт хэрэгжүүлэх.
+\begin{table}[H]
+\centering
+\caption{Composite ранкингийн тэргүүн 3 босго}
+\label{tab:tov_rq3_summary}
+\scriptsize
+\renewcommand{\arraystretch}{1.12}
+\setlength{\tabcolsep}{2.5pt}
+\begin{tabular}{|c|r|r|r|l|}
+\hline
+Босго & Өгөөж & MaxDD & Win & Профайл \\ \hline
+0.91 & +517.70\% & 2.97\% & 47.17\% & \#1 Балансжсан \\ \hline
+0.92 & +465.12\% & 2.99\% & 47.26\% & \#2 Балансжсан \\ \hline
+0.99 & +74.29\%  & 1.98\% & 65.71\% & \#3 Эрсдэлгүй \\ \hline
+\end{tabular}
+\end{table}
+
+\emph{Хязгаарлалт.} Үр дүн нь EUR/USD валютын хослол болон 2025 оны жилийн цонхонд л баталгаажсан тул өөр валютын хослол ба брокерын нөхцөлд шууд ерөнхийлөх боломжгүй. Спрэд болон гулсалтыг загварт тусгасан хэдий ч брокер тус бүрийн шимтгэл (commission) болон шөнийн байрлал хадгалалтын зардал (swap)-ыг бүрэн тооцоогүй. Мөн дохио-гүйцэтгэлийн хөрвүүлэлт 100\%-иас бага байгаа нь ялалтын хувь ба өгөөжийн утгуудыг зөвхөн хэрэгжсэн арилжааны хүрээнд хүчинтэй болгодог. Загваруудын хоорондох ялгаанд McNemar статистикийн тест явуулаагүй (нарийвчлан §\ref{sec:limitations}).
+
+\emph{Цаашдын чиглэл.} (1)~GBP/USD, USD/JPY зэрэг хослол руу өргөтгөн багц стратеги бүтээх; (2)~LSTM ба Transformer загваруудыг GBDT ансамбльтай харьцуулах; (3)~бататгах сургалтаар (RL) байрлалын хэмжээний удирдлагыг сайжруулах; (4)~хэлний боловсруулалтаар (NLP) макро эдийн засгийн мэдээг автоматаар шинж чанарт оруулах; (5)~формал Model Registry, Google Play түгээлт болон автомат rollback процессыг хэрэгжүүлэх.
 
 
 \end{multicols*}

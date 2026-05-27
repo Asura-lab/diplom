@@ -113,15 +113,20 @@ Omer~Berat Sezer, Mehmet~U. Gudelek, and A.~Murat Ozbayoglu.
   literature review: 2005--2019.
 \newblock {\em Applied Soft Computing}, 90:106181, 2020.
 
+\bibitem{fama1970efficient}
+Eugene~F. Fama.
+\newblock Efficient capital markets: A review of theory and empirical work.
+\newblock {\em The Journal of Finance}, 25(2):383--417, 1970.
+
 \bibitem{lo2000foundations}
 Andrew~W Lo, Harry Mamaysky, and Jiang Wang.
 \newblock Foundations of technical analysis.
 \newblock {\em The Journal of Finance}, 55(4):1705--1765, 2000.
 
-\bibitem{fama1970efficient}
-Eugene~F. Fama.
-\newblock Efficient capital markets: A review of theory and empirical work.
-\newblock {\em The Journal of Finance}, 25(2):383--417, 1970.
+\bibitem{park2007we}
+Cheol-Ho Park and Scott~H. Irwin.
+\newblock What do we know about the profitability of technical analysis?
+\newblock {\em Journal of Economic Surveys}, 21(4):786--826, 2007.
 
 \bibitem{olson2004have}
 Dennis Olson.
@@ -139,11 +144,6 @@ Ben~R. Marshall, Ros Cahan, and Jean~M. Cahan.
 \newblock Can commodity futures be profitably traded with quantitative market
   timing strategies?
 \newblock {\em Journal of Banking \& Finance}, 32(9):1810--1819, 2008.
-
-\bibitem{park2007we}
-Cheol-Ho Park and Scott~H. Irwin.
-\newblock What do we know about the profitability of technical analysis?
-\newblock {\em Journal of Economic Surveys}, 21(4):786--826, 2007.
 
 \bibitem{pardo2008evaluation}
 Robert Pardo.
