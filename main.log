@@ -1,9 +1,10 @@
-This is XeTeX, Version 3.141592653-2.6-0.999997 (MiKTeX 25.4) (preloaded format=xelatex 2025.12.1)  10 JUN 2026 12:35
+This is XeTeX, Version 3.141592653-2.6-0.999997 (MiKTeX 25.4) (preloaded format=xelatex 2025.12.1)  10 JUN 2026 14:07
 entering extended mode
  restricted \write18 enabled.
+ file:line:error style messages enabled.
  %&-line parsing enabled.
-**./main.tex
-(main.tex
+**c:/Users/Acer/Desktop/Forex-Signal-App/diplom/main.tex
+(c:/Users/Acer/Desktop/Forex-Signal-App/diplom/main.tex
 LaTeX2e <2025-11-01>
 L3 programming layer <2025-11-06>
 (Thesis.cls
@@ -4002,12 +4003,12 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: 2618CE33BB71B6E9161F269BEF108F86;10355.
  ) 
 Here is how much of TeX's memory you used:
- 52150 strings out of 402987
- 1265108 string characters out of 5448731
- 1863524 words of memory out of 5000000
+ 52151 strings out of 402987
+ 1265244 string characters out of 5448731
+ 1863523 words of memory out of 5000000
  79920 multiletter control sequences out of 15000+600000
  683805 words of font info for 216 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 88i,18n,104p,1426b,2668s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 88i,18n,104p,1470b,2668s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
 Output written on main.pdf (61 pages).
