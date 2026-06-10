@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999997 (MiKTeX 25.4) (preloaded format=xelatex 2025.12.1)  9 JUN 2026 18:29
+This is XeTeX, Version 3.141592653-2.6-0.999997 (MiKTeX 25.4) (preloaded format=xelatex 2025.12.1)  10 JUN 2026 12:35
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1862,13 +1862,13 @@ Underfull \hbox (badness 6078) in paragraph at lines 11--12
 ------------------------------------------------------------------------------
  Table of Contents
 ------------------------------------------------------------------------------
-(main.toc [2
-
-])
+(main.toc)
 \tf@toc=\write5
 \openout5 = `main.toc'.
 
- [3] (Chapters/acrolist.tex
+ [2
+
+] (Chapters/acrolist.tex
 
 Package xeCJK Warning: Unknown CJK family `\CJKttdefault' is being ignored.
 (xeCJK)                
@@ -1918,7 +1918,7 @@ Space,Scale=0.9,Script=Cyrillic].
 
 LaTeX Font Info:    Font shape `TU/Consolas(1)/m/n' will be
 (Font)              scaled to size 9.85492pt on input line 26.
-) [4
+) [3
 
 
 ]
@@ -1929,7 +1929,7 @@ LaTeX Font Info:    Font shape `TU/Consolas(1)/m/n' will be
 \tf@lot=\write6
 \openout6 = `main.lot'.
 
- [5
+ [4
 
 ]
 ------------------------------------------------------------------------------
@@ -1939,7 +1939,7 @@ LaTeX Font Info:    Font shape `TU/Consolas(1)/m/n' will be
 \tf@lof=\write7
 \openout7 = `main.lof'.
 
- [6
+ [5
 
 ] (Chapters/plan.tex
 Underfull \hbox (badness 3803) in paragraph at lines 19--19
@@ -3791,7 +3791,7 @@ Package fontspec Info:
 (fontspec)             Consolas scale = 0.9.
 
 ) [45] (Chapters/Tovchlol.tex
-Underfull \hbox (badness 5681) in paragraph at lines 174--175
+Underfull \hbox (badness 5681) in paragraph at lines 173--174
 \TU/TimesNewRoman(1)/m/n/10.95 вар өсөлтийн стратеги (leaf-wise, level-wise,
  []
 
@@ -3803,95 +3803,95 @@ Package fontspec Info:
 (fontspec)             Consolas scale = 0.9.
 
 
-Underfull \hbox (badness 5217) in paragraph at lines 304--305
+Underfull \hbox (badness 5217) in paragraph at lines 303--304
 []\TU/TimesNewRoman(1)/m/it/10.95 Ангиллын чанар. \TU/TimesNewRoman(1)/m/n/10.9
 5 2024 оны харагдаа-
  []
 
 [2]
-Underfull \hbox (badness 10000) in paragraph at lines 442--443
+Underfull \hbox (badness 10000) in paragraph at lines 441--442
 []\TU/TimesNewRoman(1)/m/n/10.95 Дээрх үр дүн нь зөвхөн
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 442--443
+Underfull \hbox (badness 10000) in paragraph at lines 441--442
 \TU/TimesNewRoman(1)/m/n/10.95 загварын статистик нарийвчлал биш,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 442--443
+Underfull \hbox (badness 10000) in paragraph at lines 441--442
 \TU/TimesNewRoman(1)/m/n/10.95 өгөгдөл цуглуулалт $\OMS/lmsy/m/n/10.95 !$ \TU/T
 imesNewRoman(1)/m/n/10.95 шинж чанарын
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 442--443
+Underfull \hbox (badness 10000) in paragraph at lines 441--442
 \TU/TimesNewRoman(1)/m/n/10.95 баталгаажуулсан. Шинжлэх ухааны хувьд
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 442--443
+Underfull \hbox (badness 10000) in paragraph at lines 441--442
 \TU/TimesNewRoman(1)/m/n/10.95 GBDT ансамбль, олон интервалын шинж
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 442--443
+Underfull \hbox (badness 10000) in paragraph at lines 441--442
 \TU/TimesNewRoman(1)/m/n/10.95 system)-ийг бүтээж, бодит цаг хугацааны
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 457--458
+Underfull \hbox (badness 10000) in paragraph at lines 456--457
 \TU/TimesNewRoman(1)/m/n/8 Short-Term Memory Networks for Financial Market
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 459--460
+Underfull \hbox (badness 10000) in paragraph at lines 458--459
 \TU/TimesNewRoman(1)/m/n/8 Technical and Macroeconomic Indicators. \TU/TimesNew
 Roman(1)/m/it/8 Financial
  []
 
 [3]) (Chapters/Tovchlol_EN.tex
-Underfull \hbox (badness 10000) in paragraph at lines 39--40
+Underfull \hbox (badness 10000) in paragraph at lines 38--39
 []\TU/TimesNewRoman(1)/m/n/10.95 The foreign exchange (Forex) market
  []
 
 
-Underfull \hbox (badness 5460) in paragraph at lines 39--40
+Underfull \hbox (badness 5460) in paragraph at lines 38--39
 \TU/TimesNewRoman(1)/m/n/10.95 that generates BUY/HOLD/SELL classification
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 49--50
+Underfull \hbox (badness 10000) in paragraph at lines 48--49
 []\TU/TimesNewRoman(1)/m/n/10.95 Research on financial time-series
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 49--50
+Underfull \hbox (badness 10000) in paragraph at lines 48--49
 \TU/TimesNewRoman(1)/m/n/10.95 forecasting developed amid the theoretical
  []
 
 
-Underfull \hbox (badness 6141) in paragraph at lines 49--50
+Underfull \hbox (badness 6141) in paragraph at lines 48--49
 \TU/TimesNewRoman(1)/m/n/10.95 combining multi-timeframe feature engineering
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 51--52
+Underfull \hbox (badness 10000) in paragraph at lines 50--51
 \TU/TimesNewRoman(1)/m/n/10.95 multi-timeframe features, confidence-threshold
  []
 
 
-Underfull \hbox (badness 6876) in paragraph at lines 56--57
+Underfull \hbox (badness 6876) in paragraph at lines 55--56
 \TU/TimesNewRoman(1)/m/n/10.95 model training to the mobile app was built
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 176--177
+Underfull \hbox (badness 10000) in paragraph at lines 175--176
 \TU/TimesNewRoman(1)/m/n/10.95 EUR/USD 2015–2024 historical data over 6
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 178--179
+Underfull \hbox (badness 10000) in paragraph at lines 177--178
 []\TU/TimesNewRoman(1)/m/it/10.95 Model. \TU/TimesNewRoman(1)/m/n/10.95 LightGB
 M, XGBoost, and
  []
@@ -3904,73 +3904,73 @@ Package fontspec Info:
 (fontspec)             Consolas scale = 0.9.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 237--238
+Underfull \hbox (badness 10000) in paragraph at lines 236--237
 []\TU/TimesNewRoman(1)/m/it/10.95 Signal filter. \TU/TimesNewRoman(1)/m/n/10.95
  Signals are filtered by
  []
 
 
-Underfull \hbox (badness 6220) in paragraph at lines 237--238
+Underfull \hbox (badness 6220) in paragraph at lines 236--237
 \TU/TimesNewRoman(1)/m/n/10.95 pips); of 359,639 predictions in 2025, 3,567
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 326--327
+Underfull \hbox (badness 10000) in paragraph at lines 325--326
 []\TU/TimesNewRoman(1)/m/it/10.95 Strategy return. \TU/TimesNewRoman(1)/m/n/10.
 95 All 10 confidence
  []
 
 
-Underfull \hbox (badness 5893) in paragraph at lines 326--327
+Underfull \hbox (badness 5893) in paragraph at lines 325--326
 \TU/TimesNewRoman(1)/m/n/10.95 by 5.5–38$\OMS/lmsy/m/n/10.95 ^^B$\TU/TimesNewRo
 man(1)/m/n/10.95 . The 0.91 threshold reached the
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 420--421
+Underfull \hbox (badness 10000) in paragraph at lines 419--420
 \TU/TimesNewRoman(1)/m/n/10.95 confidence-threshold filtering, and a mobile
  []
 
 [2]
-Underfull \hbox (badness 5064) in paragraph at lines 446--447
+Underfull \hbox (badness 5064) in paragraph at lines 445--446
 []\TU/TimesNewRoman(1)/m/n/10.95 Beyond statistical accuracy, the results
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 446--447
+Underfull \hbox (badness 10000) in paragraph at lines 445--446
 \TU/TimesNewRoman(1)/m/n/10.95 training $\OMS/lmsy/m/n/10.95 !$ \TU/TimesNewRom
 an(1)/m/n/10.95 signal filtering $\OMS/lmsy/m/n/10.95 !$ \TU/TimesNewRoman(1)/m
 /n/10.95 automated
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 446--447
+Underfull \hbox (badness 10000) in paragraph at lines 445--446
 \TU/TimesNewRoman(1)/m/n/10.95 trade $\OMS/lmsy/m/n/10.95 !$ \TU/TimesNewRoman(
 1)/m/n/10.95 mobile notification. Scientifically,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 446--447
+Underfull \hbox (badness 10000) in paragraph at lines 445--446
 \TU/TimesNewRoman(1)/m/n/10.95 it presents empirical evidence combining a
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 446--447
+Underfull \hbox (badness 10000) in paragraph at lines 445--446
 \TU/TimesNewRoman(1)/m/n/10.95 confidence-threshold filtering; practically, it
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 450--451
+Underfull \hbox (badness 10000) in paragraph at lines 449--450
 \TU/TimesNewRoman(1)/m/n/10.95 USD/JPY; compare with LSTM/Transformer;
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 461--462
+Underfull \hbox (badness 10000) in paragraph at lines 460--461
 \TU/TimesNewRoman(1)/m/n/8 Short-Term Memory Networks for Financial Market
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 463--464
+Underfull \hbox (badness 10000) in paragraph at lines 462--463
 \TU/TimesNewRoman(1)/m/n/8 Technical and Macroeconomic Indicators. \TU/TimesNew
 Roman(1)/m/it/8 Financial
  []
@@ -3983,12 +3983,12 @@ Package fontspec Info:
 (fontspec)             Consolas scale = 0.9.
 
  [2]
-Underfull \hbox (badness 10000) in paragraph at lines 462--463
+Underfull \hbox (badness 10000) in paragraph at lines 461--462
 \TU/TimesNewRoman(1)/m/n/8 Short-Term Memory Networks for Financial Market
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 464--465
+Underfull \hbox (badness 10000) in paragraph at lines 463--464
 \TU/TimesNewRoman(1)/m/n/8 Technical and Macroeconomic Indicators. \TU/TimesNew
 Roman(1)/m/it/8 Financial
  []
@@ -3999,7 +3999,7 @@ LaTeX2e <2025-11-01>
 L3 programming layer <2022/08/05>
  ***********
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: AF886FC33BC30B203AF04332A651261E;10661.
+(rerunfilecheck)             Checksum: 2618CE33BB71B6E9161F269BEF108F86;10355.
  ) 
 Here is how much of TeX's memory you used:
  52150 strings out of 402987
@@ -4010,4 +4010,4 @@ Here is how much of TeX's memory you used:
  1348 hyphenation exceptions out of 8191
  88i,18n,104p,1426b,2668s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on main.pdf (62 pages).
+Output written on main.pdf (61 pages).

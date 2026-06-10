@@ -1,9 +1,9 @@
 \xpg@aux {}{mongolian}
 \contentsline {chapter}{Хураангуй}{i}{dummy.1}%
 \contentsline {chapter}{Гарчиг}{ii}{dummy.2}%
-\contentsline {chapter}{Товчилсон үгсийн жагсаалт}{iv}{dummy.4}%
-\contentsline {chapter}{Хүснэгтийн жагсаалт}{v}{dummy.6}%
-\contentsline {chapter}{Зургийн жагсаалт}{vi}{dummy.8}%
+\contentsline {chapter}{Товчилсон үгсийн жагсаалт}{iii}{dummy.4}%
+\contentsline {chapter}{Хүснэгтийн жагсаалт}{iv}{dummy.6}%
+\contentsline {chapter}{Зургийн жагсаалт}{v}{dummy.8}%
 \contentsline {chapter}{Ажлын төлөвлөгөө}{1}{chapter*.10}%
 \contentsline {chapter}{\numberline {1}Удиртгал}{2}{chapter.12}%
 \contentsline {section}{\numberline {1.1}Үндэслэл, ач холбогдол}{2}{section.13}%
@@ -84,6 +84,3 @@
 \contentsline {chapter}{Ном зүй}{35}{dummy.152}%
 \contentsline {chapter}{Талархал}{37}{dummy.154}%
 \contentsline {chapter}{Хавсралт}{38}{dummy.156}%
-\contentsline {chapter}{Товчлол}{1}{dummy.173}%
-\contentsline {chapter}{English Summary}{1}{dummy.186}%
-\contentsline {chapter}{日本語要約}{1}{dummy.199}%
