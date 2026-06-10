@@ -1,10 +1,9 @@
-This is XeTeX, Version 3.141592653-2.6-0.999997 (MiKTeX 25.4) (preloaded format=xelatex 2025.12.1)  27 MAY 2026 15:19
+This is XeTeX, Version 3.141592653-2.6-0.999997 (MiKTeX 25.4) (preloaded format=xelatex 2025.12.1)  9 JUN 2026 18:29
 entering extended mode
  restricted \write18 enabled.
- file:line:error style messages enabled.
  %&-line parsing enabled.
-**c:/Users/Acer/Desktop/Forex-Signal-App/diplom/main.tex
-(c:/Users/Acer/Desktop/Forex-Signal-App/diplom/main.tex
+**./main.tex
+(main.tex
 LaTeX2e <2025-11-01>
 L3 programming layer <2025-11-06>
 (Thesis.cls
@@ -906,68 +905,161 @@ Package polyglossia Info: Default language is mongolian
 (C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/latex/polyglossia\gloss-englis
 h.ldf
 File: gloss-english.ldf polyglossia: module for English
+) (C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/xelatex/xecjk\xeCJK.sty
+Package: xeCJK 2022/08/05 v3.9.1 Typesetting CJK scripts with XeLaTeX
+(C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/latex/ctex\ctexhook.sty
+Package: ctexhook 2022/07/14 v2.5.10 Document and package hooks (CTEX)
 )
+(C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/latex/l3packages/xtemplate\xte
+mplate.sty
+Package: xtemplate 2025-10-09 L3 Experimental prototype document functions
+)
+\l__xeCJK_tmp_int=\count394
+\l__xeCJK_tmp_box=\box80
+\l__xeCJK_tmp_dim=\dimen285
+\l__xeCJK_tmp_skip=\skip121
+\g__xeCJK_space_factor_int=\count395
+\l__xeCJK_begin_int=\count396
+\l__xeCJK_end_int=\count397
+\c__xeCJK_CJK_class_int=\XeTeXcharclass1
+\c__xeCJK_FullLeft_class_int=\XeTeXcharclass2
+\c__xeCJK_FullRight_class_int=\XeTeXcharclass3
+\c__xeCJK_HalfLeft_class_int=\XeTeXcharclass4
+\c__xeCJK_HalfRight_class_int=\XeTeXcharclass5
+\c__xeCJK_NormalSpace_class_int=\XeTeXcharclass6
+\c__xeCJK_CM_class_int=\XeTeXcharclass7
+\c__xeCJK_HangulJamo_class_int=\XeTeXcharclass8
+\l__xeCJK_last_skip=\skip122
+\c__xeCJK_none_node=\count398
+\g__xeCJK_node_int=\count399
+\c__xeCJK_CJK_node_dim=\dimen286
+\c__xeCJK_CJK-space_node_dim=\dimen287
+\c__xeCJK_default_node_dim=\dimen288
+\c__xeCJK_CJK-widow_node_dim=\dimen289
+\c__xeCJK_normalspace_node_dim=\dimen290
+\c__xeCJK_default-space_node_skip=\skip123
+\l__xeCJK_ccglue_skip=\skip124
+\l__xeCJK_ecglue_skip=\skip125
+\l__xeCJK_punct_kern_skip=\skip126
+\l__xeCJK_indent_box=\box81
+\l__xeCJK_last_penalty_int=\count400
+\l__xeCJK_last_bound_dim=\dimen291
+\l__xeCJK_last_kern_dim=\dimen292
+\l__xeCJK_widow_penalty_int=\count401
+
+LaTeX template Info: Declaring template type 'xeCJK/punctuation' taking 0
+(template)           argument(s) on line 2396.
+
+\l__xeCJK_fixed_punct_width_dim=\dimen293
+\l__xeCJK_mixed_punct_width_dim=\dimen294
+\l__xeCJK_middle_punct_width_dim=\dimen295
+\l__xeCJK_fixed_margin_width_dim=\dimen296
+\l__xeCJK_mixed_margin_width_dim=\dimen297
+\l__xeCJK_middle_margin_width_dim=\dimen298
+\l__xeCJK_bound_punct_width_dim=\dimen299
+\l__xeCJK_bound_margin_width_dim=\dimen300
+\l__xeCJK_margin_minimum_dim=\dimen301
+\l__xeCJK_kerning_total_width_dim=\dimen302
+\l__xeCJK_same_align_margin_dim=\dimen303
+\l__xeCJK_different_align_margin_dim=\dimen304
+\l__xeCJK_kerning_margin_width_dim=\dimen305
+\l__xeCJK_kerning_margin_minimum_dim=\dimen306
+\l__xeCJK_bound_dim=\dimen307
+\l__xeCJK_reverse_bound_dim=\dimen308
+\l__xeCJK_margin_dim=\dimen309
+\l__xeCJK_minimum_bound_dim=\dimen310
+\l__xeCJK_kerning_margin_dim=\dimen311
+\g__xeCJK_family_int=\count402
+\l__xeCJK_fam_int=\count403
+\g__xeCJK_fam_allocation_int=\count404
+\l__xeCJK_verb_case_int=\count405
+\l__xeCJK_verb_exspace_skip=\skip127
+
+(C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/xelatex/xecjk\xeCJK-listings.s
+ty
+Package: xeCJK-listings 2022/08/05 v3.9.1 xeCJK patch file for listings
+\l__xeCJK_listings_max_char_int=\count406
+\l__xeCJK_listings_flag_int=\count407
+) (C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/xelatex/xecjk\xeCJK.cfg
+File: xeCJK.cfg 2022/08/05 v3.9.1 Configuration file for xeCJK package
+))
+
+Package fontspec Info: 
+(fontspec)             Font family 'YuGothic(0)' created for font 'Yu Gothic'
+(fontspec)             with options [Script={CJK},AutoFakeSlant={0.167}].
+(fontspec)              
+(fontspec)              This font family consists of the following NFSS
+(fontspec)             series/shapes:
+(fontspec)              
+(fontspec)             - 'normal' (m/n) with NFSS spec.: <->"Yu
+(fontspec)             Gothic/OT:script=hani;language=dflt;"
+(fontspec)             - 'bold' (b/n) with NFSS spec.: <->"Yu
+(fontspec)             Gothic/B/OT:script=hani;language=dflt;"
+(fontspec)             - 'italic' (m/it) with NFSS spec.: <->"Yu
+(fontspec)             Gothic/OT:script=hani;language=dflt;slant=0.167;"
+(fontspec)             - 'bold italic' (b/it) with NFSS spec.: <->"Yu
+(fontspec)             Gothic/B/OT:script=hani;language=dflt;"
+
+
 (C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/latex/wrapfig\wrapfig.sty
-\wrapoverhang=\dimen285
-\WF@size=\dimen286
-\c@WF@wrappedlines=\count394
-\WF@box=\box80
+\wrapoverhang=\dimen312
+\WF@size=\dimen313
+\c@WF@wrappedlines=\count408
+\WF@box=\box82
 \WF@everypar=\toks43
 Package: wrapfig 2003/01/31  v 3.6
 )
 (C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/latex/multirow\multirow.sty
 Package: multirow 2024/11/12 v2.9 Span multiple rows of a table
-\multirow@colwidth=\skip121
-\multirow@cntb=\count395
-\multirow@dima=\skip122
-\bigstrutjot=\dimen287
+\multirow@colwidth=\skip128
+\multirow@cntb=\count409
+\multirow@dima=\skip129
+\bigstrutjot=\dimen314
 )
 (C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/latex/ragged2e\ragged2e.sty
 Package: ragged2e 2023/06/22 v3.6 ragged2e Package
-\CenteringLeftskip=\skip123
-\RaggedLeftLeftskip=\skip124
-\RaggedRightLeftskip=\skip125
-\CenteringRightskip=\skip126
-\RaggedLeftRightskip=\skip127
-\RaggedRightRightskip=\skip128
-\CenteringParfillskip=\skip129
-\RaggedLeftParfillskip=\skip130
-\RaggedRightParfillskip=\skip131
-\JustifyingParfillskip=\skip132
-\CenteringParindent=\skip133
-\RaggedLeftParindent=\skip134
-\RaggedRightParindent=\skip135
-\JustifyingParindent=\skip136
+\CenteringLeftskip=\skip130
+\RaggedLeftLeftskip=\skip131
+\RaggedRightLeftskip=\skip132
+\CenteringRightskip=\skip133
+\RaggedLeftRightskip=\skip134
+\RaggedRightRightskip=\skip135
+\CenteringParfillskip=\skip136
+\RaggedLeftParfillskip=\skip137
+\RaggedRightParfillskip=\skip138
+\JustifyingParfillskip=\skip139
+\CenteringParindent=\skip140
+\RaggedLeftParindent=\skip141
+\RaggedRightParindent=\skip142
+\JustifyingParindent=\skip143
 )
 (C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/latex/tools\indentfirst.sty
 Package: indentfirst 2023/07/02 v1.03 Indent first paragraph (DPC)
 )
 (C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/latex/tools\multicol.sty
 Package: multicol 2025/10/21 v2.0b multicolumn formatting (FMi)
-\c@tracingmulticols=\count396
-\mult@box=\box81
-\multicol@leftmargin=\dimen288
-\c@unbalance=\count397
-\c@collectmore=\count398
-\doublecol@number=\count399
-\multicoltolerance=\count400
-\multicolpretolerance=\count401
-\full@width=\dimen289
-\page@free=\dimen290
-\premulticols=\dimen291
-\postmulticols=\dimen292
-\multicolsep=\skip137
-\multicolbaselineskip=\skip138
-\partial@page=\box82
-\last@line=\box83
-\mc@boxedresult=\box84
-\maxbalancingoverflow=\dimen293
-\mult@rightbox=\box85
-\mult@grightbox=\box86
-\mult@firstbox=\box87
-\mult@gfirstbox=\box88
-\@tempa=\box89
-\@tempa=\box90
+\c@tracingmulticols=\count410
+\mult@box=\box83
+\multicol@leftmargin=\dimen315
+\c@unbalance=\count411
+\c@collectmore=\count412
+\doublecol@number=\count413
+\multicoltolerance=\count414
+\multicolpretolerance=\count415
+\full@width=\dimen316
+\page@free=\dimen317
+\premulticols=\dimen318
+\postmulticols=\dimen319
+\multicolsep=\skip144
+\multicolbaselineskip=\skip145
+\partial@page=\box84
+\last@line=\box85
+\mc@boxedresult=\box86
+\maxbalancingoverflow=\dimen320
+\mult@rightbox=\box87
+\mult@grightbox=\box88
+\mult@firstbox=\box89
+\mult@gfirstbox=\box90
 \@tempa=\box91
 \@tempa=\box92
 \@tempa=\box93
@@ -1002,16 +1094,18 @@ Package: multicol 2025/10/21 v2.0b multicolumn formatting (FMi)
 \@tempa=\box122
 \@tempa=\box123
 \@tempa=\box124
-\c@minrows=\count402
-\c@columnbadness=\count403
-\c@finalcolumnbadness=\count404
-\last@try=\dimen294
-\multicolovershoot=\dimen295
-\multicolundershoot=\dimen296
-\mult@nat@firstbox=\box125
-\colbreak@box=\box126
-\mc@col@check@num=\count405
-\g__mc_curr_col_int=\count406
+\@tempa=\box125
+\@tempa=\box126
+\c@minrows=\count416
+\c@columnbadness=\count417
+\c@finalcolumnbadness=\count418
+\last@try=\dimen321
+\multicolovershoot=\dimen322
+\multicolundershoot=\dimen323
+\mult@nat@firstbox=\box127
+\colbreak@box=\box128
+\mc@col@check@num=\count419
+\g__mc_curr_col_int=\count420
 )
 (C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/latex/pgf/frontendlayer\tikz.s
 ty
@@ -1021,12 +1115,12 @@ ty
 (C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfutil-
 common.tex
 \pgfutil@everybye=\toks44
-\pgfutil@tempdima=\dimen297
-\pgfutil@tempdimb=\dimen298
+\pgfutil@tempdima=\dimen324
+\pgfutil@tempdimb=\dimen325
 )
 (C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfutil-
 latex.def
-\pgfutil@abb=\box127
+\pgfutil@abb=\box129
 )
 (C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfrcs.c
 ode.tex
@@ -1052,26 +1146,26 @@ code.tex
 ibraryfiltered.code.tex
 \pgfkeys@tmptoks=\toks47
 ))
-\pgf@x=\dimen299
-\pgf@y=\dimen300
-\pgf@xa=\dimen301
-\pgf@ya=\dimen302
-\pgf@xb=\dimen303
-\pgf@yb=\dimen304
-\pgf@xc=\dimen305
-\pgf@yc=\dimen306
-\pgf@xd=\dimen307
-\pgf@yd=\dimen308
+\pgf@x=\dimen326
+\pgf@y=\dimen327
+\pgf@xa=\dimen328
+\pgf@ya=\dimen329
+\pgf@xb=\dimen330
+\pgf@yb=\dimen331
+\pgf@xc=\dimen332
+\pgf@yc=\dimen333
+\pgf@xd=\dimen334
+\pgf@yd=\dimen335
 \w@pgf@writea=\write3
 \r@pgf@reada=\read2
-\c@pgf@counta=\count407
-\c@pgf@countb=\count408
-\c@pgf@countc=\count409
-\c@pgf@countd=\count410
+\c@pgf@counta=\count421
+\c@pgf@countb=\count422
+\c@pgf@countc=\count423
+\c@pgf@countd=\count424
 \t@pgf@toka=\toks48
 \t@pgf@tokb=\toks49
 \t@pgf@tokc=\toks50
-\pgf@sys@id@count=\count411
+\pgf@sys@id@count=\count425
 
 (C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgf.cf
 g
@@ -1091,13 +1185,13 @@ File: pgfsys-dvipdfmx.def 2025-08-29 v3.1.11a (3.1.11a)
 -common-pdf.def
 File: pgfsys-common-pdf.def 2025-08-29 v3.1.11a (3.1.11a)
 )
-\pgfsys@objnum=\count412
+\pgfsys@objnum=\count426
 )))
 (C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgfsys
 softpath.code.tex
 File: pgfsyssoftpath.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgfsyssoftpath@smallbuffer@items=\count413
-\pgfsyssoftpath@bigbuffer@items=\count414
+\pgfsyssoftpath@smallbuffer@items=\count427
+\pgfsyssoftpath@bigbuffer@items=\count428
 )
 (C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgfsys
 protocol.code.tex
@@ -1131,9 +1225,9 @@ tex
 ode.tex)
 (C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathparser
 .code.tex
-\pgfmath@dimen=\dimen309
-\pgfmath@count=\count415
-\pgfmath@box=\box128
+\pgfmath@dimen=\dimen336
+\pgfmath@count=\count429
+\pgfmath@box=\box130
 \pgfmath@toks=\toks51
 \pgfmath@stack@operand=\toks52
 \pgfmath@stack@operation=\toks53
@@ -1160,59 +1254,59 @@ ons.integerarithmetics.code.tex)
 ode.tex)
 (C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfloat.
 code.tex
-\c@pgfmathroundto@lastzeros=\count416
+\c@pgfmathroundto@lastzeros=\count430
 ))
 (C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfint.code.t
 ex)
 (C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcore
 points.code.tex
 File: pgfcorepoints.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgf@picminx=\dimen310
-\pgf@picmaxx=\dimen311
-\pgf@picminy=\dimen312
-\pgf@picmaxy=\dimen313
-\pgf@pathminx=\dimen314
-\pgf@pathmaxx=\dimen315
-\pgf@pathminy=\dimen316
-\pgf@pathmaxy=\dimen317
-\pgf@xx=\dimen318
-\pgf@xy=\dimen319
-\pgf@yx=\dimen320
-\pgf@yy=\dimen321
-\pgf@zx=\dimen322
-\pgf@zy=\dimen323
+\pgf@picminx=\dimen337
+\pgf@picmaxx=\dimen338
+\pgf@picminy=\dimen339
+\pgf@picmaxy=\dimen340
+\pgf@pathminx=\dimen341
+\pgf@pathmaxx=\dimen342
+\pgf@pathminy=\dimen343
+\pgf@pathmaxy=\dimen344
+\pgf@xx=\dimen345
+\pgf@xy=\dimen346
+\pgf@yx=\dimen347
+\pgf@yy=\dimen348
+\pgf@zx=\dimen349
+\pgf@zy=\dimen350
 )
 (C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcore
 pathconstruct.code.tex
 File: pgfcorepathconstruct.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgf@path@lastx=\dimen324
-\pgf@path@lasty=\dimen325
+\pgf@path@lastx=\dimen351
+\pgf@path@lasty=\dimen352
 )
 (C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcore
 pathusage.code.tex
 File: pgfcorepathusage.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgf@shorten@end@additional=\dimen326
-\pgf@shorten@start@additional=\dimen327
+\pgf@shorten@end@additional=\dimen353
+\pgf@shorten@start@additional=\dimen354
 )
 (C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcore
 scopes.code.tex
 File: pgfcorescopes.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgfpic=\box129
-\pgf@hbox=\box130
-\pgf@layerbox@main=\box131
-\pgf@picture@serial@count=\count417
+\pgfpic=\box131
+\pgf@hbox=\box132
+\pgf@layerbox@main=\box133
+\pgf@picture@serial@count=\count431
 )
 (C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcore
 graphicstate.code.tex
 File: pgfcoregraphicstate.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgflinewidth=\dimen328
+\pgflinewidth=\dimen355
 )
 (C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcore
 transformations.code.tex
 File: pgfcoretransformations.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgf@pt@x=\dimen329
-\pgf@pt@y=\dimen330
-\pgf@pt@temp=\dimen331
+\pgf@pt@x=\dimen356
+\pgf@pt@y=\dimen357
+\pgf@pt@temp=\dimen358
 )
 (C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcore
 quick.code.tex
@@ -1229,14 +1323,14 @@ File: pgfcorepathprocessing.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 (C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcore
 arrows.code.tex
 File: pgfcorearrows.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgfarrowsep=\dimen332
+\pgfarrowsep=\dimen359
 )
 (C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcore
 shade.code.tex
 File: pgfcoreshade.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgf@max=\dimen333
-\pgf@sys@shading@range@num=\count418
-\pgf@shadingcount=\count419
+\pgf@max=\dimen360
+\pgf@sys@shading@range@num=\count432
+\pgf@shadingcount=\count433
 )
 (C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcore
 image.code.tex
@@ -1245,7 +1339,7 @@ File: pgfcoreimage.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 (C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcore
 external.code.tex
 File: pgfcoreexternal.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgfexternal@startupbox=\box132
+\pgfexternal@startupbox=\box134
 )
 (C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcore
 layers.code.tex
@@ -1266,7 +1360,7 @@ File: pgfcorerdf.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 (C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/generic/pgf/modules\pgfmodules
 hapes.code.tex
 File: pgfmoduleshapes.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgfnodeparttextbox=\box133
+\pgfnodeparttextbox=\box135
 )
 (C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/generic/pgf/modules\pgfmodulep
 lot.code.tex
@@ -1275,8 +1369,8 @@ File: pgfmoduleplot.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 (C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/latex/pgf/compatibility\pgfcom
 p-version-0-65.sty
 Package: pgfcomp-version-0-65 2025-08-29 v3.1.11a (3.1.11a)
-\pgf@nodesepstart=\dimen334
-\pgf@nodesepend=\dimen335
+\pgf@nodesepstart=\dimen361
+\pgf@nodesepend=\dimen362
 )
 (C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/latex/pgf/compatibility\pgfcom
 p-version-1-18.sty
@@ -1294,8 +1388,8 @@ tex))
 (C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgffor.c
 ode.tex
 Package: pgffor 2025-08-29 v3.1.11a (3.1.11a)
-\pgffor@iter=\dimen336
-\pgffor@skip=\dimen337
+\pgffor@iter=\dimen363
+\pgffor@skip=\dimen364
 \pgffor@stack=\toks54
 \pgffor@toks=\toks55
 ))
@@ -1306,34 +1400,34 @@ Package: tikz 2025-08-29 v3.1.11a (3.1.11a)
 (C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries\pgflibra
 ryplothandlers.code.tex
 File: pgflibraryplothandlers.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgf@plot@mark@count=\count420
-\pgfplotmarksize=\dimen338
+\pgf@plot@mark@count=\count434
+\pgfplotmarksize=\dimen365
 )
-\tikz@lastx=\dimen339
-\tikz@lasty=\dimen340
-\tikz@lastxsaved=\dimen341
-\tikz@lastysaved=\dimen342
-\tikz@lastmovetox=\dimen343
-\tikz@lastmovetoy=\dimen344
-\tikzleveldistance=\dimen345
-\tikzsiblingdistance=\dimen346
-\tikz@figbox=\box134
-\tikz@figbox@bg=\box135
-\tikz@tempbox=\box136
-\tikz@tempbox@bg=\box137
-\tikztreelevel=\count421
-\tikznumberofchildren=\count422
-\tikznumberofcurrentchild=\count423
-\tikz@fig@count=\count424
+\tikz@lastx=\dimen366
+\tikz@lasty=\dimen367
+\tikz@lastxsaved=\dimen368
+\tikz@lastysaved=\dimen369
+\tikz@lastmovetox=\dimen370
+\tikz@lastmovetoy=\dimen371
+\tikzleveldistance=\dimen372
+\tikzsiblingdistance=\dimen373
+\tikz@figbox=\box136
+\tikz@figbox@bg=\box137
+\tikz@tempbox=\box138
+\tikz@tempbox@bg=\box139
+\tikztreelevel=\count435
+\tikznumberofchildren=\count436
+\tikznumberofcurrentchild=\count437
+\tikz@fig@count=\count438
 
 (C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/generic/pgf/modules\pgfmodulem
 atrix.code.tex
 File: pgfmodulematrix.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgfmatrixcurrentrow=\count425
-\pgfmatrixcurrentcolumn=\count426
-\pgf@matrix@numberofcolumns=\count427
+\pgfmatrixcurrentrow=\count439
+\pgfmatrixcurrentcolumn=\count440
+\pgf@matrix@numberofcolumns=\count441
 )
-\tikz@expandcount=\count428
+\tikz@expandcount=\count442
 
 (C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tikz
 /libraries\tikzlibrarytopaths.code.tex
@@ -1342,8 +1436,8 @@ File: tikzlibrarytopaths.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 (C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/latex/colortbl\colortbl.sty
 Package: colortbl 2024/10/29 v1.0k Color table columns (DPC)
 \everycr=\toks56
-\minrowclearance=\skip139
-\rownum=\count429
+\minrowclearance=\skip146
+\rownum=\count443
 )
 (C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tikz
 /libraries\tikzlibrarypositioning.code.tex
@@ -1352,10 +1446,10 @@ File: tikzlibrarypositioning.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 (C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries\pgflibra
 ryarrows.meta.code.tex
 File: pgflibraryarrows.meta.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgfarrowinset=\dimen347
-\pgfarrowlength=\dimen348
-\pgfarrowwidth=\dimen349
-\pgfarrowlinewidth=\dimen350
+\pgfarrowinset=\dimen374
+\pgfarrowlength=\dimen375
+\pgfarrowwidth=\dimen376
+\pgfarrowlinewidth=\dimen377
 )
 (C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tikz
 /libraries\tikzlibrarybending.code.tex
@@ -1368,18 +1462,18 @@ File: pgfmodulebending.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 (C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/generic/pgf/modules\pgfmodulen
 onlineartransformations.code.tex
 File: pgfmodulenonlineartransformations.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgftransformnonlinearflatness=\dimen351
+\pgftransformnonlinearflatness=\dimen378
 )
 (C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries\pgflibra
 rycurvilinear.code.tex
 File: pgflibrarycurvilinear.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgf@curvilinear@time@a=\dimen352
-\pgf@curvilinear@length@a=\dimen353
-\pgf@curvilinear@length@b=\dimen354
-\pgf@curvilinear@length@c=\dimen355
-\pgf@curvilinear@length@d=\dimen356
+\pgf@curvilinear@time@a=\dimen379
+\pgf@curvilinear@length@a=\dimen380
+\pgf@curvilinear@length@b=\dimen381
+\pgf@curvilinear@length@c=\dimen382
+\pgf@curvilinear@length@d=\dimen383
 )
-\pgf@arrows@the@rigidity=\dimen357
+\pgf@arrows@the@rigidity=\dimen384
 ))
 (C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tikz
 /libraries\tikzlibraryshapes.geometric.code.tex
@@ -1404,26 +1498,26 @@ File: tikzlibraryshapes.multipart.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 (C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries/shapes\p
 gflibraryshapes.multipart.code.tex
 File: pgflibraryshapes.multipart.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgfnodepartlowerbox=\box138
-\pgfnodeparttwobox=\box139
-\pgfnodepartthreebox=\box140
-\pgfnodepartfourbox=\box141
-\pgfnodeparttwentybox=\box142
-\pgfnodepartnineteenbox=\box143
-\pgfnodeparteighteenbox=\box144
-\pgfnodepartseventeenbox=\box145
-\pgfnodepartsixteenbox=\box146
-\pgfnodepartfifteenbox=\box147
-\pgfnodepartfourteenbox=\box148
-\pgfnodepartthirteenbox=\box149
-\pgfnodeparttwelvebox=\box150
-\pgfnodepartelevenbox=\box151
-\pgfnodeparttenbox=\box152
-\pgfnodepartninebox=\box153
-\pgfnodeparteightbox=\box154
-\pgfnodepartsevenbox=\box155
-\pgfnodepartsixbox=\box156
-\pgfnodepartfivebox=\box157
+\pgfnodepartlowerbox=\box140
+\pgfnodeparttwobox=\box141
+\pgfnodepartthreebox=\box142
+\pgfnodepartfourbox=\box143
+\pgfnodeparttwentybox=\box144
+\pgfnodepartnineteenbox=\box145
+\pgfnodeparteighteenbox=\box146
+\pgfnodepartseventeenbox=\box147
+\pgfnodepartsixteenbox=\box148
+\pgfnodepartfifteenbox=\box149
+\pgfnodepartfourteenbox=\box150
+\pgfnodepartthirteenbox=\box151
+\pgfnodeparttwelvebox=\box152
+\pgfnodepartelevenbox=\box153
+\pgfnodeparttenbox=\box154
+\pgfnodepartninebox=\box155
+\pgfnodeparteightbox=\box156
+\pgfnodepartsevenbox=\box157
+\pgfnodepartsixbox=\box158
+\pgfnodepartfivebox=\box159
 ))
 (C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tikz
 /libraries\tikzlibraryfit.code.tex
@@ -1436,8 +1530,8 @@ File: tikzlibrarycalc.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 (C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tikz
 /libraries\tikzlibrarybackgrounds.code.tex
 File: tikzlibrarybackgrounds.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgf@layerbox@background=\box158
-\pgf@layerboxsaved@background=\box159
+\pgf@layerbox@background=\box160
+\pgf@layerboxsaved@background=\box161
 )
 (C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tikz
 /libraries\tikzlibrarydecorations.pathreplacing.code.tex
@@ -1445,16 +1539,16 @@ File: tikzlibrarybackgrounds.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 /libraries\tikzlibrarydecorations.code.tex
 (C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/generic/pgf/modules\pgfmoduled
 ecorations.code.tex
-\pgfdecoratedcompleteddistance=\dimen358
-\pgfdecoratedremainingdistance=\dimen359
-\pgfdecoratedinputsegmentcompleteddistance=\dimen360
-\pgfdecoratedinputsegmentremainingdistance=\dimen361
-\pgf@decorate@distancetomove=\dimen362
-\pgf@decorate@repeatstate=\count430
-\pgfdecorationsegmentamplitude=\dimen363
-\pgfdecorationsegmentlength=\dimen364
+\pgfdecoratedcompleteddistance=\dimen385
+\pgfdecoratedremainingdistance=\dimen386
+\pgfdecoratedinputsegmentcompleteddistance=\dimen387
+\pgfdecoratedinputsegmentremainingdistance=\dimen388
+\pgf@decorate@distancetomove=\dimen389
+\pgf@decorate@repeatstate=\count444
+\pgfdecorationsegmentamplitude=\dimen390
+\pgfdecorationsegmentlength=\dimen391
 )
-\tikz@lib@dec@box=\box160
+\tikz@lib@dec@box=\box162
 )
 (C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries/decorati
 ons\pgflibrarydecorations.pathreplacing.code.tex))
@@ -1482,9 +1576,9 @@ code.tex
 \t@pgfplots@toka=\toks57
 \t@pgfplots@tokb=\toks58
 \t@pgfplots@tokc=\toks59
-\pgfplots@tmpa=\dimen365
-\c@pgfplots@coordindex=\count431
-\c@pgfplots@scanlineindex=\count432
+\pgfplots@tmpa=\dimen392
+\c@pgfplots@coordindex=\count445
+\c@pgfplots@scanlineindex=\count446
 
 (C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/sys\pgfplotss
 ysgeneric.code.tex))
@@ -1509,13 +1603,13 @@ util.code.tex
 \pgfplotsliststructureext.code.tex)
 (C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/liststructure
 \pgfplotsarray.code.tex
-\c@pgfplotsarray@tmp=\count433
+\c@pgfplotsarray@tmp=\count447
 )
 (C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/liststructure
 \pgfplotsmatrix.code.tex)
 (C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/numtable\pgfp
 lotstableshared.code.tex
-\c@pgfplotstable@counta=\count434
+\c@pgfplotstable@counta=\count448
 \t@pgfplotstable@a=\toks63
 )
 (C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/liststructure
@@ -1528,13 +1622,13 @@ binary.data.code.tex))
 util.verb.code.tex)
 (C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/libs\pgflibra
 rypgfplots.surfshading.code.tex
-\c@pgfplotslibrarysurf@no=\count435
+\c@pgfplotslibrarysurf@no=\count449
 
 (C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/sys\pgflibrar
 ypgfplots.surfshading.pgfsys-xetex.def
 (C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/sys\pgflibrar
 ypgfplots.surfshading.pgfsys-dvipdfmx.def
-\c@pgfplotslibrarysurf@streamlen=\count436
+\c@pgfplotslibrarysurf@streamlen=\count450
 ))))
 (C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/util\pgfplots
 colormap.code.tex
@@ -1566,13 +1660,13 @@ s.code.tex)
 ons\pgflibrarydecorations.pathmorphing.code.tex))
 (C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/libs\tikzlibr
 arypgfplots.contourlua.code.tex)
-\pgfplots@numplots=\count437
-\pgfplots@xmin@reg=\dimen366
-\pgfplots@xmax@reg=\dimen367
-\pgfplots@ymin@reg=\dimen368
-\pgfplots@ymax@reg=\dimen369
-\pgfplots@zmin@reg=\dimen370
-\pgfplots@zmax@reg=\dimen371
+\pgfplots@numplots=\count451
+\pgfplots@xmin@reg=\dimen393
+\pgfplots@xmax@reg=\dimen394
+\pgfplots@ymin@reg=\dimen395
+\pgfplots@ymax@reg=\dimen396
+\pgfplots@zmin@reg=\dimen397
+\pgfplots@zmax@reg=\dimen398
 )
 (C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tikz
 /libraries\tikzlibraryplotmarks.code.tex
@@ -1590,7 +1684,7 @@ kzlibraryfillbetween.code.tex
 /libraries\tikzlibraryintersections.code.tex
 (C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries\pgflibra
 ryintersections.code.tex
-\pgf@intersect@solutions=\count438
+\pgf@intersect@solutions=\count452
 ))
 (C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/pgfcontrib\ti
 kzlibrarydecorations.softclip.code.tex
@@ -1637,27 +1731,27 @@ text;"
  (main.aux)
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 49.
-LaTeX Font Info:    ... okay on input line 49.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 49.
-LaTeX Font Info:    ... okay on input line 49.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 49.
-LaTeX Font Info:    ... okay on input line 49.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 49.
-LaTeX Font Info:    ... okay on input line 49.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 49.
-LaTeX Font Info:    ... okay on input line 49.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 49.
-LaTeX Font Info:    ... okay on input line 49.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 49.
-LaTeX Font Info:    ... okay on input line 49.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 49.
-LaTeX Font Info:    ... okay on input line 49.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 49.
-LaTeX Font Info:    ... okay on input line 49.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 49.
-LaTeX Font Info:    ... okay on input line 49.
-\c@lstlisting=\count439
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 54.
+LaTeX Font Info:    ... okay on input line 54.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 54.
+LaTeX Font Info:    ... okay on input line 54.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 54.
+LaTeX Font Info:    ... okay on input line 54.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 54.
+LaTeX Font Info:    ... okay on input line 54.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 54.
+LaTeX Font Info:    ... okay on input line 54.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 54.
+LaTeX Font Info:    ... okay on input line 54.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 54.
+LaTeX Font Info:    ... okay on input line 54.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 54.
+LaTeX Font Info:    ... okay on input line 54.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 54.
+LaTeX Font Info:    ... okay on input line 54.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 54.
+LaTeX Font Info:    ... okay on input line 54.
+\c@lstlisting=\count453
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: float package is loaded.
 Package caption Info: hyperref package is loaded.
@@ -1670,7 +1764,7 @@ Package caption Info: threeparttable package is loaded.
 Package caption Info: wrapfig package is loaded.
 Package caption Info: End \AtBeginDocument code.
 Package translations Info: no dictionary file `translations-basic-dictionary-mo
-ngolian.trsl' found. on input line 49.
+ngolian.trsl' found. on input line 54.
 
 (C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/latex/translations/dicts\trans
 lations-basic-dictionary-english.trsl
@@ -1678,8 +1772,8 @@ File: translations-basic-dictionary-english.trsl (english translation file `tra
 nslations-basic-dictionary')
 )
 Package translations Info: loading dictionary `translations-basic-dictionary' f
-or `english'. on input line 49.
-Package hyperref Info: Link coloring ON on input line 49.
+or `english'. on input line 54.
+Package hyperref Info: Link coloring ON on input line 54.
  (main.out) (main.out)
 \@outlinefile=\write4
 \openout4 = `main.out'.
@@ -1747,22 +1841,40 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 [1
 
 ]) (Chapters/TitlePage.tex [1]) (Chapters/Abstract.tex
-Underfull \hbox (badness 2173) in paragraph at lines 11--12
-[]\TU/TimesNewRoman(1)/m/n/10.95 Энэ судалгаагаар EUR/USD цаг хугацааны цуваан 
-дээр машин сургалтын ансамблиар
+Underfull \hbox (badness 10000) in paragraph at lines 11--12
+[]\TU/TimesNewRoman(1)/m/n/10.95 Энэ судалгаагаар EUR/USD валютын хослол дээр м
+ашин сургалтын ансамблиар
+ []
+
+
+Underfull \hbox (badness 1845) in paragraph at lines 11--12
+\TU/TimesNewRoman(1)/m/n/10.95 зээлийн (Форекс) шуугиан ихтэй, тогтворгүй (non-
+stationary) шинж чанар нь ангиллын хувьд
+ []
+
+
+Underfull \hbox (badness 6078) in paragraph at lines 11--12
+\TU/TimesNewRoman(1)/m/n/10.95 хүнд сорилт болдог. Загварын ангиллын гүйцэтгэли
+йг цаг хугацааны дарааллыг хадгалсан
  []
 
 ) [1]
 ------------------------------------------------------------------------------
  Table of Contents
 ------------------------------------------------------------------------------
-(main.toc)
+(main.toc [2
+
+])
 \tf@toc=\write5
 \openout5 = `main.toc'.
 
- [2
+ [3] (Chapters/acrolist.tex
 
-] (Chapters/acrolist.tex
+Package xeCJK Warning: Unknown CJK family `\CJKttdefault' is being ignored.
+(xeCJK)                
+(xeCJK)                Try to use `\setCJKmonofont[<...>]{<...>}' to define
+(xeCJK)                it.
+
 LaTeX Font Info:    Font shape `TU/Consolas(0)/m/n' will be
 (Font)              scaled to size 9.85492pt on input line 26.
 
@@ -1806,7 +1918,7 @@ Space,Scale=0.9,Script=Cyrillic].
 
 LaTeX Font Info:    Font shape `TU/Consolas(1)/m/n' will be
 (Font)              scaled to size 9.85492pt on input line 26.
-) [3
+) [4
 
 
 ]
@@ -1817,7 +1929,7 @@ LaTeX Font Info:    Font shape `TU/Consolas(1)/m/n' will be
 \tf@lot=\write6
 \openout6 = `main.lot'.
 
- [4
+ [5
 
 ]
 ------------------------------------------------------------------------------
@@ -1827,7 +1939,7 @@ LaTeX Font Info:    Font shape `TU/Consolas(1)/m/n' will be
 \tf@lof=\write7
 \openout7 = `main.lof'.
 
- [5
+ [6
 
 ] (Chapters/plan.tex
 Underfull \hbox (badness 3803) in paragraph at lines 19--19
@@ -1840,13 +1952,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 25--25
  []
 
 
-Underfull \hbox (badness 1838) in paragraph at lines 27--27
-[]|\TU/TimesNewRoman(1)/m/n/10.95 XGBoost, LightGBM, Random Forest модел
+Underfull \hbox (badness 1466) in paragraph at lines 27--27
+[]|\TU/TimesNewRoman(1)/m/n/10.95 XGBoost, LightGBM, Random Forest загвар
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 29--29
-[]|\TU/TimesNewRoman(1)/m/n/10.95 Stacking Ensemble модел хөгжүүлэх,
+[]|\TU/TimesNewRoman(1)/m/n/10.95 Stacking Ensemble загвар хөгжүүлэх,
  []
 
 
@@ -1870,7 +1982,13 @@ Underfull \hbox (badness 1014) in paragraph at lines 18--19
 
 [4
 
-] [5] [6]) (Chapters/Chapter3_Methodology.tex [7]
+] [5]
+Underfull \hbox (badness 1331) in paragraph at lines 50--51
+\TU/TimesNewRoman(1)/m/n/10.95 slippage, commission)-ийг тусгахад статистикийн 
+ач холбогдол ноцтой буурдаг. Энэ судалгаанд
+ []
+
+[6]) (Chapters/Chapter3_Methodology.tex [7]
 Бүлэг 3.
 [8
 
@@ -2102,11 +2220,11 @@ Package fontspec Info:
 Package fontspec Info: 
 (fontspec)             Consolas scale = 0.9.
 
- [16]
 
 Package fontspec Info: 
 (fontspec)             Consolas scale = 0.9.
 
+ [16]
 
 Package fontspec Info: 
 (fontspec)             Consolas scale = 0.9.
@@ -2126,7 +2244,7 @@ Package fontspec Info:
 (fontspec)             Consolas scale = 0.9.
 
 
-Underfull \hbox (badness 3000) in paragraph at lines 1306--1307
+Underfull \hbox (badness 3000) in paragraph at lines 1297--1298
 []\TU/TimesNewRoman(1)/m/n/10.95 Офлайн сургалтаар 3 GBDT загвар бэлдэж \TU/Con
 solas(1)/m/n/10.95 model.pkl \TU/TimesNewRoman(1)/m/n/10.95 артефактыг серверт 
 байршуулна
@@ -2134,13 +2252,13 @@ solas(1)/m/n/10.95 model.pkl \TU/TimesNewRoman(1)/m/n/10.95 артефактыг
 
 [22]
 LaTeX Font Info:    Font shape `TU/Consolas(0)/m/n' will be
-(Font)              scaled to size 8.99994pt on input line 1362.
+(Font)              scaled to size 8.99994pt on input line 1353.
 
 Package fontspec Info: 
 (fontspec)             Consolas scale = 0.9.
 
 LaTeX Font Info:    Font shape `TU/Consolas(1)/m/n' will be
-(Font)              scaled to size 8.99994pt on input line 1362.
+(Font)              scaled to size 8.99994pt on input line 1353.
 
 Package fontspec Info: 
 (fontspec)             Consolas scale = 0.9.
@@ -3304,7 +3422,7 @@ Package fontspec Info:
 (fontspec)             Consolas scale = 0.9.
 
 
-Underfull \hbox (badness 6268) in paragraph at lines 389--390
+Underfull \hbox (badness 6268) in paragraph at lines 392--393
 \TU/TimesNewRoman(1)/b/n/10.95 Дизайны зарчмууд: \TU/TimesNewRoman(1)/m/n/10.95
  (1) \TU/Consolas(1)/m/n/10.95 TTL \TU/TimesNewRoman(1)/m/n/10.95 индексүүд нь 
 түр зуурын баримтуудыг (\TU/Consolas(1)/m/n/10.95 verification_codes\TU/TimesNe
@@ -3673,7 +3791,7 @@ Package fontspec Info:
 (fontspec)             Consolas scale = 0.9.
 
 ) [45] (Chapters/Tovchlol.tex
-Underfull \hbox (badness 5681) in paragraph at lines 171--172
+Underfull \hbox (badness 5681) in paragraph at lines 174--175
 \TU/TimesNewRoman(1)/m/n/10.95 вар өсөлтийн стратеги (leaf-wise, level-wise,
  []
 
@@ -3684,44 +3802,193 @@ Underfull \hbox (badness 5681) in paragraph at lines 171--172
 Package fontspec Info: 
 (fontspec)             Consolas scale = 0.9.
 
- [2]
-Underfull \hbox (badness 10000) in paragraph at lines 444--445
+
+Underfull \hbox (badness 5217) in paragraph at lines 304--305
+[]\TU/TimesNewRoman(1)/m/it/10.95 Ангиллын чанар. \TU/TimesNewRoman(1)/m/n/10.9
+5 2024 оны харагдаа-
+ []
+
+[2]
+Underfull \hbox (badness 10000) in paragraph at lines 442--443
 []\TU/TimesNewRoman(1)/m/n/10.95 Дээрх үр дүн нь зөвхөн
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 444--445
+Underfull \hbox (badness 10000) in paragraph at lines 442--443
 \TU/TimesNewRoman(1)/m/n/10.95 загварын статистик нарийвчлал биш,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 444--445
+Underfull \hbox (badness 10000) in paragraph at lines 442--443
 \TU/TimesNewRoman(1)/m/n/10.95 өгөгдөл цуглуулалт $\OMS/lmsy/m/n/10.95 !$ \TU/T
 imesNewRoman(1)/m/n/10.95 шинж чанарын
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 444--445
+Underfull \hbox (badness 10000) in paragraph at lines 442--443
 \TU/TimesNewRoman(1)/m/n/10.95 баталгаажуулсан. Шинжлэх ухааны хувьд
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 444--445
+Underfull \hbox (badness 10000) in paragraph at lines 442--443
 \TU/TimesNewRoman(1)/m/n/10.95 GBDT ансамбль, олон интервалын шинж
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 444--445
+Underfull \hbox (badness 10000) in paragraph at lines 442--443
 \TU/TimesNewRoman(1)/m/n/10.95 system)-ийг бүтээж, бодит цаг хугацааны
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 459--460
+Underfull \hbox (badness 10000) in paragraph at lines 457--458
 \TU/TimesNewRoman(1)/m/n/8 Short-Term Memory Networks for Financial Market
  []
 
 
+Underfull \hbox (badness 10000) in paragraph at lines 459--460
+\TU/TimesNewRoman(1)/m/n/8 Technical and Macroeconomic Indicators. \TU/TimesNew
+Roman(1)/m/it/8 Financial
+ []
+
+[3]) (Chapters/Tovchlol_EN.tex
+Underfull \hbox (badness 10000) in paragraph at lines 39--40
+[]\TU/TimesNewRoman(1)/m/n/10.95 The foreign exchange (Forex) market
+ []
+
+
+Underfull \hbox (badness 5460) in paragraph at lines 39--40
+\TU/TimesNewRoman(1)/m/n/10.95 that generates BUY/HOLD/SELL classification
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 49--50
+[]\TU/TimesNewRoman(1)/m/n/10.95 Research on financial time-series
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 49--50
+\TU/TimesNewRoman(1)/m/n/10.95 forecasting developed amid the theoretical
+ []
+
+
+Underfull \hbox (badness 6141) in paragraph at lines 49--50
+\TU/TimesNewRoman(1)/m/n/10.95 combining multi-timeframe feature engineering
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 51--52
+\TU/TimesNewRoman(1)/m/n/10.95 multi-timeframe features, confidence-threshold
+ []
+
+
+Underfull \hbox (badness 6876) in paragraph at lines 56--57
+\TU/TimesNewRoman(1)/m/n/10.95 model training to the mobile app was built
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 176--177
+\TU/TimesNewRoman(1)/m/n/10.95 EUR/USD 2015–2024 historical data over 6
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 178--179
+[]\TU/TimesNewRoman(1)/m/it/10.95 Model. \TU/TimesNewRoman(1)/m/n/10.95 LightGB
+M, XGBoost, and
+ []
+
+[1
+
+]
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 237--238
+[]\TU/TimesNewRoman(1)/m/it/10.95 Signal filter. \TU/TimesNewRoman(1)/m/n/10.95
+ Signals are filtered by
+ []
+
+
+Underfull \hbox (badness 6220) in paragraph at lines 237--238
+\TU/TimesNewRoman(1)/m/n/10.95 pips); of 359,639 predictions in 2025, 3,567
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 326--327
+[]\TU/TimesNewRoman(1)/m/it/10.95 Strategy return. \TU/TimesNewRoman(1)/m/n/10.
+95 All 10 confidence
+ []
+
+
+Underfull \hbox (badness 5893) in paragraph at lines 326--327
+\TU/TimesNewRoman(1)/m/n/10.95 by 5.5–38$\OMS/lmsy/m/n/10.95 ^^B$\TU/TimesNewRo
+man(1)/m/n/10.95 . The 0.91 threshold reached the
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 420--421
+\TU/TimesNewRoman(1)/m/n/10.95 confidence-threshold filtering, and a mobile
+ []
+
+[2]
+Underfull \hbox (badness 5064) in paragraph at lines 446--447
+[]\TU/TimesNewRoman(1)/m/n/10.95 Beyond statistical accuracy, the results
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 446--447
+\TU/TimesNewRoman(1)/m/n/10.95 training $\OMS/lmsy/m/n/10.95 !$ \TU/TimesNewRom
+an(1)/m/n/10.95 signal filtering $\OMS/lmsy/m/n/10.95 !$ \TU/TimesNewRoman(1)/m
+/n/10.95 automated
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 446--447
+\TU/TimesNewRoman(1)/m/n/10.95 trade $\OMS/lmsy/m/n/10.95 !$ \TU/TimesNewRoman(
+1)/m/n/10.95 mobile notification. Scientifically,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 446--447
+\TU/TimesNewRoman(1)/m/n/10.95 it presents empirical evidence combining a
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 446--447
+\TU/TimesNewRoman(1)/m/n/10.95 confidence-threshold filtering; practically, it
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 450--451
+\TU/TimesNewRoman(1)/m/n/10.95 USD/JPY; compare with LSTM/Transformer;
+ []
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 461--462
+\TU/TimesNewRoman(1)/m/n/8 Short-Term Memory Networks for Financial Market
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 463--464
+\TU/TimesNewRoman(1)/m/n/8 Technical and Macroeconomic Indicators. \TU/TimesNew
+Roman(1)/m/it/8 Financial
+ []
+
+[3]) (Chapters/Tovchlol_JP.tex [1
+
+]
+
+Package fontspec Info: 
+(fontspec)             Consolas scale = 0.9.
+
+ [2]
+Underfull \hbox (badness 10000) in paragraph at lines 462--463
+\TU/TimesNewRoman(1)/m/n/8 Short-Term Memory Networks for Financial Market
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 464--465
 \TU/TimesNewRoman(1)/m/n/8 Technical and Macroeconomic Indicators. \TU/TimesNew
 Roman(1)/m/it/8 Financial
  []
@@ -3729,18 +3996,18 @@ Roman(1)/m/it/8 Financial
 [3]) (main.aux)
  ***********
 LaTeX2e <2025-11-01>
-L3 programming layer <2025-11-06>
+L3 programming layer <2022/08/05>
  ***********
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 1AB05211A9FCFCB8396A68412D7B5A06;10455.
+(rerunfilecheck)             Checksum: AF886FC33BC30B203AF04332A651261E;10661.
  ) 
 Here is how much of TeX's memory you used:
- 50100 strings out of 402987
- 1190002 string characters out of 5448731
- 1812549 words of memory out of 5000000
- 77909 multiletter control sequences out of 15000+600000
- 683135 words of font info for 200 fonts, out of 8000000 for 9000
+ 52150 strings out of 402987
+ 1265108 string characters out of 5448731
+ 1863524 words of memory out of 5000000
+ 79920 multiletter control sequences out of 15000+600000
+ 683805 words of font info for 216 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 88i,18n,104p,1470b,2662s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 88i,18n,104p,1426b,2668s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on main.pdf (55 pages).
+Output written on main.pdf (62 pages).

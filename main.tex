@@ -6,6 +6,11 @@
 \usepackage{polyglossia}
 \setdefaultlanguage{mongolian}
 \setotherlanguage{english}
+% Япон хэлний дэмжлэг (Товчлолын япон хувилбарт хэрэглэнэ)
+% AutoFakeSlant — Yu Gothic-д жинхэнэ налуу байхгүй тул синтетик налуу үүсгэж
+% «italic shape undefined» анхааруулгаас сэргийлнэ
+\usepackage{xeCJK}
+\setCJKmainfont[AutoFakeSlant]{Yu Gothic}
 \usepackage{wrapfig}
 \usepackage{multirow}
 \usepackage{ragged2e}
@@ -135,5 +140,19 @@
 \pagenumbering{arabic}
 \setcounter{page}{1}
 \input{Chapters/Tovchlol}
+
+%---------
+%	Товчлол — English summary
+%---------
+\clearpage
+\setcounter{page}{1}
+\input{Chapters/Tovchlol_EN}
+
+%---------
+%	Товчлол — 日本語要約 (Japanese summary)
+%---------
+\clearpage
+\setcounter{page}{1}
+\input{Chapters/Tovchlol_JP}
 
 \end{document}

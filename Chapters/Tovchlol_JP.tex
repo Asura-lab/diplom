@@ -1,18 +1,23 @@
-\addtotoc{Товчлол}
+\addtotoc{日本語要約}
 \thispagestyle{plain}
 
-% Товчлолын зураг, хүснэгтүүдийг зургийн/хүснэгтийн жагсаалтад оруулахгүй
-\captionsetup{list=no}
+% Tovchlol figures/tables are excluded from the global lists.
+% textfont=up — япон фонтод налуу (italic) хэлбэр байхгүй тул тайлбарыг босоо болгоно
+\captionsetup{list=no, textfont=up}
+
+% Japanese caption labels for this section
+\renewcommand{\figurename}{図}
+\renewcommand{\tablename}{表}
 
 \vspace*{-6mm}
 \begin{center}
-\textbf{\large \titlename}\\[1mm]
+\textbf{\large 外国為替取引シグナル生成システム}\\[1mm]
 \end{center}
 
 \begin{flushright}
-\departmentname\\
-Оюутан: \studentID, \authorShort\\
-Удирдагч багш: \supervisorname
+コンピュータサイエンス学科\\
+学生：\studentID, M.~Munkhdorj\\
+指導教員：N.~Soronzonbold
 \end{flushright}
 
 \vspace{1mm}
@@ -30,26 +35,26 @@
 \sloppy
 
 %%─────────────────────────────────────────────
-\noindent\textbf{1. Удиртгал}
+\noindent\textbf{1. 序論}
 
-Гадаад валютын зах зээл нь өндөр хэлбэлзэлтэй, шуугиан ихтэй цаг хугацааны цуваа үүсгэдэг тул уламжлалт статистик аргад тулгуурласан таамаглал хязгаарлагдмал хэвээр байна. GBDT болон нейрон сүлжээний загварууд зүй тогтлыг илрүүлэх чадвартай нь нотлогдсон ч нэг загварт түшиглэсэн архитектур нь хэт нийцлийн эрсдэлээс шалтгаалан практик хэрэглээнд саад болсоор байна. Энэ судалгаа нь EUR/USD валютын хослолд BUY/HOLD/SELL ангиллын дохио үүсгэх GBDT ансамбль ML системийг бүтээж, мобайл аппликейшнаар хэрэглэгчид хүргэх зорилготой. Гурван судалгааны асуултыг дэвшүүлэв:
+外国為替（FX）市場は変動が大きくノイズの多い時系列を生成するため、従来の統計的手法に基づく予測は限定的である。GBDT やニューラルネットワークのモデルはパターンを検出できることが示されているが、単一モデルのアーキテクチャは過学習のリスクにより実用面で依然として制約を受ける。本研究は、EUR/USD 通貨ペアに対して BUY/HOLD/SELL の分類シグナルを生成し、モバイルアプリを通じてユーザーへ配信する GBDT アンサンブル機械学習システムを構築する。3つの研究課題を設定した：
 \begin{itemize}\setlength\itemsep{0pt}\small
-    \item \textbf{RQ1:} Загвар цагийн дарааллыг хадгалсан тест дээр найдвартай ажиллах уу?
-    \item \textbf{RQ2:} Шүүгдсэн дохио бодит арилжаа болж хэрэгжих үү?
-    \item \textbf{RQ3:} Тогтмол эрсдэлтэй 1 жилд эерэг өгөөж гарах уу?
+    \item \textbf{RQ1：}モデルは時系列順を保持したホールドアウトテストで信頼性高く動作するか？
+    \item \textbf{RQ2：}フィルタされたシグナルは実際の取引として約定するか？
+    \item \textbf{RQ3：}固定リスクのルールの下で、1年間に正のリターンが得られるか？
 \end{itemize}
 
 %%─────────────────────────────────────────────
-\noindent\textbf{2. Судалгааны сэдвийн онол, өнөөгийн түвшин}
+\noindent\textbf{2. 背景と関連研究}
 
-Санхүүгийн цаг хугацааны цуваа таамаглах судалгаа EMH-ийн онолын эргэлзээний дунд хөгжсөн ч сүүлийн жилүүдэд машин сургалтаар зүй тогтлыг мэдэгдэхүйц илрүүлэх боломжтой болохыг бэхжүүлсэн. Krauss нар (2017) GBDT нь гүн сургалтаас илүү найдвартай үр дүн үзүүлдэг гэж дүгнэсэн бол Ballings нар (2015) ансамбль дангаар ажиллах загвараас 3--7\% ахиц гаргадгийг тогтоосон. Fischer, Krauss (2018) LSTM-ийг S\&P~500, Yildirim нар (2021) EUR/USD дээр туршсан хэдий ч олон интервалын шинж чанарын инженерчлэлийг GBDT ансамбльтай хослуулсан эмпирик ажил цөөн хэвээр байна.
+金融時系列予測の研究は効率的市場仮説（EMH）の理論的懐疑のなかで発展してきたが、近年では機械学習が有意な程度にパターンを検出できることが裏付けられている。Krauss ら（2017）は GBDT が深層学習より信頼性の高い結果をもたらすと結論づけ、Ballings ら（2015）はアンサンブルが単一モデルより 3〜7\% 向上することを示した。Fischer・Krauss（2018）は LSTM を S\&P~500 で、Yildirim ら（2021）は EUR/USD で検証したものの、マルチタイムフレームの特徴量エンジニアリングを GBDT アンサンブルと組み合わせた実証研究は依然として少ない。
 
-\emph{Хувь нэмэр.} Энэ судалгаа Форекс зах зээлд GBDT ансамбль, олон хугацааны интервалын шинж чанар, итгэлцлийн босгот суурилсан дохио шүүлтүүр болон мобайл интерфэйсийг нэгдсэн системд хослуулан эмпирик байдлаар туршсан.
+\textbf{貢献。}本研究は、GBDT アンサンブル、マルチタイムフレーム特徴量、信頼度しきい値によるシグナルフィルタリング、およびモバイルインターフェースを単一の統合システムとして FX 市場で実証的に検証した。
 
 %%─────────────────────────────────────────────
-\noindent\textbf{3. Судалгааны арга зүй}
+\noindent\textbf{3. 研究手法}
 
-Загвар сургалтаас мобайл апп хүртэлх ML serving системийг бүтээсэн (\fref{fig:tov_system_architecture}). Гурван үндсэн давхарга: (i)~офлайн сургалт (GBDT pkl); (ii)~Сервер (Flask + MongoDB + Redis + Expo Push) + 4 гадаад API; (iii)~Мобайл апп (React Native, 4 дэлгэц).
+モデル学習からモバイルアプリまでを貫く ML サービングシステムを構築した（図\ref{fig:tovjp_system_architecture}）。3つの中核レイヤーから成る：(i)~オフライン学習（GBDT pkl）；(ii)~サーバー（Flask + MongoDB + Redis + Expo Push）+ 4つの外部 API；(iii)~モバイルアプリ（React Native、4画面）。
 
 \begin{figure}[H]
 \centering
@@ -101,8 +106,8 @@
 \draw[stickline] ($(users.center)+(-0.30, 0.08)$) -- ($(users.center)+(0.30, 0.08)$);
 \draw[stickline] ($(users.center)+(0, -0.25)$) -- ($(users.center)+(-0.22, -0.65)$);
 \draw[stickline] ($(users.center)+(0, -0.25)$) -- ($(users.center)+(0.22, -0.65)$);
-\node[font=\small\bfseries, anchor=north] at ($(users.south)+(0, 0.05)$) {Хэрэглэгчид};
-\node[plainbox] (mob)  at (-4, 5.5) {Мобайл апп\\[1pt]{\small (React Native)}};
+\node[font=\small\bfseries, anchor=north] at ($(users.south)+(0, 0.05)$) {ユーザー};
+\node[plainbox] (mob)  at (-4, 5.5) {モバイルアプリ\\[1pt]{\small (React Native)}};
 \node[pushsvc]  (expo) at ( 0, 5.5) {Expo Push};
 \draw[flowarr] (users.east) -- (mob.west);
 \node[plainbox] (dns) at (-4, 3.5) {DNS};
@@ -110,12 +115,12 @@
 \draw[black!55, line width=1.2pt, rounded corners=10pt]
     (-7, -5.6) rectangle (1, 2.4);
 \node[font=\large\bfseries, anchor=north west, text=black!72]
-    at (-6.85, 2.32) {Сервер};
-\node[vm] (api)    at (-4,  0.9) {API сервер\\[1pt]{\small Flask + Gunicorn}};
-\node[vm] (worker) at (-4, -1.6) {Процесс\\[1pt]{\small Таамаглал · Боловсруулалт}};
+    at (-6.85, 2.32) {サーバー};
+\node[vm] (api)    at (-4,  0.9) {API サーバー\\[1pt]{\small Flask + Gunicorn}};
+\node[vm] (worker) at (-4, -1.6) {ワーカー\\[1pt]{\small 推論・処理}};
 \draw[flowarr] (dns.south)  -- (api.north);
 \draw[flowarr] (api.south)  -- (worker.north);
-\node[plainbox] (cache) at (-5.3, -4.2) {Кэш сан\\[1pt]{\small (Redis)}};
+\node[plainbox] (cache) at (-5.3, -4.2) {キャッシュ\\[1pt]{\small (Redis)}};
 \node[db]       (mongo) at (-1.7, -4.4) {MongoDB};
 \coordinate (db_trunk) at (-4, -2.7);
 \draw[busline]  (worker.south) -- (db_trunk);
@@ -126,10 +131,10 @@
 \draw[red!50, line width=0.8pt, rounded corners=8pt]
     (-12, -3.1) rectangle (-8, 1.95);
 \node[font=\small\bfseries, anchor=north, text=red!55!black]
-    at (-10, 1.85) {Дотоод сервис};
-\node[websvc] (mail)  at (-10,  0.9) {И-мэйл};
-\node[websvc] (queue) at (-10, -1.1) {Даалгаврын\\дараалал};
-\node[websvc] (mon)   at (-10, -2.1) {Хяналт};
+    at (-10, 1.85) {内部サービス};
+\node[websvc] (mail)  at (-10,  0.9) {メール};
+\node[websvc] (queue) at (-10, -1.1) {ジョブ\\キュー};
+\node[websvc] (mon)   at (-10, -2.1) {監視};
 \draw[thinarr] (mail.east) -- (api.west);
 \draw[thinarr] (queue.east) -- ([yshift= 0.5cm]worker.west);
 \draw[thinarr] (mon.east) -- ([yshift=-0.5cm]worker.west);
@@ -137,7 +142,7 @@
 \draw[green!45!black, line width=0.8pt, rounded corners=8pt]
     (2.5, -2.9) rectangle (7.6, 3.2);
 \node[font=\small\bfseries, anchor=north, text=green!40!black]
-    at (5.05, 3.1) {Гуравдагч талын API};
+    at (5.05, 3.1) {サードパーティ API};
 \node[extapi] (yf)  at (5.05,  1.9) {Yahoo Finance};
 \node[extapi] (av)  at (5.05,  0.7) {AlphaVantage};
 \node[extapi] (tv)  at (5.05, -0.5) {TradingView};
@@ -155,9 +160,9 @@
 \draw[teal!50!black, line width=0.8pt, rounded corners=8pt]
     (-7, -8.7) rectangle (5, -6.5);
 \node[font=\small\bfseries, anchor=north, text=teal!40!black]
-    at (-1, -6.6) {Офлайн сургалт};
-\node[pipebox] (csv)   at (-5, -7.7) {Түүхэн өгөгдөл};
-\node[pipebox] (train) at (-1, -7.7) {GBDT сургалт};
+    at (-1, -6.6) {オフライン学習};
+\node[pipebox] (csv)   at (-5, -7.7) {履歴データ};
+\node[pipebox] (train) at (-1, -7.7) {GBDT 学習};
 \node[pipebox] (pkl)   at ( 3, -7.7) {model.pkl};
 \draw[flowarr] (csv.east)   -- (train.west);
 \draw[flowarr] (train.east) -- (pkl.west);
@@ -165,13 +170,13 @@
 \draw[deparr] (pkl.north) |- (1.5, -6.3) |- ([yshift=-0.5cm]worker.east);
 \end{tikzpicture}%
 }
-\caption{Системийн архитектур}
-\label{fig:tov_system_architecture}
+\caption{システムアーキテクチャ}
+\label{fig:tovjp_system_architecture}
 \end{figure}
 
-\emph{Өгөгдөл.} EUR/USD 2015--2024 оны түүхэн өгөгдөл дээр 6 интервал (M1--H4) × 8 техникийн үзүүлэлт = 48 шинж чанарын матриц бүрдүүлсэн. Шошгыг 240 минутын ирээдүйн хөдөлгөөнөөс 30 пипсийн босгоор BUY/HOLD/SELL гурван ангилалд хуваасан.
+\textbf{データ。}EUR/USD の 2015〜2024 年の履歴データから、6つのタイムフレーム（M1〜H4）$\times$ 8つのテクニカル指標 = 48特徴量の行列を構築した。ラベルは将来240分の値動きに対する 30 pips のしきい値で BUY/SELL/HOLD に分類した。
 
-\emph{Загвар.} LightGBM, XGBoost, CatBoost загваруудыг зөөлөн санал хураалтаар тэгш жингээр нэгтгэсэн ансамбль (\fref{fig:tov_ensemble_arch}). Гурван загвар өсөлтийн стратеги (leaf-wise, level-wise, symmetric)-аараа бие биенээ нөхөж хэт нийцлийн эрсдэлийг бууруулдаг. Сургалтыг WFV-ийн тав дахь огтлолоор (train 2015--2022, val 2023, test 2024) явуулсан. Хэт нийцлээс сэргийлэхийн тулд модны гүн, бага learning rate, эрт зогсоолт, L1/L2 тогтмолжуулалт, WFV болон шинж чанарын сонголт гэсэн зургаан арга хэмжээг хослуулан хэрэгжүүлсэн.
+\textbf{モデル。}LightGBM、XGBoost、CatBoost を等重みのソフト投票で統合したアンサンブル（図\ref{fig:tovjp_ensemble_arch}）。3つのモデルは成長戦略（leaf-wise、level-wise、symmetric）の違いにより互いを補完し、過学習のリスクを低減する。学習は WFV の第5フォールド（train 2015〜2022、val 2023、test 2024）で行った。過学習を防ぐため、木の深さ、低い学習率、早期終了、L1/L2 正則化、WFV、特徴量選択の6つの対策を組み合わせた。
 
 \begin{figure}[H]
 \centering
@@ -203,12 +208,12 @@
     lin/.style ={line width=1.0pt, color=black!72},
     lbl/.style ={font=\scriptsize\bfseries, fill=white, inner sep=1pt, text=black!65},
 ]
-\node[inp]  (X)   at (0,  0)    {48 шинж чанар};
+\node[inp]  (X)   at (0,  0)    {48 特徴量};
 \node[lgbm] (lgb) at (-4, -2.4) {LightGBM};
 \node[xgb]  (xgb) at ( 0, -2.4) {XGBoost};
 \node[cat]  (cat) at ( 4, -2.4) {CatBoost};
-\node[vote] (avg) at (0, -5.2)  {Зөөлөн санал хураалт\\$\bar{p}_c = \tfrac{1}{3}\sum_i p_i^{(c)},\ c\in\{$BUY,HOLD,SELL$\}$};
-\node[sigb] (sig)    at (0, -7.4)    {Арилжааны дохио (BUY / HOLD / SELL, итгэлцэл $\in [0,1]$)};
+\node[vote] (avg) at (0, -5.2)  {ソフト投票\\$\bar{p}_c = \tfrac{1}{3}\sum_i p_i^{(c)},\ c\in\{$BUY,HOLD,SELL$\}$};
+\node[sigb] (sig)    at (0, -7.4)    {取引シグナル (BUY / HOLD / SELL、信頼度 $\in [0,1]$)};
 
 \draw[arr] (X.south) -- (lgb.north);
 \draw[arr] (X.south) -- (xgb.north);
@@ -226,11 +231,11 @@
 \draw[arr] (avg.south) -- (sig.north);
 \end{tikzpicture}%
 }
-\caption{GBDT ансамбль загварын архитектур}
-\label{fig:tov_ensemble_arch}
+\caption{GBDT アンサンブルモデルのアーキテクチャ}
+\label{fig:tovjp_ensemble_arch}
 \end{figure}
 
-\emph{Дохио шүүлтүүр.} Итгэлцэл (conf~$\geq 0.90$) ба ATR (~$\geq 4$ пипс) хослолоор дохиог шүүж, 2025 оны 359{,}639 таамаглалаас 3{,}567 (1.0\%) дохио үлдэн, MT5-ийн \texttt{MaxPositions=1} дүрмээр 230 хэлцэл хэрэгжсэн (\fref{fig:tov_signal_funnel}). SL/TP-г ATR-аас динамикаар тооцох ба TP/SL=3:1 харьцаа хадгалсан.
+\textbf{シグナルフィルタ。}信頼度（conf~$\geq 0.90$）と ATR（~$\geq 4$ pips）でシグナルをフィルタし、2025年の 359{,}639 件の予測から 3{,}567 件（1.0\%）が残り、MT5 の \texttt{MaxPositions=1} ルールにより 230 取引が約定した（図\ref{fig:tovjp_signal_funnel}）。SL/TP は ATR から動的に算出し、TP/SL=3:1 の比率を保持する。
 
 \begin{figure}[H]
 \centering
@@ -246,7 +251,7 @@
       draw=blue!65, fill=blue!18, line width=1.0pt,
       minimum height=1.0cm, minimum width=12cm,
       align=center, font=\small\bfseries, text=blue!25!black] (s1) at (0, 0)
-    {1. Нийт таамаг (GBDT ансамбль, 2025 он)};
+    {1. 総予測数 (GBDT アンサンブル, 2025年)};
 \node[cnt, right=0.5cm of s1] {359{,}639};
 \node[pct, right=2.4cm of s1] {(100\%)};
 \node[trapezium, trapezium angle=78, trapezium stretches body,
@@ -255,7 +260,7 @@
       minimum height=1.0cm, minimum width=8cm,
       align=center, font=\small\bfseries, text=black!82,
       below=0.5cm of s1] (s2)
-    {2. Итгэлцэл $\geq 0.90$ шүүлтүүр};
+    {2. 信頼度 $\geq 0.90$ フィルタ};
 \node[cnt, right=0.5cm of s2] {$\sim$3{,}600};
 \node[pct, right=2.2cm of s2] {($\approx$1.00\%)};
 \node[trapezium, trapezium angle=78, trapezium stretches body,
@@ -264,7 +269,7 @@
       minimum height=1.0cm, minimum width=5.5cm,
       align=center, font=\small\bfseries, text=black!82,
       below=0.5cm of s2] (s3)
-    {3. ATR $\geq 4.0$ пипс шүүлтүүр};
+    {3. ATR $\geq 4.0$ pips フィルタ};
 \node[cnt, right=0.5cm of s3] {3{,}567};
 \node[pct, right=2.0cm of s3] {(0.99\%)};
 \node[trapezium, trapezium angle=78, trapezium stretches body,
@@ -273,14 +278,14 @@
       minimum height=1.0cm, minimum width=3.6cm,
       align=center, font=\small\bfseries, text=black!82,
       below=0.5cm of s3] (s4)
-    {4. MaxPositions=1\\\scriptsize\itshape(MT5 EA гүйцэтгэлийн дүрэм)};
+    {4. MaxPositions=1\\{\scriptsize (MT5 EA 実行ルール)}};
 \node[cnt, right=0.5cm of s4] {230};
 \node[pct, right=1.6cm of s4] {(0.064\%)};
 \node[rectangle, draw=red!70!black, fill=red!25, rounded corners=5pt,
       line width=1.1pt, minimum width=2.6cm, minimum height=0.9cm,
       align=center, font=\small\bfseries, text=black!85,
       below=0.5cm of s4] (s5)
-    {5. Хаагдсан хэлцэл};
+    {5. 約定済み取引};
 \node[cnt, right=0.5cm of s5] {230};
 \node[pct, right=1.6cm of s5] {(TP: 103 / SL: 127)};
 \draw[arr] (s1.south) -- (s2.north);
@@ -289,37 +294,37 @@
 \draw[arr] (s4.south) -- (s5.north);
 \node[pct, left=0.3cm of s2] {$-99.00\%$};
 \node[pct, left=0.3cm of s3] {$-0.92\%$};
-\node[pct, left=0.3cm of s4] {$-93.55\%$ (давхцал)};
+\node[pct, left=0.3cm of s4] {$-93.55\%$ (重複)};
 \end{tikzpicture}%
 }
-\caption{Дохионы шүүлтүүрийн юүлүүр (0.90 босго утга)}
-\label{fig:tov_signal_funnel}
+\caption{シグナルフィルタリングのファネル（しきい値 0.90）}
+\label{fig:tovjp_signal_funnel}
 \end{figure}
 
-\emph{Туршилт.} MT5 Strategy Tester, 2025.01--2026.01, \$10{,}000 анхны хөрөнгө, нэг агшинд нэг байрлал, бодит спрэд + 10~point гулсалт, 10 итгэлцлийн босго утга (0.90--0.99).
+\textbf{実験。}MT5 ストラテジーテスター、2025.01〜2026.01、初期資金 \$10{,}000、同時に1ポジション、実スプレッド + 10~point スリッページ、10個の信頼度しきい値（0.90〜0.99）。
 
 %%─────────────────────────────────────────────
-\noindent\textbf{4. Судалгааны үр дүн}
+\noindent\textbf{4. 研究結果}
 
-\emph{Ангиллын чанар.} 2024 оны харагдаагүй тестийн ерөнхий нарийвчлал \textbf{89.25\%} (бүх ангилал) бол баталгаажуулалтын (2023) дээж дээр conf~$\geq 0.90$ шүүлтийн дараах нарийвчлал \textbf{96.96\%} болж нэмэгдсэн. Баталгаажуулалт--сургалтын зөрүү +1.77\% — хэт нийцэлгүй (\tref{tab:tov_model_accuracy}).
+\textbf{分類性能。}未知の 2024 年テストでの全体正解率は \textbf{89.25\%}（全クラス）、検証（2023）サンプルでは conf~$\geq 0.90$ フィルタ後に正解率が \textbf{96.96\%} へ上昇した。検証−学習の差は +1.77\% で、過学習はみられない（表\ref{tab:tovjp_model_accuracy}）。
 
 \begin{table}[H]
 \centering
-\caption{GBDT ансамблийн нарийвчлал ба F1 оноо}
-\label{tab:tov_model_accuracy}
+\caption{GBDT アンサンブルの正解率と F1 スコア}
+\label{tab:tovjp_model_accuracy}
 \scriptsize
 \renewcommand{\arraystretch}{1.15}
 \setlength{\tabcolsep}{3pt}
 \begin{tabular}{|l|c|r|r|r|}
 \hline
-Хуваарь & Цонх & Acc (\%) & F1-mac & F1-wgt \\ \hline
-Сургалт            & 2015--2022 & 82.71 & 67.74 & 80.94 \\ \hline
-Баталгаажуулалт    & 2023       & 84.48 & 62.67 & 82.29 \\ \hline
-Тест (out-of-sample) & 2024     & \textbf{89.25} & \textbf{59.45} & \textbf{87.23} \\ \hline
+区分 & 期間 & Acc (\%) & F1-mac & F1-wgt \\ \hline
+学習             & 2015〜2022 & 82.71 & 67.74 & 80.94 \\ \hline
+検証             & 2023       & 84.48 & 62.67 & 82.29 \\ \hline
+テスト (out-of-sample) & 2024  & \textbf{89.25} & \textbf{59.45} & \textbf{87.23} \\ \hline
 \end{tabular}
 \end{table}
 
-\emph{Стратегийн өгөөж.} Бүх 10 итгэлцлийн босго утга (0.90--0.99) эерэг өгөөжтэй гарч, Buy~\&~Hold (+13.47\%) жишгийг 5.5--38 дахин давсан. 0.91 босго утгад хамгийн өндөр \textbf{+517.70\% (\$61{,}770)} илэрсэн ба 0.90--0.92 муж нь өндөр өгөөжийг бага уналттай (MaxDD $<$~3\%) хослуулсан тэнцвэрт цэг боллоо (\fref{fig:tov_threshold_final_balance}).
+\textbf{戦略リターン。}10個の信頼度しきい値（0.90〜0.99）すべてが正のリターンを示し、Buy~\&~Hold（+13.47\%）のベンチマークを 5.5〜38倍 上回った。0.91 のしきい値で最高の \textbf{+517.70\%（\$61{,}770）} に達し、0.90〜0.92 の帯域は高いリターンと低いドローダウン（MaxDD $<$~3\%）を両立するバランス点となった（図\ref{fig:tovjp_threshold_final_balance}）。
 
 \begin{figure}[H]
 \centering
@@ -330,8 +335,8 @@
     height=6.0cm,
     ybar,
     bar width=10pt,
-    xlabel={Итгэлцлийн босго},
-    ylabel={Эцсийн баланс (\$)},
+    xlabel={信頼度しきい値},
+    ylabel={最終残高 (\$)},
     xmin=0.895, xmax=0.995,
     ymin=0, ymax=70000,
     xtick={0.90,0.91,0.92,0.93,0.94,0.95,0.96,0.97,0.98,0.99},
@@ -354,11 +359,11 @@
 \end{axis}
 \end{tikzpicture}%
 }
-\caption{Босго утга бүрийн эцсийн баланс}
-\label{fig:tov_threshold_final_balance}
+\caption{しきい値ごとの最終残高}
+\label{fig:tovjp_threshold_final_balance}
 \end{figure}
 
-\emph{Эрсдэл ба статистик.} Win rate 44.78--65.71\% (Wilson 95\% CI); бином тест $z>5$, $p<0.0001$; $E[R]$=0.79--1.63R эерэг; MaxDD 1.98--9.53\% (\fref{fig:tov_risk_smallmult}). Sharpe 8.6--12.8 утга нь түүврийн хэмжээ бага, цонх богино, зардал бүрэн тусгаагүйгээс \emph{зохиомлоор томруулагдсан} тул босго утгуудын харьцангуй харьцуулалтад л хүчинтэй.
+\textbf{リスクと統計。}勝率 44.78〜65.71\%（Wilson 95\% CI）；二項検定 $z>5$、$p<0.0001$；$E[R]$=0.79〜1.63R ですべて正；MaxDD 1.98〜9.53\%（図\ref{fig:tovjp_risk_smallmult}）。Sharpe の 8.6〜12.8 という値は、サンプル数の少なさ、期間の短さ、コストの不完全なモデル化により\textbf{過大に算出されている}ため、しきい値間の相対比較にのみ有効である。
 
 \begin{figure}[H]
 \centering
@@ -398,7 +403,7 @@
 \end{axis}
 \end{tikzpicture} &
 \begin{tikzpicture}
-\begin{axis}[smallpanel, title={(D) Calmar = Өгөөж / MaxDD}, ylabel={Calmar}, ymin=0, ymax=190]
+\begin{axis}[smallpanel, title={(D) Calmar = リターン / MaxDD}, ylabel={Calmar}, ymin=0, ymax=190]
 \addplot[fill=orange!30, draw=orange!72!black] coordinates {
     (0.90,122.96) (0.91,174.20) (0.92,155.79) (0.93,38.63) (0.94,41.23)
     (0.95,57.97) (0.96,47.18) (0.97,64.19) (0.98,20.16) (0.99,37.53)};
@@ -406,47 +411,47 @@
 \end{tikzpicture}
 \end{tabular}%
 }
-\caption{Эрсдэлийн үзүүлэлтүүд босго утга тус бүрээр}
-\label{fig:tov_risk_smallmult}
+\caption{しきい値ごとのリスク指標}
+\label{fig:tovjp_risk_smallmult}
 \end{figure}
 
 %%─────────────────────────────────────────────
-\noindent\textbf{5. Дүгнэлт}
+\noindent\textbf{5. 結論}
 
-Энэхүү судалгаа нь EUR/USD валютын зах зээлд BUY/HOLD/SELL ангиллын дохио үүсгэх GBDT ансамбль, итгэлцлийн босгот шүүлтүүр болон мобайл интерфэйсийг сургалтаас хэрэглэгч хүртэлх цогц pipeline-ийн хүрээнд нэгтгэн эмпирик байдлаар туршив. Гурван судалгааны асуултад дараах хариултыг олж авав:
+本研究は、GBDT アンサンブル、信頼度しきい値フィルタリング、およびモバイルインターフェースを、学習からユーザーまでのエンドツーエンドのパイプラインとして EUR/USD 市場に統合し、実証的に検証した。3つの研究課題には次のように回答した：
 
 \begin{itemize}\setlength\itemsep{0pt}\small
-    \item \textbf{RQ1}: 89.25\% (тест 2024, бүх ангилал) / 96.96\% (val 2023, conf~$\geq 0.90$)
-    \item \textbf{RQ2}: 3{,}567 дохио $\to$ 230 хэлцэл (6.45--23.81\%)
-    \item \textbf{RQ3}: +74--518\% өгөөж, $E[R]$=0.79--1.63R
+    \item \textbf{RQ1}：89.25\%（test 2024、全クラス）/ 96.96\%（val 2023、conf~$\geq 0.90$）
+    \item \textbf{RQ2}：3{,}567 シグナル $\to$ 230 取引（6.45〜23.81\%）
+    \item \textbf{RQ3}：+74〜518\% のリターン、$E[R]$=0.79〜1.63R
 \end{itemize}
 
-Нэгдсэн үнэлгээгээр тэргүүлсэн 3 босго утга (\tref{tab:tov_rq3_summary}):
+総合評価で上位の3つのしきい値（表\ref{tab:tovjp_rq3_summary}）：
 
 \begin{table}[H]
 \centering
-\caption{Нэгдсэн үнэлгээгээр тэргүүлсэн 3 босго утга}
-\label{tab:tov_rq3_summary}
+\caption{総合評価上位3つのしきい値}
+\label{tab:tovjp_rq3_summary}
 \scriptsize
 \renewcommand{\arraystretch}{1.12}
 \setlength{\tabcolsep}{2.5pt}
 \begin{tabular}{|c|r|r|r|l|}
 \hline
-Босго утга & Өгөөж & MaxDD & Win & Профайл \\ \hline
-0.91 & +517.70\% & 2.97\% & 47.17\% & \#1 Балансжсан \\ \hline
-0.92 & +465.12\% & 2.99\% & 47.26\% & \#2 Балансжсан \\ \hline
-0.99 & +74.29\%  & 1.98\% & 65.71\% & \#3 Эрсдэлгүй \\ \hline
+しきい値 & リターン & MaxDD & 勝率 & プロファイル \\ \hline
+0.91 & +517.70\% & 2.97\% & 47.17\% & \#1 バランス型 \\ \hline
+0.92 & +465.12\% & 2.99\% & 47.26\% & \#2 バランス型 \\ \hline
+0.99 & +74.29\%  & 1.98\% & 65.71\% & \#3 低リスク型 \\ \hline
 \end{tabular}
 \end{table}
 
-Дээрх үр дүн нь зөвхөн загварын статистик нарийвчлал биш, өгөгдөл цуглуулалт~$\to$~шинж чанарын инженерчлэл~$\to$~ансамбль сургалт~$\to$~дохио шүүлтүүр~$\to$~автомат хэлцэл~$\to$~мобайл мэдэгдэл гэсэн нэгдсэн pipeline-ийн чанарыг хамтад нь баталгаажуулсан. Шинжлэх ухааны хувьд GBDT ансамбль, олон интервалын шинж чанар болон итгэлцлийн босгот шүүлтүүрийг нэгтгэсэн эмпирик нотолгоог танилцуулсан бол практикийн хувьд сургалтаас мобайл түгээлт хүртэлх бүрэн хэрэгжүүлэлтийн загвар (referent system)-ийг бүтээж, бодит цаг хугацааны нөхцөлд ажиллах чадварыг нь харууллаа.
+これらの結果は、統計的な正解率にとどまらず、データ収集~$\to$~特徴量エンジニアリング~$\to$~アンサンブル学習~$\to$~シグナルフィルタリング~$\to$~自動約定~$\to$~モバイル通知という統合パイプラインの品質を併せて裏付けるものである。学術的には、GBDT アンサンブル、マルチタイムフレーム特徴量、信頼度しきい値フィルタリングを統合した実証的証拠を示し、実務的には、学習からモバイル配信までの完全な参照システムを構築し、リアルタイム環境で動作する能力を示した。
 
-\emph{Хязгаарлалт.} Үр дүн EUR/USD ба 2025 оны цонхонд л баталгаажсан тул бусад хослолд шууд ерөнхийлөх боломжгүй; шимтгэл (commission) ба swap бүрэн тусгагдаагүй; дохио-гүйцэтгэлийн хөрвүүлэлт 100\%-иас бага байна.
+\textbf{制約。}結果は EUR/USD と 2025 年の期間でのみ検証されており、他の通貨ペアへ直接一般化することはできない；手数料（commission）とスワップ（swap）は完全にはモデル化されていない；シグナルから約定への変換率は 100\% 未満である。
 
-\emph{Цаашдын чиглэл.} GBP/USD, USD/JPY руу өргөтгөх; LSTM/Transformer-той харьцуулах; RL-ээр байрлалын хэмжээ удирдах; Model Registry ба Google Play түгээлтийг хэрэгжүүлэх.
+\textbf{今後の課題。}GBP/USD、USD/JPY への拡張；LSTM/Transformer との比較；強化学習（RL）によるポジションサイズ管理；Model Registry と Google Play 配信の実装。
 
 %%─────────────────────────────────────────────
-\noindent\textbf{Ном зүй}
+\noindent\textbf{参考文献}
 
 \begingroup
 \scriptsize

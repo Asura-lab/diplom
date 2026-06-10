@@ -1,18 +1,22 @@
-\addtotoc{Товчлол}
+\addtotoc{English Summary}
 \thispagestyle{plain}
 
-% Товчлолын зураг, хүснэгтүүдийг зургийн/хүснэгтийн жагсаалтад оруулахгүй
+% Tovchlol figures/tables are excluded from the global lists
 \captionsetup{list=no}
+
+% English caption labels for this section
+\renewcommand{\figurename}{Figure}
+\renewcommand{\tablename}{Table}
 
 \vspace*{-6mm}
 \begin{center}
-\textbf{\large \titlename}\\[1mm]
+\textbf{\large FOREIGN EXCHANGE TRADING SIGNAL GENERATION SYSTEM}\\[1mm]
 \end{center}
 
 \begin{flushright}
-\departmentname\\
-Оюутан: \studentID, \authorShort\\
-Удирдагч багш: \supervisorname
+Department of Computer Science\\
+Student: \studentID, M.~Munkhdorj\\
+Supervisor: N.~Soronzonbold
 \end{flushright}
 
 \vspace{1mm}
@@ -30,26 +34,26 @@
 \sloppy
 
 %%─────────────────────────────────────────────
-\noindent\textbf{1. Удиртгал}
+\noindent\textbf{1. Introduction}
 
-Гадаад валютын зах зээл нь өндөр хэлбэлзэлтэй, шуугиан ихтэй цаг хугацааны цуваа үүсгэдэг тул уламжлалт статистик аргад тулгуурласан таамаглал хязгаарлагдмал хэвээр байна. GBDT болон нейрон сүлжээний загварууд зүй тогтлыг илрүүлэх чадвартай нь нотлогдсон ч нэг загварт түшиглэсэн архитектур нь хэт нийцлийн эрсдэлээс шалтгаалан практик хэрэглээнд саад болсоор байна. Энэ судалгаа нь EUR/USD валютын хослолд BUY/HOLD/SELL ангиллын дохио үүсгэх GBDT ансамбль ML системийг бүтээж, мобайл аппликейшнаар хэрэглэгчид хүргэх зорилготой. Гурван судалгааны асуултыг дэвшүүлэв:
+The foreign exchange (Forex) market produces highly volatile, noisy time series, so forecasting based on traditional statistical methods remains limited. Although GBDT and neural-network models have been shown capable of detecting patterns, single-model architectures are still hindered in practice by the risk of overfitting. This study builds a GBDT-ensemble ML system that generates BUY/HOLD/SELL classification signals for the EUR/USD pair and delivers them to users through a mobile application. Three research questions were posed:
 \begin{itemize}\setlength\itemsep{0pt}\small
-    \item \textbf{RQ1:} Загвар цагийн дарааллыг хадгалсан тест дээр найдвартай ажиллах уу?
-    \item \textbf{RQ2:} Шүүгдсэн дохио бодит арилжаа болж хэрэгжих үү?
-    \item \textbf{RQ3:} Тогтмол эрсдэлтэй 1 жилд эерэг өгөөж гарах уу?
+    \item \textbf{RQ1:} Does the model perform reliably on a chronologically ordered hold-out test?
+    \item \textbf{RQ2:} Do the filtered signals actually execute as real trades?
+    \item \textbf{RQ3:} Under a fixed-risk rule, does the system yield a positive return over one year?
 \end{itemize}
 
 %%─────────────────────────────────────────────
-\noindent\textbf{2. Судалгааны сэдвийн онол, өнөөгийн түвшин}
+\noindent\textbf{2. Background and Related Work}
 
-Санхүүгийн цаг хугацааны цуваа таамаглах судалгаа EMH-ийн онолын эргэлзээний дунд хөгжсөн ч сүүлийн жилүүдэд машин сургалтаар зүй тогтлыг мэдэгдэхүйц илрүүлэх боломжтой болохыг бэхжүүлсэн. Krauss нар (2017) GBDT нь гүн сургалтаас илүү найдвартай үр дүн үзүүлдэг гэж дүгнэсэн бол Ballings нар (2015) ансамбль дангаар ажиллах загвараас 3--7\% ахиц гаргадгийг тогтоосон. Fischer, Krauss (2018) LSTM-ийг S\&P~500, Yildirim нар (2021) EUR/USD дээр туршсан хэдий ч олон интервалын шинж чанарын инженерчлэлийг GBDT ансамбльтай хослуулсан эмпирик ажил цөөн хэвээр байна.
+Research on financial time-series forecasting developed amid the theoretical skepticism of the Efficient Market Hypothesis (EMH), yet recent years have reinforced that machine learning can detect patterns to a meaningful degree. Krauss et al.\ (2017) concluded that GBDT yields more reliable results than deep learning, while Ballings et al.\ (2015) found that ensembles gain 3--7\% over single models. Although Fischer \& Krauss (2018) tested LSTM on the S\&P~500 and Yildirim et al.\ (2021) on EUR/USD, empirical work combining multi-timeframe feature engineering with a GBDT ensemble remains scarce.
 
-\emph{Хувь нэмэр.} Энэ судалгаа Форекс зах зээлд GBDT ансамбль, олон хугацааны интервалын шинж чанар, итгэлцлийн босгот суурилсан дохио шүүлтүүр болон мобайл интерфэйсийг нэгдсэн системд хослуулан эмпирик байдлаар туршсан.
+\emph{Contribution.} This study empirically tests, within a single unified system, a GBDT ensemble, multi-timeframe features, confidence-threshold signal filtering, and a mobile interface for the Forex market.
 
 %%─────────────────────────────────────────────
-\noindent\textbf{3. Судалгааны арга зүй}
+\noindent\textbf{3. Methodology}
 
-Загвар сургалтаас мобайл апп хүртэлх ML serving системийг бүтээсэн (\fref{fig:tov_system_architecture}). Гурван үндсэн давхарга: (i)~офлайн сургалт (GBDT pkl); (ii)~Сервер (Flask + MongoDB + Redis + Expo Push) + 4 гадаад API; (iii)~Мобайл апп (React Native, 4 дэлгэц).
+An ML serving system spanning from model training to the mobile app was built (Figure~\ref{fig:toven_system_architecture}). It has three core layers: (i)~offline training (GBDT pkl); (ii)~Server (Flask + MongoDB + Redis + Expo Push) + 4 external APIs; (iii)~Mobile app (React Native, 4 screens).
 
 \begin{figure}[H]
 \centering
@@ -101,8 +105,8 @@
 \draw[stickline] ($(users.center)+(-0.30, 0.08)$) -- ($(users.center)+(0.30, 0.08)$);
 \draw[stickline] ($(users.center)+(0, -0.25)$) -- ($(users.center)+(-0.22, -0.65)$);
 \draw[stickline] ($(users.center)+(0, -0.25)$) -- ($(users.center)+(0.22, -0.65)$);
-\node[font=\small\bfseries, anchor=north] at ($(users.south)+(0, 0.05)$) {Хэрэглэгчид};
-\node[plainbox] (mob)  at (-4, 5.5) {Мобайл апп\\[1pt]{\small (React Native)}};
+\node[font=\small\bfseries, anchor=north] at ($(users.south)+(0, 0.05)$) {Users};
+\node[plainbox] (mob)  at (-4, 5.5) {Mobile app\\[1pt]{\small (React Native)}};
 \node[pushsvc]  (expo) at ( 0, 5.5) {Expo Push};
 \draw[flowarr] (users.east) -- (mob.west);
 \node[plainbox] (dns) at (-4, 3.5) {DNS};
@@ -110,12 +114,12 @@
 \draw[black!55, line width=1.2pt, rounded corners=10pt]
     (-7, -5.6) rectangle (1, 2.4);
 \node[font=\large\bfseries, anchor=north west, text=black!72]
-    at (-6.85, 2.32) {Сервер};
-\node[vm] (api)    at (-4,  0.9) {API сервер\\[1pt]{\small Flask + Gunicorn}};
-\node[vm] (worker) at (-4, -1.6) {Процесс\\[1pt]{\small Таамаглал · Боловсруулалт}};
+    at (-6.85, 2.32) {Server};
+\node[vm] (api)    at (-4,  0.9) {API server\\[1pt]{\small Flask + Gunicorn}};
+\node[vm] (worker) at (-4, -1.6) {Worker\\[1pt]{\small Inference $\cdot$ Processing}};
 \draw[flowarr] (dns.south)  -- (api.north);
 \draw[flowarr] (api.south)  -- (worker.north);
-\node[plainbox] (cache) at (-5.3, -4.2) {Кэш сан\\[1pt]{\small (Redis)}};
+\node[plainbox] (cache) at (-5.3, -4.2) {Cache\\[1pt]{\small (Redis)}};
 \node[db]       (mongo) at (-1.7, -4.4) {MongoDB};
 \coordinate (db_trunk) at (-4, -2.7);
 \draw[busline]  (worker.south) -- (db_trunk);
@@ -126,10 +130,10 @@
 \draw[red!50, line width=0.8pt, rounded corners=8pt]
     (-12, -3.1) rectangle (-8, 1.95);
 \node[font=\small\bfseries, anchor=north, text=red!55!black]
-    at (-10, 1.85) {Дотоод сервис};
-\node[websvc] (mail)  at (-10,  0.9) {И-мэйл};
-\node[websvc] (queue) at (-10, -1.1) {Даалгаврын\\дараалал};
-\node[websvc] (mon)   at (-10, -2.1) {Хяналт};
+    at (-10, 1.85) {Internal services};
+\node[websvc] (mail)  at (-10,  0.9) {Email};
+\node[websvc] (queue) at (-10, -1.1) {Job\\queue};
+\node[websvc] (mon)   at (-10, -2.1) {Monitoring};
 \draw[thinarr] (mail.east) -- (api.west);
 \draw[thinarr] (queue.east) -- ([yshift= 0.5cm]worker.west);
 \draw[thinarr] (mon.east) -- ([yshift=-0.5cm]worker.west);
@@ -137,7 +141,7 @@
 \draw[green!45!black, line width=0.8pt, rounded corners=8pt]
     (2.5, -2.9) rectangle (7.6, 3.2);
 \node[font=\small\bfseries, anchor=north, text=green!40!black]
-    at (5.05, 3.1) {Гуравдагч талын API};
+    at (5.05, 3.1) {Third-party APIs};
 \node[extapi] (yf)  at (5.05,  1.9) {Yahoo Finance};
 \node[extapi] (av)  at (5.05,  0.7) {AlphaVantage};
 \node[extapi] (tv)  at (5.05, -0.5) {TradingView};
@@ -155,9 +159,9 @@
 \draw[teal!50!black, line width=0.8pt, rounded corners=8pt]
     (-7, -8.7) rectangle (5, -6.5);
 \node[font=\small\bfseries, anchor=north, text=teal!40!black]
-    at (-1, -6.6) {Офлайн сургалт};
-\node[pipebox] (csv)   at (-5, -7.7) {Түүхэн өгөгдөл};
-\node[pipebox] (train) at (-1, -7.7) {GBDT сургалт};
+    at (-1, -6.6) {Offline training};
+\node[pipebox] (csv)   at (-5, -7.7) {Historical data};
+\node[pipebox] (train) at (-1, -7.7) {GBDT training};
 \node[pipebox] (pkl)   at ( 3, -7.7) {model.pkl};
 \draw[flowarr] (csv.east)   -- (train.west);
 \draw[flowarr] (train.east) -- (pkl.west);
@@ -165,13 +169,13 @@
 \draw[deparr] (pkl.north) |- (1.5, -6.3) |- ([yshift=-0.5cm]worker.east);
 \end{tikzpicture}%
 }
-\caption{Системийн архитектур}
-\label{fig:tov_system_architecture}
+\caption{System architecture}
+\label{fig:toven_system_architecture}
 \end{figure}
 
-\emph{Өгөгдөл.} EUR/USD 2015--2024 оны түүхэн өгөгдөл дээр 6 интервал (M1--H4) × 8 техникийн үзүүлэлт = 48 шинж чанарын матриц бүрдүүлсэн. Шошгыг 240 минутын ирээдүйн хөдөлгөөнөөс 30 пипсийн босгоор BUY/HOLD/SELL гурван ангилалд хуваасан.
+\emph{Data.} A 48-feature matrix was built from EUR/USD 2015--2024 historical data over 6 timeframes (M1--H4) $\times$ 8 technical indicators. Labels were assigned to BUY/SELL/HOLD by a 30-pip threshold on the future 240-minute move.
 
-\emph{Загвар.} LightGBM, XGBoost, CatBoost загваруудыг зөөлөн санал хураалтаар тэгш жингээр нэгтгэсэн ансамбль (\fref{fig:tov_ensemble_arch}). Гурван загвар өсөлтийн стратеги (leaf-wise, level-wise, symmetric)-аараа бие биенээ нөхөж хэт нийцлийн эрсдэлийг бууруулдаг. Сургалтыг WFV-ийн тав дахь огтлолоор (train 2015--2022, val 2023, test 2024) явуулсан. Хэт нийцлээс сэргийлэхийн тулд модны гүн, бага learning rate, эрт зогсоолт, L1/L2 тогтмолжуулалт, WFV болон шинж чанарын сонголт гэсэн зургаан арга хэмжээг хослуулан хэрэгжүүлсэн.
+\emph{Model.} LightGBM, XGBoost, and CatBoost were combined by equal-weight soft voting (Figure~\ref{fig:toven_ensemble_arch}). The three models complement one another through different growth strategies (leaf-wise, level-wise, symmetric), reducing the risk of overfitting. Training used the fifth WFV fold (train 2015--2022, val 2023, test 2024). Six anti-overfitting measures were combined: limited tree depth, low learning rate, early stopping, L1/L2 regularization, WFV, and feature selection.
 
 \begin{figure}[H]
 \centering
@@ -203,12 +207,12 @@
     lin/.style ={line width=1.0pt, color=black!72},
     lbl/.style ={font=\scriptsize\bfseries, fill=white, inner sep=1pt, text=black!65},
 ]
-\node[inp]  (X)   at (0,  0)    {48 шинж чанар};
+\node[inp]  (X)   at (0,  0)    {48 features};
 \node[lgbm] (lgb) at (-4, -2.4) {LightGBM};
 \node[xgb]  (xgb) at ( 0, -2.4) {XGBoost};
 \node[cat]  (cat) at ( 4, -2.4) {CatBoost};
-\node[vote] (avg) at (0, -5.2)  {Зөөлөн санал хураалт\\$\bar{p}_c = \tfrac{1}{3}\sum_i p_i^{(c)},\ c\in\{$BUY,HOLD,SELL$\}$};
-\node[sigb] (sig)    at (0, -7.4)    {Арилжааны дохио (BUY / HOLD / SELL, итгэлцэл $\in [0,1]$)};
+\node[vote] (avg) at (0, -5.2)  {Soft voting\\$\bar{p}_c = \tfrac{1}{3}\sum_i p_i^{(c)},\ c\in\{$BUY,HOLD,SELL$\}$};
+\node[sigb] (sig)    at (0, -7.4)    {Trading signal (BUY / HOLD / SELL, confidence $\in [0,1]$)};
 
 \draw[arr] (X.south) -- (lgb.north);
 \draw[arr] (X.south) -- (xgb.north);
@@ -226,11 +230,11 @@
 \draw[arr] (avg.south) -- (sig.north);
 \end{tikzpicture}%
 }
-\caption{GBDT ансамбль загварын архитектур}
-\label{fig:tov_ensemble_arch}
+\caption{GBDT ensemble model architecture}
+\label{fig:toven_ensemble_arch}
 \end{figure}
 
-\emph{Дохио шүүлтүүр.} Итгэлцэл (conf~$\geq 0.90$) ба ATR (~$\geq 4$ пипс) хослолоор дохиог шүүж, 2025 оны 359{,}639 таамаглалаас 3{,}567 (1.0\%) дохио үлдэн, MT5-ийн \texttt{MaxPositions=1} дүрмээр 230 хэлцэл хэрэгжсэн (\fref{fig:tov_signal_funnel}). SL/TP-г ATR-аас динамикаар тооцох ба TP/SL=3:1 харьцаа хадгалсан.
+\emph{Signal filter.} Signals are filtered by confidence (conf~$\geq 0.90$) and ATR (~$\geq 4$ pips); of 359{,}639 predictions in 2025, 3{,}567 (1.0\%) remained, and MT5's \texttt{MaxPositions=1} rule executed 230 trades (Figure~\ref{fig:toven_signal_funnel}). SL/TP are computed dynamically from ATR with a 3:1 TP/SL ratio.
 
 \begin{figure}[H]
 \centering
@@ -246,7 +250,7 @@
       draw=blue!65, fill=blue!18, line width=1.0pt,
       minimum height=1.0cm, minimum width=12cm,
       align=center, font=\small\bfseries, text=blue!25!black] (s1) at (0, 0)
-    {1. Нийт таамаг (GBDT ансамбль, 2025 он)};
+    {1. Total predictions (GBDT ensemble, 2025)};
 \node[cnt, right=0.5cm of s1] {359{,}639};
 \node[pct, right=2.4cm of s1] {(100\%)};
 \node[trapezium, trapezium angle=78, trapezium stretches body,
@@ -255,7 +259,7 @@
       minimum height=1.0cm, minimum width=8cm,
       align=center, font=\small\bfseries, text=black!82,
       below=0.5cm of s1] (s2)
-    {2. Итгэлцэл $\geq 0.90$ шүүлтүүр};
+    {2. Confidence $\geq 0.90$ filter};
 \node[cnt, right=0.5cm of s2] {$\sim$3{,}600};
 \node[pct, right=2.2cm of s2] {($\approx$1.00\%)};
 \node[trapezium, trapezium angle=78, trapezium stretches body,
@@ -264,7 +268,7 @@
       minimum height=1.0cm, minimum width=5.5cm,
       align=center, font=\small\bfseries, text=black!82,
       below=0.5cm of s2] (s3)
-    {3. ATR $\geq 4.0$ пипс шүүлтүүр};
+    {3. ATR $\geq 4.0$ pips filter};
 \node[cnt, right=0.5cm of s3] {3{,}567};
 \node[pct, right=2.0cm of s3] {(0.99\%)};
 \node[trapezium, trapezium angle=78, trapezium stretches body,
@@ -273,14 +277,14 @@
       minimum height=1.0cm, minimum width=3.6cm,
       align=center, font=\small\bfseries, text=black!82,
       below=0.5cm of s3] (s4)
-    {4. MaxPositions=1\\\scriptsize\itshape(MT5 EA гүйцэтгэлийн дүрэм)};
+    {4. MaxPositions=1\\\scriptsize\itshape(MT5 EA execution rule)};
 \node[cnt, right=0.5cm of s4] {230};
 \node[pct, right=1.6cm of s4] {(0.064\%)};
 \node[rectangle, draw=red!70!black, fill=red!25, rounded corners=5pt,
       line width=1.1pt, minimum width=2.6cm, minimum height=0.9cm,
       align=center, font=\small\bfseries, text=black!85,
       below=0.5cm of s4] (s5)
-    {5. Хаагдсан хэлцэл};
+    {5. Closed trades};
 \node[cnt, right=0.5cm of s5] {230};
 \node[pct, right=1.6cm of s5] {(TP: 103 / SL: 127)};
 \draw[arr] (s1.south) -- (s2.north);
@@ -289,37 +293,37 @@
 \draw[arr] (s4.south) -- (s5.north);
 \node[pct, left=0.3cm of s2] {$-99.00\%$};
 \node[pct, left=0.3cm of s3] {$-0.92\%$};
-\node[pct, left=0.3cm of s4] {$-93.55\%$ (давхцал)};
+\node[pct, left=0.3cm of s4] {$-93.55\%$ (overlap)};
 \end{tikzpicture}%
 }
-\caption{Дохионы шүүлтүүрийн юүлүүр (0.90 босго утга)}
-\label{fig:tov_signal_funnel}
+\caption{Signal filtering funnel (0.90 threshold)}
+\label{fig:toven_signal_funnel}
 \end{figure}
 
-\emph{Туршилт.} MT5 Strategy Tester, 2025.01--2026.01, \$10{,}000 анхны хөрөнгө, нэг агшинд нэг байрлал, бодит спрэд + 10~point гулсалт, 10 итгэлцлийн босго утга (0.90--0.99).
+\emph{Experiment.} MT5 Strategy Tester, 2025.01--2026.01, \$10{,}000 initial capital, one position at a time, real spread + 10~point slippage, 10 confidence thresholds (0.90--0.99).
 
 %%─────────────────────────────────────────────
-\noindent\textbf{4. Судалгааны үр дүн}
+\noindent\textbf{4. Results}
 
-\emph{Ангиллын чанар.} 2024 оны харагдаагүй тестийн ерөнхий нарийвчлал \textbf{89.25\%} (бүх ангилал) бол баталгаажуулалтын (2023) дээж дээр conf~$\geq 0.90$ шүүлтийн дараах нарийвчлал \textbf{96.96\%} болж нэмэгдсэн. Баталгаажуулалт--сургалтын зөрүү +1.77\% — хэт нийцэлгүй (\tref{tab:tov_model_accuracy}).
+\emph{Classification quality.} On the unseen 2024 test set, overall accuracy reached \textbf{89.25\%} (all classes), while on the validation (2023) sample after conf~$\geq 0.90$ filtering accuracy rose to \textbf{96.96\%}. The validation--training gap of +1.77\% indicates no overfitting (Table~\ref{tab:toven_model_accuracy}).
 
 \begin{table}[H]
 \centering
-\caption{GBDT ансамблийн нарийвчлал ба F1 оноо}
-\label{tab:tov_model_accuracy}
+\caption{GBDT ensemble accuracy and F1 scores}
+\label{tab:toven_model_accuracy}
 \scriptsize
 \renewcommand{\arraystretch}{1.15}
 \setlength{\tabcolsep}{3pt}
 \begin{tabular}{|l|c|r|r|r|}
 \hline
-Хуваарь & Цонх & Acc (\%) & F1-mac & F1-wgt \\ \hline
-Сургалт            & 2015--2022 & 82.71 & 67.74 & 80.94 \\ \hline
-Баталгаажуулалт    & 2023       & 84.48 & 62.67 & 82.29 \\ \hline
-Тест (out-of-sample) & 2024     & \textbf{89.25} & \textbf{59.45} & \textbf{87.23} \\ \hline
+Split & Window & Acc (\%) & F1-mac & F1-wgt \\ \hline
+Train               & 2015--2022 & 82.71 & 67.74 & 80.94 \\ \hline
+Validation          & 2023       & 84.48 & 62.67 & 82.29 \\ \hline
+Test (out-of-sample) & 2024      & \textbf{89.25} & \textbf{59.45} & \textbf{87.23} \\ \hline
 \end{tabular}
 \end{table}
 
-\emph{Стратегийн өгөөж.} Бүх 10 итгэлцлийн босго утга (0.90--0.99) эерэг өгөөжтэй гарч, Buy~\&~Hold (+13.47\%) жишгийг 5.5--38 дахин давсан. 0.91 босго утгад хамгийн өндөр \textbf{+517.70\% (\$61{,}770)} илэрсэн ба 0.90--0.92 муж нь өндөр өгөөжийг бага уналттай (MaxDD $<$~3\%) хослуулсан тэнцвэрт цэг боллоо (\fref{fig:tov_threshold_final_balance}).
+\emph{Strategy return.} All 10 confidence thresholds (0.90--0.99) produced positive returns, beating the Buy~\&~Hold (+13.47\%) benchmark by 5.5--38$\times$. The 0.91 threshold reached the highest \textbf{+517.70\% (\$61{,}770)}, and the 0.90--0.92 band combined high return with low drawdown (MaxDD $<$~3\%), forming a balanced operating point (Figure~\ref{fig:toven_threshold_final_balance}).
 
 \begin{figure}[H]
 \centering
@@ -330,8 +334,8 @@
     height=6.0cm,
     ybar,
     bar width=10pt,
-    xlabel={Итгэлцлийн босго},
-    ylabel={Эцсийн баланс (\$)},
+    xlabel={Confidence threshold},
+    ylabel={Final balance (\$)},
     xmin=0.895, xmax=0.995,
     ymin=0, ymax=70000,
     xtick={0.90,0.91,0.92,0.93,0.94,0.95,0.96,0.97,0.98,0.99},
@@ -354,11 +358,11 @@
 \end{axis}
 \end{tikzpicture}%
 }
-\caption{Босго утга бүрийн эцсийн баланс}
-\label{fig:tov_threshold_final_balance}
+\caption{Final balance by threshold}
+\label{fig:toven_threshold_final_balance}
 \end{figure}
 
-\emph{Эрсдэл ба статистик.} Win rate 44.78--65.71\% (Wilson 95\% CI); бином тест $z>5$, $p<0.0001$; $E[R]$=0.79--1.63R эерэг; MaxDD 1.98--9.53\% (\fref{fig:tov_risk_smallmult}). Sharpe 8.6--12.8 утга нь түүврийн хэмжээ бага, цонх богино, зардал бүрэн тусгаагүйгээс \emph{зохиомлоор томруулагдсан} тул босго утгуудын харьцангуй харьцуулалтад л хүчинтэй.
+\emph{Risk and statistics.} Win rate 44.78--65.71\% (Wilson 95\% CI); binomial test $z>5$, $p<0.0001$; $E[R]$=0.79--1.63R, all positive; MaxDD 1.98--9.53\% (Figure~\ref{fig:toven_risk_smallmult}). The Sharpe values of 8.6--12.8 are \emph{inflated} by the small sample size, the short window, and the incomplete cost modeling, so they are valid only for relative comparison across thresholds.
 
 \begin{figure}[H]
 \centering
@@ -398,7 +402,7 @@
 \end{axis}
 \end{tikzpicture} &
 \begin{tikzpicture}
-\begin{axis}[smallpanel, title={(D) Calmar = Өгөөж / MaxDD}, ylabel={Calmar}, ymin=0, ymax=190]
+\begin{axis}[smallpanel, title={(D) Calmar = Return / MaxDD}, ylabel={Calmar}, ymin=0, ymax=190]
 \addplot[fill=orange!30, draw=orange!72!black] coordinates {
     (0.90,122.96) (0.91,174.20) (0.92,155.79) (0.93,38.63) (0.94,41.23)
     (0.95,57.97) (0.96,47.18) (0.97,64.19) (0.98,20.16) (0.99,37.53)};
@@ -406,47 +410,47 @@
 \end{tikzpicture}
 \end{tabular}%
 }
-\caption{Эрсдэлийн үзүүлэлтүүд босго утга тус бүрээр}
-\label{fig:tov_risk_smallmult}
+\caption{Risk metrics by threshold}
+\label{fig:toven_risk_smallmult}
 \end{figure}
 
 %%─────────────────────────────────────────────
-\noindent\textbf{5. Дүгнэлт}
+\noindent\textbf{5. Conclusion}
 
-Энэхүү судалгаа нь EUR/USD валютын зах зээлд BUY/HOLD/SELL ангиллын дохио үүсгэх GBDT ансамбль, итгэлцлийн босгот шүүлтүүр болон мобайл интерфэйсийг сургалтаас хэрэглэгч хүртэлх цогц pipeline-ийн хүрээнд нэгтгэн эмпирик байдлаар туршив. Гурван судалгааны асуултад дараах хариултыг олж авав:
+This study integrated a GBDT ensemble, confidence-threshold filtering, and a mobile interface for the EUR/USD market within an end-to-end pipeline from training to user, and tested it empirically. The three research questions were answered as follows:
 
 \begin{itemize}\setlength\itemsep{0pt}\small
-    \item \textbf{RQ1}: 89.25\% (тест 2024, бүх ангилал) / 96.96\% (val 2023, conf~$\geq 0.90$)
-    \item \textbf{RQ2}: 3{,}567 дохио $\to$ 230 хэлцэл (6.45--23.81\%)
-    \item \textbf{RQ3}: +74--518\% өгөөж, $E[R]$=0.79--1.63R
+    \item \textbf{RQ1}: 89.25\% (test 2024, all classes) / 96.96\% (val 2023, conf~$\geq 0.90$)
+    \item \textbf{RQ2}: 3{,}567 signals $\to$ 230 trades (6.45--23.81\%)
+    \item \textbf{RQ3}: +74--518\% return, $E[R]$=0.79--1.63R
 \end{itemize}
 
-Нэгдсэн үнэлгээгээр тэргүүлсэн 3 босго утга (\tref{tab:tov_rq3_summary}):
+The top 3 thresholds by composite score (Table~\ref{tab:toven_rq3_summary}):
 
 \begin{table}[H]
 \centering
-\caption{Нэгдсэн үнэлгээгээр тэргүүлсэн 3 босго утга}
-\label{tab:tov_rq3_summary}
+\caption{Top 3 thresholds by composite score}
+\label{tab:toven_rq3_summary}
 \scriptsize
 \renewcommand{\arraystretch}{1.12}
 \setlength{\tabcolsep}{2.5pt}
 \begin{tabular}{|c|r|r|r|l|}
 \hline
-Босго утга & Өгөөж & MaxDD & Win & Профайл \\ \hline
-0.91 & +517.70\% & 2.97\% & 47.17\% & \#1 Балансжсан \\ \hline
-0.92 & +465.12\% & 2.99\% & 47.26\% & \#2 Балансжсан \\ \hline
-0.99 & +74.29\%  & 1.98\% & 65.71\% & \#3 Эрсдэлгүй \\ \hline
+Threshold & Return & MaxDD & Win & Profile \\ \hline
+0.91 & +517.70\% & 2.97\% & 47.17\% & \#1 Balanced \\ \hline
+0.92 & +465.12\% & 2.99\% & 47.26\% & \#2 Balanced \\ \hline
+0.99 & +74.29\%  & 1.98\% & 65.71\% & \#3 Risk-averse \\ \hline
 \end{tabular}
 \end{table}
 
-Дээрх үр дүн нь зөвхөн загварын статистик нарийвчлал биш, өгөгдөл цуглуулалт~$\to$~шинж чанарын инженерчлэл~$\to$~ансамбль сургалт~$\to$~дохио шүүлтүүр~$\to$~автомат хэлцэл~$\to$~мобайл мэдэгдэл гэсэн нэгдсэн pipeline-ийн чанарыг хамтад нь баталгаажуулсан. Шинжлэх ухааны хувьд GBDT ансамбль, олон интервалын шинж чанар болон итгэлцлийн босгот шүүлтүүрийг нэгтгэсэн эмпирик нотолгоог танилцуулсан бол практикийн хувьд сургалтаас мобайл түгээлт хүртэлх бүрэн хэрэгжүүлэлтийн загвар (referent system)-ийг бүтээж, бодит цаг хугацааны нөхцөлд ажиллах чадварыг нь харууллаа.
+Beyond statistical accuracy, the results validate the quality of an integrated pipeline: data collection~$\to$~feature engineering~$\to$~ensemble training~$\to$~signal filtering~$\to$~automated trade~$\to$~mobile notification. Scientifically, it presents empirical evidence combining a GBDT ensemble, multi-timeframe features, and confidence-threshold filtering; practically, it delivers a complete reference system from training to mobile distribution and demonstrates its ability to operate under real-time conditions.
 
-\emph{Хязгаарлалт.} Үр дүн EUR/USD ба 2025 оны цонхонд л баталгаажсан тул бусад хослолд шууд ерөнхийлөх боломжгүй; шимтгэл (commission) ба swap бүрэн тусгагдаагүй; дохио-гүйцэтгэлийн хөрвүүлэлт 100\%-иас бага байна.
+\emph{Limitations.} The results are validated only for EUR/USD and the 2025 window, so they cannot be directly generalized to other pairs; commission and swap are not fully modeled; the signal-to-execution conversion is below 100\%.
 
-\emph{Цаашдын чиглэл.} GBP/USD, USD/JPY руу өргөтгөх; LSTM/Transformer-той харьцуулах; RL-ээр байрлалын хэмжээ удирдах; Model Registry ба Google Play түгээлтийг хэрэгжүүлэх.
+\emph{Future work.} Extend to GBP/USD and USD/JPY; compare with LSTM/Transformer; manage position sizing via reinforcement learning (RL); implement a Model Registry and Google Play distribution.
 
 %%─────────────────────────────────────────────
-\noindent\textbf{Ном зүй}
+\noindent\textbf{References}
 
 \begingroup
 \scriptsize
